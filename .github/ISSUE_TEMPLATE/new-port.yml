@@ -1,0 +1,53 @@
+name: Submit a port
+description: Suggest a bbport-derived port for the catalog.
+title: "[port] "
+labels: [submission]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only source-code repositories are listed. Never link game files, dumps, firmware or keys.
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: owner/name on GitHub
+      placeholder: owner/repository
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game(s) and title ID(s)
+      placeholder: Bloodborne (CUSA03173)
+    validations:
+      required: true
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms
+      options:
+        - label: Windows
+        - label: Linux
+        - label: Steam Deck
+        - label: macOS
+        - label: Android
+        - label: ARM
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status its README declares
+      options:
+        - Playable
+        - In-game
+        - Intro / menus only
+        - In progress
+        - Not stated
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: What it changes compared to upstream
+    validations:
+      required: true

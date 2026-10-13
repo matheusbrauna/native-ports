@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "skipped-heading",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-13T22:04:50.897Z",
+        "reason": "Claude: decision-round sketch, never shipped; not part of the site"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-13T22:13:38.967Z",
+        "reason": "Claude: unchosen decision-round sketch, never shipped; its fonts belong to the rejected direction"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-13T22:13:39.169Z",
+        "reason": "Claude: unchosen decision-round sketch, never shipped; its fonts belong to the rejected direction"
+      }
+    ]
+  }
+}

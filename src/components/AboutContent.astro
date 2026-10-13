@@ -1,0 +1,48 @@
+---
+import Prose from "./Prose.astro";
+import { TIERS, repoUrl, type Lang } from "../lib/catalog";
+import { t } from "../lib/i18n";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t[lang];
+---
+{lang === "en" ? (
+  <Prose title={s.nav.about}>
+    <p class="lede">A community index of native PC ports that grew out of <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a>.</p>
+    <h2>What bbport is</h2>
+    <p>bbport runs Bloodborne's original PS4 executable directly on an x86-64 PC. The PS4's CPU is x86-64 too, so the game's code runs on your processor without emulation; a small runtime written for the game replaces the PS4 system libraries, and the graphics are translated to Vulkan by a renderer derived from shadPS4. Think of it as Wine and DXVK for a single game.</p>
+    <p>Within days of its release, people forked it to bring it to Windows, macOS, Android and ARM, and to try the same approach on other games. This site keeps track of those forks so you do not have to dig through GitHub's fork list.</p>
+    <h2>What the statuses mean</h2>
+    <p>Each status repeats what the project's own README declares. This site does not test builds.</p>
+    <dl class="tiers">
+      {TIERS.map((tier) => (
+        <div><dt><span class="tier" data-tier={tier}>{s.tiers[tier].label}</span></dt><dd>{s.tiers[tier].hint}</dd></div>
+      ))}
+    </dl>
+    <h2>What this site does not do</h2>
+    <ul>
+      <li>It does not host or link game files, dumps, firmware or keys. Every port needs your own legally obtained copy of the game.</li>
+      <li>It is not affiliated with Sony Interactive Entertainment, FromSoftware, any game publisher, the bbport authors or the authors of the forks listed. Report problems with a port to that port's repository.</li>
+    </ul>
+  </Prose>
+) : (
+  <Prose title={s.nav.about}>
+    <p class="lede">Um índice comunitário de ports nativos para PC que nasceram do <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a>.</p>
+    <h2>O que é o bbport</h2>
+    <p>O bbport roda o executável original de PS4 do Bloodborne diretamente num PC x86-64. A CPU do PS4 também é x86-64, então o código do jogo roda no seu processador sem emulação; um pequeno runtime feito para o jogo substitui as bibliotecas de sistema do PS4, e os gráficos são traduzidos para Vulkan por um renderizador derivado do shadPS4. Pense nele como um Wine com DXVK para um único jogo.</p>
+    <p>Poucos dias depois do lançamento, surgiram forks levando o projeto para Windows, macOS, Android e ARM, e testando a mesma abordagem em outros jogos. Este site acompanha esses forks para você não precisar vasculhar a lista de forks do GitHub.</p>
+    <h2>O que significa cada status</h2>
+    <p>Cada status repete o que o README do próprio projeto declara. Este site não testa builds.</p>
+    <dl class="tiers">
+      {TIERS.map((tier) => (
+        <div><dt><span class="tier" data-tier={tier}>{s.tiers[tier].label}</span></dt><dd>{s.tiers[tier].hint}</dd></div>
+      ))}
+    </dl>
+    <h2>O que este site não faz</h2>
+    <ul>
+      <li>Não hospeda nem linka arquivos de jogo, dumps, firmware ou chaves. Todo port exige a sua própria cópia do jogo, obtida legalmente.</li>
+      <li>Não tem afiliação com a Sony Interactive Entertainment, a FromSoftware, qualquer publisher, os autores do bbport ou os autores dos forks listados. Problemas com um port devem ser relatados no repositório dele.</li>
+    </ul>
+  </Prose>
+)}

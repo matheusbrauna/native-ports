@@ -1,0 +1,214 @@
+{
+  "fetchedAt": "2026-10-13T21:49:52.948Z",
+  "repos": {
+    "deadinside28/bloodborne_pc": {
+      "stars": 2737,
+      "pushedAt": "2026-10-10T22:57:40Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": {
+        "tag": "0.51",
+        "publishedAt": "2026-10-10T22:58:52Z",
+        "url": "https://github.com/deadinside28/bloodborne_pc/releases/tag/0.51"
+      },
+      "ahead": null,
+      "unavailable": false
+    },
+    "Supermedo/bloodborne_pc": {
+      "stars": 2407,
+      "pushedAt": "2026-10-13T11:45:05Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": "Bloodborne running natively on Windows 10/11: launcher in 13 languages, DLSS, FSR 3.1/4, unlocked FPS, cheats, mods, one-click updates.",
+      "release": {
+        "tag": "windows-v1.7.2",
+        "publishedAt": "2026-10-13T11:45:06Z",
+        "url": "https://github.com/Supermedo/bloodborne_pc/releases/tag/windows-v1.7.2"
+      },
+      "ahead": 134,
+      "unavailable": false
+    },
+    "Mrsuss60/bloodborne_pc_windows_port": {
+      "stars": 301,
+      "pushedAt": "2026-10-13T21:27:29Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": "Native 64-bit Windows port of Bloodborne (CUSA03173) with Vulkan rendering and Win32 runtime, based on deadinside28's bbport.",
+      "release": {
+        "tag": "v0.4.2",
+        "publishedAt": "2026-10-12T17:41:18Z",
+        "url": "https://github.com/Mrsuss60/bloodborne_pc_windows_port/releases/tag/v0.4.2"
+      },
+      "ahead": 51,
+      "unavailable": false
+    },
+    "0xCydral/bloodborne_pc": {
+      "stars": 23,
+      "pushedAt": "2026-10-13T14:43:31Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": "Bloodborne running natively on Windows 10 and 11 from your own PS4 copy: a launcher, DLSS, FSR 4 and XeSS upscaling, frame generation, keyboard and mouse, and mods.",
+      "release": {
+        "tag": "windows-v1.7.1",
+        "publishedAt": "2026-10-10T17:55:03Z",
+        "url": "https://github.com/0xCydral/bloodborne_pc/releases/tag/windows-v1.7.1"
+      },
+      "ahead": 263,
+      "unavailable": false
+    },
+    "GoncaloLobo0/bloodborne_pc_win": {
+      "stars": 0,
+      "pushedAt": "2026-10-13T20:49:58Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": null,
+      "unavailable": false
+    },
+    "RandomAlien0x33/bloodborne-win-native": {
+      "stars": 2,
+      "pushedAt": "2026-10-13T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 17,
+      "unavailable": false,
+      "partial": true
+    },
+    "Phroster/bloodborne_pc_windows": {
+      "stars": 2,
+      "pushedAt": "2026-10-07T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 6,
+      "unavailable": false,
+      "partial": true
+    },
+    "vzeol/bloodborne_pc": {
+      "stars": 2,
+      "pushedAt": "2026-10-05T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 12,
+      "unavailable": false,
+      "partial": true
+    },
+    "XandasL/bloodborne_windows-PT-BR": {
+      "stars": 0,
+      "pushedAt": "2026-10-08T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 15,
+      "unavailable": false,
+      "partial": true
+    },
+    "bmy/bbport-mac": {
+      "stars": 28,
+      "pushedAt": "2026-10-11T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 136,
+      "unavailable": false,
+      "partial": true
+    },
+    "Livio21/metalborne": {
+      "stars": 3,
+      "pushedAt": "2026-10-09T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 36,
+      "unavailable": false,
+      "partial": true
+    },
+    "ducvd89/Bloodborne-Android": {
+      "stars": 79,
+      "pushedAt": "2026-10-13T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 49,
+      "unavailable": false,
+      "partial": true
+    },
+    "MaSieS4Fun/ARM_bloodborne_pc": {
+      "stars": 25,
+      "pushedAt": "2026-10-07T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 8,
+      "unavailable": false,
+      "partial": true
+    },
+    "ayozetr/bloodborne_linux": {
+      "stars": 8,
+      "pushedAt": "2026-10-13T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 94,
+      "unavailable": false,
+      "partial": true
+    },
+    "SrShadowy/bloodborne_pc": {
+      "stars": 3,
+      "pushedAt": "2026-10-13T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 39,
+      "unavailable": false,
+      "partial": true
+    },
+    "yerasuu/psport": {
+      "stars": 0,
+      "pushedAt": "2026-10-13T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 326,
+      "unavailable": false,
+      "partial": true
+    },
+    "ItalianKuze/port-ga-gotoku": {
+      "stars": 1,
+      "pushedAt": "2026-10-11T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 64,
+      "unavailable": false,
+      "partial": true
+    },
+    "Spexxl/The-Last-Guadian-PC": {
+      "stars": 0,
+      "pushedAt": "2026-10-13T12:00:00Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": null,
+      "release": null,
+      "ahead": 1,
+      "unavailable": false,
+      "partial": true
+    }
+  }
+}

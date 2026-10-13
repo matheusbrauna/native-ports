@@ -1,0 +1,10 @@
+[
+  { "id": "bloodborne", "title": "Bloodborne", "titleIds": ["CUSA03173", "CUSA00900"], "version": "1.09" },
+  { "id": "fist-of-the-north-star-lost-paradise", "title": "Fist of the North Star: Lost Paradise", "titleIds": [] },
+  { "id": "the-last-guardian", "title": "The Last Guardian", "titleIds": [] },
+  { "id": "atelier-ryza", "title": "Atelier Ryza", "titleIds": ["CUSA16458"] },
+  { "id": "atelier-ayesha-dx", "title": "Atelier Ayesha DX", "titleIds": ["CUSA16921"] },
+  { "id": "tales-of-symphonia-remastered", "title": "Tales of Symphonia Remastered", "titleIds": ["CUSA50989"] },
+  { "id": "astrea", "title": "Astrea", "titleIds": ["CUSA49515"] },
+  { "id": "saga-emerald-beyond", "title": "SaGa Emerald Beyond", "titleIds": ["CUSA43027"] }
+]

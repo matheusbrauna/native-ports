@@ -1,0 +1,346 @@
+---
+import Icon from "./Icon.astro";
+import { groups, entries, defaultOrder, repoUrl, isRetired, TIERS, PLATFORMS, type Lang, type Entry } from "../lib/catalog";
+import { t, path, formatNumber, formatDate, age } from "../lib/i18n";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t[lang];
+const now = Date.now();
+
+const tierCount = (list: Entry[]) => Object.fromEntries(TIERS.map((tier) => [tier, list.filter((e) => e.tier === tier).length]));
+const totalTiers = tierCount(entries);
+const usedPlatforms = PLATFORMS.filter((p) => entries.some((e) => e.port.platforms.includes(p)));
+
+const searchText = (e: Entry) =>
+  [e.port.name, e.port.repo, e.game.title, ...e.game.titleIds, e.port.notes[lang], ...e.port.graphics, ...e.port.platforms.map((p) => s.platforms[p])]
+    .join(" ")
+    .toLowerCase();
+
+---
+<section class="catalog wrap" aria-labelledby="catalog-title" data-lang={lang}>
+  <div class="intro">
+    <h1 id="catalog-title">{lang === "en" ? "PS4 games running natively on PC" : "Jogos de PS4 rodando nativamente no PC"}</h1>
+    <p>
+      {lang === "en"
+        ? <>Forks of <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a>, with the status each project declares. <a class="nowrap" href={path("/about/", lang)}>What the statuses mean</a></>
+        : <>Forks do <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a>, com o status que cada projeto declara. <a class="nowrap" href={path("/about/", lang)}>O que significa cada status</a></>}
+    </p>
+  </div>
+
+  <form class="controls" role="search" onsubmit="return false">
+    <label class="search">
+      <span class="visually-hidden">{s.search.label}</span>
+      <Icon name="search" size={18} />
+      <input id="q" type="search" name="q" placeholder={s.search.placeholder} autocomplete="off" spellcheck="false" />
+    </label>
+    <div class="filter-row">
+      <label class="select">
+        <span>{s.filters.game}</span>
+        <select id="game" name="game">
+          <option value="">{s.filters.allGames} ({entries.length})</option>
+          {groups.map((g) => <option value={g.game.id}>{g.game.title} ({g.entries.length})</option>)}
+        </select>
+      </label>
+      <fieldset class="chips">
+        <legend>{s.filters.platform}</legend>
+        {usedPlatforms.map((p) => (
+          <button type="button" class="chip" data-platform={p} aria-pressed="false">{s.platforms[p]} <span class="n data" data-platform-count={p}>{entries.filter((e) => e.port.platforms.includes(p)).length}</span></button>
+        ))}
+      </fieldset>
+      <button type="button" id="reset" class="reset" hidden><Icon name="x" size={14} />{s.filters.reset}</button>
+    </div>
+  </form>
+
+  <div class="status" aria-label={s.stripLabel}>
+    <p class="count" id="count" aria-live="polite">{s.count(entries.length, groups.length)}</p>
+    <div class="strip" aria-hidden="true">
+      {TIERS.map((tier) => (
+        <span class="seg" data-seg={tier} style={`flex-grow:${totalTiers[tier]}`} title={s.tiers[tier].label}></span>
+      ))}
+    </div>
+    <fieldset class="legend">
+      <legend class="visually-hidden">{s.filters.tier}</legend>
+      {TIERS.map((tier) => (
+        <button type="button" class="tier-toggle" data-tier-toggle={tier} aria-pressed="false" title={s.tiers[tier].hint}>
+          <span class="swatch" data-tier={tier}></span>
+          <span>{s.tiers[tier].label}</span>
+          <span class="n data" data-tier-count={tier}>{totalTiers[tier]}</span>
+        </button>
+      ))}
+    </fieldset>
+  </div>
+
+  <div class="table-wrap">
+    <table id="ports">
+      <caption class="visually-hidden">{s.count(entries.length, groups.length)}</caption>
+      <thead>
+        <tr data-sort-label={s.sortBy}>
+          <th scope="col" class="c-port" aria-sort="none"><button type="button" data-sort="name">{s.cols.port}<Icon name="sort" size={13} /></button></th>
+          <th scope="col" class="c-plat">{s.cols.platforms}</th>
+          <th scope="col" class="c-gfx">{s.cols.graphics}</th>
+          <th scope="col" class="c-tier">{s.cols.tier}</th>
+          <th scope="col" class="c-num c-stars" aria-sort="none"><button type="button" data-sort="stars">{s.cols.stars}<Icon name="sort" size={13} /></button></th>
+          <th scope="col" class="c-num c-pushed" aria-sort="descending"><button type="button" data-sort="pushed">{s.cols.pushed}<Icon name="sort" size={13} /></button></th>
+        </tr>
+      </thead>
+      {groups.map(({ game, entries: list }) => {
+        const counts = tierCount(list);
+        return (
+          <tbody data-group={game.id}>
+            <tr class="group-row">
+              <th colspan="6" scope="colgroup" id={`g-${game.id}`}>
+                <div class="group-head">
+                  <h2>{game.title}</h2>
+                  {game.titleIds.length > 0 && <span class="data ids">{game.titleIds.join(" · ")}{game.version && ` · v${game.version}`}</span>}
+                  <span class="gcount data" data-group-count>{list.length}</span>
+                  <span class="mini" aria-hidden="true">
+                    {TIERS.map((tier) => <span class="seg" data-seg={tier} style={`flex-grow:${counts[tier]}`}></span>)}
+                  </span>
+                </div>
+              </th>
+            </tr>
+            {[...list].sort(defaultOrder).map((e) => {
+              const f = e.port.facts;
+              const retired = isRetired(e.port);
+              return (
+                <tr
+                  class:list={["row", { retired }]}
+                  data-entry
+                  data-game={game.id}
+                  data-tier={e.tier}
+                  data-platforms={e.port.platforms.join(" ")}
+                  data-stars={f?.stars ?? 0}
+                  data-pushed={f ? Date.parse(f.pushedAt) : 0}
+                  data-name={e.port.name.toLowerCase()}
+                  data-upstream={e.port.kind === "upstream" ? "1" : undefined}
+                  data-text={searchText(e)}
+                >
+                  <td class="c-port">
+                    <div class="port-line">
+                      <a class="port-name" href={path(`/ports/${e.port.slug}/`, lang)}>{e.port.name}</a>
+                      {e.port.kind === "upstream" && <span class="flag up">{s.upstream}</span>}
+                      {f?.archived && <span class="flag">{s.archived}</span>}
+                      {f?.unavailable && <span class="flag">{s.unavailable}</span>}
+                      <a class="repo data" href={repoUrl(e.port.repo)} aria-label={`${s.openRepo}: ${e.port.repo}`}>{e.port.repo}<Icon name="external" size={12} /></a>
+                    </div>
+                    <p class="note" title={e.port.notes[lang]}>{e.port.notes[lang]}</p>
+                  </td>
+                  <td class="c-plat" data-label={s.cols.platforms}>
+                    {e.port.platforms.length ? e.port.platforms.map((p) => s.platforms[p]).join(", ") : <span class="muted">—</span>}
+                    {e.port.graphics.length > 0 && <span class="gfx-inline">{e.port.graphics.join(", ")}</span>}
+                  </td>
+                  <td class="c-gfx" data-label={s.cols.graphics}>
+                    {e.port.graphics.length ? e.port.graphics.join(", ") : <span class="muted">—</span>}
+                  </td>
+                  <td class="c-tier"><span class="tier" data-tier={e.tier} title={e.source ?? s.tiers[e.tier].hint}>{s.tiers[e.tier].label}</span></td>
+                  <td class="c-num c-stars data" data-label={s.cols.stars}>{f ? formatNumber(f.stars, lang) : "—"}</td>
+                  <td class="c-num c-pushed data" data-label={s.cols.pushed}>
+                    {f ? <time datetime={f.pushedAt} title={formatDate(f.pushedAt, lang)}>{age(f.pushedAt, now, f.partial)}</time> : "—"}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        );
+      })}
+    </table>
+    <div class="empty" id="empty" hidden>
+      <p class="empty-title">{s.empty.title}</p>
+      <p>{s.empty.body}</p>
+      <div class="empty-actions">
+        <button type="button" class="button ghost" data-reset><Icon name="x" size={14} />{s.filters.reset}</button>
+        <a class="button" href={path("/submit/", lang)}><Icon name="plus" size={14} />{s.empty.cta}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initCatalog } from "../lib/catalog-client";
+  initCatalog();
+</script>
+
+<style>
+  .catalog { padding-top: 28px; }
+  .intro h1 { font-size: var(--step-3); letter-spacing: -0.01em; }
+  .intro p { color: var(--ink-2); margin-top: 6px; max-width: var(--measure); }
+  .nowrap { white-space: nowrap; }
+
+  .controls { margin-top: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .search {
+    display: flex; align-items: center; gap: 12px; height: 46px; padding: 0 16px;
+    background: var(--panel); border-radius: var(--radius); box-shadow: inset 0 0 0 1px var(--line-strong);
+    color: var(--ink-3); transition: box-shadow var(--dur) var(--ease);
+  }
+  .search:focus-within { box-shadow: inset 0 0 0 2px var(--link); color: var(--ink-2); }
+  .search input {
+    flex: 1; min-width: 0; height: 100%; background: none; border: 0; outline: none;
+    color: var(--ink); font: inherit; font-size: var(--step-1);
+  }
+  .search input::placeholder { color: var(--ink-3); }
+  .search input::-webkit-search-cancel-button { filter: invert(0.7); cursor: pointer; }
+
+  .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+  .select { display: inline-flex; align-items: center; gap: 10px; color: var(--ink-2); font-size: var(--step--1); }
+  .select select {
+    height: 36px; padding: 0 32px 0 12px; border-radius: var(--radius); border: 0;
+    background: var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23b3bac6' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
+    box-shadow: inset 0 0 0 1px var(--line-strong); appearance: none;
+    color: var(--ink); font: inherit; font-size: var(--step-0); cursor: pointer;
+  }
+  .select select option { background: var(--panel); }
+  .chips, .legend { min-width: 0; min-inline-size: 0; border: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .chips legend { float: left; margin-right: 6px; color: var(--ink-2); font-size: var(--step--1); }
+  .chip {
+    height: 32px; padding: 0 12px; border-radius: 999px; border: 0; cursor: pointer;
+    background: var(--panel); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-strong);
+    font: inherit; font-size: var(--step--1);
+    transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  }
+  .chip:hover { color: var(--ink); background: var(--raised); }
+  .chip .n { color: var(--ink-3); margin-left: 2px; }
+  .chip[aria-pressed="true"] { background: var(--raised); color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink-3); font-weight: 700; }
+  .chip[aria-pressed="true"] .n { color: var(--ink); }
+  .reset {
+    display: inline-flex; align-items: center; gap: 6px; margin-left: auto; height: 32px; padding: 0 10px;
+    background: none; border: 0; color: var(--ink-2); font: inherit; font-size: var(--step--1); cursor: pointer;
+  }
+  .reset:hover { color: var(--ink); text-decoration: underline; }
+
+  .status { margin-top: 16px; display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "count legend" "strip strip"; align-items: center; gap: 8px 24px; }
+  .count { grid-area: count; }
+  .strip { grid-area: strip; }
+  .legend { grid-area: legend; justify-content: flex-end; }
+  .count { font-size: var(--step-1); font-weight: 700; }
+  .strip { display: flex; gap: 2px; height: 14px; border-radius: 3px; overflow: hidden; background: var(--panel); }
+  .strip .seg, .mini .seg {
+    flex-basis: 0; min-width: 0; cursor: pointer;
+    transition: flex-grow var(--dur) var(--ease), opacity var(--dur) var(--ease);
+  }
+  .seg[data-seg="playable"] { background: var(--tier-playable); }
+  .seg[data-seg="ingame"] { background: var(--tier-ingame); }
+  .seg[data-seg="intro"] { background: var(--tier-intro); }
+  .seg[data-seg="wip"] { background: var(--tier-wip); }
+  .seg[data-seg="unrated"] { background: var(--tier-unrated); }
+  .strip.filtered .seg:not(.on) { opacity: 0.28; }
+  .tier-toggle {
+    display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 10px 0 8px;
+    background: none; border: 0; border-radius: var(--radius); cursor: pointer;
+    color: var(--ink-2); font: inherit; font-size: var(--step--1);
+    transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  }
+  .tier-toggle:hover { background: var(--panel); color: var(--ink); }
+  .tier-toggle[aria-pressed="true"] { background: var(--raised); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line-strong); font-weight: 700; }
+  .tier-toggle .n { color: var(--ink-3); }
+  .tier-toggle[aria-pressed="true"] .n { color: var(--ink); }
+  .swatch { width: 10px; height: 10px; border-radius: 2px; background: var(--tier-color); }
+  .swatch[data-tier="playable"] { --tier-color: var(--tier-playable); }
+  .swatch[data-tier="ingame"] { --tier-color: var(--tier-ingame); }
+  .swatch[data-tier="intro"] { --tier-color: var(--tier-intro); }
+  .swatch[data-tier="wip"] { --tier-color: var(--tier-wip); }
+  .swatch[data-tier="unrated"] { --tier-color: var(--tier-unrated); }
+
+  .table-wrap { margin-top: 8px; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  thead .c-plat { width: 15%; }
+  thead .c-gfx { width: 15%; }
+  thead .c-tier { width: 120px; }
+  thead .c-stars { width: 84px; }
+  thead .c-pushed { width: 112px; }
+  thead th {
+    position: sticky; top: 0; z-index: 1; background: var(--ground);
+    text-align: left; font-size: var(--step--1); font-weight: 700; color: var(--ink-3);
+    padding: 10px 12px; border-bottom: 1px solid var(--line-strong); white-space: nowrap;
+  }
+  thead button {
+    display: inline-flex; align-items: center; gap: 6px; padding: 0; background: none; border: 0;
+    color: inherit; font: inherit; cursor: pointer;
+  }
+  thead button:hover, th[aria-sort="ascending"] button, th[aria-sort="descending"] button { color: var(--ink); }
+  th[aria-sort="none"] svg { opacity: 0.5; }
+  .c-num { text-align: right; }
+  thead .c-num button { flex-direction: row-reverse; }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.c-plat, td.c-gfx { color: var(--ink-2); font-size: var(--step--1); padding-top: 10px; }
+  td.c-tier { padding-top: 8px; }
+  td.c-num { color: var(--ink-2); padding-top: 16px; white-space: nowrap; font-size: var(--step--1); }
+  td.c-num { padding-top: 10px; }
+  .group-row th { padding: 18px 12px 8px; border-bottom: 1px solid var(--line-strong); text-align: left; }
+  .group-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; }
+  .group-head h2 { font-size: var(--step-2); }
+  .ids { color: var(--ink-3); font-size: var(--step--1); font-weight: 400; }
+  .gcount { color: var(--ink-2); font-size: var(--step--1); font-weight: 400; background: var(--panel); padding: 0 7px; border-radius: 3px; }
+  .mini { display: flex; gap: 2px; width: 120px; height: 6px; border-radius: 2px; overflow: hidden; align-self: center; margin-left: auto; }
+  .mini .seg { cursor: default; }
+  tbody tr.row { transition: background-color var(--dur) var(--ease); }
+  tbody tr.row:hover { background: var(--panel); }
+  .port-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+  .port-name { color: var(--ink); font-weight: 700; font-size: var(--step-0); text-decoration: none; }
+  .port-name:hover { color: var(--link-hover); text-decoration: underline; }
+  .flag {
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-2); padding: 1px 6px; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--line-strong);
+  }
+  .flag.up { color: var(--on-tier); background: var(--ink-2); box-shadow: none; }
+  .repo { display: inline-flex; align-items: center; gap: 5px; font-size: var(--step--1); text-decoration: none; }
+  .repo:hover { text-decoration: underline; }
+  .note { margin-top: 2px; color: var(--ink-3); font-size: var(--step--1); max-width: 80ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .gfx-inline { display: none; }
+  .muted { color: var(--ink-3); }
+  tr.retired .port-name, tr.retired .note { color: var(--ink-3); }
+  tr[hidden], tbody[hidden] { display: none; }
+
+  .empty { padding: 48px 12px; border-bottom: 1px solid var(--line); }
+  .empty-title { font-size: var(--step-1); font-weight: 700; }
+  .empty p:not(.empty-title) { color: var(--ink-2); margin-top: 4px; }
+  .empty-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+
+  @media (max-width: 1080px) {
+    thead th.c-gfx { width: 0; }
+    th.c-gfx, td.c-gfx { padding: 0; overflow: hidden; visibility: hidden; }
+    .gfx-inline { display: block; color: var(--ink-3); }
+  }
+  @media (max-width: 760px) {
+    .catalog { padding-top: 18px; }
+    .intro p { font-size: var(--step--1); }
+    .controls { margin-top: 14px; gap: 10px; }
+    .filter-row { gap: 10px; }
+    .select { width: 100%; }
+    .select select { flex: 1; }
+    .chips { flex-wrap: nowrap; overflow-x: auto; width: calc(100% + var(--gutter)); margin-right: calc(-1 * var(--gutter)); padding-right: var(--gutter); scrollbar-width: none; }
+    .chips legend { float: none; flex-shrink: 0; }
+    .chip { flex-shrink: 0; }
+    .status { margin-top: 14px; grid-template-columns: minmax(0, 1fr); grid-template-areas: "count" "strip" "legend"; }
+    .legend { justify-content: flex-start; }
+    .legend { margin-left: -6px; row-gap: 2px; }
+    .tier-toggle { flex-shrink: 0; padding: 0 6px; gap: 6px; }
+    .gfx-inline { display: block; color: var(--ink-3); }
+    .note { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .intro h1 { font-size: var(--step-2); }
+    .reset { margin-left: 0; }
+    table, tbody, tr, td, th { display: block; }
+    thead tr { display: flex; gap: 16px; align-items: center; border-bottom: 1px solid var(--line-strong); }
+    thead tr::before { content: attr(data-sort-label); white-space: nowrap; flex-shrink: 0; color: var(--ink-3); font-size: var(--step--1); }
+    thead th { flex-shrink: 0; }
+    thead tr { overflow-x: auto; }
+    thead th { position: static; border: 0; padding: 10px 0; }
+    thead th:not([aria-sort]) { display: none; }
+    .c-num { text-align: left; }
+    thead .c-num button { flex-direction: row; }
+    .group-row th { padding: 26px 0 10px; }
+    .mini { width: 72px; }
+    tr.row {
+      display: grid; grid-template-columns: auto auto 1fr; column-gap: 16px;
+      grid-template-areas: "port port port" "tier stars pushed" "plat plat plat";
+      padding: 12px 0; border-bottom: 1px solid var(--line);
+    }
+    tr.row td { padding: 0; border: 0; }
+    td.c-port { grid-area: port; width: auto; }
+    td.c-tier { grid-area: tier; padding-top: 10px; }
+    td.c-stars { grid-area: stars; padding-top: 12px; }
+    td.c-pushed { grid-area: pushed; padding-top: 12px; }
+    td.c-plat { grid-area: plat; padding-top: 6px; }
+    td.c-plat::before, td.c-num::before { content: attr(data-label) " "; color: var(--ink-3); font-family: var(--font-ui); }
+  }
+</style>

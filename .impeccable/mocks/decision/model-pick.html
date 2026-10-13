@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:'Atkinson Hyperlegible',sans-serif;background:#16181d;color:#e6e8ec;font-size:14px}
+.top{height:60px;border-bottom:1px solid #2c313a;display:flex;align-items:center;gap:24px;padding:0 32px}
+.brand{font-weight:700;font-size:18px}
+.top nav{margin-left:auto;display:flex;gap:22px;color:#9aa3b2}
+.bar{padding:24px 32px 0}
+.search{height:46px;background:#22262e;border:1px solid #333944;border-radius:6px;display:flex;align-items:center;padding:0 16px;color:#8a93a3;font-size:16px}
+.chips{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.chip{padding:6px 12px;border-radius:999px;background:#22262e;border:1px solid #333944;font-size:13px;color:#c3c9d4}
+.chip.on{background:#5b8def;border-color:#5b8def;color:#fff}
+.sum{display:flex;gap:28px;padding:18px 32px;color:#9aa3b2;font-size:13px}
+.sum b{color:#e6e8ec;font-size:20px;display:block;font-family:'JetBrains Mono',monospace}
+table{width:calc(100% - 64px);margin:0 32px;border-collapse:collapse}
+th{text-align:left;font-size:12px;color:#8a93a3;text-transform:uppercase;letter-spacing:.06em;padding:10px 12px;border-bottom:1px solid #2c313a}
+td{padding:12px;border-bottom:1px solid #22262e;vertical-align:middle}
+td.t{border-left:4px solid}
+.repo{color:#7aa5ff;font-family:'JetBrains Mono',monospace;font-size:13px}
+.num{font-family:'JetBrains Mono',monospace;text-align:right}
+.tier{display:inline-block;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:700;color:#111}
+.P{background:#3ecf6e}.B{background:#5b8def;color:#fff}.W{background:#f2c94c}.A{background:#eb5757;color:#fff}
+.pl{color:#c3c9d4}
+</style></head><body>
+<header class="top"><div class="brand">PS4 Native Ports</div><nav><span>Catalog</span><span>Submit</span><span>About</span><span>EN / PT</span></nav></header>
+<div class="bar">
+ <div class="search">Search games, repos, authors…</div>
+ <div class="chips"><span class="chip on">All games</span><span class="chip">Bloodborne</span><span class="chip">Yakuza</span><span class="chip">The Last Guardian</span><span class="chip">Linux</span><span class="chip on">Windows</span><span class="chip">macOS</span><span class="chip">Android</span><span class="chip">Playable</span><span class="chip">WIP</span></div>
+</div>
+<div class="sum"><span><b>16</b>ports listed</span><span><b>3</b>games</span><span><b>6</b>platforms</span><span><b>3</b>playable</span></div>
+<table>
+<tr><th>Game</th><th>Port</th><th>Platform</th><th>Status</th><th class="num">Stars</th><th class="num">Last push</th></tr>
+<tr><td class="t" style="border-color:#3ecf6e">Bloodborne</td><td><span class="repo">deadinside28/bloodborne_pc</span></td><td class="pl">Linux, Steam Deck</td><td><span class="tier P">Playable</span></td><td class="num">4,812</td><td class="num">3 d</td></tr>
+<tr><td class="t" style="border-color:#f2c94c">Bloodborne</td><td><span class="repo">nickdotx/bbport-windows</span></td><td class="pl">Windows</td><td><span class="tier W">WIP</span></td><td class="num">212</td><td class="num">1 d</td></tr>
+<tr><td class="t" style="border-color:#f2c94c">Bloodborne</td><td><span class="repo">Livio21/metalborne</span></td><td class="pl">macOS · Metal</td><td><span class="tier W">WIP</span></td><td class="num">96</td><td class="num">2 d</td></tr>
+<tr><td class="t" style="border-color:#5b8def">Bloodborne</td><td><span class="repo">RandomAlien0x33/bloodborne-win-native</span></td><td class="pl">Windows</td><td><span class="tier B">Boots</span></td><td class="num">41</td><td class="num">4 d</td></tr>
+<tr><td class="t" style="border-color:#5b8def">Bloodborne</td><td><span class="repo">ducvd89/Bloodborne-Android</span></td><td class="pl">Android</td><td><span class="tier B">Boots</span></td><td class="num">38</td><td class="num">5 d</td></tr>
+<tr><td class="t" style="border-color:#f2c94c">Yakuza</td><td><span class="repo">ItalianKuze/port-ga-gotoku</span></td><td class="pl">Linux</td><td><span class="tier W">WIP</span></td><td class="num">27</td><td class="num">2 d</td></tr>
+<tr><td class="t" style="border-color:#f2c94c">The Last Guardian</td><td><span class="repo">Spexxl/The-Last-Guadian-PC</span></td><td class="pl">Linux</td><td><span class="tier W">WIP</span></td><td class="num">19</td><td class="num">3 d</td></tr>
+<tr><td class="t" style="border-color:#3ecf6e">Bloodborne</td><td><span class="repo">XandasL/bloodborne_windows-PT-BR</span></td><td class="pl">Windows · PT-BR</td><td><span class="tier P">Playable</span></td><td class="num">17</td><td class="num">5 d</td></tr>
+<tr><td class="t" style="border-color:#eb5757">Bloodborne</td><td><span class="repo">Wixeria/bloodborne_windows</span></td><td class="pl">Windows</td><td><span class="tier A">Abandoned</span></td><td class="num">9</td><td class="num">8 d</td></tr>
+</table>
+</body></html>

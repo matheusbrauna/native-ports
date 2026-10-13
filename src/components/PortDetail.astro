@@ -1,0 +1,114 @@
+---
+import Icon from "./Icon.astro";
+import { getGame, repoUrl, type Lang, type Port } from "../lib/catalog";
+import { t, path, formatNumber, formatDate } from "../lib/i18n";
+
+interface Props { lang: Lang; port: Port }
+const { lang, port } = Astro.props;
+const s = t[lang];
+const d = s.detail;
+const f = port.facts;
+---
+<article class="detail wrap">
+  <a class="back" href={path("/", lang)}><Icon name="back" size={15} />{d.back}</a>
+
+  <header class="head">
+    <div class="title-line">
+      <h1>{port.name}</h1>
+      {port.kind === "upstream" && <span class="flag up">{s.upstream}</span>}
+      {f?.archived && <span class="flag">{s.archived}</span>}
+      {f?.unavailable && <span class="flag">{s.unavailable}</span>}
+    </div>
+    <p class="repo data">{port.repo}</p>
+    <p class="lede">{port.notes[lang]}</p>
+    <div class="actions">
+      <a class="button" href={repoUrl(port.repo)}><Icon name="external" size={15} />{s.openRepo}</a>
+      {f?.release && <a class="button ghost" href={f.release.url}><Icon name="tag" size={15} />{f.release.tag}</a>}
+    </div>
+  </header>
+
+  <div class="cols">
+    <section aria-labelledby="games-h">
+      <h2 id="games-h">{d.games}</h2>
+      <table class="games">
+        <thead><tr><th scope="col">{d.game}</th><th scope="col">{d.tier}</th><th scope="col">{d.evidence}</th></tr></thead>
+        <tbody>
+          {port.games.map((pg) => {
+            const g = getGame(pg.id);
+            return (
+              <tr>
+                <th scope="row">
+                  <a href={`${path("/", lang)}?game=${g.id}`}>{g.title}</a>
+                  {g.titleIds.length > 0 && <span class="data ids">{g.titleIds.join(" · ")}</span>}
+                </th>
+                <td><span class="tier" data-tier={pg.tier}>{s.tiers[pg.tier].label}</span></td>
+                <td class="evidence">{pg.source ?? <span class="muted">{s.tiers[pg.tier].hint}</span>}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <p class="own">{d.ownCopy}</p>
+    </section>
+
+    <section aria-labelledby="facts-h" class="facts">
+      <h2 id="facts-h">{d.facts}</h2>
+      <dl>
+        <div><dt>{d.platforms}</dt><dd>{port.platforms.length ? port.platforms.map((p) => s.platforms[p]).join(", ") : d.unknown}</dd></div>
+        <div><dt>{d.graphics}</dt><dd>{port.graphics.length ? port.graphics.join(", ") : d.unknown}</dd></div>
+        {port.upstream && <div><dt>{d.upstream}</dt><dd><a class="data" href={repoUrl(port.upstream)}>{port.upstream}</a></dd></div>}
+        {f?.ahead != null && <div><dt>{d.ahead}</dt><dd class="data">{formatNumber(f.ahead, lang)}</dd></div>}
+        <div><dt>{d.stars}</dt><dd class="data">{f ? formatNumber(f.stars, lang) : d.unknown}</dd></div>
+        <div><dt>{d.pushed}</dt><dd class="data">{f ? <time datetime={f.pushedAt}>{formatDate(f.pushedAt, lang)}</time> : d.unknown}</dd></div>
+        <div><dt>{d.release}</dt><dd>{f?.release ? <a class="data" href={f.release.url}>{f.release.tag}</a> : <span class="muted">{f?.partial || !f ? d.notChecked : d.noRelease}</span>}</dd></div>
+        <div><dt>{d.license}</dt><dd class="data">{f?.license ?? d.unknown}</dd></div>
+      </dl>
+    </section>
+  </div>
+</article>
+
+<style>
+  .detail { padding-top: 28px; }
+  .back { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); text-decoration: none; font-size: var(--step--1); }
+  .back:hover { color: var(--ink); }
+  .head { margin-top: 20px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+  .title-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+  h1 { font-size: var(--step-4); letter-spacing: -0.02em; }
+  .repo { color: var(--ink-3); margin-top: 8px; }
+  .lede { color: var(--ink-2); font-size: var(--step-1); margin-top: 14px; max-width: var(--measure); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .flag {
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink-2); padding: 1px 6px; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--line-strong);
+  }
+  .flag.up { color: var(--on-tier); background: var(--ink-2); box-shadow: none; }
+
+  .cols { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 48px; margin-top: 32px; }
+  h2 { font-size: var(--step-1); margin-bottom: 12px; }
+  .games { width: 100%; border-collapse: collapse; }
+  .games thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line-strong); }
+  .games tbody th, .games td { text-align: left; padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .games tbody th { font-weight: 700; }
+  .games tbody th a { color: var(--ink); text-decoration: none; }
+  .games tbody th a:hover { color: var(--link-hover); text-decoration: underline; }
+  .ids { display: block; color: var(--ink-3); font-weight: 400; font-size: var(--step--1); margin-top: 2px; }
+  .evidence { color: var(--ink-2); font-size: var(--step--1); }
+  .muted { color: var(--ink-3); }
+  .own { margin-top: 18px; color: var(--ink-2); font-size: var(--step--1); max-width: var(--measure); padding: 12px 14px; background: var(--panel); border-radius: var(--radius); }
+
+  .facts dl { display: grid; }
+  .facts dl > div { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  dt { color: var(--ink-3); font-size: var(--step--1); }
+  dd { text-align: right; font-size: var(--step--1); color: var(--ink); }
+
+  @media (max-width: 900px) {
+    .cols { grid-template-columns: 1fr; gap: 36px; }
+    h1 { font-size: var(--step-3); }
+  }
+  @media (max-width: 560px) {
+    .games thead { display: none; }
+    .games tr { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .games tbody th, .games td { display: block; padding: 0; border: 0; }
+    .games td.evidence { grid-column: 1 / -1; }
+  }
+</style>

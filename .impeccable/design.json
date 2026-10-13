@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T22:12:47.977Z",
+  "title": "Design System: PS4 Native Ports",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Graphite Ground",
+        "canonical": "#16181d",
+        "tonalRamp": [
+          "oklch(15% 0.01 265)",
+          "oklch(25% 0.01 265)",
+          "oklch(35% 0.01 265)",
+          "oklch(45% 0.01 265)",
+          "oklch(55% 0.01 265)",
+          "oklch(65% 0.01 265)",
+          "oklch(80% 0.01 265)",
+          "oklch(95% 0.01 265)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Graphite Panel",
+        "canonical": "#1c1f26",
+        "tonalRamp": [
+          "oklch(15% 0.012 265)",
+          "oklch(25% 0.012 265)",
+          "oklch(35% 0.012 265)",
+          "oklch(45% 0.012 265)",
+          "oklch(55% 0.012 265)",
+          "oklch(65% 0.012 265)",
+          "oklch(80% 0.012 265)",
+          "oklch(95% 0.012 265)"
+        ]
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Graphite Raised",
+        "canonical": "#23272f",
+        "tonalRamp": [
+          "oklch(15% 0.013 265)",
+          "oklch(25% 0.013 265)",
+          "oklch(35% 0.013 265)",
+          "oklch(45% 0.013 265)",
+          "oklch(55% 0.013 265)",
+          "oklch(65% 0.013 265)",
+          "oklch(80% 0.013 265)",
+          "oklch(95% 0.013 265)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#2c313a",
+        "tonalRamp": [
+          "oklch(15% 0.015 260)",
+          "oklch(25% 0.015 260)",
+          "oklch(35% 0.015 260)",
+          "oklch(45% 0.015 260)",
+          "oklch(55% 0.015 260)",
+          "oklch(65% 0.015 260)",
+          "oklch(80% 0.015 260)",
+          "oklch(95% 0.015 260)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "#3b414c",
+        "tonalRamp": [
+          "oklch(15% 0.018 260)",
+          "oklch(25% 0.018 260)",
+          "oklch(35% 0.018 260)",
+          "oklch(45% 0.018 260)",
+          "oklch(55% 0.018 260)",
+          "oklch(65% 0.018 260)",
+          "oklch(80% 0.018 260)",
+          "oklch(95% 0.018 260)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Paper Ink",
+        "canonical": "#e6e8ec",
+        "tonalRamp": [
+          "oklch(15% 0.005 265)",
+          "oklch(25% 0.005 265)",
+          "oklch(35% 0.005 265)",
+          "oklch(45% 0.005 265)",
+          "oklch(55% 0.005 265)",
+          "oklch(65% 0.005 265)",
+          "oklch(80% 0.005 265)",
+          "oklch(95% 0.005 265)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "canonical": "#b3bac6",
+        "tonalRamp": [
+          "oklch(15% 0.02 262)",
+          "oklch(25% 0.02 262)",
+          "oklch(35% 0.02 262)",
+          "oklch(45% 0.02 262)",
+          "oklch(55% 0.02 262)",
+          "oklch(65% 0.02 262)",
+          "oklch(80% 0.02 262)",
+          "oklch(95% 0.02 262)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Tertiary Ink",
+        "canonical": "#8d96a5",
+        "tonalRamp": [
+          "oklch(15% 0.025 260)",
+          "oklch(25% 0.025 260)",
+          "oklch(35% 0.025 260)",
+          "oklch(45% 0.025 260)",
+          "oklch(55% 0.025 260)",
+          "oklch(65% 0.025 260)",
+          "oklch(80% 0.025 260)",
+          "oklch(95% 0.025 260)"
+        ]
+      },
+      "link": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#82acff",
+        "tonalRamp": [
+          "oklch(15% 0.13 265)",
+          "oklch(25% 0.13 265)",
+          "oklch(35% 0.13 265)",
+          "oklch(45% 0.13 265)",
+          "oklch(55% 0.13 265)",
+          "oklch(65% 0.13 265)",
+          "oklch(80% 0.13 265)",
+          "oklch(95% 0.13 265)"
+        ]
+      },
+      "link-hover": {
+        "role": "primary",
+        "displayName": "Pale Signal Blue",
+        "canonical": "#a9c5ff",
+        "tonalRamp": [
+          "oklch(15% 0.09 265)",
+          "oklch(25% 0.09 265)",
+          "oklch(35% 0.09 265)",
+          "oklch(45% 0.09 265)",
+          "oklch(55% 0.09 265)",
+          "oklch(65% 0.09 265)",
+          "oklch(80% 0.09 265)",
+          "oklch(95% 0.09 265)"
+        ]
+      },
+      "on-tier": {
+        "role": "neutral",
+        "displayName": "Tier Ink",
+        "canonical": "#101216",
+        "tonalRamp": [
+          "oklch(15% 0.007 265)",
+          "oklch(25% 0.007 265)",
+          "oklch(35% 0.007 265)",
+          "oklch(45% 0.007 265)",
+          "oklch(55% 0.007 265)",
+          "oklch(65% 0.007 265)",
+          "oklch(80% 0.007 265)",
+          "oklch(95% 0.007 265)"
+        ]
+      },
+      "tier-playable": {
+        "role": "status",
+        "displayName": "Playable Green",
+        "canonical": "#3ecf6e",
+        "tonalRamp": [
+          "oklch(15% 0.18 150)",
+          "oklch(25% 0.18 150)",
+          "oklch(35% 0.18 150)",
+          "oklch(45% 0.18 150)",
+          "oklch(55% 0.18 150)",
+          "oklch(65% 0.18 150)",
+          "oklch(80% 0.18 150)",
+          "oklch(95% 0.18 150)"
+        ]
+      },
+      "tier-ingame": {
+        "role": "status",
+        "displayName": "In-game Yellow",
+        "canonical": "#f2c94c",
+        "tonalRamp": [
+          "oklch(15% 0.15 90)",
+          "oklch(25% 0.15 90)",
+          "oklch(35% 0.15 90)",
+          "oklch(45% 0.15 90)",
+          "oklch(55% 0.15 90)",
+          "oklch(65% 0.15 90)",
+          "oklch(80% 0.15 90)",
+          "oklch(95% 0.15 90)"
+        ]
+      },
+      "tier-intro": {
+        "role": "status",
+        "displayName": "Intro Orange",
+        "canonical": "#f2994a",
+        "tonalRamp": [
+          "oklch(15% 0.15 60)",
+          "oklch(25% 0.15 60)",
+          "oklch(35% 0.15 60)",
+          "oklch(45% 0.15 60)",
+          "oklch(55% 0.15 60)",
+          "oklch(65% 0.15 60)",
+          "oklch(80% 0.15 60)",
+          "oklch(95% 0.15 60)"
+        ]
+      },
+      "tier-wip": {
+        "role": "status",
+        "displayName": "In-progress Violet",
+        "canonical": "#b195f5",
+        "tonalRamp": [
+          "oklch(15% 0.14 295)",
+          "oklch(25% 0.14 295)",
+          "oklch(35% 0.14 295)",
+          "oklch(45% 0.14 295)",
+          "oklch(55% 0.14 295)",
+          "oklch(65% 0.14 295)",
+          "oklch(80% 0.14 295)",
+          "oklch(95% 0.14 295)"
+        ]
+      },
+      "tier-unrated": {
+        "role": "status",
+        "displayName": "Not-stated Slate",
+        "canonical": "#4a515d",
+        "tonalRamp": [
+          "oklch(15% 0.022 260)",
+          "oklch(25% 0.022 260)",
+          "oklch(35% 0.022 260)",
+          "oklch(45% 0.022 260)",
+          "oklch(55% 0.022 260)",
+          "oklch(65% 0.022 260)",
+          "oklch(80% 0.022 260)",
+          "oklch(95% 0.022 260)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Port name on the detail page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles on catalog, Submit and About."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Game group headers and prose section heads."
+      },
+      "body-lg": {
+        "displayName": "Body large",
+        "purpose": "Result count, search text, ledes, wordmark."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text and port names; prose at a 68ch measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Column headers, chips, tier toggles and blocks, secondary cells, footer."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Uppercase state flags (Upstream, Archived, Unavailable) only."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Repo slugs, title IDs, counts, stars, dates, licence, code; tabular figures."
+      }
+    },
+    "shadows": [
+      {
+        "name": "control-outline",
+        "value": "inset 0 0 0 1px var(--line-strong)",
+        "purpose": "Border substitute for inputs, chips, ghost buttons, flags, outlined tier block."
+      },
+      {
+        "name": "pressed-chip-outline",
+        "value": "inset 0 0 0 1px var(--ink-3)",
+        "purpose": "Pressed platform chip."
+      },
+      {
+        "name": "focus-within",
+        "value": "inset 0 0 0 2px var(--link)",
+        "purpose": "Search field while focused."
+      },
+      {
+        "name": "current-page-bar",
+        "value": "inset 0 -2px 0 var(--link)",
+        "purpose": "Active top-bar link."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The only easing; expo ease-out."
+      },
+      {
+        "name": "dur",
+        "value": "160ms",
+        "purpose": "The only duration: colour and background state changes and strip segment widths. 0ms under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "gfx-fold",
+        "value": "1080px"
+      },
+      {
+        "name": "detail-stack",
+        "value": "900px"
+      },
+      {
+        "name": "catalog-stack",
+        "value": "760px"
+      },
+      {
+        "name": "topbar-wrap",
+        "value": "720px"
+      },
+      {
+        "name": "detail-table-stack",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Opens a destination: repository, submit page.",
+      "html": "<a class=\"ds-button\" href=\"#\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 3h6v6\"/><path d=\"M10 14 21 3\"/><path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\"/></svg>Open repository</a>",
+      "css": ".ds-button { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border-radius: 4px; font: 700 0.9375rem/1 'Atkinson Hyperlegible', system-ui, sans-serif; text-decoration: none; background: var(--link, #82acff); color: var(--on-tier, #101216); border: 0; cursor: pointer; transition: background-color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-button:hover { background: var(--link-hover, #a9c5ff); } .ds-button:focus-visible { outline: 2px solid var(--link, #82acff); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action: release tag, clear filters.",
+      "html": "<button class=\"ds-button-ghost\" type=\"button\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg>Clear filters</button>",
+      "css": ".ds-button-ghost { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border-radius: 4px; font: 700 0.9375rem/1 'Atkinson Hyperlegible', system-ui, sans-serif; background: transparent; color: var(--ink, #e6e8ec); border: 0; box-shadow: inset 0 0 0 1px var(--line-strong, #3b414c); cursor: pointer; transition: background-color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-button-ghost:hover { background: var(--raised, #23272f); } .ds-button-ghost:focus-visible { outline: 2px solid var(--link, #82acff); outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Full-width catalog search; focus thickens the outline to 2px blue.",
+      "html": "<label class=\"ds-search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input type=\"search\" placeholder=\"Game, port, repository or title ID\"></label>",
+      "css": ".ds-search { display: flex; align-items: center; gap: 12px; height: 46px; padding: 0 16px; background: var(--panel, #1c1f26); border-radius: 4px; box-shadow: inset 0 0 0 1px var(--line-strong, #3b414c); color: var(--ink-3, #8d96a5); transition: box-shadow 160ms cubic-bezier(0.16,1,0.3,1); } .ds-search:focus-within { box-shadow: inset 0 0 0 2px var(--link, #82acff); color: var(--ink-2, #b3bac6); } .ds-search input { flex: 1; min-width: 0; height: 100%; background: none; border: 0; outline: none; color: var(--ink, #e6e8ec); font: 400 1.0625rem 'Atkinson Hyperlegible', system-ui, sans-serif; } .ds-search input::placeholder { color: var(--ink-3, #8d96a5); }"
+    },
+    {
+      "name": "Filter Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Platform filters; pressed uses raised graphite, never blue.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Windows <span class=\"ds-n\">9</span></button><button class=\"ds-chip\" aria-pressed=\"false\">Linux <span class=\"ds-n\">10</span></button><button class=\"ds-chip\" aria-pressed=\"false\">macOS <span class=\"ds-n\">2</span></button></div>",
+      "css": ".ds-chips { display: flex; gap: 6px; } .ds-chip { height: 32px; padding: 0 12px; border-radius: 999px; border: 0; cursor: pointer; background: var(--panel, #1c1f26); color: var(--ink-2, #b3bac6); box-shadow: inset 0 0 0 1px var(--line-strong, #3b414c); font: 400 0.8125rem 'Atkinson Hyperlegible', system-ui, sans-serif; transition: background-color 160ms cubic-bezier(0.16,1,0.3,1), color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-chip:hover { color: var(--ink, #e6e8ec); background: var(--raised, #23272f); } .ds-chip:focus-visible { outline: 2px solid var(--link, #82acff); outline-offset: 2px; } .ds-chip .ds-n { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; color: var(--ink-3, #8d96a5); margin-left: 2px; } .ds-chip[aria-pressed='true'] { background: var(--raised, #23272f); color: var(--ink, #e6e8ec); box-shadow: inset 0 0 0 1px var(--ink-3, #8d96a5); font-weight: 700; } .ds-chip[aria-pressed='true'] .ds-n { color: var(--ink, #e6e8ec); }"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Top bar with list-glyph wordmark, links and language switch.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 22 22\" aria-hidden=\"true\"><rect x=\"1\" y=\"3\" width=\"20\" height=\"3\" rx=\"1\" fill=\"#e6e8ec\"/><rect x=\"1\" y=\"9.5\" width=\"14\" height=\"3\" rx=\"1\" fill=\"#b3bac6\"/><rect x=\"1\" y=\"16\" width=\"8\" height=\"3\" rx=\"1\" fill=\"#8d96a5\"/></svg>PS4 Native Ports</a><nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Catalog</a><a href=\"#\">Submit a port</a><a href=\"#\">About</a></nav><a class=\"ds-lang\" href=\"#\"><span class=\"ds-code\">PT</span>Português</a></header>",
+      "css": ".ds-top { display: flex; align-items: center; gap: 28px; height: 60px; padding: 0 24px; background: var(--ground, #16181d); border-bottom: 1px solid var(--line, #2c313a); font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; } .ds-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink, #e6e8ec); text-decoration: none; font-weight: 700; font-size: 1.0625rem; } .ds-nav { display: flex; gap: 4px; margin-left: auto; } .ds-nav a { color: var(--ink-2, #b3bac6); text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.9375rem; transition: color 160ms cubic-bezier(0.16,1,0.3,1), background-color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-nav a:hover { color: var(--ink, #e6e8ec); background: var(--panel, #1c1f26); } .ds-nav a:focus-visible, .ds-lang:focus-visible { outline: 2px solid var(--link, #82acff); outline-offset: 2px; } .ds-nav a[aria-current='page'] { color: var(--ink, #e6e8ec); box-shadow: inset 0 -2px 0 var(--link, #82acff); border-radius: 0; } .ds-lang { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2, #b3bac6); text-decoration: none; padding: 5px 10px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--line-strong, #3b414c); font-size: 0.8125rem; } .ds-lang:hover { color: var(--ink, #e6e8ec); background: var(--panel, #1c1f26); } .ds-code { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 600; color: var(--ink, #e6e8ec); }"
+    },
+    {
+      "name": "Tier Blocks",
+      "kind": "custom",
+      "refersTo": "tier-block-playable",
+      "description": "Status cell: filled for declared tiers, outlined when not stated.",
+      "html": "<div class=\"ds-tiers\"><span class=\"ds-tier ds-playable\">Playable</span><span class=\"ds-tier ds-ingame\">In-game</span><span class=\"ds-tier ds-intro\">Intro</span><span class=\"ds-tier ds-wip\">In progress</span><span class=\"ds-tier ds-unrated\">Not stated</span></div>",
+      "css": ".ds-tiers { display: flex; flex-wrap: wrap; gap: 8px; } .ds-tier { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 3px; font: 700 0.8125rem/1.5 'Atkinson Hyperlegible', system-ui, sans-serif; white-space: nowrap; color: var(--on-tier, #101216); } .ds-playable { background: var(--tier-playable, #3ecf6e); } .ds-ingame { background: var(--tier-ingame, #f2c94c); } .ds-intro { background: var(--tier-intro, #f2994a); } .ds-wip { background: var(--tier-wip, #b195f5); } .ds-unrated { background: transparent; color: var(--ink-2, #b3bac6); box-shadow: inset 0 0 0 1px var(--line-strong, #3b414c); }"
+    },
+    {
+      "name": "Tier Strip and Legend",
+      "kind": "custom",
+      "refersTo": "tier-toggle",
+      "description": "Signature: stacked tier-count bar with a toggle legend; unselected segments fade when a tier is filtered.",
+      "html": "<div class=\"ds-status\"><p class=\"ds-count\">23 ports across 8 games</p><div class=\"ds-legend\"><button class=\"ds-tt\" aria-pressed=\"true\"><span class=\"ds-sw\" style=\"background:#3ecf6e\"></span>Playable <span class=\"ds-n\">7</span></button><button class=\"ds-tt\" aria-pressed=\"false\"><span class=\"ds-sw\" style=\"background:#f2c94c\"></span>In-game <span class=\"ds-n\">3</span></button><button class=\"ds-tt\" aria-pressed=\"false\"><span class=\"ds-sw\" style=\"background:#4a515d\"></span>Not stated <span class=\"ds-n\">9</span></button></div><div class=\"ds-strip ds-filtered\"><span class=\"ds-seg ds-on\" style=\"flex-grow:7;background:#3ecf6e\"></span><span class=\"ds-seg\" style=\"flex-grow:3;background:#f2c94c\"></span><span class=\"ds-seg\" style=\"flex-grow:2;background:#f2994a\"></span><span class=\"ds-seg\" style=\"flex-grow:2;background:#b195f5\"></span><span class=\"ds-seg\" style=\"flex-grow:9;background:#4a515d\"></span></div></div>",
+      "css": ".ds-status { display: grid; grid-template-columns: auto minmax(0,1fr); grid-template-areas: 'count legend' 'strip strip'; align-items: center; gap: 8px 24px; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; color: var(--ink, #e6e8ec); } .ds-count { grid-area: count; margin: 0; font-size: 1.0625rem; font-weight: 700; } .ds-legend { grid-area: legend; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; } .ds-strip { grid-area: strip; display: flex; gap: 2px; height: 14px; border-radius: 3px; overflow: hidden; background: var(--panel, #1c1f26); } .ds-seg { flex-basis: 0; min-width: 0; cursor: pointer; transition: flex-grow 160ms cubic-bezier(0.16,1,0.3,1), opacity 160ms cubic-bezier(0.16,1,0.3,1); } .ds-filtered .ds-seg:not(.ds-on) { opacity: 0.28; } .ds-tt { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 10px 0 8px; background: none; border: 0; border-radius: 4px; cursor: pointer; color: var(--ink-2, #b3bac6); font: 400 0.8125rem 'Atkinson Hyperlegible', system-ui, sans-serif; transition: background-color 160ms cubic-bezier(0.16,1,0.3,1), color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-tt:hover { background: var(--panel, #1c1f26); color: var(--ink, #e6e8ec); } .ds-tt:focus-visible { outline: 2px solid var(--link, #82acff); outline-offset: 2px; } .ds-tt[aria-pressed='true'] { background: var(--raised, #23272f); color: var(--ink, #e6e8ec); box-shadow: inset 0 0 0 1px var(--line-strong, #3b414c); font-weight: 700; } .ds-sw { width: 10px; height: 10px; border-radius: 2px; } .ds-n { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; color: var(--ink-3, #8d96a5); } .ds-tt[aria-pressed='true'] .ds-n { color: var(--ink, #e6e8ec); }"
+    },
+    {
+      "name": "Catalog Row with Group Header",
+      "kind": "custom",
+      "refersTo": "flag-upstream",
+      "description": "Game header row with mini strip, then a port row with a flag, mono repo slug and one-line note.",
+      "html": "<table class=\"ds-table\"><tbody><tr><th colspan=\"4\" class=\"ds-group\"><div class=\"ds-gh\"><h2>Bloodborne</h2><span class=\"ds-mono ds-ids\">CUSA03173 · CUSA00900</span><span class=\"ds-mono ds-gc\">16</span><span class=\"ds-mini\"><span style=\"flex-grow:4;background:#3ecf6e\"></span><span style=\"flex-grow:1;background:#b195f5\"></span><span style=\"flex-grow:3;background:#4a515d\"></span></span></div></th></tr><tr class=\"ds-row\"><td><div class=\"ds-pl\"><a class=\"ds-name\" href=\"#\">bbport</a><span class=\"ds-flag ds-up\">Upstream</span><a class=\"ds-mono ds-repo\" href=\"#\">deadinside28/bloodborne_pc<svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 3h6v6\"/><path d=\"M10 14 21 3\"/><path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\"/></svg></a></div><p class=\"ds-note\">The original. Runs the PS4 executable natively on x86-64.</p></td><td class=\"ds-cell\">Linux, Steam Deck</td><td><span class=\"ds-tier\">Playable</span></td><td class=\"ds-mono ds-cell ds-num\">2,737</td></tr></tbody></table>",
+      "css": ".ds-table { width: 100%; border-collapse: collapse; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; color: var(--ink, #e6e8ec); font-size: 0.9375rem; } .ds-group { padding: 18px 12px 8px; border-bottom: 1px solid var(--line-strong, #3b414c); text-align: left; } .ds-gh { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; } .ds-gh h2 { margin: 0; font-size: 1.375rem; line-height: 1.15; } .ds-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; } .ds-ids { color: var(--ink-3, #8d96a5); font-size: 0.8125rem; font-weight: 400; } .ds-gc { color: var(--ink-2, #b3bac6); font-size: 0.8125rem; font-weight: 400; background: var(--panel, #1c1f26); padding: 0 7px; border-radius: 3px; } .ds-mini { display: flex; gap: 2px; width: 120px; height: 6px; border-radius: 2px; overflow: hidden; align-self: center; margin-left: auto; } .ds-mini span { flex-basis: 0; } .ds-row { transition: background-color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-row:hover { background: var(--panel, #1c1f26); } .ds-row td { padding: 8px 12px; border-bottom: 1px solid var(--line, #2c313a); vertical-align: top; } .ds-pl { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; } .ds-name { color: var(--ink, #e6e8ec); font-weight: 700; text-decoration: none; } .ds-name:hover { color: var(--link-hover, #a9c5ff); text-decoration: underline; } .ds-name:focus-visible, .ds-repo:focus-visible { outline: 2px solid var(--link, #82acff); outline-offset: 2px; } .ds-flag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-2, #b3bac6); padding: 1px 6px; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--line-strong, #3b414c); } .ds-up { color: var(--on-tier, #101216); background: var(--ink-2, #b3bac6); box-shadow: none; } .ds-repo { display: inline-flex; align-items: center; gap: 5px; color: var(--link, #82acff); font-size: 0.8125rem; text-decoration: none; } .ds-repo:hover { text-decoration: underline; } .ds-note { margin: 2px 0 0; color: var(--ink-3, #8d96a5); font-size: 0.8125rem; } .ds-cell { color: var(--ink-2, #b3bac6); font-size: 0.8125rem; } .ds-num { text-align: right; } .ds-tier { display: inline-flex; padding: 2px 8px; border-radius: 3px; font-size: 0.8125rem; font-weight: 700; background: var(--tier-playable, #3ecf6e); color: var(--on-tier, #101216); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Compatibility List",
+    "overview": "The site speaks the emulator scene's own reference format: one dense, sortable row per port on a dark graphite workspace, with status carried by a coloured tier block. Its job is to answer \"game, platform, status, where is the code\" on the first screen, so the system favours row density, legible small type and tabular data over atmosphere. Structure comes from hairline rules and tonal steps of the same graphite, never from floating cards.\n\nColour is almost entirely neutral. The five tier hues are the only saturated colour in the interface and they mean exactly one thing: the status a port's own README declares. Link blue is the second voice and marks things that take you somewhere. Everything else is graphite ink at three strengths.\n\nThe signature is the tier strip: a stacked horizontal bar of tier counts for the current filter, paired with a legend of tier toggles, repeated as a small strip beside each game's group header. Status cells in rows are filled tier blocks; an undeclared status is an outline, not a colour.",
+    "keyCharacteristics": [
+      "Dark graphite ground with two tonal steps (panel, raised) and two hairline strengths; flat, no outer shadows.",
+      "Status-only colour: the tier ladder green, yellow, orange, violet, outlined grey.",
+      "Atkinson Hyperlegible for all UI; JetBrains Mono with tabular figures only for data.",
+      "Table rows grouped by game header rows; hairlines separate rows; row hover is a panel tint.",
+      "Square-ish 4px controls, 3px tags, pill shape reserved for filter chips.",
+      "One motion duration (160ms, expo ease-out); reduced motion makes it instant."
+    ],
+    "rules": [
+      {
+        "name": "The Status-Only Colour Rule",
+        "body": "The five tier colours appear only on tier blocks, strip segments and legend swatches. Never use them for decoration, buttons, links or emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pressed-Is-Raised Rule",
+        "body": "A pressed filter (chip or tier toggle) shows the raised graphite, a stronger outline and bold text. It is never link blue and never tier-coloured.",
+        "section": "colors"
+      },
+      {
+        "name": "The Blue Opens Rule",
+        "body": "Link blue is for things that navigate or open (links, primary button, current-page marker) plus the focus ring. If clicking it does not take you somewhere, it is not blue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono-Is-Data Rule",
+        "body": "JetBrains Mono is only for values a machine produced or a user might copy. Never for headings, labels or prose.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Numbers Rule",
+        "body": "Every number in a column or count uses the data face with tabular figures, right-aligned in table columns.",
+        "section": "typography"
+      },
+      {
+        "name": "The Row-Is-The-Unit Rule",
+        "body": "Content is organised as rows on hairlines, grouped by header rows. Do not wrap entries in cards.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Workspace Rule",
+        "body": "Nothing floats. If a surface needs separation, step the graphite tone or draw a hairline.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep status colour on tier blocks, strip segments and swatches only, in the ladder order Playable, In-game, Intro, In progress, Not stated.",
+      "**Do** show an undeclared status as an outlined block, never a guessed colour.",
+      "**Do** separate rows and regions with hairlines (line for rows, line-strong for headers and controls) and tonal steps of graphite.",
+      "**Do** set every slug, title ID, count, star total and date in JetBrains Mono with tabular figures.",
+      "**Do** mark pressed filters with Graphite Raised, an inset outline and bold text.",
+      "**Do** use the single 160ms duration with the expo ease-out (cubic-bezier(0.16, 1, 0.3, 1)) for every transition, and zero it under reduced motion.",
+      "**Do** keep the no-files notice and non-affiliation disclaimer in the footer of every page."
+    ],
+    "donts": [
+      "**Don't** use tier colours for anything but status, and don't introduce a sixth tier; Archived is a flag, not a tier.",
+      "**Don't** colour pressed filters or toggles link blue.",
+      "**Don't** wrap entries in cards or use cards as layout structure.",
+      "**Don't** use outer, ambient or offset drop shadows; inset outlines only.",
+      "**Don't** add coloured side borders to rows or callouts.",
+      "**Don't** set headings, labels or prose in the monospace.",
+      "**Don't** imitate bbport's or any publisher's branding."
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:Manrope,sans-serif;background:#0d0f14;color:#e6e8ec}
+.top{height:64px;display:flex;align-items:center;padding:0 48px;gap:28px;border-bottom:1px solid #1f2430}
+.brand{font-weight:800;font-size:19px}.top nav{margin-left:auto;display:flex;gap:24px;color:#9aa3b2;font-size:14px}
+.hero{text-align:center;padding:52px 0 28px}
+.hero h1{font-size:44px;font-weight:800;letter-spacing:-.02em}
+.hero p{color:#9aa3b2;margin-top:10px;font-size:17px}
+.search{width:640px;height:52px;margin:24px auto 0;background:#1a1e27;border:1px solid #2a3040;border-radius:12px;display:flex;align-items:center;padding:0 18px;color:#7f8899}
+.pills{display:flex;justify-content:center;gap:8px;margin-top:16px}
+.pill{padding:7px 14px;border-radius:999px;background:#1a1e27;font-size:13px;color:#c3c9d4}.pill.on{background:#7c5cff;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:24px 48px}
+.card{background:#1a1e27;border:1px solid #242a38;border-radius:14px;padding:20px}
+.card .g{font-size:12px;color:#9aa3b2;text-transform:uppercase;letter-spacing:.08em}
+.card h3{font-size:18px;margin:6px 0 4px}
+.card .r{color:#a99bff;font-size:13px}
+.card .m{display:flex;gap:8px;margin-top:14px}
+.b{font-size:12px;padding:3px 9px;border-radius:999px;background:#242a38;color:#c3c9d4}
+.ok{background:#173d29;color:#5fe39a}.wip{background:#3d3317;color:#f2c94c}
+</style></head><body>
+<header class="top"><div class="brand">PS4 Native Ports</div><nav><span>Catalog</span><span>Submit</span><span>About</span><span>EN</span></nav></header>
+<section class="hero"><h1>Every native PS4 port, in one place</h1><p>Community ports built on bbport, for Linux, Windows, macOS and more.</p>
+<div class="search">Search ports…</div>
+<div class="pills"><span class="pill on">All</span><span class="pill">Bloodborne</span><span class="pill">Yakuza</span><span class="pill">The Last Guardian</span><span class="pill">Windows</span><span class="pill">macOS</span></div></section>
+<div class="grid">
+ <div class="card"><div class="g">Bloodborne</div><h3>bbport</h3><div class="r">deadinside28/bloodborne_pc</div><div class="m"><span class="b ok">Playable</span><span class="b">Linux</span><span class="b">★ 4.8k</span></div></div>
+ <div class="card"><div class="g">Bloodborne</div><h3>bbport-windows</h3><div class="r">nickdotx/bbport-windows</div><div class="m"><span class="b wip">WIP</span><span class="b">Windows</span><span class="b">★ 212</span></div></div>
+ <div class="card"><div class="g">Bloodborne</div><h3>metalborne</h3><div class="r">Livio21/metalborne</div><div class="m"><span class="b wip">WIP</span><span class="b">macOS</span><span class="b">★ 96</span></div></div>
+ <div class="card"><div class="g">Yakuza</div><h3>port-ga-gotoku</h3><div class="r">ItalianKuze/port-ga-gotoku</div><div class="m"><span class="b wip">WIP</span><span class="b">Linux</span><span class="b">★ 27</span></div></div>
+ <div class="card"><div class="g">The Last Guardian</div><h3>The-Last-Guadian-PC</h3><div class="r">Spexxl/The-Last-Guadian-PC</div><div class="m"><span class="b wip">WIP</span><span class="b">Linux</span><span class="b">★ 19</span></div></div>
+ <div class="card"><div class="g">Bloodborne</div><h3>Bloodborne-Android</h3><div class="r">ducvd89/Bloodborne-Android</div><div class="m"><span class="b">Boots</span><span class="b">Android</span><span class="b">★ 38</span></div></div>
+</div>
+</body></html>

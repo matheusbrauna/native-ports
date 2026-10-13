@@ -1,0 +1,261 @@
+[
+  {
+    "slug": "bbport",
+    "name": "bbport",
+    "repo": "deadinside28/bloodborne_pc",
+    "upstream": null,
+    "kind": "upstream",
+    "platforms": ["linux", "steamdeck"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: experimental, playable" }],
+    "notes": {
+      "en": "The original. Runs Bloodborne's PS4 executable natively on x86-64 Linux with a game-specific runtime and a shadPS4-derived Vulkan renderer. FSR 3.1, FSR 4 and FSR 4.1.1 upscaling, GTK4 launcher, Steam Deck AppImage.",
+      "pt-br": "O original. Roda o executável de PS4 do Bloodborne nativamente no Linux x86-64, com um runtime feito para o jogo e um renderizador Vulkan derivado do shadPS4. Upscaling FSR 3.1, FSR 4 e FSR 4.1.1, launcher GTK4 e AppImage para o Steam Deck."
+    }
+  },
+  {
+    "slug": "bloodborne-windows-supermedo",
+    "name": "Bloodborne PC (Windows)",
+    "repo": "Supermedo/bloodborne_pc",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: experimental, playable" }],
+    "notes": {
+      "en": "Windows 10/11 build with a launcher in 13 languages, DLSS, FSR 3.1/4, unlocked frame rate and cheats.",
+      "pt-br": "Build para Windows 10/11 com launcher em 13 idiomas, DLSS, FSR 3.1/4, FPS destravado e cheats."
+    }
+  },
+  {
+    "slug": "bloodborne-windows-mrsuss60",
+    "name": "Native Windows Port of Bloodborne",
+    "repo": "Mrsuss60/bloodborne_pc_windows_port",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: Playable on Windows" }],
+    "notes": {
+      "en": "Win32 runtime (VirtualAlloc, native sync), MinGW-w64 build script, Python GUI launcher, frame pacing and a HUD texture fix.",
+      "pt-br": "Runtime Win32 (VirtualAlloc, sincronização nativa), script de build com MinGW-w64, launcher gráfico em Python, frame pacing e correção de texturas do HUD."
+    }
+  },
+  {
+    "slug": "bloodborne-windows-0xcydral",
+    "name": "Bloodborne PC",
+    "repo": "0xCydral/bloodborne_pc",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: experimental, playable" }],
+    "notes": {
+      "en": "Windows 10/11 with a player-friendly launcher that accepts a game folder or PS4 .pkg files. DLSS, FSR 4 and XeSS; gamepad, keyboard and mouse together.",
+      "pt-br": "Windows 10/11 com um launcher pensado para jogadores, que aceita a pasta do jogo ou os arquivos .pkg do PS4. DLSS, FSR 4 e XeSS; controle, teclado e mouse ao mesmo tempo."
+    }
+  },
+  {
+    "slug": "bloodborne-windows-goncalolobo0",
+    "name": "bloodborne_pc_win",
+    "repo": "GoncaloLobo0/bloodborne_pc_win",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: playable from the start, not played through" }],
+    "notes": {
+      "en": "Source-only Windows build: a setup script fetches a private toolchain into the repo folder, nothing installed system-wide. Tested on an RX 6650 XT at 60 FPS.",
+      "pt-br": "Build para Windows só com código-fonte: um script baixa um toolchain privado para dentro da pasta do repositório, sem instalar nada no sistema. Testado numa RX 6650 XT a 60 FPS."
+    }
+  },
+  {
+    "slug": "bloodborne-windows-randomalien0x33",
+    "name": "bloodborne-win-native",
+    "repo": "RandomAlien0x33/bloodborne-win-native",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Windows build with native x86-64 execution, Vulkan, and DLSS/FSR upscaling.",
+      "pt-br": "Build para Windows com execução x86-64 nativa, Vulkan e upscaling DLSS/FSR."
+    }
+  },
+  {
+    "slug": "bloodborne-windows-phroster",
+    "name": "bloodborne_pc_windows",
+    "repo": "Phroster/bloodborne_pc_windows",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Windows port of bbport for CUSA03173 v1.09 with the shadPS4-derived Vulkan renderer.",
+      "pt-br": "Port do bbport para Windows (CUSA03173 v1.09) com o renderizador Vulkan derivado do shadPS4."
+    }
+  },
+  {
+    "slug": "bloodborne-windows-vzeol",
+    "name": "bbport Windows (vzeol)",
+    "repo": "vzeol/bloodborne_pc",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Windows build with fixes, a French overlay and FSR 4 on AMD.",
+      "pt-br": "Build para Windows com correções, overlay em francês e FSR 4 em AMD."
+    }
+  },
+  {
+    "slug": "bloodborne-windows-ptbr",
+    "name": "bloodborne_windows PT-BR",
+    "repo": "XandasL/bloodborne_windows-PT-BR",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Windows-focused fork that adds a Brazilian Portuguese translation.",
+      "pt-br": "Fork focado em Windows que adiciona tradução para português do Brasil."
+    }
+  },
+  {
+    "slug": "bbport-mac",
+    "name": "bbport for Mac",
+    "repo": "bmy/bbport-mac",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["macos"],
+    "graphics": ["Vulkan on Metal", "MetalFX"],
+    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: experimental, playable (based on bbport 0.4)" }],
+    "notes": {
+      "en": "Apple Silicon port rendering through Vulkan on Metal. About 45 to 60 FPS at 1440p with FSR 3.1 on an M5 Max; experimental MetalFX.",
+      "pt-br": "Port para Apple Silicon que renderiza via Vulkan sobre Metal. Cerca de 45 a 60 FPS em 1440p com FSR 3.1 num M5 Max; MetalFX experimental."
+    }
+  },
+  {
+    "slug": "metalborne",
+    "name": "metalborne",
+    "repo": "Livio21/metalborne",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["macos"],
+    "graphics": ["Vulkan on Metal", "MetalFX"],
+    "games": [{ "id": "bloodborne", "tier": "wip", "source": "Description: experimental" }],
+    "notes": {
+      "en": "Experimental Apple Silicon port through Rosetta, with Vulkan-to-Metal rendering and MetalFX exploration.",
+      "pt-br": "Port experimental para Apple Silicon via Rosetta, com renderização Vulkan para Metal e testes com MetalFX."
+    }
+  },
+  {
+    "slug": "bloodborne-android",
+    "name": "Bloodborne-Android",
+    "repo": "ducvd89/Bloodborne-Android",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["android", "arm"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Android build with FSR 3.1, frame generation and an on-screen controller. Tested on Snapdragon 8 Gen 2 and 8 Elite.",
+      "pt-br": "Build para Android com FSR 3.1, geração de quadros e controle na tela. Testado em Snapdragon 8 Gen 2 e 8 Elite."
+    }
+  },
+  {
+    "slug": "arm-bloodborne-pc",
+    "name": "ARM_bloodborne_pc",
+    "repo": "MaSieS4Fun/ARM_bloodborne_pc",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["linux", "arm"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Native Linux port for ARM machines.",
+      "pt-br": "Port nativo para Linux em máquinas ARM."
+    }
+  },
+  {
+    "slug": "bloodborne-linux-ayozetr",
+    "name": "bloodborne_linux",
+    "repo": "ayozetr/bloodborne_linux",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["linux"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Linux build with a GTK4 launcher, online co-op through shadNet, trophies and DLSS on NVIDIA.",
+      "pt-br": "Build para Linux com launcher GTK4, co-op online via shadNet, troféus e DLSS em NVIDIA."
+    }
+  },
+  {
+    "slug": "bbport-qol-srshadowy",
+    "name": "bbport (custom fork)",
+    "repo": "SrShadowy/bloodborne_pc",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "platform",
+    "platforms": ["linux"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Personal fork with quality-of-life additions, such as an on-screen keyboard for character names with full gamepad navigation.",
+      "pt-br": "Fork pessoal com melhorias de usabilidade, como teclado virtual na criação de personagem com navegação completa pelo controle."
+    }
+  },
+  {
+    "slug": "psport",
+    "name": "psport",
+    "repo": "yerasuu/psport",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "game",
+    "platforms": ["linux"],
+    "graphics": ["Vulkan"],
+    "games": [
+      { "id": "bloodborne", "tier": "playable", "source": "README: saves, several areas, sound, pad" },
+      { "id": "atelier-ryza", "tier": "ingame", "source": "README: title menu, prologue, field with the player in control, sound" },
+      { "id": "atelier-ayesha-dx", "tier": "ingame", "source": "README: intro movie, title menu, opening scenes, field, atelier, sound" },
+      { "id": "tales-of-symphonia-remastered", "tier": "ingame", "source": "README: title screen, the first room, sound" },
+      { "id": "saga-emerald-beyond", "tier": "intro", "source": "README: title screen, first story scenes with dialogue, sound" },
+      { "id": "astrea", "tier": "intro", "source": "README: the intro's story panels, sound" }
+    ],
+    "notes": {
+      "en": "bbport taken past one game: a general compatibility layer with its own libraries for audio, fibers and fonts. PS VR titles are unsupported. Normally driven by the decanter front end.",
+      "pt-br": "O bbport levado além de um jogo só: uma camada de compatibilidade geral, com bibliotecas próprias de áudio, fibers e fontes. Títulos de PS VR não são suportados. Normalmente usado pelo front-end decanter."
+    }
+  },
+  {
+    "slug": "port-ga-gotoku",
+    "name": "port-ga-gotoku",
+    "repo": "ItalianKuze/port-ga-gotoku",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "game",
+    "platforms": ["windows"],
+    "graphics": ["Vulkan"],
+    "games": [{ "id": "fist-of-the-north-star-lost-paradise", "tier": "unrated", "source": null }],
+    "notes": {
+      "en": "Native Windows port of Fist of the North Star: Lost Paradise (Hokuto ga Gotoku), built on bbport.",
+      "pt-br": "Port nativo para Windows de Fist of the North Star: Lost Paradise (Hokuto ga Gotoku), feito sobre o bbport."
+    }
+  },
+  {
+    "slug": "the-last-guardian-pc",
+    "name": "The Last Guardian PC",
+    "repo": "Spexxl/The-Last-Guadian-PC",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "game",
+    "platforms": [],
+    "graphics": [],
+    "games": [{ "id": "the-last-guardian", "tier": "wip", "source": "README: aims to bring the game to PC; check that a release explicitly supports it" }],
+    "notes": {
+      "en": "Early-stage community effort to bring The Last Guardian to PC with bbport's native execution approach.",
+      "pt-br": "Projeto comunitário em estágio inicial para levar The Last Guardian ao PC com a execução nativa do bbport."
+    }
+  }
+]

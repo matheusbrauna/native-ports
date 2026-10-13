@@ -1,0 +1,11 @@
+---
+import Base from "../../../layouts/Base.astro";
+import PortDetail from "../../../components/PortDetail.astro";
+import { ports, type Port } from "../../../lib/catalog";
+
+export function getStaticPaths() {
+  return ports.map((port) => ({ params: { slug: port.slug }, props: { port } }));
+}
+const { port } = Astro.props as { port: Port };
+---
+<Base lang="pt-br" title={port.name} description={port.notes["pt-br"]}><PortDetail lang="pt-br" port={port} /></Base>

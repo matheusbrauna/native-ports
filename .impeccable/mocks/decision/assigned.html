@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:Archivo,sans-serif;background:#e3e8e3;color:#1b1d1a;font-size:14px}
+.top{height:64px;background:#12302a;color:#e9efe9;display:flex;align-items:center;gap:28px;padding:0 28px}
+.brand{font-weight:800;font-stretch:115%;font-size:19px;letter-spacing:.02em;text-transform:uppercase}
+.brand small{display:block;font-weight:500;font-stretch:100%;font-size:11px;letter-spacing:.08em;opacity:.7}
+.search{flex:1;max-width:560px;height:40px;border-radius:4px;background:#f7f8f5;color:#55605a;display:flex;align-items:center;padding:0 14px;font-size:15px}
+.nav{display:flex;gap:22px;font-size:14px;margin-left:auto}
+.nav a{color:#e9efe9;text-decoration:none}.nav .on{border-bottom:2px solid #9fd3b0;padding-bottom:4px}
+.lang{border:1px solid #4a6b62;border-radius:4px;padding:4px 8px;font-size:12px}
+.wrap{display:grid;grid-template-columns:260px 1fr;height:836px}
+.rail{background:#d6ddd7;border-right:1px solid #b9c4bc;padding:22px 20px;overflow:hidden}
+.rail h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4c5a53;margin:18px 0 8px;font-weight:700}
+.rail h3:first-child{margin-top:0}
+.opt{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:14px}
+.opt .n{margin-left:auto;font-family:'Courier Prime',monospace;color:#5c6862;font-variant-numeric:tabular-nums}
+.box{width:15px;height:15px;border:1.5px solid #4c5a53;border-radius:3px;background:#f7f8f5}
+.box.ck{background:#12302a;border-color:#12302a}
+.pin{width:12px;height:12px;border-radius:50%;box-shadow:inset -2px -2px 0 rgba(0,0,0,.18)}
+.g{background:#3a8f4a}.a{background:#e0a526}.r{background:#c8372d}.b{background:#2f6fb3}
+.drawer-sel{background:#12302a;color:#fff;padding:6px 10px;margin:0 -10px;border-radius:3px}
+.main{padding:22px 28px;overflow:hidden}
+.dhead{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid #12302a;padding-bottom:10px}
+.dhead h1{font-size:30px;font-weight:800;font-stretch:112%;text-transform:uppercase;letter-spacing:.01em}
+.dhead .acc{font-family:'Courier Prime',monospace;font-size:15px;color:#4c5a53}
+.dhead .sort{margin-left:auto;font-size:13px;color:#4c5a53}
+.dhead .sort b{color:#1b1d1a}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid #b9c4bc;border-top:1px solid #b9c4bc;margin-top:16px}
+.cell{border-right:1px solid #b9c4bc;border-bottom:1px solid #b9c4bc;padding:12px}
+.label{background:#f7f8f5;border:1px solid #c9d1cb;padding:12px 14px 10px;position:relative;font-family:'Courier Prime',monospace;font-size:13px;line-height:1.35}
+.label .pin{position:absolute;top:-6px;left:14px;width:14px;height:14px}
+.label .t{font-family:Archivo,sans-serif;font-weight:700;font-size:16px;margin-top:4px}
+.label .repo{color:#1f5fa8;text-decoration:underline}
+.label .row{display:flex;justify-content:space-between;border-top:1px dashed #c9d1cb;margin-top:8px;padding-top:6px;font-variant-numeric:tabular-nums;color:#3d4642}
+.label .det{font-size:12px;color:#4c5a53;margin-top:4px}
+.type{grid-column:span 3;background:#f0f3ee}
+.type .label{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;border-color:#12302a;border-width:1.5px}
+.tag{display:inline-block;font-family:Archivo,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:#12302a;color:#fff;padding:2px 6px;margin-right:6px}
+.stamp{position:absolute;right:12px;top:30px;transform:rotate(-8deg);border:2px solid #c8372d;color:#c8372d;font-family:Archivo,sans-serif;font-weight:800;font-size:12px;letter-spacing:.12em;padding:2px 6px}
+.dim{opacity:.62}
+</style></head><body>
+<header class="top">
+ <div class="brand">PS4 Native Ports<small>A collection of bbport descendants</small></div>
+ <div class="search">Search game, repo or author…  e.g. “windows”, “CUSA03173”</div>
+ <nav class="nav"><a class="on">Catalog</a><a>Submit a port</a><a>About</a><span class="lang">EN · PT</span></nav>
+</header>
+<div class="wrap">
+ <aside class="rail">
+  <h3>Drawers · game</h3>
+  <div class="opt drawer-sel">Bloodborne<span class="n" style="color:#bfe3c9">14</span></div>
+  <div class="opt">Yakuza (Ryu ga Gotoku)<span class="n">1</span></div>
+  <div class="opt">The Last Guardian<span class="n">1</span></div>
+  <h3>Platform</h3>
+  <div class="opt"><span class="box"></span>Linux<span class="n">4</span></div>
+  <div class="opt"><span class="box ck"></span>Windows<span class="n">6</span></div>
+  <div class="opt"><span class="box"></span>macOS<span class="n">3</span></div>
+  <div class="opt"><span class="box"></span>Android<span class="n">1</span></div>
+  <div class="opt"><span class="box"></span>ARM<span class="n">1</span></div>
+  <h3>Status · pin</h3>
+  <div class="opt"><span class="pin g"></span>Playable<span class="n">3</span></div>
+  <div class="opt"><span class="pin b"></span>Boots<span class="n">4</span></div>
+  <div class="opt"><span class="pin a"></span>Work in progress<span class="n">8</span></div>
+  <div class="opt"><span class="pin r"></span>Abandoned<span class="n">1</span></div>
+ </aside>
+ <main class="main">
+  <div class="dhead"><h1>Bloodborne</h1><span class="acc">CUSA03173 · v1.09 · 14 specimens</span><span class="sort">Sort: <b>Recently active</b> · Stars · Name</span></div>
+  <div class="grid">
+   <div class="cell type"><div class="label"><span class="pin g"></span>
+    <div><span class="tag">Type specimen</span>No. 001<div class="t">bbport — native Linux port</div><span class="repo">deadinside28/bloodborne_pc</span></div>
+    <div>Platforms: Linux, Steam Deck<br>Graphics: Vulkan · FSR 3.1/4/4.1.1<br>Release: v0.51 · 10 Oct 2026</div>
+    <div>Determined: <b>playable</b><br>per README, 10 Oct 2026<div class="row"><span>★ 4,812</span><span>pushed 3 d</span><span>GPL-2.0</span></div></div>
+   </div></div>
+   <div class="cell"><div class="label"><span class="pin a"></span>No. 014 · Windows<div class="t">bbport-windows</div><span class="repo">nickdotx/bbport-windows</span><div class="det">Det.: work in progress · README</div><div class="row"><span>★ 212</span><span>pushed 1 d</span><span>—</span></div></div></div>
+   <div class="cell"><div class="label"><span class="pin a"></span>No. 011 · macOS · Metal<div class="t">metalborne</div><span class="repo">Livio21/metalborne</span><div class="det">Det.: work in progress · README</div><div class="row"><span>★ 96</span><span>pushed 2 d</span><span>v0.1</span></div></div></div>
+   <div class="cell"><div class="label"><span class="pin b"></span>No. 009 · Windows<div class="t">bloodborne-win-native</div><span class="repo">RandomAlien0x33/bloodborne-win-native</span><div class="det">Det.: boots · README</div><div class="row"><span>★ 41</span><span>pushed 4 d</span><span>—</span></div></div></div>
+   <div class="cell"><div class="label"><span class="pin b"></span>No. 007 · Android<div class="t">Bloodborne-Android</div><span class="repo">ducvd89/Bloodborne-Android</span><div class="det">Det.: boots · README</div><div class="row"><span>★ 38</span><span>pushed 5 d</span><span>—</span></div></div></div>
+   <div class="cell"><div class="label"><span class="pin a"></span>No. 006 · ARM64<div class="t">ARM_bloodborne_pc</div><span class="repo">MaSieS4Fun/ARM_bloodborne_pc</span><div class="det">Det.: work in progress · README</div><div class="row"><span>★ 22</span><span>pushed 6 d</span><span>—</span></div></div></div>
+   <div class="cell"><div class="label"><span class="pin g"></span>No. 005 · Windows · PT-BR<div class="t">bloodborne_windows-PT-BR</div><span class="repo">XandasL/bloodborne_windows-PT-BR</span><div class="det">Det.: playable · README</div><div class="row"><span>★ 17</span><span>pushed 5 d</span><span>—</span></div></div></div>
+   <div class="cell"><div class="label"><span class="pin a"></span>No. 004 · macOS<div class="t">bbport-mac</div><span class="repo">bmy/bbport-mac</span><div class="det">Det.: work in progress · README</div><div class="row"><span>★ 15</span><span>pushed 6 d</span><span>—</span></div></div></div>
+   <div class="cell dim"><div class="label"><span class="pin r"></span><span class="stamp">Deaccessioned</span>No. 002 · Windows<div class="t">bloodborne_windows</div><span class="repo">Wixeria/bloodborne_windows</span><div class="det">Det.: abandoned · archived 9 Oct</div><div class="row"><span>★ 9</span><span>pushed 8 d</span><span>—</span></div></div></div>
+  </div>
+ </main>
+</div>
+<!-- synthetic demo values: star counts, releases and statuses are placeholders until fetched -->
+</body></html>

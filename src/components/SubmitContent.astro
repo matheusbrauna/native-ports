@@ -1,0 +1,65 @@
+---
+import Icon from "./Icon.astro";
+import Prose from "./Prose.astro";
+import type { Lang } from "../lib/catalog";
+import { t } from "../lib/i18n";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t[lang];
+const siteRepo = import.meta.env.PUBLIC_SITE_REPO || process.env.GITHUB_REPOSITORY;
+const issueUrl = siteRepo ? `https://github.com/${siteRepo}/issues/new?template=new-port.yml` : null;
+const editUrl = siteRepo ? `https://github.com/${siteRepo}/edit/main/data/ports.json` : null;
+const example = `{
+  "slug": "bloodborne-windows-example",
+  "name": "Example port",
+  "repo": "owner/repository",
+  "upstream": "deadinside28/bloodborne_pc",
+  "kind": "platform",
+  "platforms": ["windows"],
+  "graphics": ["Vulkan"],
+  "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+  "notes": { "en": "…", "pt-br": "…" }
+}`;
+---
+{lang === "en" ? (
+  <Prose title={s.nav.submit}>
+    <p class="lede">Know a bbport-derived port that is missing? Send it in. Every entry is reviewed by hand before it appears.</p>
+    {(issueUrl || editUrl) && (
+      <div class="actions">
+        {issueUrl && <a class="button" href={issueUrl}><Icon name="plus" size={15} />Open a submission issue</a>}
+        {editUrl && <a class="button ghost" href={editUrl}><Icon name="fork" size={15} />Edit the list in a pull request</a>}
+      </div>
+    )}
+    <h2>What gets listed</h2>
+    <ul>
+      <li><strong>A real change.</strong> A new platform, a new game, or a meaningful feature on top of bbport. Forks with no commits of their own are left out.</li>
+      <li><strong>Source code only.</strong> Repositories that ship game files, dumps, firmware or keys are never listed.</li>
+      <li><strong>The project's own status.</strong> The status column repeats what the README declares. If the README says nothing, the entry shows "Not stated".</li>
+    </ul>
+    <h2>Adding it yourself</h2>
+    <p>Entries live in <code>data/ports.json</code>. Add an object like this one, with the game's <code>id</code> from <code>data/games.json</code> (add the game there if it is new):</p>
+    <pre><code>{example}</code></pre>
+    <p>Stars, last push, releases and archived state are fetched from GitHub on every build; you do not need to fill them in.</p>
+  </Prose>
+) : (
+  <Prose title={s.nav.submit}>
+    <p class="lede">Conhece um port derivado do bbport que não está aqui? Envie. Cada entrada é revisada à mão antes de aparecer.</p>
+    {(issueUrl || editUrl) && (
+      <div class="actions">
+        {issueUrl && <a class="button" href={issueUrl}><Icon name="plus" size={15} />Abrir uma issue de envio</a>}
+        {editUrl && <a class="button ghost" href={editUrl}><Icon name="fork" size={15} />Editar a lista num pull request</a>}
+      </div>
+    )}
+    <h2>O que entra na lista</h2>
+    <ul>
+      <li><strong>Uma mudança real.</strong> Uma nova plataforma, um novo jogo ou um recurso relevante sobre o bbport. Forks sem commits próprios ficam de fora.</li>
+      <li><strong>Só código-fonte.</strong> Repositórios que distribuem arquivos do jogo, dumps, firmware ou chaves nunca são listados.</li>
+      <li><strong>O status do próprio projeto.</strong> A coluna de status repete o que o README declara. Se o README não diz nada, a entrada aparece como "Não informado".</li>
+    </ul>
+    <h2>Adicionando você mesmo</h2>
+    <p>As entradas ficam em <code>data/ports.json</code>. Adicione um objeto como este, com o <code>id</code> do jogo que está em <code>data/games.json</code> (cadastre o jogo lá se ele for novo):</p>
+    <pre><code>{example}</code></pre>
+    <p>Estrelas, último push, releases e o estado de arquivado vêm do GitHub a cada build; não é preciso preencher.</p>
+  </Prose>
+)}

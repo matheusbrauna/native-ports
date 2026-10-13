@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.env
+.impeccable/review/
+.claude/
+.impeccable/hook.cache.json
+.impeccable/questions/*
+!.impeccable/questions/roll.json

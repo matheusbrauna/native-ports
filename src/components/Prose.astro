@@ -1,0 +1,32 @@
+---
+// Shared reading layout for the Submit and About pages.
+interface Props { title: string }
+const { title } = Astro.props;
+---
+<article class="prose wrap">
+  <h1>{title}</h1>
+  <slot />
+</article>
+
+<style>
+  .prose { padding-top: 36px; }
+  .prose > :global(*) { max-width: var(--measure); }
+  h1 { font-size: var(--step-3); letter-spacing: -0.01em; }
+  .prose :global(h2) { font-size: var(--step-2); margin-top: 44px; }
+  .prose :global(p), .prose :global(ul), .prose :global(ol) { margin-top: 14px; color: var(--ink-2); }
+  .prose :global(li) { margin-top: 6px; }
+  .prose :global(li::marker) { color: var(--ink-3); }
+  .prose :global(strong) { color: var(--ink); }
+  .prose :global(.lede) { font-size: var(--step-1); color: var(--ink-2); margin-top: 12px; }
+  .prose :global(.actions) { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .prose :global(dl.tiers) { margin-top: 18px; display: grid; gap: 0; }
+  .prose :global(dl.tiers > div) { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .prose :global(dl.tiers dd) { color: var(--ink-2); }
+  .prose :global(pre) {
+    margin-top: 14px; padding: 14px 16px; overflow-x: auto; background: var(--panel); border-radius: var(--radius);
+    font: 400 var(--step--1)/1.6 var(--font-data); color: var(--ink);
+  }
+  @media (max-width: 560px) {
+    .prose :global(dl.tiers > div) { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>

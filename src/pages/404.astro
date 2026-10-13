@@ -1,0 +1,9 @@
+---
+import Base from "../layouts/Base.astro";
+import Prose from "../components/Prose.astro";
+---
+<Base lang="en" title="Not found">
+  <Prose title="Page not found">
+    <p class="lede">That page does not exist. <a href={import.meta.env.BASE_URL}>Back to the catalog</a> · <a href={`${import.meta.env.BASE_URL}pt-br/`}>Voltar ao catálogo</a></p>
+  </Prose>
+</Base>

@@ -1,0 +1,42 @@
+name: Discover new ports
+
+on:
+  schedule:
+    - cron: "42 7 * * *" # daily, after the 06:17 deploy
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: discover
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: List candidates
+        run: node scripts/discover.mjs > candidates.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish to the job summary
+        run: cat candidates.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Update the tracking issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # One open issue labelled "discover" holds the current list; it is rewritten each run.
+          gh label create discover --color 82acff --description "Candidate ports found by the daily discover job" --force
+          { echo "_Updated $(date -u +'%Y-%m-%d %H:%M UTC') by the [discover workflow](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})._"; echo; head -c 60000 candidates.md; } > body.md
+          number=$(gh issue list --label discover --state open --limit 1 --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file body.md
+          else
+            gh issue create --title "Port candidates from GitHub topics" --label discover --body-file body.md
+          fi

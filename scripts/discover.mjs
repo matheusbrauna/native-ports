@@ -1,5 +1,6 @@
 // Lists repositories from the scene's GitHub topics that are not in data/ports.json yet.
 // It never edits the catalog: a person reads the README and decides what goes in.
+// Repos reviewed and rejected go in data/discover-ignore.json so they stop coming back.
 // Usage: npm run discover [-- --min-stars 5]
 import { readFile } from "node:fs/promises";
 
@@ -8,7 +9,8 @@ const args = process.argv.slice(2);
 const minStars = Number(args[args.indexOf("--min-stars") + 1]) || 3;
 
 const ports = JSON.parse(await readFile(new URL("../data/ports.json", import.meta.url), "utf8"));
-const known = new Set(ports.map((p) => p.repo.toLowerCase()));
+const ignored = JSON.parse(await readFile(new URL("../data/discover-ignore.json", import.meta.url), "utf8"));
+const known = new Set([...ports.map((p) => p.repo), ...ignored].map((r) => r.toLowerCase()));
 
 const headers = { "User-Agent": "pc-ports-discover", Accept: "application/vnd.github+json" };
 if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -32,7 +34,8 @@ for (const topic of TOPICS) {
 
 const list = [...found.values()].sort((a, b) => b.stars - a.stars);
 console.log(`# ${list.length} candidates not in the catalog (>= ${minStars} stars)\n`);
-console.log("Check each README before adding: tools, lists, decompilations and emulators are out of scope.\n");
+console.log("Check each README before adding: tools, lists, decompilations and emulators are out of scope.");
+console.log("Add accepted repos to `data/ports.json` and rejected ones to `data/discover-ignore.json`.\n");
 for (const c of list) {
   console.log(`- [ ] ${c.repo} (★${c.stars}, pushed ${c.pushed}) [${[...c.topics].join(", ")}]\n      ${c.description.slice(0, 160)}`);
 }

@@ -3,10 +3,11 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "description": "A curated, searchable catalog of native PC ports derived from bbport.",
+  "description": "A curated, searchable catalog of unofficial native ports of console games.",
   "license": "MIT",
   "scripts": {
     "fetch": "node scripts/fetch-github.mjs",
+    "discover": "node scripts/discover.mjs",
     "dev": "astro dev",
     "build": "node scripts/fetch-github.mjs && astro build",
     "build:offline": "astro build",

@@ -5,257 +5,1925 @@
     "repo": "deadinside28/bloodborne_pc",
     "upstream": null,
     "kind": "upstream",
-    "platforms": ["linux", "steamdeck"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: experimental, playable" }],
+    "platforms": [
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "playable",
+        "source": "README: experimental, playable"
+      }
+    ],
     "notes": {
       "en": "The original. Runs Bloodborne's PS4 executable natively on x86-64 Linux with a game-specific runtime and a shadPS4-derived Vulkan renderer. FSR 3.1, FSR 4 and FSR 4.1.1 upscaling, GTK4 launcher, Steam Deck AppImage.",
       "pt-br": "O original. Roda o executável de PS4 do Bloodborne nativamente no Linux x86-64, com um runtime feito para o jogo e um renderizador Vulkan derivado do shadPS4. Upscaling FSR 3.1, FSR 4 e FSR 4.1.1, launcher GTK4 e AppImage para o Steam Deck."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-windows-supermedo",
     "name": "Bloodborne PC (Windows)",
     "repo": "Supermedo/bloodborne_pc",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: experimental, playable" }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "playable",
+        "source": "README: experimental, playable"
+      }
+    ],
     "notes": {
       "en": "Windows 10/11 build with a launcher in 13 languages, DLSS, FSR 3.1/4, unlocked frame rate and cheats.",
       "pt-br": "Build para Windows 10/11 com launcher em 13 idiomas, DLSS, FSR 3.1/4, FPS destravado e cheats."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-windows-mrsuss60",
     "name": "Native Windows Port of Bloodborne",
     "repo": "Mrsuss60/bloodborne_pc_windows_port",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: Playable on Windows" }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "playable",
+        "source": "README: Playable on Windows"
+      }
+    ],
     "notes": {
       "en": "Win32 runtime (VirtualAlloc, native sync), MinGW-w64 build script, Python GUI launcher, frame pacing and a HUD texture fix.",
       "pt-br": "Runtime Win32 (VirtualAlloc, sincronização nativa), script de build com MinGW-w64, launcher gráfico em Python, frame pacing e correção de texturas do HUD."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-windows-0xcydral",
     "name": "Bloodborne PC",
     "repo": "0xCydral/bloodborne_pc",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: experimental, playable" }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "playable",
+        "source": "README: experimental, playable"
+      }
+    ],
     "notes": {
       "en": "Windows 10/11 with a player-friendly launcher that accepts a game folder or PS4 .pkg files. DLSS, FSR 4 and XeSS; gamepad, keyboard and mouse together.",
       "pt-br": "Windows 10/11 com um launcher pensado para jogadores, que aceita a pasta do jogo ou os arquivos .pkg do PS4. DLSS, FSR 4 e XeSS; controle, teclado e mouse ao mesmo tempo."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-windows-goncalolobo0",
     "name": "bloodborne_pc_win",
     "repo": "GoncaloLobo0/bloodborne_pc_win",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: playable from the start, not played through" }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "playable",
+        "source": "README: playable from the start, not played through"
+      }
+    ],
     "notes": {
       "en": "Source-only Windows build: a setup script fetches a private toolchain into the repo folder, nothing installed system-wide. Tested on an RX 6650 XT at 60 FPS.",
       "pt-br": "Build para Windows só com código-fonte: um script baixa um toolchain privado para dentro da pasta do repositório, sem instalar nada no sistema. Testado numa RX 6650 XT a 60 FPS."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-windows-randomalien0x33",
     "name": "bloodborne-win-native",
     "repo": "RandomAlien0x33/bloodborne-win-native",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Windows build with native x86-64 execution, Vulkan, and DLSS/FSR upscaling.",
       "pt-br": "Build para Windows com execução x86-64 nativa, Vulkan e upscaling DLSS/FSR."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-windows-phroster",
     "name": "bloodborne_pc_windows",
     "repo": "Phroster/bloodborne_pc_windows",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Windows port of bbport for CUSA03173 v1.09 with the shadPS4-derived Vulkan renderer.",
       "pt-br": "Port do bbport para Windows (CUSA03173 v1.09) com o renderizador Vulkan derivado do shadPS4."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-windows-vzeol",
     "name": "bbport Windows (vzeol)",
     "repo": "vzeol/bloodborne_pc",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Windows build with fixes, a French overlay and FSR 4 on AMD.",
       "pt-br": "Build para Windows com correções, overlay em francês e FSR 4 em AMD."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-windows-ptbr",
     "name": "bloodborne_windows PT-BR",
     "repo": "XandasL/bloodborne_windows-PT-BR",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Windows-focused fork that adds a Brazilian Portuguese translation.",
       "pt-br": "Fork focado em Windows que adiciona tradução para português do Brasil."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bbport-mac",
     "name": "bbport for Mac",
     "repo": "bmy/bbport-mac",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["macos"],
-    "graphics": ["Vulkan on Metal", "MetalFX"],
-    "games": [{ "id": "bloodborne", "tier": "playable", "source": "README: experimental, playable (based on bbport 0.4)" }],
+    "kind": "fork",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Vulkan on Metal",
+      "MetalFX"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "playable",
+        "source": "README: experimental, playable (based on bbport 0.4)"
+      }
+    ],
     "notes": {
       "en": "Apple Silicon port rendering through Vulkan on Metal. About 45 to 60 FPS at 1440p with FSR 3.1 on an M5 Max; experimental MetalFX.",
       "pt-br": "Port para Apple Silicon que renderiza via Vulkan sobre Metal. Cerca de 45 a 60 FPS em 1440p com FSR 3.1 num M5 Max; MetalFX experimental."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "metalborne",
     "name": "metalborne",
     "repo": "Livio21/metalborne",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["macos"],
-    "graphics": ["Vulkan on Metal", "MetalFX"],
-    "games": [{ "id": "bloodborne", "tier": "wip", "source": "Description: experimental" }],
+    "kind": "fork",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Vulkan on Metal",
+      "MetalFX"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "wip",
+        "source": "Description: experimental"
+      }
+    ],
     "notes": {
       "en": "Experimental Apple Silicon port through Rosetta, with Vulkan-to-Metal rendering and MetalFX exploration.",
       "pt-br": "Port experimental para Apple Silicon via Rosetta, com renderização Vulkan para Metal e testes com MetalFX."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-android",
     "name": "Bloodborne-Android",
     "repo": "ducvd89/Bloodborne-Android",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["android", "arm"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Android build with FSR 3.1, frame generation and an on-screen controller. Tested on Snapdragon 8 Gen 2 and 8 Elite.",
       "pt-br": "Build para Android com FSR 3.1, geração de quadros e controle na tela. Testado em Snapdragon 8 Gen 2 e 8 Elite."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "arm-bloodborne-pc",
     "name": "ARM_bloodborne_pc",
     "repo": "MaSieS4Fun/ARM_bloodborne_pc",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["linux", "arm"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "linux",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Native Linux port for ARM machines.",
       "pt-br": "Port nativo para Linux em máquinas ARM."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bloodborne-linux-ayozetr",
     "name": "bloodborne_linux",
     "repo": "ayozetr/bloodborne_linux",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["linux"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Linux build with a GTK4 launcher, online co-op through shadNet, trophies and DLSS on NVIDIA.",
       "pt-br": "Build para Linux com launcher GTK4, co-op online via shadNet, troféus e DLSS em NVIDIA."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "bbport-qol-srshadowy",
     "name": "bbport (custom fork)",
     "repo": "SrShadowy/bloodborne_pc",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "platform",
-    "platforms": ["linux"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "bloodborne", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Personal fork with quality-of-life additions, such as an on-screen keyboard for character names with full gamepad navigation.",
       "pt-br": "Fork pessoal com melhorias de usabilidade, como teclado virtual na criação de personagem com navegação completa pelo controle."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "psport",
     "name": "psport",
     "repo": "yerasuu/psport",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "game",
-    "platforms": ["linux"],
-    "graphics": ["Vulkan"],
+    "kind": "fork",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
     "games": [
-      { "id": "bloodborne", "tier": "playable", "source": "README: saves, several areas, sound, pad" },
-      { "id": "atelier-ryza", "tier": "ingame", "source": "README: title menu, prologue, field with the player in control, sound" },
-      { "id": "atelier-ayesha-dx", "tier": "ingame", "source": "README: intro movie, title menu, opening scenes, field, atelier, sound" },
-      { "id": "tales-of-symphonia-remastered", "tier": "ingame", "source": "README: title screen, the first room, sound" },
-      { "id": "saga-emerald-beyond", "tier": "intro", "source": "README: title screen, first story scenes with dialogue, sound" },
-      { "id": "astrea", "tier": "intro", "source": "README: the intro's story panels, sound" }
+      {
+        "id": "bloodborne",
+        "tier": "playable",
+        "source": "README: saves, several areas, sound, pad"
+      },
+      {
+        "id": "atelier-ryza",
+        "tier": "ingame",
+        "source": "README: title menu, prologue, field with the player in control, sound"
+      },
+      {
+        "id": "atelier-ayesha-dx",
+        "tier": "ingame",
+        "source": "README: intro movie, title menu, opening scenes, field, atelier, sound"
+      },
+      {
+        "id": "tales-of-symphonia-remastered",
+        "tier": "ingame",
+        "source": "README: title screen, the first room, sound"
+      },
+      {
+        "id": "saga-emerald-beyond",
+        "tier": "intro",
+        "source": "README: title screen, first story scenes with dialogue, sound"
+      },
+      {
+        "id": "astrea",
+        "tier": "intro",
+        "source": "README: the intro's story panels, sound"
+      }
     ],
     "notes": {
       "en": "bbport taken past one game: a general compatibility layer with its own libraries for audio, fibers and fonts. PS VR titles are unsupported. Normally driven by the decanter front end.",
       "pt-br": "O bbport levado além de um jogo só: uma camada de compatibilidade geral, com bibliotecas próprias de áudio, fibers e fontes. Títulos de PS VR não são suportados. Normalmente usado pelo front-end decanter."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "port-ga-gotoku",
     "name": "port-ga-gotoku",
     "repo": "ItalianKuze/port-ga-gotoku",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "game",
-    "platforms": ["windows"],
-    "graphics": ["Vulkan"],
-    "games": [{ "id": "fist-of-the-north-star-lost-paradise", "tier": "unrated", "source": null }],
+    "kind": "fork",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "fist-of-the-north-star-lost-paradise",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
     "notes": {
       "en": "Native Windows port of Fist of the North Star: Lost Paradise (Hokuto ga Gotoku), built on bbport.",
       "pt-br": "Port nativo para Windows de Fist of the North Star: Lost Paradise (Hokuto ga Gotoku), feito sobre o bbport."
-    }
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
   },
   {
     "slug": "the-last-guardian-pc",
     "name": "The Last Guardian PC",
     "repo": "Spexxl/The-Last-Guadian-PC",
     "upstream": "deadinside28/bloodborne_pc",
-    "kind": "game",
+    "kind": "fork",
     "platforms": [],
     "graphics": [],
-    "games": [{ "id": "the-last-guardian", "tier": "wip", "source": "README: aims to bring the game to PC; check that a release explicitly supports it" }],
+    "games": [
+      {
+        "id": "the-last-guardian",
+        "tier": "wip",
+        "source": "README: aims to bring the game to PC; check that a release explicitly supports it"
+      }
+    ],
     "notes": {
       "en": "Early-stage community effort to bring The Last Guardian to PC with bbport's native execution approach.",
       "pt-br": "Projeto comunitário em estágio inicial para levar The Last Guardian ao PC com a execução nativa do bbport."
+    },
+    "technique": "runtime",
+    "toolchain": "bbport"
+  },
+  {
+    "slug": "pinyon-shift",
+    "name": "Pinyon Shift",
+    "repo": "arcanite24/pinyon-shift",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck",
+      "macos",
+      "android"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "forza-horizon",
+        "tier": "playable",
+        "source": "README: playable preview; expect some rendering bugs and slowdowns"
+      }
+    ],
+    "notes": {
+      "en": "Forza Horizon recompiled from the Xbox 360 binary. Native Linux and Steam Deck builds, macOS through MoltenVK, Android handhelds in alpha; in-game settings and a trainer.",
+      "pt-br": "Forza Horizon recompilado a partir do binário de Xbox 360. Builds nativos para Linux e Steam Deck, macOS via MoltenVK e handhelds Android em alfa; configurações dentro do jogo e trainer."
+    }
+  },
+  {
+    "slug": "forzahorizon1-reimagined",
+    "name": "Forza Horizon ReImagined",
+    "repo": "Dyotson/ForzaHorizon1-ReImagined",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "forza-horizon",
+        "tier": "ingame",
+        "source": "README: early work in progress; boot, menus, free roam, festival events and races work"
+      }
+    ],
+    "notes": {
+      "en": "Forza Horizon rebuilt around the modern Horizon experience: shared online free roam, leaderboards, 120/144 fps and a self-hostable server.",
+      "pt-br": "Forza Horizon reconstruído em torno da experiência moderna da série: free roam online compartilhado, rankings, 120/144 fps e servidor próprio."
+    }
+  },
+  {
+    "slug": "downpourrecomp",
+    "name": "DownpourRecomp",
+    "repo": "LittleBitUA/DownpourRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "silent-hill-downpour",
+        "tier": "playable",
+        "source": "Description: v1.0 stable"
+      }
+    ],
+    "notes": {
+      "en": "1080p at 60 fps with keyboard and mouse, a standalone launcher, a disc-image installer and DualSense adaptive triggers.",
+      "pt-br": "1080p a 60 fps com teclado e mouse, launcher próprio, instalador a partir da imagem do disco e gatilhos adaptativos do DualSense."
+    }
+  },
+  {
+    "slug": "dprecomp",
+    "name": "DPRecomp",
+    "repo": "LittleBitUA/DPRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "deadly-premonition",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Windows build for PAL and USA discs with a native Direct3D 12 renderer up to 4x internal resolution, 60 fps, mouse look and FSR 3.",
+      "pt-br": "Build para Windows dos discos PAL e USA, com renderizador Direct3D 12 nativo até 4x de resolução interna, 60 fps, mouse look e FSR 3."
+    }
+  },
+  {
+    "slug": "speedbreaker",
+    "name": "SpeedBreaker",
+    "repo": "SpeedBreakerProject/speedbreaker",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "steamdeck",
+      "linux",
+      "macos",
+      "ios"
+    ],
+    "graphics": [
+      "Vulkan",
+      "MoltenVK"
+    ],
+    "games": [
+      {
+        "id": "need-for-speed-most-wanted-2005",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Most Wanted for SteamOS devices, Linux and Mac, with an experimental iPhone and iPad build; settings menu mid-race and up to 60 fps.",
+      "pt-br": "Most Wanted para dispositivos com SteamOS, Linux e Mac, com build experimental para iPhone e iPad; menu de configurações durante a corrida e até 60 fps."
+    }
+  },
+  {
+    "slug": "condemned2recomp",
+    "name": "Condemned2Recomp",
+    "repo": "psxrestore/Condemned2Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "condemned-2-bloodshot",
+        "tier": "playable",
+        "source": "README: work in progress, in a playable state; expect bugs and crashes"
+      }
+    ],
+    "notes": {
+      "en": "Condemned 2 recompiled with ReXGlue. Linux build is untested.",
+      "pt-br": "Condemned 2 recompilado com ReXGlue. O build para Linux não foi testado."
+    }
+  },
+  {
+    "slug": "pgr4-recomp",
+    "name": "PGR4-Recomp",
+    "repo": "beatrixzy/PGR4-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "project-gotham-racing-4",
+        "tier": "wip",
+        "source": "README: far from polished and finished; v2 in the works"
+      }
+    ],
+    "notes": {
+      "en": "Early recompilation of Project Gotham Racing 4; the garage Geometry Wars cabinet still crashes.",
+      "pt-br": "Recompilação inicial de Project Gotham Racing 4; o fliperama de Geometry Wars na garagem ainda trava."
+    }
+  },
+  {
+    "slug": "armyoftworecomp",
+    "name": "ArmyOfTwoRecomp",
+    "repo": "nikolaygorb/ArmyOfTwoRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "army-of-two",
+        "tier": "intro",
+        "source": "README: the executable boots to real GPU rendering"
+      }
+    ],
+    "notes": {
+      "en": "Army of Two recompiled to native x86-64 with ReXGlue; build presets for Windows, Linux and macOS.",
+      "pt-br": "Army of Two recompilado para x86-64 nativo com ReXGlue; presets de build para Windows, Linux e macOS."
+    }
+  },
+  {
+    "slug": "lost-odyssey-hd-remaster",
+    "name": "Lost Odyssey HD Remaster",
+    "repo": "faligame/lost-odyssey-hd-remaster",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "lost-odyssey",
+        "tier": "playable",
+        "source": "README: v0.0.1 test build, playable with many known bugs"
+      }
+    ],
+    "notes": {
+      "en": "720p to 4K, 60 fps, Direct3D 12 and Vulkan, texture replacement, and fixes for the crashes the original is known for.",
+      "pt-br": "De 720p a 4K, 60 fps, Direct3D 12 e Vulkan, troca de texturas e correção dos travamentos conhecidos do original."
+    }
+  },
+  {
+    "slug": "wwe-svr2011-pc",
+    "name": "SvR2011 PC",
+    "repo": "KaikoClanworth1/wwe-svr2011-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "android",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "wwe-smackdown-vs-raw-2011",
+        "tier": "playable",
+        "source": "README: the full game on Windows and on Android phones and tablets"
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port with a self-updating launcher, any-aspect-ratio support, an Android build with touch controls and an experimental Vulkan renderer.",
+      "pt-br": "Port nativo para Windows com launcher que se atualiza sozinho, suporte a qualquer proporção de tela, build Android com controles de toque e renderizador Vulkan experimental."
+    }
+  },
+  {
+    "slug": "estacado-the-darkness-recomp",
+    "name": "Estacado",
+    "repo": "invinceble55-wq/Estacado-The-Darkness-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "the-darkness",
+        "tier": "unrated",
+        "source": "README: pre-release, tested on one Windows 11 PC"
+      }
+    ],
+    "notes": {
+      "en": "The Darkness on Windows with a Direct3D 12 layer, experimental widescreen and keyboard and mouse.",
+      "pt-br": "The Darkness no Windows com camada Direct3D 12, widescreen experimental e teclado e mouse."
+    }
+  },
+  {
+    "slug": "dbz-burst-limit-recompiled",
+    "name": "DBZ: Burst Limit Recompiled",
+    "repo": "iExplosiveRage/DBZ-Burst-Limit-Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "dragon-ball-z-burst-limit",
+        "tier": "unrated",
+        "source": "README: alpha releases"
+      }
+    ],
+    "notes": {
+      "en": "Windows build with its own start screen, in-game settings, online features and experimental DLSS and DLAA.",
+      "pt-br": "Build para Windows com tela inicial própria, configurações no jogo, recursos online e DLSS e DLAA experimentais."
+    }
+  },
+  {
+    "slug": "fm4-recomp",
+    "name": "Forza Motorsport 4 Recompiled",
+    "repo": "Alexbeav/fm4-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "forza-motorsport-4",
+        "tier": "wip",
+        "source": "README: experimental alpha source release; can stutter around 30 fps"
+      }
+    ],
+    "notes": {
+      "en": "Experimental source release; the tested boundary and known issues are documented.",
+      "pt-br": "Release experimental só com código-fonte; os limites testados e os problemas conhecidos estão documentados."
+    }
+  },
+  {
+    "slug": "project8recomp",
+    "name": "Project8Recomp",
+    "repo": "theokyr/Project8Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "tony-hawks-project-8",
+        "tier": "unrated",
+        "source": "README: Linux verified; macOS renders but heavy scenes are too slow"
+      }
+    ],
+    "notes": {
+      "en": "Linux is the main tested platform; macOS on Apple Silicon renders correctly but slows down in heavy scenes.",
+      "pt-br": "Linux é a plataforma principal de testes; no macOS com Apple Silicon renderiza certo, mas fica lento em cenas pesadas."
+    }
+  },
+  {
+    "slug": "geometry-wars-retro-evolved-2-recompiled",
+    "name": "Geometry Wars: RE2 Recompiled",
+    "repo": "saulob/geometry-wars-retro-evolved-2-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "geometry-wars-retro-evolved-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Windows build plus an experimental Linux and Steam Deck AppImage, with high frame rates, local achievements and offline leaderboards.",
+      "pt-br": "Build para Windows e AppImage experimental para Linux e Steam Deck, com taxas de quadros altas, conquistas locais e rankings offline."
+    }
+  },
+  {
+    "slug": "skate2-recompile-pc",
+    "name": "Skate 2 PC",
+    "repo": "christianortel/skate2-recompile-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skate-2",
+        "tier": "playable",
+        "source": "README: tested through Free Skate, campaign progression and save/reload in hour-long sessions"
+      }
+    ],
+    "notes": {
+      "en": "Windows player package with controller support, adjustable rendering quality and unlocked frame rate.",
+      "pt-br": "Pacote para Windows com suporte a controle, qualidade gráfica ajustável e FPS destravado."
+    }
+  },
+  {
+    "slug": "skate3-mobile",
+    "name": "Skate 3 Mobile",
+    "repo": "Buku313/Skate3-Mobile",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "skate-3",
+        "tier": "playable",
+        "source": "README: developer build, playable on the Anbernic RG406V"
+      }
+    ],
+    "notes": {
+      "en": "Skate 3 as native ARM64 code on Android, using the Vulkan renderer from Skate3Recomp. Needs Android 13+.",
+      "pt-br": "Skate 3 como código ARM64 nativo no Android, usando o renderizador Vulkan do Skate3Recomp. Exige Android 13+."
+    }
+  },
+  {
+    "slug": "asuras-wrath-recomp",
+    "name": "Asura's Wrath Recompiled",
+    "repo": "PauloUbirajara/asuras-wrath-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux",
+      "android"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "asuras-wrath",
+        "tier": "wip",
+        "source": "Description: work in progress; Android port experimental"
+      }
+    ],
+    "notes": {
+      "en": "Asura's Wrath recompiled with ReXGlue, with build presets for Linux, Windows and Android.",
+      "pt-br": "Asura's Wrath recompilado com ReXGlue, com presets de build para Linux, Windows e Android."
+    }
+  },
+  {
+    "slug": "perfectdarkremasterrecomp",
+    "name": "Perfect Dark Remaster Recomp",
+    "repo": "nikolaygorb/PerfectDarkRemasterRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "perfect-dark-2010",
+        "tier": "intro",
+        "source": "README: working build; boots to Direct3D 12 rendering with audio and controller"
+      }
+    ],
+    "notes": {
+      "en": "The 2010 Xbox Live Arcade remaster recompiled to native Windows x86-64.",
+      "pt-br": "O remaster de 2010 da Xbox Live Arcade recompilado para Windows x86-64 nativo."
+    }
+  },
+  {
+    "slug": "perfectdarkzerorecomp",
+    "name": "Perfect Dark Zero Recomp",
+    "repo": "nikolaygorb/PerfectDarkZeroRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "perfect-dark-zero",
+        "tier": "playable",
+        "source": "README: fully playable on Windows, with video, audio, gameplay, achievements and saves"
+      }
+    ],
+    "notes": {
+      "en": "Windows is the tested platform; Linux and macOS presets exist but are untested.",
+      "pt-br": "Windows é a plataforma testada; existem presets para Linux e macOS, mas sem testes."
+    }
+  },
+  {
+    "slug": "wwe-allstars-recomp",
+    "name": "WWE All Stars Recomp",
+    "repo": "shaneomac1337/WWE-AllStars-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "steamdeck"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "wwe-all-stars",
+        "tier": "playable",
+        "source": "README: tested and playable across exhibition, Path of Champions, Fantasy Warfare and Create a Superstar"
+      }
+    ],
+    "notes": {
+      "en": "Windows build at the original 60 fps, Steam Deck through Proton; online ranked play is not supported.",
+      "pt-br": "Build para Windows a 60 fps originais, Steam Deck via Proton; partidas ranqueadas online não são suportadas."
+    }
+  },
+  {
+    "slug": "dead-rising-2-case-zero-xenon-recomp",
+    "name": "Case Zero Recomp",
+    "repo": "wivi514/Dead_Rising_2_Case_Zero_Xenon_Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dead-rising-2-case-zero",
+        "tier": "playable",
+        "source": "README: essentially complete; 100% playable start to finish on Windows and Linux"
+      }
+    ],
+    "notes": {
+      "en": "The XBLA prologue to Dead Rising 2, completed end to end on Windows and Linux.",
+      "pt-br": "O prólogo XBLA de Dead Rising 2, terminado do início ao fim no Windows e no Linux."
+    }
+  },
+  {
+    "slug": "dead-rising-2-case-west-xenon-recomp",
+    "name": "Case West Recomp",
+    "repo": "wivi514/Dead_Rising_2_Case_West_Xenon_Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dead-rising-2-case-west",
+        "tier": "playable",
+        "source": "README: essentially complete; single player playable start to finish"
+      }
+    ],
+    "notes": {
+      "en": "Windows and Linux builds, Vulkan, keyboard and mouse and controller; verified on NVIDIA and AMD.",
+      "pt-br": "Builds para Windows e Linux, Vulkan, teclado e mouse e controle; verificado em NVIDIA e AMD."
+    }
+  },
+  {
+    "slug": "project-2099",
+    "name": "Project 2099",
+    "repo": "GenryTheFox0/Project-2099",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "spider-man-edge-of-time",
+        "tier": "unrated",
+        "source": "README: V2 beta 4.1"
+      }
+    ],
+    "notes": {
+      "en": "Windows edition with PC controls, settings, localization, achievements and mod support.",
+      "pt-br": "Edição para Windows com controles de PC, configurações, localização, conquistas e suporte a mods."
+    }
+  },
+  {
+    "slug": "unleashedrecomp",
+    "name": "Unleashed Recompiled",
+    "repo": "hedge-dev/UnleashedRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "sonic-unleashed",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Sonic Unleashed for Windows and Linux with an installation wizard, a new options menu and extensive enhancements.",
+      "pt-br": "Sonic Unleashed para Windows e Linux, com assistente de instalação, novo menu de opções e várias melhorias."
+    }
+  },
+  {
+    "slug": "doaxvb-re",
+    "name": "DOAXVB Native PC Port",
+    "repo": "NoRain211/doaxvb-re",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "dead-or-alive-xtreme-beach-volleyball",
+        "tier": "playable",
+        "source": "README: fully playable as of 0.4 beta"
+      }
+    ],
+    "notes": {
+      "en": "Built by static recompilation with a hand-written runtime, aiming to become readable source.",
+      "pt-br": "Feito por recompilação estática com runtime escrito à mão, com o objetivo de virar código-fonte legível."
+    }
+  },
+  {
+    "slug": "defjamffny-recomp",
+    "name": "Def Jam: Fight for NY Recompiled",
+    "repo": "vyanhursky/DefJamFFNY-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "macos",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "def-jam-fight-for-ny",
+        "tier": "playable",
+        "source": "README: the Windows build is playable; still an early release"
+      }
+    ],
+    "notes": {
+      "en": "Menus, Story mode and fights at 60 fps; Direct3D 11 on Windows and Vulkan on macOS, Linux and Steam Deck.",
+      "pt-br": "Menus, modo história e lutas a 60 fps; Direct3D 11 no Windows e Vulkan no macOS, Linux e Steam Deck."
+    }
+  },
+  {
+    "slug": "scda-xberecomp",
+    "name": "SCDA-XBERecomp",
+    "repo": "TGP482/SCDA-XBERecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "splinter-cell-double-agent",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "The original Xbox version as a 64-bit Windows executable, with HDR, MSAA and SMAA, and full keyboard and mouse.",
+      "pt-br": "A versão do Xbox original como executável Windows de 64 bits, com HDR, MSAA e SMAA, e suporte completo a teclado e mouse."
+    }
+  },
+  {
+    "slug": "projectreach",
+    "name": "HaloPad",
+    "repo": "chrissotraidis/projectreach",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "ios",
+      "macos"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "halo-combat-evolved",
+        "tier": "playable",
+        "source": "README: preview, playable on real hardware"
+      }
+    ],
+    "notes": {
+      "en": "Halo: Combat Evolved on iPhone, iPad and Apple silicon Macs, with local and online play.",
+      "pt-br": "Halo: Combat Evolved no iPhone, iPad e Macs com Apple silicon, com jogo local e online."
+    }
+  },
+  {
+    "slug": "opentricky",
+    "name": "OpenTricky",
+    "repo": "GiZcesi/OpenTricky",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "ssx-tricky",
+        "tier": "playable",
+        "source": "README: unstable release, playable start to finish"
+      }
+    ],
+    "notes": {
+      "en": "The Xbox version translated with xboxrecomp; Direct3D 11, with a Steam Deck preset.",
+      "pt-br": "A versão de Xbox traduzida com o xboxrecomp; Direct3D 11, com preset para Steam Deck."
+    }
+  },
+  {
+    "slug": "zelda64recomp",
+    "name": "Zelda 64: Recompiled",
+    "repo": "Zelda64Recomp/Zelda64Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck",
+      "macos"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-majoras-mask",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Majora's Mask with intact N64 effects, mods and texture packs, and Linux and Steam Deck support. The project that started N64Recomp.",
+      "pt-br": "Majora's Mask com os efeitos do N64 intactos, mods e pacotes de texturas, e suporte a Linux e Steam Deck. O projeto que deu origem ao N64Recomp."
+    }
+  },
+  {
+    "slug": "snap64recomp",
+    "name": "Snap64 Recomp",
+    "repo": "JackandBeans/Snap64Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck",
+      "macos"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "pokemon-snap",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Plays like the cartridge by default; every enhancement is opt-in.",
+      "pt-br": "Por padrão joga como o cartucho; cada melhoria é opcional."
+    }
+  },
+  {
+    "slug": "conkerbfdreloaded",
+    "name": "Conker's Bad Fur Day: Reloaded",
+    "repo": "DahSidiAbdallah/ConkerBFDReloaded",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "conkers-bad-fur-day",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A Classic mode true to the N64 and a Modern mode with widescreen, smooth frame rate and a free camera.",
+      "pt-br": "Modo Clássico fiel ao N64 e modo Moderno com widescreen, FPS suave e câmera livre."
+    }
+  },
+  {
+    "slug": "wwfnomercyrecomp",
+    "name": "WWF No Mercy: Recompiled",
+    "repo": "jessetbh/WWFNoMercyRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "wwf-no-mercy",
+        "tier": "playable",
+        "source": "README: beta; boots, renders, plays music and takes input through menus and matches"
+      }
+    ],
+    "notes": {
+      "en": "High-resolution rendering, in-game config menus and full input rebinding.",
+      "pt-br": "Renderização em alta resolução, menus de configuração no jogo e remapeamento completo de controles."
+    }
+  },
+  {
+    "slug": "wcwvsnwoworldtourrecomp",
+    "name": "WCW vs. nWo World Tour: Recompiled",
+    "repo": "jessetbh/WCWvsNWOWorldTourRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "wcw-vs-nwo-world-tour",
+        "tier": "playable",
+        "source": "README: beta; fully playable end to end"
+      }
+    ],
+    "notes": {
+      "en": "Full matches with sound, keyboard and gamepad, local multiplayer and rumble.",
+      "pt-br": "Lutas completas com som, teclado e controle, multiplayer local e vibração."
+    }
+  },
+  {
+    "slug": "wcwnworevengerecomp",
+    "name": "WCW/nWo Revenge: Recompiled",
+    "repo": "jessetbh/WCWnWoRevengeRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "wcw-nwo-revenge",
+        "tier": "playable",
+        "source": "README: beta; boots, renders, plays music and takes input through menus and matches"
+      }
+    ],
+    "notes": {
+      "en": "Part of the AKI-engine wrestling recompilations, with high-resolution rendering.",
+      "pt-br": "Parte das recompilações de luta livre da engine AKI, com renderização em alta resolução."
+    }
+  },
+  {
+    "slug": "wwfwrestlemania2000recomp",
+    "name": "WWF WrestleMania 2000: Recompiled",
+    "repo": "jessetbh/WWFWrestleMania2000Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "wwf-wrestlemania-2000",
+        "tier": "playable",
+        "source": "README: beta; boots, renders, plays music and takes input through menus and matches"
+      }
+    ],
+    "notes": {
+      "en": "Sister project of No Mercy, sharing its runtime work.",
+      "pt-br": "Projeto irmão do No Mercy, compartilhando o trabalho de runtime."
+    }
+  },
+  {
+    "slug": "vpw64recomp",
+    "name": "Virtual Pro Wrestling 64: Recompiled",
+    "repo": "jessetbh/VPW64Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "virtual-pro-wrestling-64",
+        "tier": "playable",
+        "source": "README: beta; boots, renders, plays music and takes input through menus and matches"
+      }
+    ],
+    "notes": {
+      "en": "The Japanese AKI wrestling title, recompiled for Windows.",
+      "pt-br": "O título japonês de luta livre da AKI, recompilado para Windows."
+    }
+  },
+  {
+    "slug": "annepad",
+    "name": "AnnePad",
+    "repo": "chrissotraidis/annepad",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "ios"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "pokemon-stadium",
+        "tier": "unrated",
+        "source": "README: preview 4; local iPhone and iPad builds"
+      }
+    ],
+    "notes": {
+      "en": "Pokémon Stadium rebuilt for iPhone and iPad with native Metal rendering and touch controls.",
+      "pt-br": "Pokémon Stadium reconstruído para iPhone e iPad com renderização Metal nativa e controles de toque."
+    }
+  },
+  {
+    "slug": "roguesquadron64recomp",
+    "name": "Rogue Squadron 64 Recompiled",
+    "repo": "MikeSemicolonD/RogueSquadron64Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "android"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "star-wars-rogue-squadron",
+        "tier": "playable",
+        "source": "Description: fully playable; README: work in progress, heavily AI-assisted"
+      }
+    ],
+    "notes": {
+      "en": "Longer draw distance, experimental frame interpolation, touch controls on Android and online two-player co-op.",
+      "pt-br": "Distância de visão maior, interpolação de quadros experimental, controles de toque no Android e co-op online para dois."
+    }
+  },
+  {
+    "slug": "battletanx-global-assault-pc-port",
+    "name": "BattleTanx: Global Assault PC Port",
+    "repo": "TheGh0stShip/BattleTanx-Global-Assault-PC-Port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "RT64",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "battletanx-global-assault",
+        "tier": "ingame",
+        "source": "README: played through the original menus into campaign gameplay"
+      }
+    ],
+    "notes": {
+      "en": "Windows x64 with RT64 on Direct3D 12; Linux build also available.",
+      "pt-br": "Windows x64 com RT64 sobre Direct3D 12; build para Linux também disponível."
+    }
+  },
+  {
+    "slug": "battle-tanx-recomp",
+    "name": "BattleTanx: Recompiled",
+    "repo": "bdragoncore/battle-tanx-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "battletanx",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Linux, Windows and macOS builds come out of CI.",
+      "pt-br": "Builds para Linux, Windows e macOS saem do CI."
+    }
+  },
+  {
+    "slug": "blocksphere",
+    "name": "Blocksphere",
+    "repo": "djultra64/Blocksphere",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "tetrisphere",
+        "tier": "unrated",
+        "source": "README: version 1.1.0 available"
+      }
+    ],
+    "notes": {
+      "en": "Tetrisphere with RT64 rendering and recompiled RSP audio, for Linux and Windows x86-64.",
+      "pt-br": "Tetrisphere com renderização RT64 e áudio RSP recompilado, para Linux e Windows x86-64."
+    }
+  },
+  {
+    "slug": "power-dozer",
+    "name": "Power Dozer",
+    "repo": "djultra64/Power-Dozer",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "blast-corps",
+        "tier": "unrated",
+        "source": "README: v0.84 beta candidate"
+      }
+    ],
+    "notes": {
+      "en": "Blast Corps for Linux and Windows with a new main menu in front of the original file selector.",
+      "pt-br": "Blast Corps para Linux e Windows com um novo menu principal antes do seletor de arquivos original."
+    }
+  },
+  {
+    "slug": "snowboardkids-recomp",
+    "name": "Snowboard Kids Recompiled",
+    "repo": "HikariLucy/SnowboardKids-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "snowboard-kids",
+        "tier": "playable",
+        "source": "README: public beta; live gameplay validated on Linux and Windows"
+      }
+    ],
+    "notes": {
+      "en": "Save, quit and reopen restore progress; powered by N64Recomp and RT64.",
+      "pt-br": "Salvar, fechar e reabrir restaura o progresso; feito com N64Recomp e RT64."
+    }
+  },
+  {
+    "slug": "snowboardkids2-recomp",
+    "name": "Snowboard Kids 2: Recompiled",
+    "repo": "cdlewis/snowboardkids2-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "snowboard-kids-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Intact N64 effects and in-game config menus for graphics, input and audio.",
+      "pt-br": "Efeitos do N64 intactos e menus de configuração no jogo para gráficos, controles e áudio."
+    }
+  },
+  {
+    "slug": "dkr-recomp",
+    "name": "Diddy Kong Racing: Recompiled",
+    "repo": "cyscott/dkr-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "macos",
+      "steamdeck",
+      "linux"
+    ],
+    "graphics": [
+      "Metal",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "diddy-kong-racing",
+        "tier": "playable",
+        "source": "README: early alpha; playable alpha on macOS and Steam Deck/Linux"
+      }
+    ],
+    "notes": {
+      "en": "Boots to the frontend and Adventure mode and completes normal races; Metal on macOS, Vulkan on Linux.",
+      "pt-br": "Chega ao menu e ao modo Aventura e completa corridas normais; Metal no macOS, Vulkan no Linux."
+    }
+  },
+  {
+    "slug": "goemon64recomp",
+    "name": "Goemon 64: Recompiled",
+    "repo": "klorfmorf/Goemon64Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck",
+      "macos"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "mystical-ninja-starring-goemon",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Mystical Ninja with intact N64 effects, mods and texture packs, on the Zelda 64: Recompiled foundation.",
+      "pt-br": "Mystical Ninja com os efeitos do N64 intactos, mods e pacotes de texturas, sobre a base do Zelda 64: Recompiled."
+    }
+  },
+  {
+    "slug": "bloodyroar2recomp",
+    "name": "Bloody Roar II Recompiled",
+    "repo": "novapowers0/BloodyRoar2Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "bloody-roar-ii",
+        "tier": "unrated",
+        "source": "README: release 0.7.1"
+      }
+    ],
+    "notes": {
+      "en": "Europe, USA and (experimental) Japan in one executable, with from-scratch widescreen, curated mods and online play.",
+      "pt-br": "Europa, EUA e Japão (experimental) num só executável, com widescreen feito do zero, mods selecionados e jogo online."
+    }
+  },
+  {
+    "slug": "rr-decomp",
+    "name": "rr-decomp",
+    "repo": "kazuyette/rr-decomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "ridge-racer",
+        "tier": "playable",
+        "source": "README: playable today (v0.1.0); boots to the title, the menu and a race"
+      }
+    ],
+    "notes": {
+      "en": "A matching decompilation plus a static recompilation that runs natively on Linux and Windows.",
+      "pt-br": "Uma decompilação fiel mais uma recompilação estática que roda nativamente no Linux e no Windows."
+    }
+  },
+  {
+    "slug": "god-of-war-recomp",
+    "name": "God of War PS2 Recomp",
+    "repo": "KIexster/god-of-war-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "god-of-war",
+        "tier": "wip",
+        "source": "README: milestones in progress; controller, menu and difficulty selection work"
+      }
+    ],
+    "notes": {
+      "en": "Native Windows build with an OpenGL renderer, around 25 fps with optional threaded VU1 and GS.",
+      "pt-br": "Build nativo para Windows com renderizador OpenGL, cerca de 25 fps com VU1 e GS opcionais em threads."
+    }
+  },
+  {
+    "slug": "yakumo",
+    "name": "Yakumo",
+    "repo": "TeamGDB/Yakumo",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "monster-hunter-portable-3rd-hd-ver",
+        "tier": "playable",
+        "source": "README: status playable"
+      }
+    ],
+    "notes": {
+      "en": "Vulkan and SDL3; PSP-format saves, PPSSPP-compatible HD texture packs and mhp3reload mods.",
+      "pt-br": "Vulkan e SDL3; saves no formato do PSP, pacotes de texturas HD compatíveis com o PPSSPP e mods do mhp3reload."
+    }
+  },
+  {
+    "slug": "chaotixrecompiled",
+    "name": "Knuckles' Chaotix Recompiled",
+    "repo": "YuutaTsubasa/ChaotixRecompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "knuckles-chaotix",
+        "tier": "playable",
+        "source": "README: levels are playable with sound; Windows built and played"
+      }
+    ],
+    "notes": {
+      "en": "Native C++ with true widescreen; Windows played by the author, Android verified on an emulator, Linux and macOS configured.",
+      "pt-br": "C++ nativo com widescreen de verdade; Windows jogado pelo autor, Android verificado num emulador, Linux e macOS configurados."
+    }
+  },
+  {
+    "slug": "initial-d-arcade-stage-3-native-sh-4-recompilation-wip",
+    "name": "Initial D Arcade Stage 3 Recomp",
+    "repo": "distilledorion-sketch/Initial-D-Arcade-Stage-3-Native-SH-4-Recompilation-WIP-",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "initial-d-arcade-stage-3",
+        "tier": "wip",
+        "source": "README: public early demo; this repository is marked obsolete in favour of a newer version on Discord"
+      }
+    ],
+    "notes": {
+      "en": "SH-4 ahead-of-time recompilation of the NAOMI 2 arcade game, BIOS-free with Vulkan.",
+      "pt-br": "Recompilação ahead-of-time do SH-4 do jogo de fliperama NAOMI 2, sem BIOS, com Vulkan."
     }
   }
 ]

@@ -1,6 +1,6 @@
 ---
-name: PS4 Native Ports
-description: A dense, sortable compatibility list of native PC ports from the bbport family, with status shown as coloured tiers.
+name: Native Ports
+description: A dense, sortable compatibility list of unofficial native ports of console games, with status shown as coloured tiers.
 colors:
   ground: "#16181d"
   panel: "#1c1f26"
@@ -171,7 +171,7 @@ components:
     textColor: "{colors.ink}"
 ---
 
-# Design System: PS4 Native Ports
+# Design System: Native Ports
 
 ## Overview
 
@@ -213,7 +213,7 @@ A graphite neutral field where saturated colour is rationed to status and naviga
 - **Hairline** (line): row separators, top bar and footer rules.
 - **Strong Hairline** (line-strong): control outlines (drawn as 1px inset), table header and group-header rules.
 - **Paper Ink** (ink): primary text, port names, headings.
-- **Secondary Ink** (ink-2): supporting copy, platform and graphics cells, filter labels, flags.
+- **Secondary Ink** (ink-2): supporting copy, platform, graphics and toolchain cells, filter labels, flags.
 - **Tertiary Ink** (ink-3): notes, title IDs, column headers, counts inside chips, footer, placeholder text.
 
 ### Named Rules
@@ -236,7 +236,7 @@ A graphite neutral field where saturated colour is rationed to status and naviga
 - **Title** (700, 1.375rem, 1.15): game group headers in the table and section heads in prose pages.
 - **Body large** (400, 1.0625rem, 1.5): result count (in bold), search input text, ledes, the brand wordmark.
 - **Body** (400, 0.9375rem, 1.5): default text and port names (bold). Prose capped at a 68ch measure.
-- **Label** (400 or 700, 0.8125rem, 1.5): column headers, chips, tier toggles, tier blocks (bold), table cells for platforms, graphics and numbers, notes, footer.
+- **Label** (400 or 700, 0.8125rem, 1.5): column headers, chips, tier toggles, tier blocks (bold), table cells for platforms, graphics, toolchain and numbers, notes, footer.
 - **Tag** (700, 0.75rem, uppercase, 0.06em): the state flags Upstream, Archived, Unavailable only.
 - **Data** (JetBrains Mono, 0.92em of context, tabular figures): repo slugs, title IDs, counts, stars, relative ages, dates, licence, code blocks.
 
@@ -247,11 +247,11 @@ A graphite neutral field where saturated colour is rationed to status and naviga
 
 ## Layout
 
-A single 1360px max-width column with a fluid gutter (16px to 32px). The catalog stacks top bar (60px), title and one-line intro, full-width search, a wrapping filter row (game select, platform chips, reset), the status block (count and tier legend on one line, full-width strip beneath), then the table.
+A single 1360px max-width column with a fluid gutter (16px to 32px). The catalog stacks top bar (60px), title and one-line intro, full-width search, a wrapping filter row (console, game and technique selects, platform chips, reset), the status block (count and tier legend on one line, full-width strip beneath), then the table.
 
-The table is fixed-layout: Port takes the remaining width, Platforms and Graphics 15% each, Tier 120px, Stars 84px, Last push 112px. Rows are grouped per game by a header row (title, title IDs in mono, a count badge, the mini strip pushed right), which replaces a Game column. The column header is sticky. Cells pad 8px 12px; rows are separated by a hairline, not spacing.
+The table is fixed-layout: Port takes the remaining width, Runs on (platforms, with graphics API as a muted second line) and Toolchain 15% each, Tier 120px, Stars 84px, Last push 112px. Rows are grouped per game by a header row (title, original console in bold secondary ink, title IDs in mono, a count badge, the mini strip pushed right), which replaces a Game column. The column header is sticky. Cells pad 8px 12px; rows are separated by a hairline, not spacing.
 
-Responsive behaviour, in order: below 1080px the Graphics column folds into a second line of the Platforms cell; below 900px the detail page's two columns (games table, facts list at 340px) stack; below 760px the catalog table becomes stacked rows (port line, then tier / stars / last push, then platforms), sortable headers become a horizontally scrolling "sort by" row, platform chips scroll horizontally and the legend moves under the strip; below 720px the top-bar navigation wraps to its own row and the language switch shows only its code; below 560px detail tables and the tier definition list stack.
+Responsive behaviour, in order: below 1080px the Toolchain column folds into a muted line of the Runs on cell; below 900px the detail page's two columns (games table, facts list at 340px) stack; below 760px the game select spans the filter row with console and technique side by side under it, and the catalog table becomes stacked rows (port line, then tier / stars / last push, then platforms), sortable headers become a horizontally scrolling "sort by" row, platform chips scroll horizontally and the legend moves under the strip; below 720px the top-bar navigation wraps to its own row and the language switch shows only its code; below 560px detail tables and the tier definition list stack.
 
 Spacing runs on small steps (6, 8, 12, 16px) inside controls and rows, with larger steps (28px top padding, 48px column gaps and empty-state padding, 64px above the footer) between regions.
 

@@ -1,6 +1,6 @@
 ---
 import Icon from "./Icon.astro";
-import { groups, entries, defaultOrder, repoUrl, isRetired, TIERS, PLATFORMS, type Lang, type Entry } from "../lib/catalog";
+import { groups, entries, defaultOrder, repoUrl, isRetired, TIERS, PLATFORMS, CONSOLES, TECHNIQUES, type Lang, type Entry } from "../lib/catalog";
 import { t, path, formatNumber, formatDate, age } from "../lib/i18n";
 
 interface Props { lang: Lang }
@@ -11,20 +11,24 @@ const now = Date.now();
 const tierCount = (list: Entry[]) => Object.fromEntries(TIERS.map((tier) => [tier, list.filter((e) => e.tier === tier).length]));
 const totalTiers = tierCount(entries);
 const usedPlatforms = PLATFORMS.filter((p) => entries.some((e) => e.port.platforms.includes(p)));
+const usedConsoles = CONSOLES.filter((c) => entries.some((e) => e.game.console === c));
+const usedTechniques = TECHNIQUES.filter((tq) => entries.some((e) => e.port.technique === tq));
+const countWhere = (fn: (e: Entry) => boolean) => entries.filter(fn).length;
+const toolLabel = (e: Entry) => e.port.toolchain ?? s.techniques[e.port.technique].label;
 
 const searchText = (e: Entry) =>
-  [e.port.name, e.port.repo, e.game.title, ...e.game.titleIds, e.port.notes[lang], ...e.port.graphics, ...e.port.platforms.map((p) => s.platforms[p])]
+  [e.port.name, e.port.repo, e.game.title, ...e.game.titleIds, s.consoles[e.game.console], e.port.toolchain ?? "", s.techniques[e.port.technique].label, e.port.notes[lang], ...e.port.graphics, ...e.port.platforms.map((p) => s.platforms[p])]
     .join(" ")
     .toLowerCase();
 
 ---
 <section class="catalog wrap" aria-labelledby="catalog-title" data-lang={lang}>
   <div class="intro">
-    <h1 id="catalog-title">{lang === "en" ? "PS4 games running natively on PC" : "Jogos de PS4 rodando nativamente no PC"}</h1>
+    <h1 id="catalog-title">{lang === "en" ? "Console games running natively on PC" : "Jogos de console rodando nativamente no PC"}</h1>
     <p>
       {lang === "en"
-        ? <>Forks of <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a>, with the status each project declares. <a class="nowrap" href={path("/about/", lang)}>What the statuses mean</a></>
-        : <>Forks do <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a>, com o status que cada projeto declara. <a class="nowrap" href={path("/about/", lang)}>O que significa cada status</a></>}
+        ? <>Unofficial ports that run a game's own code without an emulator, with the status each project declares. <a class="nowrap" href={path("/about/", lang)}>How they work</a></>
+        : <>Ports não oficiais que rodam o código do próprio jogo sem emulador, com o status que cada projeto declara. <a class="nowrap" href={path("/about/", lang)}>Como funcionam</a></>}
     </p>
   </div>
 
@@ -36,10 +40,30 @@ const searchText = (e: Entry) =>
     </label>
     <div class="filter-row">
       <label class="select">
+        <span>{s.filters.console}</span>
+        <select id="console" name="console">
+          <option value="">{s.filters.allConsoles} ({entries.length})</option>
+          {usedConsoles.map((c) => <option value={c}>{s.consoles[c]} ({countWhere((e) => e.game.console === c)})</option>)}
+        </select>
+      </label>
+      <label class="select select-game">
         <span>{s.filters.game}</span>
         <select id="game" name="game">
           <option value="">{s.filters.allGames} ({entries.length})</option>
-          {groups.map((g) => <option value={g.game.id}>{g.game.title} ({g.entries.length})</option>)}
+          {usedConsoles.map((c) => (
+            <optgroup label={s.consoles[c]}>
+              {groups.filter((g) => g.game.console === c).sort((a, b) => a.game.title.localeCompare(b.game.title)).map((g) => (
+                <option value={g.game.id} data-console={c}>{g.game.title} ({g.entries.length})</option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+      </label>
+      <label class="select">
+        <span>{s.filters.technique}</span>
+        <select id="technique" name="technique">
+          <option value="">{s.filters.allTechniques}</option>
+          {usedTechniques.map((tq) => <option value={tq}>{s.techniques[tq].label} ({countWhere((e) => e.port.technique === tq)})</option>)}
         </select>
       </label>
       <fieldset class="chips">
@@ -78,7 +102,7 @@ const searchText = (e: Entry) =>
         <tr data-sort-label={s.sortBy}>
           <th scope="col" class="c-port" aria-sort="none"><button type="button" data-sort="name">{s.cols.port}<Icon name="sort" size={13} /></button></th>
           <th scope="col" class="c-plat">{s.cols.platforms}</th>
-          <th scope="col" class="c-gfx">{s.cols.graphics}</th>
+          <th scope="col" class="c-gfx">{s.cols.toolchain}</th>
           <th scope="col" class="c-tier">{s.cols.tier}</th>
           <th scope="col" class="c-num c-stars" aria-sort="none"><button type="button" data-sort="stars">{s.cols.stars}<Icon name="sort" size={13} /></button></th>
           <th scope="col" class="c-num c-pushed" aria-sort="descending"><button type="button" data-sort="pushed">{s.cols.pushed}<Icon name="sort" size={13} /></button></th>
@@ -92,6 +116,7 @@ const searchText = (e: Entry) =>
               <th colspan="6" scope="colgroup" id={`g-${game.id}`}>
                 <div class="group-head">
                   <h2>{game.title}</h2>
+                  <span class="console">{s.consoles[game.console]}</span>
                   {game.titleIds.length > 0 && <span class="data ids">{game.titleIds.join(" · ")}{game.version && ` · v${game.version}`}</span>}
                   <span class="gcount data" data-group-count>{list.length}</span>
                   <span class="mini" aria-hidden="true">
@@ -108,6 +133,8 @@ const searchText = (e: Entry) =>
                   class:list={["row", { retired }]}
                   data-entry
                   data-game={game.id}
+                  data-console={game.console}
+                  data-technique={e.port.technique}
                   data-tier={e.tier}
                   data-platforms={e.port.platforms.join(" ")}
                   data-stars={f?.stars ?? 0}
@@ -129,9 +156,10 @@ const searchText = (e: Entry) =>
                   <td class="c-plat" data-label={s.cols.platforms}>
                     {e.port.platforms.length ? e.port.platforms.map((p) => s.platforms[p]).join(", ") : <span class="muted">—</span>}
                     {e.port.graphics.length > 0 && <span class="gfx-inline">{e.port.graphics.join(", ")}</span>}
+                    <span class="tool-inline">{toolLabel(e)}</span>
                   </td>
-                  <td class="c-gfx" data-label={s.cols.graphics}>
-                    {e.port.graphics.length ? e.port.graphics.join(", ") : <span class="muted">—</span>}
+                  <td class="c-gfx" data-label={s.cols.toolchain}>
+                    <span title={s.techniques[e.port.technique].hint}>{toolLabel(e)}</span>
                   </td>
                   <td class="c-tier"><span class="tier" data-tier={e.tier} title={e.source ?? s.tiers[e.tier].hint}>{s.tiers[e.tier].label}</span></td>
                   <td class="c-num c-stars data" data-label={s.cols.stars}>{f ? formatNumber(f.stars, lang) : "—"}</td>
@@ -270,6 +298,7 @@ const searchText = (e: Entry) =>
   .group-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; }
   .group-head h2 { font-size: var(--step-2); }
   .ids { color: var(--ink-3); font-size: var(--step--1); font-weight: 400; }
+  .console { color: var(--ink-2); font-size: var(--step--1); font-weight: 700; }
   .gcount { color: var(--ink-2); font-size: var(--step--1); font-weight: 400; background: var(--panel); padding: 0 7px; border-radius: 3px; }
   .mini { display: flex; gap: 2px; width: 120px; height: 6px; border-radius: 2px; overflow: hidden; align-self: center; margin-left: auto; }
   .mini .seg { cursor: default; }
@@ -283,10 +312,12 @@ const searchText = (e: Entry) =>
     color: var(--ink-2); padding: 1px 6px; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--line-strong);
   }
   .flag.up { color: var(--on-tier); background: var(--ink-2); box-shadow: none; }
-  .repo { display: inline-flex; align-items: center; gap: 5px; font-size: var(--step--1); text-decoration: none; }
+  .repo { display: inline; font-size: var(--step--1); text-decoration: none; overflow-wrap: anywhere; }
+  .repo :global(svg) { display: inline; vertical-align: -1px; margin-left: 5px; }
   .repo:hover { text-decoration: underline; }
   .note { margin-top: 2px; color: var(--ink-3); font-size: var(--step--1); max-width: 80ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .gfx-inline { display: none; }
+  .gfx-inline { display: block; color: var(--ink-3); }
+  .tool-inline { display: none; color: var(--ink-3); }
   .muted { color: var(--ink-3); }
   tr.retired .port-name, tr.retired .note { color: var(--ink-3); }
   tr[hidden], tbody[hidden] { display: none; }
@@ -299,23 +330,26 @@ const searchText = (e: Entry) =>
   @media (max-width: 1080px) {
     thead th.c-gfx { width: 0; }
     th.c-gfx, td.c-gfx { padding: 0; overflow: hidden; visibility: hidden; }
-    .gfx-inline { display: block; color: var(--ink-3); }
+    .tool-inline { display: block; }
   }
   @media (max-width: 760px) {
     .catalog { padding-top: 18px; }
     .intro p { font-size: var(--step--1); }
     .controls { margin-top: 14px; gap: 10px; }
-    .filter-row { gap: 10px; }
-    .select { width: 100%; }
-    .select select { flex: 1; }
-    .chips { flex-wrap: nowrap; overflow-x: auto; width: calc(100% + var(--gutter)); margin-right: calc(-1 * var(--gutter)); padding-right: var(--gutter); scrollbar-width: none; }
+    .filter-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+    .select-game, .chips, .reset { grid-column: 1 / -1; }
+    .select-game { order: -1; }
+    .select { min-width: 0; }
+    .select > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .select select { flex: 1; min-width: 0; width: 100%; }
+    .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
     .chips legend { float: none; flex-shrink: 0; }
     .chip { flex-shrink: 0; }
     .status { margin-top: 14px; grid-template-columns: minmax(0, 1fr); grid-template-areas: "count" "strip" "legend"; }
     .legend { justify-content: flex-start; }
     .legend { margin-left: -6px; row-gap: 2px; }
     .tier-toggle { flex-shrink: 0; padding: 0 6px; gap: 6px; }
-    .gfx-inline { display: block; color: var(--ink-3); }
+    .tool-inline { display: block; }
     .note { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
     .intro h1 { font-size: var(--step-2); }
     .reset { margin-left: 0; }

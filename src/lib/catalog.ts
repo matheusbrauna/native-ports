@@ -4,14 +4,19 @@ import githubJson from "../data/github.json";
 
 export type Lang = "en" | "pt-br";
 export type Tier = "playable" | "ingame" | "intro" | "wip" | "unrated";
-export type Platform = "linux" | "steamdeck" | "windows" | "macos" | "android" | "arm";
+export type Platform = "linux" | "steamdeck" | "windows" | "macos" | "android" | "ios" | "arm";
+export type Console = "ps4" | "xbox360" | "xbox" | "n64" | "ps1" | "ps2" | "psp" | "32x" | "naomi2";
+export type Technique = "runtime" | "recomp";
 
 export const TIERS: Tier[] = ["playable", "ingame", "intro", "wip", "unrated"];
-export const PLATFORMS: Platform[] = ["windows", "linux", "steamdeck", "macos", "android", "arm"];
+export const PLATFORMS: Platform[] = ["windows", "linux", "steamdeck", "macos", "android", "ios", "arm"];
+export const CONSOLES: Console[] = ["xbox360", "xbox", "ps4", "n64", "ps1", "ps2", "psp", "32x", "naomi2"];
+export const TECHNIQUES: Technique[] = ["recomp", "runtime"];
 
 export interface Game {
   id: string;
   title: string;
+  console: Console;
   titleIds: string[];
   version?: string;
 }
@@ -40,7 +45,9 @@ export interface Port {
   name: string;
   repo: string;
   upstream: string | null;
-  kind: "upstream" | "platform" | "game";
+  kind: "upstream" | "fork" | "port";
+  technique: Technique;
+  toolchain: string | null;
   platforms: Platform[];
   graphics: string[];
   games: PortGame[];
@@ -56,7 +63,7 @@ export interface Entry {
   source: string | null;
 }
 
-export const games: Game[] = gamesJson;
+export const games = gamesJson as Game[];
 const gameById = new Map(games.map((g) => [g.id, g]));
 
 const repoFacts = githubJson.repos as Record<string, RepoFacts>;

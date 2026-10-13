@@ -9,12 +9,13 @@ const s = t[lang];
 ---
 {lang === "en" ? (
   <Prose title={s.nav.about}>
-    <p class="lede">A community index of native PC ports that grew out of <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a>.</p>
-    <h2>What bbport is</h2>
-    <p>bbport runs Bloodborne's original PS4 executable directly on an x86-64 PC. The PS4's CPU is x86-64 too, so the game's code runs on your processor without emulation; a small runtime written for the game replaces the PS4 system libraries, and the graphics are translated to Vulkan by a renderer derived from shadPS4. Think of it as Wine and DXVK for a single game.</p>
-    <p>Within days of its release, people forked it to bring it to Windows, macOS, Android and ARM, and to try the same approach on other games. This site keeps track of those forks so you do not have to dig through GitHub's fork list.</p>
+    <p class="lede">A community index of unofficial native ports: console games running as ordinary programs on your computer, built from the game's own code instead of an emulator.</p>
+    <h2>Two ways to run a game natively</h2>
+    <p><strong>Static recompilation.</strong> A tool reads the console's machine code (PowerPC on the Xbox 360, MIPS on the N64 and PlayStation, x86 on the original Xbox) and translates every function ahead of time into C or C++, which is then compiled into a normal executable. A runtime stands in for the console's graphics, sound and system calls. Toolchains include <a href={repoUrl("rexglue/rexglue-sdk")}>ReXGlue</a> and <a href={repoUrl("hedge-dev/XenonRecomp")}>XenonRecomp</a> for the Xbox 360 and <a href={repoUrl("N64Recomp/N64Recomp")}>N64Recomp</a> for the Nintendo 64.</p>
+    <p><strong>Native execution.</strong> The PS4 already uses an x86-64 CPU, so its game code can run on a PC as it is. <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a> does this for Bloodborne: a small runtime replaces the PS4's system libraries and the graphics are translated to Vulkan, much like Wine and DXVK do for Windows games. Its forks take it to other platforms and other games.</p>
+    <p>Decompilations (source code rewritten by hand) and emulators are outside this catalog.</p>
     <h2>What the statuses mean</h2>
-    <p>Each status repeats what the project's own README declares. This site does not test builds.</p>
+    <p>Each status repeats what the project's own README declares. This site does not test builds; mature releases that never state a status show "Not stated".</p>
     <dl class="tiers">
       {TIERS.map((tier) => (
         <div><dt><span class="tier" data-tier={tier}>{s.tiers[tier].label}</span></dt><dd>{s.tiers[tier].hint}</dd></div>
@@ -22,18 +23,19 @@ const s = t[lang];
     </dl>
     <h2>What this site does not do</h2>
     <ul>
-      <li>It does not host or link game files, dumps, firmware or keys. Every port needs your own legally obtained copy of the game.</li>
-      <li>It is not affiliated with Sony Interactive Entertainment, FromSoftware, any game publisher, the bbport authors or the authors of the forks listed. Report problems with a port to that port's repository.</li>
+      <li>It does not host or link game files, ROMs, disc images, dumps, firmware or keys. Every port needs your own legally obtained copy of the game.</li>
+      <li>It is not affiliated with any console maker, publisher or developer, or with the authors of the projects listed. Report problems with a port to that port's repository.</li>
     </ul>
   </Prose>
 ) : (
   <Prose title={s.nav.about}>
-    <p class="lede">Um índice comunitário de ports nativos para PC que nasceram do <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a>.</p>
-    <h2>O que é o bbport</h2>
-    <p>O bbport roda o executável original de PS4 do Bloodborne diretamente num PC x86-64. A CPU do PS4 também é x86-64, então o código do jogo roda no seu processador sem emulação; um pequeno runtime feito para o jogo substitui as bibliotecas de sistema do PS4, e os gráficos são traduzidos para Vulkan por um renderizador derivado do shadPS4. Pense nele como um Wine com DXVK para um único jogo.</p>
-    <p>Poucos dias depois do lançamento, surgiram forks levando o projeto para Windows, macOS, Android e ARM, e testando a mesma abordagem em outros jogos. Este site acompanha esses forks para você não precisar vasculhar a lista de forks do GitHub.</p>
+    <p class="lede">Um índice comunitário de ports nativos não oficiais: jogos de console rodando como programas comuns no seu computador, feitos a partir do código do próprio jogo, não de um emulador.</p>
+    <h2>Duas formas de rodar um jogo nativamente</h2>
+    <p><strong>Recompilação estática.</strong> Uma ferramenta lê o código de máquina do console (PowerPC no Xbox 360, MIPS no N64 e no PlayStation, x86 no Xbox original) e traduz cada função antecipadamente para C ou C++, que depois é compilado num executável comum. Um runtime faz o papel dos gráficos, do som e das chamadas de sistema do console. Entre as toolchains estão o <a href={repoUrl("rexglue/rexglue-sdk")}>ReXGlue</a> e o <a href={repoUrl("hedge-dev/XenonRecomp")}>XenonRecomp</a> para Xbox 360 e o <a href={repoUrl("N64Recomp/N64Recomp")}>N64Recomp</a> para Nintendo 64.</p>
+    <p><strong>Execução nativa.</strong> O PS4 já usa uma CPU x86-64, então o código do jogo pode rodar no PC do jeito que está. O <a href={repoUrl("deadinside28/bloodborne_pc")}>bbport</a> faz isso com o Bloodborne: um pequeno runtime substitui as bibliotecas de sistema do PS4 e os gráficos são traduzidos para Vulkan, parecido com o que o Wine e o DXVK fazem com jogos de Windows. Os forks dele levam o projeto a outras plataformas e outros jogos.</p>
+    <p>Decompilações (código-fonte reescrito à mão) e emuladores ficam fora deste catálogo.</p>
     <h2>O que significa cada status</h2>
-    <p>Cada status repete o que o README do próprio projeto declara. Este site não testa builds.</p>
+    <p>Cada status repete o que o README do próprio projeto declara. Este site não testa builds; releases maduras que nunca declaram status aparecem como "Não informado".</p>
     <dl class="tiers">
       {TIERS.map((tier) => (
         <div><dt><span class="tier" data-tier={tier}>{s.tiers[tier].label}</span></dt><dd>{s.tiers[tier].hint}</dd></div>
@@ -41,8 +43,8 @@ const s = t[lang];
     </dl>
     <h2>O que este site não faz</h2>
     <ul>
-      <li>Não hospeda nem linka arquivos de jogo, dumps, firmware ou chaves. Todo port exige a sua própria cópia do jogo, obtida legalmente.</li>
-      <li>Não tem afiliação com a Sony Interactive Entertainment, a FromSoftware, qualquer publisher, os autores do bbport ou os autores dos forks listados. Problemas com um port devem ser relatados no repositório dele.</li>
+      <li>Não hospeda nem linka arquivos de jogo, ROMs, imagens de disco, dumps, firmware ou chaves. Todo port exige a sua própria cópia do jogo, obtida legalmente.</li>
+      <li>Não tem afiliação com fabricantes de console, publishers, desenvolvedores ou os autores dos projetos listados. Problemas com um port devem ser relatados no repositório dele.</li>
     </ul>
   </Prose>
 )}

@@ -2,7 +2,7 @@ import { t } from "./i18n";
 import type { Lang, Tier } from "./catalog";
 
 type SortKey = "pushed" | "stars" | "name";
-interface State { q: string; game: string; platforms: Set<string>; tiers: Set<string>; sort: SortKey; dir: 1 | -1 }
+interface State { q: string; game: string; console: string; technique: string; platforms: Set<string>; tiers: Set<string>; sort: SortKey; dir: 1 | -1 }
 
 const DEFAULT_DIR: Record<SortKey, 1 | -1> = { pushed: -1, stars: -1, name: 1 };
 
@@ -14,6 +14,8 @@ export function initCatalog(): void {
 
   const q = root.querySelector<HTMLInputElement>("#q")!;
   const game = root.querySelector<HTMLSelectElement>("#game")!;
+  const consoleSel = root.querySelector<HTMLSelectElement>("#console")!;
+  const technique = root.querySelector<HTMLSelectElement>("#technique")!;
   const chips = [...root.querySelectorAll<HTMLButtonElement>("[data-platform]")];
   const toggles = [...root.querySelectorAll<HTMLButtonElement>("[data-tier-toggle]")];
   const strip = root.querySelector<HTMLElement>(".strip")!;
@@ -31,13 +33,15 @@ export function initCatalog(): void {
     const list = (k: string) => new Set((p.get(k) ?? "").split(",").filter(Boolean));
     const sort = (["pushed", "stars", "name"] as const).find((k) => k === p.get("sort")) ?? "pushed";
     const dir = p.get("dir") === "asc" ? 1 : p.get("dir") === "desc" ? -1 : DEFAULT_DIR[sort];
-    return { q: p.get("q") ?? "", game: p.get("game") ?? "", platforms: list("platform"), tiers: list("status"), sort, dir };
+    return { q: p.get("q") ?? "", game: p.get("game") ?? "", console: p.get("console") ?? "", technique: p.get("technique") ?? "", platforms: list("platform"), tiers: list("status"), sort, dir };
   }
 
   function writeUrl(): void {
     const p = new URLSearchParams();
     if (state.q) p.set("q", state.q);
+    if (state.console) p.set("console", state.console);
     if (state.game) p.set("game", state.game);
+    if (state.technique) p.set("technique", state.technique);
     if (state.platforms.size) p.set("platform", [...state.platforms].join(","));
     if (state.tiers.size) p.set("status", [...state.tiers].join(","));
     if (state.sort !== "pushed" || state.dir !== DEFAULT_DIR.pushed) {
@@ -48,9 +52,15 @@ export function initCatalog(): void {
     history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
   }
 
+  function matchesScope(d: DOMStringMap): boolean {
+    if (state.console && d.console !== state.console) return false;
+    if (state.technique && d.technique !== state.technique) return false;
+    return !state.game || d.game === state.game;
+  }
+
   function matchesBase(row: HTMLTableRowElement, terms: string[]): boolean {
     const d = row.dataset;
-    if (state.game && d.game !== state.game) return false;
+    if (!matchesScope(d)) return false;
     if (state.platforms.size) {
       const plats = (d.platforms ?? "").split(" ");
       if (![...state.platforms].some((p) => plats.includes(p))) return false;
@@ -60,7 +70,7 @@ export function initCatalog(): void {
 
   function matchesExceptPlatform(row: HTMLTableRowElement, terms: string[]): boolean {
     const d = row.dataset;
-    if (state.game && d.game !== state.game) return false;
+    if (!matchesScope(d)) return false;
     if (state.tiers.size && !state.tiers.has(d.tier!)) return false;
     return terms.every((term) => (d.text ?? "").includes(term));
   }
@@ -120,7 +130,8 @@ export function initCatalog(): void {
 
     count.textContent = s.count(shown, gamesShown.size);
     empty.hidden = shown > 0;
-    reset.hidden = !(state.q || state.game || state.platforms.size || state.tiers.size);
+    reset.hidden = !(state.q || state.game || state.console || state.technique || state.platforms.size || state.tiers.size);
+    syncGameOptions();
     writeUrl();
   }
 
@@ -145,15 +156,34 @@ export function initCatalog(): void {
   }
 
   function clearAll(): void {
-    state.q = ""; state.game = ""; state.platforms.clear(); state.tiers.clear();
-    q.value = ""; game.value = "";
+    state.q = ""; state.game = ""; state.console = ""; state.technique = ""; state.platforms.clear(); state.tiers.clear();
+    q.value = ""; game.value = ""; consoleSel.value = ""; technique.value = "";
     apply();
     q.focus();
   }
 
   // Wire controls
+  // With a console chosen, the game list only offers that console's games.
+  function syncGameOptions(): void {
+    game.querySelectorAll("optgroup").forEach((g) => {
+      const c = g.querySelector<HTMLOptionElement>("option")?.dataset.console;
+      g.hidden = Boolean(state.console && c !== state.console);
+      g.disabled = g.hidden;
+    });
+  }
+
+  const pick = (sel: HTMLSelectElement, value: string) => ([...sel.options].some((o) => o.value === value) ? value : "");
   q.value = state.q;
-  if ([...game.options].some((o) => o.value === state.game)) game.value = state.game; else state.game = "";
+  state.game = game.value = pick(game, state.game);
+  state.console = consoleSel.value = pick(consoleSel, state.console);
+  state.technique = technique.value = pick(technique, state.technique);
+  consoleSel.addEventListener("change", () => {
+    state.console = consoleSel.value;
+    const opt = game.selectedOptions[0];
+    if (state.console && opt?.dataset.console && opt.dataset.console !== state.console) { state.game = ""; game.value = ""; }
+    apply();
+  });
+  technique.addEventListener("change", () => { state.technique = technique.value; apply(); });
   q.addEventListener("input", () => { state.q = q.value.trim(); apply(); });
   game.addEventListener("change", () => { state.game = game.value; apply(); });
   chips.forEach((c) => c.addEventListener("click", () => { toggle(state.platforms, c.dataset.platform!); apply(); }));
@@ -169,7 +199,7 @@ export function initCatalog(): void {
   }));
   reset.addEventListener("click", clearAll);
   root.querySelector("[data-reset]")?.addEventListener("click", clearAll);
-  window.addEventListener("popstate", () => { Object.assign(state, readUrl()); q.value = state.q; game.value = state.game; apply(); });
+  window.addEventListener("popstate", () => { Object.assign(state, readUrl()); q.value = state.q; game.value = state.game; consoleSel.value = state.console; technique.value = state.technique; apply(); });
   document.addEventListener("keydown", (e) => {
     if (e.key === "/" && document.activeElement?.tagName !== "INPUT" && !e.metaKey && !e.ctrlKey) {
       e.preventDefault();

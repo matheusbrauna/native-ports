@@ -12,52 +12,57 @@ Astro (static output) deployed to GitHub Pages. A scheduled GitHub Actions build
 
 ## Users
 
-- **Players** on Linux, Windows, macOS, Steam Deck, Android or ARM who own a PS4 game and want to know whether a native community port exists for their game and platform, how mature it is, and where its code lives.
-- **Developers and contributors** following the bbport family of projects, looking for which forks are active, what each changes relative to upstream, and where to contribute.
+- **Players** on Windows, Linux, Steam Deck, macOS, Android or iOS who own a console game and want to know whether an unofficial native port exists for their game and device, how mature it is, and where its code lives.
+- **Developers and contributors** following the recompilation and native-execution scene (ReXGlue, XenonRecomp, N64Recomp, bbport and others), looking for which projects are active and where to contribute.
 
-Both arrive with a concrete question ("is there a Windows build of bbport?", "has anyone ported another game with this approach?") and want the answer in seconds, not after scrolling GitHub's fork list.
+Both arrive with a concrete question ("is there a native port of Forza Horizon?", "what runs on the Steam Deck?", "which Xbox 360 games have been recompiled?") and want the answer in seconds, not after searching GitHub topics and forum threads.
 
 ## Product Purpose
 
-A curated, searchable directory of native PC ports derived from **bbport** ([deadinside28/bloodborne_pc](https://github.com/deadinside28/bloodborne_pc)), the unofficial community project that runs Bloodborne's original PS4 executable natively on PC (a game-specific runtime replacing PS4 system libraries, graphics translated to Vulkan). Within a week of release the project gathered 60+ forks, mostly empty, mixed in with real platform variants and ports of other games. This site separates the signal from the noise.
+**Native Ports** is a curated, searchable directory of unofficial native ports of console games: projects that run a game's own code as an ordinary program instead of inside an emulator. Two techniques are in scope:
 
-Success: a visitor finds the port matching their game and platform, understands its status, and reaches its repository, without opening GitHub's fork list.
+- **Static recompilation:** the console's machine code (PowerPC, MIPS, x86, SH-4…) is translated ahead of time into C/C++ and compiled into a native executable, with a runtime standing in for the console's hardware. Examples: Forza Horizon via ReXGlue, Sonic Unleashed via XenonRecomp, Majora's Mask via N64Recomp.
+- **Native execution:** x86-64 console code (PS4) runs directly on the PC with a runtime replacing the console's system libraries. Example: bbport (Bloodborne) and its forks.
+
+The site started as an index of bbport forks and grew to the whole scene in October 2026. Success: a visitor finds the port matching their game, console and device, understands its status, and reaches its repository.
 
 ## Positioning
 
-The only index scoped to the bbport family: it distinguishes **platform variants** of the Bloodborne port (Windows, macOS/Metal, Android, ARM, input/translation forks) from **ports of other games** that reuse the approach (e.g. Yakuza / Ryu ga Gotoku, The Last Guardian), and it excludes forks with no real changes. Curated by hand, kept current by the GitHub API.
+A catalog scoped to native ports only, organized by original console, technique and toolchain, with each project's own declared status and live repository activity. It separates real game ports from the tools, lists, empty forks and research repos that share the same GitHub topics.
 
 ## Operating Context
 
-- Entries live in a hand-curated `data/ports.json` (game, title ID, kind, platforms, graphics API, declared status, upstream, bilingual notes). New ports arrive through a GitHub issue template or pull request.
+- Games live in `data/games.json` (title, original console, title IDs); ports in `data/ports.json` (repo, technique, toolchain, kind, platforms, graphics API, declared status per game with its source, upstream, bilingual notes). New ports arrive through a GitHub issue template or pull request.
+- `npm run discover` lists repositories from the scene's GitHub topics that are not catalogued yet; a person reads each README before adding it. Nothing is published automatically.
 - Live repository facts (stars, last push, latest release, license, archived) are fetched at build time.
-- Status shown for a port is the status its own README declares; the site never upgrades or invents it.
+- Status shown for a port is the status its own README declares; the site never upgrades or invents it. Mature releases that never state a status show "Not stated".
 
 ## Capabilities and Constraints
 
-- Catalog with instant search and filters by game, platform, kind and status; filter state lives in the URL so a filtered view can be shared.
-- Per-port detail page; "submit a port" page; build timestamp.
+- Catalog with instant search and filters by console, game, technique, platform and status; filter state lives in the URL so a filtered view can be shared.
+- Per-port detail page; About page explaining the techniques; Submit page; build timestamp.
 - Bilingual: English by default, Brazilian Portuguese alternate (`/pt-br/`).
-- **The site never hosts or links game files, dumps, decryption keys or firmware.** It links source repositories only, and reminds players they need their own legally obtained dump.
-- Not affiliated with Sony Interactive Entertainment, FromSoftware, Ryu Ga Gotoku Studio, genDESIGN, or any port author; this disclaimer is always visible.
-- Undecided: final domain/repository name for the site.
+- **Out of scope:** decompilations (hand-rewritten source), emulators, recompilation tools on their own, curated lists, ports whose only target is another console or the browser.
+- **The site never hosts or links game files, ROMs, disc images, dumps, decryption keys or firmware.** It links source repositories only, and reminds players they need their own legally obtained copy.
+- Not affiliated with any console maker, publisher or developer, or with any port author; this disclaimer is always visible.
+- Undecided: final domain and repository name for the site.
 
 ## Brand Commitments
 
-None yet. The site is a community index, not an official bbport property; it must not imitate bbport's or any publisher's branding.
+Name: **Native Ports** (chosen by the user, October 2026). The site is a community index; it must not imitate any port's, toolchain's, console maker's or publisher's branding.
 
 ## Evidence on Hand
 
-- Upstream README (bbport v0.51, GPL-2.0): status "experimental, playable", tested mainly on Linux + AMD RX 7800 XT.
-- GitHub fork network of `deadinside28/bloodborne_pc` (October 2026).
+- READMEs and GitHub topics (`static-recompilation`, `rexglue`, `n64recomp`, `recompilation`) surveyed in October 2026; statuses in `data/ports.json` cite their README source.
+- bbport README (v0.51, GPL-2.0): "experimental, playable".
 - No user counts, testimonials, benchmarks or download numbers exist for the directory itself; do not fabricate any.
 
 ## Product Principles
 
-1. **Answer first.** The visitor's question (game × platform × status) is resolved on the first screen.
-2. **Curated over complete.** An empty fork is noise; inclusion means a real change exists.
+1. **Answer first.** The visitor's question (game × console × device × status) is resolved on the first screen.
+2. **Curated over complete.** A tool, a list or an empty fork is noise; inclusion means a playable-or-progressing game port exists.
 3. **Truth from the source.** Status and claims come from each project's own README and the GitHub API, dated.
-4. **Legal hygiene is a feature.** Code links only; own-dump reminder and non-affiliation are part of the design, not fine print.
+4. **Legal hygiene is a feature.** Code links only; own-copy reminder and non-affiliation are part of the design, not fine print.
 5. **Open to contribution.** Adding a port is one issue or PR away.
 
 ## Accessibility & Inclusion

@@ -1,10 +1,393 @@
 [
-  { "id": "bloodborne", "title": "Bloodborne", "titleIds": ["CUSA03173", "CUSA00900"], "version": "1.09" },
-  { "id": "fist-of-the-north-star-lost-paradise", "title": "Fist of the North Star: Lost Paradise", "titleIds": [] },
-  { "id": "the-last-guardian", "title": "The Last Guardian", "titleIds": [] },
-  { "id": "atelier-ryza", "title": "Atelier Ryza", "titleIds": ["CUSA16458"] },
-  { "id": "atelier-ayesha-dx", "title": "Atelier Ayesha DX", "titleIds": ["CUSA16921"] },
-  { "id": "tales-of-symphonia-remastered", "title": "Tales of Symphonia Remastered", "titleIds": ["CUSA50989"] },
-  { "id": "astrea", "title": "Astrea", "titleIds": ["CUSA49515"] },
-  { "id": "saga-emerald-beyond", "title": "SaGa Emerald Beyond", "titleIds": ["CUSA43027"] }
+  {
+    "id": "bloodborne",
+    "title": "Bloodborne",
+    "titleIds": [
+      "CUSA03173",
+      "CUSA00900"
+    ],
+    "version": "1.09",
+    "console": "ps4"
+  },
+  {
+    "id": "fist-of-the-north-star-lost-paradise",
+    "title": "Fist of the North Star: Lost Paradise",
+    "titleIds": [],
+    "console": "ps4"
+  },
+  {
+    "id": "the-last-guardian",
+    "title": "The Last Guardian",
+    "titleIds": [],
+    "console": "ps4"
+  },
+  {
+    "id": "atelier-ryza",
+    "title": "Atelier Ryza",
+    "titleIds": [
+      "CUSA16458"
+    ],
+    "console": "ps4"
+  },
+  {
+    "id": "atelier-ayesha-dx",
+    "title": "Atelier Ayesha DX",
+    "titleIds": [
+      "CUSA16921"
+    ],
+    "console": "ps4"
+  },
+  {
+    "id": "tales-of-symphonia-remastered",
+    "title": "Tales of Symphonia Remastered",
+    "titleIds": [
+      "CUSA50989"
+    ],
+    "console": "ps4"
+  },
+  {
+    "id": "astrea",
+    "title": "Astrea",
+    "titleIds": [
+      "CUSA49515"
+    ],
+    "console": "ps4"
+  },
+  {
+    "id": "saga-emerald-beyond",
+    "title": "SaGa Emerald Beyond",
+    "titleIds": [
+      "CUSA43027"
+    ],
+    "console": "ps4"
+  },
+  {
+    "id": "forza-horizon",
+    "title": "Forza Horizon",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "silent-hill-downpour",
+    "title": "Silent Hill: Downpour",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "deadly-premonition",
+    "title": "Deadly Premonition",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "need-for-speed-most-wanted-2005",
+    "title": "Need for Speed: Most Wanted (2005)",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "condemned-2-bloodshot",
+    "title": "Condemned 2: Bloodshot",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "project-gotham-racing-4",
+    "title": "Project Gotham Racing 4",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "army-of-two",
+    "title": "Army of Two",
+    "console": "xbox360",
+    "titleIds": [
+      "4541084C"
+    ]
+  },
+  {
+    "id": "lost-odyssey",
+    "title": "Lost Odyssey",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "wwe-smackdown-vs-raw-2011",
+    "title": "WWE SmackDown vs. Raw 2011",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "the-darkness",
+    "title": "The Darkness",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dragon-ball-z-burst-limit",
+    "title": "Dragon Ball Z: Burst Limit",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "forza-motorsport-4",
+    "title": "Forza Motorsport 4",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "tony-hawks-project-8",
+    "title": "Tony Hawk's Project 8",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "geometry-wars-retro-evolved-2",
+    "title": "Geometry Wars: Retro Evolved 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "skate-2",
+    "title": "Skate 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "skate-3",
+    "title": "Skate 3",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "asuras-wrath",
+    "title": "Asura's Wrath",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "perfect-dark-2010",
+    "title": "Perfect Dark (2010)",
+    "console": "xbox360",
+    "titleIds": [
+      "584109C2"
+    ]
+  },
+  {
+    "id": "perfect-dark-zero",
+    "title": "Perfect Dark Zero",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "wwe-all-stars",
+    "title": "WWE All Stars",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dead-rising-2-case-zero",
+    "title": "Dead Rising 2: Case Zero",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dead-rising-2-case-west",
+    "title": "Dead Rising 2: Case West",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "spider-man-edge-of-time",
+    "title": "Spider-Man: Edge of Time",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "sonic-unleashed",
+    "title": "Sonic Unleashed",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dead-or-alive-xtreme-beach-volleyball",
+    "title": "Dead or Alive Xtreme Beach Volleyball",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "def-jam-fight-for-ny",
+    "title": "Def Jam: Fight for NY",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "splinter-cell-double-agent",
+    "title": "Splinter Cell: Double Agent",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "halo-combat-evolved",
+    "title": "Halo: Combat Evolved",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "ssx-tricky",
+    "title": "SSX Tricky",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "the-legend-of-zelda-majoras-mask",
+    "title": "The Legend of Zelda: Majora's Mask",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "pokemon-snap",
+    "title": "Pokémon Snap",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "conkers-bad-fur-day",
+    "title": "Conker's Bad Fur Day",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "wwf-no-mercy",
+    "title": "WWF No Mercy",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "wcw-vs-nwo-world-tour",
+    "title": "WCW vs. nWo: World Tour",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "wcw-nwo-revenge",
+    "title": "WCW/nWo Revenge",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "wwf-wrestlemania-2000",
+    "title": "WWF WrestleMania 2000",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "virtual-pro-wrestling-64",
+    "title": "Virtual Pro Wrestling 64",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "pokemon-stadium",
+    "title": "Pokémon Stadium",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "star-wars-rogue-squadron",
+    "title": "Star Wars: Rogue Squadron",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "battletanx-global-assault",
+    "title": "BattleTanx: Global Assault",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "battletanx",
+    "title": "BattleTanx",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "tetrisphere",
+    "title": "Tetrisphere",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "blast-corps",
+    "title": "Blast Corps",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "snowboard-kids",
+    "title": "Snowboard Kids",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "snowboard-kids-2",
+    "title": "Snowboard Kids 2",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "diddy-kong-racing",
+    "title": "Diddy Kong Racing",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "mystical-ninja-starring-goemon",
+    "title": "Mystical Ninja Starring Goemon",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "bloody-roar-ii",
+    "title": "Bloody Roar II",
+    "console": "ps1",
+    "titleIds": [
+      "SLES-01722",
+      "SCUS-94424"
+    ]
+  },
+  {
+    "id": "ridge-racer",
+    "title": "Ridge Racer",
+    "console": "ps1",
+    "titleIds": [
+      "SLPS-00001"
+    ]
+  },
+  {
+    "id": "god-of-war",
+    "title": "God of War",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "monster-hunter-portable-3rd-hd-ver",
+    "title": "Monster Hunter Portable 3rd HD Ver.",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "knuckles-chaotix",
+    "title": "Knuckles' Chaotix",
+    "console": "32x",
+    "titleIds": []
+  },
+  {
+    "id": "initial-d-arcade-stage-3",
+    "title": "Initial D Arcade Stage 3",
+    "console": "naomi2",
+    "titleIds": [
+      "GDS-0033"
+    ]
+  }
 ]

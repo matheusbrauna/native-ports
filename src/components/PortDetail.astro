@@ -39,7 +39,7 @@ const f = port.facts;
               <tr>
                 <th scope="row">
                   <a href={`${path("/", lang)}?game=${g.id}`}>{g.title}</a>
-                  {g.titleIds.length > 0 && <span class="data ids">{g.titleIds.join(" · ")}</span>}
+                  <span class="ids">{s.consoles[g.console]}{g.titleIds.length > 0 && <span class="data"> · {g.titleIds.join(" · ")}</span>}</span>
                 </th>
                 <td><span class="tier" data-tier={pg.tier}>{s.tiers[pg.tier].label}</span></td>
                 <td class="evidence">{pg.source ?? <span class="muted">{s.tiers[pg.tier].hint}</span>}</td>
@@ -54,6 +54,8 @@ const f = port.facts;
     <section aria-labelledby="facts-h" class="facts">
       <h2 id="facts-h">{d.facts}</h2>
       <dl>
+        <div><dt>{d.technique}</dt><dd>{s.techniques[port.technique].label}</dd></div>
+        {port.toolchain && <div><dt>{d.toolchain}</dt><dd>{port.toolchain}</dd></div>}
         <div><dt>{d.platforms}</dt><dd>{port.platforms.length ? port.platforms.map((p) => s.platforms[p]).join(", ") : d.unknown}</dd></div>
         <div><dt>{d.graphics}</dt><dd>{port.graphics.length ? port.graphics.join(", ") : d.unknown}</dd></div>
         {port.upstream && <div><dt>{d.upstream}</dt><dd><a class="data" href={repoUrl(port.upstream)}>{port.upstream}</a></dd></div>}

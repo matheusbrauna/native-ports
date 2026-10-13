@@ -1,4 +1,4 @@
-import type { Lang, Platform, Tier } from "./catalog";
+import type { Console, Lang, Platform, Technique, Tier } from "./catalog";
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -18,19 +18,19 @@ export function stripLang(pathname: string): string {
 export const locale: Record<Lang, string> = { en: "en", "pt-br": "pt-BR" };
 
 const en = {
-  siteName: "PS4 Native Ports",
-  siteDescription: "A curated catalog of native PC ports derived from bbport: platform builds of Bloodborne and ports of other PS4 games, with status and activity.",
+  siteName: "Native Ports",
+  siteDescription: "A curated catalog of unofficial native ports of console games: static recompilations and native-execution runtimes, with each project's declared status and activity.",
   nav: { catalog: "Catalog", submit: "Submit a port", about: "About" },
   langName: "English",
   otherLang: "Português",
   skip: "Skip to the catalog",
-  search: { label: "Search ports", placeholder: "Game, port, repository or title ID (CUSA03173)", clear: "Clear search" },
+  search: { label: "Search ports", placeholder: "Game, port, repository, console or toolchain", clear: "Clear search" },
   filters: {
-    game: "Game", allGames: "All games", platform: "Platform", tier: "Status", reset: "Reset filters",
+    game: "Game", allGames: "All games", console: "Console", allConsoles: "All consoles", technique: "Technique", allTechniques: "Any technique", platform: "Runs on", tier: "Status", reset: "Reset filters",
   },
   count: (ports: number, games: number) => `${ports} ${ports === 1 ? "port" : "ports"} across ${games} ${games === 1 ? "game" : "games"}`,
   stripLabel: "Status of the ports shown",
-  cols: { game: "Game", port: "Port", platforms: "Platforms", graphics: "Graphics", tier: "Status", stars: "Stars", pushed: "Last push" },
+  cols: { game: "Game", port: "Port", platforms: "Runs on", graphics: "Graphics", toolchain: "Toolchain", tier: "Status", stars: "Stars", pushed: "Last push" },
   sortBy: "Sort by",
   upstream: "upstream",
   archived: "Archived",
@@ -40,17 +40,24 @@ const en = {
   openRepo: "Open repository",
   empty: { title: "No port matches these filters.", body: "Clear a filter, or tell us about a port we are missing.", cta: "Submit a port" },
   tiers: {
-    playable: { label: "Playable", hint: "Boots, loads saves and plays with sound, as its README states." },
+    playable: { label: "Playable", hint: "The project's README says the game can be played." },
     ingame: { label: "In-game", hint: "Reaches gameplay; not yet called playable." },
     intro: { label: "Intro", hint: "Title screen, menus or opening scenes only." },
     wip: { label: "In progress", hint: "Work under way; no tested state declared yet." },
     unrated: { label: "Not stated", hint: "The project's README does not declare a status." },
   } satisfies Record<Tier, { label: string; hint: string }>,
   platforms: {
-    linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", arm: "ARM",
+    linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", ios: "iOS", arm: "ARM",
   } satisfies Record<Platform, string>,
+  consoles: {
+    ps4: "PlayStation 4", xbox360: "Xbox 360", xbox: "Xbox", n64: "Nintendo 64", ps1: "PlayStation", ps2: "PlayStation 2", psp: "PSP", "32x": "Sega 32X", naomi2: "NAOMI 2 (arcade)",
+  } satisfies Record<Console, string>,
+  techniques: {
+    recomp: { label: "Static recompilation", hint: "The console's machine code is translated ahead of time into a native program." },
+    runtime: { label: "Native execution", hint: "The original x86-64 code runs directly, on a runtime that replaces the console's system libraries." },
+  } satisfies Record<Technique, { label: string; hint: string }>,
   footer: {
-    disclaimer: "Community index. Not affiliated with Sony Interactive Entertainment, FromSoftware, any game publisher, or the authors of the projects listed.",
+    disclaimer: "Community index. Not affiliated with any console maker, game publisher or developer, or with the authors of the projects listed.",
     noFiles: "This site links source code only. It never hosts or links game files, dumps or keys: every port needs your own copy of the game.",
     updated: "Repository data refreshed",
     never: "not yet fetched",
@@ -59,7 +66,7 @@ const en = {
   detail: {
     back: "All ports",
     games: "Games", game: "Game", titleIds: "Title IDs", tier: "Status", evidence: "Status source",
-    facts: "Repository", platforms: "Platforms", graphics: "Graphics", upstream: "Forked from", ahead: "Commits ahead of upstream",
+    facts: "Repository", console: "Original console", technique: "Technique", toolchain: "Toolchain", platforms: "Platforms", graphics: "Graphics", upstream: "Forked from", ahead: "Commits ahead of upstream",
     license: "License", pushed: "Last push", stars: "Stars", release: "Latest release", noRelease: "No release yet", notChecked: "Not checked yet",
     ownCopy: "You need your own dump of the game. Read the project's README before installing anything; releases are published by its authors, not by this site.",
     unknown: "Unknown",
@@ -68,19 +75,19 @@ const en = {
 };
 
 const ptbr: typeof en = {
-  siteName: "PS4 Native Ports",
-  siteDescription: "Um catálogo curado de ports nativos para PC derivados do bbport: builds do Bloodborne para outras plataformas e ports de outros jogos de PS4, com status e atividade.",
+  siteName: "Native Ports",
+  siteDescription: "Um catálogo curado de ports nativos não oficiais de jogos de console: recompilações estáticas e runtimes de execução nativa, com o status e a atividade que cada projeto declara.",
   nav: { catalog: "Catálogo", submit: "Enviar um port", about: "Sobre" },
   langName: "Português",
   otherLang: "English",
   skip: "Pular para o catálogo",
-  search: { label: "Buscar ports", placeholder: "Jogo, port, repositório ou ID (CUSA03173)", clear: "Limpar busca" },
+  search: { label: "Buscar ports", placeholder: "Jogo, port, repositório, console ou toolchain", clear: "Limpar busca" },
   filters: {
-    game: "Jogo", allGames: "Todos os jogos", platform: "Plataforma", tier: "Status", reset: "Limpar filtros",
+    game: "Jogo", allGames: "Todos os jogos", console: "Console", allConsoles: "Todos os consoles", technique: "Técnica", allTechniques: "Qualquer técnica", platform: "Roda em", tier: "Status", reset: "Limpar filtros",
   },
   count: (ports: number, games: number) => `${ports} ${ports === 1 ? "port" : "ports"} em ${games} ${games === 1 ? "jogo" : "jogos"}`,
   stripLabel: "Status dos ports exibidos",
-  cols: { game: "Jogo", port: "Port", platforms: "Plataformas", graphics: "Gráficos", tier: "Status", stars: "Estrelas", pushed: "Último push" },
+  cols: { game: "Jogo", port: "Port", platforms: "Roda em", graphics: "Gráficos", toolchain: "Toolchain", tier: "Status", stars: "Estrelas", pushed: "Último push" },
   sortBy: "Ordenar por",
   upstream: "upstream",
   archived: "Arquivado",
@@ -90,17 +97,24 @@ const ptbr: typeof en = {
   openRepo: "Abrir repositório",
   empty: { title: "Nenhum port corresponde a esses filtros.", body: "Remova um filtro ou conte pra gente sobre um port que está faltando.", cta: "Enviar um port" },
   tiers: {
-    playable: { label: "Jogável", hint: "Inicia, carrega saves e roda com som, segundo o README." },
+    playable: { label: "Jogável", hint: "O README do projeto diz que o jogo pode ser jogado." },
     ingame: { label: "Em jogo", hint: "Chega ao gameplay; ainda não é considerado jogável." },
     intro: { label: "Introdução", hint: "Só tela de título, menus ou cenas de abertura." },
     wip: { label: "Em andamento", hint: "Trabalho em curso; nenhum estado testado declarado ainda." },
     unrated: { label: "Não informado", hint: "O README do projeto não declara um status." },
   },
   platforms: {
-    linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", arm: "ARM",
+    linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", ios: "iOS", arm: "ARM",
+  },
+  consoles: {
+    ps4: "PlayStation 4", xbox360: "Xbox 360", xbox: "Xbox", n64: "Nintendo 64", ps1: "PlayStation", ps2: "PlayStation 2", psp: "PSP", "32x": "Sega 32X", naomi2: "NAOMI 2 (fliperama)",
+  },
+  techniques: {
+    recomp: { label: "Recompilação estática", hint: "O código de máquina do console é traduzido antes, num programa nativo." },
+    runtime: { label: "Execução nativa", hint: "O código x86-64 original roda direto, sobre um runtime que substitui as bibliotecas do console." },
   },
   footer: {
-    disclaimer: "Índice comunitário. Sem afiliação com a Sony Interactive Entertainment, a FromSoftware, qualquer publisher ou os autores dos projetos listados.",
+    disclaimer: "Índice comunitário. Sem afiliação com fabricantes de console, publishers, desenvolvedores ou os autores dos projetos listados.",
     noFiles: "Este site só aponta para código-fonte. Nunca hospeda nem linka arquivos de jogo, dumps ou chaves: todo port exige a sua própria cópia do jogo.",
     updated: "Dados dos repositórios atualizados em",
     never: "ainda não buscados",
@@ -109,7 +123,7 @@ const ptbr: typeof en = {
   detail: {
     back: "Todos os ports",
     games: "Jogos", game: "Jogo", titleIds: "IDs do título", tier: "Status", evidence: "Fonte do status",
-    facts: "Repositório", platforms: "Plataformas", graphics: "Gráficos", upstream: "Fork de", ahead: "Commits à frente do upstream",
+    facts: "Repositório", console: "Console original", technique: "Técnica", toolchain: "Toolchain", platforms: "Plataformas", graphics: "Gráficos", upstream: "Fork de", ahead: "Commits à frente do upstream",
     license: "Licença", pushed: "Último push", stars: "Estrelas", release: "Última release", noRelease: "Nenhuma release ainda", notChecked: "Ainda não verificado",
     ownCopy: "Você precisa do seu próprio dump do jogo. Leia o README do projeto antes de instalar qualquer coisa; as releases são publicadas pelos autores, não por este site.",
     unknown: "Desconhecido",

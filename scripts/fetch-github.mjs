@@ -12,7 +12,10 @@ const ports = JSON.parse(await readFile(portsPath, "utf8"));
 const previous = existsSync(outPath) ? JSON.parse(await readFile(outPath, "utf8")) : { repos: {} };
 
 const headers = { "User-Agent": "pc-ports-catalog", Accept: "application/vnd.github+json" };
-if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+const authed = Boolean(process.env.GITHUB_TOKEN);
+if (authed) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+// Without a token the API allows 60 requests an hour: spend them on one call per repo
+// and leave releases and fork comparisons to the CI build, which has a token.
 
 async function get(path) {
   const res = await fetch(`https://api.github.com${path}`, { headers });
@@ -23,7 +26,9 @@ async function get(path) {
 
 const repos = {};
 let fresh = 0;
-for (const port of ports) {
+// Repos with no cached data go first, so a rate-limited run fills the gaps before refreshing.
+const queue = [...ports].sort((a, b) => Number(Boolean(previous.repos[a.repo])) - Number(Boolean(previous.repos[b.repo])));
+for (const port of queue) {
   const name = port.repo;
   try {
     const repo = await get(`/repos/${name}`);
@@ -31,9 +36,10 @@ for (const port of ports) {
       repos[name] = { ...previous.repos[name], unavailable: true };
       continue;
     }
-    const release = await get(`/repos/${name}/releases/latest`);
-    let ahead = null;
-    if (port.upstream && repo.fork) {
+    const cached = previous.repos[name];
+    const release = authed ? await get(`/repos/${name}/releases/latest`) : null;
+    let ahead = authed ? null : cached?.ahead ?? null;
+    if (authed && port.upstream && repo.fork) {
       const [owner] = name.split("/");
       const [upOwner, upName] = port.upstream.split("/");
       try {
@@ -47,9 +53,11 @@ for (const port of ports) {
       archived: repo.archived,
       license: repo.license?.spdx_id ?? null,
       description: repo.description,
-      release: release.missing ? null : { tag: release.tag_name, publishedAt: release.published_at, url: release.html_url },
+      release: release ? (release.missing ? null : { tag: release.tag_name, publishedAt: release.published_at, url: release.html_url }) : cached?.release ?? null,
       ahead,
       unavailable: false,
+      // Release data not refreshed: flag it so the site says "not checked" instead of "no release".
+      ...(release ? {} : { partial: true }),
     };
     fresh++;
   } catch (err) {

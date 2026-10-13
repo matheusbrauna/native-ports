@@ -1,5 +1,13 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Catalog from "../../components/Catalog.astro";
+import { entries, groups } from "../../lib/catalog";
+import { path } from "../../lib/i18n";
+import { homeMeta, collectionLd } from "../../lib/seo";
+
+const lang = "pt-br";
+const site = Astro.site ?? new URL("http://localhost:4321");
+const meta = homeMeta(lang, entries.length, groups.length);
+const jsonLd = [collectionLd(meta.title, meta.description, path("/", lang), lang, site, groups.map((g) => ({ name: g.game.title, path: path(`/games/${g.game.id}/`, lang) })))];
 ---
-<Base lang="pt-br" active="catalog"><Catalog lang="pt-br" /></Base>
+<Base lang={lang} active="catalog" fullTitle={meta.title} description={meta.description} jsonLd={jsonLd}><Catalog lang={lang} /></Base>

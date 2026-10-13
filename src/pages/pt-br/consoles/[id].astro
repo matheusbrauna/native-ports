@@ -1,0 +1,23 @@
+---
+import Base from "../../../layouts/Base.astro";
+import ConsolePage from "../../../components/ConsolePage.astro";
+import { consoleGroups, type Console } from "../../../lib/catalog";
+import { t, path } from "../../../lib/i18n";
+import { consoleMeta, breadcrumbLd, collectionLd } from "../../../lib/seo";
+
+export function getStaticPaths() {
+  return consoleGroups.map((c) => ({ params: { id: c.console } }));
+}
+const id = Astro.params.id as Console;
+const lang = "pt-br";
+const s = t[lang];
+const site = Astro.site ?? new URL("http://localhost:4321");
+const group = consoleGroups.find((c) => c.console === id)!;
+const meta = consoleMeta(id, group.games.length, group.games.reduce((n, g) => n + g.entries.length, 0), lang);
+const pagePath = path(`/consoles/${id}/`, lang);
+const jsonLd = [
+  collectionLd(meta.title, meta.description, pagePath, lang, site, group.games.map((g) => ({ name: g.game.title, path: path(`/games/${g.game.id}/`, lang) }))),
+  breadcrumbLd([{ name: s.nav.catalog, path: path("/", lang) }, { name: s.consoles[id], path: pagePath }], site),
+];
+---
+<Base lang={lang} fullTitle={meta.title} description={meta.description} jsonLd={jsonLd}><ConsolePage lang={lang} console={id} /></Base>

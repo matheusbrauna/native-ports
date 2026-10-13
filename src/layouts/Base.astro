@@ -4,23 +4,35 @@ import "@fontsource/atkinson-hyperlegible/700.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/600.css";
 import "../styles/global.css";
-import { fetchedAt, type Lang } from "../lib/catalog";
+import { consoleGroups, fetchedAt, type Lang } from "../lib/catalog";
 import { t, path, stripLang, locale, formatDate } from "../lib/i18n";
+import { ogPath, websiteLd } from "../lib/seo";
 
 interface Props {
   lang: Lang;
+  /** Short page name; rendered as "name · Native Ports". */
   title?: string;
+  /** Complete <title>, used as is (it already names the site or leads with the search term). */
+  fullTitle?: string;
   description?: string;
   active?: "catalog" | "submit" | "about";
+  /** JSON-LD objects for this page; the WebSite object is added on the home page. */
+  jsonLd?: object[];
+  noindex?: boolean;
+  ogType?: "website" | "article";
 }
-const { lang, title, description, active } = Astro.props;
+const { lang, title, fullTitle, description, active, jsonLd = [], noindex = false, ogType = "website" } = Astro.props;
 const s = t[lang];
-const pageTitle = title ? `${title} · ${s.siteName}` : s.siteName;
+const pageTitle = fullTitle ?? (title ? `${title} · ${s.siteName}` : s.siteName);
 const desc = description ?? s.siteDescription;
 const rest = stripLang(Astro.url.pathname);
 const other: Lang = lang === "en" ? "pt-br" : "en";
 const site = Astro.site ?? new URL("http://localhost:4321");
 const siteRepo = import.meta.env.PUBLIC_SITE_REPO || process.env.GITHUB_REPOSITORY;
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL(ogPath(rest, lang), site).href;
+const isHome = rest === "/";
+const ld = [...(isHome ? [websiteLd(lang, site)] : []), ...jsonLd];
 ---
 <!doctype html>
 <html lang={locale[lang]}>
@@ -31,14 +43,32 @@ const siteRepo = import.meta.env.PUBLIC_SITE_REPO || process.env.GITHUB_REPOSITO
     <meta name="description" content={desc} />
     <meta name="theme-color" content="#16181d" />
     <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, site)} />
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
+    <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="en" href={new URL(path(rest, "en"), site)} />
     <link rel="alternate" hreflang="pt-BR" href={new URL(path(rest, "pt-br"), site)} />
     <link rel="alternate" hreflang="x-default" href={new URL(path(rest, "en"), site)} />
-    <meta property="og:type" content="website" />
+    <link rel="sitemap" href={`${import.meta.env.BASE_URL}sitemap-index.xml`} />
+    <meta property="og:site_name" content="Native Ports" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={desc} />
     <meta property="og:locale" content={lang === "en" ? "en_US" : "pt_BR"} />
+    <meta property="og:locale:alternate" content={lang === "en" ? "pt_BR" : "en_US"} />
+    {!noindex && (
+      <>
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={pageTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={ogImage} />
+      </>
+    )}
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={desc} />
+    {ld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
   </head>
   <body>
     <a class="skip" href="#main">{s.skip}</a>
@@ -67,6 +97,10 @@ const siteRepo = import.meta.env.PUBLIC_SITE_REPO || process.env.GITHUB_REPOSITO
     </main>
     <footer class="foot">
       <div class="wrap foot-in">
+        <nav class="by-console" aria-label={s.footer.byConsole}>
+          <span>{s.footer.byConsole}</span>
+          {consoleGroups.map((c) => <a href={path(`/consoles/${c.console}/`, lang)}>{s.consoles[c.console]}</a>)}
+        </nav>
         <p>{s.footer.noFiles}</p>
         <p>{s.footer.disclaimer}</p>
         <p class="meta">
@@ -101,6 +135,8 @@ const siteRepo = import.meta.env.PUBLIC_SITE_REPO || process.env.GITHUB_REPOSITO
   .foot-in { padding-block: 28px 36px; display: grid; gap: 8px; max-width: 1360px; }
   .foot p { max-width: var(--measure); }
   .foot .meta { display: flex; flex-wrap: wrap; gap: 16px; }
+  .by-console { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 8px; }
+  .by-console span { color: var(--ink-2); font-weight: 700; }
   .foot a { color: var(--ink-2); }
 
   @media (max-width: 720px) {

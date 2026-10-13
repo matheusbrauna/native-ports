@@ -1,11 +1,27 @@
 ---
 import Base from "../../layouts/Base.astro";
 import PortDetail from "../../components/PortDetail.astro";
-import { ports, type Port } from "../../lib/catalog";
+import { ports, getGame, type Port } from "../../lib/catalog";
+import { t, path } from "../../lib/i18n";
+import { portMeta, portLd, breadcrumbLd } from "../../lib/seo";
 
 export function getStaticPaths() {
   return ports.map((port) => ({ params: { slug: port.slug }, props: { port } }));
 }
 const { port } = Astro.props as { port: Port };
+const lang = "en";
+const s = t[lang];
+const site = Astro.site ?? new URL("http://localhost:4321");
+const meta = portMeta(port, lang);
+const game = getGame(port.games[0].id);
+const jsonLd = [
+  portLd(port, lang, site),
+  breadcrumbLd([
+    { name: s.nav.catalog, path: path("/", lang) },
+    { name: s.consoles[game.console], path: path(`/consoles/${game.console}/`, lang) },
+    { name: game.title, path: path(`/games/${game.id}/`, lang) },
+    { name: port.name, path: path(`/ports/${port.slug}/`, lang) },
+  ], site),
+];
 ---
-<Base lang="en" title={port.name} description={port.notes["en"]}><PortDetail lang="en" port={port} /></Base>
+<Base lang={lang} fullTitle={meta.title} description={meta.description} jsonLd={jsonLd} ogType="article"><PortDetail lang={lang} port={port} /></Base>

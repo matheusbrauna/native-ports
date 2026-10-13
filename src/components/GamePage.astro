@@ -1,0 +1,137 @@
+---
+import Icon from "./Icon.astro";
+import { groups, defaultOrder, repoUrl, bestTier, tierCounts, platformsOf, TIERS, type Lang, type Game, type Entry } from "../lib/catalog";
+import { t, path, formatNumber, formatDate, age } from "../lib/i18n";
+
+interface Props { lang: Lang; game: Game; list: Entry[] }
+const { lang, game, list } = Astro.props;
+const s = t[lang];
+const now = Date.now();
+const counts = tierCounts(list);
+const best = bestTier(list);
+const plats = platformsOf(list).map((p) => s.platforms[p]);
+const siblings = groups.filter((g) => g.game.console === game.console && g.game.id !== game.id);
+const n = list.length;
+const lede =
+  lang === "en"
+    ? `${n} unofficial native ${n === 1 ? "port" : "ports"} of ${game.title} for the ${s.consoles[game.console]}, running on ${new Intl.ListFormat("en").format(plats)}. Each runs the game's own code instead of emulating the console, and needs your own copy of the game.`
+    : `${n} ${n === 1 ? "port nativo não oficial" : "ports nativos não oficiais"} de ${game.title} do ${s.consoles[game.console]}, rodando em ${new Intl.ListFormat("pt-BR").format(plats)}. Cada um roda o código do próprio jogo em vez de emular o console, e exige a sua própria cópia do jogo.`;
+---
+<article class="game wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href={path("/", lang)}>{s.nav.catalog}</a>
+    <span aria-hidden="true">/</span>
+    <a href={path(`/consoles/${game.console}/`, lang)}>{s.consoles[game.console]}</a>
+  </nav>
+
+  <header class="head">
+    <h1>{game.title}</h1>
+    <p class="meta">
+      <a href={path(`/consoles/${game.console}/`, lang)}>{s.consoles[game.console]}</a>
+      {game.titleIds.length > 0 && <span class="data"> · {game.titleIds.join(" · ")}</span>}
+    </p>
+    <p class="lede">{lede}</p>
+    <div class="summary">
+      <span class="label">{s.bestStatus}</span>
+      <span class="tier" data-tier={best}>{s.tiers[best].label}</span>
+      <span class="strip" aria-hidden="true">
+        {TIERS.map((tier) => <span class="seg" data-seg={tier} style={`flex-grow:${counts[tier]}`}></span>)}
+      </span>
+    </div>
+  </header>
+
+  <table class="ports">
+    <caption class="visually-hidden">{s.morePorts(game.title)}</caption>
+    <thead>
+      <tr>
+        <th scope="col">{s.cols.port}</th>
+        <th scope="col">{s.cols.tier}</th>
+        <th scope="col" class="hide-sm">{s.cols.platforms}</th>
+        <th scope="col" class="hide-sm">{s.cols.toolchain}</th>
+        <th scope="col" class="num">{s.cols.stars}</th>
+        <th scope="col" class="num hide-sm">{s.cols.pushed}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[...list].sort(defaultOrder).map((e) => {
+        const f = e.port.facts;
+        return (
+          <tr>
+            <th scope="row">
+              <a class="name" href={path(`/ports/${e.port.slug}/`, lang)}>{e.port.name}</a>
+              <a class="repo data" href={repoUrl(e.port.repo)}>{e.port.repo}<Icon name="external" size={12} /></a>
+              <span class="note">{e.port.notes[lang]}</span>
+            </th>
+            <td><span class="tier" data-tier={e.tier} title={e.source ?? s.tiers[e.tier].hint}>{s.tiers[e.tier].label}</span></td>
+            <td class="hide-sm sub">{e.port.platforms.map((p) => s.platforms[p]).join(", ") || "—"}</td>
+            <td class="hide-sm sub">{e.port.toolchain ?? s.techniques[e.port.technique].label}</td>
+            <td class="num data sub">{f ? formatNumber(f.stars, lang) : "—"}</td>
+            <td class="num data sub hide-sm">{f ? <time datetime={f.pushedAt} title={formatDate(f.pushedAt, lang)}>{age(f.pushedAt, now, f.partial)}</time> : "—"}</td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+
+  <p class="own">{s.detail.ownCopy}</p>
+
+  {siblings.length > 0 && (
+    <section class="siblings" aria-labelledby="siblings-h">
+      <h2 id="siblings-h">{s.otherGames(s.consoles[game.console])}</h2>
+      <ul>
+        {siblings.map((g) => (
+          <li><a href={path(`/games/${g.game.id}/`, lang)}>{g.game.title}</a> <span class="data">{g.entries.length}</span></li>
+        ))}
+      </ul>
+    </section>
+  )}
+</article>
+
+<style>
+  .game { padding-top: 28px; }
+  .crumbs { display: flex; gap: 8px; font-size: var(--step--1); color: var(--ink-3); }
+  .crumbs a { color: var(--ink-2); text-decoration: none; }
+  .crumbs a:hover { color: var(--ink); text-decoration: underline; }
+  .head { margin-top: 18px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  h1 { font-size: var(--step-4); letter-spacing: -0.02em; }
+  .meta { margin-top: 8px; color: var(--ink-3); font-size: var(--step--1); }
+  .meta a { color: var(--ink-2); font-weight: 700; }
+  .lede { margin-top: 14px; color: var(--ink-2); font-size: var(--step-1); max-width: var(--measure); }
+  .summary { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin-top: 20px; }
+  .label { color: var(--ink-3); font-size: var(--step--1); }
+  .strip { display: flex; gap: 2px; width: 220px; height: 10px; border-radius: 3px; overflow: hidden; background: var(--panel); }
+  .seg { flex-basis: 0; min-width: 0; }
+  .seg[data-seg="playable"] { background: var(--tier-playable); }
+  .seg[data-seg="ingame"] { background: var(--tier-ingame); }
+  .seg[data-seg="intro"] { background: var(--tier-intro); }
+  .seg[data-seg="wip"] { background: var(--tier-wip); }
+  .seg[data-seg="unrated"] { background: var(--tier-unrated); }
+
+  .ports { width: 100%; border-collapse: collapse; margin-top: 24px; }
+  .ports thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line-strong); }
+  .ports tbody th, .ports td { text-align: left; padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); vertical-align: top; font-weight: 400; }
+  .num { text-align: right !important; white-space: nowrap; }
+  .sub { color: var(--ink-2); font-size: var(--step--1); padding-top: 14px !important; }
+  .name { color: var(--ink); font-weight: 700; text-decoration: none; margin-right: 10px; }
+  .name:hover { color: var(--link-hover); text-decoration: underline; }
+  .repo { font-size: var(--step--1); text-decoration: none; overflow-wrap: anywhere; }
+  .repo:hover { text-decoration: underline; }
+  .repo :global(svg) { display: inline; vertical-align: -1px; margin-left: 5px; }
+  .note { display: block; margin-top: 4px; color: var(--ink-3); font-size: var(--step--1); max-width: 70ch; }
+  .own { margin-top: 20px; color: var(--ink-2); font-size: var(--step--1); max-width: var(--measure); padding: 12px 14px; background: var(--panel); border-radius: var(--radius); }
+
+  .siblings { margin-top: 40px; }
+  .siblings h2 { font-size: var(--step-1); }
+  .siblings ul { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  .siblings .data { color: var(--ink-3); font-size: var(--step--1); }
+
+  @media (max-width: 760px) {
+    h1 { font-size: var(--step-3); }
+    .hide-sm { display: none; }
+    .ports { table-layout: fixed; }
+    .ports thead th:nth-child(2) { width: 112px; }
+    .ports thead th.num { width: 64px; }
+    .ports tbody th { overflow-wrap: anywhere; }
+    .note { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  }
+</style>

@@ -104,3 +104,22 @@ export function repoUrl(repo: string): string {
 export function isRetired(port: Port): boolean {
   return Boolean(port.facts?.archived || port.facts?.unavailable);
 }
+
+/** Best (lowest-index) tier among a list of entries. */
+export function bestTier(list: Entry[]): Tier {
+  return TIERS[Math.min(...list.map((e) => TIERS.indexOf(e.tier)))] ?? "unrated";
+}
+
+export function tierCounts(list: Entry[]): Record<Tier, number> {
+  return Object.fromEntries(TIERS.map((tier) => [tier, list.filter((e) => e.tier === tier).length])) as Record<Tier, number>;
+}
+
+/** Consoles with at least one game in the catalog, each with its games (most-ported first). */
+export const consoleGroups = CONSOLES.map((c) => ({ console: c, games: groups.filter((g) => g.game.console === c) })).filter(
+  (c) => c.games.length > 0,
+);
+
+/** Union of the platforms a list of entries runs on, in canonical order. */
+export function platformsOf(list: Entry[]): Platform[] {
+  return PLATFORMS.filter((p) => list.some((e) => e.port.platforms.includes(p)));
+}

@@ -38,8 +38,8 @@ const f = port.facts;
             return (
               <tr>
                 <th scope="row">
-                  <a href={`${path("/", lang)}?game=${g.id}`}>{g.title}</a>
-                  <span class="ids">{s.consoles[g.console]}{g.titleIds.length > 0 && <span class="data"> · {g.titleIds.join(" · ")}</span>}</span>
+                  <a href={path(`/games/${g.id}/`, lang)}>{g.title}</a>
+                  <span class="ids"><a class="console" href={path(`/consoles/${g.console}/`, lang)}>{s.consoles[g.console]}</a>{g.titleIds.length > 0 && <span class="data"> · {g.titleIds.join(" · ")}</span>}</span>
                 </th>
                 <td><span class="tier" data-tier={pg.tier}>{s.tiers[pg.tier].label}</span></td>
                 <td class="evidence">{pg.source ?? <span class="muted">{s.tiers[pg.tier].hint}</span>}</td>
@@ -93,6 +93,8 @@ const f = port.facts;
   .games tbody th { font-weight: 700; }
   .games tbody th a { color: var(--ink); text-decoration: none; }
   .games tbody th a:hover { color: var(--link-hover); text-decoration: underline; }
+  .ids .console { color: var(--ink-2); font-weight: 400; text-decoration: none; }
+  .ids .console:hover { color: var(--ink); text-decoration: underline; }
   .ids { display: block; color: var(--ink-3); font-weight: 400; font-size: var(--step--1); margin-top: 2px; }
   .evidence { color: var(--ink-2); font-size: var(--step--1); }
   .muted { color: var(--ink-3); }

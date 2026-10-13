@@ -115,8 +115,8 @@ const searchText = (e: Entry) =>
             <tr class="group-row">
               <th colspan="6" scope="colgroup" id={`g-${game.id}`}>
                 <div class="group-head">
-                  <h2>{game.title}</h2>
-                  <span class="console">{s.consoles[game.console]}</span>
+                  <h2><a href={path(`/games/${game.id}/`, lang)}>{game.title}</a></h2>
+                  <a class="console" href={path(`/consoles/${game.console}/`, lang)}>{s.consoles[game.console]}</a>
                   {game.titleIds.length > 0 && <span class="data ids">{game.titleIds.join(" · ")}{game.version && ` · v${game.version}`}</span>}
                   <span class="gcount data" data-group-count>{list.length}</span>
                   <span class="mini" aria-hidden="true">
@@ -297,8 +297,11 @@ const searchText = (e: Entry) =>
   .group-row th { padding: 18px 12px 8px; border-bottom: 1px solid var(--line-strong); text-align: left; }
   .group-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; }
   .group-head h2 { font-size: var(--step-2); }
+  .group-head h2 a { color: var(--ink); text-decoration: none; }
+  .group-head h2 a:hover { color: var(--link-hover); text-decoration: underline; }
   .ids { color: var(--ink-3); font-size: var(--step--1); font-weight: 400; }
-  .console { color: var(--ink-2); font-size: var(--step--1); font-weight: 700; }
+  .console { color: var(--ink-2); font-size: var(--step--1); font-weight: 700; text-decoration: none; }
+  .console:hover { color: var(--ink); text-decoration: underline; }
   .gcount { color: var(--ink-2); font-size: var(--step--1); font-weight: 400; background: var(--panel); padding: 0 7px; border-radius: 3px; }
   .mini { display: flex; gap: 2px; width: 120px; height: 6px; border-radius: 2px; overflow: hidden; align-self: center; margin-left: auto; }
   .mini .seg { cursor: default; }

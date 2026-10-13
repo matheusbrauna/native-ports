@@ -1,0 +1,81 @@
+---
+import { consoleGroups, bestTier, platformsOf, type Lang, type Console } from "../lib/catalog";
+import { t, path } from "../lib/i18n";
+import { consoleMeta } from "../lib/seo";
+
+interface Props { lang: Lang; console: Console }
+const { lang, console: c } = Astro.props;
+const s = t[lang];
+const group = consoleGroups.find((g) => g.console === c)!;
+const portCount = group.games.reduce((n, g) => n + g.entries.length, 0);
+const meta = consoleMeta(c, group.games.length, portCount, lang);
+const others = consoleGroups.filter((g) => g.console !== c);
+---
+<article class="console wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href={path("/", lang)}>{s.nav.catalog}</a>
+  </nav>
+  <header class="head">
+    <h1>{meta.title}</h1>
+    <p class="lede">{meta.description}</p>
+    <p><a href={`${path("/", lang)}?console=${c}`}>{lang === "en" ? "Open in the catalog with filters" : "Abrir no catálogo com filtros"}</a></p>
+  </header>
+
+  <table class="games">
+    <caption class="visually-hidden">{s.allConsoleGames(s.consoles[c])}</caption>
+    <thead>
+      <tr>
+        <th scope="col">{s.cols.game}</th>
+        <th scope="col">{s.bestStatus}</th>
+        <th scope="col" class="hide-sm">{s.cols.platforms}</th>
+        <th scope="col" class="num">{s.cols.port}s</th>
+      </tr>
+    </thead>
+    <tbody>
+      {group.games.map((g) => {
+        const best = bestTier(g.entries);
+        return (
+          <tr>
+            <th scope="row"><a href={path(`/games/${g.game.id}/`, lang)}>{g.game.title}</a></th>
+            <td><span class="tier" data-tier={best}>{s.tiers[best].label}</span></td>
+            <td class="hide-sm sub">{platformsOf(g.entries).map((p) => s.platforms[p]).join(", ")}</td>
+            <td class="num data sub">{g.entries.length}</td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+
+  <section class="others" aria-labelledby="others-h">
+    <h2 id="others-h">{s.footer.byConsole}</h2>
+    <ul>
+      {others.map((o) => <li><a href={path(`/consoles/${o.console}/`, lang)}>{s.consoles[o.console]}</a> <span class="data">{o.games.length}</span></li>)}
+    </ul>
+  </section>
+</article>
+
+<style>
+  .console { padding-top: 28px; }
+  .crumbs { font-size: var(--step--1); }
+  .crumbs a { color: var(--ink-2); text-decoration: none; }
+  .crumbs a:hover { color: var(--ink); text-decoration: underline; }
+  .head { margin-top: 18px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  h1 { font-size: var(--step-4); letter-spacing: -0.02em; max-width: 22ch; }
+  .lede { margin-top: 14px; color: var(--ink-2); font-size: var(--step-1); max-width: var(--measure); }
+  .head p:last-child { margin-top: 10px; font-size: var(--step--1); }
+  .games { width: 100%; border-collapse: collapse; margin-top: 24px; }
+  .games thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line-strong); }
+  .games tbody th, .games td { text-align: left; padding: 11px 12px 11px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .games tbody th a { color: var(--ink); text-decoration: none; }
+  .games tbody th a:hover { color: var(--link-hover); text-decoration: underline; }
+  .num { text-align: right !important; }
+  .sub { color: var(--ink-2); font-size: var(--step--1); padding-top: 13px !important; }
+  .others { margin-top: 40px; }
+  .others h2 { font-size: var(--step-1); }
+  .others ul { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  .others .data { color: var(--ink-3); font-size: var(--step--1); }
+  @media (max-width: 760px) {
+    h1 { font-size: var(--step-3); }
+    .hide-sm { display: none; }
+  }
+</style>

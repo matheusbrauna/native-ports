@@ -1,0 +1,26 @@
+---
+import Base from "../../../layouts/Base.astro";
+import GamePage from "../../../components/GamePage.astro";
+import { groups, type Game, type Entry } from "../../../lib/catalog";
+import { t, path } from "../../../lib/i18n";
+import { gameMeta, breadcrumbLd, collectionLd, videoGameLd } from "../../../lib/seo";
+
+export function getStaticPaths() {
+  return groups.map((g) => ({ params: { id: g.game.id }, props: { game: g.game, list: g.entries } }));
+}
+const { game, list } = Astro.props as { game: Game; list: Entry[] };
+const lang = "pt-br";
+const s = t[lang];
+const site = Astro.site ?? new URL("http://localhost:4321");
+const meta = gameMeta(game, list, lang);
+const pagePath = path(`/games/${game.id}/`, lang);
+const jsonLd = [
+  collectionLd(meta.title, meta.description, pagePath, lang, site, list.map((e) => ({ name: e.port.name, path: path(`/ports/${e.port.slug}/`, lang) })), videoGameLd(game, lang)),
+  breadcrumbLd([
+    { name: s.nav.catalog, path: path("/", lang) },
+    { name: s.consoles[game.console], path: path(`/consoles/${game.console}/`, lang) },
+    { name: game.title, path: pagePath },
+  ], site),
+];
+---
+<Base lang={lang} fullTitle={meta.title} description={meta.description} jsonLd={jsonLd}><GamePage lang={lang} game={game} list={list} /></Base>

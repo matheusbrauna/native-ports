@@ -47,7 +47,7 @@ const others = consoleGroups.filter((g) => g.console !== c);
   </table>
 
   <section class="others" aria-labelledby="others-h">
-    <h2 id="others-h">{s.footer.byConsole}</h2>
+    <h2 id="others-h">{s.otherConsoles}</h2>
     <ul>
       {others.map((o) => <li><a href={path(`/consoles/${o.console}/`, lang)}>{s.consoles[o.console]}</a> <span class="data">{o.games.length}</span></li>)}
     </ul>

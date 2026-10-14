@@ -5,12 +5,12 @@ import githubJson from "../data/github.json";
 export type Lang = "en" | "pt-br";
 export type Tier = "playable" | "ingame" | "intro" | "wip" | "unrated";
 export type Platform = "linux" | "steamdeck" | "windows" | "macos" | "android" | "ios" | "arm";
-export type Console = "ps4" | "xbox360" | "xbox" | "n64" | "ps1" | "ps2" | "psp" | "32x" | "naomi2";
+export type Console = "ps4" | "xbox360" | "xbox" | "n64" | "wii" | "ps1" | "ps2" | "psp" | "32x" | "dreamcast" | "naomi2";
 export type Technique = "runtime" | "recomp";
 
 export const TIERS: Tier[] = ["playable", "ingame", "intro", "wip", "unrated"];
 export const PLATFORMS: Platform[] = ["windows", "linux", "steamdeck", "macos", "android", "ios", "arm"];
-export const CONSOLES: Console[] = ["xbox360", "xbox", "ps4", "n64", "ps1", "ps2", "psp", "32x", "naomi2"];
+export const CONSOLES: Console[] = ["xbox360", "xbox", "ps4", "n64", "wii", "ps1", "ps2", "psp", "32x", "dreamcast", "naomi2"];
 export const TECHNIQUES: Technique[] = ["recomp", "runtime"];
 
 export interface Game {

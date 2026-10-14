@@ -56,7 +56,7 @@ const en = {
     linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", ios: "iOS", arm: "ARM",
   } satisfies Record<Platform, string>,
   consoles: {
-    ps4: "PlayStation 4", xbox360: "Xbox 360", xbox: "Xbox", n64: "Nintendo 64", ps1: "PlayStation", ps2: "PlayStation 2", psp: "PSP", "32x": "Sega 32X", naomi2: "NAOMI 2 (arcade)",
+    ps4: "PlayStation 4", xbox360: "Xbox 360", xbox: "Xbox", n64: "Nintendo 64", wii: "Wii", ps1: "PlayStation", ps2: "PlayStation 2", psp: "PSP", "32x": "Sega 32X", dreamcast: "Dreamcast", naomi2: "NAOMI 2 (arcade)",
   } satisfies Record<Console, string>,
   techniques: {
     recomp: { label: "Static recompilation", hint: "The console's machine code is translated ahead of time into a native program." },
@@ -125,7 +125,7 @@ const ptbr: typeof en = {
     linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", ios: "iOS", arm: "ARM",
   },
   consoles: {
-    ps4: "PlayStation 4", xbox360: "Xbox 360", xbox: "Xbox", n64: "Nintendo 64", ps1: "PlayStation", ps2: "PlayStation 2", psp: "PSP", "32x": "Sega 32X", naomi2: "NAOMI 2 (fliperama)",
+    ps4: "PlayStation 4", xbox360: "Xbox 360", xbox: "Xbox", n64: "Nintendo 64", wii: "Wii", ps1: "PlayStation", ps2: "PlayStation 2", psp: "PSP", "32x": "Sega 32X", dreamcast: "Dreamcast", naomi2: "NAOMI 2 (fliperama)",
   },
   techniques: {
     recomp: { label: "Recompilação estática", hint: "O código de máquina do console é traduzido antes, num programa nativo." },

@@ -12,7 +12,7 @@ Tools on their own (recompilers, SDKs), curated lists, decompilations, emulators
 
 ## Adding a port
 
-1. If the game is new, add it to `data/games.json` with its `console` (`xbox360`, `xbox`, `ps4`, `n64`, `ps1`, `ps2`, `psp`, `32x`, `naomi2`).
+1. If the game is new, add it to `data/games.json` with its `console` (`xbox360`, `xbox`, `ps4`, `n64`, `wii`, `ps1`, `ps2`, `psp`, `32x`, `dreamcast`, `naomi2`).
 2. Add the port to `data/ports.json`:
 
 ```json

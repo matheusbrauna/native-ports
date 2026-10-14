@@ -2,7 +2,7 @@
 // Allowed values mirror src/lib/catalog.ts; update both together.
 import { readFile } from "node:fs/promises";
 
-const CONSOLES = ["ps4", "xbox360", "xbox", "n64", "ps1", "ps2", "psp", "32x", "naomi2"];
+const CONSOLES = ["ps4", "xbox360", "xbox", "n64", "wii", "ps1", "ps2", "psp", "32x", "dreamcast", "naomi2"];
 const PLATFORMS = ["linux", "steamdeck", "windows", "macos", "android", "ios", "arm"];
 const TIERS = ["playable", "ingame", "intro", "wip", "unrated"];
 const KINDS = ["upstream", "fork", "port"];

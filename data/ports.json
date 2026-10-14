@@ -1925,5 +1925,197 @@
       "en": "SH-4 ahead-of-time recompilation of the NAOMI 2 arcade game, BIOS-free with Vulkan.",
       "pt-br": "Recompilação ahead-of-time do SH-4 do jogo de fliperama NAOMI 2, sem BIOS, com Vulkan."
     }
+  },
+  {
+    "slug": "sacredfire",
+    "name": "SacredFire",
+    "repo": "T3CHNOLOG1C/SacredFire",
+    "upstream": "deadinside28/bloodborne_pc",
+    "kind": "fork",
+    "technique": "runtime",
+    "toolchain": "bbport",
+    "platforms": [
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "crash-team-racing-nitro-fueled",
+        "tier": "playable",
+        "source": "README: Status: playable; a full play-through has not been verified"
+      }
+    ],
+    "notes": {
+      "en": "bbport retargeted at Crash Team Racing Nitro-Fueled 1.21: races, adventure, saves and two-controller split screen, a 60 FPS patch, GTK4 launcher and Steam Deck AppImage. Tested only on the Steam Deck.",
+      "pt-br": "O bbport adaptado para o Crash Team Racing Nitro-Fueled 1.21: corridas, modo aventura, saves e tela dividida com dois controles, patch de 60 FPS, launcher GTK4 e AppImage para o Steam Deck. Testado só no Steam Deck."
+    }
+  },
+  {
+    "slug": "driftdroid",
+    "name": "DriftDroid",
+    "repo": "dorPXP/driftdroid",
+    "upstream": "patchzyy/Wiicompiled",
+    "kind": "fork",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan",
+      "OpenGL ES"
+    ],
+    "games": [
+      {
+        "id": "mario-kart-wii",
+        "tier": "playable",
+        "source": "README: playable end to end; races, menus, audio, saves and online play work"
+      }
+    ],
+    "notes": {
+      "en": "Android port of the WiiCompiled recompilation of Mario Kart Wii (PAL): touch controls, tilt steering, in-app disc extraction, Retro Rewind support and a 30 FPS race mode for slower phones.",
+      "pt-br": "Port para Android da recompilação WiiCompiled do Mario Kart Wii (PAL): controles de toque, direção por inclinação, extração do disco dentro do app, suporte ao Retro Rewind e modo de corrida a 30 FPS para celulares mais fracos."
+    }
+  },
+  {
+    "slug": "banjo-tooie-recompiled",
+    "name": "Banjo-Tooie Recompiled",
+    "repo": "some-scurvy-dog/banjo-tooie-scurvy-dog-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "banjo-tooie",
+        "tier": "wip",
+        "source": "README: alpha; full-game completion has not been established"
+      }
+    ],
+    "notes": {
+      "en": "Independent alpha recompilation for Windows x64 with a launcher, ROM validation, remapping and a separate practice mode with save states. Not affiliated with BanjoRecomp.",
+      "pt-br": "Recompilação alfa independente para Windows x64, com launcher, validação da ROM, remapeamento e um modo de treino separado com save states. Sem relação com o BanjoRecomp."
+    }
+  },
+  {
+    "slug": "sonic-adventure-recompiled",
+    "name": "Sonic Adventure Recompiled",
+    "repo": "sonicfreak1337/SARecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "KatanaRecomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "sonic-adventure",
+        "tier": "playable",
+        "source": "README: beta; fully playable, all seven stories from start to finish"
+      }
+    ],
+    "notes": {
+      "en": "Recompiles the PAL Dreamcast release (v1.003) with widescreen up to 21:9, an optional free camera, 60 Hz gameplay timing and a new options menu. Development is paused for now.",
+      "pt-br": "Recompila a versão PAL de Dreamcast (v1.003), com widescreen até 21:9, câmera livre opcional, lógica a 60 Hz e um novo menu de opções. O desenvolvimento está pausado no momento."
+    }
+  },
+  {
+    "slug": "free-riders-recompiled",
+    "name": "Free Riders Recompiled",
+    "repo": "YuutaTsubasa/Free-Riders-Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "android"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "sonic-free-riders",
+        "tier": "ingame",
+        "source": "README: work in progress; the game boots, its menus work and races can be played"
+      }
+    ],
+    "notes": {
+      "en": "Plays without Kinect through emulated motion input, or with a real Kinect or a webcam on Windows. Custom VRM avatars, HedgeModManager mods and LAN online play across Windows, Linux and Android.",
+      "pt-br": "Joga sem Kinect com entrada de movimento emulada, ou com um Kinect de verdade ou uma webcam no Windows. Avatares VRM personalizados, mods do HedgeModManager e jogo online em rede local entre Windows, Linux e Android."
+    }
+  },
+  {
+    "slug": "tekken-3-expanded",
+    "name": "Tekken 3 Expanded",
+    "repo": "omarma/tekken3-expanded",
+    "upstream": "FishB0nes98/Tekken3Recompiled",
+    "kind": "fork",
+    "technique": "recomp",
+    "toolchain": "psxrecomp",
+    "platforms": [
+      "windows",
+      "macos",
+      "steamdeck",
+      "android"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "tekken-3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Builds on Tekken3Recompiled to add Tekken Tag Tournament's 18 extra characters and TTT movesets, imported from your own arcade ROM. Steam Deck (through Proton) and Android are experimental.",
+      "pt-br": "Parte do Tekken3Recompiled para adicionar os 18 personagens extras do Tekken Tag Tournament e os golpes do TTT, importados da sua própria ROM de fliperama. Steam Deck (via Proton) e Android são experimentais."
+    }
+  },
+  {
+    "slug": "mw2-recompiled",
+    "name": "Modern Warfare 2 Recompiled",
+    "repo": "PaulCombal/mw2-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "call-of-duty-modern-warfare-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Campaign and multiplayer at 60 FPS up to 4K, with private matches over Steam or LAN. No public matchmaking; Special Ops is untested.",
+      "pt-br": "Campanha e multiplayer a 60 FPS até 4K, com partidas privadas pela Steam ou rede local. Sem matchmaking público; o Special Ops não foi testado."
+    }
   }
 ]

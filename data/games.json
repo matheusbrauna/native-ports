@@ -389,5 +389,54 @@
     "titleIds": [
       "GDS-0033"
     ]
+  },
+  {
+    "id": "crash-team-racing-nitro-fueled",
+    "title": "Crash Team Racing Nitro-Fueled",
+    "titleIds": [
+      "CUSA13795"
+    ],
+    "version": "1.21",
+    "console": "ps4"
+  },
+  {
+    "id": "mario-kart-wii",
+    "title": "Mario Kart Wii",
+    "console": "wii",
+    "titleIds": [
+      "RMCP01"
+    ]
+  },
+  {
+    "id": "banjo-tooie",
+    "title": "Banjo-Tooie",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "sonic-adventure",
+    "title": "Sonic Adventure",
+    "console": "dreamcast",
+    "titleIds": []
+  },
+  {
+    "id": "sonic-free-riders",
+    "title": "Sonic Free Riders",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "tekken-3",
+    "title": "Tekken 3",
+    "console": "ps1",
+    "titleIds": [
+      "SLUS-00402"
+    ]
+  },
+  {
+    "id": "call-of-duty-modern-warfare-2",
+    "title": "Call of Duty: Modern Warfare 2",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

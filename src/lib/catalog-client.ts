@@ -149,6 +149,8 @@ export function initCatalog(): void {
       return cmp * state.dir;
     });
     list.forEach((r) => group.appendChild(r));
+    const shown = list.filter((r) => !r.hidden);
+    list.forEach((r) => r.classList.toggle("last", r === shown[shown.length - 1]));
   }
 
   function toggle(set: Set<string>, value: string): void {

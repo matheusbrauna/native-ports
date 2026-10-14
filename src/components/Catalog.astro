@@ -125,12 +125,12 @@ const searchText = (e: Entry) =>
                 </div>
               </th>
             </tr>
-            {[...list].sort(defaultOrder).map((e) => {
+            {[...list].sort(defaultOrder).map((e, i, sorted) => {
               const f = e.port.facts;
               const retired = isRetired(e.port);
               return (
                 <tr
-                  class:list={["row", { retired }]}
+                  class:list={["row", { retired, last: i === sorted.length - 1 }]}
                   data-entry
                   data-game={game.id}
                   data-console={game.console}
@@ -290,13 +290,29 @@ const searchText = (e: Entry) =>
   .c-num { text-align: right; }
   thead .c-num button { flex-direction: row-reverse; }
   td { padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr.row.last td { border-bottom: 0; padding-bottom: 14px; }
+  /* The separator between sibling ports starts at the indent, so it never crosses the tree guide. */
+  tr.row td.c-port { border-bottom: 0; background: linear-gradient(var(--line), var(--line)) no-repeat right bottom / calc(100% - 44px) 1px; }
+  tr.row.last td.c-port { background: none; }
+  thead th.c-port, td.c-port { padding-left: 44px; }
+  td.c-port { position: relative; }
+  td.c-port::before, td.c-port::after { content: ""; position: absolute; left: 20px; pointer-events: none; }
+  td.c-port::before {
+    top: -1px; height: 21px; width: 14px;
+    border-left: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); border-bottom-left-radius: 5px;
+  }
+  td.c-port::after { top: 20px; bottom: -1px; border-left: 1px solid var(--line-strong); }
+  tr.row.last td.c-port::after { display: none; }
   td.c-plat, td.c-gfx { color: var(--ink-2); font-size: var(--step--1); padding-top: 10px; }
   td.c-tier { padding-top: 8px; }
   td.c-num { color: var(--ink-2); padding-top: 16px; white-space: nowrap; font-size: var(--step--1); }
   td.c-num { padding-top: 10px; }
-  .group-row th { padding: 18px 12px 8px; border-bottom: 1px solid var(--line-strong); text-align: left; }
+  /* Groups are separated from each other, not from their own ports: the strong rule and the
+     space sit above the game header, and its ports hang off it on a tree guide. */
+  .group-row th { padding: 30px 12px 4px; border-top: 1px solid var(--line-strong); border-bottom: 0; text-align: left; }
+  thead + tbody .group-row th { border-top: 0; padding-top: 22px; }
   .group-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; }
-  .group-head h2 { font-size: var(--step-2); }
+  .group-head h2 { font-size: var(--step-2); letter-spacing: -0.01em; }
   .group-head h2 a { color: var(--ink); text-decoration: none; }
   .group-head h2 a:hover { color: var(--link-hover); text-decoration: underline; }
   .ids { color: var(--ink-3); font-size: var(--step--1); font-weight: 400; }
@@ -306,7 +322,7 @@ const searchText = (e: Entry) =>
   .mini { display: flex; gap: 2px; width: 120px; height: 6px; border-radius: 2px; overflow: hidden; align-self: center; margin-left: auto; }
   .mini .seg { cursor: default; }
   tbody tr.row { transition: background-color var(--dur) var(--ease); }
-  tbody tr.row:hover { background: var(--panel); }
+  tbody tr.row:hover { background-color: var(--panel); }
   .port-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
   .port-name { color: var(--ink); font-weight: 700; font-size: var(--step-0); text-decoration: none; }
   .port-name:hover { color: var(--link-hover); text-decoration: underline; }
@@ -365,15 +381,29 @@ const searchText = (e: Entry) =>
     thead th:not([aria-sort]) { display: none; }
     .c-num { text-align: left; }
     thead .c-num button { flex-direction: row; }
-    .group-row th { padding: 26px 0 10px; }
+    .group-row th { padding: 28px 0 4px; }
+    thead + tbody .group-row th { padding-top: 18px; }
     .mini { width: 72px; }
     tr.row {
       display: grid; grid-template-columns: auto auto 1fr; column-gap: 16px;
       grid-template-areas: "port port port" "tier stars pushed" "plat plat plat";
-      padding: 12px 0; border-bottom: 1px solid var(--line);
+      position: relative; padding: 10px 0 12px 28px; border-bottom: 0;
+      background: linear-gradient(var(--line), var(--line)) no-repeat right bottom / calc(100% - 28px) 1px;
     }
+    tr.row.last { background-image: none; padding-bottom: 14px; }
+    tr.row td.c-port { background: none; }
+    tr.row::before, tr.row::after { content: ""; position: absolute; left: 8px; pointer-events: none; }
+    tr.row::before {
+      top: -1px; height: 23px; width: 12px;
+      border-left: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); border-bottom-left-radius: 5px;
+    }
+    tr.row::after { top: 22px; bottom: -1px; border-left: 1px solid var(--line-strong); }
+    tr.row.last::after { display: none; }
+    td.c-port::before, td.c-port::after { display: none; }
+    thead th.c-port { padding-left: 0; }
     tr.row td { padding: 0; border: 0; }
-    td.c-port { grid-area: port; width: auto; }
+    td.c-port { grid-area: port; width: auto; position: static; }
+    td.c-gfx { display: none; }
     td.c-tier { grid-area: tier; padding-top: 10px; }
     td.c-stars { grid-area: stars; padding-top: 12px; }
     td.c-pushed { grid-area: pushed; padding-top: 12px; }

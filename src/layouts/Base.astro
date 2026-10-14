@@ -4,7 +4,7 @@ import "@fontsource/atkinson-hyperlegible/700.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/600.css";
 import "../styles/global.css";
-import { consoleGroups, fetchedAt, type Lang } from "../lib/catalog";
+import { fetchedAt, type Lang } from "../lib/catalog";
 import { t, path, stripLang, locale, formatDate } from "../lib/i18n";
 import { ogPath, websiteLd } from "../lib/seo";
 
@@ -97,16 +97,27 @@ const ld = [...(isHome ? [websiteLd(lang, site)] : []), ...jsonLd];
     </main>
     <footer class="foot">
       <div class="wrap foot-in">
-        <nav class="by-console" aria-label={s.footer.byConsole}>
-          <span>{s.footer.byConsole}</span>
-          {consoleGroups.map((c) => <a href={path(`/consoles/${c.console}/`, lang)}>{s.consoles[c.console]}</a>)}
+        <div class="promise">
+          <p><strong>{s.footer.noFilesLead}</strong> {s.footer.noFiles}</p>
+          <p><strong>{s.footer.disclaimerLead}</strong> {s.footer.disclaimer}</p>
+        </div>
+        <nav class="foot-nav" aria-label={s.footer.navLabel}>
+          <ul>
+            <li><a href={path("/submit/", lang)} aria-current={active === "submit" ? "page" : undefined}>{s.nav.submit}</a></li>
+            <li><a href={path("/about/", lang)} aria-current={active === "about" ? "page" : undefined}>{s.nav.about}</a></li>
+            <li><a href={path(rest, other)} hreflang={locale[other]} lang={locale[other]}>{s.otherLang}</a></li>
+            {siteRepo && <li><a href={`https://github.com/${siteRepo}`}>{s.footer.source}</a></li>}
+          </ul>
         </nav>
-        <p>{s.footer.noFiles}</p>
-        <p>{s.footer.disclaimer}</p>
         <p class="meta">
-          <span>{s.footer.updated} <time datetime={fetchedAt ?? undefined}>{fetchedAt ? formatDate(fetchedAt, lang) : s.footer.never}</time></span>
-          {siteRepo && <a href={`https://github.com/${siteRepo}`}>{s.footer.source}</a>}
-          {siteRepo ? <a href={`https://github.com/${siteRepo}/blob/main/data/LICENSE.md`}>{s.footer.license}</a> : <span>{s.footer.license}</span>}
+          {fetchedAt
+            ? <span>{s.footer.updated} <time class="data" datetime={fetchedAt}>{formatDate(fetchedAt, lang)}</time></span>
+            : <span>{s.footer.notFetched}</span>}
+          <span class="licenses">
+            {siteRepo
+              ? <><a href={`https://github.com/${siteRepo}/blob/main/LICENSE`}>{s.footer.code} MIT</a><span aria-hidden="true">·</span><a href={`https://github.com/${siteRepo}/blob/main/data/LICENSE.md`}>{s.footer.data} CC BY 4.0</a></>
+              : <>{s.footer.code} MIT<span aria-hidden="true">·</span>{s.footer.data} CC BY 4.0</>}
+          </span>
         </p>
       </div>
     </footer>
@@ -118,13 +129,13 @@ const ld = [...(isHome ? [websiteLd(lang, site)] : []), ...jsonLd];
   .top-in { display: flex; align-items: center; gap: 28px; height: 60px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: var(--step-1); }
   .brand:hover { color: var(--ink); }
-  nav { display: flex; gap: 4px; margin-left: auto; }
-  nav a {
+  .top nav { display: flex; gap: 4px; margin-left: auto; }
+  .top nav a {
     color: var(--ink-2); text-decoration: none; padding: 6px 10px; border-radius: var(--radius);
     transition: color var(--dur) var(--ease), background-color var(--dur) var(--ease);
   }
-  nav a:hover { color: var(--ink); background: var(--panel); }
-  nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--link); border-radius: 0; }
+  .top nav a:hover { color: var(--ink); background: var(--panel); }
+  .top nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--link); border-radius: 0; }
   .lang {
     display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); text-decoration: none;
     padding: 5px 10px; border-radius: var(--radius); box-shadow: inset 0 0 0 1px var(--line-strong); font-size: var(--step--1);
@@ -133,16 +144,35 @@ const ld = [...(isHome ? [websiteLd(lang, site)] : []), ...jsonLd];
   .lang-code { font-family: var(--font-data); font-weight: 600; color: var(--ink); }
   main { flex: 1; outline: none; }
   .foot { border-top: 1px solid var(--line); margin-top: 64px; color: var(--ink-3); font-size: var(--step--1); }
-  .foot-in { padding-block: 28px 36px; display: grid; gap: 8px; max-width: 1360px; }
-  .foot p { max-width: var(--measure); }
-  .foot .meta { display: flex; flex-wrap: wrap; gap: 16px; }
-  .by-console { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 8px; }
-  .by-console span { color: var(--ink-2); font-weight: 700; }
-  .foot a { color: var(--ink-2); }
+  .foot-in {
+    padding-block: 32px 36px; max-width: 1360px;
+    display: grid; grid-template-columns: minmax(0, var(--measure)) auto; justify-content: space-between; gap: 28px 48px;
+  }
+  .foot a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+  .foot a:hover { color: var(--ink); text-decoration-color: currentColor; }
+
+  .promise { display: grid; gap: 10px; color: var(--ink-2); font-size: var(--step-0); }
+  .promise strong { color: var(--ink); }
+
+  .foot-nav ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; justify-items: end; }
+  .foot-nav a { display: inline-block; padding-block: 4px; text-decoration: none; }
+  .foot-nav a:hover { text-decoration: underline; }
+  .foot-nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--link); }
+
+  .meta {
+    grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+  }
+  .meta .data { color: var(--ink-2); white-space: nowrap; }
+  .licenses { display: inline-flex; flex-wrap: wrap; gap: 8px; }
 
   @media (max-width: 720px) {
     .top-in { height: auto; flex-wrap: wrap; gap: 6px 16px; padding-block: 12px 4px; }
-    nav { order: 3; margin-left: -10px; width: 100%; overflow-x: auto; }
+    .top nav { order: 3; margin-left: -10px; width: 100%; overflow-x: auto; }
+    .foot-in { grid-template-columns: minmax(0, 1fr); }
+    .foot-nav ul { justify-items: start; gap: 0; }
+    .foot-nav a { display: flex; align-items: center; min-height: 44px; }
+    .meta { flex-direction: column; }
     .lang { margin-left: auto; }
     .lang-name { display: none; }
   }

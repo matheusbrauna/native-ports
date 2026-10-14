@@ -69,6 +69,7 @@ const en = {
     byConsole: "Browse by console",
     never: "not yet fetched",
     source: "Site source",
+    license: "Code MIT · Data CC BY 4.0",
   },
   detail: {
     back: "All ports",
@@ -133,6 +134,7 @@ const ptbr: typeof en = {
     byConsole: "Navegar por console",
     never: "ainda não buscados",
     source: "Código do site",
+    license: "Código MIT · Dados CC BY 4.0",
   },
   detail: {
     back: "Todos os ports",

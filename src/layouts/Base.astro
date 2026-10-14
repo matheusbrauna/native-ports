@@ -106,6 +106,7 @@ const ld = [...(isHome ? [websiteLd(lang, site)] : []), ...jsonLd];
         <p class="meta">
           <span>{s.footer.updated} <time datetime={fetchedAt ?? undefined}>{fetchedAt ? formatDate(fetchedAt, lang) : s.footer.never}</time></span>
           {siteRepo && <a href={`https://github.com/${siteRepo}`}>{s.footer.source}</a>}
+          {siteRepo ? <a href={`https://github.com/${siteRepo}/blob/main/data/LICENSE.md`}>{s.footer.license}</a> : <span>{s.footer.license}</span>}
         </p>
       </div>
     </footer>

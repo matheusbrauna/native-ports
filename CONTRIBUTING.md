@@ -1,0 +1,46 @@
+# Contributing
+
+Thanks for helping keep the catalog accurate. Most contributions are a single entry in `data/ports.json`.
+
+## What gets listed
+
+- A **game port** built by static recompilation or native execution, or a fork that adds a platform, a game or a meaningful feature.
+- With **commits of its own**; untouched forks are left out.
+- **Source code only.** Repositories that ship game files, ROMs, disc images, firmware or keys are never listed.
+
+Tools on their own (recompilers, SDKs), curated lists, decompilations, emulators and ports whose only target is another console or the browser are out of scope.
+
+## Adding a port
+
+1. If the game is new, add it to `data/games.json` with its `console` (`xbox360`, `xbox`, `ps4`, `n64`, `ps1`, `ps2`, `psp`, `32x`, `naomi2`).
+2. Add the port to `data/ports.json`:
+
+```json
+{
+  "slug": "example-recomp",
+  "name": "Example Recompiled",
+  "repo": "owner/repository",
+  "upstream": null,
+  "kind": "port",
+  "technique": "recomp",
+  "toolchain": "ReXGlue",
+  "platforms": ["windows", "linux"],
+  "graphics": ["Vulkan"],
+  "games": [{ "id": "example-game", "tier": "playable", "source": "README: playable start to finish" }],
+  "notes": { "en": "One or two sentences.", "pt-br": "Uma ou duas frases." }
+}
+```
+
+- `tier` repeats what the project's README declares: `playable`, `ingame`, `intro`, `wip`, or `unrated` when it states nothing. Any tier other than `unrated` needs a `source` quoting the README.
+- `kind` is `port` for standalone projects, `fork` for forks, `upstream` for a project others fork.
+- Stars, last push, releases and archived state come from the GitHub API at build time; don't add them.
+
+3. Run `npm run validate`. The same check runs on every pull request and must pass before merging.
+
+Rejected candidates from `npm run discover` go in `data/discover-ignore.json` so they stop showing up.
+
+## Code changes
+
+Run `npm run build:offline` and check the pages you touched in both languages (`/` and `/pt-br/`). The site follows the design system in `DESIGN.md`.
+
+By contributing you agree that code is licensed under MIT and catalog data under CC BY 4.0.

@@ -2,8 +2,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
 
-// On GitHub Pages the workflow sets SITE_URL and BASE_PATH from the repository;
-// locally the site serves from the root.
+// The deploy workflow sets SITE_URL to the production domain; locally the site serves from the root.
 const site = process.env.SITE_URL || "http://localhost:4321";
 const base = process.env.BASE_PATH || "/";
 

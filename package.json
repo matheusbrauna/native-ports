@@ -11,7 +11,8 @@
     "dev": "astro dev",
     "build": "node scripts/fetch-github.mjs && astro build",
     "build:offline": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -23,5 +24,8 @@
   },
   "overrides": {
     "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "wrangler": "4.150.0"
   }
 }

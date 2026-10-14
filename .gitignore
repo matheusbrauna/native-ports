@@ -7,3 +7,4 @@ dist/
 .impeccable/hook.cache.json
 .impeccable/questions/*
 !.impeccable/questions/roll.json
+.wrangler/

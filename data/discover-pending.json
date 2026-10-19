@@ -2,5 +2,13 @@
   {
     "repo": "SNO2207/WindowSmash",
     "reason": "Triage accepted it, but: Console \"switch\" is not in the catalog yet (Super Smash Bros. Ultimate)"
+  },
+  {
+    "repo": "Jorge262007/FFTARecomp",
+    "reason": "Triage accepted it, but: Console \"gba\" is not in the catalog yet (Final Fantasy Tactics Advance)"
+  },
+  {
+    "repo": "raulzrrs/letsgo-recomp",
+    "reason": "Triage accepted it, but: Console \"switch\" is not in the catalog yet (Pokémon: Let's Go, Eevee!)"
   }
 ]

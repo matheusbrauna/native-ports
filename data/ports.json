@@ -2198,5 +2198,61 @@
       "en": "Native PS4 runtime port of The Last Guardian for Linux and Windows, featuring mouse and keyboard controls, optional 60 FPS / unlocked frame rate, motion controls, and custom image filters.",
       "pt-br": "Port nativo de execução do PS4 de The Last Guardian para Linux e Windows, com suporte a mouse e teclado, 60 FPS / taxa de quadros destravada opcional, controles de movimento e filtros de imagem."
     }
+  },
+  {
+    "slug": "gow3-pc",
+    "name": "God of War III Remastered",
+    "repo": "FelipePrado0/gow3_pc",
+    "upstream": "Supermedo/bloodborne_pc",
+    "kind": "fork",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "god-of-war-iii-remastered",
+        "tier": "ingame",
+        "source": "README: Opening, menus, video cutscenes (H.264) and gameplay."
+      }
+    ],
+    "notes": {
+      "en": "A native runtime port of God of War III Remastered for Windows and Linux with Vulkan graphics. Features an integrated launcher, in-game menu, ultrawide support, and performance patches up to 240 FPS.",
+      "pt-br": "Um port nativo via runtime de God of War III Remastered para Windows e Linux com gráficos Vulkan. Conta com launcher integrado, menu no jogo, suporte a ultrawide e patches de desempenho de até 240 FPS."
+    }
+  },
+  {
+    "slug": "dragons-crown-pro-pc",
+    "name": "Dragon's Crown Pro PC Port",
+    "repo": "saulob/dragons-crown-pro-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dragon-s-crown-pro",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native PS4 runtime port of Dragon's Crown Pro for Windows and Linux, including Steam Deck support.",
+      "pt-br": "Um port nativo de runtime do jogo de PS4 Dragon's Crown Pro para Windows e Linux, incluindo suporte ao Steam Deck."
+    }
   }
 ]

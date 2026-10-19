@@ -46,6 +46,13 @@ jobs:
             git merge --abort 2>/dev/null || true
             git checkout -B "$BRANCH" origin/main
           fi
+      - name: Make sure the submission labels exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # The issue form can only apply a label the repo already has.
+          gh label create submission --color 0e8a16 --description "Port submitted through the issue form" --force
+          gh label create triaged --color c5def5 --description "Submission answered by the discover job" --force
       - name: Ignore likely tools, lists and rewrites
         run: node scripts/discover.mjs --apply --json candidates.json > /dev/null
         env:
@@ -110,9 +117,7 @@ jobs:
           # its "validate" check lands on the same commit and satisfies the ruleset on main.
           gh workflow run ci.yml --ref "$BRANCH"
       - name: Answer submission issues
-        run: |
-          gh label create triaged --color c5def5 --description "Submission answered by the discover job" --force
-          node scripts/answer-submissions.mjs triage.json
+        run: node scripts/answer-submissions.mjs triage.json
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

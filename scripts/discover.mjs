@@ -2,7 +2,8 @@
 // It never adds a port: a person, or the triage step in a pull request a person reviews, does that.
 // Candidates are grouped by what their description and topics suggest, since the "native-port"
 // topic covers decompilation-based ports and rewrites as well as native-execution runtimes.
-// In GitHub Actions (GITHUB_REPOSITORY set) it also reads open issues labelled "submission": each
+// In GitHub Actions (GITHUB_REPOSITORY set) it also reads open submission issues (labelled
+// "submission" or titled "[port] …"): each
 // one names a repository, which skips the star minimum and the description filters, since a
 // person asked for it. scripts/answer-submissions.mjs replies on the issue after triage.
 // Usage: npm run discover [-- --min-stars 5] [--apply] [--json candidates.json]
@@ -72,8 +73,10 @@ const REPO_LINK = /github\.com\/([A-Za-z0-9-]+\/[A-Za-z0-9._-]+)/i;
 const REPO_NAME = /^\s*([A-Za-z0-9-]+\/[A-Za-z0-9._-]+)\s*$/m;
 const submissions = [];
 if (process.env.GITHUB_REPOSITORY) {
-  const res = await fetch(`${API}/repos/${process.env.GITHUB_REPOSITORY}/issues?labels=submission&state=open&sort=created&direction=asc&per_page=50`, { headers });
-  const issues = res.ok ? await res.json() : [];
+  // The form labels its issues "submission", but GitHub drops a label the repo does not have yet,
+  // so the form's "[port]" title prefix counts too.
+  const res = await fetch(`${API}/repos/${process.env.GITHUB_REPOSITORY}/issues?state=open&sort=created&direction=asc&per_page=100`, { headers });
+  const issues = (res.ok ? await res.json() : []).filter((i) => i.labels.some((l) => l.name === "submission") || /^\s*\[port\]/i.test(i.title));
   if (!res.ok) console.warn(`[discover] submissions: HTTP ${res.status}`);
   const known = (repo) => {
     const key = repo.toLowerCase();

@@ -1,28 +1,106 @@
 [
-  "ran-j/PS2Recomp",
-  "wheremyfoodat/Panda3DS",
-  "Sebastrion/awesome-unofficial-pc-ports",
-  "CharlotteCross1998/awesome-game-decompilations",
-  "SubmitGame/awesome-decomp-games",
-  "abduznik/awesome-x360-recomps",
-  "BlackLabelHQ/RecompOne",
-  "mikage-emu/mikage-dev",
-  "sp00nznet/360tools",
-  "bgyss/SwitchRecomp",
-  "ioncodes/llvm8",
-  "Xenomega/NESgen",
-  "fearkov/3dsrecomp",
-  "denukernel/Randm64",
-  "jessetbh/AkiLauncher",
-  "snuri00/psp-web-recomp",
-  "centollOS/SwitchWakerHD",
-  "Trinalord777/DK64Recomp-NX",
-  "MaryNCRT/Ultimate-Mortal-Kombat-3-iOS-Recomp",
-  "matiaszanolli/sega-vr-disasm",
-  "spacefarergames/AloneInTheDarkReHaunted",
-  "alexbeavs-ps1-ports/psxrecomp-ports",
-  "Unchiga/YuGiOhForbiddenMemoriesRecomp",
-  "appleforever11/Snap64Recomp",
-  "harshithmothilal/Snap64Recomp",
-  "bigmak94/GalaxyQuest"
+  {
+    "repo": "ran-j/PS2Recomp",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "wheremyfoodat/Panda3DS",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "Sebastrion/awesome-unofficial-pc-ports",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "CharlotteCross1998/awesome-game-decompilations",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "SubmitGame/awesome-decomp-games",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "abduznik/awesome-x360-recomps",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "BlackLabelHQ/RecompOne",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "mikage-emu/mikage-dev",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "sp00nznet/360tools",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "bgyss/SwitchRecomp",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "ioncodes/llvm8",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "Xenomega/NESgen",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "fearkov/3dsrecomp",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "denukernel/Randm64",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "jessetbh/AkiLauncher",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "snuri00/psp-web-recomp",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "centollOS/SwitchWakerHD",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "Trinalord777/DK64Recomp-NX",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "MaryNCRT/Ultimate-Mortal-Kombat-3-iOS-Recomp",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "matiaszanolli/sega-vr-disasm",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "spacefarergames/AloneInTheDarkReHaunted",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "alexbeavs-ps1-ports/psxrecomp-ports",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "Unchiga/YuGiOhForbiddenMemoriesRecomp",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "appleforever11/Snap64Recomp",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "harshithmothilal/Snap64Recomp",
+    "reason": "Rejected on review"
+  },
+  {
+    "repo": "bigmak94/GalaxyQuest",
+    "reason": "Rejected on review"
+  }
 ]

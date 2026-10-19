@@ -37,7 +37,17 @@ Tools on their own (recompilers, SDKs), curated lists, decompilations, emulators
 
 3. Run `npm run validate`. The same check runs on every pull request and must pass before merging.
 
-Rejected candidates from `npm run discover` go in `data/discover-ignore.json` so they stop showing up.
+## Discovering new ports
+
+A daily workflow searches the scene's GitHub topics for repositories that are not catalogued yet:
+
+1. `scripts/discover.mjs --apply` adds the obvious misses (tools, lists, emulators, rewrites, judged from the description) to `data/discover-ignore.json` with a reason.
+2. `scripts/triage.mjs` has a language model read each remaining README, up to `TRIAGE_LIMIT` a day (20 by default). It adds accepted ports to `data/ports.json`, rejected repos to `discover-ignore.json`, and holds anything it cannot settle in `data/discover-pending.json`. The code checks every draft entry and drops a tier whose quote is not in the README.
+3. The changes arrive as one pull request, `discover/daily`, which a person reviews before merging. The remaining candidates and the pending repos are listed in the tracking issue labelled `discover`.
+
+Both decision files hold `{ "repo": "owner/name", "reason": "..." }`. To settle a pending repo, move it to `ports.json` or `discover-ignore.json`. Running `npm run discover` locally prints the same list without changing anything.
+
+The model step needs an OpenAI-compatible endpoint: the repository secrets `LLM_BASE_URL` (for example `https://host/v1`) and `LLM_API_KEY`, and the variable `LLM_MODEL`. Without them the step is skipped.
 
 ## Code changes
 

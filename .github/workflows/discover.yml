@@ -4,29 +4,95 @@ on:
   schedule:
     - cron: "42 7 * * *" # daily, after the 06:17 deploy
   workflow_dispatch:
+    inputs:
+      limit:
+        description: "Most candidates the model reads this run"
+        default: "20"
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
   issues: write
+  actions: write # to start CI on the pull request (see the last step)
 
 concurrency:
   group: discover
   cancel-in-progress: true
+
+env:
+  BRANCH: discover/daily
 
 jobs:
   discover:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: lts/*
-      - name: List candidates
+      - name: Start from the open discover pull request, or from main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Building on yesterday's unmerged pull request keeps its decisions, so they are not paid for again.
+          git config user.name "github-actions[bot]"
+          git config user.email "41898099+github-actions[bot]@users.noreply.github.com"
+          open=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
+          if [ -n "$open" ] && git checkout -B "$BRANCH" "origin/$BRANCH" && git merge --no-edit origin/main; then
+            echo "Continuing pull request #$open"
+          else
+            git merge --abort 2>/dev/null || true
+            git checkout -B "$BRANCH" origin/main
+          fi
+      - name: Ignore likely tools, lists and rewrites
+        run: node scripts/discover.mjs --apply --json candidates.json > /dev/null
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Triage the rest with a language model
+        # Skipped inside the script when the LLM_* settings are missing.
+        run: node scripts/triage.mjs --candidates candidates.json --limit "${{ inputs.limit || vars.TRIAGE_LIMIT || 20 }}" --report triage.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+      - name: Validate
+        run: node scripts/validate-data.mjs
+      - name: List what is left
         run: node scripts/discover.mjs > candidates.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to the job summary
-        run: cat candidates.md >> "$GITHUB_STEP_SUMMARY"
+        run: cat triage.md candidates.md 2>/dev/null >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Open or update the pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No catalog changes."
+            exit 0
+          fi
+          git commit -q -m "Triage discover candidates ($(date -u +%Y-%m-%d))"
+          git push -f origin "$BRANCH"
+          {
+            echo "Daily triage from the [discover workflow](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})."
+            echo
+            echo "Review each added port against its README before merging. Rejections are in \`data/discover-ignore.json\`; repos the model could not settle are in \`data/discover-pending.json\` and listed in the tracking issue."
+            echo
+            cat triage.md 2>/dev/null || echo "The model step did not run; only the automatic ignores changed."
+          } > pr.md
+          number=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh pr edit "$number" --body-file pr.md
+          else
+            gh pr create --head "$BRANCH" --base main --title "Discover: triaged port candidates" --body-file pr.md
+          fi
+          # Pushes made with GITHUB_TOKEN do not trigger pull_request workflows, so start CI by hand:
+          # its "validate" check lands on the same commit and satisfies the ruleset on main.
+          gh workflow run ci.yml --ref "$BRANCH"
       - name: Update the tracking issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

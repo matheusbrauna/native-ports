@@ -103,11 +103,11 @@ README>>>`;
     const res = await fetch(`${LLM_BASE_URL.replace(/\/$/, "")}/chat/completions`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${LLM_API_KEY}` },
-      body: JSON.stringify({ model: LLM_MODEL, temperature: 0, messages }),
+      body: JSON.stringify({ model: LLM_MODEL, temperature: 0, stream: false, messages }),
       signal: AbortSignal.timeout(180_000),
     });
     if (!res.ok) throw new Error(`model endpoint: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`);
-    const data = await res.json();
+    const data = readCompletion(await res.text());
     const text = data.choices?.[0]?.message?.content ?? "";
     try {
       return { answer: parseJson(text), model: data.model ?? LLM_MODEL };
@@ -116,6 +116,22 @@ README>>>`;
     }
   }
   return { answer: null, model: LLM_MODEL };
+}
+
+// Some gateways (OmniRoute combos among them) stream server-sent events even when asked not to;
+// join the deltas back into one completion.
+function readCompletion(body) {
+  if (!body.trimStart().startsWith("data:")) return JSON.parse(body);
+  let model;
+  let content = "";
+  for (const line of body.split("\n")) {
+    const payload = line.replace(/^data:\s*/, "").trim();
+    if (!line.startsWith("data:") || !payload || payload === "[DONE]") continue;
+    const chunk = JSON.parse(payload);
+    model ??= chunk.model;
+    content += chunk.choices?.[0]?.delta?.content ?? chunk.choices?.[0]?.message?.content ?? "";
+  }
+  return { model, choices: [{ message: { content } }] };
 }
 
 function parseJson(text) {

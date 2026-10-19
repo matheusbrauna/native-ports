@@ -2118,5 +2118,85 @@
       "en": "Campaign and multiplayer at 60 FPS up to 4K, with private matches over Steam or LAN. No public matchmaking; Special Ops is untested.",
       "pt-br": "Campanha e multiplayer a 60 FPS até 4K, com partidas privadas pela Steam ou rede local. Sem matchmaking público; o Special Ops não foi testado."
     }
+  },
+  {
+    "slug": "iss-pc",
+    "name": "inFAMOUS Second Son — port nativo para PC",
+    "repo": "HayatoG/iss_pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "infamous-second-son",
+        "tier": "playable",
+        "source": "README: > **Jogável, em desenvolvimento.** O jogo inicia, chega ao gameplay e passa pelos primeiros capítulos, mas o desempenho ainda é instável (20–30 FPS típicos numa RTX 2060) e há falhas de imagem conhecidas. Veja o [Status](#status)."
+      }
+    ],
+    "notes": {
+      "en": "Native PS4 runtime port of inFAMOUS Second Son for Linux and Windows using Vulkan, featuring custom motion sensor and touchpad controls alongside a Qt launcher.",
+      "pt-br": "Port nativo via runtime do PS4 de inFAMOUS Second Son para Linux e Windows com Vulkan, trazendo emulação de sensor de movimento e touchpad, além de launcher em Qt."
+    }
+  },
+  {
+    "slug": "black-xberecomp",
+    "name": "Black - XBE Recomp",
+    "repo": "TGP482/BLACK-XBERecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "black",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Unofficial native PC port of the original Xbox game Black built using static recompilation, featuring Direct3D 12 graphics, modern controls, and enhanced visuals.",
+      "pt-br": "Port nativo não oficial do jogo Black do Xbox original feito via recompilação estática, com suporte a Direct3D 12, controles modernos e visuais aprimorados."
+    }
+  },
+  {
+    "slug": "tlg-pc",
+    "name": "The Last Guardian",
+    "repo": "HayatoG/tlg_pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-last-guardian",
+        "tier": "ingame",
+        "source": "README: Boot, menu, intro e gameplay | ✅ Funciona; sessões de 10+ minutos sem falhas"
+      }
+    ],
+    "notes": {
+      "en": "Native PS4 runtime port of The Last Guardian for Linux and Windows, featuring mouse and keyboard controls, optional 60 FPS / unlocked frame rate, motion controls, and custom image filters.",
+      "pt-br": "Port nativo de execução do PS4 de The Last Guardian para Linux e Windows, com suporte a mouse e teclado, 60 FPS / taxa de quadros destravada opcional, controles de movimento e filtros de imagem."
+    }
   }
 ]

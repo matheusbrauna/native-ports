@@ -438,5 +438,17 @@
     "title": "Call of Duty: Modern Warfare 2",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "infamous-second-son",
+    "title": "inFAMOUS Second Son",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "black",
+    "title": "Black",
+    "console": "xbox",
+    "titleIds": []
   }
 ]

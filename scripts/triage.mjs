@@ -73,9 +73,9 @@ Reply with one JSON object and nothing else:
     "platforms": subset of ${JSON.stringify(PLATFORMS)} the README says it runs on ("steamdeck" only if Steam Deck is named; "arm" for ARM Linux devices),
     "graphics": graphics APIs or renderers the README names, e.g. ["Vulkan", "Direct3D 12"], or [],
     "games": [{
-      "id": "id of the game from the list below, or null if it is not there",
-      "title": "game title",
-      "console": the original console, ideally one of ${JSON.stringify(CONSOLES)}; name it plainly otherwise, e.g. "gamecube",
+      "id": "id of the game from the list below when it is the same version on the same console, or null",
+      "title": "the title of the version the port runs, keeping words like Remastered, HD or Definitive Edition",
+      "console": the console of that version, ideally one of ${JSON.stringify(CONSOLES)}; name it plainly otherwise, e.g. "gamecube",
       "tier": ${TIERS.map((t) => `"${t}"`).join(" | ")},
       "quote": "the README sentence that states the status, copied character for character as plain text without markdown, or null"
     }],
@@ -86,6 +86,7 @@ Reply with one JSON object and nothing else:
   }
 }
 ${TIER_RULES}
+The game is the exact version whose code the port runs, which is the dump the player has to supply. A remaster or re-release on a newer console is a different game on that console: God of War III Remastered is "ps4", not the PS3 original. Match an id from the list only for that same version.
 "entry" is required when the decision is "accept" and null otherwise.`;
 
 const gameList = () => games.map((g) => `${g.id} | ${g.title} | ${g.console}`).join("\n");

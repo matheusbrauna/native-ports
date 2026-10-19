@@ -11,8 +11,9 @@ export const REPO = /^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/;
 
 const isStr = (v) => typeof v === "string" && v.trim().length > 0;
 
+// Apostrophes vanish rather than split a word: "Dragon's Crown" becomes "dragons-crown".
 export const slugify = (s) =>
-  s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 // Each check returns a list of problems; an empty list means the entry is valid.
 export function checkGame(g) {

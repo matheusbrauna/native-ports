@@ -2121,7 +2121,7 @@
   },
   {
     "slug": "iss-pc",
-    "name": "inFAMOUS Second Son — port nativo para PC",
+    "name": "inFAMOUS Second Son PC Port",
     "repo": "HayatoG/iss_pc",
     "upstream": null,
     "kind": "port",
@@ -2137,8 +2137,8 @@
     "games": [
       {
         "id": "infamous-second-son",
-        "tier": "playable",
-        "source": "README: > **Jogável, em desenvolvimento.** O jogo inicia, chega ao gameplay e passa pelos primeiros capítulos, mas o desempenho ainda é instável (20–30 FPS típicos numa RTX 2060) e há falhas de imagem conhecidas. Veja o [Status](#status)."
+        "tier": "ingame",
+        "source": "README: Jogável, em desenvolvimento. O jogo inicia, chega ao gameplay e passa pelos primeiros capítulos, mas o desempenho ainda é instável (20–30 FPS típicos numa RTX 2060) e há falhas de imagem conhecidas."
       }
     ],
     "notes": {

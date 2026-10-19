@@ -102,5 +102,93 @@
   {
     "repo": "bigmak94/GalaxyQuest",
     "reason": "Rejected on review"
+  },
+  {
+    "repo": "bailo167/awesome-game-mashups",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "TGP482/XboxXBERecomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "MaryNCRT/Ultimate-Mortal-Kombat-3-iOS-Decompiled",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Decryptu/pokerecomp",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "hkmodd/ps2-recomp-Agent-SKILL",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "fearkov/zakuro",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "justxor/awesome-decomp-games-ru",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "OldMcGroin/thegamingemporium",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "wie-project/PS4Recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "oliverjessner/OpenEmperor",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "47PADO47/nfs-mw",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "boburning/portcove",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "bucketcomps/infamous",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "neurocontrarian/recomp-board",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Jstar269/nakagawa-recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "JackRushante/DBZ-Super-Saiya-Densetsu-Rust",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "Sergey004/FNAF1-Recomp-proj",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "Kymie131/openportsgames",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "polaco1782/v64recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "nynjardin/OpenRedRacing",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "Campfirecrucifix/sly2-bevy-of-thieves",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "Comfubar/PS1-Recomp-Ports",
+    "reason": "Likely a tool, list or emulator (matched its description)"
   }
 ]

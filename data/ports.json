@@ -1562,18 +1562,19 @@
     ],
     "graphics": [
       "RT64",
-      "Direct3D 12"
+      "Direct3D 12",
+      "Vulkan"
     ],
     "games": [
       {
         "id": "battletanx-global-assault",
         "tier": "ingame",
-        "source": "README: played through the original menus into campaign gameplay"
+        "source": "README: original menus and campaign gameplay are playable"
       }
     ],
     "notes": {
-      "en": "Windows x64 with RT64 on Direct3D 12; Linux build also available.",
-      "pt-br": "Windows x64 com RT64 sobre Direct3D 12; build para Linux também disponível."
+      "en": "Built from the completed matching decompilation, with optional fog-free visibility and independent turret aiming. Windows x64 release on Direct3D 12; Linux builds from source with Vulkan.",
+      "pt-br": "Feito a partir da decompilação completa e fiel ao original, com visibilidade sem neblina e mira independente da torre opcionais. Release para Windows x64 com Direct3D 12; no Linux, compila-se do código-fonte com Vulkan."
     }
   },
   {

@@ -26,10 +26,10 @@ const example = `{
 ---
 {lang === "en" ? (
   <Prose title={s.nav.submit}>
-    <p class="lede">Know a native port that is missing? Send it in. Every entry is reviewed by hand before it appears.</p>
+    <p class="lede">Know a native port that is missing? Send its GitHub link. Within a day, the discover job reads the README, drafts the entry and answers on your issue; a maintainer reviews it before it appears.</p>
     {(issueUrl || editUrl) && (
       <div class="actions">
-        {issueUrl && <a class="button" href={issueUrl}><Icon name="plus" size={15} />Open a submission issue</a>}
+        {issueUrl && <a class="button" href={issueUrl}><Icon name="plus" size={15} />Submit a GitHub link</a>}
         {editUrl && <a class="button ghost" href={editUrl}><Icon name="fork" size={15} />Edit the list in a pull request</a>}
       </div>
     )}
@@ -40,16 +40,16 @@ const example = `{
       <li><strong>The project's own status.</strong> The status column repeats what the README declares. If the README says nothing, the entry shows "Not stated".</li>
     </ul>
     <h2>Adding it yourself</h2>
-    <p>Entries live in <code>data/ports.json</code>. Add an object like this one, with the game's <code>id</code> from <code>data/games.json</code> (add the game there, with its <code>console</code>, if it is new):</p>
+    <p>Prefer to write the entry? Entries live in <code>data/ports.json</code>. Add an object like this one, with the game's <code>id</code> from <code>data/games.json</code> (add the game there, with its <code>console</code>, if it is new):</p>
     <pre><code>{example}</code></pre>
     <p>Stars, last push, releases and archived state are fetched from GitHub on every build; you do not need to fill them in.</p>
   </Prose>
 ) : (
   <Prose title={s.nav.submit}>
-    <p class="lede">Conhece um port nativo que não está aqui? Envie. Cada entrada é revisada à mão antes de aparecer.</p>
+    <p class="lede">Conhece um port nativo que não está aqui? Envie o link do GitHub. Em até um dia, o discover lê o README, prepara a entrada e responde na sua issue; uma pessoa revisa antes de ela aparecer.</p>
     {(issueUrl || editUrl) && (
       <div class="actions">
-        {issueUrl && <a class="button" href={issueUrl}><Icon name="plus" size={15} />Abrir uma issue de envio</a>}
+        {issueUrl && <a class="button" href={issueUrl}><Icon name="plus" size={15} />Enviar um link do GitHub</a>}
         {editUrl && <a class="button ghost" href={editUrl}><Icon name="fork" size={15} />Editar a lista num pull request</a>}
       </div>
     )}
@@ -60,7 +60,7 @@ const example = `{
       <li><strong>O status do próprio projeto.</strong> A coluna de status repete o que o README declara. Se o README não diz nada, a entrada aparece como "Não informado".</li>
     </ul>
     <h2>Adicionando você mesmo</h2>
-    <p>As entradas ficam em <code>data/ports.json</code>. Adicione um objeto como este, com o <code>id</code> do jogo que está em <code>data/games.json</code> (cadastre o jogo lá, com o <code>console</code>, se ele for novo):</p>
+    <p>Prefere escrever a entrada? As entradas ficam em <code>data/ports.json</code>. Adicione um objeto como este, com o <code>id</code> do jogo que está em <code>data/games.json</code> (cadastre o jogo lá, com o <code>console</code>, se ele for novo):</p>
     <pre><code>{example}</code></pre>
     <p>Estrelas, último push, releases e o estado de arquivado vêm do GitHub a cada build; não é preciso preencher.</p>
   </Prose>

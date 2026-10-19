@@ -8,7 +8,7 @@ appropriate credit: "Native Ports (https://ports.matheusbrauna.com.br), CC BY 4.
 
 Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
 
-Game titles and project names belong to their respective owners. `src/data/github.json` is
-generated from the GitHub API and is not part of the curated data.
+Game titles and project names belong to their respective owners. `src/data/github.json` and
+`data/review-state.json` are generated from the GitHub API and are not part of the curated data.
 
 The site's source code is licensed separately under the MIT License (see `/LICENSE`).

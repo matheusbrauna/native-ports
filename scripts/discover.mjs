@@ -2,9 +2,12 @@
 // It never adds a port: a person, or the triage step in a pull request a person reviews, does that.
 // Candidates are grouped by what their description and topics suggest, since the "native-port"
 // topic covers decompilation-based ports and rewrites as well as native-execution runtimes.
+// In GitHub Actions (GITHUB_REPOSITORY set) it also reads open issues labelled "submission": each
+// one names a repository, which skips the star minimum and the description filters, since a
+// person asked for it. scripts/answer-submissions.mjs replies on the issue after triage.
 // Usage: npm run discover [-- --min-stars 5] [--apply] [--json candidates.json]
 //   --apply  adds the tool/list and rewrite groups to data/discover-ignore.json with a reason
-//   --json   writes the remaining candidates for scripts/triage.mjs
+//   --json   writes the remaining candidates, submissions first, for scripts/triage.mjs
 import { readFile, writeFile } from "node:fs/promises";
 
 const TOPICS = ["static-recompilation", "rexglue", "xenonrecomp", "n64recomp", "ps2recomp", "recompilation", "native-port"];
@@ -21,6 +24,7 @@ const ignored = await readData("discover-ignore.json");
 const pending = await readData("discover-pending.json");
 const known = new Set([...ports.map((p) => p.repo), ...ignored.map((d) => d.repo), ...pending.map((d) => d.repo)].map((r) => r.toLowerCase()));
 
+const API = process.env.GITHUB_API_URL ?? "https://api.github.com";
 const headers = { "User-Agent": "pc-ports-discover", Accept: "application/vnd.github+json" };
 if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 
@@ -47,7 +51,7 @@ const groupOf = (c) => {
 
 const found = new Map();
 for (const topic of TOPICS) {
-  const url = `https://api.github.com/search/repositories?q=${encodeURIComponent(`topic:${topic} stars:>=${minStars} archived:false`)}&sort=updated&per_page=100`;
+  const url = `${API}/search/repositories?q=${encodeURIComponent(`topic:${topic} stars:>=${minStars} archived:false`)}&sort=updated&per_page=100`;
   const res = await fetch(url, { headers });
   if (!res.ok) {
     console.warn(`[discover] ${topic}: HTTP ${res.status}${res.status === 403 ? " (rate limited; set GITHUB_TOKEN)" : ""}`);
@@ -62,7 +66,59 @@ for (const topic of TOPICS) {
   }
 }
 
-const list = [...found.values()].sort((a, b) => b.stars - a.stars);
+// Submissions: the first GitHub repository named in each open "submission" issue not yet answered.
+const MAX_SUBMISSIONS = 10;
+const REPO_LINK = /github\.com\/([A-Za-z0-9-]+\/[A-Za-z0-9._-]+)/i;
+const REPO_NAME = /^\s*([A-Za-z0-9-]+\/[A-Za-z0-9._-]+)\s*$/m;
+const submissions = [];
+if (process.env.GITHUB_REPOSITORY) {
+  const res = await fetch(`${API}/repos/${process.env.GITHUB_REPOSITORY}/issues?labels=submission&state=open&sort=created&direction=asc&per_page=50`, { headers });
+  const issues = res.ok ? await res.json() : [];
+  if (!res.ok) console.warn(`[discover] submissions: HTTP ${res.status}`);
+  const known = (repo) => {
+    const key = repo.toLowerCase();
+    if (ports.some((p) => p.repo.toLowerCase() === key)) return { known: "listed" };
+    const ig = ignored.find((d) => d.repo.toLowerCase() === key);
+    if (ig) return { known: "ignored", reason: ig.reason };
+    const pe = pending.find((d) => d.repo.toLowerCase() === key);
+    if (pe) return { known: "pending", reason: pe.reason };
+    return null;
+  };
+  for (const issue of issues.filter((i) => !i.pull_request && !i.labels.some((l) => l.name === "triaged")).slice(0, MAX_SUBMISSIONS)) {
+    const text = `${issue.title}\n${issue.body ?? ""}`;
+    const name = (text.match(REPO_LINK)?.[1] ?? text.match(REPO_NAME)?.[1] ?? "").replace(/\.git$/, "").replace(/[.]+$/, "");
+    if (!name) {
+      submissions.push({ issue: issue.number, repo: null, problem: "No GitHub repository link found" });
+      continue;
+    }
+    // Checked by the name as written, then again by the canonical name, since GitHub redirects renamed repos.
+    const state = known(name);
+    if (state) {
+      submissions.push({ issue: issue.number, repo: name, ...state });
+      continue;
+    }
+    const r = await fetch(`${API}/repos/${name}`, { headers });
+    if (!r.ok) {
+      submissions.push({ issue: issue.number, repo: name, problem: r.status === 404 ? "Repository not found" : `GitHub returned HTTP ${r.status}` });
+      continue;
+    }
+    const meta = await r.json();
+    const renamed = known(meta.full_name);
+    if (renamed) {
+      submissions.push({ issue: issue.number, repo: meta.full_name, ...renamed });
+      continue;
+    }
+    const twin = submissions.find((c) => c.repo?.toLowerCase() === meta.full_name.toLowerCase());
+    if (twin) {
+      submissions.push({ issue: issue.number, repo: meta.full_name, duplicateOf: twin.issue });
+      continue;
+    }
+    submissions.push({ issue: issue.number, repo: meta.full_name, stars: meta.stargazers_count, pushed: meta.pushed_at.slice(0, 10), description: meta.description ?? "", repoTopics: meta.topics ?? [], topics: ["submission"], group: "submission" });
+  }
+}
+
+const submitted = new Set(submissions.map((c) => c.repo?.toLowerCase()));
+const list = [...found.values()].filter((c) => !submitted.has(c.repo.toLowerCase())).sort((a, b) => b.stars - a.stars);
 for (const c of list) c.group = groupOf(c);
 
 const autoIgnored = list.filter((c) => GROUPS.find((g) => g.id === c.group)?.auto);
@@ -74,7 +130,7 @@ if (apply && autoIgnored.length) {
 const open = apply ? list.filter((c) => !autoIgnored.includes(c)) : list;
 
 if (jsonOut) {
-  const out = open.map(({ topics, ...c }) => ({ ...c, topics: [...topics] }));
+  const out = [...submissions, ...open.map(({ topics, ...c }) => ({ ...c, topics: [...topics] }))];
   await writeFile(jsonOut, JSON.stringify(out, null, 2) + "\n");
 }
 

@@ -9,19 +9,24 @@
 // README that steers the model can at worst produce an entry the reviewer sees in the diff.
 //
 // Env: LLM_BASE_URL (OpenAI-compatible, e.g. https://host/v1), LLM_API_KEY, LLM_MODEL, GITHUB_TOKEN.
-// Usage: node scripts/triage.mjs --candidates candidates.json [--limit 20] [--report triage.md]
+// Usage: node scripts/triage.mjs --candidates candidates.json [--limit 20] [--report triage.md] [--decisions triage.json]
+// Submissions (candidates with an "issue") are all read first and do not count toward the limit;
+// --decisions lists what happened to each one for scripts/answer-submissions.mjs.
 import { readFile, writeFile } from "node:fs/promises";
 import { CONSOLES, PLATFORMS, TIERS, TECHNIQUES, checkGame, checkPort, slugify } from "./lib/schema.mjs";
+import { askJson, llmConfigured, TIER_RULES } from "./lib/llm.mjs";
+import { plain, quoteIn, unmark } from "./lib/text.mjs";
 
 const args = process.argv.slice(2);
 const opt = (name, fallback) => (args.includes(name) ? args[args.indexOf(name) + 1] : fallback);
 const candidatesPath = opt("--candidates");
 const limit = Number(opt("--limit", 20));
 const reportPath = opt("--report", null);
-const { LLM_BASE_URL, LLM_API_KEY, LLM_MODEL, GITHUB_TOKEN, GITHUB_API_URL = "https://api.github.com" } = process.env;
+const decisionsPath = opt("--decisions", null);
+const { GITHUB_TOKEN, GITHUB_API_URL = "https://api.github.com" } = process.env;
 
 if (!candidatesPath) throw new Error("--candidates is required");
-if (!LLM_BASE_URL || !LLM_API_KEY || !LLM_MODEL) {
+if (!llmConfigured) {
   console.log("[triage] LLM_BASE_URL, LLM_API_KEY or LLM_MODEL is not set; skipping.");
   process.exit(0);
 }
@@ -80,14 +85,13 @@ Reply with one JSON object and nothing else:
     }
   }
 }
-Tiers repeat what the README declares: "playable" (beatable start to finish), "ingame" (gets into gameplay with problems), "intro" (menus or intro only), "wip" (in progress, not yet in game), "unrated" (the README states no status; quote is then null). Never infer a tier the README does not state.
-"playable" needs the README to say the game can be finished. A README that calls itself playable (in any language: "jogável", "jugable") but only reaches the first chapters, or is still in development with known problems, is "ingame".
+${TIER_RULES}
 "entry" is required when the decision is "accept" and null otherwise.`;
 
 const gameList = () => games.map((g) => `${g.id} | ${g.title} | ${g.console}`).join("\n");
 
-async function ask(candidate, readme) {
-  const user = `Repository: ${candidate.repo}
+function ask(candidate, readme) {
+  return askJson(SYSTEM, `Repository: ${candidate.repo}
 Description: ${candidate.description || "(none)"}
 Topics: ${candidate.repoTopics.join(", ") || "(none)"}
 
@@ -97,61 +101,11 @@ ${gameList()}
 README (first ${README_CHARS} characters):
 <<<README
 ${readme.slice(0, README_CHARS)}
-README>>>`;
-  const messages = [{ role: "system", content: SYSTEM }, { role: "user", content: user }];
-  // One retry with the parse error, since cheaper models sometimes wrap or truncate JSON.
-  for (let attempt = 0; attempt < 2; attempt++) {
-    const res = await fetch(`${LLM_BASE_URL.replace(/\/$/, "")}/chat/completions`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${LLM_API_KEY}` },
-      body: JSON.stringify({ model: LLM_MODEL, temperature: 0, stream: false, messages }),
-      signal: AbortSignal.timeout(180_000),
-    });
-    if (!res.ok) throw new Error(`model endpoint: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`);
-    const data = readCompletion(await res.text());
-    const text = data.choices?.[0]?.message?.content ?? "";
-    try {
-      return { answer: parseJson(text), model: data.model ?? LLM_MODEL };
-    } catch (e) {
-      messages.push({ role: "assistant", content: text }, { role: "user", content: `That was not valid JSON (${e.message}). Reply with the JSON object only.` });
-    }
-  }
-  return { answer: null, model: LLM_MODEL };
+README>>>`);
 }
-
-// Some gateways (OmniRoute combos among them) stream server-sent events even when asked not to;
-// join the deltas back into one completion.
-function readCompletion(body) {
-  if (!body.trimStart().startsWith("data:")) return JSON.parse(body);
-  let model;
-  let content = "";
-  for (const line of body.split("\n")) {
-    const payload = line.replace(/^data:\s*/, "").trim();
-    if (!line.startsWith("data:") || !payload || payload === "[DONE]") continue;
-    const chunk = JSON.parse(payload);
-    model ??= chunk.model;
-    content += chunk.choices?.[0]?.delta?.content ?? chunk.choices?.[0]?.message?.content ?? "";
-  }
-  return { model, choices: [{ message: { content } }] };
-}
-
-function parseJson(text) {
-  const body = text.replace(/<think>[\s\S]*?<\/think>/g, "").replace(/```(?:json)?/g, "");
-  const start = body.indexOf("{");
-  const end = body.lastIndexOf("}");
-  if (start < 0 || end < start) throw new Error("no JSON object found");
-  return JSON.parse(body.slice(start, end + 1));
-}
-
-// Markdown, typography and spacing differ between a README and a model's copy of it.
-// The stored citation is plain text: links keep their label, emphasis and quote marks go.
-const unmark = (s) => s.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/^\s*>\s*/gm, "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
-const plain = (s) =>
-  unmark(s).toLowerCase().replace(/[#|\\[\]]/g, "").replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, "-").replace(/\s+/g, " ").trim();
 
 // Turns the model's answer into an entry, or explains why a person has to look.
 function buildEntry(repo, entry, readme) {
-  const readmePlain = plain(readme);
   const newGames = [];
   const portGames = [];
   for (const g of entry.games ?? []) {
@@ -170,7 +124,7 @@ function buildEntry(repo, entry, readme) {
     let source = null;
     if (tier !== "unrated") {
       const quote = typeof g.quote === "string" ? g.quote.trim() : "";
-      if (plain(quote).length < 12 || !readmePlain.includes(plain(quote))) return { problem: `Tier "${tier}" for ${g.title} cites a quote that is not in the README: "${quote.slice(0, 120)}"` };
+      if (!quoteIn(quote, readme)) return { problem: `Tier "${tier}" for ${g.title} cites a quote that is not in the README: "${quote.slice(0, 120)}"` };
       source = `README: ${unmark(quote)}`;
     }
     portGames.push({ id, tier, source });
@@ -198,11 +152,38 @@ function buildEntry(repo, entry, readme) {
 }
 
 const report = [];
-const record = (c, outcome, reason, model = "") => report.push({ repo: c.repo, outcome, reason, model });
-const queue = [...candidates].sort((a, b) => Number(a.group === "decomp") - Number(b.group === "decomp") || b.stars - a.stars).slice(0, limit);
+const record = (c, outcome, reason, model = "") => report.push({ repo: c.repo, issue: c.issue ?? null, outcome, reason, model });
+const submitted = candidates.filter((c) => c.issue);
+const found = candidates.filter((c) => !c.issue).sort((a, b) => Number(a.group === "decomp") - Number(b.group === "decomp") || b.stars - a.stars);
+const queue = [...submitted, ...found.slice(0, limit)];
 let stopped = null;
 
 for (const c of queue) {
+  // Submissions the catalog already has an answer for, or that name no usable repository.
+  if (c.problem) {
+    record(c, "invalid", c.problem);
+    continue;
+  }
+  if (c.duplicateOf) {
+    record(c, "duplicate", `Already submitted in #${c.duplicateOf}`);
+    continue;
+  }
+  if (c.known === "listed") {
+    record(c, "listed", "Already in the catalog");
+    continue;
+  }
+  if (c.known === "pending") {
+    record(c, "pending", `Already waiting for a maintainer: ${c.reason}`);
+    continue;
+  }
+  if (c.known === "ignored") {
+    // Someone asked for a repo that was turned down: a person should look again.
+    const i = ignored.findIndex((d) => d.repo.toLowerCase() === c.repo.toLowerCase());
+    if (i >= 0) ignored.splice(i, 1);
+    pending.push({ repo: c.repo, reason: `Submitted in #${c.issue} after being rejected: ${c.reason}` });
+    record(c, "pending", `It had been rejected (${c.reason}); a maintainer will look again`);
+    continue;
+  }
   try {
     const repo = await github(`/repos/${c.repo}`);
     if (!repo) {
@@ -251,6 +232,8 @@ for (const c of queue) {
       if (built.problem) {
         pending.push({ repo: c.repo, reason: `Triage accepted it, but: ${built.problem}` });
         record(c, "pending", built.problem, model);
+      } else if (ports.some((p) => p.repo.toLowerCase() === built.port.repo.toLowerCase())) {
+        record(c, "listed", "Already in the catalog");
       } else {
         games.push(...built.newGames);
         ports.push(built.port);
@@ -269,7 +252,7 @@ await writeData("discover-ignore.json", ignored);
 await writeData("discover-pending.json", pending);
 
 const counts = Object.groupBy(report, (r) => r.outcome);
-const summary = ["added", "rejected", "pending", "skipped"].map((k) => `${counts[k]?.length ?? 0} ${k}`).join(", ");
+const summary = ["added", "rejected", "pending", "skipped", "listed", "duplicate", "invalid"].filter((k) => counts[k] || ["added", "rejected", "pending", "skipped"].includes(k)).map((k) => `${counts[k]?.length ?? 0} ${k}`).join(", ");
 const lines = [
   `## Triage: ${summary}`,
   "",
@@ -277,8 +260,9 @@ const lines = [
   "",
   "| Repository | Outcome | Model | Reason |",
   "|---|---|---|---|",
-  ...report.map((r) => `| [${r.repo}](https://github.com/${r.repo}) | ${r.outcome} | ${r.model || "-"} | ${r.reason.replace(/\|/g, "\\|").replace(/\n/g, " ")} |`),
+  ...report.map((r) => `| ${r.repo ? `[${r.repo}](https://github.com/${r.repo})` : "-"}${r.issue ? ` (#${r.issue})` : ""} | ${r.outcome} | ${r.model || "-"} | ${r.reason.replace(/\|/g, "\\|").replace(/\n/g, " ")} |`),
 ];
 const md = lines.join("\n") + "\n";
 if (reportPath) await writeFile(reportPath, md);
+if (decisionsPath) await writeFile(decisionsPath, JSON.stringify(report.filter((r) => r.issue), null, 2) + "\n");
 console.log(md);

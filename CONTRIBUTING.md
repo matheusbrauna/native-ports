@@ -10,7 +10,11 @@ Thanks for helping keep the catalog accurate. Most contributions are a single en
 
 Tools on their own (recompilers, SDKs), curated lists, decompilations, emulators and ports whose only target is another console or the browser are out of scope.
 
-## Adding a port
+## Suggesting a port
+
+The quickest way is the [submission form](../../issues/new?template=new-port.yml): paste the GitHub link. Within a day, the discover job checks whether the repo is already listed, has a model read its README, adds the drafted entry to its daily pull request and replies on the issue. The issue closes when a maintainer merges that pull request.
+
+## Adding a port yourself
 
 1. If the game is new, add it to `data/games.json` with its `console` (`xbox360`, `xbox`, `ps4`, `n64`, `wii`, `ps1`, `ps2`, `psp`, `32x`, `dreamcast`, `naomi2`).
 2. Add the port to `data/ports.json`:
@@ -42,12 +46,14 @@ Tools on their own (recompilers, SDKs), curated lists, decompilations, emulators
 A daily workflow searches the scene's GitHub topics for repositories that are not catalogued yet:
 
 1. `scripts/discover.mjs --apply` adds the obvious misses (tools, lists, emulators, rewrites, judged from the description) to `data/discover-ignore.json` with a reason.
-2. `scripts/triage.mjs` has a language model read each remaining README, up to `TRIAGE_LIMIT` a day (20 by default). It adds accepted ports to `data/ports.json`, rejected repos to `discover-ignore.json`, and holds anything it cannot settle in `data/discover-pending.json`. The code checks every draft entry and drops a tier whose quote is not in the README.
-3. The changes arrive as one pull request, `discover/daily`, which a person reviews before merging. The remaining candidates and the pending repos are listed in the tracking issue labelled `discover`.
+   Open issues labelled `submission` are read too: each names one repository, skips the star minimum and the description filters, and is answered on the issue by `scripts/answer-submissions.mjs`.
+2. `scripts/triage.mjs` has a language model read each remaining README (submissions first, outside the limit), up to `TRIAGE_LIMIT` a day (20 by default). It adds accepted ports to `data/ports.json`, rejected repos to `discover-ignore.json`, and holds anything it cannot settle in `data/discover-pending.json`. The code checks every draft entry and drops a tier whose quote is not in the README.
+3. `scripts/review.mjs` re-checks the ports already listed. Every port, every day, without a model: the repo must still exist and not be archived, and its status quote must still be in the README. When a README changed and lost the quote, the model re-reads it and drafts the tier, quote, platforms, graphics and notes again (up to `REVIEW_LIMIT` a day, 10 by default); the pull request shows each field before and after. Unavailable and archived repos are only reported, never removed. `data/review-state.json` remembers which entries were verified and, for older entries that cite the README in summary, which README they describe.
+4. The changes arrive as one pull request, `discover/daily`, which a person reviews before merging. The remaining candidates and the pending repos are listed in the tracking issue labelled `discover`.
 
 Both decision files hold `{ "repo": "owner/name", "reason": "..." }`. To settle a pending repo, move it to `ports.json` or `discover-ignore.json`. Running `npm run discover` locally prints the same list without changing anything.
 
-The model step needs an OpenAI-compatible endpoint: the repository secrets `LLM_BASE_URL` (for example `https://host/v1`) and `LLM_API_KEY`, and the variable `LLM_MODEL`. Without them the step is skipped.
+The model step needs an OpenAI-compatible endpoint: the repository secrets `LLM_BASE_URL` (for example `https://host/v1`) and `LLM_API_KEY`, and the variable `LLM_MODEL`. Without them the step is skipped and submissions wait unanswered.
 
 ## Code changes
 

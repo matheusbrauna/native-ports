@@ -138,7 +138,7 @@ const searchText = (e: Entry) =>
                   data-tier={e.tier}
                   data-platforms={e.port.platforms.join(" ")}
                   data-stars={f?.stars ?? 0}
-                  data-pushed={f ? Date.parse(f.pushedAt) : 0}
+                  data-pushed={f?.pushedAt ? Date.parse(f.pushedAt) : 0}
                   data-name={e.port.name.toLowerCase()}
                   data-upstream={e.port.kind === "upstream" ? "1" : undefined}
                   data-text={searchText(e)}
@@ -162,9 +162,9 @@ const searchText = (e: Entry) =>
                     <span title={s.techniques[e.port.technique].hint}>{toolLabel(e)}</span>
                   </td>
                   <td class="c-tier"><span class="tier" data-tier={e.tier} title={e.source ?? s.tiers[e.tier].hint}>{s.tiers[e.tier].label}</span></td>
-                  <td class="c-num c-stars data" data-label={s.cols.stars}>{f ? formatNumber(f.stars, lang) : "—"}</td>
+                  <td class="c-num c-stars data" data-label={s.cols.stars}>{f?.stars != null ? formatNumber(f.stars, lang) : "—"}</td>
                   <td class="c-num c-pushed data" data-label={s.cols.pushed}>
-                    {f ? <time datetime={f.pushedAt} title={formatDate(f.pushedAt, lang)}>{age(f.pushedAt, now, f.partial)}</time> : "—"}
+                    {f?.pushedAt ? <time datetime={f.pushedAt} title={formatDate(f.pushedAt, lang)}>{age(f.pushedAt, now, f.partial)}</time> : "—"}
                   </td>
                 </tr>
               );

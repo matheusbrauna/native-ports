@@ -60,8 +60,8 @@ const f = port.facts;
         <div><dt>{d.graphics}</dt><dd>{port.graphics.length ? port.graphics.join(", ") : d.unknown}</dd></div>
         {port.upstream && <div><dt>{d.upstream}</dt><dd><a class="data" href={repoUrl(port.upstream)}>{port.upstream}</a></dd></div>}
         {f?.ahead != null && <div><dt>{d.ahead}</dt><dd class="data">{formatNumber(f.ahead, lang)}</dd></div>}
-        <div><dt>{d.stars}</dt><dd class="data">{f ? formatNumber(f.stars, lang) : d.unknown}</dd></div>
-        <div><dt>{d.pushed}</dt><dd class="data">{f ? <time datetime={f.pushedAt}>{formatDate(f.pushedAt, lang)}</time> : d.unknown}</dd></div>
+        <div><dt>{d.stars}</dt><dd class="data">{f?.stars != null ? formatNumber(f.stars, lang) : d.unknown}</dd></div>
+        <div><dt>{d.pushed}</dt><dd class="data">{f?.pushedAt ? <time datetime={f.pushedAt}>{formatDate(f.pushedAt, lang)}</time> : d.unknown}</dd></div>
         <div><dt>{d.release}</dt><dd>{f?.release ? <a class="data" href={f.release.url}>{f.release.tag}</a> : <span class="muted">{f?.partial || !f ? d.notChecked : d.noRelease}</span>}</dd></div>
         <div><dt>{d.license}</dt><dd class="data">{f?.license ?? d.unknown}</dd></div>
       </dl>

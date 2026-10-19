@@ -65,8 +65,8 @@ const lede =
             <td><span class="tier" data-tier={e.tier} title={e.source ?? s.tiers[e.tier].hint}>{s.tiers[e.tier].label}</span></td>
             <td class="hide-sm sub">{e.port.platforms.map((p) => s.platforms[p]).join(", ") || "—"}</td>
             <td class="hide-sm sub">{e.port.toolchain ?? s.techniques[e.port.technique].label}</td>
-            <td class="num data sub">{f ? formatNumber(f.stars, lang) : "—"}</td>
-            <td class="num data sub hide-sm">{f ? <time datetime={f.pushedAt} title={formatDate(f.pushedAt, lang)}>{age(f.pushedAt, now, f.partial)}</time> : "—"}</td>
+            <td class="num data sub">{f?.stars != null ? formatNumber(f.stars, lang) : "—"}</td>
+            <td class="num data sub hide-sm">{f?.pushedAt ? <time datetime={f.pushedAt} title={formatDate(f.pushedAt, lang)}>{age(f.pushedAt, now, f.partial)}</time> : "—"}</td>
           </tr>
         );
       })}

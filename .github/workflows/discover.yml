@@ -52,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Triage the rest with a language model
         # Skipped inside the script when the LLM_* settings are missing.
-        run: node scripts/triage.mjs --candidates candidates.json --limit "${{ inputs.limit || vars.TRIAGE_LIMIT || 20 }}" --report triage.md
+        run: node scripts/triage.mjs --candidates candidates.json --limit "${{ inputs.limit || vars.TRIAGE_LIMIT || 20 }}" --report triage.md --decisions triage.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
@@ -67,6 +67,7 @@ jobs:
       - name: Publish to the job summary
         run: cat triage.md candidates.md 2>/dev/null >> "$GITHUB_STEP_SUMMARY" || true
       - name: Open or update the pull request
+        id: pr
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -85,14 +86,28 @@ jobs:
             cat triage.md 2>/dev/null || echo "The model step did not run; only the automatic ignores changed."
           } > pr.md
           number=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
+          # Submission issues this pull request settles, kept from earlier runs since the body is rewritten.
+          { [ -n "$number" ] && gh pr view "$number" --json body --jq .body | grep -E '^(Closes|Refs) #[0-9]+$'; node scripts/answer-submissions.mjs triage.json --closes; } | sort -u > links.txt || true
+          if [ -s links.txt ]; then { echo; echo "### Submissions"; echo; cat links.txt; } >> pr.md; fi
           if [ -n "$number" ]; then
             gh pr edit "$number" --body-file pr.md
           else
             gh pr create --head "$BRANCH" --base main --title "Discover: triaged port candidates" --body-file pr.md
+            number=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
           fi
+          echo "number=$number" >> "$GITHUB_OUTPUT"
           # Pushes made with GITHUB_TOKEN do not trigger pull_request workflows, so start CI by hand:
           # its "validate" check lands on the same commit and satisfies the ruleset on main.
           gh workflow run ci.yml --ref "$BRANCH"
+      - name: Answer submission issues
+        run: |
+          gh label create triaged --color c5def5 --description "Submission answered by the discover job" --force
+          node scripts/answer-submissions.mjs triage.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          SITE_URL: https://ports.matheusbrauna.com.br
       - name: Update the tracking issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

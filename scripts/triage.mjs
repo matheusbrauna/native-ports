@@ -9,7 +9,9 @@
 // README that steers the model can at worst produce an entry the reviewer sees in the diff.
 //
 // Env: LLM_BASE_URL (OpenAI-compatible, e.g. https://host/v1), LLM_API_KEY, LLM_MODEL, GITHUB_TOKEN.
-// Usage: node scripts/triage.mjs --candidates candidates.json [--limit 20] [--report triage.md]
+// Usage: node scripts/triage.mjs --candidates candidates.json [--limit 20] [--report triage.md] [--decisions triage.json]
+// Submissions (candidates with an "issue") are all read first and do not count toward the limit;
+// --decisions lists what happened to each one for scripts/answer-submissions.mjs.
 import { readFile, writeFile } from "node:fs/promises";
 import { CONSOLES, PLATFORMS, TIERS, TECHNIQUES, checkGame, checkPort, slugify } from "./lib/schema.mjs";
 
@@ -18,6 +20,7 @@ const opt = (name, fallback) => (args.includes(name) ? args[args.indexOf(name) +
 const candidatesPath = opt("--candidates");
 const limit = Number(opt("--limit", 20));
 const reportPath = opt("--report", null);
+const decisionsPath = opt("--decisions", null);
 const { LLM_BASE_URL, LLM_API_KEY, LLM_MODEL, GITHUB_TOKEN, GITHUB_API_URL = "https://api.github.com" } = process.env;
 
 if (!candidatesPath) throw new Error("--candidates is required");
@@ -198,11 +201,38 @@ function buildEntry(repo, entry, readme) {
 }
 
 const report = [];
-const record = (c, outcome, reason, model = "") => report.push({ repo: c.repo, outcome, reason, model });
-const queue = [...candidates].sort((a, b) => Number(a.group === "decomp") - Number(b.group === "decomp") || b.stars - a.stars).slice(0, limit);
+const record = (c, outcome, reason, model = "") => report.push({ repo: c.repo, issue: c.issue ?? null, outcome, reason, model });
+const submitted = candidates.filter((c) => c.issue);
+const found = candidates.filter((c) => !c.issue).sort((a, b) => Number(a.group === "decomp") - Number(b.group === "decomp") || b.stars - a.stars);
+const queue = [...submitted, ...found.slice(0, limit)];
 let stopped = null;
 
 for (const c of queue) {
+  // Submissions the catalog already has an answer for, or that name no usable repository.
+  if (c.problem) {
+    record(c, "invalid", c.problem);
+    continue;
+  }
+  if (c.duplicateOf) {
+    record(c, "duplicate", `Already submitted in #${c.duplicateOf}`);
+    continue;
+  }
+  if (c.known === "listed") {
+    record(c, "listed", "Already in the catalog");
+    continue;
+  }
+  if (c.known === "pending") {
+    record(c, "pending", `Already waiting for a maintainer: ${c.reason}`);
+    continue;
+  }
+  if (c.known === "ignored") {
+    // Someone asked for a repo that was turned down: a person should look again.
+    const i = ignored.findIndex((d) => d.repo.toLowerCase() === c.repo.toLowerCase());
+    if (i >= 0) ignored.splice(i, 1);
+    pending.push({ repo: c.repo, reason: `Submitted in #${c.issue} after being rejected: ${c.reason}` });
+    record(c, "pending", `It had been rejected (${c.reason}); a maintainer will look again`);
+    continue;
+  }
   try {
     const repo = await github(`/repos/${c.repo}`);
     if (!repo) {
@@ -251,6 +281,8 @@ for (const c of queue) {
       if (built.problem) {
         pending.push({ repo: c.repo, reason: `Triage accepted it, but: ${built.problem}` });
         record(c, "pending", built.problem, model);
+      } else if (ports.some((p) => p.repo.toLowerCase() === built.port.repo.toLowerCase())) {
+        record(c, "listed", "Already in the catalog");
       } else {
         games.push(...built.newGames);
         ports.push(built.port);
@@ -269,7 +301,7 @@ await writeData("discover-ignore.json", ignored);
 await writeData("discover-pending.json", pending);
 
 const counts = Object.groupBy(report, (r) => r.outcome);
-const summary = ["added", "rejected", "pending", "skipped"].map((k) => `${counts[k]?.length ?? 0} ${k}`).join(", ");
+const summary = ["added", "rejected", "pending", "skipped", "listed", "duplicate", "invalid"].filter((k) => counts[k] || ["added", "rejected", "pending", "skipped"].includes(k)).map((k) => `${counts[k]?.length ?? 0} ${k}`).join(", ");
 const lines = [
   `## Triage: ${summary}`,
   "",
@@ -277,8 +309,9 @@ const lines = [
   "",
   "| Repository | Outcome | Model | Reason |",
   "|---|---|---|---|",
-  ...report.map((r) => `| [${r.repo}](https://github.com/${r.repo}) | ${r.outcome} | ${r.model || "-"} | ${r.reason.replace(/\|/g, "\\|").replace(/\n/g, " ")} |`),
+  ...report.map((r) => `| ${r.repo ? `[${r.repo}](https://github.com/${r.repo})` : "-"}${r.issue ? ` (#${r.issue})` : ""} | ${r.outcome} | ${r.model || "-"} | ${r.reason.replace(/\|/g, "\\|").replace(/\n/g, " ")} |`),
 ];
 const md = lines.join("\n") + "\n";
 if (reportPath) await writeFile(reportPath, md);
+if (decisionsPath) await writeFile(decisionsPath, JSON.stringify(report.filter((r) => r.issue), null, 2) + "\n");
 console.log(md);

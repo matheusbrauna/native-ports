@@ -1,68 +1,23 @@
 name: Submit a port
-description: Suggest a native port (static recompilation or native execution) for the catalog.
+description: Send a GitHub link to a native port (static recompilation or native execution). The daily discover job reads it and answers here.
 title: "[port] "
 labels: [submission]
 body:
   - type: markdown
     attributes:
       value: |
+        Paste the repository link and that's it. Within a day, the discover job reads its README, drafts the catalog entry and replies here; a maintainer reviews it before it goes live.
+
         Only source-code repositories are listed. Never link game files, ROMs, disc images, firmware or keys.
   - type: input
     id: repo
     attributes:
-      label: Repository
-      description: owner/name on GitHub
-      placeholder: owner/repository
-    validations:
-      required: true
-  - type: input
-    id: game
-    attributes:
-      label: Game(s) and original console
-      placeholder: Forza Horizon (Xbox 360)
-    validations:
-      required: true
-  - type: dropdown
-    id: technique
-    attributes:
-      label: Technique
-      options:
-        - Static recompilation
-        - Native execution (bbport-style runtime)
-    validations:
-      required: true
-  - type: input
-    id: toolchain
-    attributes:
-      label: Toolchain, if any
-      placeholder: ReXGlue, XenonRecomp, N64Recomp, bbport…
-  - type: checkboxes
-    id: platforms
-    attributes:
-      label: Platforms
-      options:
-        - label: Windows
-        - label: Linux
-        - label: Steam Deck
-        - label: macOS
-        - label: Android
-        - label: iOS
-        - label: ARM
-  - type: dropdown
-    id: status
-    attributes:
-      label: Status its README declares
-      options:
-        - Playable
-        - In-game
-        - Intro / menus only
-        - In progress
-        - Not stated
+      label: GitHub repository
+      placeholder: https://github.com/owner/repository
     validations:
       required: true
   - type: textarea
-    id: changes
+    id: notes
     attributes:
-      label: What it does (and, for a fork, what it changes)
-    validations:
-      required: true
+      label: Notes for the maintainer (optional)
+      description: Anything the README doesn't say, such as which game and console it covers or what a fork adds.

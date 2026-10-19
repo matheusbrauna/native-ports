@@ -62,7 +62,7 @@ Reply with one JSON object and nothing else:
   "decision": "accept" | "reject" | "unsure",
   "reason": "one short English sentence explaining the decision",
   "entry": null or {
-    "name": "project name as the README presents it",
+    "name": "the project's name in English, as the catalog shows it; translate a non-English title (\"port nativo para PC\" becomes \"PC Port\")",
     "technique": ${TECHNIQUES.map((t) => `"${t}"`).join(" | ")},
     "toolchain": "main toolchain name, or null",
     "platforms": subset of ${JSON.stringify(PLATFORMS)} the README says it runs on ("steamdeck" only if Steam Deck is named; "arm" for ARM Linux devices),
@@ -72,7 +72,7 @@ Reply with one JSON object and nothing else:
       "title": "game title",
       "console": the original console, ideally one of ${JSON.stringify(CONSOLES)}; name it plainly otherwise, e.g. "gamecube",
       "tier": ${TIERS.map((t) => `"${t}"`).join(" | ")},
-      "quote": "the README sentence that states the status, copied character for character, or null"
+      "quote": "the README sentence that states the status, copied character for character as plain text without markdown, or null"
     }],
     "notes": {
       "en": "one or two sentences on what stands out: features, platforms, state",
@@ -81,6 +81,7 @@ Reply with one JSON object and nothing else:
   }
 }
 Tiers repeat what the README declares: "playable" (beatable start to finish), "ingame" (gets into gameplay with problems), "intro" (menus or intro only), "wip" (in progress, not yet in game), "unrated" (the README states no status; quote is then null). Never infer a tier the README does not state.
+"playable" needs the README to say the game can be finished. A README that calls itself playable (in any language: "jogável", "jugable") but only reaches the first chapters, or is still in development with known problems, is "ingame".
 "entry" is required when the decision is "accept" and null otherwise.`;
 
 const gameList = () => games.map((g) => `${g.id} | ${g.title} | ${g.console}`).join("\n");
@@ -143,8 +144,10 @@ function parseJson(text) {
 }
 
 // Markdown, typography and spacing differ between a README and a model's copy of it.
+// The stored citation is plain text: links keep their label, emphasis and quote marks go.
+const unmark = (s) => s.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/^\s*>\s*/gm, "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
 const plain = (s) =>
-  s.toLowerCase().replace(/[`*_>#|\\[\]]/g, "").replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, "-").replace(/\s+/g, " ").trim();
+  unmark(s).toLowerCase().replace(/[#|\\[\]]/g, "").replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, "-").replace(/\s+/g, " ").trim();
 
 // Turns the model's answer into an entry, or explains why a person has to look.
 function buildEntry(repo, entry, readme) {
@@ -168,7 +171,7 @@ function buildEntry(repo, entry, readme) {
     if (tier !== "unrated") {
       const quote = typeof g.quote === "string" ? g.quote.trim() : "";
       if (plain(quote).length < 12 || !readmePlain.includes(plain(quote))) return { problem: `Tier "${tier}" for ${g.title} cites a quote that is not in the README: "${quote.slice(0, 120)}"` };
-      source = `README: ${quote.replace(/\s+/g, " ")}`;
+      source = `README: ${unmark(quote)}`;
     }
     portGames.push({ id, tier, source });
   }

@@ -190,5 +190,9 @@
   {
     "repo": "Comfubar/PS1-Recomp-Ports",
     "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "EstebanPdN/zelda-alttp-3ds",
+    "reason": "Triage: This project targets only another console (Nintendo 3DS) and is based on a reverse-engineered C source port."
   }
 ]

@@ -194,5 +194,17 @@
   {
     "repo": "EstebanPdN/zelda-alttp-3ds",
     "reason": "Triage: This project targets only another console (Nintendo 3DS) and is based on a reverse-engineered C source port."
+  },
+  {
+    "repo": "andrebrumdev/gow2-recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "sp00nznet/redalert2-recomp",
+    "reason": "Triage: Command & Conquer: Red Alert 2 is a PC game, which is out of scope for this catalog of console game ports."
+  },
+  {
+    "repo": "whylurking/IsaacRecomp",
+    "reason": "Triage: The project is a static recompilation of a PC Flash game rather than a console game."
   }
 ]

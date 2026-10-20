@@ -10,5 +10,33 @@
   {
     "repo": "raulzrrs/letsgo-recomp",
     "reason": "Triage accepted it, but: Console \"switch\" is not in the catalog yet (Pokémon: Let's Go, Eevee!)"
+  },
+  {
+    "repo": "griches/EternalDarknessRecomp",
+    "reason": "Triage accepted it, but: Console \"gamecube\" is not in the catalog yet (Eternal Darkness: Sanity's Requiem)"
+  },
+  {
+    "repo": "Nycolazs/WindWakerHD-Android-Plus",
+    "reason": "Triage accepted it, but: Console \"wii u\" is not in the catalog yet (The Legend of Zelda: The Wind Waker HD)"
+  },
+  {
+    "repo": "mr-finster/vf2-recomp",
+    "reason": "Triage accepted it, but: Console \"sega model 2\" is not in the catalog yet (Virtua Fighter 2)"
+  },
+  {
+    "repo": "tmcleroy/cps2recomp",
+    "reason": "Triage accepted it, but: Console \"cps2\" is not in the catalog yet (Street Fighter Alpha)"
+  },
+  {
+    "repo": "mr-finster/vf1-recomp",
+    "reason": "Triage accepted it, but: Console \"sega model 1\" is not in the catalog yet (Virtua Fighter)"
+  },
+  {
+    "repo": "SulphurS16/ACFA-Port",
+    "reason": "Triage accepted it, but: Console \"ps3\" is not in the catalog yet (ARMORED CORE for Answer)"
+  },
+  {
+    "repo": "RussoPhone/tomodachi-ltd-recomp",
+    "reason": "Triage accepted it, but: Console \"switch\" is not in the catalog yet (Tomodachi Life: Living the Dream)"
   }
 ]

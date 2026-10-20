@@ -462,5 +462,71 @@
     "title": "Dragon's Crown Pro",
     "console": "ps4",
     "titleIds": []
+  },
+  {
+    "id": "fifa-street-2012",
+    "title": "FIFA Street (2012)",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "ninja-gaiden-black",
+    "title": "Ninja Gaiden Black",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "the-lord-of-the-rings-the-return-of-the-king",
+    "title": "The Lord of the Rings: The Return of the King",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "the-lord-of-the-rings-the-two-towers",
+    "title": "The Lord of the Rings: The Two Towers",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "star-wars-episode-iii-revenge-of-the-sith",
+    "title": "Star Wars: Episode III - Revenge of the Sith",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "naruto-shippuden-ultimate-ninja-storm-generations",
+    "title": "Naruto Shippuden: Ultimate Ninja Storm Generations",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "gravity-rush-2",
+    "title": "Gravity Rush 2",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "dead-or-alive-3",
+    "title": "Dead or Alive 3",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "automobili-lamborghini",
+    "title": "Automobili Lamborghini",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "goldeneye-007",
+    "title": "GoldenEye 007",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "wet",
+    "title": "WET",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

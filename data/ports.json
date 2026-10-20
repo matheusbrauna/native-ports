@@ -668,8 +668,8 @@
     "games": [
       {
         "id": "project-gotham-racing-4",
-        "tier": "wip",
-        "source": "README: far from polished and finished; v2 in the works"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -1193,13 +1193,13 @@
     "games": [
       {
         "id": "def-jam-fight-for-ny",
-        "tier": "playable",
-        "source": "README: the Windows build is playable; still an early release"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "Menus, Story mode and fights at 60 fps; Direct3D 11 on Windows and Vulkan on macOS, Linux and Steam Deck.",
-      "pt-br": "Menus, modo história e lutas a 60 fps; Direct3D 11 no Windows e Vulkan no macOS, Linux e Steam Deck."
+      "en": "The port is now mature with all game functionality working at 60 fps, featuring widescreen support, local multiplayer, and optional HD textures across Windows, macOS, Linux, and Steam Deck.",
+      "pt-br": "O port agora está maduro com todas as funcionalidades do jogo funcionando a 60 fps, contando com suporte a widescreen, multijogador local e texturas HD opcionais no Windows, macOS, Linux e Steam Deck."
     }
   },
   {
@@ -1531,21 +1531,28 @@
     "platforms": [
       "windows",
       "linux",
-      "android"
+      "arm",
+      "android",
+      "steamdeck"
     ],
     "graphics": [
-      "RT64"
+      "RT64",
+      "Vulkan",
+      "D3D12",
+      "D3D11",
+      "D3D10",
+      "Metal"
     ],
     "games": [
       {
         "id": "star-wars-rogue-squadron",
         "tier": "playable",
-        "source": "Description: fully playable; README: work in progress, heavily AI-assisted"
+        "source": "README: The game is completely playable from beginning to end."
       }
     ],
     "notes": {
-      "en": "Longer draw distance, experimental frame interpolation, touch controls on Android and online two-player co-op.",
-      "pt-br": "Distância de visão maior, interpolação de quadros experimental, controles de toque no Android e co-op online para dois."
+      "en": "Features extended draw distance, frame interpolation, experimental ray tracing, Android touch controls, and online two-player co-op.",
+      "pt-br": "Conta com maior distância de visão, interpolação de quadros, ray tracing experimental, controles de toque no Android e co-op online para dois jogadores."
     }
   },
   {
@@ -2057,12 +2064,12 @@
       {
         "id": "sonic-free-riders",
         "tier": "ingame",
-        "source": "README: work in progress; the game boots, its menus work and races can be played"
+        "source": "README: The game boots, its menus work and races can be played, but many parts of it are untested and it may stop or misbehave."
       }
     ],
     "notes": {
-      "en": "Plays without Kinect through emulated motion input, or with a real Kinect or a webcam on Windows. Custom VRM avatars, HedgeModManager mods and LAN online play across Windows, Linux and Android.",
-      "pt-br": "Joga sem Kinect com entrada de movimento emulada, ou com um Kinect de verdade ou uma webcam no Windows. Avatares VRM personalizados, mods do HedgeModManager e jogo online em rede local entre Windows, Linux e Android."
+      "en": "Plays without Kinect through emulated controls, or with a real Kinect or webcam on Windows. Supports custom VRM avatars, HedgeModManager mods, and local split-screen multiplayer.",
+      "pt-br": "Joga sem Kinect por meio de controles emulados, ou com um Kinect real ou webcam no Windows. Suporta avatares VRM personalizados, mods do HedgeModManager e multijogador local em tela dividida."
     }
   },
   {
@@ -2253,6 +2260,310 @@
     "notes": {
       "en": "A native PS4 runtime port of Dragon's Crown Pro for Windows and Linux, including Steam Deck support.",
       "pt-br": "Um port nativo de runtime do jogo de PS4 Dragon's Crown Pro para Windows e Linux, incluindo suporte ao Steam Deck."
+    }
+  },
+  {
+    "slug": "fifa-street-pc-port",
+    "name": "ReStreet",
+    "repo": "samuelit0davila/fifa-street-pc-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "fifa-street-2012",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of FIFA Street (2012) for Windows PC using ReXGlue, featuring Direct3D 12 and Vulkan graphics, a custom launcher, and online multiplayer support.",
+      "pt-br": "Recompilação estática de FIFA Street (2012) para PC Windows usando ReXGlue, contando com suporte a Direct3D 12 e Vulkan, launcher próprio e multijogador online."
+    }
+  },
+  {
+    "slug": "ngbrecomp",
+    "name": "Ninja Gaiden Black Recompiled",
+    "repo": "gamboozino/ngbrecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows",
+      "macos",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "ninja-gaiden-black",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Ninja Gaiden Black for Xbox featuring a custom Vulkan renderer, widescreen and ultrawide support, high resolutions, and mouse and keyboard controls.",
+      "pt-br": "Recompilação estática de Ninja Gaiden Black do Xbox com renderizador Vulkan próprio, suporte a telas widescreen e ultrawide, altas resoluções e controles por teclado e mouse."
+    }
+  },
+  {
+    "slug": "armyoftworecompilation",
+    "name": "Army of Two",
+    "repo": "OpenPortroid/ArmyOfTwoRecompilation",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "army-of-two",
+        "tier": "playable",
+        "source": "README: The whole game is finishable in solo or co-op without crashes."
+      }
+    ],
+    "notes": {
+      "en": "Features online co-op without EA servers, local split-screen, native Direct3D 12 renderer, and full mouse and keyboard controls.",
+      "pt-br": "Possui coop online sem dependência dos servidores da EA, tela dividida local, renderizador nativo Direct3D 12 e suporte completo a mouse e teclado."
+    }
+  },
+  {
+    "slug": "athelas",
+    "name": "Athelas",
+    "repo": "Shagg88/Athelas",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBE-Recomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan",
+      "Direct3D 8"
+    ],
+    "games": [
+      {
+        "id": "the-lord-of-the-rings-the-return-of-the-king",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "the-lord-of-the-rings-the-two-towers",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Launcher bundling static recompilation ports for the Xbox versions of The Return of the King and The Two Towers created with XboxXBE-Recomp, as well as enhancements for the native PC release.",
+      "pt-br": "Launcher que inclui portas de recompilação estática das versões de Xbox de The Return of the King e The Two Towers criadas com XboxXBE-Recomp, além de melhorias para a versão nativa de PC."
+    }
+  },
+  {
+    "slug": "swrots-pc",
+    "name": "SWROTS-PC",
+    "repo": "jedijosh920/SWROTS-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 9"
+    ],
+    "games": [
+      {
+        "id": "star-wars-episode-iii-revenge-of-the-sith",
+        "tier": "ingame",
+        "source": "README: The game boots, plays its movies and menus, and is playable through level changes, restarts and saving."
+      }
+    ],
+    "notes": {
+      "en": "Native 32-bit Windows port of the original Xbox game featuring widescreen support, loose-file modding, playable Yoda, and story co-op.",
+      "pt-br": "Port nativo em 32 bits para Windows do jogo original do Xbox, contando com suporte a widescreen, mods em arquivos soltos, Yoda jogável e modo co-op na campanha."
+    }
+  },
+  {
+    "slug": "naruto-storm-generations-port-nativo",
+    "name": "Naruto Shippuden: Ultimate Ninja Storm Generations Native Port",
+    "repo": "Masterllgod/naruto-storm-generations-port-nativo",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "android",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "naruto-shippuden-ultimate-ninja-storm-generations",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 version for Android and Windows using XenonRecomp and Vulkan.",
+      "pt-br": "Recompilação estática da versão de Xbox 360 para Android e Windows usando XenonRecomp e Vulkan."
+    }
+  },
+  {
+    "slug": "gr2-pc",
+    "name": "Gravity Rush 2",
+    "repo": "HayatoG/gr2_pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "gravity-rush-2",
+        "tier": "ingame",
+        "source": "README: Gravity Rush 2 (PS4, CUSA03694, update 01.11) rodando no PC com imagem, som e controle, a 30 FPS estáveis e sem emulador de CPU."
+      }
+    ],
+    "notes": {
+      "en": "Native PS4 runtime port of Gravity Rush 2 running on Linux and Windows via Vulkan, featuring motion controls, shader cache management, and a bilingual launcher.",
+      "pt-br": "Port nativo via runtime de Gravity Rush 2 do PS4 para Linux e Windows via Vulkan, com suporte a sensor de movimento, gerenciamento de cache de shaders e launcher bilíngue."
+    }
+  },
+  {
+    "slug": "doa3-recomp",
+    "name": "Dead or Alive 3",
+    "repo": "parkerallan/doa3-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "dead-or-alive-3",
+        "tier": "playable",
+        "source": "README: All game modes are fully playable"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Dead or Alive 3 for Windows using xboxrecomp, featuring internal resolution scaling up to 1440p, 60 FPS cap, and added online multiplayer.",
+      "pt-br": "Recompilação estática de Dead or Alive 3 para Windows usando xboxrecomp, com suporte a escala de resolução interna até 1440p, limite de 60 FPS e modo multijogador online."
+    }
+  },
+  {
+    "slug": "automobililamborghini-recomp",
+    "name": "Automobili Lamborghini: Recompiled",
+    "repo": "alondero/automobililamborghini-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "android"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "automobili-lamborghini",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of the N64 racing game supporting modern displays, enhanced controller options, custom save imports, and texture packs.",
+      "pt-br": "Uma recompilação estática do jogo de corrida do N64 com suporte a telas modernas, opções avançadas de controles, importação de saves e pacotes de textura."
+    }
+  },
+  {
+    "slug": "goldeneye-007-xbla-pc-recomp",
+    "name": "GoldenEye 007 XBLA PC Recomp",
+    "repo": "CaiusCodes/GoldenEye-007-XBLA-PC-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "goldeneye-007",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the unreleased Xbox 360/XBLA remaster using ReXGlue, featuring up to 4K resolution, 60 FPS, toggleable original/enhanced graphics, keyboard and mouse support, and LAN multiplayer.",
+      "pt-br": "Recompilação estática da remasterização não lançada do Xbox 360/XBLA usando ReXGlue, trazendo suporte a até 4K, 60 FPS, alternância entre gráficos originais e aprimorados, controles por teclado e mouse e multijogador via LAN."
+    }
+  },
+  {
+    "slug": "wetrecomp",
+    "name": "WET",
+    "repo": "nikolaygorb/WetRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "wet",
+        "tier": "playable",
+        "source": "README: Fully playable: video, audio, gameplay, achievements, and progression all work."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of WET for Xbox 360 targeting Windows and Linux using the ReXGlue SDK.",
+      "pt-br": "Recompilação estática de WET do Xbox 360 para Windows e Linux usando o ReXGlue SDK."
     }
   }
 ]

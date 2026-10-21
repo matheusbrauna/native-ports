@@ -16,7 +16,7 @@ The quickest way is the [submission form](../../issues/new?template=new-port.yml
 
 ## Adding a port yourself
 
-1. If the game is new, add it to `data/games.json` with its `console` (`xbox360`, `xbox`, `ps4`, `n64`, `wii`, `ps1`, `ps2`, `psp`, `32x`, `dreamcast`, `naomi2`).
+1. If the game is new, add it to `data/games.json` with its `console` (`xbox360`, `xbox`, `ps4`, `n64`, `gamecube`, `wii`, `switch`, `ps1`, `ps2`, `ps3`, `psp`, `32x`, `dreamcast`, `naomi2`). `switch` is the original Nintendo Switch, even when the game also runs on Switch 2; Switch 2 games, including Nintendo Switch 2 Editions, are not in the catalog yet.
 2. Add the port to `data/ports.json`:
 
 ```json

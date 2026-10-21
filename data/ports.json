@@ -531,19 +531,22 @@
     "toolchain": "ReXGlue",
     "platforms": [
       "linux",
+      "macos",
       "windows"
     ],
-    "graphics": [],
+    "graphics": [
+      "Vulkan"
+    ],
     "games": [
       {
         "id": "forza-horizon",
-        "tier": "ingame",
-        "source": "README: early work in progress; boot, menus, free roam, festival events and races work"
+        "tier": "playable",
+        "source": "README: The whole game, single player: the opening drive to the end of the festival has been played through on ReImagined: free roam, festival events and races, showcase events, audio and saves."
       }
     ],
     "notes": {
-      "en": "Forza Horizon rebuilt around the modern Horizon experience: shared online free roam, leaderboards, 120/144 fps and a self-hostable server.",
-      "pt-br": "Forza Horizon reconstruído em torno da experiência moderna da série: free roam online compartilhado, rankings, 120/144 fps e servidor próprio."
+      "en": "Forza Horizon rebuilt around the modern Horizon experience, now playable from start to finish with high frame rates, online free roam, custom servers, and experimental macOS support.",
+      "pt-br": "Forza Horizon reconstruído em torno da experiência moderna da série, agora jogável do início ao fim com altas taxas de quadros, free roam online, servidores próprios e suporte experimental ao macOS."
     }
   },
   {
@@ -797,17 +800,19 @@
     "platforms": [
       "windows"
     ],
-    "graphics": [],
+    "graphics": [
+      "Direct3D 12"
+    ],
     "games": [
       {
         "id": "dragon-ball-z-burst-limit",
         "tier": "unrated",
-        "source": "README: alpha releases"
+        "source": null
       }
     ],
     "notes": {
-      "en": "Windows build with its own start screen, in-game settings, online features and experimental DLSS and DLAA.",
-      "pt-br": "Build para Windows com tela inicial própria, configurações no jogo, recursos online e DLSS e DLAA experimentais."
+      "en": "Windows build with a Direct3D 12 renderer, custom start screen, native resolution options, DLSS and FSR upscaling, and online features.",
+      "pt-br": "Build para Windows com renderizador Direct3D 12, tela inicial personalizada, opções de resolução nativa, upscaling DLSS e FSR e recursos online."
     }
   },
   {
@@ -1238,17 +1243,21 @@
       "ios",
       "macos"
     ],
-    "graphics": [],
+    "graphics": [
+      "Metal",
+      "Direct3D 9",
+      "ANGLE"
+    ],
     "games": [
       {
         "id": "halo-combat-evolved",
         "tier": "playable",
-        "source": "README: preview, playable on real hardware"
+        "source": "README: HaloPad is a preview: playable on real hardware, with frame pacing and some Xbox graphics still being tuned."
       }
     ],
     "notes": {
-      "en": "Halo: Combat Evolved on iPhone, iPad and Apple silicon Macs, with local and online play.",
-      "pt-br": "Halo: Combat Evolved no iPhone, iPad e Macs com Apple silicon, com jogo local e online."
+      "en": "Port of Halo: Combat Evolved for iOS and Apple silicon Macs, supporting both the original Xbox campaign and PC Custom Edition multiplayer.",
+      "pt-br": "Port de Halo: Combat Evolved para iOS e Macs com Apple silicon, com suporte à campanha do Xbox original e ao multijogador do Custom Edition de PC."
     }
   },
   {
@@ -1900,12 +1909,12 @@
       {
         "id": "knuckles-chaotix",
         "tier": "playable",
-        "source": "README: levels are playable with sound; Windows built and played"
+        "source": "README: Boots to the title screen; menus, character select and the stage-select hall work; the levels are playable, with sound (Z80 driver, YM2612, PSG and PWM)."
       }
     ],
     "notes": {
-      "en": "Native C++ with true widescreen; Windows played by the author, Android verified on an emulator, Linux and macOS configured.",
-      "pt-br": "C++ nativo com widescreen de verdade; Windows jogado pelo autor, Android verificado num emulador, Linux e macOS configurados."
+      "en": "Static recompilation of Sega 32X Knuckles' Chaotix into native C++ featuring true widescreen rendering in levels, achievements, time attack, and touch controls.",
+      "pt-br": "Recompilação estática de Knuckles' Chaotix do Sega 32X para C++ nativo com suporte a widescreen real nas fases, conquistas, modo time attack e controles de toque."
     }
   },
   {
@@ -2564,6 +2573,376 @@
     "notes": {
       "en": "Static recompilation of WET for Xbox 360 targeting Windows and Linux using the ReXGlue SDK.",
       "pt-br": "Recompilação estática de WET do Xbox 360 para Windows e Linux usando o ReXGlue SDK."
+    }
+  },
+  {
+    "slug": "windowsmash",
+    "name": "WindowSmash",
+    "repo": "SNO2207/WindowSmash",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "graphics": [
+      "DirectX 11"
+    ],
+    "games": [
+      {
+        "id": "super-smash-bros-ultimate",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native porting project for Super Smash Bros. Ultimate using static AArch64 recompilation, featuring DirectX 11 rendering and local wireless netplay.",
+      "pt-br": "Um projeto de port nativo para Super Smash Bros. Ultimate usando recompilação estática de AArch64, com renderização em DirectX 11 e netplay sem fio local."
+    }
+  },
+  {
+    "slug": "letsgo-recomp",
+    "name": "Let's Go Recomp",
+    "repo": "raulzrrs/letsgo-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "LAS Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "pokemon-lets-go-eevee",
+        "tier": "ingame",
+        "source": "README: The game hasn't been played from start to finish on this port yet."
+      },
+      {
+        "id": "pokemon-lets-go-pikachu",
+        "tier": "ingame",
+        "source": "README: The game hasn't been played from start to finish on this port yet."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Pokémon: Let's Go, Eevee! and Pikachu! via static recompilation using LAS Recomp, supporting high resolutions, FSR 3.1, unlockable frame rates, and mods.",
+      "pt-br": "Port nativo para Windows de Pokémon: Let's Go, Eevee! e Pikachu! via recompilação estática usando LAS Recomp, com suporte a altas resoluções, FSR 3.1, taxas de quadros desbloqueadas e mods."
+    }
+  },
+  {
+    "slug": "eternaldarknessrecomp",
+    "name": "Eternal Darkness: Sanity's Requiem",
+    "repo": "griches/EternalDarknessRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "DolRecomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows",
+      "macos"
+    ],
+    "graphics": [
+      "Metal",
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "eternal-darkness-sanitys-requiem",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Eternal Darkness: Sanity's Requiem using DolRecomp and GXRuntime, featuring widescreen support, new camera modes, sharp baked shadows, and HD texture packs.",
+      "pt-br": "Recompilação estática de Eternal Darkness: Sanity's Requiem usando DolRecomp e GXRuntime, contando com suporte a widescreen, novos modos de câmera, sombras pré-calculadas nítidas e pacotes de textura em HD."
+    }
+  },
+  {
+    "slug": "ssf2t-hd-remix-recompiled",
+    "name": "Super Street Fighter II Turbo HD Remix",
+    "repo": "saulob/ssf2t-hd-remix-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "super-street-fighter-ii-turbo-hd-remix",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 XBLA release using ReXGlue, featuring a custom launcher, offline achievements, widescreen/aspect ratio options, and experimental Linux and Steam Deck support.",
+      "pt-br": "Recompilação estática do título de Xbox 360 (XBLA) usando ReXGlue, trazendo launcher próprio, conquistas offline, opções de proporção de tela e suporte experimental a Linux e Steam Deck."
+    }
+  },
+  {
+    "slug": "gears-of-war-2-pc-port",
+    "name": "Gears of War 2",
+    "repo": "santiquiroz/gears-of-war-2-pc-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "android"
+    ],
+    "graphics": [
+      "DirectX 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "gears-of-war-2",
+        "tier": "ingame",
+        "source": "README: Act 1 playable with keyboard and mouse or a controller"
+      }
+    ],
+    "notes": {
+      "en": "Unofficial static recompilation of the retail Xbox 360 game using ReXGlue, featuring Act 1 gameplay, FSR upscaling, texture replacement, system link co-op, and an experimental Android build.",
+      "pt-br": "Recompilação estática não oficial do jogo do Xbox 360 usando ReXGlue, com jogabilidade no Ato 1, upscaling FSR, substituição de texturas, co-op via System Link e uma versão experimental para Android."
+    }
+  },
+  {
+    "slug": "crackdown-xbox360-recompiled",
+    "name": "Crackdown",
+    "repo": "saulob/crackdown-xbox360-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "crackdown",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Crackdown for Xbox 360 using ReXGlue, featuring high frame rates, ultrawide display support, keyboard and mouse controls, and experimental Linux and Steam Deck support.",
+      "pt-br": "Recompilação estática de Crackdown do Xbox 360 usando ReXGlue, com suporte a altas taxas de quadros, telas ultrawide, controles de teclado e mouse, e suporte experimental para Linux e Steam Deck."
+    }
+  },
+  {
+    "slug": "hard-corps-uprising-recompiled",
+    "name": "Hard Corps: Uprising",
+    "repo": "saulob/hard-corps-uprising-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "hard-corps-uprising",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 XBLA static recompilation port for Windows, Linux, and Steam Deck using ReXGlue, featuring modern display options, cheats, and a launcher.",
+      "pt-br": "Port por recompilação estática de Xbox 360 XBLA para Windows, Linux e Steam Deck usando ReXGlue, com opções modernas de exibição, cheats e launcher."
+    }
+  },
+  {
+    "slug": "shadowofthecolossus-pc-framegen",
+    "name": "Shadow of the Colossus",
+    "repo": "nakaionyt/ShadowOfTheColossus-PC-FrameGen",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "shadow-of-the-colossus",
+        "tier": "ingame",
+        "source": "README: A full run from start to end with all 16 colossi has not been verified on this exact build yet."
+      }
+    ],
+    "notes": {
+      "en": "A native PS4 runtime port for Windows featuring DLSS-G and FSR 3 frame generation support.",
+      "pt-br": "Um port nativo via runtime do PS4 para Windows com suporte a geração de quadros via DLSS-G e FSR 3."
+    }
+  },
+  {
+    "slug": "fuc-recomp",
+    "name": "FateUnlimitedCodesRecomp",
+    "repo": "elprogramadorloco-arch/fuc-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PSPRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "fate-unlimited-codes",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Fate/unlimited codes for Windows based on PSPRecomp, aiming to combine the PSP gameplay base with PS2 assets.",
+      "pt-br": "Uma recompilação estática de Fate/unlimited codes para Windows baseada no PSPRecomp, com o objetivo de combinar a base do PSP com os elementos visuais do PS2."
+    }
+  },
+  {
+    "slug": "soulcalibur2hd-recomp",
+    "name": "Soulcalibur II HD Online",
+    "repo": "n0madic/Soulcalibur2HD-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "Metal",
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "soulcalibur-ii-hd-online",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PS3 port for macOS, Windows, and Linux based on ps3recomp with support for Metal, Vulkan, and Direct3D 12 rendering.",
+      "pt-br": "Port nativo de PS3 para macOS, Windows e Linux baseado no ps3recomp, com suporte a renderização em Metal, Vulkan e Direct3D 12."
+    }
+  },
+  {
+    "slug": "wipeout-pc",
+    "name": "WipEout Omega Collection",
+    "repo": "AbdelmoumenDeghbouche/wipeout_pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "wipeout-omega-collection",
+        "tier": "ingame",
+        "source": "README: Status: early development. Menus and races (HD and 2048) play above 60 FPS."
+      }
+    ],
+    "notes": {
+      "en": "A native PS4 runtime port for Windows based on the gow3_pc framework, running both HD and 2048 races above 60 FPS.",
+      "pt-br": "Um port nativo via runtime de PS4 para Windows baseado na estrutura do gow3_pc, executando corridas do HD e do 2048 acima de 60 FPS."
+    }
+  },
+  {
+    "slug": "gow-psp-recomp",
+    "name": "God of War PSP",
+    "repo": "DrummingBird1/gow-psp-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "god-of-war-chains-of-olympus",
+        "tier": "ingame",
+        "source": "README: No full playthrough of either game yet, so expect bugs late in a game."
+      },
+      {
+        "id": "god-of-war-ghost-of-sparta",
+        "tier": "ingame",
+        "source": "README: No full playthrough of either game yet, so expect bugs late in a game."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of both PSP God of War games to Windows, featuring high frame rates, high resolution, HDR, and texture replacement support.",
+      "pt-br": "Port via recompilação estática de ambos os jogos de God of War do PSP para Windows, com suporte a altas taxas de quadros, altas resoluções, HDR e substituição de texturas."
+    }
+  },
+  {
+    "slug": "celosia",
+    "name": "Shadow of the Colossus",
+    "repo": "HenryKun55/celosia",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal",
+      "OpenGL ES"
+    ],
+    "games": [
+      {
+        "id": "shadow-of-the-colossus-ps2",
+        "tier": "ingame",
+        "source": "README: New Game, intro, riding Agro, gameplay | ✅"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Shadow of the Colossus for PS2 using PS2Recomp, featuring custom native renderers for Metal and OpenGL ES on macOS and PS Vita.",
+      "pt-br": "Recompilação estática de Shadow of the Colossus do PS2 usando PS2Recomp, contando com renderizadores nativos em Metal e OpenGL ES no macOS e PS Vita."
     }
   }
 ]

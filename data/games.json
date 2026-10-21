@@ -528,5 +528,95 @@
     "title": "WET",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "super-smash-bros-ultimate",
+    "title": "Super Smash Bros. Ultimate",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "pokemon-lets-go-eevee",
+    "title": "Pokémon: Let's Go, Eevee!",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "pokemon-lets-go-pikachu",
+    "title": "Pokémon: Let's Go, Pikachu!",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "eternal-darkness-sanitys-requiem",
+    "title": "Eternal Darkness: Sanity's Requiem",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "super-street-fighter-ii-turbo-hd-remix",
+    "title": "Super Street Fighter II Turbo HD Remix",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "gears-of-war-2",
+    "title": "Gears of War 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "crackdown",
+    "title": "Crackdown",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "hard-corps-uprising",
+    "title": "Hard Corps: Uprising",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-of-the-colossus",
+    "title": "Shadow of the Colossus",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "fate-unlimited-codes",
+    "title": "Fate/unlimited codes",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "soulcalibur-ii-hd-online",
+    "title": "Soulcalibur II HD Online",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "wipeout-omega-collection",
+    "title": "WipEout Omega Collection",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "god-of-war-chains-of-olympus",
+    "title": "God of War: Chains of Olympus",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "god-of-war-ghost-of-sparta",
+    "title": "God of War: Ghost of Sparta",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-of-the-colossus-ps2",
+    "title": "Shadow of the Colossus",
+    "console": "ps2",
+    "titleIds": []
   }
 ]

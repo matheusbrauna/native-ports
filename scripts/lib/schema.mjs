@@ -1,7 +1,7 @@
 // Rules for data/*.json entries, shared by validate-data.mjs and triage.mjs.
 // Allowed values mirror src/lib/catalog.ts; update both together.
 
-export const CONSOLES = ["ps4", "xbox360", "xbox", "n64", "wii", "ps1", "ps2", "psp", "32x", "dreamcast", "naomi2"];
+export const CONSOLES = ["ps4", "xbox360", "xbox", "n64", "gamecube", "wii", "switch", "ps1", "ps2", "ps3", "psp", "32x", "dreamcast", "naomi2"];
 export const PLATFORMS = ["linux", "steamdeck", "windows", "macos", "android", "ios", "arm"];
 export const TIERS = ["playable", "ingame", "intro", "wip", "unrated"];
 export const KINDS = ["upstream", "fork", "port"];

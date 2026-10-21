@@ -86,7 +86,7 @@ Reply with one JSON object and nothing else:
   }
 }
 ${TIER_RULES}
-The game is the exact version whose code the port runs, which is the dump the player has to supply. A remaster or re-release on a newer console is a different game on that console: God of War III Remastered is "ps4", not the PS3 original. Match an id from the list only for that same version.
+The game is the exact version whose code the port runs, which is the dump the player has to supply. A remaster or re-release on a newer console is a different game on that console: God of War III Remastered is "ps4", not the PS3 original. A game released for the original Nintendo Switch is "switch" even when it also runs on Switch 2; only a Switch 2 game, including a "Nintendo Switch 2 Edition", is "switch2". Match an id from the list only for that same version.
 "entry" is required when the decision is "accept" and null otherwise.`;
 
 const gameList = () => games.map((g) => `${g.id} | ${g.title} | ${g.console}`).join("\n");

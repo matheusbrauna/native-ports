@@ -206,5 +206,21 @@
   {
     "repo": "whylurking/IsaacRecomp",
     "reason": "Triage: The project is a static recompilation of a PC Flash game rather than a console game."
+  },
+  {
+    "repo": "sp00nznet/dcrecomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Conker64Recomp/conker64-recompiled",
+    "reason": "Triage: The project is a custom C++ engine and reverse-engineering toolkit that does not yet execute recompiled code or run the game."
+  },
+  {
+    "repo": "TanookiStudios/decomp-buddy",
+    "reason": "Triage: It is a manager and installer tool for game ports rather than a native game port itself."
+  },
+  {
+    "repo": "mr-finster/stunts-hd",
+    "reason": "Triage: The repository ports a DOS PC game rather than a console game."
   }
 ]

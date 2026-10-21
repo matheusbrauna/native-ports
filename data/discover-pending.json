@@ -18,5 +18,21 @@
   {
     "repo": "mr-finster/vf1-recomp",
     "reason": "Triage accepted it, but: Console \"sega model 1\" is not in the catalog yet (Virtua Fighter)"
+  },
+  {
+    "repo": "james2doyle/ffta-recomp",
+    "reason": "Triage accepted it, but: Console \"gba\" is not in the catalog yet (Final Fantasy Tactics Advance)"
+  },
+  {
+    "repo": "mstan/DragonBallZBuusFuryRecomp",
+    "reason": "Triage accepted it, but: Console \"gba\" is not in the catalog yet (Dragon Ball Z: Buu's Fury)"
+  },
+  {
+    "repo": "kittycache9/OpenSA2",
+    "reason": "Triage accepted it, but: Console \"pc\" is not in the catalog yet (Sonic Adventure 2)"
+  },
+  {
+    "repo": "mr-finster/vf3-recomp",
+    "reason": "Triage accepted it, but: Console \"sega-model-3\" is not in the catalog yet (Virtua Fighter 3)"
   }
 ]

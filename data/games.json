@@ -618,5 +618,71 @@
     "title": "Shadow of the Colossus",
     "console": "ps2",
     "titleIds": []
+  },
+  {
+    "id": "driveclub",
+    "title": "Driveclub",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "killzone",
+    "title": "Killzone",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "2014-fifa-world-cup-brazil",
+    "title": "2014 FIFA World Cup Brazil",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "monster-hunter-freedom-unite",
+    "title": "Monster Hunter Freedom Unite",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "call-of-duty-3",
+    "title": "Call of Duty 3",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "naruto-rise-of-a-ninja",
+    "title": "Naruto: Rise of a Ninja",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "socom-ii-u-s-navy-seals",
+    "title": "SOCOM II: U.S. Navy SEALs",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "space-channel-5",
+    "title": "Space Channel 5",
+    "console": "dreamcast",
+    "titleIds": []
+  },
+  {
+    "id": "midtown-madness-3",
+    "title": "Midtown Madness 3",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "stuntman-ignition",
+    "title": "Stuntman: Ignition",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "saints-row",
+    "title": "Saints Row",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

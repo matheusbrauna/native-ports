@@ -41,8 +41,8 @@
     "games": [
       {
         "id": "bloodborne",
-        "tier": "playable",
-        "source": "README: experimental, playable"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -251,12 +251,12 @@
       {
         "id": "bloodborne",
         "tier": "playable",
-        "source": "README: experimental, playable (based on bbport 0.4)"
+        "source": "README: Playable, experimental."
       }
     ],
     "notes": {
-      "en": "Apple Silicon port rendering through Vulkan on Metal. About 45 to 60 FPS at 1440p with FSR 3.1 on an M5 Max; experimental MetalFX.",
-      "pt-br": "Port para Apple Silicon que renderiza via Vulkan sobre Metal. Cerca de 45 a 60 FPS em 1440p com FSR 3.1 num M5 Max; MetalFX experimental."
+      "en": "Apple Silicon port updated to bbport 0.6, rendering through Vulkan on Metal. Runs around 60 FPS at 1440p with FSR 3.1 or MetalFX on an M5 Max.",
+      "pt-br": "Port para Apple Silicon atualizado para o bbport 0.6, renderizando via Vulkan sobre Metal. Roda a cerca de 60 FPS em 1440p com FSR 3.1 ou MetalFX num M5 Max."
     },
     "technique": "runtime",
     "toolchain": "bbport"
@@ -409,33 +409,33 @@
     "games": [
       {
         "id": "bloodborne",
-        "tier": "playable",
-        "source": "README: saves, several areas, sound, pad"
+        "tier": "ingame",
+        "source": "README: | Bloodborne (1.09) | CUSA03173 | playable |"
       },
       {
         "id": "atelier-ryza",
         "tier": "ingame",
-        "source": "README: title menu, prologue, field with the player in control, sound"
+        "source": "README: | Atelier Ryza | CUSA16458 | playable |"
       },
       {
         "id": "atelier-ayesha-dx",
         "tier": "ingame",
-        "source": "README: intro movie, title menu, opening scenes, field, atelier, sound"
+        "source": "README: | Atelier Ayesha DX | CUSA16921 | playable |"
       },
       {
         "id": "tales-of-symphonia-remastered",
-        "tier": "ingame",
-        "source": "README: title screen, the first room, sound"
+        "tier": "unrated",
+        "source": null
       },
       {
         "id": "saga-emerald-beyond",
-        "tier": "intro",
-        "source": "README: title screen, first story scenes with dialogue, sound"
+        "tier": "unrated",
+        "source": null
       },
       {
         "id": "astrea",
-        "tier": "intro",
-        "source": "README: the intro's story panels, sound"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -508,12 +508,15 @@
       "macos",
       "android"
     ],
-    "graphics": [],
+    "graphics": [
+      "vulkan",
+      "metal"
+    ],
     "games": [
       {
         "id": "forza-horizon",
-        "tier": "playable",
-        "source": "README: playable preview; expect some rendering bugs and slowdowns"
+        "tier": "ingame",
+        "source": "README: Playable preview. Expect some rendering bugs and slowdowns."
       }
     ],
     "notes": {
@@ -1013,7 +1016,7 @@
       {
         "id": "perfect-dark-zero",
         "tier": "playable",
-        "source": "README: fully playable on Windows, with video, audio, gameplay, achievements and saves"
+        "source": "README: Fully playable on Windows: video, audio, gameplay, achievements and saves."
       }
     ],
     "notes": {
@@ -1109,19 +1112,23 @@
     "technique": "recomp",
     "toolchain": "ReXGlue",
     "platforms": [
-      "windows"
+      "windows",
+      "android"
     ],
-    "graphics": [],
+    "graphics": [
+      "D3D12",
+      "Vulkan"
+    ],
     "games": [
       {
         "id": "spider-man-edge-of-time",
         "tier": "unrated",
-        "source": "README: V2 beta 4.1"
+        "source": null
       }
     ],
     "notes": {
-      "en": "Windows edition with PC controls, settings, localization, achievements and mod support.",
-      "pt-br": "Edição para Windows com controles de PC, configurações, localização, conquistas e suporte a mods."
+      "en": "Windows and Android native port of Spider-Man: Edge of Time featuring PC and touch controls, 4K remastering, local achievements, six languages, and optional DLSS 5.",
+      "pt-br": "Porte nativo para Windows e Android de Spider-Man: Edge of Time com controles de PC e toque, remasterização em 4K, conquistas locais, seis idiomas e DLSS 5 opcional."
     }
   },
   {
@@ -2943,6 +2950,406 @@
     "notes": {
       "en": "Static recompilation of Shadow of the Colossus for PS2 using PS2Recomp, featuring custom native renderers for Metal and OpenGL ES on macOS and PS Vita.",
       "pt-br": "Recompilação estática de Shadow of the Colossus do PS2 usando PS2Recomp, contando com renderizadores nativos em Metal e OpenGL ES no macOS e PS Vita."
+    }
+  },
+  {
+    "slug": "driveclub-port",
+    "name": "Driveclub",
+    "repo": "BlackLineInteractive/Driveclub-Port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "Metal",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "driveclub",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native PS4 runtime port of Driveclub for macOS (Metal 3) and Windows (Vulkan), running the game's x86-64 code directly.",
+      "pt-br": "Um port nativo via runtime do Driveclub de PS4 para macOS (Metal 3) e Windows (Vulkan), executando o código x86-64 do jogo diretamente."
+    }
+  },
+  {
+    "slug": "driveclub-recomp",
+    "name": "DriveClub",
+    "repo": "OverkillLabs3/driveclub-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "driveclub",
+        "tier": "ingame",
+        "source": "README: Playable from the menus through races, photo mode and saves"
+      }
+    ],
+    "notes": {
+      "en": "Native PS4 runtime port for Windows using Vulkan, featuring DLSS and FSR support, unlocked frame rates, and force feedback for steering wheels.",
+      "pt-br": "Port nativo de PS4 via runtime para Windows usando Vulkan, com suporte a DLSS e FSR, taxa de quadros desbloqueada e force feedback para volantes."
+    }
+  },
+  {
+    "slug": "opensmash-ultimate-windowsmash",
+    "name": "WindowSmash",
+    "repo": "OpenSmash-Ultimate/WindowSmash",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 11"
+    ],
+    "games": [
+      {
+        "id": "super-smash-bros-ultimate",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native port of Super Smash Bros. Ultimate built via static AArch64 recompilation, supporting Windows, Linux, macOS, and local wireless netplay.",
+      "pt-br": "Um port nativo de Super Smash Bros. Ultimate construído via recompilação estática de AArch64, com suporte a Windows, Linux, macOS e multijogador local sem fio."
+    }
+  },
+  {
+    "slug": "killzonerecomp",
+    "name": "Killzone",
+    "repo": "drakolordx7/KillzoneRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "D3D11",
+      "D3D12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "killzone",
+        "tier": "ingame",
+        "source": "README: Boot, menus, profile creation and the first mission's gameplay are verified in automated runs."
+      }
+    ],
+    "notes": {
+      "en": "Statically recompiles Killzone (PS2) using PS2Recomp and linked PCSX2 libraries, adding high frame rate support, mouse aim, and ultrawide resolutions.",
+      "pt-br": "Recompila estaticamente Killzone (PS2) usando o PS2Recomp e bibliotecas do PCSX2, adicionando suporte a altas taxas de quadros, mira no mouse e resoluções ultrawide."
+    }
+  },
+  {
+    "slug": "fifa-world-cup-2014-recompiled",
+    "name": "2014 FIFA World Cup Brazil: Recompiled",
+    "repo": "HossEz/fifa-world-cup-2014-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "2014-fifa-world-cup-brazil",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "An unofficial Windows port of the Xbox 360 game recompiled using ReXGlue. Features a built-in launcher with updates, settings, and game dump verification.",
+      "pt-br": "Um port não oficial para Windows do jogo de Xbox 360 recompilado com ReXGlue. Inclui um launcher próprio com suporte a atualizações, configurações e verificação do dump do jogo."
+    }
+  },
+  {
+    "slug": "god-of-war-native-port",
+    "name": "God of War",
+    "repo": "Waffle565/God-Of-War-Native-Port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL 4.3"
+    ],
+    "games": [
+      {
+        "id": "god-of-war",
+        "tier": "ingame",
+        "source": "README: Latest zone check (4 save slots, ~2 minutes each): all zones reach gameplay with no runtime errors, fps 60 / 60 / 60 / 60, save test passes."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of God of War (PS2) for Windows using PS2Recomp with a custom OpenGL 4.3 renderer and native VU1/IOP execution.",
+      "pt-br": "Uma recompilação estática de God of War (PS2) para Windows usando PS2Recomp com renderizador OpenGL 4.3 próprio e execução nativa de VU1 e IOP."
+    }
+  },
+  {
+    "slug": "mhforever",
+    "name": "MHForever",
+    "repo": "Mango77x/MHForever",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "monster-hunter-freedom-unite",
+        "tier": "playable",
+        "source": "README: It is early software: according to the maintainer's testing, single player can be played from start to finish, but expect rough edges and bugs."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Monster Hunter Freedom Unite for PSP to Windows, playable from start to finish in single-player mode with support for increased frame rates and higher resolutions.",
+      "pt-br": "Port por recompilação estática de Monster Hunter Freedom Unite do PSP para Windows, jogável do início ao fim no modo um jogador com suporte a taxas de quadros e resoluções mais altas."
+    }
+  },
+  {
+    "slug": "project-1944",
+    "name": "Project 1944",
+    "repo": "zenit2893-cmyk/project-1944",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "call-of-duty-3",
+        "tier": "ingame",
+        "source": "README: The development build was exercised on the first Saint-Lô mission, including gameplay, checkpoint save/load, and a 120 Hz timing trace on one PC."
+      }
+    ],
+    "notes": {
+      "en": "Statically recompiles Xbox 360 Call of Duty 3 code to C++ via ReXGlue for Windows with Direct3D 12 and keyboard/mouse support.",
+      "pt-br": "Recompila estaticamente o código de Call of Duty 3 do Xbox 360 para C++ via ReXGlue no Windows, trazendo suporte a Direct3D 12 e teclado e mouse."
+    }
+  },
+  {
+    "slug": "naruto-rise-of-a-ninja-port-nativo",
+    "name": "Naruto: Rise of a Ninja Native Port",
+    "repo": "Masterllgod/naruto-rise-of-a-ninja-port-nativo",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "android",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "naruto-rise-of-a-ninja",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of the Xbox 360 game to Android (ARM64) and Windows using XenonRecomp and Vulkan.",
+      "pt-br": "Port via recompilação estática do jogo de Xbox 360 para Android (ARM64) e Windows usando XenonRecomp e Vulkan."
+    }
+  },
+  {
+    "slug": "socom-unzipped",
+    "name": "SOCOM II: U.S. Navy SEALs",
+    "repo": "Scotho/socom-unzipped",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "socom-ii-u-s-navy-seals",
+        "tier": "ingame",
+        "source": "README: As of 2026-10-12 the game boots from your own disc to the title, through the menus and into the missions, with a pad (the keyboard walks the menus), and renders through OpenGL at up to four times the console's resolution."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of SOCOM II for PC using PS2Recomp, supporting up to 4x OpenGL rendering, custom online multiplayer server integration, and experimental macOS support.",
+      "pt-br": "Recompilação estática do SOCOM II para PC usando PS2Recomp, com suporte a renderização OpenGL em até 4x, integração com servidor multijogador online próprio e suporte experimental a macOS."
+    }
+  },
+  {
+    "slug": "space-channel-5",
+    "name": "Space Channel 5",
+    "repo": "ZoomiesZaggy/Space-Channel-5",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "arm"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "space-channel-5",
+        "tier": "playable",
+        "source": "README: Earlier Windows assist-mode validation completed all four reports, credits and return to title."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial static recompilation of Space Channel 5 for Dreamcast using Flycast for system components, featuring optional 60 Hz frame interpolation and expanded widescreen geometry.",
+      "pt-br": "Port não oficial por recompilação estática de Space Channel 5 do Dreamcast utilizando o Flycast para componentes do sistema, com interpolação opcional em 60 Hz e geometria widescreen expandida."
+    }
+  },
+  {
+    "slug": "midtown-madness-3-pc-native",
+    "name": "Midtown Madness 3",
+    "repo": "lakshya16157/midtown-madness-3-PC-Native",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "midtown-madness-3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Xbox static recompilation port for Windows with Direct3D 11, System Link multiplayer, custom cars, and widescreen support.",
+      "pt-br": "Port nativo via recompilação estática de Xbox para Windows com Direct3D 11, multijogador via System Link, carros customizados e suporte a widescreen."
+    }
+  },
+  {
+    "slug": "stuntdouble-reignition",
+    "name": "Stunt Double: Reignition",
+    "repo": "giangra/stuntdouble-reignition",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "stuntman-ignition",
+        "tier": "ingame",
+        "source": "README: Status: early development. Menus, career and races play; expect bugs."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Stuntman: Ignition for Windows built with ReXGlue. Includes an in-game PC overlay menu, save manager launcher, high frame rate support, and dynamic resolution options.",
+      "pt-br": "Recompilação estática de Stuntman: Ignition para Windows usando ReXGlue. Inclui menu de configurações nativo no jogo, gerenciador de salvamentos, suporte a altas taxas de quadros e resoluções personalizadas."
+    }
+  },
+  {
+    "slug": "saintsrow",
+    "name": "Saints Row",
+    "repo": "sp00nznet/saintsrow",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "saints-row",
+        "tier": "ingame",
+        "source": "README: It boots through the logos, attract mode and the menu, and New Game goes through Player Creation into Stilwater, where you can walk around, all with correct graphics, audio and controller input."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Saints Row (2006) for Windows using ReXGlue, capable of booting and exploring the open world on foot.",
+      "pt-br": "Recompilação estática de Saints Row (2006) para Windows usando ReXGlue, capaz de inicializar e explorar o mundo aberto a pé."
+    }
+  },
+  {
+    "slug": "svr2011-recomp",
+    "name": "WWE SmackDown vs. Raw 2011",
+    "repo": "shaneomac1337/SVR2011-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "wwe-smackdown-vs-raw-2011",
+        "tier": "ingame",
+        "source": "README: Exhibition matches usually play without problems at 60 FPS."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial Windows port of WWE SmackDown vs. Raw 2011 compiled with ReXGlue, running exhibition matches smoothly via Vulkan while story modes remain untested.",
+      "pt-br": "Port não oficial para Windows de WWE SmackDown vs. Raw 2011 recompilado com ReXGlue, executando lutas de exibição suavemente via Vulkan enquanto os modos de história seguem não testados."
     }
   }
 ]

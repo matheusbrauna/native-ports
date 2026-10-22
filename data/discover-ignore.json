@@ -222,5 +222,29 @@
   {
     "repo": "mr-finster/stunts-hd",
     "reason": "Triage: The repository ports a DOS PC game rather than a console game."
+  },
+  {
+    "repo": "sp00nznet/vbrecomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "elripalda/gta4-ps5",
+    "reason": "Triage: The port's only target is another console (PS5)."
+  },
+  {
+    "repo": "sp00nznet/psprecomp",
+    "reason": "Triage: It is a static recompilation toolkit rather than a game port."
+  },
+  {
+    "repo": "griches/PS5_MarioGalaxy",
+    "reason": "Triage: The port's only target platform is another console (PlayStation 5)."
+  },
+  {
+    "repo": "sp00nznet/snesrecomp",
+    "reason": "Triage: It is a hardware library and toolkit for SNES static recompilation, not a game port."
+  },
+  {
+    "repo": "Dhaiwat10/cricket07-browser",
+    "reason": "Triage: The project recompiles a Windows PC executable rather than a console game."
   }
 ]

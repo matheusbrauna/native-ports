@@ -684,5 +684,77 @@
     "title": "Saints Row",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "2010-fifa-world-cup-south-africa",
+    "title": "2010 FIFA World Cup South Africa",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "aerogauge",
+    "title": "AeroGauge",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "skate",
+    "title": "Skate",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "super-mario-odyssey",
+    "title": "Super Mario Odyssey",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "white-knight-chronicles-ii",
+    "title": "White Knight Chronicles II",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "international-superstar-soccer-2000",
+    "title": "International Superstar Soccer 2000",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "war-of-the-monsters",
+    "title": "War of the Monsters",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "infamous-2",
+    "title": "inFAMOUS 2",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "vigilante-8-arcade",
+    "title": "Vigilante 8 Arcade",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-of-the-colossus-ps3",
+    "title": "Shadow of the Colossus",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "darkwatch",
+    "title": "Darkwatch",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "guitar-hero-ii",
+    "title": "Guitar Hero II",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

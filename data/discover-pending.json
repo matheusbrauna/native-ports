@@ -42,5 +42,13 @@
   {
     "repo": "luisxl15/METAL-GEAR-SOLID-2-Sons-of-Liberty-for-Android",
     "reason": "Triage accepted it, but: Console \"nvidia-shield\" is not in the catalog yet (Metal Gear Solid 2: Sons of Liberty HD)"
+  },
+  {
+    "repo": "Cacodemontube/DoomSNESRecomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Doom)"
+  },
+  {
+    "repo": "0bAndyWirus/DQ9-Decomp",
+    "reason": "Triage accepted it, but: Console \"nds\" is not in the catalog yet (Dragon Quest IX: Sentinels of the Starry Skies)"
   }
 ]

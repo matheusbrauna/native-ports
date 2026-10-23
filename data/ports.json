@@ -535,21 +535,23 @@
     "platforms": [
       "linux",
       "macos",
+      "steamdeck",
       "windows"
     ],
     "graphics": [
-      "Vulkan"
+      "Vulkan",
+      "Direct3D 12"
     ],
     "games": [
       {
         "id": "forza-horizon",
         "tier": "playable",
-        "source": "README: The whole game, single player: the opening drive to the end of the festival has been played through on ReImagined: free roam, festival events and races, showcase events, audio and saves."
+        "source": "README: The whole festival, single player. Free roam, festival events, showcase events, audio and saves have been played through on ReImagined."
       }
     ],
     "notes": {
-      "en": "Forza Horizon rebuilt around the modern Horizon experience, now playable from start to finish with high frame rates, online free roam, custom servers, and experimental macOS support.",
-      "pt-br": "Forza Horizon reconstruído em torno da experiência moderna da série, agora jogável do início ao fim com altas taxas de quadros, free roam online, servidores próprios e suporte experimental ao macOS."
+      "en": "Forza Horizon runs natively on Windows and Linux with support for online free roam, custom frame rates up to 240 fps, Title Update 4 with DLCs, and experimental macOS support.",
+      "pt-br": "Forza Horizon roda nativamente no Windows e Linux com suporte a free roam online, taxas de quadros personalizadas de até 240 fps, Title Update 4 com DLCs e suporte experimental ao macOS."
     }
   },
   {
@@ -3350,6 +3352,380 @@
     "notes": {
       "en": "Unofficial Windows port of WWE SmackDown vs. Raw 2011 compiled with ReXGlue, running exhibition matches smoothly via Vulkan while story modes remain untested.",
       "pt-br": "Port não oficial para Windows de WWE SmackDown vs. Raw 2011 recompilado com ReXGlue, executando lutas de exibição suavemente via Vulkan enquanto os modos de história seguem não testados."
+    }
+  },
+  {
+    "slug": "fifa-world-cup-2010-pc-port",
+    "name": "2010 FIFA World Cup South Africa",
+    "repo": "RamiChaaben8/Fifa_World_Cup_2010_PC_Port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "2010-fifa-world-cup-south-africa",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of the Xbox 360 football game built using the ReXGlue SDK.",
+      "pt-br": "Port via recompilação estática do jogo de futebol de Xbox 360 desenvolvido com o ReXGlue SDK."
+    }
+  },
+  {
+    "slug": "aerogauge-recomp",
+    "name": "AeroGauge: Recompiled",
+    "repo": "alondero/aerogauge-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "aerogauge",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "N64 static recompilation of AeroGauge supporting Windows, Linux (x64 and ARM64), and Android with split-screen multiplayer, custom graphics options, and mod support.",
+      "pt-br": "Recompilação estática de N64 de AeroGauge com suporte a Windows, Linux (x64 e ARM64) e Android, trazendo multijogador em tela dividida, opções gráficas customizadas e suporte a mods."
+    }
+  },
+  {
+    "slug": "skate1recompiled",
+    "name": "Skate",
+    "repo": "cookingwithsimon/Skate1Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "macos"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skate",
+        "tier": "ingame",
+        "source": "README: Status: boots, intro videos, menus, audio, career start and Freeskate all work."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Skate for Xbox 360 using ReXGlue, reaching gameplay in Career and Freeskate modes.",
+      "pt-br": "Recompilação estática de Skate para Xbox 360 usando ReXGlue, alcançando a jogabilidade nos modos Carreira e Freeskate."
+    }
+  },
+  {
+    "slug": "super-mario-odyssey-ios",
+    "name": "Super Mario Odyssey",
+    "repo": "NicholasDominici/super-mario-odyssey-ios",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": "nxnative",
+    "platforms": [
+      "ios"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "super-mario-odyssey",
+        "tier": "ingame",
+        "source": "README: Picture, sound, controls, motion and the main controller effects have been tested in gameplay."
+      }
+    ],
+    "notes": {
+      "en": "Runs Super Mario Odyssey on iOS and iPadOS via nxnative with Metal rendering, motion controls, and DualSense haptics.",
+      "pt-br": "Executa Super Mario Odyssey no iOS e iPadOS via nxnative com renderização em Metal, controles por movimento e resposta tátil do DualSense."
+    }
+  },
+  {
+    "slug": "white-knight-chronicles-2-recomp",
+    "name": "White Knight Chronicles II Recomp",
+    "repo": "WK2D/White-Knight-Chronicles-2-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS3Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "white-knight-chronicles-ii",
+        "tier": "ingame",
+        "source": "README: The native Windows build reaches the WKC1 starting town and can resume from a local save."
+      }
+    ],
+    "notes": {
+      "en": "An early development PS3 static recompilation port for Windows featuring Vulkan and experimental DirectX 12 graphics renderers.",
+      "pt-br": "Uma recompilação estática de PS3 em desenvolvimento inicial para Windows, com suporte aos renderizadores Vulkan e DirectX 12 experimental."
+    }
+  },
+  {
+    "slug": "doa3-re",
+    "name": "DOA3 Native PC Port",
+    "repo": "NoRain211/doa3-re",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Metal",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dead-or-alive-3",
+        "tier": "playable",
+        "source": "README: Playable, in early testing."
+      }
+    ],
+    "notes": {
+      "en": "Native port of Dead or Alive 3 for Windows, macOS, and Linux created via static recompilation. Features resolution scaling, widescreen support, Direct3D 11 on Windows, and Metal or Vulkan via SDL_GPU on macOS and Linux.",
+      "pt-br": "Port nativo de Dead or Alive 3 para Windows, macOS e Linux criado via recompilação estática. Inclui suporte a renderização widescreen, escala de resolução, Direct3D 11 no Windows e Metal ou Vulkan via SDL_GPU no macOS e Linux."
+    }
+  },
+  {
+    "slug": "iss2000-recomp",
+    "name": "International Superstar Soccer 2000",
+    "repo": "Mabec-games/iss2000-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "international-superstar-soccer-2000",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Supports USA and European (PAL) ROMs with native widescreen rendering, extended stadium skies, and 50 Hz support for PAL versions.",
+      "pt-br": "Suporta ROMs americanas e europeias (PAL) com renderização em widescreen nativo, céu dos estádios expandido e suporte a 50 Hz para as versões PAL."
+    }
+  },
+  {
+    "slug": "war-of-the-monsters-recomp",
+    "name": "War of the Monsters Recompiled",
+    "repo": "yanm1103/War_of_the_Monsters_recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "war-of-the-monsters",
+        "tier": "ingame",
+        "source": "README: Fights are playable with the keyboard AND gamepad, and sound and FMVs play natively."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the PS2 game War of the Monsters using PS2Recomp, with a custom native rendering layer powered by raylib.",
+      "pt-br": "Recompilação estática do jogo de PS2 War of the Monsters usando PS2Recomp, com uma camada de renderização nativa própria em raylib."
+    }
+  },
+  {
+    "slug": "infamous2-pc",
+    "name": "inFAMOUS 2",
+    "repo": "ThiagoFraga761/infamous2-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "infamous-2",
+        "tier": "ingame",
+        "source": "README: O jogo inicia, passa pelos vídeos, menus e cutscenes, e o gameplay segue de Empire City até New Marais, com som, controle, saves e dublagem em português."
+      }
+    ],
+    "notes": {
+      "en": "Native Linux port of inFAMOUS 2 using static recompilation and a Vulkan renderer, supporting high frame rates and up to 4K resolution.",
+      "pt-br": "Port nativo para Linux de inFAMOUS 2 usando recompilação estática e renderizador Vulkan, com suporte a alta taxa de quadros e resolução até 4K."
+    }
+  },
+  {
+    "slug": "vig8",
+    "name": "Vigilante 8 Arcade",
+    "repo": "sp00nznet/vig8",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "vigilante-8-arcade",
+        "tier": "ingame",
+        "source": "README: Single player works: boot, menus, Quest, and full battles with correct graphics, audio and controller input, on ReXGlue 0.10."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox Live Arcade vehicle combat game running on Windows with Direct3D 12 via ReXGlue.",
+      "pt-br": "Recompilação estática do jogo de combate veicular do Xbox Live Arcade executado no Windows com Direct3D 12 via ReXGlue."
+    }
+  },
+  {
+    "slug": "shadowofthecolossus",
+    "name": "Shadow of the Colossus",
+    "repo": "sp00nznet/shadowofthecolossus",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "shadow-of-the-colossus-ps3",
+        "tier": "wip",
+        "source": "README: It boots, opens a window and flips."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the PS3 HD remaster built on ps3recomp, currently reaching initial boot on Windows.",
+      "pt-br": "Recompilação estática do remaster HD para PS3 desenvolvida com o ps3recomp, atualmente alcançando a inicialização no Windows."
+    }
+  },
+  {
+    "slug": "smo-recomp",
+    "name": "Super Mario Odyssey",
+    "repo": "Coz-0/smo-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "super-mario-odyssey",
+        "tier": "ingame",
+        "source": "README: Early, not finished."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Super Mario Odyssey (version 1.4.1) for Windows x64 with a custom host runtime and Vulkan backend.",
+      "pt-br": "Recompilação estática de Super Mario Odyssey (versão 1.4.1) para Windows x64 com runtime próprio e renderizador Vulkan."
+    }
+  },
+  {
+    "slug": "arizona-vamp-recomp",
+    "name": "Arizona Vamp Recomp",
+    "repo": "Clergyman0013/arizona-vamp-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBERecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "darkwatch",
+        "tier": "ingame",
+        "source": "README: Early, but playable into the first level on Windows."
+      }
+    ],
+    "notes": {
+      "en": "Native PC port of Darkwatch (Xbox) using XboxXBERecomp. Features Direct3D 12 graphics, split-screen co-op enabled from unused game files, mouse aiming, high frame rate support, and an in-game PC settings menu.",
+      "pt-br": "Port nativo para PC de Darkwatch (Xbox) usando XboxXBERecomp. Possui gráficos em Direct3D 12, modo cooperativo em tela dividida ativado a partir de arquivos não utilizados do jogo, mira via mouse, suporte a altas taxas de quadros e menu de configurações para PC."
+    }
+  },
+  {
+    "slug": "regh2",
+    "name": "Guitar Hero II",
+    "repo": "jillsandwich1998/reGH2",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "guitar-hero-ii",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Guitar Hero II (Xbox 360) using ReXGlue for Linux and Steam Deck with Vulkan.",
+      "pt-br": "Recompilação estática de Guitar Hero II (Xbox 360) usando ReXGlue para Linux e Steam Deck com Vulkan."
     }
   }
 ]

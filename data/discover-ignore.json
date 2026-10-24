@@ -282,5 +282,29 @@
   {
     "repo": "maxevans60/cm0102-bosman-edition",
     "reason": "Triage: The repository recompiles a PC game rather than a console game and includes game files in its releases."
+  },
+  {
+    "repo": "abduznik/awesome-android-native-ports",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "aigamedevs/awesome-decomp-games",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Dr3amyBerry/callofrecomp",
+    "reason": "Triage: The project is out of scope because it ports a PC game rather than a console game."
+  },
+  {
+    "repo": "sp00nznet/kotor-recomp",
+    "reason": "Triage: The repository recompiles the PC (Win32) version of the game rather than a console build."
+  },
+  {
+    "repo": "molotovgit/CnC-Generals-ZeroHour-Android",
+    "reason": "Triage: This is a source port built from C/C++ engine source code, which is out of scope."
+  },
+  {
+    "repo": "sp00nznet/model2recomp",
+    "reason": "Triage: This repository is a runtime library for Sega Model 2 recompilations, not a standalone game port."
   }
 ]

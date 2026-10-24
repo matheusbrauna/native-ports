@@ -756,5 +756,71 @@
     "title": "Guitar Hero II",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "jet-set-radio-future",
+    "title": "Jet Set Radio Future",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "007-from-russia-with-love",
+    "title": "007: From Russia with Love",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "tekken-tag-tournament-2",
+    "title": "Tekken Tag Tournament 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "enchanted-arms",
+    "title": "Enchanted Arms",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "wipeout-pure",
+    "title": "Wipeout Pure",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "burnout-dominator",
+    "title": "Burnout Dominator",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "pirates-of-the-caribbean-at-worlds-end",
+    "title": "Pirates of the Caribbean: At World's End",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "goldeneye-007-reloaded",
+    "title": "GoldenEye 007: Reloaded",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "3-on-3-nhl-arcade",
+    "title": "3 on 3 NHL Arcade",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "resident-evil-code-veronica",
+    "title": "Resident Evil CODE:Veronica",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dead-or-alive-2-ultimate",
+    "title": "Dead or Alive 2 Ultimate",
+    "console": "xbox",
+    "titleIds": []
   }
 ]

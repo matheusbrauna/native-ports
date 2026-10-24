@@ -618,5 +618,143 @@
     "title": "Shadow of the Colossus",
     "console": "ps2",
     "titleIds": []
+  },
+  {
+    "id": "driveclub",
+    "title": "Driveclub",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "killzone",
+    "title": "Killzone",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "2014-fifa-world-cup-brazil",
+    "title": "2014 FIFA World Cup Brazil",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "monster-hunter-freedom-unite",
+    "title": "Monster Hunter Freedom Unite",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "call-of-duty-3",
+    "title": "Call of Duty 3",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "naruto-rise-of-a-ninja",
+    "title": "Naruto: Rise of a Ninja",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "socom-ii-u-s-navy-seals",
+    "title": "SOCOM II: U.S. Navy SEALs",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "space-channel-5",
+    "title": "Space Channel 5",
+    "console": "dreamcast",
+    "titleIds": []
+  },
+  {
+    "id": "midtown-madness-3",
+    "title": "Midtown Madness 3",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "stuntman-ignition",
+    "title": "Stuntman: Ignition",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "saints-row",
+    "title": "Saints Row",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "2010-fifa-world-cup-south-africa",
+    "title": "2010 FIFA World Cup South Africa",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "aerogauge",
+    "title": "AeroGauge",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "skate",
+    "title": "Skate",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "super-mario-odyssey",
+    "title": "Super Mario Odyssey",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "white-knight-chronicles-ii",
+    "title": "White Knight Chronicles II",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "international-superstar-soccer-2000",
+    "title": "International Superstar Soccer 2000",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "war-of-the-monsters",
+    "title": "War of the Monsters",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "infamous-2",
+    "title": "inFAMOUS 2",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "vigilante-8-arcade",
+    "title": "Vigilante 8 Arcade",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-of-the-colossus-ps3",
+    "title": "Shadow of the Colossus",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "darkwatch",
+    "title": "Darkwatch",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "guitar-hero-ii",
+    "title": "Guitar Hero II",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

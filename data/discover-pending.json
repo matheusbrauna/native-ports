@@ -34,5 +34,21 @@
   {
     "repo": "mr-finster/vf3-recomp",
     "reason": "Triage accepted it, but: Console \"sega-model-3\" is not in the catalog yet (Virtua Fighter 3)"
+  },
+  {
+    "repo": "fungalspores/prototype-switch",
+    "reason": "Triage accepted it, but: Tier \"playable\" for Prototype cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "luisxl15/METAL-GEAR-SOLID-2-Sons-of-Liberty-for-Android",
+    "reason": "Triage accepted it, but: Console \"nvidia-shield\" is not in the catalog yet (Metal Gear Solid 2: Sons of Liberty HD)"
+  },
+  {
+    "repo": "Cacodemontube/DoomSNESRecomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Doom)"
+  },
+  {
+    "repo": "0bAndyWirus/DQ9-Decomp",
+    "reason": "Triage accepted it, but: Console \"nds\" is not in the catalog yet (Dragon Quest IX: Sentinels of the Starry Skies)"
   }
 ]

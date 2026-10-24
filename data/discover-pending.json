@@ -50,5 +50,13 @@
   {
     "repo": "0bAndyWirus/DQ9-Decomp",
     "reason": "Triage accepted it, but: Console \"nds\" is not in the catalog yet (Dragon Quest IX: Sentinels of the Starry Skies)"
+  },
+  {
+    "repo": "ryderclanky/BotW-Native",
+    "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (The Legend of Zelda: Breath of the Wild)"
+  },
+  {
+    "repo": "vasist15-source/BOTWRecomp",
+    "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (The Legend of Zelda: Breath of the Wild)"
   }
 ]

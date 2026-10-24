@@ -985,21 +985,24 @@
     "technique": "recomp",
     "toolchain": "ReXGlue",
     "platforms": [
-      "windows"
+      "linux",
+      "windows",
+      "macos"
     ],
     "graphics": [
-      "Direct3D 12"
+      "Direct3D 12",
+      "Vulkan"
     ],
     "games": [
       {
         "id": "perfect-dark-2010",
-        "tier": "intro",
-        "source": "README: working build; boots to Direct3D 12 rendering with audio and controller"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "The 2010 Xbox Live Arcade remaster recompiled to native Windows x86-64.",
-      "pt-br": "O remaster de 2010 da Xbox Live Arcade recompilado para Windows x86-64 nativo."
+      "en": "The 2010 Xbox 360 remaster recompiled natively using the ReXGlue SDK, featuring Direct3D 12 and Vulkan renderers along with split-screen and third-person camera support.",
+      "pt-br": "O remaster de Xbox 360 de 2010 recompilado nativamente usando a SDK ReXGlue, com renderizadores Direct3D 12 e Vulkan, além de suporte a tela dividida e câmera em terceira pessoa."
     }
   },
   {
@@ -1011,6 +1014,7 @@
     "technique": "recomp",
     "toolchain": "ReXGlue",
     "platforms": [
+      "linux",
       "windows"
     ],
     "graphics": [],
@@ -1018,12 +1022,12 @@
       {
         "id": "perfect-dark-zero",
         "tier": "playable",
-        "source": "README: Fully playable on Windows: video, audio, gameplay, achievements and saves."
+        "source": "README: Fully playable on Windows and Linux: video, audio, gameplay, achievements and saves."
       }
     ],
     "notes": {
-      "en": "Windows is the tested platform; Linux and macOS presets exist but are untested.",
-      "pt-br": "Windows é a plataforma testada; existem presets para Linux e macOS, mas sem testes."
+      "en": "The game is now fully playable on Linux as well as Windows, featuring 60 FPS patches and local split-screen support.",
+      "pt-br": "O jogo agora é totalmente jogável tanto no Linux quanto no Windows, contando com suporte a tela dividida local e patches de 60 FPS."
     }
   },
   {
@@ -1038,17 +1042,19 @@
       "windows",
       "steamdeck"
     ],
-    "graphics": [],
+    "graphics": [
+      "vulkan"
+    ],
     "games": [
       {
         "id": "wwe-all-stars",
         "tier": "playable",
-        "source": "README: tested and playable across exhibition, Path of Champions, Fantasy Warfare and Create a Superstar"
+        "source": "README: Exhibition 1v1 with entrances, finishers and the result screen; Path of Champions; Fantasy Warfare; Create a Superstar; 4 local players; DLC wrestlers (Million Dollar Pack); online Player Match"
       }
     ],
     "notes": {
-      "en": "Windows build at the original 60 fps, Steam Deck through Proton; online ranked play is not supported.",
-      "pt-br": "Build para Windows a 60 fps originais, Steam Deck via Proton; partidas ranqueadas online não são suportadas."
+      "en": "Recompilation of the Xbox 360 version running on Windows and Steam Deck via Vulkan, supporting 60/120 fps, 4 local players, and online Player Match.",
+      "pt-br": "Recompilação da versão de Xbox 360 rodando no Windows e Steam Deck via Vulkan, com suporte a 60/120 fps, 4 jogadores locais e partidas online."
     }
   },
   {
@@ -1854,21 +1860,23 @@
     "technique": "recomp",
     "toolchain": "PS2Recomp",
     "platforms": [
+      "linux",
       "windows"
     ],
     "graphics": [
-      "OpenGL"
+      "OpenGL",
+      "DX11"
     ],
     "games": [
       {
         "id": "god-of-war",
-        "tier": "wip",
-        "source": "README: milestones in progress; controller, menu and difficulty selection work"
+        "tier": "ingame",
+        "source": "README: The game plays like Waffle565's port: it boots, loads its data from the extracted disc and reaches gameplay with keyboard or controller."
       }
     ],
     "notes": {
-      "en": "Native Windows build with an OpenGL renderer, around 25 fps with optional threaded VU1 and GS.",
-      "pt-br": "Build nativo para Windows com renderizador OpenGL, cerca de 25 fps com VU1 e GS opcionais em threads."
+      "en": "The port now uses Waffle565's runtime base and reaches gameplay during the ship fight on both Windows and Linux.",
+      "pt-br": "O port agora utiliza a base do runtime de Waffle565 e chega ao combate no navio no Windows e no Linux."
     }
   },
   {
@@ -3693,7 +3701,7 @@
       {
         "id": "darkwatch",
         "tier": "ingame",
-        "source": "README: Early, but playable into the first level on Windows."
+        "source": "README: Beta, playable on Windows."
       }
     ],
     "notes": {
@@ -3726,6 +3734,376 @@
     "notes": {
       "en": "Static recompilation of Guitar Hero II (Xbox 360) using ReXGlue for Linux and Steam Deck with Vulkan.",
       "pt-br": "Recompilação estática de Guitar Hero II (Xbox 360) usando ReXGlue para Linux e Steam Deck com Vulkan."
+    }
+  },
+  {
+    "slug": "jsrf-recomp",
+    "name": "Jet Set Radio Future",
+    "repo": "andeecollard/jsrf-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal",
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "jet-set-radio-future",
+        "tier": "ingame",
+        "source": "README: Work in progress, not a release. As of 26 September 2026 the game is playable into chapter 2 at a steady 60 fps on Apple Silicon: story missions, cutscenes, graffiti, music and the controller all work, and every chapter can be entered."
+      }
+    ],
+    "notes": {
+      "en": "An Xbox static recompilation of Jet Set Radio Future targeting Apple Silicon macOS, featuring a high-performance Direct3D lift renderer achieving 60 fps.",
+      "pt-br": "Uma recompilação estática do Jet Set Radio Future do Xbox para macOS em Apple Silicon, contando com um renderizador otimizado via Direct3D que atinge 60 fps."
+    }
+  },
+  {
+    "slug": "007frwl-xberecomp",
+    "name": "007: From Russia with Love",
+    "repo": "TGP482/007FRWL-XBERecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "007-from-russia-with-love",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of the original Xbox version of 007: From Russia with Love for Windows using Xbox XBE Recomp.",
+      "pt-br": "Port via recompilação estática da versão de Xbox original de 007: From Russia with Love para Windows usando o Xbox XBE Recomp."
+    }
+  },
+  {
+    "slug": "ttt2-recomp",
+    "name": "Tekken Tag Tournament 2 Recomp",
+    "repo": "thatcalikid760/TTT2-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "tekken-tag-tournament-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Tekken Tag Tournament 2 for Xbox 360, featuring rollback netcode, custom quality-of-life enhancements, and Steam integration.",
+      "pt-br": "Uma recompilação estática de Tekken Tag Tournament 2 para Xbox 360, contando com rollback netcode, melhorias de qualidade de vida e integração com a Steam."
+    }
+  },
+  {
+    "slug": "enchantedarmsrecomp",
+    "name": "Enchanted Arms PC",
+    "repo": "IAndrewJJ/EnchantedArmsRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "enchanted-arms",
+        "tier": "ingame",
+        "source": "README: Saving, loading, menus, and early gameplay have been tested."
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 static recompilation of Enchanted Arms featuring 60 FPS support, custom controls, and graphics settings on Windows and Linux.",
+      "pt-br": "Recompilação estática do jogo Enchanted Arms de Xbox 360 com suporte a 60 FPS, controles personalizados e configurações gráficas no Windows e Linux."
+    }
+  },
+  {
+    "slug": "pure-recomp",
+    "name": "Wipeout Pure: Recompiled",
+    "repo": "erreib/pure-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PSPRecomp",
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "Metal",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "wipeout-pure",
+        "tier": "playable",
+        "source": "README: The complete single-player game: every mode, class, league and circuit, the movies, the music and the sound."
+      }
+    ],
+    "notes": {
+      "en": "Native port of Wipeout Pure for Apple Silicon Macs and Windows created via static recompilation, featuring high frame rates, custom resolutions, and HD texture pack support.",
+      "pt-br": "Port nativo de Wipeout Pure para Macs com Apple Silicon e Windows criado via recompilação estática, contando com altas taxas de quadros, resoluções personalizadas e suporte a pacotes de texturas em HD."
+    }
+  },
+  {
+    "slug": "burnoutdominatorreversed",
+    "name": "Burnout Dominator Reversed",
+    "repo": "literalynn/BurnoutDominatorReversed",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "burnout-dominator",
+        "tier": "playable",
+        "source": "README: Playable from start to finish, and stable."
+      }
+    ],
+    "notes": {
+      "en": "Native PS2 recompilation running on Windows and Linux with Vulkan graphics, support for up to 4x resolution, high frame rates, and save states.",
+      "pt-br": "Recompilação nativa de PS2 rodando em Windows e Linux com renderização Vulkan, suporte a até 4x de resolução, altas taxas de quadros e save states."
+    }
+  },
+  {
+    "slug": "infamous2-recomp",
+    "name": "inFAMOUS 2 PC Port",
+    "repo": "erikomis/infamous2-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "infamous-2",
+        "tier": "ingame",
+        "source": "README: The game runs from boot to the first missions in New Marais, only on Apple silicon macOS."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of inFAMOUS 2 for macOS (Apple Silicon) built on ps3recomp, rendering via Metal with custom launcher and settings support.",
+      "pt-br": "Recompilação estática do inFAMOUS 2 para macOS (Apple Silicon) desenvolvida sobre o ps3recomp, renderizando via Metal com suporte a launcher próprio e configurações."
+    }
+  },
+  {
+    "slug": "piratesatworldsendrecomp",
+    "name": "Pirates of the Caribbean: At World's End",
+    "repo": "ElGuslml/PiratesAtWorldsEndRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "pirates-of-the-caribbean-at-worlds-end",
+        "tier": "ingame",
+        "source": "README: The first levels have been played through, in sessions of an hour, without problems; later levels have not been tested yet."
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 static recompilation using ReXGlue, featuring 60 FPS, widescreen and ultrawide support, DLAA, achievements, and an automated launcher.",
+      "pt-br": "Recompilação estática do Xbox 360 usando ReXGlue, com suporte a 60 FPS, telas wide e ultrawide, DLAA, conquistas e um launcher automatizado."
+    }
+  },
+  {
+    "slug": "goldeneye007reloadedrecomp",
+    "name": "GoldenEye 007: Reloaded",
+    "repo": "nikolaygorb/GoldenEye007ReloadedRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "goldeneye-007-reloaded",
+        "tier": "ingame",
+        "source": "README: Single player works: training and the first mission load and play."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of GoldenEye 007: Reloaded for Xbox 360 built on the ReXGlue SDK. Currently, the training level and first single-player mission load and play.",
+      "pt-br": "Uma recompilação estática de GoldenEye 007: Reloaded para Xbox 360 baseada no ReXGlue SDK. Atualmente, o nível de treinamento e a primeira missão do modo história funcionam."
+    }
+  },
+  {
+    "slug": "3on3nhl-recomp",
+    "name": "3 on 3 NHL Arcade",
+    "repo": "Wndwsqrrl/3on3NHL-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "3-on-3-nhl-arcade",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PC port of the Xbox 360 XBLA title built via ReXGlue static recompilation, supporting full matches, controller input, and an achievement system.",
+      "pt-br": "Port nativo para PC do título de Xbox 360 (XBLA) feito via recompilação estática com ReXGlue, com suporte a partidas completas, controles e sistema de conquistas."
+    }
+  },
+  {
+    "slug": "veronicarecomp",
+    "name": "Resident Evil CODE:Veronica",
+    "repo": "psxrestore/VeronicaRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "resident-evil-code-veronica",
+        "tier": "ingame",
+        "source": "README: This project is a work-in-progress, and while it is in playable state, you might experience bugs and crashes!"
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Resident Evil CODE:Veronica for PC built using the ReXGlue SDK.",
+      "pt-br": "Uma recompilação estática de Resident Evil CODE:Veronica para PC desenvolvida com o ReXGlue SDK."
+    }
+  },
+  {
+    "slug": "cod3-recomp",
+    "name": "Call of Duty 3",
+    "repo": "jxnplays/cod3-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "call-of-duty-3",
+        "tier": "ingame",
+        "source": "README: The inherited runtime is solid enough that levels load, render and play."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Call of Duty 3 for Windows using XenonRecomp and Direct3D 11. All 15 levels load and render, featuring settings like uncapped frame rate, FOV adjustments, and built-in mod options.",
+      "pt-br": "Recompilação estática de Call of Duty 3 para Windows usando XenonRecomp e Direct3D 11. Todas as 15 fases carregam e renderizam, incluindo melhorias como taxa de quadros ilimitada, ajuste de FOV e opções de mods integradas."
+    }
+  },
+  {
+    "slug": "tekken-3-for-linux",
+    "name": "Tekken 3",
+    "repo": "Mabec-games/Tekken-3-for-Linux",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PSXRecomp",
+    "platforms": [
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "tekken-3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Features native true 16:9 widescreen, high-resolution OpenGL rendering, a built-in mod manager, and P2P rollback netplay.",
+      "pt-br": "Possui suporte nativo a widescreen 16:9 real, renderização em OpenGL de alta resolução, gerenciador de mods integrado e netplay P2P com rollback."
+    }
+  },
+  {
+    "slug": "doa2u-re",
+    "name": "Dead or Alive 2 Ultimate",
+    "repo": "NoRain211/doa2u-re",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows",
+      "macos",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Metal",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dead-or-alive-2-ultimate",
+        "tier": "ingame",
+        "source": "README: Story, Watch and the attract demo play in development runs on every stage, but many modes and characters have not been tried."
+      }
+    ],
+    "notes": {
+      "en": "Native Xbox port of Dead or Alive 2 Ultimate built via static recompilation using xboxrecomp. Supports Windows, macOS, Linux, and Steam Deck with Direct3D 11, Metal, and Vulkan rendering.",
+      "pt-br": "Port nativo do Xbox de Dead or Alive 2 Ultimate criado via recompilação estática com xboxrecomp. Suporta Windows, macOS, Linux e Steam Deck com renderização em Direct3D 11, Metal e Vulkan."
     }
   }
 ]

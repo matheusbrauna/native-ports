@@ -58,5 +58,9 @@
   {
     "repo": "vasist15-source/BOTWRecomp",
     "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (The Legend of Zelda: Breath of the Wild)"
+  },
+  {
+    "repo": "mattkuhnQAAI/sfiii-native",
+    "reason": "Triage accepted it, but: Console \"saturn\" is not in the catalog yet (Shining Force III: Scenario 1)"
   }
 ]

@@ -822,5 +822,89 @@
     "title": "Dead or Alive 2 Ultimate",
     "console": "xbox",
     "titleIds": []
+  },
+  {
+    "id": "armored-core-for-answer",
+    "title": "Armored Core for Answer",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "infamous-first-light",
+    "title": "inFAMOUS First Light",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "f-e-a-r",
+    "title": "F.E.A.R.",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "f-e-a-r-files",
+    "title": "F.E.A.R. Files",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "wii-party",
+    "title": "Wii Party",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "civilization-revolution",
+    "title": "Civilization Revolution",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "god-of-war-ii",
+    "title": "God of War II",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "tomodachi-life-living-the-dream",
+    "title": "Tomodachi Life: Living the Dream",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "god-of-war-ascension",
+    "title": "God of War: Ascension",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "disruptor",
+    "title": "Disruptor",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "hydro-thunder-hurricane",
+    "title": "Hydro Thunder Hurricane",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "fuse",
+    "title": "Fuse",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "superman-returns",
+    "title": "Superman Returns",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "burnout-revenge",
+    "title": "Burnout Revenge",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

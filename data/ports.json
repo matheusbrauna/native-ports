@@ -652,8 +652,8 @@
     "games": [
       {
         "id": "condemned-2-bloodshot",
-        "tier": "playable",
-        "source": "README: work in progress, in a playable state; expect bugs and crashes"
+        "tier": "ingame",
+        "source": "README: This project is a work-in-progress, and while it is in playable state, you might experience bugs and crashes!"
       }
     ],
     "notes": {
@@ -2032,12 +2032,12 @@
       {
         "id": "banjo-tooie",
         "tier": "wip",
-        "source": "README: alpha; full-game completion has not been established"
+        "source": "README: This project is a work in progress."
       }
     ],
     "notes": {
-      "en": "Independent alpha recompilation for Windows x64 with a launcher, ROM validation, remapping and a separate practice mode with save states. Not affiliated with BanjoRecomp.",
-      "pt-br": "Recompilação alfa independente para Windows x64, com launcher, validação da ROM, remapeamento e um modo de treino separado com save states. Sem relação com o BanjoRecomp."
+      "en": "Independent alpha port for Windows x64 using N64Recomp and RT64, featuring an improved rendering pipeline for character tracking and frame interpolation. Not affiliated with BanjoRecomp.",
+      "pt-br": "Port alfa independente para Windows x64 usando N64Recomp e RT64, com um pipeline de renderização aprimorado para rastreamento de personagens e interpolação de quadros. Sem afiliação com o BanjoRecomp."
     }
   },
   {
@@ -2886,6 +2886,8 @@
     "technique": "runtime",
     "toolchain": null,
     "platforms": [
+      "linux",
+      "steamdeck",
       "windows"
     ],
     "graphics": [
@@ -2895,12 +2897,12 @@
       {
         "id": "wipeout-omega-collection",
         "tier": "ingame",
-        "source": "README: Status: early development. Menus and races (HD and 2048) play above 60 FPS."
+        "source": "README: Status: playable, in active development. Menus and races (HD and 2048) play above 60 FPS."
       }
     ],
     "notes": {
-      "en": "A native PS4 runtime port for Windows based on the gow3_pc framework, running both HD and 2048 races above 60 FPS.",
-      "pt-br": "Um port nativo via runtime de PS4 para Windows baseado na estrutura do gow3_pc, executando corridas do HD e do 2048 acima de 60 FPS."
+      "en": "A native PS4 runtime port for Windows and Linux based on the gow3_pc framework, running both HD and 2048 races above 60 FPS.",
+      "pt-br": "Um port nativo via runtime de PS4 para Windows e Linux baseado na estrutura do gow3_pc, executando corridas do HD e do 2048 acima de 60 FPS."
     }
   },
   {
@@ -3063,8 +3065,8 @@
     "games": [
       {
         "id": "killzone",
-        "tier": "ingame",
-        "source": "README: Boot, menus, profile creation and the first mission's gameplay are verified in automated runs."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -4104,6 +4106,380 @@
     "notes": {
       "en": "Native Xbox port of Dead or Alive 2 Ultimate built via static recompilation using xboxrecomp. Supports Windows, macOS, Linux, and Steam Deck with Direct3D 11, Metal, and Vulkan rendering.",
       "pt-br": "Port nativo do Xbox de Dead or Alive 2 Ultimate criado via recompilação estática com xboxrecomp. Suporta Windows, macOS, Linux e Steam Deck com renderização em Direct3D 11, Metal e Vulkan."
+    }
+  },
+  {
+    "slug": "acfa-port",
+    "name": "Armored Core for Answer",
+    "repo": "SulphurS16/ACFA-Port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "armored-core-for-answer",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of the PS3 version created via static recompilation, featuring Direct3D 11 graphics, unlocked frame rates, and full mouse and keyboard support.",
+      "pt-br": "Port nativo para Windows da versão de PS3 criado via recompilação estática, com gráficos em Direct3D 11, taxa de quadros desbloqueada e suporte completo a mouse e teclado."
+    }
+  },
+  {
+    "slug": "infamous-first-light-pc",
+    "name": "inFAMOUS First Light PC Port",
+    "repo": "VantageEX/infamous-first-light-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "infamous-first-light",
+        "tier": "ingame",
+        "source": "README: Early, playable. The game boots, reaches the menus and gameplay, saves, and plays through the first missions; Fetch's neon powers, the dash trail, lights and particles render."
+      }
+    ],
+    "notes": {
+      "en": "Native PS4 runtime port of inFAMOUS First Light for Windows, built on top of the iss_pc framework with GPU translation derived from shadPS4.",
+      "pt-br": "Port nativo por runtime do inFAMOUS First Light de PS4 para Windows, desenvolvido sobre a estrutura do iss_pc com tradução de GPU derivada do shadPS4."
+    }
+  },
+  {
+    "slug": "fear360-recomp",
+    "name": "F.E.A.R. 360 Recompiled",
+    "repo": "Juansolo457/fear360-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "f-e-a-r",
+        "tier": "ingame",
+        "source": "README: both games boot and play, with a lot of optimization left."
+      },
+      {
+        "id": "f-e-a-r-files",
+        "tier": "ingame",
+        "source": "README: both games boot and play, with a lot of optimization left."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of F.E.A.R. and F.E.A.R. Files for Xbox 360 using ReXGlue. Features 4K resolution scaling, unlocked frame rates up to 120 fps, fixed high-FPS logic, and optional PC texture pack integration.",
+      "pt-br": "Recompilação estática de F.E.A.R. e F.E.A.R. Files do Xbox 360 usando ReXGlue. Apresenta suporte a resolução 4K, taxa de quadros de até 120 fps com correções de lógica e integração opcional de pacotes de textura do PC."
+    }
+  },
+  {
+    "slug": "wiiparty-recomp",
+    "name": "Wii Party Recomp",
+    "repo": "arelkair/wiiparty-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "wii-party",
+        "tier": "playable",
+        "source": "README: The game runs from start to finish, with known bugs and features still missing."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Wii Party for Windows and Linux, running at 60 fps with support for up to 6x render resolution.",
+      "pt-br": "Recompilação estática de Wii Party para Windows e Linux, rodando a 60 fps com suporte a resolução de renderização de até 6x."
+    }
+  },
+  {
+    "slug": "rerevved",
+    "name": "ReRevved",
+    "repo": "ReRevvedRecomp/rerevved",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "civilization-revolution",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Civilization Revolution for Xbox 360 built on ReXGlue, featuring online play and Lua mod support.",
+      "pt-br": "Uma recompilação estática de Civilization Revolution para Xbox 360 baseada em ReXGlue, com suporte a jogo online e mods em Lua."
+    }
+  },
+  {
+    "slug": "gow2-nativo-ps2",
+    "name": "God of War II PC Port",
+    "repo": "cxldsakeb/GoW2-nativo-PS2",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "god-of-war-ii",
+        "tier": "ingame",
+        "source": "README: What there is is real, documented progress: the game already reaches the first playable area, with sound, cutscenes and memory card, at ~60 FPS."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of God of War II for Windows built using PS2Recomp, reaching the first area of the game.",
+      "pt-br": "Recompilação estática de God of War II para Windows feita com PS2Recomp, alcançando a primeira área do jogo."
+    }
+  },
+  {
+    "slug": "tomodachi-native",
+    "name": "Tomodachi Native",
+    "repo": "kuosuko/tomodachi-native",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": "nxnative",
+    "platforms": [
+      "macos",
+      "ios"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "tomodachi-life-living-the-dream",
+        "tier": "ingame",
+        "source": "README: The island tour, naming the island, creating Miis (by questions or in the editor), with sound"
+      }
+    ],
+    "notes": {
+      "en": "A fork of nxnative that runs Tomodachi Life: Living the Dream natively on Apple Silicon Macs, iPads, and iPhones using Metal.",
+      "pt-br": "Um fork do nxnative que roda Tomodachi Life: Living the Dream nativamente em Macs com Apple Silicon, iPads e iPhones usando Metal."
+    }
+  },
+  {
+    "slug": "god-of-war-ascension-recompiled",
+    "name": "God of War: Ascension",
+    "repo": "MaChInEgUn3/God-of-War-Ascension-Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "god-of-war-ascension",
+        "tier": "ingame",
+        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and reaches the first level with the Vulkan backend, at about 1.5 game frames per second."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently reaching the first level in an early development state.",
+      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente alcançando a primeira fase em desenvolvimento inicial."
+    }
+  },
+  {
+    "slug": "disruptorrecomp",
+    "name": "Disruptor Recompiled",
+    "repo": "RecompTeam/DisruptorRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "disruptor",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PC recompilation of the 1996 PlayStation FPS Disruptor, featuring 60 FPS support, widescreen resolutions, and modern mouse controls.",
+      "pt-br": "Recompilação estática nativa para PC do jogo de tiro Disruptor (1996) do PlayStation, com suporte a 60 FPS, resoluções widescreen e controles modernos de mouse."
+    }
+  },
+  {
+    "slug": "hydrothunderport",
+    "name": "Hydro Thunder Hurricane PC Port",
+    "repo": "monscriser/HydroThunderPORT",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "hydro-thunder-hurricane",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Unofficial Xbox 360 static recompilation port for Windows and Linux built with ReXGlue, featuring a Vulkan renderer, launcher, and optional FSR upscaling.",
+      "pt-br": "Port não oficial por recompilação estática de Xbox 360 para Windows e Linux feito com ReXGlue, com renderizador Vulkan, launcher e upscaling FSR opcional."
+    }
+  },
+  {
+    "slug": "fuserecomp",
+    "name": "Fuse",
+    "repo": "nikolaygorb/FuseRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "fuse",
+        "tier": "playable",
+        "source": "README: Playable offline: video, audio, gameplay, achievements and saves work. Online features are not supported."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Fuse (2013) for Xbox 360 built on ReXGlue SDK, featuring offline play with support for up to four-player split-screen.",
+      "pt-br": "Recompilação estática de Fuse (2013) para Xbox 360 criada com ReXGlue SDK, com suporte a jogo offline e tela dividida para até quatro jogadores."
+    }
+  },
+  {
+    "slug": "htrecomp",
+    "name": "Hydro Thunder Hurricane: Recompiled",
+    "repo": "visibou/htrecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "hydro-thunder-hurricane",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 game built on ReXGlue, featuring uncapped frame rates, internal resolution scaling, and mouse and keyboard support.",
+      "pt-br": "Recompilação estática do jogo de Xbox 360 usando ReXGlue, com taxa de quadros destravada, dimensionamento de resolução interna e suporte a teclado e mouse."
+    }
+  },
+  {
+    "slug": "superman-returns-recomp",
+    "name": "Superman Returns",
+    "repo": "MrPowerUp82/superman_returns_recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "superman-returns",
+        "tier": "ingame",
+        "source": "README: O renderer nativo já chega à gameplay (ainda sem validação completa de imagem e de todas as fases), então o projeto está em estágio experimental, não finalizado."
+      }
+    ],
+    "notes": {
+      "en": "An experimental Xbox 360 static recompilation port built with ReXGlue that reaches early gameplay with Direct3D 12 and Vulkan renderers.",
+      "pt-br": "Port experimental de recompilação estática do Xbox 360 via ReXGlue que chega ao início da gameplay com renderizadores Direct3D 12 e Vulkan."
+    }
+  },
+  {
+    "slug": "burnout-revenge",
+    "name": "Burnout Revenge",
+    "repo": "secretpray/burnout-revenge",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal",
+      "Vulkan",
+      "MoltenVK"
+    ],
+    "games": [
+      {
+        "id": "burnout-revenge",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "An unofficial native port of Burnout Revenge (Xbox 360) for Apple silicon Macs using static recompilation and rendering via Metal through Vulkan/MoltenVK.",
+      "pt-br": "Um port nativo não oficial de Burnout Revenge (Xbox 360) para Macs com Apple silicon usando recompilação estática e renderização via Metal através do Vulkan/MoltenVK."
     }
   }
 ]

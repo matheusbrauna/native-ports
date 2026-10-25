@@ -306,5 +306,29 @@
   {
     "repo": "sp00nznet/model2recomp",
     "reason": "Triage: This repository is a runtime library for Sega Model 2 recompilations, not a standalone game port."
+  },
+  {
+    "repo": "nxporting/nxport",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "CBOC-Vita-Lab/galaxy-vita",
+    "reason": "Triage: Decompilation ports and ports targeting another console are out of scope."
+  },
+  {
+    "repo": "rages4calm/zelda-companion",
+    "reason": "Triage: Built on snesrev/zelda3, a C reimplementation rather than a static recompilation."
+  },
+  {
+    "repo": "portemon-nitro/portemon",
+    "reason": "Triage: The project is a game engine reimplementation built with LÖVE rather than a static recompilation or runtime port."
+  },
+  {
+    "repo": "EapRules/icerage-native-arm",
+    "reason": "Triage: The repository uses a bionic ELF loader to execute an Android ARM library, which is neither static recompilation nor PS4 runtime execution."
+  },
+  {
+    "repo": "ArthurReboulSalze/RetroRecomp",
+    "reason": "Triage: Recompilers and conversion tools on their own are out of scope."
   }
 ]

@@ -756,5 +756,155 @@
     "title": "Guitar Hero II",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "jet-set-radio-future",
+    "title": "Jet Set Radio Future",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "007-from-russia-with-love",
+    "title": "007: From Russia with Love",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "tekken-tag-tournament-2",
+    "title": "Tekken Tag Tournament 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "enchanted-arms",
+    "title": "Enchanted Arms",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "wipeout-pure",
+    "title": "Wipeout Pure",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "burnout-dominator",
+    "title": "Burnout Dominator",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "pirates-of-the-caribbean-at-worlds-end",
+    "title": "Pirates of the Caribbean: At World's End",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "goldeneye-007-reloaded",
+    "title": "GoldenEye 007: Reloaded",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "3-on-3-nhl-arcade",
+    "title": "3 on 3 NHL Arcade",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "resident-evil-code-veronica",
+    "title": "Resident Evil CODE:Veronica",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dead-or-alive-2-ultimate",
+    "title": "Dead or Alive 2 Ultimate",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "armored-core-for-answer",
+    "title": "Armored Core for Answer",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "infamous-first-light",
+    "title": "inFAMOUS First Light",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "f-e-a-r",
+    "title": "F.E.A.R.",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "f-e-a-r-files",
+    "title": "F.E.A.R. Files",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "wii-party",
+    "title": "Wii Party",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "civilization-revolution",
+    "title": "Civilization Revolution",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "god-of-war-ii",
+    "title": "God of War II",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "tomodachi-life-living-the-dream",
+    "title": "Tomodachi Life: Living the Dream",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "god-of-war-ascension",
+    "title": "God of War: Ascension",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "disruptor",
+    "title": "Disruptor",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "hydro-thunder-hurricane",
+    "title": "Hydro Thunder Hurricane",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "fuse",
+    "title": "Fuse",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "superman-returns",
+    "title": "Superman Returns",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "burnout-revenge",
+    "title": "Burnout Revenge",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

@@ -330,5 +330,29 @@
   {
     "repo": "ArthurReboulSalze/RetroRecomp",
     "reason": "Triage: Recompilers and conversion tools on their own are out of scope."
+  },
+  {
+    "repo": "BlueInterlude/awesome-recompilations",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "wangxiaoxiang5599/recompiled-games-list",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "LNPANDY/NX2Apple",
+    "reason": "Triage: The repository is a build tool and GUI frontend for porting Switch games, which is out of scope as a tool on its own."
+  },
+  {
+    "repo": "elripalda/RecompStore",
+    "reason": "Triage: RecompStore is a homebrew app store for PS5, not a native game port repository."
+  },
+  {
+    "repo": "leafyjerk/PS5_LuigisMansion",
+    "reason": "Triage: The repository targets another console (PS5) rather than PC or supported mobile platforms."
+  },
+  {
+    "repo": "chrissotraidis/tribespad",
+    "reason": "Triage: The project ports PC (Windows) games rather than a console game."
   }
 ]

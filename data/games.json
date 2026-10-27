@@ -990,5 +990,119 @@
     "title": "Tenchu Z",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "tony-hawks-project-8-ps3",
+    "title": "Tony Hawk's Project 8",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "devil-may-cry",
+    "title": "Devil May Cry",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "metroid-prime-remastered",
+    "title": "Metroid Prime Remastered",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "bakugan-battle-brawlers",
+    "title": "Bakugan Battle Brawlers",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "quantum-of-solace",
+    "title": "Quantum of Solace",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "james-bond-007-blood-stone",
+    "title": "James Bond 007: Blood Stone",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "007-legends",
+    "title": "007 Legends",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "midnight-club-los-angeles-complete-edition",
+    "title": "Midnight Club: Los Angeles Complete Edition",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "nhl-2k8",
+    "title": "NHL 2K8",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "halo-mega-bloks",
+    "title": "Halo Mega Bloks",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "naruto-x-boruto-ultimate-ninja-storm-connections",
+    "title": "Naruto x Boruto: Ultimate Ninja Storm Connections",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "hellnight",
+    "title": "Hellnight",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "crystal-defenders",
+    "title": "Crystal Defenders",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "metropolismania",
+    "title": "Metropolismania",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "aidyn-chronicles-the-first-mage",
+    "title": "Aidyn Chronicles: The First Mage",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "drakengard",
+    "title": "Drakengard",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "sneak-king",
+    "title": "Sneak King",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "big-bumpin",
+    "title": "Big Bumpin'",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "pocketbike-racer",
+    "title": "PocketBike Racer",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

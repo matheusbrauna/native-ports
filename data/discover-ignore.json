@@ -354,5 +354,21 @@
   {
     "repo": "chrissotraidis/tribespad",
     "reason": "Triage: The project ports PC (Windows) games rather than a console game."
+  },
+  {
+    "repo": "maceeek/AnyPS3",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "matheusbrauna/native-ports",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "heaven-hm/project-igi-reverse-engineering",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "ForkedInTime/keeperfx-tux-edition",
+    "reason": "Triage: KeeperFX is a source port and decompilation of a PC game, which is out of scope."
   }
 ]

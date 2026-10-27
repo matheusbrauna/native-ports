@@ -747,9 +747,10 @@
     "technique": "recomp",
     "toolchain": "ReXGlue",
     "platforms": [
-      "windows",
       "android",
-      "steamdeck"
+      "linux",
+      "steamdeck",
+      "windows"
     ],
     "graphics": [
       "Direct3D 12",
@@ -758,8 +759,8 @@
     "games": [
       {
         "id": "wwe-smackdown-vs-raw-2011",
-        "tier": "playable",
-        "source": "README: the full game on Windows and on Android phones and tablets"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -1888,9 +1889,11 @@
     "technique": "recomp",
     "toolchain": null,
     "platforms": [
-      "windows",
+      "android",
       "linux",
-      "macos"
+      "macos",
+      "steamdeck",
+      "windows"
     ],
     "graphics": [
       "Vulkan"
@@ -1899,12 +1902,12 @@
       {
         "id": "monster-hunter-portable-3rd-hd-ver",
         "tier": "playable",
-        "source": "README: status playable"
+        "source": "README: Status: playable"
       }
     ],
     "notes": {
-      "en": "Vulkan and SDL3; PSP-format saves, PPSSPP-compatible HD texture packs and mhp3reload mods.",
-      "pt-br": "Vulkan e SDL3; saves no formato do PSP, pacotes de texturas HD compatíveis com o PPSSPP e mods do mhp3reload."
+      "en": "Vulkan and SDL3 static recompilation port for Windows, Linux, Steam Deck, macOS, and Android with custom HD textures, mod support, and PSP saves.",
+      "pt-br": "Port por recompilação estática em Vulkan e SDL3 para Windows, Linux, Steam Deck, macOS e Android, com suporte a texturas HD, mods e saves do PSP."
     }
   },
   {
@@ -4318,12 +4321,12 @@
       {
         "id": "god-of-war-ascension",
         "tier": "ingame",
-        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 10 frames per second on a 6-core CPU with an RTX 3080, with no hangs in 18-minute runs."
+        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 12 frames per second on a 6-core CPU with an RTX 3080, with no hangs in 25-minute runs."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 10 fps.",
-      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 10 fps."
+      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 12 fps.",
+      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 12 fps."
     }
   },
   {
@@ -4845,6 +4848,443 @@
     "notes": {
       "en": "A static recompilation of Tenchu Z for Windows built with ReXGlue, featuring online System Link co-op, resolution scaling, mouse controls, and shader presets.",
       "pt-br": "Uma recompilação estática de Tenchu Z para Windows feita com ReXGlue, trazendo modo cooperativo via System Link online, escala de resolução, controles com mouse e predefinições de shaders."
+    }
+  },
+  {
+    "slug": "project-8-plus",
+    "name": "Project 8 Plus",
+    "repo": "MaxLeiter/project-8-plus",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 12"
+    ],
+    "games": [
+      {
+        "id": "tony-hawks-project-8-ps3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of the PS3 version of Tony Hawk's Project 8 created with ps3recomp, featuring HD textures, uncapped framerates, and a Lua modding API.",
+      "pt-br": "Uma recompilação estática da versão de PS3 do Tony Hawk's Project 8 criada com ps3recomp, contando com texturas em HD, taxa de quadros ilimitada e API para mods em Lua."
+    }
+  },
+  {
+    "slug": "dmc-recomp",
+    "name": "dmc-recomp",
+    "repo": "Gui-Tora/dmc-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [],
+    "graphics": [],
+    "games": [
+      {
+        "id": "devil-may-cry",
+        "tier": "wip",
+        "source": "README: Status: work in progress. This is a reverse-engineering / bring-up project, not a playable port."
+      }
+    ],
+    "notes": {
+      "en": "Experimental static recompilation of Devil May Cry for PS2 using PS2Recomp, currently in progress and able to reach intro cutscenes.",
+      "pt-br": "Recompilação estática experimental de Devil May Cry para PS2 usando PS2Recomp, atualmente em desenvolvimento e capaz de alcançar as cenas de introdução."
+    }
+  },
+  {
+    "slug": "metroidprimeremasteredrecomp",
+    "name": "Metroid Prime Remastered",
+    "repo": "drakolordx7/MetroidPrimeRemasteredRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "nxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "metroid-prime-remastered",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Metroid Prime Remastered for Nintendo Switch to Windows 64-bit using Vulkan.",
+      "pt-br": "Recompilação estática de Metroid Prime Remastered do Nintendo Switch para Windows 64-bit usando Vulkan."
+    }
+  },
+  {
+    "slug": "bakuganbb-recomp",
+    "name": "Bakugan Battle Brawlers",
+    "repo": "RealAmethyst/BakuganBB-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "bakugan-battle-brawlers",
+        "tier": "ingame",
+        "source": "README: Input and audio are working, but this is still very early."
+      }
+    ],
+    "notes": {
+      "en": "An Xbox 360 static recompilation port of Bakugan Battle Brawlers targeting Linux, featuring built-in accessibility features for blind players.",
+      "pt-br": "Uma recompilação estática de Bakugan Battle Brawlers do Xbox 360 para Linux, com recursos integrados de acessibilidade para jogadores cegos."
+    }
+  },
+  {
+    "slug": "007",
+    "name": "007",
+    "repo": "furqanagwan/007",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "quantum-of-solace",
+        "tier": "ingame",
+        "source": "README: | Quantum of Solace | In-game |"
+      },
+      {
+        "id": "james-bond-007-blood-stone",
+        "tier": "wip",
+        "source": "README: | James Bond 007: Blood Stone | Investigating |"
+      },
+      {
+        "id": "007-legends",
+        "tier": "wip",
+        "source": "README: | 007 Legends | Investigating |"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation project for Xbox 360 007 games using ReXGlue on Windows. Quantum of Solace is currently in-game, while Blood Stone and 007 Legends are undergoing investigation.",
+      "pt-br": "Projeto de recompilação estática dos jogos do 007 do Xbox 360 usando ReXGlue no Windows. Quantum of Solace já roda em jogo, enquanto Blood Stone e 007 Legends estão em fase de investigação."
+    }
+  },
+  {
+    "slug": "diddykongracing",
+    "name": "Diddy Kong Racing Recompiled",
+    "repo": "sp00nznet/diddykongracing",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "diddy-kong-racing",
+        "tier": "ingame",
+        "source": "README: Whole races and the other tracks haven't been played through yet."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Diddy Kong Racing created using N64Recomp and RT64. Features online and LAN multiplayer, widescreen display, high-resolution rendering, and GameShark cheat support.",
+      "pt-br": "Port nativo para Windows de Diddy Kong Racing criado usando N64Recomp e RT64. Possui suporte a multijogador online e LAN, tela widescreen, renderização em alta resolução e cheats via GameShark."
+    }
+  },
+  {
+    "slug": "mcla-recomp-android-g",
+    "name": "Midnight Club: Los Angeles",
+    "repo": "gabrielbskk/mcla-recomp-android-g",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "midnight-club-los-angeles-complete-edition",
+        "tier": "intro",
+        "source": "README: A user test reached car selection, but reported severe stutter, unrecognized gamepad input, and no clearly visible effect from graphics/resolution settings."
+      }
+    ],
+    "notes": {
+      "en": "An experimental Android ARM64 port of Midnight Club: Los Angeles built via ReXGlue static recompilation, tested on Samsung Galaxy S23 using Termux.",
+      "pt-br": "Porte estático experimental para Android ARM64 de Midnight Club: Los Angeles compilado via ReXGlue e testado no Samsung Galaxy S23 via Termux."
+    }
+  },
+  {
+    "slug": "nhl2k8-recompiled",
+    "name": "NHL 2K8",
+    "repo": "anishchandra24/NHL2K8-Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "nhl-2k8",
+        "tier": "ingame",
+        "source": "README: Plays smoothly except in busy scenes with a full crowd."
+      }
+    ],
+    "notes": {
+      "en": "An unofficial Windows port of NHL 2K8 compiled via ReXGlue SDK, featuring Direct3D 12 graphics and a soundtrack patch.",
+      "pt-br": "Um port não oficial para Windows do NHL 2K8 compilado via ReXGlue SDK, com gráficos em Direct3D 12 e correção na trilha sonora."
+    }
+  },
+  {
+    "slug": "halo-mega-bloks-decompiled",
+    "name": "Halo Mega Bloks",
+    "repo": "kirklandsig/halo-mega-bloks-decompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "halo-mega-bloks",
+        "tier": "ingame",
+        "source": "README: It reaches the first level, with the build's own known issues (it is a development build)."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of the unreleased Xbox 360 game Halo Mega Bloks (Project Haggar), built using ReXGlue.",
+      "pt-br": "Port via recompilação estática do jogo não lançado Halo Mega Bloks (Project Haggar) de Xbox 360, desenvolvido com ReXGlue."
+    }
+  },
+  {
+    "slug": "naruto-x-boruto-connections-port-nativo",
+    "name": "Naruto x Boruto: Ultimate Ninja Storm Connections Native Port",
+    "repo": "Masterllgod/naruto-x-boruto-connections-port-nativo",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "naruto-x-boruto-ultimate-ninja-storm-connections",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Android port of Naruto x Boruto: Ultimate Ninja Storm Connections (an Xbox 360 mod) statically recompiled with XenonRecomp and rendered using shadowZero on Vulkan.",
+      "pt-br": "Port para Android do Naruto x Boruto: Ultimate Ninja Storm Connections (mod de Xbox 360) recompilado estaticamente com XenonRecomp e renderizado via shadowZero em Vulkan."
+    }
+  },
+  {
+    "slug": "hellnight-recompiled",
+    "name": "Hell Night: Dark Messiah Recompiled",
+    "repo": "goodshepherd23/Hellnight-Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PSXRecomp",
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "hellnight",
+        "tier": "ingame",
+        "source": "README: New Game starts. In-game dialogue, the examine cursor and room transitions work"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of the PS1 survival horror game Hellnight using PSXRecomp. Features widescreen support, cheats, memory card saving, and up to 8x supersampling.",
+      "pt-br": "Port por recompilação estática do jogo de survival horror Hellnight de PS1 usando PSXRecomp. Inclui suporte a widescreen, cheats, salvamento em cartão de memória e supersampling de até 8x."
+    }
+  },
+  {
+    "slug": "cristalis",
+    "name": "Cristalis",
+    "repo": "Claudio5702/Cristalis",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "crystal-defenders",
+        "tier": "playable",
+        "source": "README: A whole game has been played on a real PC under Bazzite, a Linux close to SteamOS, in Steam's Game Mode with the new Steam Controller, with no problem seen; it has not been tried on a Steam Deck yet."
+      }
+    ],
+    "notes": {
+      "en": "Native static recompilation port of Crystal Defenders for Windows and Linux using XenonRecomp, featuring DarkLauncher interface, multi-language support, and graphics enhancements.",
+      "pt-br": "Port nativo via recompilação estática de Crystal Defenders para Windows e Linux usando XenonRecomp, com interface DarkLauncher, suporte a múltiplos idiomas e melhorias gráficas."
+    }
+  },
+  {
+    "slug": "metropolismania-pc",
+    "name": "Metropolismania",
+    "repo": "koaque/Metropolismania-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "metropolismania",
+        "tier": "ingame",
+        "source": "README: The game boots and reaches the city, but it is not ready to play through."
+      }
+    ],
+    "notes": {
+      "en": "An experimental static recompilation of Metropolismania for Windows using PS2Recomp that reaches city gameplay.",
+      "pt-br": "Uma recompilação estática experimental do Metropolismania para Windows feita com PS2Recomp que alcança o gameplay na cidade."
+    }
+  },
+  {
+    "slug": "aidynrechronicled",
+    "name": "Aidyn ReChronicled",
+    "repo": "spitzdano/AidynReChronicled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "RT64",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "aidyn-chronicles-the-first-mage",
+        "tier": "wip",
+        "source": "README: Work in progress."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Aidyn Chronicles: The First Mage for Linux and Windows using N64Recomp, featuring 60 FPS gameplay, widescreen, free camera, and optional HD texture packs.",
+      "pt-br": "Recompilação estática de Aidyn Chronicles: The First Mage para Linux e Windows via N64Recomp, com suporte a 60 FPS, widescreen, câmera livre e pacotes de textura HD opcionais."
+    }
+  },
+  {
+    "slug": "drakengard1recompile",
+    "name": "Drakengard",
+    "repo": "k1gs/Drakengard1Recompile",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "drakengard",
+        "tier": "ingame",
+        "source": "README: The native diagnostic runner progresses beyond the Chapter I mission briefing and draws an in-scene radar and message."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation project for the European PAL release of Drakengard on PS2, targeting Windows. It renders in-scene HUD elements past the mission briefing, though 3D graphics and gameplay remain incomplete.",
+      "pt-br": "Projeto de recompilação estática para a versão europeia (PAL) de Drakengard do PS2, focado em Windows. Renderiza elementos de HUD em cena após a instrução de missão, mas os gráficos 3D e a jogabilidade permanecem incompletos."
+    }
+  },
+  {
+    "slug": "whopping-recompilation-collection",
+    "name": "Whopping Recompilation Collection",
+    "repo": "TekRantGaming/whopping-recompilation-collection",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "sneak-king",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "big-bumpin",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "pocketbike-racer",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A unified launcher bundling static recompilation ports of all three Xbox 360 Burger King promotional games (Sneak King, Big Bumpin', and PocketBike Racer) built with the ReXGlue SDK.",
+      "pt-br": "Um launcher unificado contendo ports por recompilação estática dos três jogos promocionais do Burger King para Xbox 360 (Sneak King, Big Bumpin' e PocketBike Racer) desenvolvidos com o ReXGlue SDK."
     }
   }
 ]

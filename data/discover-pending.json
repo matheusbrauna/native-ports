@@ -74,5 +74,17 @@
   {
     "repo": "glinesbdev/mh3u-port",
     "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (Monster Hunter 3 Ultimate)"
+  },
+  {
+    "repo": "griches/JamesPond2RobocodRecomp",
+    "reason": "Triage accepted it, but: Console \"amiga\" is not in the catalog yet (James Pond 2: Codename RoboCod)"
+  },
+  {
+    "repo": "sp00nznet/themepark-recomp",
+    "reason": "Triage accepted it, but: Console \"dos\" is not in the catalog yet (Theme Park)"
+  },
+  {
+    "repo": "MauricioSuporte/SuperBomberman5SNESRecomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Super Bomberman 5)"
   }
 ]

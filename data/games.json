@@ -906,5 +906,89 @@
     "title": "Burnout Revenge",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "the-legend-of-zelda-tears-of-the-kingdom",
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "rayman-3-hd",
+    "title": "Rayman 3 HD",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "marvel-ultimate-alliance",
+    "title": "Marvel Ultimate Alliance",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "marvel-ultimate-alliance-gold-edition",
+    "title": "Marvel Ultimate Alliance Gold Edition",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "marvel-ultimate-alliance-2",
+    "title": "Marvel Ultimate Alliance 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "gears-of-war-3",
+    "title": "Gears of War 3",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "nfl-head-coach-09",
+    "title": "NFL Head Coach 09",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "wwe-2k14",
+    "title": "WWE 2K14",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "rumble-roses-xx",
+    "title": "Rumble Roses XX",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "madden-nfl-08",
+    "title": "Madden NFL 08",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "plants-vs-zombies",
+    "title": "Plants vs. Zombies",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "rampage-world-tour",
+    "title": "Rampage: World Tour",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "rampage-2-universal-tour",
+    "title": "Rampage 2: Universal Tour",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "tenchu-z",
+    "title": "Tenchu Z",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

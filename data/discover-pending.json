@@ -62,5 +62,17 @@
   {
     "repo": "mattkuhnQAAI/sfiii-native",
     "reason": "Triage accepted it, but: Console \"saturn\" is not in the catalog yet (Shining Force III: Scenario 1)"
+  },
+  {
+    "repo": "ly05010419/MacNativeGames",
+    "reason": "Triage accepted it, but: Tier \"wip\" for Bayonetta 3 cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "GABRIELNNK/Bigodao",
+    "reason": "Triage accepted it, but: Console \"gb\" is not in the catalog yet (Wario Land: Super Mario Land 3)"
+  },
+  {
+    "repo": "glinesbdev/mh3u-port",
+    "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (Monster Hunter 3 Ultimate)"
   }
 ]

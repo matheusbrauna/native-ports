@@ -545,13 +545,13 @@
     "games": [
       {
         "id": "forza-horizon",
-        "tier": "playable",
-        "source": "README: The whole festival, single player. Free roam, festival events, showcase events, audio and saves have been played through on ReImagined."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "Forza Horizon runs natively on Windows and Linux with support for online free roam, custom frame rates up to 240 fps, Title Update 4 with DLCs, and experimental macOS support.",
-      "pt-br": "Forza Horizon roda nativamente no Windows e Linux com suporte a free roam online, taxas de quadros personalizadas de até 240 fps, Title Update 4 com DLCs e suporte experimental ao macOS."
+      "en": "Forza Horizon ReImagined features a launcher that builds the game locally from original files, supporting co-op campaign, online multiplayer, DLCs, mods, and HD texture packs on Windows and Linux.",
+      "pt-br": "O Forza Horizon ReImagined possui um inicializador que compila o jogo localmente a partir dos arquivos originais, com suporte a campanha cooperativa, multijogador online, DLCs, mods e pacotes de textura em HD no Windows e Linux."
     }
   },
   {
@@ -4169,27 +4169,28 @@
     "technique": "recomp",
     "toolchain": "ReXGlue",
     "platforms": [
-      "windows",
-      "steamdeck"
+      "linux",
+      "steamdeck",
+      "windows"
     ],
     "graphics": [
-      "Vulkan"
+      "Direct3D 12"
     ],
     "games": [
       {
         "id": "f-e-a-r",
         "tier": "ingame",
-        "source": "README: both games boot and play, with a lot of optimization left."
+        "source": "README: Latest release: v0.1.5, source only and early: both games boot and play on the new Direct3D 12 renderer, with EchoPatch's high-frame-rate fixes."
       },
       {
         "id": "f-e-a-r-files",
         "tier": "ingame",
-        "source": "README: both games boot and play, with a lot of optimization left."
+        "source": "README: Latest release: v0.1.5, source only and early: both games boot and play on the new Direct3D 12 renderer, with EchoPatch's high-frame-rate fixes."
       }
     ],
     "notes": {
-      "en": "Static recompilation of F.E.A.R. and F.E.A.R. Files for Xbox 360 using ReXGlue. Features 4K resolution scaling, unlocked frame rates up to 120 fps, fixed high-FPS logic, and optional PC texture pack integration.",
-      "pt-br": "Recompilação estática de F.E.A.R. e F.E.A.R. Files do Xbox 360 usando ReXGlue. Apresenta suporte a resolução 4K, taxa de quadros de até 120 fps com correções de lógica e integração opcional de pacotes de textura do PC."
+      "en": "Static recompilation of Xbox 360 F.E.A.R. and F.E.A.R. Files using ReXGlue. Features a native Direct3D 12 renderer, display-locked frame rates up to 120 fps, high-FPS physics fixes, and an added PC Settings menu.",
+      "pt-br": "Recompilação estática de F.E.A.R. e F.E.A.R. Files do Xbox 360 usando ReXGlue. Apresenta um renderizador nativo Direct3D 12, taxa de quadros de até 120 fps sincronizada com a tela, correções de física em alta taxa de FPS e menu de configurações para PC."
     }
   },
   {
@@ -4317,12 +4318,12 @@
       {
         "id": "god-of-war-ascension",
         "tier": "ingame",
-        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and reaches the first level with the Vulkan backend, at about 1.5 game frames per second."
+        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 10 frames per second on a 6-core CPU with an RTX 3080, with no hangs in 18-minute runs."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently reaching the first level in an early development state.",
-      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente alcançando a primeira fase em desenvolvimento inicial."
+      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 10 fps.",
+      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 10 fps."
     }
   },
   {
@@ -4480,6 +4481,370 @@
     "notes": {
       "en": "An unofficial native port of Burnout Revenge (Xbox 360) for Apple silicon Macs using static recompilation and rendering via Metal through Vulkan/MoltenVK.",
       "pt-br": "Um port nativo não oficial de Burnout Revenge (Xbox 360) para Macs com Apple silicon usando recompilação estática e renderização via Metal através do Vulkan/MoltenVK."
+    }
+  },
+  {
+    "slug": "fh1-reimagined-forzahorizon1-reimagined",
+    "name": "Forza Horizon",
+    "repo": "FH1-ReImagined/ForzaHorizon1-ReImagined",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows",
+      "macos"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "forza-horizon",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Forza Horizon built with ReXGlue, featuring higher frame rates up to 240 fps, online free roam and multiplayer support, DLC support, and a custom launcher.",
+      "pt-br": "Recompilação estática do Forza Horizon feita com ReXGlue, com suporte a taxa de quadros até 240 fps, modo online/free roam, DLCs e launcher próprio."
+    }
+  },
+  {
+    "slug": "ultratears",
+    "name": "UltraTears",
+    "repo": "kuraeow/ultratears",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-tears-of-the-kingdom",
+        "tier": "ingame",
+        "source": "README: Title screen, new game, prologue, Great Sky Island | plays"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Tears of the Kingdom for Windows using Vulkan, playable through the prologue and Great Sky Island.",
+      "pt-br": "Port por recompilação estática de Tears of the Kingdom para Windows usando Vulkan, jogável durante o prólogo e a ilha inicial Great Sky Island."
+    }
+  },
+  {
+    "slug": "rayman3-hd-recompiled",
+    "name": "Rayman 3 HD Recompiled",
+    "repo": "MysteriousAeon/rayman3-hd-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "rayman-3-hd",
+        "tier": "playable",
+        "source": "README: The game has been completed from beginning to end on version 1.0.1 during human playtesting."
+      }
+    ],
+    "notes": {
+      "en": "Features optional visual enhancements, Turkish localization, DualSense dynamic lightbar and adaptive triggers, and built-in mod support.",
+      "pt-br": "Oferece melhorias visuais opcionais, tradução em turco, suporte aos gatilhos adaptativos e barra de luz do DualSense e gerenciamento de mods."
+    }
+  },
+  {
+    "slug": "marvel-ultimate-alliance-bundle-recompiled",
+    "name": "Marvel Ultimate Alliance Bundle",
+    "repo": "saulob/marvel-ultimate-alliance-bundle-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "marvel-ultimate-alliance",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "marvel-ultimate-alliance-gold-edition",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "marvel-ultimate-alliance-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Bundles static recompilations of Marvel Ultimate Alliance, Gold Edition, and Marvel Ultimate Alliance 2 for Xbox 360, featuring high frame rates, resolution scaling, ultrawide support, and a launcher.",
+      "pt-br": "Coletânea com recompilações estáticas de Marvel Ultimate Alliance, Gold Edition e Marvel Ultimate Alliance 2 do Xbox 360, com altas taxas de quadros, taxa de renderização customizada, suporte a ultrawide e um launcher dedicado."
+    }
+  },
+  {
+    "slug": "doa2u-recomp",
+    "name": "Dead or Alive 2 Ultimate",
+    "repo": "parkerallan/doa2u-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "dead-or-alive-2-ultimate",
+        "tier": "ingame",
+        "source": "README: Matches are playable, but there are visual issues and some game mode-specific issues."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Dead or Alive 2 Ultimate for Windows using xboxrecomp, featuring 60 FPS gameplay, internal resolution scaling up to 1440p, and widescreen support.",
+      "pt-br": "Recompilação estática de Dead or Alive 2 Ultimate para Windows via xboxrecomp, com taxa de quadros a 60 FPS, escala de resolução interna até 1440p e suporte a widescreen."
+    }
+  },
+  {
+    "slug": "gears-of-war-3-recomp",
+    "name": "Gears of War 3",
+    "repo": "Flippage/gears-of-war-3-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "gears-of-war-3",
+        "tier": "ingame",
+        "source": "README: Campaign: loads into missions and plays (tested through the first chapters)"
+      }
+    ],
+    "notes": {
+      "en": "Gears of War 3 statically recompiled for 64-bit Windows using ReXGlue, featuring unlocked frame rates, DLSS/FSR upscaling, and native mouse and keyboard controls.",
+      "pt-br": "Recompilação estática de Gears of War 3 para Windows 64-bit usando ReXGlue, com taxa de quadros desbloqueada, upscaling via DLSS/FSR e controles nativos para mouse e teclado."
+    }
+  },
+  {
+    "slug": "nfl-head-coach-09-static-recomp",
+    "name": "NFL Head Coach 09",
+    "repo": "tools81/nfl-head-coach-09-static-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "nfl-head-coach-09",
+        "tier": "ingame",
+        "source": "README: The game boots, plays its intro movie in a window, loads, renders the title screen, and reaches its menus (favourite-team prompt, main menu with its 3D background, team select) with controller or keyboard input, and plays a game: weekly coaching agenda, coin toss, and the in-game play-calling screen, where called plays run and the clock and downs advance."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of NFL Head Coach 09 for Windows using XenonRecomp, featuring a Direct3D 12 renderer and custom roster import tools.",
+      "pt-br": "Port via recompilação estática de NFL Head Coach 09 para Windows usando XenonRecomp, contando com renderizador Direct3D 12 e ferramentas de importação de elenco personalizado."
+    }
+  },
+  {
+    "slug": "wwe2k14-recomp",
+    "name": "WWE 2K14 Recomp",
+    "repo": "mikeflare007/wwe2k14-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "wwe-2k14",
+        "tier": "ingame",
+        "source": "README: Exhibition matches, entrances, commentary"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of WWE 2K14 (Xbox 360) for Windows using ReXGlue, featuring 60 FPS gameplay, resolution up to 4K, Vulkan rendering, and DLC/mod support.",
+      "pt-br": "Port por recompilação estática de WWE 2K14 (Xbox 360) para Windows usando ReXGlue, trazendo suporte a 60 FPS, resoluções até 4K, renderização via Vulkan e suporte a DLCs e mods."
+    }
+  },
+  {
+    "slug": "rumblerosesxx-recomp",
+    "name": "Rumble Roses XX",
+    "repo": "Revan67/RumbleRosesXX-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "rumble-roses-xx",
+        "tier": "ingame",
+        "source": "README: On October 25, 2026, a user reached and played a match with the native nonlocal-return repair and experimental safe shader loads enabled."
+      }
+    ],
+    "notes": {
+      "en": "An experimental Xbox 360 recompilation project using XenonRecomp that renders in-engine scenes and can reach matches on Windows.",
+      "pt-br": "Um projeto experimental de recompilação do Xbox 360 usando XenonRecomp que renderiza cenas do jogo e consegue executar partidas no Windows."
+    }
+  },
+  {
+    "slug": "maddennfl08-recompiled",
+    "name": "Madden NFL 08",
+    "repo": "anishchandra24/MaddenNFL08-Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "madden-nfl-08",
+        "tier": "ingame",
+        "source": "README: Franchise and Superstar mode: starting, playing and saving worked in short tests"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Madden NFL 08 for Xbox 360 built with ReXGlue for Windows with Direct3D 12.",
+      "pt-br": "Port de recompilação estática de Madden NFL 08 para Xbox 360 feito com ReXGlue para Windows com Direct3D 12."
+    }
+  },
+  {
+    "slug": "pvz-console-edition",
+    "name": "Plants vs. Zombies: Console Edition",
+    "repo": "ITSeniy/pvz-console-edition",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "plants-vs-zombies",
+        "tier": "playable",
+        "source": "README: It is playable from start to finish, but rough edges remain."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 XBLA version using ReXGlue, playable on Windows with native mouse controls, local multiplayer, and enhanced resolutions.",
+      "pt-br": "Recompilação estática da versão XBLA do Xbox 360 feita via ReXGlue, jogável no Windows com controles nativos de mouse, multijogador local e resoluções aprimoradas."
+    }
+  },
+  {
+    "slug": "rampage",
+    "name": "Rampage Recompiled",
+    "repo": "sp00nznet/Rampage",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan",
+      "Metal",
+      "RT64"
+    ],
+    "games": [
+      {
+        "id": "rampage-world-tour",
+        "tier": "ingame",
+        "source": "README: v0.3.0, alpha. Both games boot, take input, play, and have sound."
+      },
+      {
+        "id": "rampage-2-universal-tour",
+        "tier": "ingame",
+        "source": "README: v0.3.0, alpha. Both games boot, take input, play, and have sound."
+      }
+    ],
+    "notes": {
+      "en": "Native ports of Rampage: World Tour and Rampage 2: Universal Tour for N64 using N64Recomp, supporting PC, mobile, and ARM platforms.",
+      "pt-br": "Ports nativos de Rampage: World Tour e Rampage 2: Universal Tour para N64 usando N64Recomp, com suporte a PC, dispositivos móveis e plataformas ARM."
+    }
+  },
+  {
+    "slug": "tenchuzrecomp",
+    "name": "Tenchu Z",
+    "repo": "Llamapixels/TenchuZRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "tenchu-z",
+        "tier": "ingame",
+        "source": "README: This is an alpha, a preview for testers. The hub and the first missions have been played; the rest of the game hasn't been played through yet on this port, so expect bugs or crashes further on."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Tenchu Z for Windows built with ReXGlue, featuring online System Link co-op, resolution scaling, mouse controls, and shader presets.",
+      "pt-br": "Uma recompilação estática de Tenchu Z para Windows feita com ReXGlue, trazendo modo cooperativo via System Link online, escala de resolução, controles com mouse e predefinições de shaders."
     }
   }
 ]

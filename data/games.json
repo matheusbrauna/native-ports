@@ -1104,5 +1104,59 @@
     "title": "PocketBike Racer",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "odin-sphere-leifthrasir",
+    "title": "Odin Sphere Leifthrasir",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "killzone-3",
+    "title": "Killzone 3",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "tekken-dark-resurrection",
+    "title": "Tekken: Dark Resurrection",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "midnight-club-3-dub-edition-remix",
+    "title": "Midnight Club 3: DUB Edition Remix",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "colin-mcrae-rally-2005",
+    "title": "Colin McRae Rally 2005",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "splosion-man",
+    "title": "'Splosion Man",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "tekken-6",
+    "title": "Tekken 6",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "juiced-2-hot-import-nights",
+    "title": "Juiced 2: Hot Import Nights",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "playstation-all-stars-battle-royale",
+    "title": "PlayStation All-Stars Battle Royale",
+    "console": "ps3",
+    "titleIds": []
   }
 ]

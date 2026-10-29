@@ -370,5 +370,69 @@
   {
     "repo": "ForkedInTime/keeperfx-tux-edition",
     "reason": "Triage: KeeperFX is a source port and decompilation of a PC game, which is out of scope."
+  },
+  {
+    "repo": "manjarqo/ps4-native-mac",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "benji-paname/regta-chinatown-wars-pc-port",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "kanapitsas/portal2-recomp",
+    "reason": "Triage: The project statically recompiles a PC Linux release rather than a console game binary."
+  },
+  {
+    "repo": "malinkin-s/naruto-rise-of-a-ninja-nx",
+    "reason": "Triage: The project's only target is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "FIZL0/opentennis",
+    "reason": "Triage: It is a from-scratch engine rewrite in Rust, which is out of scope."
+  },
+  {
+    "repo": "nuvolacat/pcfsite-source",
+    "reason": "Triage: The repository ports MS-DOS and Windows PC games, which are out of scope for a catalog of console game ports."
+  },
+  {
+    "repo": "paulodiasred/BM64Switch",
+    "reason": "Triage: The repository is a port targeting another console (Nintendo Switch)."
+  },
+  {
+    "repo": "Tsifrokayf/OpenXRay-Android",
+    "reason": "Triage: Source ports and engine reimplementations are out of scope."
+  },
+  {
+    "repo": "heaven-hm/project-igi-awesome",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "exoteric33/ps2-native-recomp",
+    "reason": "Triage: The repository is a general PS2 static recompiler toolchain rather than a native port of a specific game."
+  },
+  {
+    "repo": "robvagin/shar-psp-engine",
+    "reason": "Triage: The project is a custom engine reimplementation written from scratch targeting another console, rather than a static recompilation or native runtime port."
+  },
+  {
+    "repo": "jammyfu/rea-atlas",
+    "reason": "Triage: This repository is a curated list of reverse-engineering projects, which is out of scope."
+  },
+  {
+    "repo": "intermission88/SedotDeck",
+    "reason": "Triage: SedotDeck is an updater and management tool for game ports and emulators, not a game port itself."
+  },
+  {
+    "repo": "EapRules/minigore2-native-arm",
+    "reason": "Triage: Android ELF loader wrappers on ARM Linux are out of scope."
+  },
+  {
+    "repo": "sp00nznet/rol",
+    "reason": "Triage: Rise of Nations: Rise of Legends is a PC game rather than a console game."
+  },
+  {
+    "repo": "countallegrex/sa1-psp",
+    "reason": "Triage: The project is out of scope because its primary target is another console (PSP)."
   }
 ]

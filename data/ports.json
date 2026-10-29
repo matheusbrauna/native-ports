@@ -4321,12 +4321,12 @@
       {
         "id": "god-of-war-ascension",
         "tier": "ingame",
-        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 12 frames per second on a 6-core CPU with an RTX 3080, with no hangs in 25-minute runs."
+        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 10-11 frames per second in gameplay (about 13 in the opening tutorial loop the earlier numbers were measured in) on a 6-core CPU with an RTX 3080, with no hangs in 25-minute runs."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 12 fps.",
-      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 12 fps."
+      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at 10-11 fps in gameplay.",
+      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a 10-11 fps em jogo."
     }
   },
   {
@@ -5285,6 +5285,668 @@
     "notes": {
       "en": "A unified launcher bundling static recompilation ports of all three Xbox 360 Burger King promotional games (Sneak King, Big Bumpin', and PocketBike Racer) built with the ReXGlue SDK.",
       "pt-br": "Um launcher unificado contendo ports por recompilação estática dos três jogos promocionais do Burger King para Xbox 360 (Sneak King, Big Bumpin' e PocketBike Racer) desenvolvidos com o ReXGlue SDK."
+    }
+  },
+  {
+    "slug": "odin-sphere-leifthrasir-pc",
+    "name": "Odin Sphere Leifthrasir PC Port",
+    "repo": "saulob/odin-sphere-leifthrasir-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "odin-sphere-leifthrasir",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PS4 runtime port of Odin Sphere Leifthrasir running on Windows with experimental Linux and Steam Deck support.",
+      "pt-br": "Port nativo de execução (runtime) do Odin Sphere Leifthrasir de PS4 para Windows, com suporte experimental para Linux e Steam Deck."
+    }
+  },
+  {
+    "slug": "project-helghast",
+    "name": "Project Helghast",
+    "repo": "undecuple/project-helghast",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "killzone-3",
+        "tier": "ingame",
+        "source": "README: Levels load and play at about 16-22 frames/s (target 30), with known bugs; the campaign has not been played start to finish yet."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Killzone 3 for Windows built using ps3recomp and rendering via Direct3D 12.",
+      "pt-br": "Port por recompilação estática de Killzone 3 para Windows feito com ps3recomp e renderização em Direct3D 12."
+    }
+  },
+  {
+    "slug": "mc-la-recompiled",
+    "name": "Midnight Club L.A. Recompiled",
+    "repo": "robertoaraujo77/MC_LA_Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "midnight-club-los-angeles-complete-edition",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A Windows distribution of the Midnight Club: Los Angeles recompilation featuring a custom installer/launcher, PT-BR translation, automatic ultrawide support, and AMD FSR.",
+      "pt-br": "Uma distribuição para Windows da recompilação de Midnight Club: Los Angeles com instalador/configurador, tradução PT-BR, suporte a ultrawide automático e AMD FSR."
+    }
+  },
+  {
+    "slug": "perfect-dark-xbla-pc-recomp",
+    "name": "Perfect Dark",
+    "repo": "CaiusCodes/Perfect-Dark-XBLA-PC-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "perfect-dark-2010",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of the Xbox 360 remaster using ReXGlue, featuring 60 FPS gameplay at up to 4K, mouse and keyboard support, and LAN/virtual LAN multiplayer.",
+      "pt-br": "Uma recompilação estática do remaster de Xbox 360 usando ReXGlue, com suporte a 60 FPS até 4K, controles por mouse e teclado e multijogador via LAN local ou virtual."
+    }
+  },
+  {
+    "slug": "tkdr-recomp",
+    "name": "Tekken: Dark Resurrection",
+    "repo": "gasparegas/tkdr-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "graphics": [
+      "OpenGL",
+      "WebGL 2"
+    ],
+    "games": [
+      {
+        "id": "tekken-dark-resurrection",
+        "tier": "ingame",
+        "source": "README: Boots, movies with sound, menus, save/load and full matches at 60 fps up to 4×, natively and in the browser."
+      }
+    ],
+    "notes": {
+      "en": "Statically recompiles the PSP executable to C for native Linux/macOS builds or directly to WebAssembly to play in web browsers.",
+      "pt-br": "Recompila estaticamente o executável do PSP para C em compilações nativas de Linux/macOS ou diretamente para WebAssembly para rodar no navegador."
+    }
+  },
+  {
+    "slug": "midnight-club-3-dub-edition-remix-port-nativo",
+    "name": "Midnight Club 3: DUB Edition Remix",
+    "repo": "Masterllgod/midnight-club-3-dub-edition-remix-port-nativo",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBE-Recomp",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "midnight-club-3-dub-edition-remix",
+        "tier": "ingame",
+        "source": "README: O jogo vai da abertura aos menus e dá para dirigir pela cidade no modo Arcade, mas ainda pode fechar sozinho, ter falhas de imagem ou de som."
+      }
+    ],
+    "notes": {
+      "en": "Android static recompilation port of Midnight Club 3: DUB Edition Remix for original Xbox rendered via Vulkan.",
+      "pt-br": "Port por recompilação estática do Xbox original para Android de Midnight Club 3: DUB Edition Remix renderizado via Vulkan."
+    }
+  },
+  {
+    "slug": "mcrae05-xbe-recomp",
+    "name": "Colin McRae Rally 2005",
+    "repo": "projectedan/McRae05-XBE-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "colin-mcrae-rally-2005",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Xbox static recompilation port featuring enhanced graphics options, texture replacement support, and Direct3D 12 rendering.",
+      "pt-br": "Port por recompilação estática de Xbox com opções gráficas aprimoradas, suporte a substituição de texturas e renderização em Direct3D 12."
+    }
+  },
+  {
+    "slug": "splosionmanrecomp",
+    "name": "'Splosion Man",
+    "repo": "thefixinhixon/SplosionManRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "splosion-man",
+        "tier": "playable",
+        "source": "README: Linux: fully playable — graphics, PipeWire audio, controller + vibration, full-game unlock, FSR upscaling, verified on Kubuntu (AMD RX 6600 / RADV)."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of 'Splosion Man for Linux and Windows using ReXGlue SDK, featuring a Qt6 launcher with AMD FSR upscaling and customizable graphics settings.",
+      "pt-br": "Recompilação estática de 'Splosion Man para Linux e Windows usando o ReXGlue SDK, contando com launcher em Qt6 com upscaling AMD FSR e opções gráficas configuráveis."
+    }
+  },
+  {
+    "slug": "ctrnativeported",
+    "name": "CTRNativePorted",
+    "repo": "guzuold/CTRNativePorted",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "crash-team-racing-nitro-fueled",
+        "tier": "playable",
+        "source": "README: The game is playable from start to finish."
+      }
+    ],
+    "notes": {
+      "en": "Runs the PS4 executable natively on Windows with Vulkan and Direct3D 11 renderers, up to 4K resolution at 60+ FPS, local split screen, and serverless peer-to-peer multiplayer.",
+      "pt-br": "Executa o executável de PS4 nativamente no Windows com renderizadores Vulkan e Direct3D 11, resolução até 4K a 60+ FPS, tela dividida local e multijogador P2P sem servidor central."
+    }
+  },
+  {
+    "slug": "azazel6",
+    "name": "Azazel6",
+    "repo": "zxyandreay/azazel6",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PSPRecomp",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "tekken-6",
+        "tier": "wip",
+        "source": "README: This remains startup research, with no title/menu or playable-game claim."
+      }
+    ],
+    "notes": {
+      "en": "Azazel6 is an experimental native Android port of Tekken 6 for PSP using PSPRecomp static recompilation.",
+      "pt-br": "Azazel6 é um port nativo experimental para Android de Tekken 6 para PSP usando recompilação estática via PSPRecomp."
+    }
+  },
+  {
+    "slug": "juiced2-recompiled",
+    "name": "Juiced 2: Hot Import Nights",
+    "repo": "anishchandra24/Juiced2-Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "juiced-2-hot-import-nights",
+        "tier": "ingame",
+        "source": "README: The game starts, plays and saves, and I have played Career from the rookie league through league 7."
+      }
+    ],
+    "notes": {
+      "en": "Early preview native Windows port compiled via ReXGlue static recompilation. Progression is tested deep into Career mode, though known graphical and performance issues remain.",
+      "pt-br": "Port nativo preliminar para Windows compilado via recompilação estática com ReXGlue. A progressão foi testada até fases avançadas do modo Carreira, com falhas gráficas e de desempenho conhecidas."
+    }
+  },
+  {
+    "slug": "allstars-port",
+    "name": "PlayStation All-Stars Battle Royale",
+    "repo": "samuelMadureira23/allstars-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "playstation-all-stars-battle-royale",
+        "tier": "ingame",
+        "source": "README: Work in progress."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of PlayStation All-Stars Battle Royale built using static recompilation via ps3recomp and Direct3D 12. Supports 4-player local battles, LAN multiplayer, shader pre-compilation, and various controllers.",
+      "pt-br": "Port nativo para Windows de PlayStation All-Stars Battle Royale feito via recompilação estática com ps3recomp e Direct3D 12. Suporta batalhas locais para 4 jogadores, multijogador em rede local, pré-compilação de shaders e diversos controles."
+    }
+  },
+  {
+    "slug": "ninja-gaiden-black-port",
+    "name": "Ninja Gaiden Black",
+    "repo": "angeldev07/ninja-gaiden-black-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "ninja-gaiden-black",
+        "tier": "playable",
+        "source": "README: The whole game has been played through: the story mode, from the title screen to the ending, and the mission mode, up to and including the last mission, \"Eternal Legend\"."
+      }
+    ],
+    "notes": {
+      "en": "Runs the original Xbox x86 binary natively on Windows with an OpenGL renderer, higher internal resolution options, and widescreen support.",
+      "pt-br": "Executa o binário x86 original do Xbox nativamente no Windows com renderizador OpenGL, suporte a widescreen e resoluções mais altas."
+    }
+  },
+  {
+    "slug": "project-pyrrhus",
+    "name": "Project Pyrrhus",
+    "repo": "undecuple/project-pyrrhus",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "killzone-2",
+        "tier": "ingame",
+        "source": "README: Status: early, partly playable."
+      }
+    ],
+    "notes": {
+      "en": "Project Pyrrhus is a static recompilation of Killzone 2 for Windows using ps3recomp, currently running the first level.",
+      "pt-br": "Project Pyrrhus é uma recompilação estática de Killzone 2 para Windows usando ps3recomp, atualmente executando a primeira fase."
+    }
+  },
+  {
+    "slug": "rogue-galaxy-recomp",
+    "name": "Rogue Galaxy Recompiled",
+    "repo": "victor-takai/rogue-galaxy-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "rogue-galaxy",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Rogue Galaxy for PS2 on Windows using PS2Recomp, featuring higher frame rates, widescreen up to 32:9, internal resolution scaling, and game customization options.",
+      "pt-br": "Uma recompilação estática de Rogue Galaxy do PS2 para Windows usando PS2Recomp, contando com suporte a maiores taxas de quadros, widescreen até 32:9, multiplicador de resolução e opções customizáveis do jogo."
+    }
+  },
+  {
+    "slug": "call-of-duty-3-pc-editon",
+    "name": "Project 1944",
+    "repo": "zenit2893-cmyk/Call-of-Duty-3-PC-Editon",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "call-of-duty-3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Project 1944 is a native Windows PC port of Call of Duty 3 statically recompiled from Xbox 360 PowerPC code using ReXGlue.",
+      "pt-br": "Project 1944 é um port nativo para Windows de Call of Duty 3 recompilado estaticamente do código PowerPC do Xbox 360 via ReXGlue."
+    }
+  },
+  {
+    "slug": "conker-lr-recomp",
+    "name": "Conker: Live & Reloaded",
+    "repo": "rashevskyv/conker-lr-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "conker-live-reloaded",
+        "tier": "playable",
+        "source": "README: Status: the single player game is playable."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Conker: Live & Reloaded for Windows, Linux, and Nintendo Switch using xboxrecomp.",
+      "pt-br": "Port por recompilação estática de Conker: Live & Reloaded para Windows, Linux e Nintendo Switch usando xboxrecomp."
+    }
+  },
+  {
+    "slug": "bloodwake-recomp",
+    "name": "Blood Wake",
+    "repo": "minimalice92/bloodwake-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "blood-wake",
+        "tier": "playable",
+        "source": "README: Every function in the game recompiled to native code with none failing, and the whole game playable in both editions: all 28 story missions, Battle Mode and split screen for up to four players."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Blood Wake for Windows via xboxrecomp, featuring 4K and ultrawide support, high frame rates, 4-player split screen, and optional bug fixes.",
+      "pt-br": "Recompilação estática de Blood Wake para Windows via xboxrecomp, com suporte a 4K e ultrawide, altas taxas de quadros, tela dividida para 4 jogadores e correções de bugs opcionais."
+    }
+  },
+  {
+    "slug": "nx2apk",
+    "name": "nx2apk",
+    "repo": "ghostyshell/nx2apk",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "devil-may-cry-switch",
+        "tier": "ingame",
+        "source": "README: Tested through the opening cutscenes and the first area: 60 fps in the Switch's handheld mode (720p), movies with sound, touch and controller input. Saving and later levels are not tested yet"
+      }
+    ],
+    "notes": {
+      "en": "Tool for running Nintendo Switch ARM64 binaries natively on Android devices by patching Horizon kernel instructions and translating NVN graphics to Vulkan.",
+      "pt-br": "Ferramenta para executar binários ARM64 do Nintendo Switch nativamente em dispositivos Android, corrigindo instruções do kernel Horizon e traduzindo gráficos NVN para Vulkan."
+    }
+  },
+  {
+    "slug": "knowyourrolerecomp",
+    "name": "Know Your Role Recomp",
+    "repo": "Comfubar/KnowYourRoleRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "RecompOne",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "wwf-smackdown-2-know-your-role",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native port of WWF SmackDown! 2: Know Your Role built using RecompOne, featuring a setup launcher, controller mapping, and 1-4 player support.",
+      "pt-br": "Port nativo de WWF SmackDown! 2: Know Your Role criado com RecompOne, contando com launcher de configuração, mapeamento de controles e suporte de 1 a 4 jogadores."
+    }
+  },
+  {
+    "slug": "conkerlr-recomp",
+    "name": "Conker: Live & Reloaded",
+    "repo": "yacineolivier-maker/ConkerLR-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "conker-live-reloaded",
+        "tier": "ingame",
+        "source": "README: Work in progress, but the single-player game is playable:"
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of the Xbox game built via Xbox XBE Recomp featuring Direct3D 12 rendering and modern graphics options.",
+      "pt-br": "Port nativo para Windows do jogo de Xbox desenvolvido via Xbox XBE Recomp com renderização em Direct3D 12 e opções gráficas modernas."
+    }
+  },
+  {
+    "slug": "kameorecomp",
+    "name": "Kameo: Elements of Power",
+    "repo": "ElGuslml/KameoRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "kameo-elements-of-power",
+        "tier": "ingame",
+        "source": "README: Thorn's Castle and the first areas of the Enchanted Kingdom have been played without problems; later levels have not been tested yet."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 launch title for 64-bit Windows using ReXGlue, featuring Vulkan rendering, high frame rates, widescreen/ultrawide support, and an automated setup launcher.",
+      "pt-br": "Recompilação estática do título de lançamento do Xbox 360 para Windows de 64 bits usando ReXGlue, com renderização em Vulkan, suporte a taxas elevadas de quadros, telas ultrawide e launcher de instalação automática."
+    }
+  },
+  {
+    "slug": "doa3",
+    "name": "Dead or Alive 3",
+    "repo": "Wannamingo/DOA3",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "OpenGL ES 3.0"
+    ],
+    "games": [
+      {
+        "id": "dead-or-alive-3",
+        "tier": "ingame",
+        "source": "README: Alpha-сборка: запуск, меню и бой проверены на RG477M."
+      }
+    ],
+    "notes": {
+      "en": "Android port using static recompilation of x86 Xbox code to ARM64, featuring direct ISO reading and customizable touch and gamepad controls.",
+      "pt-br": "Port para Android utilizando recompilação estática do código x86 do Xbox para ARM64, com leitura direta de ISO e controles de toque e gamepad customizáveis."
+    }
+  },
+  {
+    "slug": "yw4recomp",
+    "name": "Yo-kai Watch 4++",
+    "repo": "ILFforever/YW4Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "yo-kai-watch-4",
+        "tier": "ingame",
+        "source": "README: Work in progress: not playable from start to finish yet."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Yo-kai Watch 4++ for Windows, featuring graphics improvements like ultrawide support, PCSS soft shadows, DLSS/FSR upscaling, and TAA.",
+      "pt-br": "Recompilação estática de Yo-kai Watch 4++ para Windows, trazendo melhorias gráficas como suporte a telas ultrawide, sombras suaves PCSS, upscaling via DLSS/FSR e TAA."
+    }
+  },
+  {
+    "slug": "ghmetalrecomp",
+    "name": "GHMetalRecomp",
+    "repo": "ElGuslml/GHMetalRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "guitar-hero-metallica",
+        "tier": "ingame",
+        "source": "README: Songs have been played from start to finish with an Xbox 360 guitar, on guitar and bass parts, and sung with a PC microphone (new and experimental)."
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 static recompilation of Guitar Hero: Metallica for Windows using ReXGlue and Vulkan. Features high frame rate options, ultrawide support, DLC support, and fixes for audio sync issues.",
+      "pt-br": "Recompilação estática de Guitar Hero: Metallica do Xbox 360 para Windows usando ReXGlue e Vulkan. Inclui suporte a altas taxas de quadros, telas ultrawide, DLCs e correções de sincronia de áudio."
     }
   }
 ]

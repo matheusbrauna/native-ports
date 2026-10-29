@@ -1158,5 +1158,59 @@
     "title": "PlayStation All-Stars Battle Royale",
     "console": "ps3",
     "titleIds": []
+  },
+  {
+    "id": "killzone-2",
+    "title": "Killzone 2",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "rogue-galaxy",
+    "title": "Rogue Galaxy",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "conker-live-reloaded",
+    "title": "Conker: Live & Reloaded",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "blood-wake",
+    "title": "Blood Wake",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "devil-may-cry-switch",
+    "title": "Devil May Cry",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "wwf-smackdown-2-know-your-role",
+    "title": "WWF SmackDown! 2: Know Your Role",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "kameo-elements-of-power",
+    "title": "Kameo: Elements of Power",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "yo-kai-watch-4",
+    "title": "Yo-kai Watch 4++",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "guitar-hero-metallica",
+    "title": "Guitar Hero: Metallica",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

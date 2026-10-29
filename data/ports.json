@@ -5633,5 +5633,320 @@
       "en": "Runs the original Xbox x86 binary natively on Windows with an OpenGL renderer, higher internal resolution options, and widescreen support.",
       "pt-br": "Executa o binário x86 original do Xbox nativamente no Windows com renderizador OpenGL, suporte a widescreen e resoluções mais altas."
     }
+  },
+  {
+    "slug": "project-pyrrhus",
+    "name": "Project Pyrrhus",
+    "repo": "undecuple/project-pyrrhus",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "killzone-2",
+        "tier": "ingame",
+        "source": "README: Status: early, partly playable."
+      }
+    ],
+    "notes": {
+      "en": "Project Pyrrhus is a static recompilation of Killzone 2 for Windows using ps3recomp, currently running the first level.",
+      "pt-br": "Project Pyrrhus é uma recompilação estática de Killzone 2 para Windows usando ps3recomp, atualmente executando a primeira fase."
+    }
+  },
+  {
+    "slug": "rogue-galaxy-recomp",
+    "name": "Rogue Galaxy Recompiled",
+    "repo": "victor-takai/rogue-galaxy-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "rogue-galaxy",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Rogue Galaxy for PS2 on Windows using PS2Recomp, featuring higher frame rates, widescreen up to 32:9, internal resolution scaling, and game customization options.",
+      "pt-br": "Uma recompilação estática de Rogue Galaxy do PS2 para Windows usando PS2Recomp, contando com suporte a maiores taxas de quadros, widescreen até 32:9, multiplicador de resolução e opções customizáveis do jogo."
+    }
+  },
+  {
+    "slug": "call-of-duty-3-pc-editon",
+    "name": "Project 1944",
+    "repo": "zenit2893-cmyk/Call-of-Duty-3-PC-Editon",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "call-of-duty-3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Project 1944 is a native Windows PC port of Call of Duty 3 statically recompiled from Xbox 360 PowerPC code using ReXGlue.",
+      "pt-br": "Project 1944 é um port nativo para Windows de Call of Duty 3 recompilado estaticamente do código PowerPC do Xbox 360 via ReXGlue."
+    }
+  },
+  {
+    "slug": "conker-lr-recomp",
+    "name": "Conker: Live & Reloaded",
+    "repo": "rashevskyv/conker-lr-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "conker-live-reloaded",
+        "tier": "playable",
+        "source": "README: Status: the single player game is playable."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Conker: Live & Reloaded for Windows, Linux, and Nintendo Switch using xboxrecomp.",
+      "pt-br": "Port por recompilação estática de Conker: Live & Reloaded para Windows, Linux e Nintendo Switch usando xboxrecomp."
+    }
+  },
+  {
+    "slug": "bloodwake-recomp",
+    "name": "Blood Wake",
+    "repo": "minimalice92/bloodwake-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "blood-wake",
+        "tier": "playable",
+        "source": "README: Every function in the game recompiled to native code with none failing, and the whole game playable in both editions: all 28 story missions, Battle Mode and split screen for up to four players."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Blood Wake for Windows via xboxrecomp, featuring 4K and ultrawide support, high frame rates, 4-player split screen, and optional bug fixes.",
+      "pt-br": "Recompilação estática de Blood Wake para Windows via xboxrecomp, com suporte a 4K e ultrawide, altas taxas de quadros, tela dividida para 4 jogadores e correções de bugs opcionais."
+    }
+  },
+  {
+    "slug": "nx2apk",
+    "name": "nx2apk",
+    "repo": "ghostyshell/nx2apk",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "devil-may-cry-switch",
+        "tier": "ingame",
+        "source": "README: Tested through the opening cutscenes and the first area: 60 fps in the Switch's handheld mode (720p), movies with sound, touch and controller input. Saving and later levels are not tested yet"
+      }
+    ],
+    "notes": {
+      "en": "Tool for running Nintendo Switch ARM64 binaries natively on Android devices by patching Horizon kernel instructions and translating NVN graphics to Vulkan.",
+      "pt-br": "Ferramenta para executar binários ARM64 do Nintendo Switch nativamente em dispositivos Android, corrigindo instruções do kernel Horizon e traduzindo gráficos NVN para Vulkan."
+    }
+  },
+  {
+    "slug": "knowyourrolerecomp",
+    "name": "Know Your Role Recomp",
+    "repo": "Comfubar/KnowYourRoleRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "RecompOne",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "wwf-smackdown-2-know-your-role",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native port of WWF SmackDown! 2: Know Your Role built using RecompOne, featuring a setup launcher, controller mapping, and 1-4 player support.",
+      "pt-br": "Port nativo de WWF SmackDown! 2: Know Your Role criado com RecompOne, contando com launcher de configuração, mapeamento de controles e suporte de 1 a 4 jogadores."
+    }
+  },
+  {
+    "slug": "conkerlr-recomp",
+    "name": "Conker: Live & Reloaded",
+    "repo": "yacineolivier-maker/ConkerLR-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "conker-live-reloaded",
+        "tier": "ingame",
+        "source": "README: Work in progress, but the single-player game is playable:"
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of the Xbox game built via Xbox XBE Recomp featuring Direct3D 12 rendering and modern graphics options.",
+      "pt-br": "Port nativo para Windows do jogo de Xbox desenvolvido via Xbox XBE Recomp com renderização em Direct3D 12 e opções gráficas modernas."
+    }
+  },
+  {
+    "slug": "kameorecomp",
+    "name": "Kameo: Elements of Power",
+    "repo": "ElGuslml/KameoRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "kameo-elements-of-power",
+        "tier": "ingame",
+        "source": "README: Thorn's Castle and the first areas of the Enchanted Kingdom have been played without problems; later levels have not been tested yet."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 launch title for 64-bit Windows using ReXGlue, featuring Vulkan rendering, high frame rates, widescreen/ultrawide support, and an automated setup launcher.",
+      "pt-br": "Recompilação estática do título de lançamento do Xbox 360 para Windows de 64 bits usando ReXGlue, com renderização em Vulkan, suporte a taxas elevadas de quadros, telas ultrawide e launcher de instalação automática."
+    }
+  },
+  {
+    "slug": "doa3",
+    "name": "Dead or Alive 3",
+    "repo": "Wannamingo/DOA3",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "OpenGL ES 3.0"
+    ],
+    "games": [
+      {
+        "id": "dead-or-alive-3",
+        "tier": "ingame",
+        "source": "README: Alpha-сборка: запуск, меню и бой проверены на RG477M."
+      }
+    ],
+    "notes": {
+      "en": "Android port using static recompilation of x86 Xbox code to ARM64, featuring direct ISO reading and customizable touch and gamepad controls.",
+      "pt-br": "Port para Android utilizando recompilação estática do código x86 do Xbox para ARM64, com leitura direta de ISO e controles de toque e gamepad customizáveis."
+    }
+  },
+  {
+    "slug": "yw4recomp",
+    "name": "Yo-kai Watch 4++",
+    "repo": "ILFforever/YW4Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "yo-kai-watch-4",
+        "tier": "ingame",
+        "source": "README: Work in progress: not playable from start to finish yet."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Yo-kai Watch 4++ for Windows, featuring graphics improvements like ultrawide support, PCSS soft shadows, DLSS/FSR upscaling, and TAA.",
+      "pt-br": "Recompilação estática de Yo-kai Watch 4++ para Windows, trazendo melhorias gráficas como suporte a telas ultrawide, sombras suaves PCSS, upscaling via DLSS/FSR e TAA."
+    }
+  },
+  {
+    "slug": "ghmetalrecomp",
+    "name": "GHMetalRecomp",
+    "repo": "ElGuslml/GHMetalRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "guitar-hero-metallica",
+        "tier": "ingame",
+        "source": "README: Songs have been played from start to finish with an Xbox 360 guitar, on guitar and bass parts, and sung with a PC microphone (new and experimental)."
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 static recompilation of Guitar Hero: Metallica for Windows using ReXGlue and Vulkan. Features high frame rate options, ultrawide support, DLC support, and fixes for audio sync issues.",
+      "pt-br": "Recompilação estática de Guitar Hero: Metallica do Xbox 360 para Windows usando ReXGlue e Vulkan. Inclui suporte a altas taxas de quadros, telas ultrawide, DLCs e correções de sincronia de áudio."
+    }
   }
 ]

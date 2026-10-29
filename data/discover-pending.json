@@ -90,5 +90,9 @@
   {
     "repo": "LaurentGarcia/sega-rally-recomp",
     "reason": "Triage accepted it, but: Console \"model2\" is not in the catalog yet (Sega Rally Championship)"
+  },
+  {
+    "repo": "Shagg88/COGBox",
+    "reason": "Triage accepted it, but: Tier \"playable\" for Gears of War: Judgment cites a quote that is not in the README: \"Playable\""
   }
 ]

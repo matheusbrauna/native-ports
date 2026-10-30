@@ -94,5 +94,17 @@
   {
     "repo": "Shagg88/COGBox",
     "reason": "Triage accepted it, but: Tier \"playable\" for Gears of War: Judgment cites a quote that is not in the README: \"Playable\""
+  },
+  {
+    "repo": "Petexy/Tekken-Tag-2-Ultimate-Edition",
+    "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (Tekken Tag Tournament 2 Wii U Edition)"
+  },
+  {
+    "repo": "dq9-remastered/DQ9-Remastered",
+    "reason": "Triage accepted it, but: Console \"nds\" is not in the catalog yet (Dragon Quest IX: Sentinels of the Starry Skies)"
+  },
+  {
+    "repo": "mrbaazzman/Asphalt5-Native",
+    "reason": "Triage accepted it, but: Console \"android\" is not in the catalog yet (Asphalt 5 HD)"
   }
 ]

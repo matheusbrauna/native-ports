@@ -1212,5 +1212,77 @@
     "title": "Guitar Hero: Metallica",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "armored-core-4",
+    "title": "Armored Core 4",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "need-for-speed-carbon",
+    "title": "Need for Speed: Carbon",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "fable-ii",
+    "title": "Fable II",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "tenchu-return-from-darkness",
+    "title": "Tenchu: Return from Darkness",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "pro-evolution-soccer-6",
+    "title": "Pro Evolution Soccer 6",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-spyros-adventure",
+    "title": "Skylanders: Spyro's Adventure",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "mario-kart-8-deluxe",
+    "title": "Mario Kart 8 Deluxe",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "nhl-14",
+    "title": "NHL 14",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "aegis-wing",
+    "title": "Aegis Wing",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "world-driver-championship",
+    "title": "World Driver Championship",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "kamen-rider-memory-of-heroez",
+    "title": "Kamen Rider: Memory of Heroez",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "drakengard-3",
+    "title": "Drakengard 3",
+    "console": "ps3",
+    "titleIds": []
   }
 ]

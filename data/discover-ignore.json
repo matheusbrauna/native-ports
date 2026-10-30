@@ -434,5 +434,25 @@
   {
     "repo": "countallegrex/sa1-psp",
     "reason": "Triage: The project is out of scope because its primary target is another console (PSP)."
+  },
+  {
+    "repo": "JodusNodus/rerbr",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "nimauria/Xenon-Recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "sindufha/Devil-may-cry-3-recomp",
+    "reason": "Triage: The repository ports the PC version of the game rather than a console version, which is out of scope."
+  },
+  {
+    "repo": "Kaays/nfscarbon-nx",
+    "reason": "Triage: The repository is a native port targeting only another console (Nintendo Switch)."
+  },
+  {
+    "repo": "Ink230/irongoon",
+    "reason": "Triage: It is a randomizer mod for Severed Chains rather than a native game port."
   }
 ]

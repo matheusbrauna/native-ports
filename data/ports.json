@@ -1285,8 +1285,9 @@
     "technique": "recomp",
     "toolchain": "xboxrecomp",
     "platforms": [
-      "windows",
-      "steamdeck"
+      "linux",
+      "steamdeck",
+      "windows"
     ],
     "graphics": [
       "Direct3D 11"
@@ -1294,13 +1295,13 @@
     "games": [
       {
         "id": "ssx-tricky",
-        "tier": "playable",
-        "source": "README: unstable release, playable start to finish"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "The Xbox version translated with xboxrecomp; Direct3D 11, with a Steam Deck preset.",
-      "pt-br": "A versão de Xbox traduzida com o xboxrecomp; Direct3D 11, com preset para Steam Deck."
+      "en": "The Xbox version translated with xboxrecomp for Windows and Linux/Steam Deck via Proton, using Direct3D 11.",
+      "pt-br": "A versão de Xbox traduzida com o xboxrecomp para Windows e Linux/Steam Deck via Proton, usando Direct3D 11."
     }
   },
   {
@@ -3575,13 +3576,13 @@
     "games": [
       {
         "id": "war-of-the-monsters",
-        "tier": "ingame",
-        "source": "README: Fights are playable with the keyboard AND gamepad, and sound and FMVs play natively."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "Static recompilation of the PS2 game War of the Monsters using PS2Recomp, with a custom native rendering layer powered by raylib.",
-      "pt-br": "Recompilação estática do jogo de PS2 War of the Monsters usando PS2Recomp, com uma camada de renderização nativa própria em raylib."
+      "en": "Static recompilation of the PS2 game War of the Monsters using PS2Recomp, featuring a native rendering layer and mod support.",
+      "pt-br": "Recompilação estática do jogo de PS2 War of the Monsters usando PS2Recomp, apresentando uma camada de renderização nativa e suporte a mods."
     }
   },
   {
@@ -4173,27 +4174,27 @@
     "toolchain": "ReXGlue",
     "platforms": [
       "linux",
-      "steamdeck",
-      "windows"
+      "steamdeck"
     ],
     "graphics": [
-      "Direct3D 12"
+      "Direct3D 12",
+      "Vulkan"
     ],
     "games": [
       {
         "id": "f-e-a-r",
-        "tier": "ingame",
-        "source": "README: Latest release: v0.1.5, source only and early: both games boot and play on the new Direct3D 12 renderer, with EchoPatch's high-frame-rate fixes."
+        "tier": "unrated",
+        "source": null
       },
       {
         "id": "f-e-a-r-files",
-        "tier": "ingame",
-        "source": "README: Latest release: v0.1.5, source only and early: both games boot and play on the new Direct3D 12 renderer, with EchoPatch's high-frame-rate fixes."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "Static recompilation of Xbox 360 F.E.A.R. and F.E.A.R. Files using ReXGlue. Features a native Direct3D 12 renderer, display-locked frame rates up to 120 fps, high-FPS physics fixes, and an added PC Settings menu.",
-      "pt-br": "Recompilação estática de F.E.A.R. e F.E.A.R. Files do Xbox 360 usando ReXGlue. Apresenta um renderizador nativo Direct3D 12, taxa de quadros de até 120 fps sincronizada com a tela, correções de física em alta taxa de FPS e menu de configurações para PC."
+      "en": "Static recompilation of Xbox 360 F.E.A.R. running natively on Linux and Steam Deck with a native Vulkan and Direct3D 12 renderer. Support for Windows and F.E.A.R. Files are planned for upcoming releases.",
+      "pt-br": "Recompilação estática de F.E.A.R. do Xbox 360 rodando nativamente no Linux e Steam Deck com um renderizador nativo Vulkan e Direct3D 12. O suporte para Windows e o F.E.A.R. Files estão planejados para versões futuras."
     }
   },
   {
@@ -5947,6 +5948,378 @@
     "notes": {
       "en": "Xbox 360 static recompilation of Guitar Hero: Metallica for Windows using ReXGlue and Vulkan. Features high frame rate options, ultrawide support, DLC support, and fixes for audio sync issues.",
       "pt-br": "Recompilação estática de Guitar Hero: Metallica do Xbox 360 para Windows usando ReXGlue e Vulkan. Inclui suporte a altas taxas de quadros, telas ultrawide, DLCs e correções de sincronia de áudio."
+    }
+  },
+  {
+    "slug": "ac4-port",
+    "name": "Armored Core 4",
+    "repo": "SulphurS16/AC4-Port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "armored-core-4",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation port of Armored Core 4 for Windows featuring Direct3D 11 graphics, arbitrary framerates, and full keyboard and mouse support.",
+      "pt-br": "Um port por recompilação estática de Armored Core 4 para Windows com gráficos em Direct3D 11, taxas de quadros arbitrárias e suporte completo a teclado e mouse."
+    }
+  },
+  {
+    "slug": "speedbreaker-carbon",
+    "name": "SpeedBreaker: Carbon",
+    "repo": "SpeedBreakerProject/speedbreaker-carbon",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "arm",
+      "ios",
+      "linux",
+      "macos",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "need-for-speed-carbon",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Need for Speed: Carbon (Xbox 360) supporting high-resolution rendering, custom aspect ratios, and native cross-platform support.",
+      "pt-br": "Recompilação estática de Need for Speed: Carbon (Xbox 360) com suporte a renderização em alta resolução, proporções de tela personalizadas e suporte nativo multiplataforma."
+    }
+  },
+  {
+    "slug": "fabledroid",
+    "name": "FableDroid",
+    "repo": "hardsilinder/FableDroid",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "fable-ii",
+        "tier": "ingame",
+        "source": "README: Playable. The game boots, loads saves and runs at its 30 FPS cap on a Snapdragon 8 Gen 2 handheld with the default settings."
+      }
+    ],
+    "notes": {
+      "en": "An Android port of Fable II built via ReXGlue static recompilation, featuring a Vulkan renderer and touch controls.",
+      "pt-br": "Um port de Fable II para Android feito via recompilação estática com ReXGlue, com renderizador Vulkan e controles de toque."
+    }
+  },
+  {
+    "slug": "tenchurfdrecomp",
+    "name": "Tenchu: Return from Darkness",
+    "repo": "Llamapixels/TenchuRFDRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBERecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "tenchu-return-from-darkness",
+        "tier": "playable",
+        "source": "README: The game has been played through on this port, but expect bugs or crashes randomly though none have been reported."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the original Xbox game for Windows supporting Direct3D 12 and Vulkan, texture packs, mods, and custom level editing.",
+      "pt-br": "Recompilação estática do jogo original de Xbox para Windows com suporte a Direct3D 12 e Vulkan, pacotes de textura, mods e edição de fases personalizadas."
+    }
+  },
+  {
+    "slug": "pes6-native",
+    "name": "Pro Evolution Soccer 6",
+    "repo": "iptory/pes6-native",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "pro-evolution-soccer-6",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "ReXGlue-based static recompilation of the European Xbox 360 release of Pro Evolution Soccer 6 for Windows.",
+      "pt-br": "Recompilação estática baseada em ReXGlue da versão europeia de Xbox 360 do Pro Evolution Soccer 6 para Windows."
+    }
+  },
+  {
+    "slug": "ssarecomp",
+    "name": "Skylanders: Spyro's Adventure",
+    "repo": "tsapZ/SSARecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skylanders-spyros-adventure",
+        "tier": "ingame",
+        "source": "README: Chapter 1 plays all the way through, cutscenes and voices included, and has been played a lot."
+      }
+    ],
+    "notes": {
+      "en": "Recompiled Xbox 360 port featuring unlocked frame rates, ultrawide display support, built-in portal emulation, and Direct3D 12 rendering.",
+      "pt-br": "Port recompilado de Xbox 360 com taxa de quadros desbloqueada, suporte a telas ultrawide, emulação de portal integrada e renderização em Direct3D 12."
+    }
+  },
+  {
+    "slug": "racing-8-dx-recomp",
+    "name": "Racing 8 DX Recomp",
+    "repo": "galarianpikachu2021-hue/Racing-8-DX-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "mario-kart-8-deluxe",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation port of Mario Kart 8 Deluxe for Nintendo Switch, featuring native Vulkan rendering, FSR 3.1, experimental DLSS, and frame generation.",
+      "pt-br": "Um port por recompilação estática de Mario Kart 8 Deluxe do Nintendo Switch, trazendo renderização nativa em Vulkan, FSR 3.1, DLSS experimental e geração de quadros."
+    }
+  },
+  {
+    "slug": "bardown",
+    "name": "bardown",
+    "repo": "griby-man/bardown",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "nhl-14",
+        "tier": "playable",
+        "source": "README: Every offline mode below has been played start to finish on the current version, by me and a friend (Codeburglar55 / cigar-city-code):"
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of NHL 14 for Xbox 360 using ReXGlue, featuring a custom Vulkan renderer and full offline playability on Linux and Windows.",
+      "pt-br": "Uma recompilação estática de NHL 14 para Xbox 360 usando ReXGlue, contando com um renderizador Vulkan próprio e jogabilidade offline completa no Linux e Windows."
+    }
+  },
+  {
+    "slug": "aegis-wing-xbla-pc-recomp",
+    "name": "Aegis Wing",
+    "repo": "CaiusCodes/Aegis-Wing-XBLA-PC-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 12"
+    ],
+    "games": [
+      {
+        "id": "aegis-wing",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows PC static recompilation of the Xbox 360 XBLA shoot-'em-up Aegis Wing, featuring up to 4K 60 FPS gameplay, local and LAN/online co-op, and keyboard/mouse support.",
+      "pt-br": "Recompilação estática nativa para PC Windows do jogo de nave do Xbox 360 Aegis Wing, com suporte a até 4K a 60 FPS, coop local e via LAN/online, além de suporte a teclado e mouse."
+    }
+  },
+  {
+    "slug": "worlddriverchampionship-recomp",
+    "name": "World Driver Championship",
+    "repo": "alondero/worlddriverchampionship-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "world-driver-championship",
+        "tier": "ingame",
+        "source": "README: Windows x64 / Direct3D 12 has been tested through the intro, menus, and Hawaii practice driving (acceleration, steering, automatic gears, pause/resume)."
+      }
+    ],
+    "notes": {
+      "en": "An experimental N64Recomp port of World Driver Championship using RT64 for low-level RDP rendering, featuring widescreen camera support and Controller Pak saves.",
+      "pt-br": "Um port experimental em N64Recomp de World Driver Championship usando RT64 para renderização RDP de baixo nível, com suporte a câmera widescreen e salvamento via Controller Pak."
+    }
+  },
+  {
+    "slug": "mario-kart-wii-pc-builder",
+    "name": "Mario Kart Wii PC Builder",
+    "repo": "MarcPique/mario-kart-wii-pc-builder",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "WiiCompiled",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "mario-kart-wii",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A PC builder and runtime for Mario Kart Wii based on WiiCompiled, featuring native PC settings, live language switching, and Retro WFC online play.",
+      "pt-br": "Um builder e runtime de PC para Mario Kart Wii baseado no WiiCompiled, com configurações nativas de PC, troca de idioma em tempo real e modo online via Retro WFC."
+    }
+  },
+  {
+    "slug": "infamous-second-son-linux",
+    "name": "inFAMOUS Second Son: Native Linux Port",
+    "repo": "aliveoutside/infamous-second-son-linux",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "infamous-second-son",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native Linux port of inFAMOUS Second Son running PS4 x86-64 code directly on the CPU with a Vulkan renderer based on shadPS4, mouse aim, FSR 3, and Steam Deck support.",
+      "pt-br": "Um port nativo para Linux de inFAMOUS Second Son que executa o código x86-64 do PS4 diretamente na CPU com renderizador Vulkan baseado no shadPS4, mira no mouse, FSR 3 e suporte ao Steam Deck."
+    }
+  },
+  {
+    "slug": "kamenrider-moh-pc",
+    "name": "Kamen Rider: Memory of Heroez PC Port",
+    "repo": "indrasundanese/KamenRider-MoH-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "kamen-rider-memory-of-heroez",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native PC runtime port of Kamen Rider: Memory of Heroez for PS4 built on shadPS4 runtime components, running on Windows with Vulkan.",
+      "pt-br": "Um port nativo por runtime para PC de Kamen Rider: Memory of Heroez do PS4 construído com componentes do shadPS4, executado no Windows com Vulkan."
+    }
+  },
+  {
+    "slug": "drakengard3recompile",
+    "name": "Drakengard 3",
+    "repo": "k1gs/Drakengard3Recompile",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "drakengard-3",
+        "tier": "intro",
+        "source": "README: The Windows executable renders the intro, plays audio and reaches the main menu."
+      }
+    ],
+    "notes": {
+      "en": "A native Windows static recompilation port of Drakengard 3 built with ps3recomp, currently able to display the intro, menus, and initial story cutscenes.",
+      "pt-br": "Port por recompilação estática nativa de Drakengard 3 para Windows feito com ps3recomp, atualmente capaz de exibir a intro, menus e cenas iniciais da história."
     }
   }
 ]

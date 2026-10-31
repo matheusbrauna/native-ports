@@ -1284,5 +1284,71 @@
     "title": "Drakengard 3",
     "console": "ps3",
     "titleIds": []
+  },
+  {
+    "id": "mario-kart-double-dash",
+    "title": "Mario Kart: Double Dash!!",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "007-nightfire",
+    "title": "007: Nightfire",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "cartoon-network-racing",
+    "title": "Cartoon Network Racing",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "snoopy-flying-ace",
+    "title": "Snoopy Flying Ace",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "muppet-racemania",
+    "title": "Muppet RaceMania",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "shin-megami-tensei-persona-3-fes",
+    "title": "Shin Megami Tensei: Persona 3 FES",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "nhl-legacy-edition",
+    "title": "NHL Legacy Edition",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "medievil",
+    "title": "MediEvil",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-imaginators",
+    "title": "Skylanders: Imaginators",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-swap-force",
+    "title": "Skylanders: Swap Force",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "pro-evolution-soccer-6-psp",
+    "title": "Pro Evolution Soccer 6",
+    "console": "psp",
+    "titleIds": []
   }
 ]

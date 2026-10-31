@@ -106,5 +106,9 @@
   {
     "repo": "mrbaazzman/Asphalt5-Native",
     "reason": "Triage accepted it, but: Console \"android\" is not in the catalog yet (Asphalt 5 HD)"
+  },
+  {
+    "repo": "sp00nznet/linksawakening-portable",
+    "reason": "Triage accepted it, but: Console \"gbc\" is not in the catalog yet (The Legend of Zelda: Link's Awakening DX)"
   }
 ]

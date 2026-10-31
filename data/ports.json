@@ -2010,12 +2010,12 @@
       {
         "id": "mario-kart-wii",
         "tier": "playable",
-        "source": "README: playable end to end; races, menus, audio, saves and online play work"
+        "source": "README: DriftDroid is playable end to end: run DriftDroid Builder once on a Windows or Linux PC with your own disc image, import the game pack it makes into the app, and pick the same disc image on the phone for the game's data."
       }
     ],
     "notes": {
-      "en": "Android port of the WiiCompiled recompilation of Mario Kart Wii (PAL): touch controls, tilt steering, in-app disc extraction, Retro Rewind support and a 30 FPS race mode for slower phones.",
-      "pt-br": "Port para Android da recompilação WiiCompiled do Mario Kart Wii (PAL): controles de toque, direção por inclinação, extração do disco dentro do app, suporte ao Retro Rewind e modo de corrida a 30 FPS para celulares mais fracos."
+      "en": "Android port of the WiiCompiled recompilation of Mario Kart Wii (PAL), using a PC builder tool to prepare game packs: features touch/motion controls, Retro Rewind support, and a 30 FPS race mode for weaker devices.",
+      "pt-br": "Port para Android da recompilação WiiCompiled do Mario Kart Wii (PAL), que usa uma ferramenta de PC para gerar pacotes do jogo: traz controles de toque e movimento, suporte ao Retro Rewind e modo a 30 FPS para aparelhos mais fracos."
     }
   },
   {
@@ -4626,12 +4626,12 @@
       {
         "id": "dead-or-alive-2-ultimate",
         "tier": "ingame",
-        "source": "README: Matches are playable, but there are visual issues and some game mode-specific issues."
+        "source": "README: Matches are now playable in all modes, but there are some bugs and slowdowns."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Dead or Alive 2 Ultimate for Windows using xboxrecomp, featuring 60 FPS gameplay, internal resolution scaling up to 1440p, and widescreen support.",
-      "pt-br": "Recompilação estática de Dead or Alive 2 Ultimate para Windows via xboxrecomp, com taxa de quadros a 60 FPS, escala de resolução interna até 1440p e suporte a widescreen."
+      "en": "Static recompilation of Dead or Alive 2 Ultimate for Windows using xboxrecomp, featuring 60 FPS gameplay, internal resolution scaling up to 4K, widescreen support, and online play via Insignia.",
+      "pt-br": "Recompilação estática de Dead or Alive 2 Ultimate para Windows via xboxrecomp, com 60 FPS, escala de resolução interna até 4K, suporte a widescreen e partidas online via Insignia."
     }
   },
   {
@@ -5241,12 +5241,12 @@
       {
         "id": "drakengard",
         "tier": "ingame",
-        "source": "README: The native diagnostic runner progresses beyond the Chapter I mission briefing and draws an in-scene radar and message."
+        "source": "README: The native diagnostic runner progresses beyond the Chapter I mission briefing and renders Caim with his weapon, terrain, objects, radar and HUD."
       }
     ],
     "notes": {
-      "en": "Static recompilation project for the European PAL release of Drakengard on PS2, targeting Windows. It renders in-scene HUD elements past the mission briefing, though 3D graphics and gameplay remain incomplete.",
-      "pt-br": "Projeto de recompilação estática para a versão europeia (PAL) de Drakengard do PS2, focado em Windows. Renderiza elementos de HUD em cena após a instrução de missão, mas os gráficos 3D e a jogabilidade permanecem incompletos."
+      "en": "Static recompilation project for the European PAL release of Drakengard on PS2, targeting Windows. It renders Caim, terrain, objects, and HUD elements past the Chapter I briefing, with verified analog character movement.",
+      "pt-br": "Projeto de recompilação estática para a versão europeia (PAL) de Drakengard do PS2, focado em Windows. Renderiza Caim, terreno, objetos e elementos de HUD após a instrução do Capítulo I, com movimento analógico do personagem verificado."
     }
   },
   {
@@ -6320,6 +6320,430 @@
     "notes": {
       "en": "A native Windows static recompilation port of Drakengard 3 built with ps3recomp, currently able to display the intro, menus, and initial story cutscenes.",
       "pt-br": "Port por recompilação estática nativa de Drakengard 3 para Windows feito com ps3recomp, atualmente capaz de exibir a intro, menus e cenas iniciais da história."
+    }
+  },
+  {
+    "slug": "gow-native-pc",
+    "name": "God of War",
+    "repo": "Vnnc1/gow-native-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "god-of-war",
+        "tier": "ingame",
+        "source": "README: The game is playable, but it is not 100%: a locked 60 fps is not reached in every scene, only the opening areas have been measured in depth, and some issues remain (see Known limitations)."
+      }
+    ],
+    "notes": {
+      "en": "Native PC port of God of War (PS2) built via static recompilation using PS2Recomp. Features an installer launcher, PGO optimization, customizable controls, in-game menu, and fan-translation support.",
+      "pt-br": "Port nativo para PC de God of War (PS2) construído via recompilação estática com PS2Recomp. Conta com instalador e launcher, otimização PGO, controles customizáveis, menu no jogo e suporte a traduções."
+    }
+  },
+  {
+    "slug": "project-tandem",
+    "name": "Project Tandem",
+    "repo": "badcompany94-rcmp/project-tandem",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "gcn-recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "mario-kart-double-dash",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Mario Kart: Double Dash!! for Windows based on gcn-recomp, featuring 2–8 player online multiplayer, widescreen support, and mouse and keyboard controls.",
+      "pt-br": "Uma recompilação estática de Mario Kart: Double Dash!! para Windows baseada no gcn-recomp, contando com multijogador online para 2–8 jogadores, suporte a widescreen e controles de mouse e teclado."
+    }
+  },
+  {
+    "slug": "007nightfire-xberecomp",
+    "name": "007: Nightfire PC Port",
+    "repo": "TGP482/007Nightfire-XBERecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "007-nightfire",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Unofficial native PC port of the Xbox version of 007: Nightfire generated using Xbox XBE Recomp. Features mouse and keyboard support, high frame rates, extended rendering controls, and texture replacement.",
+      "pt-br": "Port nativo não oficial para PC da versão de Xbox de 007: Nightfire gerado via Xbox XBE Recomp. Inclui suporte a teclado e mouse, taxas de quadros elevadas, controles de renderização expandidos e substituição de texturas."
+    }
+  },
+  {
+    "slug": "gears-of-war-3-pc-port",
+    "name": "Gears of War 3 PC Port",
+    "repo": "KiltedKernel/gears-of-war-3-pc-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "gears-of-war-3",
+        "tier": "playable",
+        "source": "README: Version 0.2.1: the whole campaign (all five acts) loads and plays, as do Horde, Versus with bots and Beast offline;"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Gears of War 3 for Windows built using XenonRecomp. Includes native mouse look, unlocked frame rates, LAN and online multiplayer, and mod support.",
+      "pt-br": "Recompilação estática de Gears of War 3 para Windows utilizando XenonRecomp. Inclui suporte nativo a mouse, taxa de quadros desbloqueada, multijogador LAN e online, e suporte a mods."
+    }
+  },
+  {
+    "slug": "cartoon-network-racing-recompiled",
+    "name": "Cartoon Network Racing",
+    "repo": "TekRantGaming/cartoon-network-racing-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "cartoon-network-racing",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Cartoon Network Racing for PS2 using PS2Recomp, featuring support for resolutions up to 4K, 16:9 widescreen, unlocked frame rates up to 165 FPS, and a custom launcher.",
+      "pt-br": "Recompilação estática de Cartoon Network Racing para PS2 utilizando PS2Recomp, com suporte a resoluções de até 4K, widescreen 16:9, taxas de quadros de até 165 FPS e um launcher dedicado."
+    }
+  },
+  {
+    "slug": "skate3recomp",
+    "name": "Skate 3 Recomp",
+    "repo": "5C8/skate3recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "skate-3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Skate 3 for Windows using ReXGlue, featuring native DirectX 12 and Vulkan renderers, split-screen, and SteamVR support.",
+      "pt-br": "Recompilação estática de Skate 3 para Windows usando ReXGlue, com renderizadores nativos em DirectX 12 e Vulkan, tela dividida e suporte a SteamVR."
+    }
+  },
+  {
+    "slug": "redbaron-recomp",
+    "name": "RedBaron_Recomp",
+    "repo": "BTr-RJ/RedBaron_Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "snoopy-flying-ace",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows recompilation of Snoopy Flying Ace using ReXGlue, featuring modern resolution support, upscaling options, local split-screen, and online multiplayer powered by Epic Online Services.",
+      "pt-br": "Recompilação nativa para Windows de Snoopy Flying Ace usando ReXGlue, com suporte a resoluções modernas, opções de upscaling, tela dividida local e multijogador online via Epic Online Services."
+    }
+  },
+  {
+    "slug": "muppet-racemania-recompiled",
+    "name": "Muppet RaceMania",
+    "repo": "TekRantGaming/muppet-racemania-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "psxrecomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "muppet-racemania",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PC port of the PS1 kart racer Muppet RaceMania created using psxrecomp, featuring 60 FPS gameplay, 16:9 widescreen, increased draw distance, upscaling, and a TV-friendly launcher on Windows and Linux.",
+      "pt-br": "Port nativo para PC do jogo de corrida de kart Muppet RaceMania para PS1 criado usando psxrecomp, com suporte a 60 FPS, widescreen 16:9, maior distância de visão, upscaling e launcher integrado para Windows e Linux."
+    }
+  },
+  {
+    "slug": "live-and-recompiled",
+    "name": "Live & Recompiled",
+    "repo": "giacomozama/live-and-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBERecomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "conker-live-reloaded",
+        "tier": "playable",
+        "source": "README: Single player is playable start to finish."
+      }
+    ],
+    "notes": {
+      "en": "A native PC port of Conker: Live & Reloaded built with static recompilation. Features support for up to 240 FPS, ultrawide displays, graphical enhancements, and mouse and keyboard controls.",
+      "pt-br": "Um port nativo para PC de Conker: Live & Reloaded desenvolvido via recompilação estática. Traz suporte a até 240 FPS, telas ultrawide, melhorias gráficas e controles por teclado e mouse."
+    }
+  },
+  {
+    "slug": "p3fes-recompiled",
+    "name": "Shin Megami Tensei: Persona 3 FES",
+    "repo": "ppkkkkk/p3fes-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "shin-megami-tensei-persona-3-fes",
+        "tier": "ingame",
+        "source": "README: Where it stands: the game boots from its own CVM archives, plays the opening movie, and goes through New Game (the FES introduction, the opening anime, name entry) into the story: the dorm, school, day changes and Tartarus, loaded from a memory card save."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Persona 3 FES for Windows and Linux based on PS2Recomp. It reaches gameplay, including story scenes and Tartarus, though battles and sound effects are still in development.",
+      "pt-br": "Recompilação estática de Persona 3 FES para Windows e Linux baseada no PS2Recomp. O jogo chega à jogabilidade, incluindo cenas da história e Tartarus, embora batalhas e efeitos sonoros ainda estejam em desenvolvimento."
+    }
+  },
+  {
+    "slug": "phroster-disruptorrecomp",
+    "name": "Disruptor Recompiled",
+    "repo": "Phroster/DisruptorRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PSXRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "disruptor",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Disruptor for Windows using PSXRecomp, featuring 60 fps support, 16:9 widescreen, mouse and keyboard controls, and graphical enhancements.",
+      "pt-br": "Recompilação estática de Disruptor para Windows via PSXRecomp, com suporte a 60 fps, widescreen 16:9, controles por mouse e teclado e melhorias gráficas."
+    }
+  },
+  {
+    "slug": "nhl-legacy-remaster",
+    "name": "NHL Legacy Remaster",
+    "repo": "megarohas/nhl-legacy-remaster",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "nhl-legacy-edition",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A Windows port of NHL Legacy Edition (Xbox 360) statically recompiled with ReXGlue, featuring modern roster updates, 32-team league structure, and renderer improvements.",
+      "pt-br": "Port para Windows do NHL Legacy Edition (Xbox 360) recompilado estaticamente via ReXGlue, com elencos atualizados, estrutura de 32 times e melhorias de renderização."
+    }
+  },
+  {
+    "slug": "medievilrecomp-esp",
+    "name": "MediEvil Recomp ESP",
+    "repo": "Leproide/MediEvilRecomp-ESP",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "RecompOne",
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "medievil",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of MediEvil (PAL Spanish and Italian releases) for PC using RecompOne. Features widescreen support, enhanced interpolation, right-stick camera controls, 24-bit color, and custom shaders.",
+      "pt-br": "Recompilação estática de MediEvil (versões PAL em espanhol e italiano) para PC utilizando RecompOne. Possui suporte a widescreen, interpolação aprimorada, controle de câmera no analógico direito, cor de 24 bits e shaders customizados."
+    }
+  },
+  {
+    "slug": "imaginatorsrecomp",
+    "name": "Skylanders: Imaginators",
+    "repo": "tsapZ/ImaginatorsRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skylanders-imaginators",
+        "tier": "ingame",
+        "source": "README: The opening cutscene and the first level play."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Skylanders: Imaginators recompiled from the Xbox 360 version via ReXGlue. Features unlocked frame rates, resolution scaling, ultrawide display support, and an integrated virtual Portal of Power.",
+      "pt-br": "Port nativo para Windows de Skylanders: Imaginators recompilado da versão de Xbox 360 via ReXGlue. Conta com taxa de quadros desbloqueada, aumento de resolução, suporte a ultrawide e um Portal of Power virtual integrado."
+    }
+  },
+  {
+    "slug": "swapforcerecomp",
+    "name": "Skylanders: Swap Force",
+    "repo": "tsapZ/SwapForceRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skylanders-swap-force",
+        "tier": "ingame",
+        "source": "README: The tutorial and Woodburrow have been played through with a controller and with the keyboard, cutscenes and dialogue included."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Skylanders: Swap Force built using ReXGlue static recompilation. Features support for high frame rates, internal resolution scaling up to 3x, ultrawide displays, an integrated virtual portal figure selector, real USB portal hardware, and HD texture packs.",
+      "pt-br": "Port nativo para Windows de Skylanders: Swap Force feito via recompilação estática com ReXGlue. Suporta altas taxas de quadros, escala de resolução interna de até 3x, telas ultrawide, seletor virtual integrado de figuras do portal, portais USB reais e pacotes de texturas HD."
+    }
+  },
+  {
+    "slug": "pes6androidport",
+    "name": "Pro Evolution Soccer 6",
+    "repo": "haveniiii/PES6ANDROIDPORT",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "psprecomp",
+    "platforms": [
+      "android",
+      "linux",
+      "macos"
+    ],
+    "graphics": [
+      "OpenGL 3.3",
+      "OpenGL ES 3"
+    ],
+    "games": [
+      {
+        "id": "pro-evolution-soccer-6-psp",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Pro Evolution Soccer 6 (PSP) for Android and desktop using psprecomp. Includes customizable touch controls, ad-hoc multiplayer support, graphics scaling, and an optional 2026 Chilean league mod.",
+      "pt-br": "Recompilação estática de Pro Evolution Soccer 6 (PSP) para Android e PC usando psprecomp. Inclui controles de toque personalizáveis, suporte a multijogador ad-hoc, dimensionamento de resolução e um mod opcional da liga chilena de 2026."
     }
   }
 ]

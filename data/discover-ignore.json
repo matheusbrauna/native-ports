@@ -454,5 +454,17 @@
   {
     "repo": "Ink230/irongoon",
     "reason": "Triage: It is a randomizer mod for Severed Chains rather than a native game port."
+  },
+  {
+    "repo": "crabsmack/xmen2-pc",
+    "reason": "Triage: The project is a source port built from hand-written decompiled C code rather than a static recompiler."
+  },
+  {
+    "repo": "sp00nznet/recomp-launcher",
+    "reason": "Triage: This repository is an installer tool for game recomps, not a game port itself."
+  },
+  {
+    "repo": "fedebuonco/nxrt",
+    "reason": "Triage: The repository is a runtime framework and toolchain for Nintendo Switch static recompilations rather than a specific game port."
   }
 ]

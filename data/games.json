@@ -1212,5 +1212,143 @@
     "title": "Guitar Hero: Metallica",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "armored-core-4",
+    "title": "Armored Core 4",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "need-for-speed-carbon",
+    "title": "Need for Speed: Carbon",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "fable-ii",
+    "title": "Fable II",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "tenchu-return-from-darkness",
+    "title": "Tenchu: Return from Darkness",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "pro-evolution-soccer-6",
+    "title": "Pro Evolution Soccer 6",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-spyros-adventure",
+    "title": "Skylanders: Spyro's Adventure",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "mario-kart-8-deluxe",
+    "title": "Mario Kart 8 Deluxe",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "nhl-14",
+    "title": "NHL 14",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "aegis-wing",
+    "title": "Aegis Wing",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "world-driver-championship",
+    "title": "World Driver Championship",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "kamen-rider-memory-of-heroez",
+    "title": "Kamen Rider: Memory of Heroez",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "drakengard-3",
+    "title": "Drakengard 3",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "mario-kart-double-dash",
+    "title": "Mario Kart: Double Dash!!",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "007-nightfire",
+    "title": "007: Nightfire",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "cartoon-network-racing",
+    "title": "Cartoon Network Racing",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "snoopy-flying-ace",
+    "title": "Snoopy Flying Ace",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "muppet-racemania",
+    "title": "Muppet RaceMania",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "shin-megami-tensei-persona-3-fes",
+    "title": "Shin Megami Tensei: Persona 3 FES",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "nhl-legacy-edition",
+    "title": "NHL Legacy Edition",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "medievil",
+    "title": "MediEvil",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-imaginators",
+    "title": "Skylanders: Imaginators",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-swap-force",
+    "title": "Skylanders: Swap Force",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "pro-evolution-soccer-6-psp",
+    "title": "Pro Evolution Soccer 6",
+    "console": "psp",
+    "titleIds": []
   }
 ]

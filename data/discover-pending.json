@@ -110,5 +110,13 @@
   {
     "repo": "sp00nznet/linksawakening-portable",
     "reason": "Triage accepted it, but: Console \"gbc\" is not in the catalog yet (The Legend of Zelda: Link's Awakening DX)"
+  },
+  {
+    "repo": "kazuyette/senjin-recomped",
+    "reason": "Triage accepted it, but: Console \"apm3\" is not in the catalog yet (Senjin Aleste)"
+  },
+  {
+    "repo": "mstan/HotelMarioRecomp",
+    "reason": "Triage accepted it, but: Console \"cd-i\" is not in the catalog yet (Hotel Mario)"
   }
 ]

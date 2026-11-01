@@ -1350,5 +1350,47 @@
     "title": "Pro Evolution Soccer 6",
     "console": "psp",
     "titleIds": []
+  },
+  {
+    "id": "borderlands",
+    "title": "Borderlands",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "demons-souls",
+    "title": "Demon's Souls",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "bomberman-64-the-second-attack",
+    "title": "Bomberman 64: The Second Attack!",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "call-of-duty-black-ops-ii",
+    "title": "Call of Duty: Black Ops II",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "ncaa-football-14",
+    "title": "NCAA Football 14",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "banjo-kazooie-nuts-bolts",
+    "title": "Banjo-Kazooie: Nuts & Bolts",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "harvest-moon-back-to-nature",
+    "title": "Harvest Moon: Back to Nature",
+    "console": "ps1",
+    "titleIds": []
   }
 ]

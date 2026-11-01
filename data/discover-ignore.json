@@ -466,5 +466,37 @@
   {
     "repo": "fedebuonco/nxrt",
     "reason": "Triage: The repository is a runtime framework and toolchain for Nintendo Switch static recompilations rather than a specific game port."
+  },
+  {
+    "repo": "w1284603830/PS2Recomp-Fixer",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "veritr1x/nfsmw-recomp",
+    "reason": "Triage: The project recompiles a PC game rather than a console game."
+  },
+  {
+    "repo": "ChaosTheory1075/mp3-ps5",
+    "reason": "Triage: The project's only target is another console (PlayStation 5)."
+  },
+  {
+    "repo": "veritr1x/populous-recomp",
+    "reason": "Triage: The project is a recompilation of a PC release rather than a console game."
+  },
+  {
+    "repo": "veritr1x/majesty-recomp",
+    "reason": "Triage: This project is a static recompilation of a PC (Windows) game, which is out of scope for a catalog of console game ports."
+  },
+  {
+    "repo": "EstebanPdN/dusklight-3ds",
+    "reason": "Triage: This project is a source port based on a decompilation and reimplementation targeting only another console."
+  },
+  {
+    "repo": "tmcleroy/satrecomp",
+    "reason": "Triage: The repository is a recompilation toolkit rather than a native game port."
+  },
+  {
+    "repo": "TheSTouch/Mac-To-iOS-Recomp",
+    "reason": "Triage: The repository is a general tool for porting Mac games to iOS rather than a native console game port."
   }
 ]

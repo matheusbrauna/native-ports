@@ -1529,7 +1529,8 @@
     "technique": "recomp",
     "toolchain": "N64Recomp",
     "platforms": [
-      "ios"
+      "ios",
+      "macos"
     ],
     "graphics": [
       "Metal"
@@ -1537,13 +1538,13 @@
     "games": [
       {
         "id": "pokemon-stadium",
-        "tier": "unrated",
-        "source": "README: preview 4; local iPhone and iPad builds"
+        "tier": "ingame",
+        "source": "README: Native macOS completed a full rental battle, iPad Simulator completed a separate full rental battle using touch only, and the signed build has been installed and played on a physical iPad."
       }
     ],
     "notes": {
-      "en": "Pokémon Stadium rebuilt for iPhone and iPad with native Metal rendering and touch controls.",
-      "pt-br": "Pokémon Stadium reconstruído para iPhone e iPad com renderização Metal nativa e controles de toque."
+      "en": "Pokémon Stadium rebuilt for iOS and macOS via static recompilation with native Metal rendering, touch controls, and Files-based ROM import.",
+      "pt-br": "Pokémon Stadium reconstruído para iOS e macOS via recompilação estática com renderização Metal nativa, controles de toque e importação de ROM via Files."
     }
   },
   {
@@ -4322,12 +4323,12 @@
       {
         "id": "god-of-war-ascension",
         "tier": "ingame",
-        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 10-11 frames per second in gameplay (about 13 in the opening tutorial loop the earlier numbers were measured in) on a 6-core CPU with an RTX 3080, with no hangs in 25-minute runs."
+        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 13 game frames per second in the corridor on a quiet host (about 11 with other programs busy; the game is very sensitive to CPU load) on a 6-core CPU with an RTX 3080, with no hangs in 25-minute runs."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at 10-11 fps in gameplay.",
-      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a 10-11 fps em jogo."
+      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 13 fps in gameplay.",
+      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 13 fps em jogo."
     }
   },
   {
@@ -4561,12 +4562,12 @@
       {
         "id": "rayman-3-hd",
         "tier": "playable",
-        "source": "README: The game has been completed from beginning to end on version 1.0.1 during human playtesting."
+        "source": "README: The game was completed from beginning to end during human playtesting of v1.0.1."
       }
     ],
     "notes": {
-      "en": "Features optional visual enhancements, Turkish localization, DualSense dynamic lightbar and adaptive triggers, and built-in mod support.",
-      "pt-br": "Oferece melhorias visuais opcionais, tradução em turco, suporte aos gatilhos adaptativos e barra de luz do DualSense e gerenciamento de mods."
+      "en": "Features optional visual enhancements, mouse and keyboard controls, Turkish and community Brazilian Portuguese localizations, DualSense features, and built-in mod support.",
+      "pt-br": "Oferece melhorias visuais opcionais, suporte a teclado e mouse, traduções em turco e português do Brasil, recursos para DualSense e suporte a mods."
     }
   },
   {
@@ -5055,8 +5056,8 @@
     "games": [
       {
         "id": "nhl-2k8",
-        "tier": "ingame",
-        "source": "README: Plays smoothly except in busy scenes with a full crowd."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -6744,6 +6745,318 @@
     "notes": {
       "en": "Static recompilation of Pro Evolution Soccer 6 (PSP) for Android and desktop using psprecomp. Includes customizable touch controls, ad-hoc multiplayer support, graphics scaling, and an optional 2026 Chilean league mod.",
       "pt-br": "Recompilação estática de Pro Evolution Soccer 6 (PSP) para Android e PC usando psprecomp. Inclui controles de toque personalizáveis, suporte a multijogador ad-hoc, dimensionamento de resolução e um mod opcional da liga chilena de 2026."
+    }
+  },
+  {
+    "slug": "borderlands-recomp",
+    "name": "Borderlands",
+    "repo": "robby-gridpoint/borderlands-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "borderlands",
+        "tier": "ingame",
+        "source": "README: Working: boot, intro movies, menus, gameplay, loading a save."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Borderlands for Xbox 360 targeting Windows via ReXGlue, currently reaching gameplay.",
+      "pt-br": "Recompilação estática de Borderlands do Xbox 360 para Windows via ReXGlue, atualmente alcançando a jogabilidade."
+    }
+  },
+  {
+    "slug": "tomodachi-ltd-recomp",
+    "name": "Tomodachi Life: Living the Dream",
+    "repo": "RussoPhone/tomodachi-ltd-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "mk8-recomp",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "tomodachi-life-living-the-dream",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Experimental alpha port for Linux statically recompiled with mk8-recomp and rendered via a custom NVN to Vulkan runtime.",
+      "pt-br": "Port alpha experimental para Linux recompilado estaticamente com mk8-recomp e renderizado via runtime próprio NVN para Vulkan."
+    }
+  },
+  {
+    "slug": "demons-souls-recomp",
+    "name": "Demon's Souls",
+    "repo": "timboat/demons-souls-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "demons-souls",
+        "tier": "ingame",
+        "source": "README: The entire game seems playable."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Demon's Souls for Windows built with ps3recomp, featuring customizable frame rates, mouse and keyboard controls, and a Direct3D 12 renderer.",
+      "pt-br": "Uma recompilação estática de Demon's Souls para Windows feita com ps3recomp, com suporte a taxas de quadros personalizadas, controles por mouse e teclado e renderizador Direct3D 12."
+    }
+  },
+  {
+    "slug": "weeping-of-the-empire",
+    "name": "Weeping of the Empire",
+    "repo": "daniel-madrid-07/weeping-of-the-empire",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-tears-of-the-kingdom",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of The Legend of Zelda: Tears of the Kingdom (v1.0.0) for Windows featuring Vulkan graphics, frame rates up to 240 fps, DLSS upscaling, and native mouse and keyboard controls.",
+      "pt-br": "Uma recompilação estática de The Legend of Zelda: Tears of the Kingdom (v1.0.0) para Windows com gráficos em Vulkan, taxa de quadros de até 240 fps, suporte a DLSS e controles para mouse e teclado."
+    }
+  },
+  {
+    "slug": "pommy-recomp",
+    "name": "Bomberman 64: The Second Attack!",
+    "repo": "bdragoncore/pommy-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bomberman-64-the-second-attack",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the N64 game for Linux using N64Recomp and RT64, featuring widescreen support, cheats, and mod loading.",
+      "pt-br": "Port via recompilação estática do jogo de N64 para Linux usando N64Recomp e RT64, com suporte a widescreen, cheats e carregamento de mods."
+    }
+  },
+  {
+    "slug": "conker-recomped-and-reloaded",
+    "name": "Conker: Recomped & Reloaded",
+    "repo": "Mabec-games/Conker-Recomped-and-Reloaded",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBERecomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "conker-live-reloaded",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Enhanced build and launcher for the Xbox static recompilation of Conker: Live & Reloaded, featuring offline compilation from disc images, online multiplayer using room codes, graphical enhancements, and full keyboard/mouse support.",
+      "pt-br": "Versão aprimorada e launcher para a recompilação estática de Xbox de Conker: Live & Reloaded, contando com compilação offline a partir da imagem do disco, multijogador online via códigos de sala, melhorias gráficas e suporte completo a teclado e mouse."
+    }
+  },
+  {
+    "slug": "bo2-360-nx",
+    "name": "Call of Duty: Black Ops II",
+    "repo": "AlvaroEPena/bo2-360-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "call-of-duty-black-ops-ii",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Call of Duty: Black Ops II from the Xbox 360 using ReXGlue, supporting Campaign, Multiplayer, and Zombies modes on Nintendo Switch and Windows with a Vulkan renderer.",
+      "pt-br": "Recompilação estática de Call of Duty: Black Ops II do Xbox 360 usando ReXGlue, com suporte aos modos Campanha, Multijogador e Zombies no Nintendo Switch e Windows com renderizador Vulkan."
+    }
+  },
+  {
+    "slug": "ncaafootball14recomp",
+    "name": "NCAA Football 14",
+    "repo": "LegendaryDoors/NCAAFootball14Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "ncaa-football-14",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 recompilation port built with ReXGlue, featuring a launcher that can automatically install the College Football Revamped mod.",
+      "pt-br": "Port por recompilação de Xbox 360 criado com ReXGlue, incluindo um inicializador capaz de instalar automaticamente o mod College Football Revamped."
+    }
+  },
+  {
+    "slug": "boltsrebuilt",
+    "name": "BoltsRebuilt",
+    "repo": "djvb1234/BoltsRebuilt",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "RexGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "banjo-kazooie-nuts-bolts",
+        "tier": "ingame",
+        "source": "README: The 12 September development playtest records the maintainer's reported early-level and Mumbo mission progress, with 16 minutes of telemetry at native 5120 × 1440."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Banjo-Kazooie: Nuts & Bolts for Windows using RexGlue with a custom native Direct3D 12 renderer and ultrawide support.",
+      "pt-br": "Uma recompilação estática de Banjo-Kazooie: Nuts & Bolts para Windows utilizando RexGlue com renderizador nativo em Direct3D 12 e suporte a ultrawide."
+    }
+  },
+  {
+    "slug": "gow2-android-build-kit",
+    "name": "God of War II",
+    "repo": "EvilNathan/gow2-android-build-kit",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "god-of-war-ii",
+        "tier": "wip",
+        "source": "README: What remains is device work: boot, pixels, input, audio, performance."
+      }
+    ],
+    "notes": {
+      "en": "An Android port of God of War II created via PS2Recomp static recompilation featuring a custom Vulkan GS backend.",
+      "pt-br": "Um port de God of War II para Android criado via recompilação estática com PS2Recomp, contando com um backend GS customizado em Vulkan."
+    }
+  },
+  {
+    "slug": "demons-souls-pc",
+    "name": "Demon's Souls PC",
+    "repo": "Leonardorobertomotalvao/demons-souls-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "demons-souls",
+        "tier": "ingame",
+        "source": "README: Only the first area is verified — the rest of the game is untested."
+      }
+    ],
+    "notes": {
+      "en": "An experimental static recompilation port of Demon's Souls (PS3) to Windows x64 using ps3recomp and Direct3D 12, currently tested up to area 1-1.",
+      "pt-br": "Um port experimental por recompilação estática de Demon's Souls (PS3) para Windows x64 usando ps3recomp e Direct3D 12, atualmente testado até a área 1-1."
+    }
+  },
+  {
+    "slug": "harvestmoonbtn-recomp",
+    "name": "Harvest Moon: Back to Nature",
+    "repo": "GabrielBigardi/HarvestMoonBTN-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "harvest-moon-back-to-nature",
+        "tier": "ingame",
+        "source": "README: Tested so far: boot, intro, title screen, new game, farm, house, town and map, menus and tools, music and sound effects, saving and loading, and long random-input runs without errors."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows and Linux port of Harvest Moon: Back to Nature created by static recompilation from MIPS machine code to C. Features custom hardware reimplementation with a software renderer, standard memory card file saving, and fast-forwarding.",
+      "pt-br": "Port nativo de Harvest Moon: Back to Nature para Windows e Linux criado por recompilação estática de código MIPS para C. Possui reimplementação própria do hardware do PS1 com renderizador via software, suporte a arquivos de memory card padrão e opção de avanço rápido."
     }
   }
 ]

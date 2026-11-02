@@ -1392,5 +1392,77 @@
     "title": "Harvest Moon: Back to Nature",
     "console": "ps1",
     "titleIds": []
+  },
+  {
+    "id": "ea-sports-ufc-4",
+    "title": "EA SPORTS UFC 4",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "super-robot-wars-64",
+    "title": "Super Robot Wars 64",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "pokemon-legends-arceus",
+    "title": "Pokémon Legends: Arceus",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "predator-concrete-jungle",
+    "title": "Predator: Concrete Jungle",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "wild-9",
+    "title": "Wild 9",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "sneak-king-xbox",
+    "title": "Sneak King",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "metroid-prime-3-corruption",
+    "title": "Metroid Prime 3: Corruption",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "twisted-metal-black",
+    "title": "Twisted Metal: Black",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "blue-stinger",
+    "title": "Blue Stinger",
+    "console": "dreamcast",
+    "titleIds": []
+  },
+  {
+    "id": "grand-theft-auto-chinatown-wars",
+    "title": "Grand Theft Auto: Chinatown Wars",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "killzone-hd",
+    "title": "Killzone HD",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "bakugan-battle-brawlers-ps3",
+    "title": "Bakugan: Battle Brawlers",
+    "console": "ps3",
+    "titleIds": []
   }
 ]

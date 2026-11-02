@@ -4527,6 +4527,8 @@
     "technique": "recomp",
     "toolchain": null,
     "platforms": [
+      "linux",
+      "steamdeck",
       "windows"
     ],
     "graphics": [
@@ -4535,13 +4537,13 @@
     "games": [
       {
         "id": "the-legend-of-zelda-tears-of-the-kingdom",
-        "tier": "ingame",
-        "source": "README: Title screen, new game, prologue, Great Sky Island | plays"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "Static recompilation port of Tears of the Kingdom for Windows using Vulkan, playable through the prologue and Great Sky Island.",
-      "pt-br": "Port por recompilação estática de Tears of the Kingdom para Windows usando Vulkan, jogável durante o prólogo e a ilha inicial Great Sky Island."
+      "en": "Static recompilation port of Tears of the Kingdom for Windows, Linux, and Steam Deck using Vulkan.",
+      "pt-br": "Port por recompilação estática de Tears of the Kingdom para Windows, Linux e Steam Deck usando Vulkan."
     }
   },
   {
@@ -7057,6 +7059,356 @@
     "notes": {
       "en": "Native Windows and Linux port of Harvest Moon: Back to Nature created by static recompilation from MIPS machine code to C. Features custom hardware reimplementation with a software renderer, standard memory card file saving, and fast-forwarding.",
       "pt-br": "Port nativo de Harvest Moon: Back to Nature para Windows e Linux criado por recompilação estática de código MIPS para C. Possui reimplementação própria do hardware do PS1 com renderizador via software, suporte a arquivos de memory card padrão e opção de avanço rápido."
+    }
+  },
+  {
+    "slug": "ufc4-native-plus",
+    "name": "UFC4 Native Plus",
+    "repo": "abdullah-tech7/UFC4-Native-Plus",
+    "upstream": "schans-arg/UFC4-PC-Port",
+    "kind": "fork",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "ea-sports-ufc-4",
+        "tier": "playable",
+        "source": "README: Project Status: Stable / Playable"
+      }
+    ],
+    "notes": {
+      "en": "A community fork of UFC4-PC-Port providing native PS4 runtime execution on Windows with US/EU version support, Career Mode fixes, DLC options, and a dedicated launcher.",
+      "pt-br": "Um fork comunitário do UFC4-PC-Port que oferece execução nativa via runtime no Windows com suporte às versões US/EU, correções no modo carreira, opções de DLC e launcher dedicado."
+    }
+  },
+  {
+    "slug": "totk-pc-recomp",
+    "name": "TotK Recomp",
+    "repo": "valentderah/totk-pc-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-tears-of-the-kingdom",
+        "tier": "ingame",
+        "source": "README: The game is playable on Windows and Linux; visual bugs and crashes are still expected."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of The Legend of Zelda: Tears of the Kingdom for Windows and Linux featuring a Vulkan renderer, high framerate support, HDR10, and custom aspect ratios.",
+      "pt-br": "Recompilação estática de The Legend of Zelda: Tears of the Kingdom para Windows e Linux com renderizador Vulkan, suporte a altas taxas de quadros, HDR10 e proporções de tela personalizadas."
+    }
+  },
+  {
+    "slug": "srw64-recomp",
+    "name": "Super Robot Wars 64",
+    "repo": "dyzz/srw64-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows",
+      "macos",
+      "android"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan",
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "super-robot-wars-64",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Unofficial native port of Super Robot Wars 64 built using N64Recomp. Includes English and Chinese fan translations, 16:9 widescreen support, optional HD graphics pack, and modern UI improvements.",
+      "pt-br": "Port nativo não oficial de Super Robot Wars 64 desenvolvido com N64Recomp. Inclui traduções de fãs para inglês e chinês, suporte a widescreen 16:9, pacote opcional de arte em HD e melhorias de interface."
+    }
+  },
+  {
+    "slug": "arceuszada",
+    "name": "Pokémon Legends: Arceus Recomp",
+    "repo": "CarlosExabyte/Arceuszada",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "LASRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "pokemon-legends-arceus",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation port of Pokémon Legends: Arceus for Windows based on LASRecomp.",
+      "pt-br": "Um port por recompilação estática de Pokémon Legends: Arceus para Windows baseado no LASRecomp."
+    }
+  },
+  {
+    "slug": "concrete-jungle-pc",
+    "name": "Predator: Concrete Jungle",
+    "repo": "Adolini1715/Concrete-Jungle-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "predator-concrete-jungle",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PC port of Predator: Concrete Jungle for Windows and Linux using xboxrecomp. Includes support for up to 5x internal resolution, OpenGL rendering, modern camera and controls, rebindable keyboard/mouse, redrawn UI, and texture packs.",
+      "pt-br": "Port nativo para PC de Predator: Concrete Jungle para Windows e Linux usando xboxrecomp. Inclui suporte a resolução interna de até 5x, renderização OpenGL, câmera e controles modernos, teclado e mouse reconfiguráveis, UI redesenhada e pacotes de textura."
+    }
+  },
+  {
+    "slug": "wild9recomp",
+    "name": "Wild 9",
+    "repo": "plinkr/Wild9Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "psxrecomp",
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "wild-9",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Wild 9 for PlayStation 1 using psxrecomp. Features widescreen support, high frame rates, OpenGL rendering, multi-language options, and mod support on Linux, macOS, and Windows.",
+      "pt-br": "Port por recompilação estática de Wild 9 para PlayStation 1 usando psxrecomp. Inclui suporte a widescreen, altas taxas de quadros, renderização OpenGL, opções de idioma e mods no Linux, macOS e Windows."
+    }
+  },
+  {
+    "slug": "sneaky-whopper-recomp",
+    "name": "Sneak King",
+    "repo": "Guuzzeji/sneaky-whopper-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Vulkan",
+      "OpenGL",
+      "OpenGL ES 3",
+      "WebGL2"
+    ],
+    "games": [
+      {
+        "id": "sneak-king-xbox",
+        "tier": "playable",
+        "source": "README: It plays the whole game with keyboard and mouse or a pad."
+      }
+    ],
+    "notes": {
+      "en": "Statically recompiles the original Xbox version of Sneak King using xboxrecomp. Features widescreen support, 360 HD textures, debug overlays, and an experimental WebAssembly web target.",
+      "pt-br": "Recompila estaticamente a versão do Xbox original de Sneak King usando o xboxrecomp. Inclui suporte a widescreen, texturas HD do Xbox 360, overlays de depuração e uma versão experimental para navegadores via WebAssembly."
+    }
+  },
+  {
+    "slug": "corruption-3-pc",
+    "name": "Corruption_3 PC",
+    "repo": "bonllavier/Corruption_3-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "metroid-prime-3-corruption",
+        "tier": "ingame",
+        "source": "README: The game boots, loads saves and the start of the campaign (G.F.S. Olympus, Norion, Bryyo up to the fight with Rundas) plays at or near 60 FPS; most of the Wii Remote and Nunchuk gestures are already mapped to keys and to the gamepad."
+      }
+    ],
+    "notes": {
+      "en": "A native Windows port of Metroid Prime 3: Corruption created via static recompilation. Features keyboard/mouse and gamepad controls, Direct3D 12/Vulkan rendering, enhanced materials, and built-in RetroAchievements support.",
+      "pt-br": "Um port nativo para Windows de Metroid Prime 3: Corruption criado via recompilação estática. Inclui controles por teclado/mouse e controle, renderização em Direct3D 12/Vulkan, melhorias de materiais e suporte nativo ao RetroAchievements."
+    }
+  },
+  {
+    "slug": "tmb-recomp",
+    "name": "Twisted Metal: Black",
+    "repo": "TheBozos/TMB_Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "twisted-metal-black",
+        "tier": "ingame",
+        "source": "README: Playable, at full speed, as a native port, at NTSC's 60 frames per second."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Twisted Metal: Black using PS2Recomp for Linux and Windows. Features native OpenGL rendering, configurable controls, increased render scale, and 60 FPS gameplay.",
+      "pt-br": "Recompilação estática de Twisted Metal: Black para Linux e Windows usando PS2Recomp. Possui renderização nativa em OpenGL, controles configuráveis, maior escala de renderização e suporte a 60 FPS."
+    }
+  },
+  {
+    "slug": "bluestingerrecomp",
+    "name": "Blue Stinger Recompiled",
+    "repo": "DCRecomp/BlueStingerRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "blue-stinger",
+        "tier": "ingame",
+        "source": "README: O jogo roda no Windows a partir do disco do usuário, com arquivos, controles (teclado e controle Xbox), saves, filmes e áudio nativos por padrão"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Blue Stinger for Windows with Vulkan rendering and native audio, input, and save systems.",
+      "pt-br": "Recompilação estática de Blue Stinger para Windows com renderização Vulkan e sistemas nativos de áudio, controles e salvamento."
+    }
+  },
+  {
+    "slug": "regta-chinatown-wars-psp-recompilation",
+    "name": "ReGTA Chinatown Wars",
+    "repo": "benji-paname/regta-chinatown-wars-psp-recompilation",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "grand-theft-auto-chinatown-wars",
+        "tier": "ingame",
+        "source": "README: Benjamin has completed the first five story missions (up to 'The Wheelman') and a taxi activity in the private Playtest."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Grand Theft Auto: Chinatown Wars for PSP to Windows x64, currently ingame with the first five story missions tested.",
+      "pt-br": "Recompilação estática de Grand Theft Auto: Chinatown Wars de PSP para Windows x64, atualmente em estágio em jogo (ingame) com as cinco primeiras missões testadas."
+    }
+  },
+  {
+    "slug": "project-vekta",
+    "name": "Project Vekta",
+    "repo": "gustavomorinaga/project-vekta",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "killzone-hd",
+        "tier": "ingame",
+        "source": "README: Level 1 played by hand from start to end; all 11 levels load and reach gameplay; parts of the campaign played by hand on 2026-10-20; levels 2 to 11 not yet each played to their end"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Killzone HD for PS3 built using ps3recomp, running on Linux and Windows with Vulkan graphics.",
+      "pt-br": "Recompilação estática de Killzone HD do PS3 utilizando ps3recomp, com suporte a Linux e Windows via Vulkan."
+    }
+  },
+  {
+    "slug": "bakugan-battle-brawlers-ps3-recomp",
+    "name": "Bakugan: Battle Brawlers",
+    "repo": "Mauryln/Bakugan-Battle-Brawlers-PS3-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "bakugan-battle-brawlers-ps3",
+        "tier": "ingame",
+        "source": "README: Battle Arena is playable with corrected field and card textures."
+      }
+    ],
+    "notes": {
+      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, reaching Battle Arena gameplay.",
+      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, chegando à jogabilidade na Battle Arena."
     }
   }
 ]

@@ -498,5 +498,65 @@
   {
     "repo": "TheSTouch/Mac-To-iOS-Recomp",
     "reason": "Triage: The repository is a general tool for porting Mac games to iOS rather than a native console game port."
+  },
+  {
+    "repo": "maluramichael/awesome-reverse-engineer-anything",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "mstan/cdirecomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "griches/PS5_EternalDarkness",
+    "reason": "Triage: The project's only target platform is another console (PlayStation 5)."
+  },
+  {
+    "repo": "EstebanPdN/zelda-tmc-3ds",
+    "reason": "Triage: The port targets only another console (Nintendo 3DS) and is based on a source decompilation."
+  },
+  {
+    "repo": "Odrannnn/MetroidPrimePort",
+    "reason": "Triage: Ports built directly from decompiled C++ source code without static recompilation are out of scope."
+  },
+  {
+    "repo": "EstebanPdN/mario-kart-64-3ds",
+    "reason": "Triage: This project is a source port based on a decompilation targeting another console."
+  },
+  {
+    "repo": "Odrannnn/MetroidPrime2Port",
+    "reason": "Triage: Built from a C++ decompilation rather than static recompilation."
+  },
+  {
+    "repo": "OpenRAC/OpenRAC",
+    "reason": "Triage: Decompilations and source ports built from hand-written source are out of scope."
+  },
+  {
+    "repo": "drakolordx7/nxrecomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Awis13/liberty-pro-max",
+    "reason": "Triage: The repository ports a PC game rather than a console game."
+  },
+  {
+    "repo": "gabryboy12-ai/coreinit-nx",
+    "reason": "Triage: The repository is a Wii U system library runtime for Nintendo Switch homebrew rather than a game port."
+  },
+  {
+    "repo": "aldotoa/max-payne-recomp",
+    "reason": "Triage: The repository recompiles a Windows PC game rather than a console game."
+  },
+  {
+    "repo": "sp00nznet/pod-recomp",
+    "reason": "Triage: POD Gold is a PC game, not a console game, making it out of scope for the catalog."
+  },
+  {
+    "repo": "zhtipu/shank2-nx",
+    "reason": "Triage: The port's only target platform is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "pablocpas/OpenCMR2",
+    "reason": "Triage: Source ports built from decompiled C/C++ code are out of scope."
   }
 ]

@@ -118,5 +118,29 @@
   {
     "repo": "mstan/HotelMarioRecomp",
     "reason": "Triage accepted it, but: Console \"cd-i\" is not in the catalog yet (Hotel Mario)"
+  },
+  {
+    "repo": "thefixinhixon/woohoo-flight-school",
+    "reason": "Triage accepted it, but: Console \"3ds\" is not in the catalog yet (Pilotwings Resort)"
+  },
+  {
+    "repo": "rages4calm/LagoonSNESRecomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Lagoon)"
+  },
+  {
+    "repo": "drakolordx7/pokopia-recomp",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Pokémon Pokopia)"
+  },
+  {
+    "repo": "xFractals/pokopia-native",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Pokémon Pokopia)"
+  },
+  {
+    "repo": "Lucas-blip-png/dkb-pc-recomp",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Donkey Kong Bananza)"
+  },
+  {
+    "repo": "thebabyhippo303/nimbus-project",
+    "reason": "Triage was unsure: The README describes its approach vaguely as a hybrid core between recompilation and decompilation without clarifying whether static recompilation is used."
   }
 ]

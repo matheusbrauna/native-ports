@@ -2011,12 +2011,12 @@
       {
         "id": "mario-kart-wii",
         "tier": "playable",
-        "source": "README: DriftDroid is playable end to end: run DriftDroid Builder once on a Windows or Linux PC with your own disc image, import the game pack it makes into the app, and pick the same disc image on the phone for the game's data."
+        "source": "README: DriftDroid is playable end to end: install the APK and pick your own disc image on the phone for the game's data."
       }
     ],
     "notes": {
-      "en": "Android port of the WiiCompiled recompilation of Mario Kart Wii (PAL), using a PC builder tool to prepare game packs: features touch/motion controls, Retro Rewind support, and a 30 FPS race mode for weaker devices.",
-      "pt-br": "Port para Android da recompilação WiiCompiled do Mario Kart Wii (PAL), que usa uma ferramenta de PC para gerar pacotes do jogo: traz controles de toque e movimento, suporte ao Retro Rewind e modo a 30 FPS para aparelhos mais fracos."
+      "en": "Android port of the WiiCompiled recompilation of Mario Kart Wii (PAL) featuring touch/motion controls, Retro Rewind support, and a 30 FPS race mode, now capable of extracting game data directly on the phone without needing a PC.",
+      "pt-br": "Port para Android da recompilação WiiCompiled do Mario Kart Wii (PAL) com controles de toque e movimento, suporte ao Retro Rewind e modo a 30 FPS, capaz de extrair os dados do jogo diretamente no celular sem necessidade de PC."
     }
   },
   {
@@ -5332,18 +5332,19 @@
       "windows"
     ],
     "graphics": [
-      "Direct3D 12"
+      "Direct3D 12",
+      "Vulkan"
     ],
     "games": [
       {
         "id": "killzone-3",
         "tier": "ingame",
-        "source": "README: Levels load and play at about 16-22 frames/s (target 30), with known bugs; the campaign has not been played start to finish yet."
+        "source": "README: Status: partly playable."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of Killzone 3 for Windows built using ps3recomp and rendering via Direct3D 12.",
-      "pt-br": "Port por recompilação estática de Killzone 3 para Windows feito com ps3recomp e renderização em Direct3D 12."
+      "en": "Static recompilation port of Killzone 3 built using ps3recomp, running on Windows and Linux via Proton using Direct3D 12.",
+      "pt-br": "Port por recompilação estática de Killzone 3 feito com ps3recomp, rodando no Windows e Linux via Proton com Direct3D 12."
     }
   },
   {
@@ -7409,6 +7410,287 @@
     "notes": {
       "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, reaching Battle Arena gameplay.",
       "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, chegando à jogabilidade na Battle Arena."
+    }
+  },
+  {
+    "slug": "ratchet-tod-recomp",
+    "name": "Ratchet & Clank: Tools of Destruction",
+    "repo": "Re-TeRo17/ratchet-tod-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "ratchet-clank-tools-of-destruction",
+        "tier": "ingame",
+        "source": "README: It is playable from the first planet onwards, but it is not finished: see Status and Known issues before you start."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of the PS3 European release (BCES00052) for Windows built with ps3recomp, supporting Direct3D 12, up to 4K resolution, 60 fps target, and DualSense adaptive triggers.",
+      "pt-br": "Port por recompilação estática da versão europeia do PS3 (BCES00052) para Windows criado com o ps3recomp, com suporte a Direct3D 12, resolução de até 4K, meta de 60 fps e gatilhos adaptativos do DualSense."
+    }
+  },
+  {
+    "slug": "split2-recomp",
+    "name": "TimeSplitters 2",
+    "repo": "phobos665/split2-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "DirectXbox-Recomp",
+    "platforms": [
+      "linux",
+      "macos",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "timesplitters-2",
+        "tier": "ingame",
+        "source": "README: The front end, story mode and System Link deathmatch have been played."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of TimeSplitters 2 for original Xbox on Windows, macOS, and Linux/Steam Deck. Features Vulkan rendering, 60 FPS with frame interpolation, widescreen support, up to 8x resolution scaling, and System Link multiplayer.",
+      "pt-br": "Recompilação estática de TimeSplitters 2 do Xbox original para Windows, macOS e Linux/Steam Deck. Possui renderização em Vulkan, 60 FPS com interpolação de quadros, suporte a widescreen, escala de resolução até 8x e multiplayer via System Link."
+    }
+  },
+  {
+    "slug": "engage-pc-recomp",
+    "name": "Fire Emblem Engage",
+    "repo": "veneito/engage-pc-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "fire-emblem-engage",
+        "tier": "ingame",
+        "source": "README: The first battle, attack cutscenes and audio work, but the full game hasn't been tested."
+      }
+    ],
+    "notes": {
+      "en": "Experimental static recompilation port of Fire Emblem Engage for Windows based on TotK Recomp. Currently reaches gameplay up to the first battle.",
+      "pt-br": "Port experimental por recompilação estática de Fire Emblem Engage para Windows baseado no TotK Recomp. Atualmente chega à jogabilidade até a primeira batalha."
+    }
+  },
+  {
+    "slug": "dragon-age-origins-recomp-android-duo",
+    "name": "Dragon Age Origins Recomp Android Duo",
+    "repo": "mabencs/Dragon-Age-Origins-Recomp-Android-Duo",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "DAORecomp",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dragon-age-origins",
+        "tier": "ingame",
+        "source": "README: The game is playable from character creation onwards."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Dragon Age: Origins (Xbox 360) for 64-bit ARM Android, featuring dual-screen companion display support for the AYN Thor.",
+      "pt-br": "Recompilação estática de Dragon Age: Origins (Xbox 360) para Android ARM64, trazendo suporte a tela dupla para o AYN Thor."
+    }
+  },
+  {
+    "slug": "pc-dragonquestswords",
+    "name": "Dragon Quest Swords: The Masked Queen and the Tower of Mirrors",
+    "repo": "vs-sr-dev/pc-dragonquestswords",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "wiikit",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "dragon-quest-swords-the-masked-queen-and-the-tower-of-mirrors",
+        "tier": "ingame",
+        "source": "README: It is not yet playable through: the tutorial stops at the Master Stroke (raise the Remote, bring it down), which the port cannot give yet, and the stab is not found."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Wii-exclusive Dragon Quest Swords built on wiikit, mapping the Wii Remote's sword and shield controls to the mouse. The game currently reaches early tutorial battles.",
+      "pt-br": "Recompilação estática de Dragon Quest Swords, exclusivo de Wii, desenvolvida com o wiikit, mapeando os controles de espada e escudo do Wii Remote para o mouse. O jogo atualmente alcança as batalhas iniciais do tutorial."
+    }
+  },
+  {
+    "slug": "hellmouth-buffy-recomp",
+    "name": "Hellmouth",
+    "repo": "djrobson5/Hellmouth-buffy-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBERecomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "buffy-the-vampire-slayer",
+        "tier": "ingame",
+        "source": "README: The opening levels have been played."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation port for Apple Silicon Macs running via MoltenVK/Vulkan, featuring 25 newly added achievements.",
+      "pt-br": "Port por recompilação estática para Macs com Apple Silicon rodando via MoltenVK/Vulkan, contando com 25 conquistas inéditas adicionadas ao jogo."
+    }
+  },
+  {
+    "slug": "xc2-recomp",
+    "name": "XC2-Recomp",
+    "repo": "circerio/XC2-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "xenoblade-chronicles-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation project bringing Xenoblade Chronicles 2 from the Nintendo Switch to Windows PC.",
+      "pt-br": "Projeto de recompilação estática de Xenoblade Chronicles 2 do Nintendo Switch para PC Windows."
+    }
+  },
+  {
+    "slug": "vp2s-recomp",
+    "name": "VP2S_Recomp",
+    "repo": "TheBozos/VP2S_Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "valkyrie-profile-2-silmeria",
+        "tier": "ingame",
+        "source": "README: Playable through the start of chapter 1 (the opening, the town of Logun, the battle tutorial and the first battles, menus, saving)."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Valkyrie Profile 2: Silmeria built via static recompilation with PS2Recomp, utilizing native OpenGL graphics and native audio. Currently playable through the start of Chapter 1.",
+      "pt-br": "Port nativo para Windows de Valkyrie Profile 2: Silmeria construído por recompilação estática com PS2Recomp, utilizando gráficos OpenGL nativos e áudio nativo. Atualmente jogável até o início do Capítulo 1."
+    }
+  },
+  {
+    "slug": "clashofninja-recomp",
+    "name": "Naruto: Clash of Ninja Recomp",
+    "repo": "mapleleafjack/ClashOfNinja-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "gcn-recomp",
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "naruto-clash-of-ninja",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "naruto-clash-of-ninja-2",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "gekitou-ninja-taisen-3",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "gekitou-ninja-taisen-4",
+        "tier": "unrated",
+        "source": null
+      },
+      {
+        "id": "naruto-clash-of-ninja-european-version",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of five Naruto: Clash of Ninja / Gekitou Ninja Taisen GameCube titles, featuring launcher integration for community mods, Gecko codes, and disc patches.",
+      "pt-br": "Recompilação estática de cinco títulos da série Naruto: Clash of Ninja / Gekitou Ninja Taisen do GameCube, incluindo um launcher com suporte a mods da comunidade, códigos Gecko e patches de disco."
+    }
+  },
+  {
+    "slug": "grfs-recomp",
+    "name": "Ghost Recon Future Soldier",
+    "repo": "alex-stampede/GRFS-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal",
+      "Vulkan",
+      "MoltenVK"
+    ],
+    "games": [
+      {
+        "id": "ghost-recon-future-soldier",
+        "tier": "ingame",
+        "source": "README: Campaign and Guerrilla have been playable on the development Mac, but visual bugs remain."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Ghost Recon Future Soldier for macOS on Apple Silicon using ReXGlue and MoltenVK.",
+      "pt-br": "Recompilação estática de Ghost Recon Future Soldier para macOS em Apple Silicon utilizando ReXGlue e MoltenVK."
     }
   }
 ]

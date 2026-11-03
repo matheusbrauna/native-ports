@@ -530,5 +530,33 @@
   {
     "repo": "OpenRAC/OpenRAC",
     "reason": "Triage: Decompilations and source ports built from hand-written source are out of scope."
+  },
+  {
+    "repo": "drakolordx7/nxrecomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Awis13/liberty-pro-max",
+    "reason": "Triage: The repository ports a PC game rather than a console game."
+  },
+  {
+    "repo": "gabryboy12-ai/coreinit-nx",
+    "reason": "Triage: The repository is a Wii U system library runtime for Nintendo Switch homebrew rather than a game port."
+  },
+  {
+    "repo": "aldotoa/max-payne-recomp",
+    "reason": "Triage: The repository recompiles a Windows PC game rather than a console game."
+  },
+  {
+    "repo": "sp00nznet/pod-recomp",
+    "reason": "Triage: POD Gold is a PC game, not a console game, making it out of scope for the catalog."
+  },
+  {
+    "repo": "zhtipu/shank2-nx",
+    "reason": "Triage: The port's only target platform is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "pablocpas/OpenCMR2",
+    "reason": "Triage: Source ports built from decompiled C/C++ code are out of scope."
   }
 ]

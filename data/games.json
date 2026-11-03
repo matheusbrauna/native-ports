@@ -1464,5 +1464,89 @@
     "title": "Bakugan: Battle Brawlers",
     "console": "ps3",
     "titleIds": []
+  },
+  {
+    "id": "ratchet-clank-tools-of-destruction",
+    "title": "Ratchet & Clank: Tools of Destruction",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "timesplitters-2",
+    "title": "TimeSplitters 2",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "fire-emblem-engage",
+    "title": "Fire Emblem Engage",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "dragon-age-origins",
+    "title": "Dragon Age: Origins",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dragon-quest-swords-the-masked-queen-and-the-tower-of-mirrors",
+    "title": "Dragon Quest Swords: The Masked Queen and the Tower of Mirrors",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "buffy-the-vampire-slayer",
+    "title": "Buffy the Vampire Slayer",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "xenoblade-chronicles-2",
+    "title": "Xenoblade Chronicles 2",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "valkyrie-profile-2-silmeria",
+    "title": "Valkyrie Profile 2: Silmeria",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "naruto-clash-of-ninja",
+    "title": "Naruto: Clash of Ninja",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "naruto-clash-of-ninja-2",
+    "title": "Naruto: Clash of Ninja 2",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "gekitou-ninja-taisen-3",
+    "title": "Gekitou Ninja Taisen! 3",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "gekitou-ninja-taisen-4",
+    "title": "Gekitou Ninja Taisen! 4",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "naruto-clash-of-ninja-european-version",
+    "title": "Naruto: Clash of Ninja - European Version",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "ghost-recon-future-soldier",
+    "title": "Ghost Recon Future Soldier",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

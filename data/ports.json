@@ -7403,13 +7403,13 @@
     "games": [
       {
         "id": "bakugan-battle-brawlers-ps3",
-        "tier": "ingame",
-        "source": "README: Battle Arena is playable with corrected field and card textures."
+        "tier": "playable",
+        "source": "README: Story and battles can be played start to finish with HUD, cards, character cinematics, shadows and reflections."
       }
     ],
     "notes": {
-      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, reaching Battle Arena gameplay.",
-      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, chegando à jogabilidade na Battle Arena."
+      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, now playable from start to finish.",
+      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, agora jogável do início ao fim."
     }
   },
   {
@@ -7430,12 +7430,12 @@
       {
         "id": "ratchet-clank-tools-of-destruction",
         "tier": "ingame",
-        "source": "README: It is playable from the first planet onwards, but it is not finished: see Status and Known issues before you start."
+        "source": "README: The game is playable from the first planet onwards, but it is not finished: see Status and Known issues before you start."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of the PS3 European release (BCES00052) for Windows built with ps3recomp, supporting Direct3D 12, up to 4K resolution, 60 fps target, and DualSense adaptive triggers.",
-      "pt-br": "Port por recompilação estática da versão europeia do PS3 (BCES00052) para Windows criado com o ps3recomp, com suporte a Direct3D 12, resolução de até 4K, meta de 60 fps e gatilhos adaptativos do DualSense."
+      "en": "Static recompilation port of the PS3 European release (BCES00052) for Windows built with ps3recomp, featuring Direct3D 12, up to 4K 60 fps, DualSense adaptive triggers, save slot selection, and restored level audio streams.",
+      "pt-br": "Port por recompilação estática da versão europeia do PS3 (BCES00052) para Windows criado com o ps3recomp, com suporte a Direct3D 12, até 4K a 60 fps, gatilhos adaptativos do DualSense, seleção de slots de salvamento e áudio de níveis restaurado."
     }
   },
   {
@@ -7691,6 +7691,115 @@
     "notes": {
       "en": "Static recompilation of Ghost Recon Future Soldier for macOS on Apple Silicon using ReXGlue and MoltenVK.",
       "pt-br": "Recompilação estática de Ghost Recon Future Soldier para macOS em Apple Silicon utilizando ReXGlue e MoltenVK."
+    }
+  },
+  {
+    "slug": "uc2-recomp",
+    "name": "Unreal Championship 2: The Liandri Conflict",
+    "repo": "ClydeyEXE/uc2-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "unreal-championship-2-the-liandri-conflict",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of the original Xbox game for Windows using the xboxrecomp toolchain.",
+      "pt-br": "Uma recompilação estática do jogo original de Xbox para Windows utilizando o toolkit xboxrecomp."
+    }
+  },
+  {
+    "slug": "lantern-recomp",
+    "name": "Green Lantern: Rise of the Manhunters",
+    "repo": "Akimitsu76/Lantern-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "green-lantern-rise-of-the-manhunters",
+        "tier": "ingame",
+        "source": "README: O host Linux com ReXGlue/Vulkan alcança título, menus, abertura e a primeira fase com HUD, cenário/personagens visíveis, combate inicial e passagem dos primeiros destroços até o tutorial de defesa."
+      }
+    ],
+    "notes": {
+      "en": "Experimental Xbox 360 static recompilation port of Green Lantern: Rise of the Manhunters powered by ReXGlue, featuring a custom launcher and graphical presets.",
+      "pt-br": "Port experimental por recompilação estática de Green Lantern: Rise of the Manhunters para Xbox 360 via ReXGlue, com launcher próprio e presets gráficos."
+    }
+  },
+  {
+    "slug": "kamenrider-recomp-pc",
+    "name": "Kamen Rider PC Port",
+    "repo": "indrasundanese/KamenRider-Recomp-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": "shadPS4",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "kamen-rider-memory-of-heroez",
+        "tier": "playable",
+        "source": "README: ✅ Bisa dimainkan"
+      },
+      {
+        "id": "kamen-rider-climax-fighters",
+        "tier": "intro",
+        "source": "README: 🚧 Baru sampai menu, belum bisa masuk gameplay"
+      }
+    ],
+    "notes": {
+      "en": "PS4 runtime port launcher for Windows built on shadPS4, supporting Kamen Rider: Memory of Heroez and Kamen Rider Climax Fighters.",
+      "pt-br": "Port runtime de PS4 com launcher para Windows baseado no shadPS4, com suporte a Kamen Rider: Memory of Heroez e Kamen Rider Climax Fighters."
+    }
+  },
+  {
+    "slug": "trapteamrecomp",
+    "name": "Skylanders: Trap Team",
+    "repo": "tsapZ/TrapTeamRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skylanders-trap-team",
+        "tier": "ingame",
+        "source": "README: Chapter 1 and the Skylanders Academy play, with traps, the villain vault and swapping villains in."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial Windows port of the Xbox 360 game built using ReXGlue. Features 60+ FPS, resolution scaling up to 3x, ultrawide display support, and built-in virtual portal emulation.",
+      "pt-br": "Port não oficial para Windows da versão de Xbox 360 feito com ReXGlue. Suporta 60+ FPS, escalonamento de resolução até 3x, suporte a telas ultrawide e emulação integrada de portal virtual."
     }
   }
 ]

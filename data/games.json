@@ -1548,5 +1548,29 @@
     "title": "Ghost Recon Future Soldier",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "unreal-championship-2-the-liandri-conflict",
+    "title": "Unreal Championship 2: The Liandri Conflict",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "green-lantern-rise-of-the-manhunters",
+    "title": "Green Lantern: Rise of the Manhunters",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "kamen-rider-climax-fighters",
+    "title": "Kamen Rider Climax Fighters",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-trap-team",
+    "title": "Skylanders: Trap Team",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

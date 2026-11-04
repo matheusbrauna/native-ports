@@ -142,5 +142,25 @@
   {
     "repo": "thebabyhippo303/nimbus-project",
     "reason": "Triage was unsure: The README describes its approach vaguely as a hybrid core between recompilation and decompilation without clarifying whether static recompilation is used."
+  },
+  {
+    "repo": "adrbn/bo2-mac",
+    "reason": "Triage accepted it, but: Console \"pc\" is not in the catalog yet (Call of Duty: Black Ops II)"
+  },
+  {
+    "repo": "sp00nznet/epicpinball",
+    "reason": "Triage accepted it, but: Console \"dos\" is not in the catalog yet (Epic Pinball)"
+  },
+  {
+    "repo": "sp00nznet/blakestone",
+    "reason": "Triage accepted it, but: Console \"dos\" is not in the catalog yet (Blake Stone: Aliens of Gold)"
+  },
+  {
+    "repo": "irregbex/CartChase2P",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Donkey Kong Country)"
+  },
+  {
+    "repo": "rages4calm/earthbound-companion",
+    "reason": "Triage was unsure: The README does not make clear whether the game code uses static recompilation or a hand-written decompilation."
   }
 ]

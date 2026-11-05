@@ -1572,5 +1572,83 @@
     "title": "Skylanders: Trap Team",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "sonic-the-hedgehog-2006",
+    "title": "Sonic the Hedgehog (2006)",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "starcraft-64",
+    "title": "StarCraft 64",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "red-dead-revolver",
+    "title": "Red Dead Revolver",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "harry-potter-and-the-chamber-of-secrets",
+    "title": "Harry Potter and the Chamber of Secrets",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "medal-of-honor-frontline",
+    "title": "Medal of Honor: Frontline",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "sonic-the-hedgehog-2006-ps3",
+    "title": "Sonic the Hedgehog (2006)",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "ninja-gaiden-ii",
+    "title": "Ninja Gaiden II",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-fight-2",
+    "title": "Shadow Fight 2",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "animaniacs-the-great-edgar-hunt",
+    "title": "Animaniacs: The Great Edgar Hunt",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "nhl-hitz-pro",
+    "title": "NHL Hitz Pro",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "afro-samurai",
+    "title": "Afro Samurai",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "amped-2",
+    "title": "Amped 2",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "tony-hawks-pro-skater-3",
+    "title": "Tony Hawk's Pro Skater 3",
+    "console": "n64",
+    "titleIds": []
   }
 ]

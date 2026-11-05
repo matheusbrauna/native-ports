@@ -162,5 +162,9 @@
   {
     "repo": "rages4calm/earthbound-companion",
     "reason": "Triage was unsure: The README does not make clear whether the game code uses static recompilation or a hand-written decompilation."
+  },
+  {
+    "repo": "drakolordx7/switch2-recomp",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Pokémon Pokopia)"
   }
 ]

@@ -7403,13 +7403,13 @@
     "games": [
       {
         "id": "bakugan-battle-brawlers-ps3",
-        "tier": "ingame",
-        "source": "README: Battle Arena is playable with corrected field and card textures."
+        "tier": "playable",
+        "source": "README: Story and battles can be played start to finish with HUD, cards, character cinematics, shadows and reflections."
       }
     ],
     "notes": {
-      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, reaching Battle Arena gameplay.",
-      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, chegando à jogabilidade na Battle Arena."
+      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, now playable from start to finish.",
+      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, agora jogável do início ao fim."
     }
   },
   {
@@ -7430,12 +7430,12 @@
       {
         "id": "ratchet-clank-tools-of-destruction",
         "tier": "ingame",
-        "source": "README: It is playable from the first planet onwards, but it is not finished: see Status and Known issues before you start."
+        "source": "README: The game is playable from the first planet onwards, but it is not finished: see Status and Known issues before you start."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of the PS3 European release (BCES00052) for Windows built with ps3recomp, supporting Direct3D 12, up to 4K resolution, 60 fps target, and DualSense adaptive triggers.",
-      "pt-br": "Port por recompilação estática da versão europeia do PS3 (BCES00052) para Windows criado com o ps3recomp, com suporte a Direct3D 12, resolução de até 4K, meta de 60 fps e gatilhos adaptativos do DualSense."
+      "en": "Static recompilation port of the PS3 European release (BCES00052) for Windows built with ps3recomp, featuring Direct3D 12, up to 4K 60 fps, DualSense adaptive triggers, save slot selection, and restored level audio streams.",
+      "pt-br": "Port por recompilação estática da versão europeia do PS3 (BCES00052) para Windows criado com o ps3recomp, com suporte a Direct3D 12, até 4K a 60 fps, gatilhos adaptativos do DualSense, seleção de slots de salvamento e áudio de níveis restaurado."
     }
   },
   {
@@ -7691,6 +7691,496 @@
     "notes": {
       "en": "Static recompilation of Ghost Recon Future Soldier for macOS on Apple Silicon using ReXGlue and MoltenVK.",
       "pt-br": "Recompilação estática de Ghost Recon Future Soldier para macOS em Apple Silicon utilizando ReXGlue e MoltenVK."
+    }
+  },
+  {
+    "slug": "uc2-recomp",
+    "name": "Unreal Championship 2: The Liandri Conflict",
+    "repo": "ClydeyEXE/uc2-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "unreal-championship-2-the-liandri-conflict",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of the original Xbox game for Windows using the xboxrecomp toolchain.",
+      "pt-br": "Uma recompilação estática do jogo original de Xbox para Windows utilizando o toolkit xboxrecomp."
+    }
+  },
+  {
+    "slug": "lantern-recomp",
+    "name": "Green Lantern: Rise of the Manhunters",
+    "repo": "Akimitsu76/Lantern-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "green-lantern-rise-of-the-manhunters",
+        "tier": "ingame",
+        "source": "README: O host Linux com ReXGlue/Vulkan alcança título, menus, abertura e a primeira fase com HUD, cenário/personagens visíveis, combate inicial e passagem dos primeiros destroços até o tutorial de defesa."
+      }
+    ],
+    "notes": {
+      "en": "Experimental Xbox 360 static recompilation port of Green Lantern: Rise of the Manhunters powered by ReXGlue, featuring a custom launcher and graphical presets.",
+      "pt-br": "Port experimental por recompilação estática de Green Lantern: Rise of the Manhunters para Xbox 360 via ReXGlue, com launcher próprio e presets gráficos."
+    }
+  },
+  {
+    "slug": "kamenrider-recomp-pc",
+    "name": "Kamen Rider PC Port",
+    "repo": "indrasundanese/KamenRider-Recomp-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": "shadPS4",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "kamen-rider-memory-of-heroez",
+        "tier": "playable",
+        "source": "README: ✅ Bisa dimainkan"
+      },
+      {
+        "id": "kamen-rider-climax-fighters",
+        "tier": "intro",
+        "source": "README: 🚧 Baru sampai menu, belum bisa masuk gameplay"
+      }
+    ],
+    "notes": {
+      "en": "PS4 runtime port launcher for Windows built on shadPS4, supporting Kamen Rider: Memory of Heroez and Kamen Rider Climax Fighters.",
+      "pt-br": "Port runtime de PS4 com launcher para Windows baseado no shadPS4, com suporte a Kamen Rider: Memory of Heroez e Kamen Rider Climax Fighters."
+    }
+  },
+  {
+    "slug": "trapteamrecomp",
+    "name": "Skylanders: Trap Team",
+    "repo": "tsapZ/TrapTeamRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skylanders-trap-team",
+        "tier": "ingame",
+        "source": "README: Chapter 1 and the Skylanders Academy play, with traps, the villain vault and swapping villains in."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial Windows port of the Xbox 360 game built using ReXGlue. Features 60+ FPS, resolution scaling up to 3x, ultrawide display support, and built-in virtual portal emulation.",
+      "pt-br": "Port não oficial para Windows da versão de Xbox 360 feito com ReXGlue. Suporta 60+ FPS, escalonamento de resolução até 3x, suporte a telas ultrawide e emulação integrada de portal virtual."
+    }
+  },
+  {
+    "slug": "marathonrecomp",
+    "name": "Sonic the Hedgehog (2006)",
+    "repo": "sonicnext-dev/MarathonRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "linux",
+      "macos",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "sonic-the-hedgehog-2006",
+        "tier": "wip",
+        "source": "README: This recompilation is still under active development and is NOT meant for public use."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Sonic the Hedgehog (2006) for Xbox 360 using XenonRecomp and XenosRecomp, targeting Windows, Linux, macOS, and Steam Deck.",
+      "pt-br": "Recompilação estática de Sonic the Hedgehog (2006) do Xbox 360 usando XenonRecomp e XenosRecomp, compatível com Windows, Linux, macOS e Steam Deck."
+    }
+  },
+  {
+    "slug": "starcraft64-recomp",
+    "name": "StarCraft 64",
+    "repo": "n0madic/StarCraft64-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "android",
+      "arm",
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "OpenGL ES"
+    ],
+    "games": [
+      {
+        "id": "starcraft-64",
+        "tier": "ingame",
+        "source": "README: What works: the single-player campaign, original menus and the Encyclopedia, save and load, sound, mouse/touch play (the game still sees a normal N64 controller)."
+      }
+    ],
+    "notes": {
+      "en": "N64Recomp-based native port of StarCraft 64 with support for mouse, keyboard, gamepad, and touch screen controls.",
+      "pt-br": "Port nativo de StarCraft 64 baseado em N64Recomp com suporte a mouse, teclado, controle e tela sensível ao toque."
+    }
+  },
+  {
+    "slug": "red-dead-revolver-pc",
+    "name": "Red Dead Revolver",
+    "repo": "dennisabalo18-bot/red-dead-revolver-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "red-dead-revolver",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Windows port of the Xbox (PAL) release using xboxrecomp, featuring Direct3D 11 graphics, full keyboard and mouse support, and optional remastered texture and video packs.",
+      "pt-br": "Port para Windows da versão de Xbox (PAL) usando xboxrecomp, com gráficos em Direct3D 11, suporte a teclado e mouse e pacotes opcionais de texturas e vídeos remasterizados."
+    }
+  },
+  {
+    "slug": "hpcos-gc-recomp",
+    "name": "Harry Potter and the Chamber of Secrets",
+    "repo": "ant0-blase/HPCOS-GC-RECOMP",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "DolRecomp",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "harry-potter-and-the-chamber-of-secrets",
+        "tier": "ingame",
+        "source": "README: in-game scenes and normal gameplay"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the GameCube version of Harry Potter and the Chamber of Secrets for Linux, featuring Vulkan graphics, dynamic widescreen, and an in-game PC settings menu.",
+      "pt-br": "Recompilação estática da versão de GameCube de Harry Potter e a Câmara Secreta para Linux, com gráficos em Vulkan, suporte a widescreen dinâmico e menu de configurações para PC."
+    }
+  },
+  {
+    "slug": "mohfrontline-gc-recomp",
+    "name": "Medal of Honor: Frontline — GameCube Static Recompilation",
+    "repo": "ant0-blase/MOHFrontline-GC-RECOMP",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "DolRecomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "medal-of-honor-frontline",
+        "tier": "ingame",
+        "source": "README: The project is usable for development and gameplay testing, but it is still an experimental recompilation, not a finished compatibility release."
+      }
+    ],
+    "notes": {
+      "en": "A GameCube static recompilation of Medal of Honor: Frontline built using DolRecomp and ModernGekko, featuring Vulkan rendering, widescreen/FOV enhancements, and optional PS3 asset layer support.",
+      "pt-br": "Uma recompilação estática de GameCube de Medal of Honor: Frontline criada usando DolRecomp e ModernGekko, com suporte a renderização Vulkan, melhorias de FOV e widescreen, e suporte opcional a recursos gráficos do PS3."
+    }
+  },
+  {
+    "slug": "sonic06-recomp",
+    "name": "Soleanna",
+    "repo": "DrummingBird1/sonic06-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "sonic-the-hedgehog-2006-ps3",
+        "tier": "ingame",
+        "source": "README: All 83 stage entries and 18 bosses start without a crash, in tests of about a minute each"
+      }
+    ],
+    "notes": {
+      "en": "Unofficial PC port of the PS3 version of Sonic the Hedgehog (2006) built using ps3recomp, featuring a Direct3D 12 renderer and automated build launcher.",
+      "pt-br": "Port não oficial para PC da versão de PS3 de Sonic the Hedgehog (2006) feito com ps3recomp, incluindo renderizador Direct3D 12 e um launcher para compilação automatizada."
+    }
+  },
+  {
+    "slug": "ng2recomp",
+    "name": "Ninja Gaiden II Recompiled",
+    "repo": "gamboozino/ng2recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue SDK",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "ninja-gaiden-ii",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Ninja Gaiden II statically recompiled for Linux and Windows with Vulkan graphics, widescreen support, up to 8x resolution scaling, mouse and keyboard controls, and high-framerate performance optimized for the Steam Deck.",
+      "pt-br": "Ninja Gaiden II recompilado estaticamente para Linux e Windows com gráficos em Vulkan, suporte a widescreen, escala de resolução de até 8x, controles de teclado e mouse e alto desempenho otimizado para o Steam Deck."
+    }
+  },
+  {
+    "slug": "sf2recomp",
+    "name": "Shadow Fight 2",
+    "repo": "bipinkrish/sf2recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "shadow-fight-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Shadow Fight 2 for Nintendo Switch targeting Linux, Windows, macOS, and Android with Vulkan 1.3 rendering and LAN multiplayer.",
+      "pt-br": "Recompilação estática de Shadow Fight 2 do Nintendo Switch para Linux, Windows, macOS e Android com renderização em Vulkan 1.3 e multijogador em rede local (LAN)."
+    }
+  },
+  {
+    "slug": "animaniacs-gc-recomp",
+    "name": "Animaniacs: The Great Edgar Hunt",
+    "repo": "ant0-blase/ANIMANIACS-GC-RECOMP",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "DolRecomp",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "animaniacs-the-great-edgar-hunt",
+        "tier": "ingame",
+        "source": "README: | Gameplay | ✅ Working |"
+      }
+    ],
+    "notes": {
+      "en": "Experimental GameCube static recompilation targeting Linux and Vulkan using DolRecomp and ModernGekko.",
+      "pt-br": "Recompilação estática experimental de GameCube para Linux e Vulkan utilizando DolRecomp e ModernGekko."
+    }
+  },
+  {
+    "slug": "black-linux",
+    "name": "Black Linux Port",
+    "repo": "Katon17/black-linux",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBE-Recomp",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "black",
+        "tier": "ingame",
+        "source": "README: Stable 80–100 FPS during the first three missions"
+      }
+    ],
+    "notes": {
+      "en": "Native Linux x86_64 port of the original Xbox version of Black built via static recompilation using XboxXBE-Recomp SDK, Vulkan, and SDL3.",
+      "pt-br": "Port nativo para Linux x86_64 da versão original de Xbox de Black, feito via recompilação estática usando XboxXBE-Recomp SDK, Vulkan e SDL3."
+    }
+  },
+  {
+    "slug": "nhlhitzpro-recomp",
+    "name": "NHL Hitz Pro",
+    "repo": "dalves408/nhlhitzpro-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "nhl-hitz-pro",
+        "tier": "ingame",
+        "source": "README: It plays the intro movies, menus, team select and full matches at 60 fps on a current PC."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of NHL Hitz Pro for Windows using xboxrecomp, featuring a Direct3D 11 renderer, 4-player controller support, and an optional 4x hi-res texture pack.",
+      "pt-br": "Uma recompilação estática de NHL Hitz Pro para Windows usando xboxrecomp, com renderizador Direct3D 11, suporte a 4 controles e pacote opcional de texturas em 4x."
+    }
+  },
+  {
+    "slug": "afrosamurairecomp",
+    "name": "Afro Samurai",
+    "repo": "LomoXSoft/AfroSamuraiRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "afro-samurai",
+        "tier": "ingame",
+        "source": "README: Boots, plays videos, menus and gameplay; EN/ES/FR/IT language selection."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Afro Samurai for Xbox 360 targeting 64-bit Windows using ReXGlue. Reaches gameplay with 30 FPS rendering and working audio via GPU and runtime patches.",
+      "pt-br": "Recompilação estática de Afro Samurai do Xbox 360 para Windows 64-bit usando ReXGlue. Chega à jogabilidade a 30 FPS e com áudio funcional por meio de patches de GPU e runtime."
+    }
+  },
+  {
+    "slug": "re-amped2",
+    "name": "RE-Amped2",
+    "repo": "Nico-D-eu/RE-Amped2",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 11",
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "amped-2",
+        "tier": "playable",
+        "source": "README: The whole game is playable, but expect bugs and rough edges."
+      }
+    ],
+    "notes": {
+      "en": "Statically recompiles Amped 2 from an original Xbox disc image to run natively on Windows and Linux at 60 fps with high-resolution support.",
+      "pt-br": "Recompila estaticamente Amped 2 a partir de uma imagem de disco do Xbox original para rodar nativamente no Windows e Linux a 60 fps com suporte a altas resoluções."
+    }
+  },
+  {
+    "slug": "thps3-64recomp",
+    "name": "THPS3 64: Recompiled",
+    "repo": "THPS64Recomp/THPS3-64Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "Metal",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "tony-hawks-pro-skater-3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Early preview PC port of Tony Hawk's Pro Skater 3 (N64) featuring widescreen, 60 fps interpolation, increased draw distance, and modern controller support.",
+      "pt-br": "Port para PC em estágio inicial de prévia do Tony Hawk's Pro Skater 3 (N64) com suporte a widescreen, 60 fps interpolado, maior distância de renderização e suporte a controles modernos."
     }
   }
 ]

@@ -558,5 +558,77 @@
   {
     "repo": "pablocpas/OpenCMR2",
     "reason": "Triage: Source ports built from decompiled C/C++ code are out of scope."
+  },
+  {
+    "repo": "sp00nznet/ut99-recomp",
+    "reason": "Triage: The project recompiles the PC Win32 version of Unreal Tournament rather than a console version."
+  },
+  {
+    "repo": "sp00nznet/civ3",
+    "reason": "Triage: This project is a static recompilation of a PC game, which is out of scope for the catalog of console game ports."
+  },
+  {
+    "repo": "ant0-blase/GekkoAOT",
+    "reason": "Triage: GekkoAOT is a general static recompilation tool and runtime for GameCube games rather than a port of a specific game."
+  },
+  {
+    "repo": "lukegskw/muyiunative",
+    "reason": "Triage: It is a static recompilation tool and runtime framework for PS1 disc images rather than a port of a specific game."
+  },
+  {
+    "repo": "no7z/rea-games",
+    "reason": "Triage: The repository is a curated list of game ports and decompilations, which is out of scope."
+  },
+  {
+    "repo": "tsapZ/SkylandersCoreOfLight",
+    "reason": "Triage: This repository is a launcher tool for game ports rather than a port itself."
+  },
+  {
+    "repo": "GioPixelGH/Crash-Twinsanity-Windows",
+    "reason": "Triage: Built from a hand-written C++ decompilation rather than static recompilation."
+  },
+  {
+    "repo": "HalmyLyseas/VandalHearts-PcPort",
+    "reason": "Triage: The project is a source port built from a hand-written decompilation rather than static recompilation."
+  },
+  {
+    "repo": "kirklandsig/halo-ce-anbernic-rg35xx",
+    "reason": "Triage: Ports built from decompiled C source code without a static recompiler are out of scope."
+  },
+  {
+    "repo": "NoahVl/Birdman64",
+    "reason": "Triage: It is a source port built from decompiled source code rather than using a static recompiler."
+  },
+  {
+    "repo": "nekomancer01/DarkSoulsPS2",
+    "reason": "Triage: This project is a game engine reimplementation targeting another console, which is out of scope."
+  },
+  {
+    "repo": "scarletnx/ScarletNX",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "no7z/awesome-rebuilt-games",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "azmasm/switch2mac",
+    "reason": "Triage: The repository is a build tool and launcher rather than an individual native game port."
+  },
+  {
+    "repo": "bystritskiy/reUndr2-ps5",
+    "reason": "Triage: The port's only target is another console (PS5)."
+  },
+  {
+    "repo": "bystritskiy/reUndr-ps5",
+    "reason": "Triage: The port's only target platform is another console (PlayStation 5)."
+  },
+  {
+    "repo": "segovia-no/MotoRacerRecomp",
+    "reason": "Triage: The repository ports a PC Windows executable rather than a console game."
+  },
+  {
+    "repo": "pgdepaula/Wanderlust",
+    "reason": "Triage: Recompiler toolchains and general binary translation tools on their own are out of scope."
   }
 ]

@@ -1,7 +1,9 @@
 ---
 import Icon from "./Icon.astro";
+import Pager from "./Pager.astro";
 import { groups, entries, defaultOrder, repoUrl, isRetired, TIERS, PLATFORMS, CONSOLES, TECHNIQUES, type Lang, type Entry } from "../lib/catalog";
 import { t, path, formatNumber, formatDate, age } from "../lib/i18n";
+import { PAGE_SIZE, pageCount } from "../lib/pagination";
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -20,6 +22,15 @@ const searchText = (e: Entry) =>
   [e.port.name, e.port.repo, e.game.title, ...e.game.titleIds, s.consoles[e.game.console], e.port.toolchain ?? "", s.techniques[e.port.technique].label, e.port.notes[lang], ...e.port.graphics, ...e.port.platforms.map((p) => s.platforms[p])]
     .join(" ")
     .toLowerCase();
+
+let seen = 0;
+const pagedGroups = groups.map((g) => {
+  const list = [...g.entries].sort(defaultOrder);
+  const start = seen;
+  seen += list.length;
+  return { game: g.game, list, start, past: start >= PAGE_SIZE };
+});
+const pages = pageCount(seen);
 
 ---
 <section class="catalog wrap" aria-labelledby="catalog-title" data-lang={lang}>
@@ -95,6 +106,8 @@ const searchText = (e: Entry) =>
     </fieldset>
   </div>
 
+  <Pager lang={lang} pages={pages} place="top" />
+
   <div class="table-wrap">
     <table id="ports">
       <caption class="visually-hidden">{s.count(entries.length, groups.length)}</caption>
@@ -108,29 +121,30 @@ const searchText = (e: Entry) =>
           <th scope="col" class="c-num c-pushed" aria-sort="descending"><button type="button" data-sort="pushed">{s.cols.pushed}<Icon name="sort" size={13} /></button></th>
         </tr>
       </thead>
-      {groups.map(({ game, entries: list }) => {
-        const counts = tierCount(list);
+      {pagedGroups.map(({ game, list, start, past }) => {
+        const visibleOnFirstPage = Math.max(0, Math.min(list.length, PAGE_SIZE - start));
+        const counts = tierCount(past ? list : list.slice(0, visibleOnFirstPage));
         return (
-          <tbody data-group={game.id}>
+          <tbody data-group={game.id} class:list={{ "past-page": past }}>
             <tr class="group-row">
               <th colspan="6" scope="colgroup" id={`g-${game.id}`}>
                 <div class="group-head">
                   <h2><a href={path(`/games/${game.id}/`, lang)}>{game.title}</a></h2>
                   <a class="console" href={path(`/consoles/${game.console}/`, lang)}>{s.consoles[game.console]}</a>
                   {game.titleIds.length > 0 && <span class="data ids">{game.titleIds.join(" · ")}{game.version && ` · v${game.version}`}</span>}
-                  <span class="gcount data" data-group-count>{list.length}</span>
+                  <span class="gcount data" data-group-count>{past ? list.length : visibleOnFirstPage}</span>
                   <span class="mini" aria-hidden="true">
                     {TIERS.map((tier) => <span class="seg" data-seg={tier} style={`flex-grow:${counts[tier]}`}></span>)}
                   </span>
                 </div>
               </th>
             </tr>
-            {[...list].sort(defaultOrder).map((e, i, sorted) => {
+            {list.map((e, i) => {
               const f = e.port.facts;
               const retired = isRetired(e.port);
               return (
                 <tr
-                  class:list={["row", { retired, last: i === sorted.length - 1 }]}
+                  class:list={["row", { retired, last: i === Math.min(list.length, PAGE_SIZE - start) - 1, "past-page": start + i >= PAGE_SIZE }]}
                   data-entry
                   data-game={game.id}
                   data-console={game.console}
@@ -173,6 +187,7 @@ const searchText = (e: Entry) =>
         );
       })}
     </table>
+    <Pager lang={lang} pages={pages} place="bottom" />
     <div class="empty" id="empty" hidden>
       <p class="empty-title">{s.empty.title}</p>
       <p>{s.empty.body}</p>
@@ -183,6 +198,18 @@ const searchText = (e: Entry) =>
     </div>
   </div>
 </section>
+<noscript>
+  <style>
+    .pager { display: none !important; }
+    .catalog:not([data-paged]) tbody.past-page { display: table-row-group !important; }
+    .catalog:not([data-paged]) tr.past-page { display: table-row !important; }
+    @media (max-width: 760px) {
+      .catalog:not([data-paged]) tbody.past-page,
+      .catalog:not([data-paged]) tr.past-page { display: block !important; }
+      .catalog:not([data-paged]) tr.row.past-page { display: grid !important; }
+    }
+  </style>
+</noscript>
 
 <script>
   import { initCatalog } from "../lib/catalog-client";
@@ -310,7 +337,8 @@ const searchText = (e: Entry) =>
   /* Groups are separated from each other, not from their own ports: the strong rule and the
      space sit above the game header, and its ports hang off it on a tree guide. */
   .group-row th { padding: 30px 12px 4px; border-top: 1px solid var(--line-strong); border-bottom: 0; text-align: left; }
-  thead + tbody .group-row th { border-top: 0; padding-top: 22px; }
+  thead + tbody .group-row th,
+  tbody.page-first .group-row th { border-top: 0; padding-top: 22px; }
   .group-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; }
   .group-head h2 { font-size: var(--step-2); letter-spacing: -0.01em; }
   .group-head h2 a { color: var(--ink); text-decoration: none; }
@@ -340,6 +368,8 @@ const searchText = (e: Entry) =>
   .muted { color: var(--ink-3); }
   tr.retired .port-name, tr.retired .note { color: var(--ink-3); }
   tr[hidden], tbody[hidden] { display: none; }
+  .catalog:not([data-paged]) tbody.past-page,
+  .catalog:not([data-paged]) tr.past-page { display: none; }
 
   .empty { padding: 48px 12px; border-bottom: 1px solid var(--line); }
   .empty-title { font-size: var(--step-1); font-weight: 700; }
@@ -382,7 +412,8 @@ const searchText = (e: Entry) =>
     .c-num { text-align: left; }
     thead .c-num button { flex-direction: row; }
     .group-row th { padding: 28px 0 4px; }
-    thead + tbody .group-row th { padding-top: 18px; }
+    thead + tbody .group-row th,
+    tbody.page-first .group-row th { padding-top: 18px; }
     .mini { width: 72px; }
     tr.row {
       display: grid; grid-template-columns: auto auto 1fr; column-gap: 16px;

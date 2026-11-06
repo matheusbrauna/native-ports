@@ -1,0 +1,64 @@
+---
+import Icon from "./Icon.astro";
+import { pageWindow } from "../lib/pagination";
+import type { Lang } from "../lib/catalog";
+import { t } from "../lib/i18n";
+
+interface Props { lang: Lang; pages: number; place: "top" | "bottom" }
+const { lang, pages, place } = Astro.props;
+const s = t[lang].pager;
+---
+<nav class:list={["pager", place === "top" ? "pager-top" : "pager-bottom"]} data-pager aria-label={s.nav} aria-controls="ports" hidden={pages <= 1}>
+  <p class="pager-status" data-pager-status>
+    {s.statusBefore} <span class="data">{1}</span> {s.statusBetween} <span class="data">{pages}</span>
+  </p>
+  <div class="pager-bar">
+    <button type="button" class="page-btn" data-page-dir="prev" aria-label={s.prev} disabled>
+      <Icon name="chevronLeft" size={16} />
+      <span class="pager-label">{s.prevShort}</span>
+    </button>
+    <div class="pager-pages" data-pager-pages>
+      {pageWindow(1, pages).map((item) => item === "gap"
+        ? <span class="pager-gap" aria-hidden="true">…</span>
+        : <button type="button" class="page-num" data-page-num={item} aria-label={s.page(item)} aria-current={item === 1 ? "page" : undefined}>{item}</button>)}
+    </div>
+    <button type="button" class="page-btn" data-page-dir="next" aria-label={s.next} disabled={pages <= 1}>
+      <span class="pager-label">{s.nextShort}</span>
+      <Icon name="chevronRight" size={16} />
+    </button>
+  </div>
+</nav>
+
+<style>
+  .pager { display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 100%; }
+  .pager-top { margin-top: 16px; scroll-margin-top: 12px; }
+  .pager-bottom { margin-top: 4px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .pager-status { color: var(--ink-2); font-size: var(--step--1); text-align: center; }
+  .pager-bar, .pager-pages { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; max-width: 100%; }
+  .pager-pages { gap: 4px; }
+  .page-btn, .page-num {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px; flex-shrink: 0;
+    height: 36px; min-width: 36px; padding: 0 12px; border: 0; border-radius: var(--radius); cursor: pointer;
+    background: transparent; color: var(--ink-2); font: inherit; font-size: var(--step--1);
+    transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  }
+  .page-btn { font-weight: 700; box-shadow: inset 0 0 0 1px var(--line-strong); }
+  .page-btn:hover:not(:disabled) { background: var(--raised); color: var(--ink); }
+  .page-btn:disabled { color: var(--ink-3); cursor: default; box-shadow: inset 0 0 0 1px var(--line); }
+  .page-num { padding: 0 8px; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+  .page-num:hover { background: var(--panel); color: var(--ink); }
+  .page-num[aria-current="page"] {
+    background: var(--raised); color: var(--ink); font-weight: 600; cursor: default;
+    box-shadow: inset 0 0 0 1px var(--line-strong);
+  }
+  .pager-gap { color: var(--ink-3); min-width: 16px; text-align: center; user-select: none; }
+
+  @media (max-width: 760px) {
+    .pager-top { margin-top: 12px; }
+    .pager-label {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+    .page-btn { position: relative; width: 36px; padding: 0; }
+  }
+</style>

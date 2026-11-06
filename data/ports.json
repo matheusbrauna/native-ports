@@ -6548,17 +6548,19 @@
       "linux",
       "windows"
     ],
-    "graphics": [],
+    "graphics": [
+      "Vulkan"
+    ],
     "games": [
       {
         "id": "conker-live-reloaded",
-        "tier": "playable",
-        "source": "README: Single player is playable start to finish."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "A native PC port of Conker: Live & Reloaded built with static recompilation. Features support for up to 240 FPS, ultrawide displays, graphical enhancements, and mouse and keyboard controls.",
-      "pt-br": "Um port nativo para PC de Conker: Live & Reloaded desenvolvido via recompilação estática. Traz suporte a até 240 FPS, telas ultrawide, melhorias gráficas e controles por teclado e mouse."
+      "en": "A native PC port of Conker: Live & Reloaded built with static recompilation. Features support for up to 240 FPS, ultrawide displays, Vulkan graphics, multiplayer, and mouse and keyboard controls.",
+      "pt-br": "Um port nativo para PC de Conker: Live & Reloaded desenvolvido via recompilação estática. Traz suporte a até 240 FPS, telas ultrawide, gráficos em Vulkan, multijogador e controles por teclado e mouse."
     }
   },
   {
@@ -7301,12 +7303,12 @@
       {
         "id": "twisted-metal-black",
         "tier": "ingame",
-        "source": "README: Playable, at full speed, as a native port, at NTSC's 60 frames per second."
+        "source": "README: Playable, at full speed, as a native port targeting NTSC's 60 updates per second."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Twisted Metal: Black using PS2Recomp for Linux and Windows. Features native OpenGL rendering, configurable controls, increased render scale, and 60 FPS gameplay.",
-      "pt-br": "Recompilação estática de Twisted Metal: Black para Linux e Windows usando PS2Recomp. Possui renderização nativa em OpenGL, controles configuráveis, maior escala de renderização e suporte a 60 FPS."
+      "en": "Static recompilation of Twisted Metal: Black using BozoEngine for Linux and Windows. Features native OpenGL rendering, configurable controls, increased render scale, and 60 FPS gameplay.",
+      "pt-br": "Recompilação estática de Twisted Metal: Black para Linux e Windows usando BozoEngine. Possui renderização nativa em OpenGL, controles configuráveis, maior escala de renderização e suporte a 60 FPS."
     }
   },
   {
@@ -8181,6 +8183,355 @@
     "notes": {
       "en": "Early preview PC port of Tony Hawk's Pro Skater 3 (N64) featuring widescreen, 60 fps interpolation, increased draw distance, and modern controller support.",
       "pt-br": "Port para PC em estágio inicial de prévia do Tony Hawk's Pro Skater 3 (N64) com suporte a widescreen, 60 fps interpolado, maior distância de renderização e suporte a controles modernos."
+    }
+  },
+  {
+    "slug": "freedomuniterecomp",
+    "name": "Monster Hunter Freedom Unite Recomp",
+    "repo": "PateeerQ/FreedomUniteRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "psprecomp",
+    "platforms": [
+      "android",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL 3.3",
+      "OpenGL ES 3.0"
+    ],
+    "games": [
+      {
+        "id": "monster-hunter-freedom-unite",
+        "tier": "playable",
+        "source": "README: Quests have been played start to finish, alone and together through a room, on PC and on Android (Poco X7 Pro)."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Monster Hunter Freedom Unite for Windows and Android, featuring 60 FPS support, online rooms, HD texture packs, customizable touch controls, and RetroAchievements.",
+      "pt-br": "Recompilação estática de Monster Hunter Freedom Unite para Windows e Android, com suporte a 60 FPS, salas online, pacotes de textura HD, controles por toque customizáveis e RetroAchievements."
+    }
+  },
+  {
+    "slug": "saintseiyarecomp",
+    "name": "Saint Seiya: The Hades",
+    "repo": "matpdev/SaintSeiyaRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "saint-seiya-the-hades",
+        "tier": "ingame",
+        "source": "README: The game runs natively: title screen, menus, story mode and fights, with music, voices, sound effects, controller and memory card."
+      }
+    ],
+    "notes": {
+      "en": "Native Linux port of Saint Seiya: The Hades for PS2 created via static recompilation. Features 16:9 widescreen rendering, 60 Hz frame rate support, Vulkan graphics, and an added training mode.",
+      "pt-br": "Port nativo para Linux de Saint Seiya: The Hades do PS2 criado via recompilação estática. Possui suporte a widescreen 16:9, taxa de quadros a 60 Hz, gráficos em Vulkan e um modo de treino adicional."
+    }
+  },
+  {
+    "slug": "provinggroundrecomp",
+    "name": "Tony Hawk's Proving Ground",
+    "repo": "Newbie1337x/ProvingGroundRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "tony-hawks-proving-ground",
+        "tier": "ingame",
+        "source": "README: The game boots, plays and runs its cutscenes at the right speed on Windows."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 version using ReXGlue SDK. Features unlocked frame rates, high resolution rendering, and Vulkan graphics on Windows and Linux.",
+      "pt-br": "Recompilação estática da versão de Xbox 360 usando ReXGlue SDK. Possui taxa de quadros desbloqueada, renderização em alta resolução e gráficos em Vulkan para Windows e Linux."
+    }
+  },
+  {
+    "slug": "ghvanhrecomp",
+    "name": "Guitar Hero: Van Halen",
+    "repo": "ElGuslml/GHVanHRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "guitar-hero-van-halen",
+        "tier": "playable",
+        "source": "README: Songs have been played from start to finish with an Xbox 360 guitar, on guitar and bass parts."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Guitar Hero: Van Halen (Xbox 360) for Windows using ReXGlue, featuring Vulkan rendering, high frame rate options, ultrawide support, and Xbox 360 guitar compatibility.",
+      "pt-br": "Recompilação estática de Guitar Hero: Van Halen (Xbox 360) para Windows usando ReXGlue, com renderização em Vulkan, suporte a altas taxas de quadros, monitores ultrawide e guitarras de Xbox 360."
+    }
+  },
+  {
+    "slug": "thps2-64recomp",
+    "name": "THPS2 64: Recompiled",
+    "repo": "THPS64Recomp/THPS2-64Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows",
+      "macos"
+    ],
+    "graphics": [
+      "Metal",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "tony-hawks-pro-skater-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Tony Hawk's Pro Skater 2 for N64 built with N64Recomp, featuring high frame rates, widescreen, extended draw distance, and modern controller support.",
+      "pt-br": "Port por recompilação estática de Tony Hawk's Pro Skater 2 para N64 desenvolvido com N64Recomp, contando com suporte a altas taxas de quadros, widescreen, maior distância de renderização e suporte a controles modernos."
+    }
+  },
+  {
+    "slug": "thps1-64recomp",
+    "name": "THPS1 64: Recompiled",
+    "repo": "THPS64Recomp/THPS1-64Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "Metal",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "tony-hawks-pro-skater",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native PC port of Tony Hawk's Pro Skater for N64 featuring high frame rates, widescreen support, enhanced draw distance, and modern controls for macOS and Windows.",
+      "pt-br": "Um port nativo para PC de Tony Hawk's Pro Skater do N64 com suporte a taxa de quadros elevada, widescreen, maior distância de renderização e controles modernos no macOS e Windows."
+    }
+  },
+  {
+    "slug": "gt6pp",
+    "name": "GT6PP",
+    "repo": "xynnpg/GT6PP",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "gran-turismo-6",
+        "tier": "wip",
+        "source": "README: The port boots, opens a 1280×720 window, parses the full boot script, and loads major UI packages."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Gran Turismo 6 for Windows using ps3recomp and Direct3D 12, currently in early bring-up.",
+      "pt-br": "Uma recompilação estática de Gran Turismo 6 para Windows usando ps3recomp e Direct3D 12, atualmente em fase inicial de desenvolvimento."
+    }
+  },
+  {
+    "slug": "ssx-recomp",
+    "name": "SSX (2012)",
+    "repo": "AmarilloNL/ssx-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "ssx-2012",
+        "tier": "ingame",
+        "source": "README: The game is playable and is being tested by playing through the whole World Tour."
+      }
+    ],
+    "notes": {
+      "en": "Recompiles the Xbox 360 release of SSX (2012) to native Windows code via ReXGlue, with Direct3D 12 rendering, frame rates up to 300 FPS, FSR upscaling, and DLC support.",
+      "pt-br": "Recompila a versão de Xbox 360 de SSX (2012) para código nativo de Windows via ReXGlue, contando com renderização em Direct3D 12, taxas de quadros de até 300 FPS, upscaling FSR e suporte a DLCs."
+    }
+  },
+  {
+    "slug": "arkeyan-launcher",
+    "name": "Arkeyan Launcher",
+    "repo": "mflr0/Arkeyan-Launcher",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "linux",
+      "macos",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Metal",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "skylanders-spyros-adventure",
+        "tier": "ingame",
+        "source": "README: 27 story levels and the Ruins played with a hero; bosses and Heroic Challenges not all confirmed"
+      },
+      {
+        "id": "skylanders-giants",
+        "tier": "ingame",
+        "source": "README: Chapter 1, and 78 of its 91 levels in an automatic tour"
+      },
+      {
+        "id": "skylanders-swap-force",
+        "tier": "ingame",
+        "source": "README: The tutorial, the first area of the story and the two-player arenas; 158 of 195 zones in an automatic tour"
+      },
+      {
+        "id": "skylanders-trap-team",
+        "tier": "ingame",
+        "source": "README: The tutorial, the first chapters and the Academy, a villain captured and kept in its trap; 53 of 56 levels in an automatic tour"
+      },
+      {
+        "id": "skylanders-superchargers",
+        "tier": "ingame",
+        "source": "README: The opening and the Academy, a vehicle on the portal"
+      },
+      {
+        "id": "skylanders-imaginators",
+        "tier": "ingame",
+        "source": "README: The opening and the hub"
+      }
+    ],
+    "notes": {
+      "en": "Launcher and native ports for the six Xbox 360 Skylanders games using static recompilation, featuring a built-in virtual Portal of Power and Toy Box figure manager.",
+      "pt-br": "Launcher e portas nativas via recompilação estática para os seis jogos de Skylanders do Xbox 360, incluindo Portal do Poder virtual e gerenciador de figuras Toy Box."
+    }
+  },
+  {
+    "slug": "hwaoi-recomp",
+    "name": "Hyrule Warriors: Age of Imprisonment",
+    "repo": "Alano6678/hwaoi-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "hyrule-warriors-age-of-imprisonment",
+        "tier": "ingame",
+        "source": "README: An actual 3D scene with characters, grass and ruins has been rendered. Combat and responsive gameplay remain unverified."
+      }
+    ],
+    "notes": {
+      "en": "Experimental static recompilation port for Windows using Vulkan, capable of rendering 3D scenes with characters and environment geometry.",
+      "pt-br": "Port experimental de recompilação estática para Windows utilizando Vulkan, capaz de renderizar cenas 3D com personagens e geometria do cenário."
+    }
+  },
+  {
+    "slug": "adams-ant-farm-recomp",
+    "name": "Adam's Ant Farm",
+    "repo": "LunarLaurus/adams-ant-farm-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "body-harvest",
+        "tier": "playable",
+        "source": "README: The game is playable from start to finish with real audio, but it is not finished and you will find rough edges."
+      }
+    ],
+    "notes": {
+      "en": "A native port of Body Harvest built using N64Recomp for 64-bit Windows and Linux, supporting Vulkan and Direct3D 12 renderers. Features widescreen resolution support, live settings menu, texture upscaling, and flexible controller mapping.",
+      "pt-br": "Um port nativo de Body Harvest desenvolvido com N64Recomp para Windows e Linux de 64 bits, com suporte aos renderizadores Vulkan e Direct3D 12. Apresenta suporte a telas widescreen, menu de configurações em tempo real, upscaling de texturas e remapeamento de controles."
+    }
+  },
+  {
+    "slug": "shadow-of-rome-recompiled",
+    "name": "Shadow of Rome Recompiled",
+    "repo": "Korvonordico/shadow-of-rome-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "shadow-of-rome",
+        "tier": "ingame",
+        "source": "README: It is not playable from start to end."
+      }
+    ],
+    "notes": {
+      "en": "Experimental PS2 static recompilation of Shadow of Rome for Windows built with PS2Recomp. Reaches gameplay in the arena and early chapters, but is not yet fully beatable.",
+      "pt-br": "Recompilação estática experimental de PS2 de Shadow of Rome para Windows feita com PS2Recomp. Chega à jogabilidade na arena e capítulos iniciais, mas ainda não pode ser zerado."
     }
   }
 ]

@@ -166,5 +166,13 @@
   {
     "repo": "drakolordx7/switch2-recomp",
     "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Pokémon Pokopia)"
+  },
+  {
+    "repo": "thebabyhippo303/nimbus-recompilation-project",
+    "reason": "Triage accepted it, but: Console \"gba\" is not in the catalog yet (Dragon Ball Z: Supersonic Warriors)"
+  },
+  {
+    "repo": "MistblastClear/UEBulkExport-rpocket",
+    "reason": "README missing or too short to judge"
   }
 ]

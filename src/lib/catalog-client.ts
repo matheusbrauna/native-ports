@@ -323,10 +323,10 @@ export function initCatalog(): void {
       state.page = next;
       apply();
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      pagers[0]?.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
-      const top = pagers[0];
-      const dirBtn = dir ? top?.querySelector<HTMLButtonElement>(`[data-page-dir="${dir}"]`) : null;
-      const focusEl = dirBtn && !dirBtn.disabled ? dirBtn : top?.querySelector<HTMLButtonElement>('[aria-current="page"]');
+      root.querySelector("#ports")?.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
+      const current = pagers[0];
+      const dirBtn = dir === "prev" || dir === "next" ? current?.querySelector<HTMLButtonElement>(`[data-page-dir="${dir}"]`) : null;
+      const focusEl = dirBtn && !dirBtn.disabled ? dirBtn : current?.querySelector<HTMLButtonElement>('[aria-current="page"]');
       focusEl?.focus({ preventScroll: true });
     });
   }
@@ -346,5 +346,5 @@ export function initCatalog(): void {
   });
 
   apply();
-  if (state.page > 1) pagers[0]?.scrollIntoView({ block: "start" });
+  if (state.page > 1) root.querySelector("#ports")?.scrollIntoView({ block: "start" });
 }

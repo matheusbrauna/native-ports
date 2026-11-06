@@ -106,8 +106,6 @@ const pages = pageCount(seen);
     </fieldset>
   </div>
 
-  <Pager lang={lang} pages={pages} place="top" />
-
   <div class="table-wrap">
     <table id="ports">
       <caption class="visually-hidden">{s.count(entries.length, groups.length)}</caption>
@@ -187,7 +185,7 @@ const pages = pageCount(seen);
         );
       })}
     </table>
-    <Pager lang={lang} pages={pages} place="bottom" />
+    <Pager lang={lang} pages={pages} />
     <div class="empty" id="empty" hidden>
       <p class="empty-title">{s.empty.title}</p>
       <p>{s.empty.body}</p>
@@ -297,7 +295,7 @@ const pages = pageCount(seen);
   .swatch[data-tier="unrated"] { --tier-color: var(--tier-unrated); }
 
   .table-wrap { margin-top: 8px; }
-  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; scroll-margin-top: 8px; }
   thead .c-plat { width: 15%; }
   thead .c-gfx { width: 15%; }
   thead .c-tier { width: 120px; }

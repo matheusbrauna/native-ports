@@ -630,5 +630,29 @@
   {
     "repo": "pgdepaula/Wanderlust",
     "reason": "Triage: Recompiler toolchains and general binary translation tools on their own are out of scope."
+  },
+  {
+    "repo": "kaiyao7/SwitchRecomp",
+    "reason": "Triage: It is a static recompiler framework rather than a game port."
+  },
+  {
+    "repo": "VibePorter/Lazarus",
+    "reason": "Triage: The project's only target platform is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "RodoLy/HarvestMoonSnesDecomp",
+    "reason": "Triage: Decompilations, hand-written C rewrites, and source ports are out of scope."
+  },
+  {
+    "repo": "CBOC-Vita-Lab/strikers-charged-vita",
+    "reason": "Triage: Source ports built from decompilation and ports targeting only another console are out of scope."
+  },
+  {
+    "repo": "luispolis124/OpenTS3-DS",
+    "reason": "Triage: Decompilation projects built from hand-written or decompiled source code are out of scope."
+  },
+  {
+    "repo": "CallanCampos/Frigate",
+    "reason": "Triage: The port is compiled from hand-written decompiled C source code rather than using a static recompiler."
   }
 ]

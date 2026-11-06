@@ -1650,5 +1650,77 @@
     "title": "Tony Hawk's Pro Skater 3",
     "console": "n64",
     "titleIds": []
+  },
+  {
+    "id": "saint-seiya-the-hades",
+    "title": "Saint Seiya: The Hades",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "tony-hawks-proving-ground",
+    "title": "Tony Hawk's Proving Ground",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "guitar-hero-van-halen",
+    "title": "Guitar Hero: Van Halen",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "tony-hawks-pro-skater-2",
+    "title": "Tony Hawk's Pro Skater 2",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "tony-hawks-pro-skater",
+    "title": "Tony Hawk's Pro Skater",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "gran-turismo-6",
+    "title": "Gran Turismo 6",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "ssx-2012",
+    "title": "SSX (2012)",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-giants",
+    "title": "Skylanders: Giants",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "skylanders-superchargers",
+    "title": "Skylanders: SuperChargers",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "hyrule-warriors-age-of-imprisonment",
+    "title": "Hyrule Warriors: Age of Imprisonment",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "body-harvest",
+    "title": "Body Harvest",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-of-rome",
+    "title": "Shadow of Rome",
+    "console": "ps2",
+    "titleIds": []
   }
 ]

@@ -786,13 +786,13 @@
     "games": [
       {
         "id": "the-darkness",
-        "tier": "unrated",
-        "source": "README: pre-release, tested on one Windows 11 PC"
+        "tier": "playable",
+        "source": "README: The whole campaign is playable on PC from start to finish (details in docs/WHOLEGAMEAUDIT.md)."
       }
     ],
     "notes": {
-      "en": "The Darkness on Windows with a Direct3D 12 layer, experimental widescreen and keyboard and mouse.",
-      "pt-br": "The Darkness no Windows com camada Direct3D 12, widescreen experimental e teclado e mouse."
+      "en": "The Darkness on Windows and Steam Deck with a Direct3D 12 layer, featuring a campaign playable from start to finish.",
+      "pt-br": "The Darkness no Windows e Steam Deck com camada Direct3D 12, com a campanha jogável do início ao fim."
     }
   },
   {
@@ -4757,7 +4757,7 @@
       {
         "id": "madden-nfl-08",
         "tier": "ingame",
-        "source": "README: Franchise and Superstar mode: starting, playing and saving worked in short tests"
+        "source": "README: Franchise mode, including simming a full season and the draft; Superstar mode in short tests"
       }
     ],
     "notes": {
@@ -5920,7 +5920,7 @@
       {
         "id": "yo-kai-watch-4",
         "tier": "ingame",
-        "source": "README: Work in progress: not playable from start to finish yet."
+        "source": "README: Work in progress: not tested from start to finish yet."
       }
     ],
     "notes": {
@@ -6811,21 +6811,25 @@
     "technique": "recomp",
     "toolchain": "ps3recomp",
     "platforms": [
-      "windows"
+      "linux",
+      "steamdeck",
+      "windows",
+      "macos"
     ],
     "graphics": [
-      "Direct3D 12"
+      "Direct3D 12",
+      "Metal"
     ],
     "games": [
       {
         "id": "demons-souls",
-        "tier": "ingame",
-        "source": "README: The entire game seems playable."
+        "tier": "playable",
+        "source": "README: The whole game seems playable, with sound, music and movies, on keyboard + mouse or an Xbox controller."
       }
     ],
     "notes": {
-      "en": "A static recompilation of Demon's Souls for Windows built with ps3recomp, featuring customizable frame rates, mouse and keyboard controls, and a Direct3D 12 renderer.",
-      "pt-br": "Uma recompilação estática de Demon's Souls para Windows feita com ps3recomp, com suporte a taxas de quadros personalizadas, controles por mouse e teclado e renderizador Direct3D 12."
+      "en": "A static recompilation of Demon's Souls for Windows, macOS, and Linux/Steam Deck built with ps3recomp, featuring customizable frame rates, mouse and keyboard controls, and Direct3D 12 and Metal renderers.",
+      "pt-br": "Uma recompilação estática de Demon's Souls para Windows, macOS e Linux/Steam Deck feita com ps3recomp, com suporte a taxas de quadros personalizadas, controles por mouse e teclado e renderizadores Direct3D 12 e Metal."
     }
   },
   {
@@ -7406,12 +7410,12 @@
       {
         "id": "bakugan-battle-brawlers-ps3",
         "tier": "playable",
-        "source": "README: Story and battles can be played start to finish with HUD, cards, character cinematics, shadows and reflections."
+        "source": "README: The game is playable end to end."
       }
     ],
     "notes": {
-      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, now playable from start to finish.",
-      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, agora jogável do início ao fim."
+      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, playable end to end.",
+      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, jogável do início ao fim."
     }
   },
   {
@@ -8473,13 +8477,13 @@
     "games": [
       {
         "id": "hyrule-warriors-age-of-imprisonment",
-        "tier": "ingame",
-        "source": "README: An actual 3D scene with characters, grass and ruins has been rendered. Combat and responsive gameplay remain unverified."
+        "tier": "wip",
+        "source": "README: Work in progress."
       }
     ],
     "notes": {
-      "en": "Experimental static recompilation port for Windows using Vulkan, capable of rendering 3D scenes with characters and environment geometry.",
-      "pt-br": "Port experimental de recompilação estática para Windows utilizando Vulkan, capaz de renderizar cenas 3D com personagens e geometria do cenário."
+      "en": "Experimental static recompilation port for Windows using Vulkan that boots, plays opening cutscenes, and supports movement and camera controls in outdoor 3D scenes.",
+      "pt-br": "Port experimental de recompilação estática para Windows via Vulkan que inicia, reproduz cenas de abertura e suporta controles de movimento e câmera em cenários 3D externos."
     }
   },
   {
@@ -8532,6 +8536,195 @@
     "notes": {
       "en": "Experimental PS2 static recompilation of Shadow of Rome for Windows built with PS2Recomp. Reaches gameplay in the arena and early chapters, but is not yet fully beatable.",
       "pt-br": "Recompilação estática experimental de PS2 de Shadow of Rome para Windows feita com PS2Recomp. Chega à jogabilidade na arena e capítulos iniciais, mas ainda não pode ser zerado."
+    }
+  },
+  {
+    "slug": "tmnt-turtles-in-time-reshelled-recompiled",
+    "name": "Teenage Mutant Ninja Turtles: Turtles in Time Re-Shelled Recompiled",
+    "repo": "saulob/tmnt-turtles-in-time-reshelled-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "teenage-mutant-ninja-turtles-turtles-in-time-re-shelled",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 static recompilation port built with ReXGlue featuring DirectX 12 and experimental Linux/Steam Deck Vulkan support, 4K rendering, 4-player online co-op, and Portuguese translation.",
+      "pt-br": "Port de Xbox 360 via recompilação estática usando ReXGlue, com suporte a DirectX 12 e experimental no Linux/Steam Deck via Vulkan, renderização em 4K, coop online para 4 jogadores e tradução em português."
+    }
+  },
+  {
+    "slug": "far-cry-instincts-recomp",
+    "name": "Far Cry Instincts Recomp",
+    "repo": "bassobr/Far-Cry-Instincts-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "far-cry-instincts",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Unofficial static recompilation of Far Cry Instincts for the original Xbox, featuring Direct3D 11 rendering, unlocked frame rates, widescreen support, enhanced graphics options, and Steam Deck compatibility via Proton.",
+      "pt-br": "Recompilação estática não oficial de Far Cry Instincts do Xbox original, trazendo renderização em Direct3D 11, taxa de quadros desbloqueada, suporte a widescreen, opções gráficas aprimoradas e compatibilidade com Steam Deck via Proton."
+    }
+  },
+  {
+    "slug": "b2hwii-android",
+    "name": "Sengoku Basara 2 Heroes",
+    "repo": "PotatoRecomp/B2HWii-Android",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "WiiCompiled",
+    "platforms": [
+      "android",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "sengoku-basara-2-heroes",
+        "tier": "playable",
+        "source": "README: The whole game is playable on Android and Windows, from boot through Story battles, with sound, saving and loading."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial static recompilation of Sengoku Basara 2 Heroes for Android and Windows, featuring touch controls, customizable layout, high performance presets, and Vulkan rendering.",
+      "pt-br": "Port não oficial por recompilação estática de Sengoku Basara 2 Heroes para Android e Windows, contando com controles de toque, layout personalizável, perfis de desempenho e renderização via Vulkan."
+    }
+  },
+  {
+    "slug": "futari-recomp",
+    "name": "Mushihimesama Futari",
+    "repo": "springah/futari_recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "mushihimesama-futari",
+        "tier": "ingame",
+        "source": "README: Status: title, menus, audio, controller, and saves work, and all 8 game modes load, run, and mode-switch cleanly."
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Mushihimesama Futari for Windows, macOS, and Linux built with ReXGlue. Features an opt-in custom Vulkan renderer for reduced CPU overhead and input latency.",
+      "pt-br": "Uma recompilação estática de Mushihimesama Futari para Windows, macOS e Linux feita com ReXGlue. Conta com um renderizador Vulkan opcional para menor consumo de CPU e menor latência."
+    }
+  },
+  {
+    "slug": "superchargersrecomp",
+    "name": "Skylanders: SuperChargers",
+    "repo": "tsapZ/SuperChargersRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skylanders-superchargers",
+        "tier": "ingame",
+        "source": "README: The portal tunnel ride, the first level and the ship (the game's hub) play."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Skylanders: SuperChargers recompiled with ReXGlue. Features virtual or physical USB Portal of Power support, high frame rates, up to 3x resolution scaling, and DirectX 12 graphics.",
+      "pt-br": "Port nativo para Windows de Skylanders: SuperChargers recompilado com ReXGlue. Possui suporte a Portal of Power físico ou virtual via USB, taxas elevadas de FPS, resolução de até 3x e gráficos em DirectX 12."
+    }
+  },
+  {
+    "slug": "giantsrecomp",
+    "name": "Skylanders: Giants Recomp",
+    "repo": "tsapZ/GiantsRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 12"
+    ],
+    "games": [
+      {
+        "id": "skylanders-giants",
+        "tier": "ingame",
+        "source": "README: Nobody has played the whole game to the end yet, though."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Skylanders: Giants created via ReXGlue static recompilation, offering up to 3x resolution, 60+ FPS, 5.1 audio, and support for both real USB Portals of Power and a virtual Skylander selection menu.",
+      "pt-br": "Port nativo para Windows de Skylanders: Giants criado via recompilação estática com ReXGlue, oferecendo até 3x a resolução original, 60+ FPS, áudio 5.1 e suporte tanto ao Portal of Power USB físico quanto a um menu de seleção virtual de figuras."
+    }
+  },
+  {
+    "slug": "aether-ar",
+    "name": "AETHER AR",
+    "repo": "AETHER-AR/aether-ar",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "BT3-Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "dragon-ball-z-budokai-tenkaichi-3",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A mixed-reality static recompilation mod for Dragon Ball Z: Budokai Tenkaichi 3, running on Windows PC and streaming to Meta Quest headsets.",
+      "pt-br": "Um mod de recompilação estática em realidade mista para Dragon Ball Z: Budokai Tenkaichi 3, executado em PC Windows e transmitido para óculos Meta Quest."
     }
   }
 ]

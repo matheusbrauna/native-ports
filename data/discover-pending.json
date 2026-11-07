@@ -174,5 +174,17 @@
   {
     "repo": "MistblastClear/UEBulkExport-rpocket",
     "reason": "README missing or too short to judge"
+  },
+  {
+    "repo": "mstan/DragonBallZLegacyofGokuIIRecomp",
+    "reason": "Triage accepted it, but: Console \"gba\" is not in the catalog yet (Dragon Ball Z: The Legacy of Goku II)"
+  },
+  {
+    "repo": "mstan/DragonBallZLegacyOfGokuRecomp",
+    "reason": "Triage accepted it, but: Console \"gba\" is not in the catalog yet (Dragon Ball Z: The Legacy of Goku)"
+  },
+  {
+    "repo": "OpenGP-dev/OpenGP",
+    "reason": "Triage accepted it, but: Console \"triforce\" is not in the catalog yet (Mario Kart Arcade GP)"
   }
 ]

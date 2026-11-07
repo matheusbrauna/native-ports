@@ -1722,5 +1722,35 @@
     "title": "Shadow of Rome",
     "console": "ps2",
     "titleIds": []
+  },
+  {
+    "id": "teenage-mutant-ninja-turtles-turtles-in-time-re-shelled",
+    "title": "Teenage Mutant Ninja Turtles: Turtles in Time Re-Shelled",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "far-cry-instincts",
+    "title": "Far Cry Instincts",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "sengoku-basara-2-heroes",
+    "title": "Sengoku Basara 2 Heroes",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "mushihimesama-futari",
+    "title": "Mushihimesama Futari",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dragon-ball-z-budokai-tenkaichi-3",
+    "title": "Dragon Ball Z: Budokai Tenkaichi 3",
+    "console": "ps2",
+    "titleIds": []
   }
 ]

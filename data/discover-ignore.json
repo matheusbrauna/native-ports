@@ -654,5 +654,33 @@
   {
     "repo": "CallanCampos/Frigate",
     "reason": "Triage: The port is compiled from hand-written decompiled C source code rather than using a static recompiler."
+  },
+  {
+    "repo": "0xl0cal/repentogxm",
+    "reason": "Triage: Ports whose target is another console are out of scope."
+  },
+  {
+    "repo": "yefan911/automated-recompilers",
+    "reason": "Triage: The repository is a static recompilation framework rather than a port of a specific game."
+  },
+  {
+    "repo": "tmcleroy/recomp-common",
+    "reason": "Triage: The repository is a shared library and launcher component for recompilation ports rather than a game port itself."
+  },
+  {
+    "repo": "LLCOOLT/paper-cut",
+    "reason": "Triage: The project is a source port compiled from decompiled C code rather than built via static recompilation."
+  },
+  {
+    "repo": "Feerdus95/dw3-native-port",
+    "reason": "Triage: Source ports built from decompiled C code without using a static recompiler are out of scope."
+  },
+  {
+    "repo": "Toyz/rugrats",
+    "reason": "Triage: The project is a hand-written Rust rewrite from reverse engineering rather than a static recompilation or native runtime execution port."
+  },
+  {
+    "repo": "mashed-reverse-engineering/MFL-recomp",
+    "reason": "Triage: The project targets a PC release rather than a console game and uses decompilation and hand-written C rather than static recompilation."
   }
 ]

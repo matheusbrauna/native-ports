@@ -1752,5 +1752,29 @@
     "title": "Dragon Ball Z: Budokai Tenkaichi 3",
     "console": "ps2",
     "titleIds": []
+  },
+  {
+    "id": "el-chavo-kart",
+    "title": "El Chavo Kart",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "majin-and-the-forsaken-kingdom",
+    "title": "Majin and the Forsaken Kingdom",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dead-or-alive-4",
+    "title": "Dead or Alive 4",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "mx-vs-atv-alive",
+    "title": "MX vs. ATV Alive",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

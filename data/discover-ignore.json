@@ -682,5 +682,21 @@
   {
     "repo": "mashed-reverse-engineering/MFL-recomp",
     "reason": "Triage: The project targets a PC release rather than a console game and uses decompilation and hand-written C rather than static recompilation."
+  },
+  {
+    "repo": "aoxzh/bayo3-recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "jammyfu/reverse-engineering-atlas",
+    "reason": "Triage: Curated list of reverse-engineering projects and tools, not a game port."
+  },
+  {
+    "repo": "adumah/alice-nx",
+    "reason": "Triage: The project's only target platform is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "andresarevalo1/BattleBlockRecomp-NX",
+    "reason": "Triage: The port's only target platform is another console (Nintendo Switch)."
   }
 ]

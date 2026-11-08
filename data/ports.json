@@ -1957,7 +1957,7 @@
       {
         "id": "initial-d-arcade-stage-3",
         "tier": "wip",
-        "source": "README: public early demo; this repository is marked obsolete in favour of a newer version on Discord"
+        "source": "README: Public early demo available: this is unfinished playtest software, not a finished port."
       }
     ],
     "notes": {
@@ -2256,13 +2256,13 @@
     "games": [
       {
         "id": "god-of-war-iii-remastered",
-        "tier": "ingame",
-        "source": "README: Opening, menus, video cutscenes (H.264) and gameplay."
+        "tier": "playable",
+        "source": "README: The game was played from start to finish on that system."
       }
     ],
     "notes": {
-      "en": "A native runtime port of God of War III Remastered for Windows and Linux with Vulkan graphics. Features an integrated launcher, in-game menu, ultrawide support, and performance patches up to 240 FPS.",
-      "pt-br": "Um port nativo via runtime de God of War III Remastered para Windows e Linux com gráficos Vulkan. Conta com launcher integrado, menu no jogo, suporte a ultrawide e patches de desempenho de até 240 FPS."
+      "en": "A native runtime port of God of War III Remastered for Windows and Linux with Vulkan graphics. Features an integrated launcher, in-game menu, ultrawide support, upscaling (FSR), and performance patches up to 240 FPS.",
+      "pt-br": "Um port nativo via runtime de God of War III Remastered para Windows e Linux com gráficos Vulkan. Conta com launcher integrado, menu no jogo, suporte a ultrawide, upscaling (FSR) e patches de desempenho de até 240 FPS."
     }
   },
   {
@@ -3604,12 +3604,12 @@
       {
         "id": "infamous-2",
         "tier": "ingame",
-        "source": "README: O jogo inicia, passa pelos vídeos, menus e cutscenes, e o gameplay segue de Empire City até New Marais, com som, controle, saves e dublagem em português."
+        "source": "README: O jogo inicia, passa pelos vídeos, menus e cutscenes, e o gameplay segue de Empire City até New Marais, com som, controle, teclado e mouse, saves e dublagem em português."
       }
     ],
     "notes": {
-      "en": "Native Linux port of inFAMOUS 2 using static recompilation and a Vulkan renderer, supporting high frame rates and up to 4K resolution.",
-      "pt-br": "Port nativo para Linux de inFAMOUS 2 usando recompilação estática e renderizador Vulkan, com suporte a alta taxa de quadros e resolução até 4K."
+      "en": "Native Linux port of inFAMOUS 2 using static recompilation and a Vulkan renderer, supporting keyboard and mouse controls, high frame rates, and up to 5K resolution.",
+      "pt-br": "Port nativo para Linux de inFAMOUS 2 usando recompilação estática e renderizador Vulkan, com suporte a teclado e mouse, alta taxa de quadros e resolução até 5K."
     }
   },
   {
@@ -6689,7 +6689,7 @@
       {
         "id": "skylanders-imaginators",
         "tier": "ingame",
-        "source": "README: The opening cutscene and the first level play."
+        "source": "README: The opening cutscene and the first level play, and in automated test runs all 13 story levels load without a crash."
       }
     ],
     "notes": {
@@ -6715,7 +6715,7 @@
       {
         "id": "skylanders-swap-force",
         "tier": "ingame",
-        "source": "README: The tutorial and Woodburrow have been played through with a controller and with the keyboard, cutscenes and dialogue included."
+        "source": "README: The tutorial and Woodburrow have been played through with a controller and with the keyboard, cutscenes and dialogue included, and in automated test runs all 18 story levels load without a crash."
       }
     ],
     "notes": {
@@ -6824,7 +6824,7 @@
       {
         "id": "demons-souls",
         "tier": "playable",
-        "source": "README: The whole game seems playable, with sound, music and movies, on keyboard + mouse or an Xbox controller."
+        "source": "README: The whole game is playable, with sound, music and movies, on keyboard + mouse or an Xbox controller."
       }
     ],
     "notes": {
@@ -7800,7 +7800,7 @@
       {
         "id": "skylanders-trap-team",
         "tier": "ingame",
-        "source": "README: Chapter 1 and the Skylanders Academy play, with traps, the villain vault and swapping villains in."
+        "source": "README: Chapter 1 and the Skylanders Academy play, with traps, the villain vault and swapping villains in, and in automated test runs all 26 story levels load without a crash."
       }
     ],
     "notes": {
@@ -8477,13 +8477,13 @@
     "games": [
       {
         "id": "hyrule-warriors-age-of-imprisonment",
-        "tier": "wip",
-        "source": "README: Work in progress."
+        "tier": "ingame",
+        "source": "README: The game boots, plays both opening movies and reaches outdoor exploration and initial combat."
       }
     ],
     "notes": {
-      "en": "Experimental static recompilation port for Windows using Vulkan that boots, plays opening cutscenes, and supports movement and camera controls in outdoor 3D scenes.",
-      "pt-br": "Port experimental de recompilação estática para Windows via Vulkan que inicia, reproduz cenas de abertura e suporta controles de movimento e câmera em cenários 3D externos."
+      "en": "Experimental static recompilation port for Windows using Vulkan that reaches outdoor exploration and initial combat, featuring 1080p 60 FPS baseline performance and experimental unlocked frame rates.",
+      "pt-br": "Port experimental de recompilação estática para Windows via Vulkan que alcança exploração externa e combate inicial, apresentando desempenho base em 1080p a 60 FPS e taxa de quadros desbloqueada experimental."
     }
   },
   {
@@ -8669,7 +8669,7 @@
       {
         "id": "skylanders-superchargers",
         "tier": "ingame",
-        "source": "README: The portal tunnel ride, the first level and the ship (the game's hub) play."
+        "source": "README: The portal tunnel ride, the first level and the ship (the game's hub) play, and in automated test runs all 14 story levels load without a crash."
       }
     ],
     "notes": {
@@ -8725,6 +8725,142 @@
     "notes": {
       "en": "A mixed-reality static recompilation mod for Dragon Ball Z: Budokai Tenkaichi 3, running on Windows PC and streaming to Meta Quest headsets.",
       "pt-br": "Um mod de recompilação estática em realidade mista para Dragon Ball Z: Budokai Tenkaichi 3, executado em PC Windows e transmitido para óculos Meta Quest."
+    }
+  },
+  {
+    "slug": "rdr-xberecomp",
+    "name": "Red Dead Revolver",
+    "repo": "TGP482/RDR-XBERecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "red-dead-revolver",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Unofficial native PC port of the original Xbox version of Red Dead Revolver created with Xbox XBE Recomp, featuring Direct3D 12 rendering, extended graphics options, texture dumping/replacement, and full mouse and keyboard support.",
+      "pt-br": "Port nativo não oficial para PC da versão original de Xbox de Red Dead Revolver criado com Xbox XBE Recomp, apresentando renderização em Direct3D 12, opções gráficas expandidas, substituição de texturas e suporte completo a mouse e teclado."
+    }
+  },
+  {
+    "slug": "el-chavo-kart-recompiled",
+    "name": "El Chavo Kart Recompiled",
+    "repo": "saulob/el-chavo-kart-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "el-chavo-kart",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 racing game using ReXGlue, featuring native Windows and Linux/Steam Deck builds, modern graphics options, and custom online multiplayer.",
+      "pt-br": "Recompilação estática do jogo de corrida de Xbox 360 usando ReXGlue, trazendo builds nativos para Windows e Linux/Steam Deck, opções gráficas modernas e modo multijogador online customizado."
+    }
+  },
+  {
+    "slug": "majistic-recomp",
+    "name": "Majistic Recomp",
+    "repo": "kelvynzucco/majistic-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "majin-and-the-forsaken-kingdom",
+        "tier": "ingame",
+        "source": "README: While foundational game systems, rendering, and gameplay sequences are functional, expect bugs, edge-case graphical artifacts, audio glitches, and potential crashes."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Majin and the Forsaken Kingdom for Xbox 360 using ReXGlue. Features 60 FPS frame pacing fixes, Direct3D 12 rendering, fast-forward support, and a Tauri-based launcher.",
+      "pt-br": "Recompilação estática de Majin and the Forsaken Kingdom para Xbox 360 usando o ReXGlue. Conta com correções para 60 FPS, renderização Direct3D 12, suporte a avanço rápido e launcher próprio em Tauri."
+    }
+  },
+  {
+    "slug": "doa4-360-recomp",
+    "name": "Dead or Alive 4",
+    "repo": "Juansolo457/doa4-360-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dead-or-alive-4",
+        "tier": "ingame",
+        "source": "README: Plays on Windows (2026-10-29): intro, menus, character select and full fights, Ryu Hayabusa included."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Dead or Alive 4 for Xbox 360 built with ReXGlue and Vulkan rendering.",
+      "pt-br": "Recompilação estática de Dead or Alive 4 do Xbox 360 criada com ReXGlue e renderização em Vulkan."
+    }
+  },
+  {
+    "slug": "mx-vs-atv-alive-recomp",
+    "name": "MX vs. ATV Alive",
+    "repo": "gw1337x/mx-vs-atv-alive-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "rexglue-sdk",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "mx-vs-atv-alive",
+        "tier": "ingame",
+        "source": "README: The game boots, renders, plays audio, saves, and runs a full Short Track race and Free Ride at a verified 60 fps."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of MX vs. ATV Alive for Windows built with rexglue-sdk, running races and Free Ride as an unmaintained vertical slice.",
+      "pt-br": "Recompilação estática de MX vs. ATV Alive para Windows feita com rexglue-sdk, executando corridas e o modo Free Ride como uma demonstração técnica não mantida."
     }
   }
 ]

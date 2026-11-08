@@ -186,5 +186,13 @@
   {
     "repo": "OpenGP-dev/OpenGP",
     "reason": "Triage accepted it, but: Console \"triforce\" is not in the catalog yet (Mario Kart Arcade GP)"
+  },
+  {
+    "repo": "featureJosh/Recompia",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Pokémon Pokopia)"
+  },
+  {
+    "repo": "Goldoire/fefw-recomp",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Fire Emblem: Fortune's Weave)"
   }
 ]

@@ -698,5 +698,25 @@
   {
     "repo": "andresarevalo1/BattleBlockRecomp-NX",
     "reason": "Triage: The port's only target platform is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "jhaizhou-ops/S2Arm",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "Sekyleky/Zakuroishi",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "kanapitsas/source-recomp",
+    "reason": "Triage: The repository recompiles Linux x86 PC game binaries rather than a console game, making it out of scope."
+  },
+  {
+    "repo": "bbelgg/rs-rearmed",
+    "reason": "Triage: The repository ports a PC (Windows/macOS) game rather than a console game."
+  },
+  {
+    "repo": "Eladerino/spm-nx",
+    "reason": "Triage: The project is a port whose only target is another console (Nintendo Switch)."
   }
 ]

@@ -964,17 +964,20 @@
       "linux",
       "android"
     ],
-    "graphics": [],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
     "games": [
       {
         "id": "asuras-wrath",
-        "tier": "wip",
-        "source": "Description: work in progress; Android port experimental"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "Asura's Wrath recompiled with ReXGlue, with build presets for Linux, Windows and Android.",
-      "pt-br": "Asura's Wrath recompilado com ReXGlue, com presets de build para Linux, Windows e Android."
+      "en": "Asura's Wrath Xbox 360 static recompilation powered by ReXGlue for Linux, Windows, and Android, supporting Vulkan and Direct3D 12 backends.",
+      "pt-br": "Recompilação estática de Xbox 360 de Asura's Wrath baseada em ReXGlue para Linux, Windows e Android, com suporte a Vulkan e Direct3D 12."
     }
   },
   {
@@ -8861,6 +8864,195 @@
     "notes": {
       "en": "Static recompilation of MX vs. ATV Alive for Windows built with rexglue-sdk, running races and Free Ride as an unmaintained vertical slice.",
       "pt-br": "Recompilação estática de MX vs. ATV Alive para Windows feita com rexglue-sdk, executando corridas e o modo Free Ride como uma demonstração técnica não mantida."
+    }
+  },
+  {
+    "slug": "gow-ascension-pc",
+    "name": "God of War: Ascension PC Port",
+    "repo": "otavix010/gow-ascension-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "god-of-war-ascension",
+        "tier": "playable",
+        "source": "README: A campanha foi jogada inteira, do primeiro ao último capítulo, no port (08/11/2026, engine 0.11.2)."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of God of War: Ascension for Windows using ps3recomp and Direct3D 12. The entire single-player campaign is playable.",
+      "pt-br": "Recompilação estática de God of War: Ascension para Windows utilizando ps3recomp e Direct3D 12. Toda a campanha principal está jogável."
+    }
+  },
+  {
+    "slug": "13-sentinels-aegis-rim-pc",
+    "name": "13 Sentinels: Aegis Rim PC Port",
+    "repo": "saulob/13-sentinels-aegis-rim-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "OpenGL",
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "13-sentinels-aegis-rim",
+        "tier": "ingame",
+        "source": "README: The game installs, boots and plays on Windows with the Vulkan renderer."
+      }
+    ],
+    "notes": {
+      "en": "Runs the PS4 x86-64 binaries directly on PC via replacement system libraries and a Vulkan renderer, featuring a launcher with custom render resolution up to 4K and experimental Linux support.",
+      "pt-br": "Executa os binários x86-64 do PS4 diretamente no PC através de bibliotecas de substituição do sistema e renderizador Vulkan, contando com um inicializador próprio com resolução ajustável até 4K e suporte experimental para Linux."
+    }
+  },
+  {
+    "slug": "xenobladechroniclesrecompiled",
+    "name": "Xenoblade Chronicles Recompiled",
+    "repo": "Glitxhhh/XenobladeChroniclesRecompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "xenoblade-chronicles-definitive-edition",
+        "tier": "ingame",
+        "source": "README: The native build reaches Colony 9 and renders the scene, including terrain, character models and HUD."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial static recompilation of Xenoblade Chronicles: Definitive Edition for Windows using Vulkan graphics.",
+      "pt-br": "Recompilação estática não oficial de Xenoblade Chronicles: Definitive Edition para Windows utilizando renderizador Vulkan."
+    }
+  },
+  {
+    "slug": "castlevania-cod-qol",
+    "name": "Castlevania: Curse of Darkness PC Port",
+    "repo": "fasipe/Castlevania-COD-QOL",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "castlevania-curse-of-darkness",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native Windows port of Castlevania: Curse of Darkness recompiled from PS2 MIPS machine code, featuring Direct3D 11 rendering, up to 4x internal resolution, widescreen, texture filtering, custom minimap, and sprint support.",
+      "pt-br": "Port nativo para Windows de Castlevania: Curse of Darkness recompilado do código MIPS de PS2, com renderização em Direct3D 11, resolução de até 4x, suporte a widescreen, filtragem de texturas, minimapa e botão de sprint."
+    }
+  },
+  {
+    "slug": "bleach-soul-resurreccion-recomp",
+    "name": "Bleach: Soul Resurrección PC Recomp",
+    "repo": "xPXavierx/bleach-soul-resurreccion-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 12"
+    ],
+    "games": [
+      {
+        "id": "bleach-soul-resurreccion",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the PS3 action game for Windows using ps3recomp, featuring DirectX 12 rendering, unlocked frame rates up to 120 FPS, resolutions up to 4K, experimental ultrawide support, and multiple text language options.",
+      "pt-br": "Recompilação estática do jogo de ação de PS3 para Windows utilizando ps3recomp, trazendo renderização em DirectX 12, taxa de quadros até 120 FPS, resoluções até 4K, suporte experimental a ultrawide e opções de idioma."
+    }
+  },
+  {
+    "slug": "otogi-xunchain",
+    "name": "Otogi XUnchain",
+    "repo": "Guuzzeji/otogi-xunchain",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "OpenGL",
+      "OpenGL ES 3",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "otogi-myth-of-demons",
+        "tier": "ingame",
+        "source": "README: All 29 stages load and play: menus, intro cutscenes, combat, magic, death and restart, saves and sound."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Otogi: Myth of Demons for Windows using xboxrecomp, featuring widescreen support, unlocked frame rates, up to 4x resolution, and controller support.",
+      "pt-br": "Recompilação estática de Otogi: Myth of Demons para Windows usando xboxrecomp, com suporte a widescreen, taxa de quadros desbloqueada, resolução de até 4x e suporte a controles."
+    }
+  },
+  {
+    "slug": "mcla-recomp-rv",
+    "name": "MCLA Recomp RV",
+    "repo": "gabrielbskk/mcla-recomp-rv",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "midnight-club-los-angeles-complete-edition",
+        "tier": "ingame",
+        "source": "README: The port reaches menus, audio and 3D gameplay on a Samsung Galaxy S23 (Adreno 740, 8 GB RAM, 256 GB storage)."
+      }
+    ],
+    "notes": {
+      "en": "An experimental Android ARM64 port of Midnight Club: Los Angeles Complete Edition using ReXGlue and Vulkan, rendering 3D gameplay.",
+      "pt-br": "Um port experimental para Android ARM64 de Midnight Club: Los Angeles Complete Edition usando ReXGlue e Vulkan, renderizando jogabilidade 3D."
     }
   }
 ]

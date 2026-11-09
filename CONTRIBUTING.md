@@ -53,7 +53,7 @@ A daily workflow searches the scene's GitHub topics for repositories that are no
 
 Both decision files hold `{ "repo": "owner/name", "reason": "..." }`. To settle a pending repo, move it to `ports.json` or `discover-ignore.json`. Running `npm run discover` locally prints the same list without changing anything.
 
-The model step needs an OpenAI-compatible endpoint: the repository secrets `LLM_BASE_URL` (for example `https://host/v1`) and `LLM_API_KEY`, and the variable `LLM_MODEL`. Without them the step is skipped and submissions wait unanswered.
+The model step needs an OpenAI-compatible endpoint: the repository secrets `LLM_BASE_URL` (for example `https://host/v1`) and `LLM_API_KEY`, and the variable `LLM_MODEL`. Without them the step is skipped and submissions wait unanswered. Publishing the daily pull request uses the repository secret `DISCOVER_PAT` (a fine-grained personal access token). Without that secret the job stops before it does any work.
 
 ## Code changes
 

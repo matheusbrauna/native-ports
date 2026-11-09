@@ -1,7 +1,8 @@
 name: CI
 
 # Pull requests only: on main, the deploy workflow's build already runs the same validation.
-# The discover workflow starts it by hand on its own pull request, which GITHUB_TOKEN pushes don't trigger.
+# Discover opens its pull request with DISCOVER_PAT, so this pull_request run starts on its own.
+# workflow_dispatch stays for a manual run.
 on:
   pull_request:
   workflow_dispatch:

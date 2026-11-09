@@ -10,10 +10,11 @@ on:
         default: "20"
 
 permissions:
-  contents: write
-  pull-requests: write
+  # The branch push and the pull request use DISCOVER_PAT, not this token.
+  # contents: write here would let a step push as GITHUB_TOKEN and leave CI waiting for approval.
+  contents: read
+  pull-requests: read
   issues: write
-  actions: write # to start CI on the pull request (see the last step)
 
 concurrency:
   group: discover
@@ -26,9 +27,19 @@ jobs:
   discover:
     runs-on: ubuntu-latest
     steps:
+      - name: Require DISCOVER_PAT
+        env:
+          DISCOVER_PAT: ${{ secrets.DISCOVER_PAT }}
+        run: |
+          if [ -z "$DISCOVER_PAT" ]; then
+            echo "::error::Repository secret DISCOVER_PAT is not set. Add a fine-grained PAT for matheusbrauna/native-ports with Contents read and write, and Pull requests read and write. This job does not fall back to GITHUB_TOKEN, because that leaves pull_request CI waiting for approval."
+            exit 1
+          fi
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          # Do not keep GITHUB_TOKEN in git config. The publish step authenticates the push with DISCOVER_PAT.
+          persist-credentials: false
       - uses: actions/setup-node@v7
         with:
           node-version: lts/*
@@ -84,7 +95,7 @@ jobs:
       - name: Open or update the pull request
         id: pr
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.DISCOVER_PAT }}
         run: |
           git add data/
           if git diff --cached --quiet; then
@@ -92,7 +103,18 @@ jobs:
             exit 0
           fi
           git commit -q -m "Triage discover candidates ($(date -u +%Y-%m-%d))"
-          git push -f origin "$BRANCH"
+          # checkout v7 stores a token via includeIf when persist-credentials is left on.
+          # Drop any of that so the push cannot authenticate as GITHUB_TOKEN.
+          git config --local --unset-all "http.https://github.com/.extraheader" || true
+          while IFS= read -r key; do
+            [ -n "$key" ] || continue
+            git config --local --unset-all "$key" || true
+          done < <(git config --local --name-only --get-regexp '^includeIf\.gitdir:' || true)
+          askpass="$RUNNER_TEMP/discover-askpass.sh"
+          printf '%s\n' '#!/bin/sh' 'case "$1" in' '  *Username*) printf "%s\n" "x-access-token" ;;' '  *) printf "%s\n" "$GH_TOKEN" ;;' 'esac' > "$askpass"
+          chmod 700 "$askpass"
+          GIT_ASKPASS="$askpass" GIT_TERMINAL_PROMPT=0 git -c credential.helper= push -f origin "$BRANCH"
+          rm -f "$askpass"
           {
             echo "Daily triage from the [discover workflow](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})."
             echo
@@ -113,9 +135,6 @@ jobs:
             number=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
           fi
           echo "number=$number" >> "$GITHUB_OUTPUT"
-          # Pushes made with GITHUB_TOKEN do not trigger pull_request workflows, so start CI by hand:
-          # its "validate" check lands on the same commit and satisfies the ruleset on main.
-          gh workflow run ci.yml --ref "$BRANCH"
       - name: Answer submission issues
         run: node scripts/answer-submissions.mjs triage.json
         env:

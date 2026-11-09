@@ -194,5 +194,45 @@
   {
     "repo": "Goldoire/fefw-recomp",
     "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Fire Emblem: Fortune's Weave)"
+  },
+  {
+    "repo": "Dittobyte/Recompia",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Pokémon Pokopia)"
+  },
+  {
+    "repo": "HyperaebaseAlpha/infamous2-pc-respocket",
+    "reason": "README missing or too short to judge"
+  },
+  {
+    "repo": "OGVenomstone65528/resp-infamous2-ios",
+    "reason": "README missing or too short to judge"
+  },
+  {
+    "repo": "dsi-hub/HookLink",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (The Legend of Zelda: Ocarina of Time (Nintendo Switch 2 Edition))"
+  },
+  {
+    "repo": "Junior-Jones/Top-Gear-SNES-Static-Recomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Top Gear)"
+  },
+  {
+    "repo": "Junior-Jones/Jungle-Strike-SNES-Static-Recomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Jungle Strike)"
+  },
+  {
+    "repo": "Junior-Jones/SimCity-SNES-Static-Recomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (SimCity)"
+  },
+  {
+    "repo": "Junior-Jones/Bubble-Bobble-NES-Static-Recomp",
+    "reason": "Triage accepted it, but: Console \"nes\" is not in the catalog yet (Bubble Bobble)"
+  },
+  {
+    "repo": "Junior-Jones/Rock-N-Roll-Racing-SNES-Static-Recomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Rock n' Roll Racing)"
+  },
+  {
+    "repo": "Junior-Jones/Adventure-Island-II-NES-Static-Recomp",
+    "reason": "Triage accepted it, but: Console \"nes\" is not in the catalog yet (Adventure Island II)"
   }
 ]

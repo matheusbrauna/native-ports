@@ -1776,5 +1776,35 @@
     "title": "MX vs. ATV Alive",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "13-sentinels-aegis-rim",
+    "title": "13 Sentinels: Aegis Rim",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "xenoblade-chronicles-definitive-edition",
+    "title": "Xenoblade Chronicles: Definitive Edition",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "castlevania-curse-of-darkness",
+    "title": "Castlevania: Curse of Darkness",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "bleach-soul-resurreccion",
+    "title": "Bleach: Soul Resurrección",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "otogi-myth-of-demons",
+    "title": "Otogi: Myth of Demons",
+    "console": "xbox",
+    "titleIds": []
   }
 ]

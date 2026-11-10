@@ -1483,18 +1483,20 @@
       "windows"
     ],
     "graphics": [
-      "RT64"
+      "Direct3D 12",
+      "RT64",
+      "Vulkan"
     ],
     "games": [
       {
         "id": "wwf-wrestlemania-2000",
-        "tier": "playable",
-        "source": "README: beta; boots, renders, plays music and takes input through menus and matches"
+        "tier": "ingame",
+        "source": "README: The game boots, renders at high resolution, plays music and sound effects, takes keyboard and gamepad input through the menus and matches, rumbles, and both the cart save and the Controller Pak persist automatically."
       }
     ],
     "notes": {
-      "en": "Sister project of No Mercy, sharing its runtime work.",
-      "pt-br": "Projeto irmão do No Mercy, compartilhando o trabalho de runtime."
+      "en": "Sister project in the AKI wrestling recompilation family built on RT64 with widescreen, rumble, and save persistence.",
+      "pt-br": "Projeto irmão na família de recompilação de wrestling da AKI desenvolvido em RT64 com suporte a widescreen, vibração e salvamento."
     }
   },
   {
@@ -2370,8 +2372,8 @@
     "games": [
       {
         "id": "army-of-two",
-        "tier": "playable",
-        "source": "README: The whole game is finishable in solo or co-op without crashes."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -4326,12 +4328,12 @@
       {
         "id": "god-of-war-ascension",
         "tier": "ingame",
-        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 13 game frames per second in the corridor on a quiet host (about 11 with other programs busy; the game is very sensitive to CPU load) on a 6-core CPU with an RTX 3080, with no hangs in 25-minute runs."
+        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 16-18 game frames per second in the corridor on a quiet host (about 14-15 with other programs busy; the game is very sensitive to CPU load) on a 6-core CPU with an RTX 3080, with no hangs in 25-minute runs."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 13 fps in gameplay.",
-      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 13 fps em jogo."
+      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 16–18 fps in gameplay.",
+      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 16–18 fps em jogo."
     }
   },
   {
@@ -4558,21 +4560,23 @@
     "technique": "recomp",
     "toolchain": "ReXGlue",
     "platforms": [
+      "linux",
       "windows"
     ],
     "graphics": [
-      "Direct3D 12"
+      "Direct3D 12",
+      "Vulkan"
     ],
     "games": [
       {
         "id": "rayman-3-hd",
-        "tier": "playable",
-        "source": "README: The game was completed from beginning to end during human playtesting of v1.0.1."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "Features optional visual enhancements, mouse and keyboard controls, Turkish and community Brazilian Portuguese localizations, DualSense features, and built-in mod support.",
-      "pt-br": "Oferece melhorias visuais opcionais, suporte a teclado e mouse, traduções em turco e português do Brasil, recursos para DualSense e suporte a mods."
+      "en": "Now supports Linux alongside Windows, featuring optional visual enhancements, mouse and keyboard controls, DualSense features, and built-in mod support.",
+      "pt-br": "Agora suporta Linux além do Windows, trazendo melhorias visuais opcionais, controles por teclado e mouse, recursos para DualSense e suporte a mods."
     }
   },
   {
@@ -7086,8 +7090,8 @@
     "games": [
       {
         "id": "ea-sports-ufc-4",
-        "tier": "playable",
-        "source": "README: Project Status: Stable / Playable"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -7413,11 +7417,11 @@
       {
         "id": "bakugan-battle-brawlers-ps3",
         "tier": "playable",
-        "source": "README: The game is playable end to end."
+        "source": "README: The game is fully playable from start to finish: story mode, tutorials, battle arenas, card minigames, cutscenes, FMVs, and saving/loading function natively."
       }
     ],
     "notes": {
-      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, playable end to end.",
+      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, playable from start to finish.",
       "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, jogável do início ao fim."
     }
   },
@@ -9053,6 +9057,407 @@
     "notes": {
       "en": "An experimental Android ARM64 port of Midnight Club: Los Angeles Complete Edition using ReXGlue and Vulkan, rendering 3D gameplay.",
       "pt-br": "Um port experimental para Android ARM64 de Midnight Club: Los Angeles Complete Edition usando ReXGlue e Vulkan, renderizando jogabilidade 3D."
+    }
+  },
+  {
+    "slug": "gow-pc-port",
+    "name": "God of War",
+    "repo": "danielalves96/gow-pc-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "god-of-war",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Unofficial static recompilation of God of War (PS2) for Windows and Linux featuring OpenGL rendering, high framerate modes, widescreen support, and built-in launcher and cheat menu.",
+      "pt-br": "Recompilação estática não oficial de God of War (PS2) para Windows e Linux com renderizador OpenGL, modos de alta taxa de quadros, suporte a widescreen e menu de cheats/launcher integrados."
+    }
+  },
+  {
+    "slug": "timesplitters-2-native-linux-recomp",
+    "name": "TimeSplitters 2",
+    "repo": "Destinity13/TimeSplitters-2-Native-Linux-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "timesplitters-2-ps2",
+        "tier": "ingame",
+        "source": "README: title, profiles, Story (all 10 levels load and play, Siberia played through), Story co-op, Arcade League, Challenge, MapMaker, options, bonus trailer, memory card, sound"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the PS2 version of TimeSplitters 2 for Linux and Steam Deck, supporting 60 FPS, real 16:9 widescreen, Vulkan graphics, and online multiplayer.",
+      "pt-br": "Recompilação estática da versão para PS2 do TimeSplitters 2 para Linux e Steam Deck, com suporte a 60 FPS, widescreen 16:9 real, gráficos em Vulkan e multijogador online."
+    }
+  },
+  {
+    "slug": "ascension-r",
+    "name": "Ascension-R",
+    "repo": "rigaz29/Ascension-R",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "god-of-war-ascension",
+        "tier": "ingame",
+        "source": "README: It boots, plays the cinematics and goes through the menus into the levels."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of God of War: Ascension using ps3recomp with Direct3D 12 graphics. The port reaches gameplay, but has not been completed from start to finish.",
+      "pt-br": "Port nativo para Windows de God of War: Ascension usando ps3recomp com gráficos Direct3D 12. O port chega à jogabilidade, mas não foi jogado do início ao fim."
+    }
+  },
+  {
+    "slug": "mc3port",
+    "name": "mc3port",
+    "repo": "SickSartori/mc3port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "midnight-club-3-dub-edition-remix",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PC port of Midnight Club 3: DUB Edition Remix for the original Xbox, featuring 60 fps support, true 16:9 widescreen, up to 5K rendering, and modern visual effects.",
+      "pt-br": "Port nativo para PC de Midnight Club 3: DUB Edition Remix do Xbox original, com suporte a 60 fps, widescreen 16:9 real, resolução de até 5K e efeitos visuais modernos."
+    }
+  },
+  {
+    "slug": "gh5recomp",
+    "name": "GH5Recomp",
+    "repo": "ElGuslml/GH5Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "guitar-hero-5",
+        "tier": "ingame",
+        "source": "README: Songs have been played with a guitar. Drums and singing have not been tested in this game yet."
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 static recompilation using ReXGlue featuring support for up to 240 FPS, ultrawide displays, low latency audio, DLCs, and an integrated launcher.",
+      "pt-br": "Recompilação estática do Xbox 360 usando ReXGlue com suporte a até 240 FPS, telas ultrawide, áudio de baixa latência, DLCs e um inicializador integrado."
+    }
+  },
+  {
+    "slug": "qwarks-awakening",
+    "name": "Qwark's Awakening",
+    "repo": "undecuple/qwarks-awakening",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "ratchet-clank-tools-of-destruction",
+        "tier": "ingame",
+        "source": "README: first target: played by hand from its first level; a scripted new game from an empty install plays about 11 minutes in Metropolis without a crash; not playable through yet"
+      },
+      {
+        "id": "ratchet-clank-future-quest-for-booty",
+        "tier": "ingame",
+        "source": "README: builds; a scripted new game from a fresh install reaches the ship deck, with about 90 seconds of scripted play without errors (one run); not playable"
+      },
+      {
+        "id": "ratchet-clank-future-a-crack-in-time",
+        "tier": "intro",
+        "source": "README: builds (1.20 update); a scripted new game reaches its first save, then the screen goes black in most runs; not playable"
+      },
+      {
+        "id": "ratchet-clank-all-4-one",
+        "tier": "intro",
+        "source": "README: builds (1.03 update); scripted menus reach the first level, then the game stops; not playable"
+      },
+      {
+        "id": "ratchet-clank-full-frontal-assault",
+        "tier": "wip",
+        "source": "README: builds and installs its data (1.05 update); the screen stays black; not playable"
+      },
+      {
+        "id": "ratchet-clank-into-the-nexus",
+        "tier": "intro",
+        "source": "README: builds (1.01 update); installs its data and shows its intro movie, then the lobby stays black; not playable"
+      },
+      {
+        "id": "ratchet-clank-collection",
+        "tier": "ingame",
+        "source": "README: each game builds into its own program; a scripted new game reaches its first level with the player under scripted control; not playable"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation project for Ratchet & Clank games on PS3 using ps3recomp. Tools of Destruction reaches in-game levels but is not fully playable yet.",
+      "pt-br": "Projeto de recompilação estática para jogos de Ratchet & Clank no PS3 usando ps3recomp. Tools of Destruction chega às fases em jogo, mas ainda não é totalmente jogável."
+    }
+  },
+  {
+    "slug": "ssbu-arena",
+    "name": "SSBU Arena",
+    "repo": "SSBUArena/ssbu-arena",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "super-smash-bros-ultimate",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native PC port of Super Smash Bros. Ultimate designed for competitive online play, featuring rollback netcode via relay servers, custom launcher, and Vulkan rendering.",
+      "pt-br": "Um port nativo para PC do Super Smash Bros. Ultimate focado no jogo online competitivo, contando com rollback netcode via servidores relay, launcher próprio e renderização em Vulkan."
+    }
+  },
+  {
+    "slug": "infamous2-port",
+    "name": "inFAMOUS 2 PC Port",
+    "repo": "SamiEnazi/infamous2-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "infamous-2",
+        "tier": "ingame",
+        "source": "README: It boots, plays and saves, and it is fast on the PC it was built on, but it has only been played from the start to about mission 5, on one PC."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of inFAMOUS 2 for Windows using ps3recomp, featuring native 1080p+ resolution support, enhanced lighting, HD effects, and full controller support.",
+      "pt-br": "Port por recompilação estática de inFAMOUS 2 para Windows usando ps3recomp, contando com suporte a resolução nativa em 1080p+, iluminação aprimorada, efeitos em HD e suporte completo a controles."
+    }
+  },
+  {
+    "slug": "asuras-wrath-pc",
+    "name": "Asura's Wrath PC Port",
+    "repo": "otavix010/asuras-wrath-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "asuras-wrath",
+        "tier": "ingame",
+        "source": "README: Episódios 1, 2 e 3 completos, com as QTEs, os contra-ataques e o tiro feitos pelo controle roteirizado e pelo leitor de avisos da tela (scripts/qte.py)."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Asura's Wrath for Xbox 360 using ReXGlue, supporting up to 144 fps, resolution scaling, and AMD FSR.",
+      "pt-br": "Port por recompilação estática de Asura's Wrath do Xbox 360 usando ReXGlue, com suporte a até 144 fps, escala de resolução e AMD FSR."
+    }
+  },
+  {
+    "slug": "nxaevora-main",
+    "name": "NXAevora",
+    "repo": "nxaevora/nxaevora-main",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ScarletNX",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "pokemon-legends-arceus",
+        "tier": "ingame",
+        "source": "README: The recompiled game runs at about 30 frames each second from the first start into the Obsidian Fieldlands. This covers the opening scene at sea, the name entry, saving and loading, a capture, the village, a battle against an NPC and the first minutes in the Obsidian Fieldlands."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Pokémon Legends: Arceus for Windows using ScarletNX, featuring native mouse look and Vulkan graphics.",
+      "pt-br": "Port via recompilação estática de Pokémon Legends: Arceus para Windows utilizando ScarletNX, com suporte a controle de câmera pelo mouse e renderização em Vulkan."
+    }
+  },
+  {
+    "slug": "spongebobrecomp",
+    "name": "SpongeBobRecomp",
+    "repo": "Spaced1127/SpongeBobRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "DolRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "spongebob-squarepants-revenge-of-the-flying-dutchman",
+        "tier": "ingame",
+        "source": "README: Tested: ISO/RVZ import, legal and title screens, intro/logo movies at full speed with clean audio, bedroom intro, pants pickup, bedroom -> living room transition, HUD and NPCs, pause menu, Options, Save Game, Load Game, the memory card, fullscreen, and launcher settings."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of SpongeBob SquarePants: Revenge of the Flying Dutchman for Windows, featuring Vulkan and OpenGL graphics backends and RecompLauncher integration.",
+      "pt-br": "Recompilação estática de SpongeBob SquarePants: Revenge of the Flying Dutchman para Windows, contando com renderizadores Vulkan e OpenGL e integração com o RecompLauncher."
+    }
+  },
+  {
+    "slug": "dc-recomp",
+    "name": "DC_Recomp",
+    "repo": "TheBozos/DC_Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "dark-cloud",
+        "tier": "ingame",
+        "source": "README: Playable Windows port, under active gameplay testing."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Dark Cloud (PS2) for Windows using BozoEngine, featuring a custom OpenGL renderer and native PC audio pipeline. Early areas and dungeons are functional, though a full playthrough remains unverified.",
+      "pt-br": "Recompilação estática de Dark Cloud (PS2) para Windows utilizando BozoEngine, contando com renderizador OpenGL personalizado e áudio nativo para PC. As áreas e masmorras iniciais estão funcionais, embora a campanha completa ainda não tenha sido verificada."
+    }
+  },
+  {
+    "slug": "bandhrecomp",
+    "name": "Band Hero",
+    "repo": "ElGuslml/BandHRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "band-hero",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "An Xbox 360 static recompilation of Band Hero featuring high frame rate support, ultrawide resolutions, native Vulkan rendering, low latency audio, and an integrated launcher.",
+      "pt-br": "Uma recompilação estática de Band Hero do Xbox 360 com suporte a altas taxas de quadros, resoluções ultrawide, renderização nativa em Vulkan, áudio de baixa latência e um launcher integrado."
+    }
+  },
+  {
+    "slug": "robotech-decomp",
+    "name": "Robotech: Battlecry",
+    "repo": "cheviman/robotech-decomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "robotech-battlecry",
+        "tier": "ingame",
+        "source": "README: The menu and the first mission through Direct3D 11: render states, vertex and index buffers, the engine's own 2D draws, vertex programs (on the CPU by default, on the GPU with ROBOTECHVPGPU=1); sound, the pad and the keyboard, saves on the hard disk (PENDING.md has what is wrong and what is missing)"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Robotech: Battlecry for Xbox built using xboxrecomp and Direct3D 11.",
+      "pt-br": "Port de recompilação estática de Robotech: Battlecry do Xbox feito com xboxrecomp e Direct3D 11."
     }
   }
 ]

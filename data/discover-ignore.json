@@ -718,5 +718,25 @@
   {
     "repo": "Eladerino/spm-nx",
     "reason": "Triage: The project is a port whose only target is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "bhuiyah/ff7-recomp-android",
+    "reason": "Triage: The project recompiles the PC release of Final Fantasy VII rather than console machine code."
+  },
+  {
+    "repo": "aisk/fc2ds",
+    "reason": "Triage: This repository is a porting framework rather than a specific game port, and its target platform is another console."
+  },
+  {
+    "repo": "alfaiotadev/recomp.party",
+    "reason": "Triage: This repository is a website and curated list tracking game ports, not a game port itself."
+  },
+  {
+    "repo": "rzrbld/TheFamilia",
+    "reason": "Triage: The repository ports a PC game rather than a console game, which is out of scope for the catalog."
+  },
+  {
+    "repo": "CrownWiZ/TTT2-Recomp-PS5",
+    "reason": "Triage: Ports whose target is another console are out of scope."
   }
 ]

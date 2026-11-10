@@ -234,5 +234,13 @@
   {
     "repo": "Junior-Jones/Adventure-Island-II-NES-Static-Recomp",
     "reason": "Triage accepted it, but: Console \"nes\" is not in the catalog yet (Adventure Island II)"
+  },
+  {
+    "repo": "CorrieDivitt/ShadowGreat",
+    "reason": "Triage accepted it, but: Console \"nes\" is not in the catalog yet (Shadowgate)"
+  },
+  {
+    "repo": "BehonArt/ebaouendan_musiclives",
+    "reason": "Triage accepted it, but: Console \"ds\" is not in the catalog yet (Elite Beat Agents)"
   }
 ]

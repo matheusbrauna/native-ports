@@ -1806,5 +1806,77 @@
     "title": "Otogi: Myth of Demons",
     "console": "xbox",
     "titleIds": []
+  },
+  {
+    "id": "timesplitters-2-ps2",
+    "title": "TimeSplitters 2",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "guitar-hero-5",
+    "title": "Guitar Hero 5",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "ratchet-clank-future-quest-for-booty",
+    "title": "Ratchet & Clank Future: Quest for Booty",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "ratchet-clank-future-a-crack-in-time",
+    "title": "Ratchet & Clank Future: A Crack in Time",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "ratchet-clank-all-4-one",
+    "title": "Ratchet & Clank: All 4 One",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "ratchet-clank-full-frontal-assault",
+    "title": "Ratchet & Clank: Full Frontal Assault",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "ratchet-clank-into-the-nexus",
+    "title": "Ratchet & Clank: Into the Nexus",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "ratchet-clank-collection",
+    "title": "Ratchet & Clank Collection",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "spongebob-squarepants-revenge-of-the-flying-dutchman",
+    "title": "SpongeBob SquarePants: Revenge of the Flying Dutchman",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "dark-cloud",
+    "title": "Dark Cloud",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "band-hero",
+    "title": "Band Hero",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "robotech-battlecry",
+    "title": "Robotech: Battlecry",
+    "console": "xbox",
+    "titleIds": []
   }
 ]

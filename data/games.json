@@ -1878,5 +1878,35 @@
     "title": "Robotech: Battlecry",
     "console": "xbox",
     "titleIds": []
+  },
+  {
+    "id": "diablo-iii-reaper-of-souls-ultimate-evil-edition",
+    "title": "Diablo III: Reaper of Souls – Ultimate Evil Edition",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "naruto-the-broken-bond",
+    "title": "Naruto: The Broken Bond",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "guitar-hero-warriors-of-rock",
+    "title": "Guitar Hero: Warriors of Rock",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "indiana-jones-and-the-emperors-tomb",
+    "title": "Indiana Jones and the Emperor's Tomb",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "nascar-the-game-inside-line",
+    "title": "NASCAR The Game: Inside Line",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

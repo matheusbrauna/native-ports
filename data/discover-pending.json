@@ -242,5 +242,17 @@
   {
     "repo": "BehonArt/ebaouendan_musiclives",
     "reason": "Triage accepted it, but: Console \"ds\" is not in the catalog yet (Elite Beat Agents)"
+  },
+  {
+    "repo": "kayochiaradia/mtf-recomp",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (Mario Tennis Fever)"
+  },
+  {
+    "repo": "MormonFTP-hub/gt5-recomp",
+    "reason": "Triage accepted it, but: Tier \"ingame\" for Gran Turismo 5 cites a quote that is not in the README: \"Playable.\""
+  },
+  {
+    "repo": "vittau/top-gear-2-genesis-pc",
+    "reason": "Triage accepted it, but: Console \"genesis\" is not in the catalog yet (Top Gear 2)"
   }
 ]

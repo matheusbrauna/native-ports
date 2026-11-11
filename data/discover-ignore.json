@@ -738,5 +738,25 @@
   {
     "repo": "CrownWiZ/TTT2-Recomp-PS5",
     "reason": "Triage: Ports whose target is another console are out of scope."
+  },
+  {
+    "repo": "LeoDeadware/HoMM4Deadware",
+    "reason": "Triage: Heroes of Might and Magic IV is a PC game, which is out of scope for a catalog of console game ports."
+  },
+  {
+    "repo": "Eladerino/JetSetRadioFuture-Unleashed-NX",
+    "reason": "Triage: The project's only target platform is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "kamb205/TNA-iMPACT-Reloaded-PS5",
+    "reason": "Triage: The repository targets another console (PlayStation 5), which is out of scope."
+  },
+  {
+    "repo": "rzrbld/ReNFS5",
+    "reason": "Triage: The repository ports a PC (Windows) game rather than a console game."
+  },
+  {
+    "repo": "Nazatric/Re-Port",
+    "reason": "Triage: The repository is a directory app for browsing game ports rather than a native game port."
   }
 ]

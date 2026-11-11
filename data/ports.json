@@ -3897,7 +3897,7 @@
       {
         "id": "burnout-dominator",
         "tier": "playable",
-        "source": "README: Playable from start to finish, and stable."
+        "source": "README: The game is complete and playable from start to finish."
       }
     ],
     "notes": {
@@ -7015,13 +7015,13 @@
     "games": [
       {
         "id": "god-of-war-ii",
-        "tier": "wip",
-        "source": "README: What remains is device work: boot, pixels, input, audio, performance."
+        "tier": "ingame",
+        "source": "README: M3 device bring-up is well advanced (2026-11-11): the game boots, plays its opening movie, and renders the first playable area on real hardware — on a Redfinger cloud phone (Galaxy S25+, Adreno; earlier runs on a Galaxy Note20, Mali-G77)."
       }
     ],
     "notes": {
-      "en": "An Android port of God of War II created via PS2Recomp static recompilation featuring a custom Vulkan GS backend.",
-      "pt-br": "Um port de God of War II para Android criado via recompilação estática com PS2Recomp, contando com um backend GS customizado em Vulkan."
+      "en": "An Android port of God of War II created via PS2Recomp static recompilation featuring a custom Vulkan GS backend. The game now boots, plays its intro movie, and renders the first in-game area on real hardware.",
+      "pt-br": "Um port de God of War II para Android criado via recompilação estática com PS2Recomp e backend GS customizado em Vulkan. O jogo agora inicia, reproduz a CG de abertura e renderiza a primeira área de jogo em hardware real."
     }
   },
   {
@@ -9458,6 +9458,189 @@
     "notes": {
       "en": "Static recompilation port of Robotech: Battlecry for Xbox built using xboxrecomp and Direct3D 11.",
       "pt-br": "Port de recompilação estática de Robotech: Battlecry do Xbox feito com xboxrecomp e Direct3D 11."
+    }
+  },
+  {
+    "slug": "sanctuaryport",
+    "name": "SanctuaryPort",
+    "repo": "CaduGimenes/SanctuaryPort",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "diablo-iii-reaper-of-souls-ultimate-evil-edition",
+        "tier": "ingame",
+        "source": "README: Playable. Tested on Linux (AMD Radeon 780M, Mesa) with the Brazilian 1.47 and US 1.00 dumps:"
+      }
+    ],
+    "notes": {
+      "en": "Native PS4 runtime port of Diablo III: Reaper of Souls – Ultimate Evil Edition featuring Vulkan rendering and 4-player local co-op on Linux and Windows.",
+      "pt-br": "Port nativo via runtime de PS4 de Diablo III: Reaper of Souls – Ultimate Evil Edition com renderização Vulkan e co-op local para até 4 jogadores no Linux e Windows."
+    }
+  },
+  {
+    "slug": "naruto-the-broken-bond-android-port",
+    "name": "Naruto: The Broken Bond Android Port",
+    "repo": "1nsec/Naruto-The-Broken-Bond-Android-Port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "naruto-the-broken-bond",
+        "tier": "playable",
+        "source": "README: the game plays through on a Snapdragon 865 handheld at 30 FPS, but it has been tested on few devices."
+      }
+    ],
+    "notes": {
+      "en": "Native Android port of the Xbox 360 title created using ReXGlue static recompilation and Vulkan graphics for Snapdragon/Adreno devices.",
+      "pt-br": "Port nativo para Android do jogo de Xbox 360 criado usando recompilação estática via ReXGlue e gráficos em Vulkan para dispositivos Snapdragon/Adreno."
+    }
+  },
+  {
+    "slug": "ghworrecomp",
+    "name": "GHWoRRecomp",
+    "repo": "ElGuslml/GHWoRRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "guitar-hero-warriors-of-rock",
+        "tier": "ingame",
+        "source": "README: Beta. Songs have been played with an Xbox 360 guitar."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Guitar Hero: Warriors of Rock (Xbox 360) using ReXGlue, featuring high frame rates up to 240 FPS, ultrawide support, Vulkan rendering, DLC loading, and native Xbox 360 guitar support.",
+      "pt-br": "Recompilação estática de Guitar Hero: Warriors of Rock (Xbox 360) usando ReXGlue, com suporte a altas taxas de quadros de até 240 FPS, telas ultrawide, renderização via Vulkan, carregamento de DLCs e guitarras de Xbox 360."
+    }
+  },
+  {
+    "slug": "stilwater-recompiled",
+    "name": "Stilwater Recompiled",
+    "repo": "DivxPlays/stilwater-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "saints-row",
+        "tier": "ingame",
+        "source": "README: Alpha: the first mission plays start to finish, but expect bugs."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Saints Row for Windows using ReXGlue. Includes launcher auto-building from disc images, mouse look, high frame rates, and render scaling.",
+      "pt-br": "Port de recompilação estática de Saints Row para Windows usando ReXGlue. Inclui um launcher que compila o jogo a partir da imagem do disco, controle por mouse, altas taxas de quadros e dimensionamento de renderização."
+    }
+  },
+  {
+    "slug": "indyport",
+    "name": "IndyPort",
+    "repo": "MertCNOZ/IndyPort",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBERecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "indiana-jones-and-the-emperors-tomb",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox version of Indiana Jones and the Emperor's Tomb for Windows using XboxXBERecomp, featuring widescreen support, unlocked frame rates, texture replacement, and true mouse look.",
+      "pt-br": "Recompilação estática da versão de Xbox de Indiana Jones and the Emperor's Tomb para Windows via XboxXBERecomp, com suporte a widescreen, taxa de quadros desbloqueada, substituição de texturas e controle de câmera nativo no mouse."
+    }
+  },
+  {
+    "slug": "nascar-inside-line-recomp",
+    "name": "NASCAR The Game: Inside Line",
+    "repo": "ABadGame/nascar-inside-line-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "nascar-the-game-inside-line",
+        "tier": "ingame",
+        "source": "README: Boots, menus, intro videos, races"
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of NASCAR The Game: Inside Line generated via ReXGlue static recompilation. Includes FSR upscaling, 21:9 ultrawide rendering, anisotropic filtering, and steering wheel support.",
+      "pt-br": "Port nativo para Windows de NASCAR The Game: Inside Line feito via recompilação estática com ReXGlue. Inclui suporte a FSR, ultrawide 21:9, filtragem anisotrópica e suporte a volantes."
+    }
+  },
+  {
+    "slug": "bulususaanthoshini-wwe-allstars-recomp",
+    "name": "WWE All Stars Recomp",
+    "repo": "bulususaanthoshini/WWE-AllStars-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "wwe-all-stars",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Unofficial native Windows port of WWE All Stars for Xbox 360 built via ReXGlue static recompilation and Vulkan.",
+      "pt-br": "Port nativo não oficial para Windows de WWE All Stars do Xbox 360 desenvolvido via recompilação estática com ReXGlue e Vulkan."
     }
   }
 ]

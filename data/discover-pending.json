@@ -254,5 +254,17 @@
   {
     "repo": "vittau/top-gear-2-genesis-pc",
     "reason": "Triage accepted it, but: Console \"genesis\" is not in the catalog yet (Top Gear 2)"
+  },
+  {
+    "repo": "aplaino/darksouls-mac",
+    "reason": "Triage accepted it, but: Console \"pc\" is not in the catalog yet (Dark Souls: Prepare to Die Edition)"
+  },
+  {
+    "repo": "sp00nznet/pokemon",
+    "reason": "Triage accepted it, but: Console \"gameboy\" is not in the catalog yet (Pokémon Red)"
+  },
+  {
+    "repo": "looking-glassinsects/MagicalPopnRecomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Magical Pop'n)"
   }
 ]

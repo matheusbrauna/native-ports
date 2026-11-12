@@ -2907,7 +2907,7 @@
       {
         "id": "wipeout-omega-collection",
         "tier": "ingame",
-        "source": "README: Status: playable, in active development. Menus and races (HD and 2048) play above 60 FPS."
+        "source": "README: Status: playable. Menus and races (HD and 2048) play above 60 FPS."
       }
     ],
     "notes": {
@@ -8132,12 +8132,12 @@
       {
         "id": "afro-samurai",
         "tier": "ingame",
-        "source": "README: Boots, plays videos, menus and gameplay; EN/ES/FR/IT language selection."
+        "source": "README: Boots, plays videos, menus and gameplay; EN/ES/FR/IT language selection (the USA disc has EN/FR text only)."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Afro Samurai for Xbox 360 targeting 64-bit Windows using ReXGlue. Reaches gameplay with 30 FPS rendering and working audio via GPU and runtime patches.",
-      "pt-br": "Recompilação estática de Afro Samurai do Xbox 360 para Windows 64-bit usando ReXGlue. Chega à jogabilidade a 30 FPS e com áudio funcional por meio de patches de GPU e runtime."
+      "en": "Static recompilation of Afro Samurai for Xbox 360 targeting 64-bit Windows using ReXGlue. Supports both European and USA discs, offering an optional 60 FPS mode and up to 4K internal resolution.",
+      "pt-br": "Recompilação estática de Afro Samurai do Xbox 360 para Windows 64-bit usando ReXGlue. Suporta discos europeus e americanos, oferecendo um modo opcional de 60 FPS e resolução interna de até 4K."
     }
   },
   {
@@ -9051,7 +9051,7 @@
       {
         "id": "midnight-club-los-angeles-complete-edition",
         "tier": "ingame",
-        "source": "README: The port reaches menus, audio and 3D gameplay on a Samsung Galaxy S23 (Adreno 740, 8 GB RAM, 256 GB storage)."
+        "source": "README: Menus, audio and driving work; performance and compatibility vary"
       }
     ],
     "notes": {
@@ -9295,7 +9295,7 @@
       {
         "id": "infamous-2",
         "tier": "ingame",
-        "source": "README: It boots, plays and saves, and it is fast on the PC it was built on, but it has only been played from the start to about mission 5, on one PC."
+        "source": "README: It boots, plays and saves, and it is fast on the PC it was built on, but it has been played on one PC so far."
       }
     ],
     "notes": {
@@ -9641,6 +9641,302 @@
     "notes": {
       "en": "Unofficial native Windows port of WWE All Stars for Xbox 360 built via ReXGlue static recompilation and Vulkan.",
       "pt-br": "Port nativo não oficial para Windows de WWE All Stars do Xbox 360 desenvolvido via recompilação estática com ReXGlue e Vulkan."
+    }
+  },
+  {
+    "slug": "bhuiyah-infamous2-recomp",
+    "name": "inFamous 2",
+    "repo": "bhuiyah/infamous2-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "infamous-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of inFamous 2 created via static recompilation using ps3recomp. Features Direct3D 12 graphics, unlocked frame rates, ultrawide display support, and mouse and keyboard controls.",
+      "pt-br": "Port nativo para Windows de inFamous 2 criado via recompilação estática com ps3recomp. Conta com gráficos em Direct3D 12, taxa de quadros desbloqueada, suporte a telas ultrawide e suporte a mouse e teclado."
+    }
+  },
+  {
+    "slug": "timesplitters-2-native-recomp-windows-linux-steamdeck",
+    "name": "TimeSplitters 2",
+    "repo": "Destinity13/TimeSplitters-2-Native-Recomp-Windows-Linux-SteamDeck",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "timesplitters-2-ps2",
+        "tier": "ingame",
+        "source": "README: Story (all 10 levels load and play, Siberia played through)"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the PS2 version of TimeSplitters 2 featuring 60 FPS performance, true 16:9 widescreen support, mouse controls, and online multiplayer with a built-in server browser.",
+      "pt-br": "Recompilação estática da versão de PS2 de TimeSplitters 2 com suporte a 60 FPS, widescreen 16:9 nativo, controles por mouse e multijogador online com navegador de servidores integrado."
+    }
+  },
+  {
+    "slug": "pc-thelaststory",
+    "name": "The Last Story",
+    "repo": "vs-sr-dev/pc-thelaststory",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "wiikit",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "the-last-story",
+        "tier": "ingame",
+        "source": "README: After two sessions the game boots and plays into its first chapter: the strap screen, the title, the menu, New Game, Chapter 1 (Reptids' Cave), Zael in the cave and the first tutorial, at 16:9 and a steady 30 frames a second, with the Classic Controller (a gamepad), played by hand through the first cave."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of the Wii RPG built with wiikit, running natively up to Chapter 1 at 30 fps.",
+      "pt-br": "Port por recompilação estática do RPG de Wii feito com o wiikit, rodando nativamente até o Capítulo 1 a 30 fps."
+    }
+  },
+  {
+    "slug": "pc-megamanxcm",
+    "name": "Mega Man X: Command Mission",
+    "repo": "vs-sr-dev/pc-megamanxcm",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "wiikit",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "mega-man-x-command-mission",
+        "tier": "ingame",
+        "source": "README: After two sessions the game boots and plays, with its sound: the Nintendo and Dolby screens, the memory card check, the CAPCOM logo, the opening movie, the title, the menu, a new game, the opening scenes in real-time 3D and play past them, at 50 frames a second (PAL), with the pad, its music, effects and voices."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of the GameCube version of Mega Man X: Command Mission built with the wiikit framework. It reaches gameplay past the opening scenes with working sound, but saving is not yet functional.",
+      "pt-br": "Port por recompilação estática da versão de GameCube de Mega Man X: Command Mission feito com o framework wiikit. Chega à jogabilidade além das cenas iniciais com som funcional, mas salvar ainda não está implementado."
+    }
+  },
+  {
+    "slug": "pc-castlevaniajudgment",
+    "name": "Castlevania Judgment",
+    "repo": "vs-sr-dev/pc-castlevaniajudgment",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "wiikit",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "castlevania-judgment",
+        "tier": "ingame",
+        "source": "README: After one session the game plays, recompiled at the first try; wiikit gained GX fog and a NAND answer the game's save check needed:"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Castlevania Judgment for Wii using wiikit, featuring functional fights, GX fog rendering, NAND save creation, and gamepad input.",
+      "pt-br": "Recompilação estática de Castlevania Judgment do Wii usando o wiikit, com combates funcionais, renderização de neblina GX, salvamento em NAND e suporte a controles."
+    }
+  },
+  {
+    "slug": "fable2recompmac",
+    "name": "Fable II",
+    "repo": "itar3/Fable2RecompMac",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal",
+      "MoltenVK"
+    ],
+    "games": [
+      {
+        "id": "fable-ii",
+        "tier": "playable",
+        "source": "README: The whole game is playable on Apple Silicon (tested on an M4 Pro, macOS 27):"
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Fable II for Apple Silicon Macs using the ReXGlue SDK and a Metal renderer.",
+      "pt-br": "Port por recompilação estática de Fable II para Macs com Apple Silicon usando a SDK ReXGlue e renderizador Metal."
+    }
+  },
+  {
+    "slug": "pc-conduit2",
+    "name": "Conduit 2",
+    "repo": "vs-sr-dev/pc-conduit2",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "wiikit",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "conduit-2",
+        "tier": "ingame",
+        "source": "README: It is not yet played through: nothing past the first level has been tried."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Conduit 2 for Wii using wiikit. Features mouse, keyboard, and gamepad controls mapped to the Wii Classic Controller.",
+      "pt-br": "Recompilação estática de Conduit 2 do Wii utilizando o wiikit. Possui controles de mouse, teclado e gamepad mapeados para o Wii Classic Controller."
+    }
+  },
+  {
+    "slug": "sims2-psp-recomp",
+    "name": "The Sims 2",
+    "repo": "tokenbroker/sims2-psp-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PSPRecomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-sims-2",
+        "tier": "ingame",
+        "source": "README: Windows playable preview; native Linux/Vulkan port in validation: the game boots into live gameplay, saves and loads, and includes modern display settings, audio playback, keyboard controls and SDL controller support."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of The Sims 2 for PSP built with PSPRecomp, featuring customizable resolution scaling, Direct3D 11 and Vulkan backends, and high frame rate support.",
+      "pt-br": "Recompilação estática de The Sims 2 para PSP feita com PSPRecomp, com suporte a resolução interna escalável, renderizadores Direct3D 11 e Vulkan, e suporte a altas taxas de quadros."
+    }
+  },
+  {
+    "slug": "dirge-of-cerberus-pc",
+    "name": "Dirge of Cerberus: Final Fantasy VII",
+    "repo": "otavix010/dirge-of-cerberus-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "dirge-of-cerberus-final-fantasy-vii",
+        "tier": "wip",
+        "source": "README: O port ainda vai começar."
+      }
+    ],
+    "notes": {
+      "en": "Early work-in-progress static recompilation PC port of the PlayStation 2 game targeting Windows.",
+      "pt-br": "Port nativo para PC por recompilação estática em início de desenvolvimento para Windows."
+    }
+  },
+  {
+    "slug": "pc-arcrisefantasia",
+    "name": "Arc Rise Fantasia",
+    "repo": "vs-sr-dev/pc-arcrisefantasia",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "wiikit",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "arc-rise-fantasia",
+        "tier": "ingame",
+        "source": "README: After one session the game boots, draws, sounds and plays to its first battle: the strap screen, the Ignition, Marvelous, imageepoch and CRIWARE logos, the title, the System menu, a new game, the prologue and the first battle, at 16:9."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial native PC port of Arc Rise Fantasia (Wii) built via static recompilation using wiikit, currently reaching early gameplay up to the first battle.",
+      "pt-br": "Port nativo não oficial para PC de Arc Rise Fantasia (Wii) feito via recompilação estática usando o wiikit, atualmente jogável até a primeira batalha."
+    }
+  },
+  {
+    "slug": "xdroid360",
+    "name": "XDroid360",
+    "repo": "udarmolota/XDroid360",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dragon-age-origins",
+        "tier": "playable",
+        "source": "README: playable: 50–60 fps in the first camp on a cool phone; 30 with the game's own frame cap for long sessions"
+      },
+      {
+        "id": "state-of-decay",
+        "tier": "playable",
+        "source": "README: playable, 30 fps by default. The DLC get installed; playing them hasn't been checked yet"
+      }
+    ],
+    "notes": {
+      "en": "Android launcher that performs on-device static recompilation of Xbox 360 games using XenonRecomp and a Vulkan renderer.",
+      "pt-br": "Launcher para Android que realiza recompilação estática de jogos de Xbox 360 no próprio dispositivo usando XenonRecomp e renderização via Vulkan."
     }
   }
 ]

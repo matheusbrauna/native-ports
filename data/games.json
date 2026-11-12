@@ -1908,5 +1908,53 @@
     "title": "NASCAR The Game: Inside Line",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "the-last-story",
+    "title": "The Last Story",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "mega-man-x-command-mission",
+    "title": "Mega Man X: Command Mission",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "castlevania-judgment",
+    "title": "Castlevania Judgment",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "conduit-2",
+    "title": "Conduit 2",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "the-sims-2",
+    "title": "The Sims 2",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "dirge-of-cerberus-final-fantasy-vii",
+    "title": "Dirge of Cerberus: Final Fantasy VII",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "arc-rise-fantasia",
+    "title": "Arc Rise Fantasia",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "state-of-decay",
+    "title": "State of Decay",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

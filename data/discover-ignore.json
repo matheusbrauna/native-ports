@@ -758,5 +758,9 @@
   {
     "repo": "Nazatric/Re-Port",
     "reason": "Triage: The repository is a directory app for browsing game ports rather than a native game port."
+  },
+  {
+    "repo": "chiikabu/the-browsing-of-isaac",
+    "reason": "Triage: The port's only target is the browser."
   }
 ]

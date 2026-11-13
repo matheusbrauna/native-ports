@@ -1661,12 +1661,12 @@
       {
         "id": "tetrisphere",
         "tier": "unrated",
-        "source": "README: version 1.1.0 available"
+        "source": null
       }
     ],
     "notes": {
-      "en": "Tetrisphere with RT64 rendering and recompiled RSP audio, for Linux and Windows x86-64.",
-      "pt-br": "Tetrisphere com renderização RT64 e áudio RSP recompilado, para Linux e Windows x86-64."
+      "en": "Tetrisphere port with RT64 rendering and recompiled RSP audio for Linux and Windows, updated to version 1.2.1.",
+      "pt-br": "Port de Tetrisphere com renderização RT64 e áudio RSP recompilado para Linux e Windows, atualizado para a versão 1.2.1."
     }
   },
   {
@@ -5918,6 +5918,7 @@
     "technique": "recomp",
     "toolchain": null,
     "platforms": [
+      "linux",
       "windows"
     ],
     "graphics": [
@@ -5927,12 +5928,12 @@
       {
         "id": "yo-kai-watch-4",
         "tier": "ingame",
-        "source": "README: Work in progress: not tested from start to finish yet."
+        "source": "README: Playable, but not finished."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Yo-kai Watch 4++ for Windows, featuring graphics improvements like ultrawide support, PCSS soft shadows, DLSS/FSR upscaling, and TAA.",
-      "pt-br": "Recompilação estática de Yo-kai Watch 4++ para Windows, trazendo melhorias gráficas como suporte a telas ultrawide, sombras suaves PCSS, upscaling via DLSS/FSR e TAA."
+      "en": "Static recompilation of Yo-kai Watch 4++ for Windows and Linux, featuring graphics improvements like ultrawide support, PCSS soft shadows, DLSS/FSR upscaling, and TAA.",
+      "pt-br": "Recompilação estática de Yo-kai Watch 4++ para Windows e Linux, trazendo melhorias gráficas como suporte a telas ultrawide, sombras suaves PCSS, upscaling via DLSS/FSR e TAA."
     }
   },
   {
@@ -9050,8 +9051,8 @@
     "games": [
       {
         "id": "midnight-club-los-angeles-complete-edition",
-        "tier": "ingame",
-        "source": "README: Menus, audio and driving work; performance and compatibility vary"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -9286,6 +9287,7 @@
     "technique": "recomp",
     "toolchain": "ps3recomp",
     "platforms": [
+      "linux",
       "windows"
     ],
     "graphics": [
@@ -9294,13 +9296,13 @@
     "games": [
       {
         "id": "infamous-2",
-        "tier": "ingame",
-        "source": "README: It boots, plays and saves, and it is fast on the PC it was built on, but it has been played on one PC so far."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
-      "en": "Static recompilation port of inFAMOUS 2 for Windows using ps3recomp, featuring native 1080p+ resolution support, enhanced lighting, HD effects, and full controller support.",
-      "pt-br": "Port por recompilação estática de inFAMOUS 2 para Windows usando ps3recomp, contando com suporte a resolução nativa em 1080p+, iluminação aprimorada, efeitos em HD e suporte completo a controles."
+      "en": "Static recompilation port of inFAMOUS 2 for Windows and Linux, featuring native 1080p+ resolution, direct mouse aiming, enhanced lighting, HD effects, mod support, and an in-game cheats menu.",
+      "pt-br": "Port por recompilação estática de inFAMOUS 2 para Windows e Linux, contando com resolução nativa em 1080p+, mira direta pelo mouse, iluminação aprimorada, efeitos em HD, suporte a mods e menu de trapaças no jogo."
     }
   },
   {
@@ -9926,17 +9928,201 @@
       {
         "id": "dragon-age-origins",
         "tier": "playable",
-        "source": "README: playable: 50–60 fps in the first camp on a cool phone; 30 with the game's own frame cap for long sessions"
+        "source": "README: playable; frame rate limit 30, 60 or none"
       },
       {
         "id": "state-of-decay",
         "tier": "playable",
-        "source": "README: playable, 30 fps by default. The DLC get installed; playing them hasn't been checked yet"
+        "source": "README: playable at 30 or 60 fps. The DLC get installed; playing them hasn't been checked yet"
       }
     ],
     "notes": {
       "en": "Android launcher that performs on-device static recompilation of Xbox 360 games using XenonRecomp and a Vulkan renderer.",
       "pt-br": "Launcher para Android que realiza recompilação estática de jogos de Xbox 360 no próprio dispositivo usando XenonRecomp e renderização via Vulkan."
+    }
+  },
+  {
+    "slug": "cogbox-trilogy",
+    "name": "Gears of War 3",
+    "repo": "KiltedKernel/COGBox-trilogy",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "gears-of-war-3",
+        "tier": "ingame",
+        "source": "README: Version 0.2.1: the whole campaign (all five acts) loads and plays, as do Horde, Versus with bots and Beast offline; multiplayer over System Link, on a LAN, over the internet with a friend's code, or on a server; keyboard, mouse and controller; mods."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Gears of War 3 created via XenonRecomp static recompilation, featuring custom launcher, mouse/keyboard controls, multiplayer over System Link, and mod support.",
+      "pt-br": "Port nativo para Windows de Gears of War 3 feito via recompilação estática com XenonRecomp, contando com launcher próprio, suporte a teclado e mouse, multijogador via System Link e suporte a mods."
+    }
+  },
+  {
+    "slug": "mk9-lauta",
+    "name": "MK9 by Lauta",
+    "repo": "machinebreak/mk9-lauta",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "mortal-kombat-komplete-edition",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native Windows port of Mortal Kombat Komplete Edition featuring custom online rollback netcode, lobbies, dynamic resolution, and low-end PC optimizations.",
+      "pt-br": "Um port nativo para Windows do Mortal Kombat Komplete Edition com netcode com rollback customizado, salas online, resolução dinâmica e otimizações para PCs fracos."
+    }
+  },
+  {
+    "slug": "jsp-vs-ex",
+    "name": "J-Stars Victory VS-EX: Fan Revival",
+    "repo": "Tsamiuy/jsp-vs-ex",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "j-stars-victory-vs",
+        "tier": "ingame",
+        "source": "README: The default build (the v19 tree, built on ps3recomp v0.19.0; the installer switch is --tree current) lifts and builds on Windows (Direct3D 12) and boots, plays the opening movie, the menus and fights with sound, at about 30 frames per second in the demo and in Free Battle on one Windows machine (its earlier v18 build, on toolkit v0.18.0, ran at 16 to 22)."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial static recompilation port of J-Stars Victory VS+ for Windows using ps3recomp. Features a setup wizard that lifts and recompiles the game executable locally from a user-provided copy.",
+      "pt-br": "Port não oficial por recompilação estática de J-Stars Victory VS+ para Windows usando ps3recomp. Possui um assistente de instalação que recompila o executável do jogo localmente a partir de uma cópia fornecida pelo usuário."
+    }
+  },
+  {
+    "slug": "pes13recomp",
+    "name": "PES13Recomp",
+    "repo": "xamphy/PES13Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "windows",
+      "ios"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "pro-evolution-soccer-2013",
+        "tier": "ingame",
+        "source": "README: It is playable on Windows (menus, training, exhibition matches, sound, saves), but expect bugs."
+      }
+    ],
+    "notes": {
+      "en": "Xbox 360 static recompilation of Pro Evolution Soccer 2013 running on Windows via Vulkan and iPad via Metal.",
+      "pt-br": "Recompilação estática do Pro Evolution Soccer 2013 do Xbox 360 rodando em Windows via Vulkan e iPad via Metal."
+    }
+  },
+  {
+    "slug": "ff13-lr-recomp",
+    "name": "Lightning Returns: Final Fantasy XIII",
+    "repo": "Lazaer-YZY/ff13-lr-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue SDK",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "lightning-returns-final-fantasy-xiii",
+        "tier": "ingame",
+        "source": "README: Playable: title, movies, field, battles, saves. Played from the prologue through Luxerion, Yusnaan and the Ark."
+      }
+    ],
+    "notes": {
+      "en": "An Android port of the Xbox 360 version statically recompiled with ReXGlue SDK. Features live companion support for dual-screen devices like the AYN Thor.",
+      "pt-br": "Um port para Android da versão de Xbox 360 recompilado estaticamente com ReXGlue SDK. Apresenta suporte a tela dupla interativa para dispositivos como o AYN Thor."
+    }
+  },
+  {
+    "slug": "mojo-ps2-recomp",
+    "name": "MOJO! PS2 Recomp",
+    "repo": "JaBoyAlex/mojo-ps2-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps2-native-recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "mojo",
+        "tier": "ingame",
+        "source": "README: The original working build has been played beyond round 10 without reported bugs."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of MOJO! (PS2) built using ps2-native-recomp, supporting Direct3D 12 and optional RecompLauncher integration.",
+      "pt-br": "Port nativo para Windows de MOJO! (PS2) criado com ps2-native-recomp, com suporte a Direct3D 12 e integração opcional ao RecompLauncher."
+    }
+  },
+  {
+    "slug": "mvp05-plus",
+    "name": "MVP05-Plus",
+    "repo": "spy-jam/MVP05-Plus",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBERecomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "mvp-baseball-2005",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Enhanced PC port of the Xbox version of MVP Baseball 2005 statically recompiled using XboxXBERecomp, featuring GameCube and PlayStation controller support with matching UI graphics and save imports.",
+      "pt-br": "Port aprimorado para PC da versão de Xbox de MVP Baseball 2005 recompilado estaticamente com XboxXBERecomp, com suporte a controles de GameCube e PlayStation, arte de botões personalizada e importação de saves."
     }
   }
 ]

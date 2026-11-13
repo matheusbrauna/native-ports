@@ -1956,5 +1956,41 @@
     "title": "State of Decay",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "mortal-kombat-komplete-edition",
+    "title": "Mortal Kombat Komplete Edition",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "j-stars-victory-vs",
+    "title": "J-Stars Victory VS+",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "pro-evolution-soccer-2013",
+    "title": "Pro Evolution Soccer 2013",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "lightning-returns-final-fantasy-xiii",
+    "title": "Lightning Returns: Final Fantasy XIII",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "mojo",
+    "title": "MOJO!",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "mvp-baseball-2005",
+    "title": "MVP Baseball 2005",
+    "console": "xbox",
+    "titleIds": []
   }
 ]

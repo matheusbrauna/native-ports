@@ -762,5 +762,29 @@
   {
     "repo": "chiikabu/the-browsing-of-isaac",
     "reason": "Triage: The port's only target is the browser."
+  },
+  {
+    "repo": "uvindusl/NFSProStreet_online",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "azmasm/hermit",
+    "reason": "Triage: Hermit is a launcher and build tool for native Switch game ports rather than a native port of a console game."
+  },
+  {
+    "repo": "BlackLineInteractive/FerrariVirtualRace-MacOS-Port",
+    "reason": "Triage: The project ports a PC Windows game rather than a console game."
+  },
+  {
+    "repo": "fabegalo/x360-native",
+    "reason": "Triage: General recompilation platforms and tools are out of scope."
+  },
+  {
+    "repo": "XiONDiGiTaL/EmblemWeave",
+    "reason": "Triage: The repository is a recompiler and launcher tool rather than a native game port."
+  },
+  {
+    "repo": "Producdevity/starlet",
+    "reason": "Triage: Starlet is an SDK compatibility layer for GameCube and Wii ports, not a game port."
   }
 ]

@@ -266,5 +266,9 @@
   {
     "repo": "looking-glassinsects/MagicalPopnRecomp",
     "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Magical Pop'n)"
+  },
+  {
+    "repo": "defaultdotcfg/rushlauncher",
+    "reason": "Triage accepted it, but: Console \"xboxone\" is not in the catalog yet (ONRUSH)"
   }
 ]

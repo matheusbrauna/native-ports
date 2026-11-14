@@ -270,5 +270,21 @@
   {
     "repo": "defaultdotcfg/rushlauncher",
     "reason": "Triage accepted it, but: Console \"xboxone\" is not in the catalog yet (ONRUSH)"
+  },
+  {
+    "repo": "BTr-RJ/SuperMonacoDuo-Remix_Recomp",
+    "reason": "Triage accepted it, but: Console \"genesis\" is not in the catalog yet (Super Monaco GP)"
+  },
+  {
+    "repo": "G30vamv/MH3U-NativePC",
+    "reason": "Triage accepted it, but: Console \"wii u\" is not in the catalog yet (Monster Hunter 3 Ultimate)"
+  },
+  {
+    "repo": "DallasXC/red-dead-recompilation",
+    "reason": "Triage accepted it, but: Tier \"ingame\" for Red Dead Revolver cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "rages4calm/secret-of-the-stars-companion",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Tecmo Secret of the Stars)"
   }
 ]

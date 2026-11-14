@@ -786,5 +786,37 @@
   {
     "repo": "Producdevity/starlet",
     "reason": "Triage: Starlet is an SDK compatibility layer for GameCube and Wii ports, not a game port."
+  },
+  {
+    "repo": "ericodeoliveira/international-rally-championship-recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Producdevity/gc-recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "hashiqi12138/nxohos",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "PabloVSouza/typex2-recomp",
+    "reason": "Triage: The repository is a static recompiler toolchain rather than a specific game port."
+  },
+  {
+    "repo": "sp00nznet/xwa",
+    "reason": "Triage: Star Wars: X-Wing Alliance is a PC game rather than a console game."
+  },
+  {
+    "repo": "justjavac/switch-recomp",
+    "reason": "Triage: This repository is a directory and curated list of Switch recompilation projects rather than an individual game port."
+  },
+  {
+    "repo": "rages4calm/pcenginerecomp",
+    "reason": "Triage: It is a static recompilation toolkit rather than a game port."
+  },
+  {
+    "repo": "schuler-ph/nsmbw-switch",
+    "reason": "Triage: The repository's only target is another console (Nintendo Switch)."
   }
 ]

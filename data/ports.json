@@ -2934,12 +2934,12 @@
       {
         "id": "god-of-war-chains-of-olympus",
         "tier": "ingame",
-        "source": "README: No full playthrough of either game yet, so expect bugs late in a game."
+        "source": "README: Neither game has had a full playthrough yet: late levels, boss fights and endings may still have bugs."
       },
       {
         "id": "god-of-war-ghost-of-sparta",
         "tier": "ingame",
-        "source": "README: No full playthrough of either game yet, so expect bugs late in a game."
+        "source": "README: Neither game has had a full playthrough yet: late levels, boss fights and endings may still have bugs."
       }
     ],
     "notes": {
@@ -4328,12 +4328,12 @@
       {
         "id": "god-of-war-ascension",
         "tier": "ingame",
-        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 16-18 game frames per second in the corridor on a quiet host (about 14-15 with other programs busy; the game is very sensitive to CPU load) on a 6-core CPU with an RTX 3080, with no hangs in 25-minute runs."
+        "source": "README: The game boots, plays its intro movies, shows the main menu with text and music, and runs the first level with the Vulkan backend at about 17-19 frames per second in the corridor fight on a quiet host (15-18 with other programs in use; the game is very sensitive to CPU load) on a 6-core CPU with an RTX 3080."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 16–18 fps in gameplay.",
-      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 16–18 fps em jogo."
+      "en": "Static recompilation port of God of War: Ascension for PS3 targeting Windows via ps3recomp, currently running the first level at around 17–19 fps in gameplay.",
+      "pt-br": "Port por recompilação estática de God of War: Ascension do PS3 para Windows usando ps3recomp, atualmente rodando a primeira fase a cerca de 17–19 fps em jogo."
     }
   },
   {
@@ -7017,12 +7017,12 @@
       {
         "id": "god-of-war-ii",
         "tier": "ingame",
-        "source": "README: M3 device bring-up is well advanced (2026-11-11): the game boots, plays its opening movie, and renders the first playable area on real hardware — on a Redfinger cloud phone (Galaxy S25+, Adreno; earlier runs on a Galaxy Note20, Mali-G77)."
+        "source": "README: M3 device bring-up is well advanced (2026-11-14): the game boots, plays its opening movie, and renders the first playable area on real hardware — on a Redfinger cloud phone (Galaxy S25+, Adreno; earlier runs on a Galaxy Note20, Mali-G77)."
       }
     ],
     "notes": {
-      "en": "An Android port of God of War II created via PS2Recomp static recompilation featuring a custom Vulkan GS backend. The game now boots, plays its intro movie, and renders the first in-game area on real hardware.",
-      "pt-br": "Um port de God of War II para Android criado via recompilação estática com PS2Recomp e backend GS customizado em Vulkan. O jogo agora inicia, reproduz a CG de abertura e renderiza a primeira área de jogo em hardware real."
+      "en": "An Android port of God of War II created via PS2Recomp static recompilation featuring a custom Vulkan GS backend. The game boots, plays its intro movie, and renders the first in-game area on real hardware.",
+      "pt-br": "Um port de God of War II para Android criado via recompilação estática com PS2Recomp e backend GS customizado em Vulkan. O jogo inicia, reproduz a CG de abertura e renderiza a primeira área de jogo em hardware real."
     }
   },
   {
@@ -9222,7 +9222,7 @@
       {
         "id": "ratchet-clank-future-a-crack-in-time",
         "tier": "intro",
-        "source": "README: builds (1.20 update); a scripted new game reaches its first save, then the screen goes black in most runs; not playable"
+        "source": "README: builds (1.20 update); a scripted new game reaches its first level (greatclocka) and plays its opening cutscenes, in 4 of 4 runs; player control there is not confirmed; not playable"
       },
       {
         "id": "ratchet-clank-all-4-one",
@@ -10123,6 +10123,171 @@
     "notes": {
       "en": "Enhanced PC port of the Xbox version of MVP Baseball 2005 statically recompiled using XboxXBERecomp, featuring GameCube and PlayStation controller support with matching UI graphics and save imports.",
       "pt-br": "Port aprimorado para PC da versão de Xbox de MVP Baseball 2005 recompilado estaticamente com XboxXBERecomp, com suporte a controles de GameCube e PlayStation, arte de botões personalizada e importação de saves."
+    }
+  },
+  {
+    "slug": "sonic-riders-recomp",
+    "name": "Sonic Riders Recomp",
+    "repo": "teclilla18/sonic-riders-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "android",
+      "ios",
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL 3.3",
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "sonic-riders",
+        "tier": "ingame",
+        "source": "README: Playable from boot to races, story mode and 4-player Free Race, with sound, on both platforms."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation port of Sonic Riders for GameCube supporting PC, Linux/Steam Deck, Switch, Android, and iOS with widescreen and high frame rates.",
+      "pt-br": "Port por recompilação estática de Sonic Riders do GameCube com suporte a PC, Linux/Steam Deck, Switch, Android e iOS, trazendo widescreen e altas taxas de quadros."
+    }
+  },
+  {
+    "slug": "wondersbeyondrecomp",
+    "name": "WondersBeyondRecomp",
+    "repo": "eliasm4r/WondersBeyondRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "pokepark-2-wonders-beyond",
+        "tier": "ingame",
+        "source": "README: The whole game boots, plays and saves, but expect rough edges."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of PokéPark 2: Wonders Beyond for Wii running natively on Windows with up to 120 FPS support, high internal resolutions, keyboard/mouse controls, and custom texture support.",
+      "pt-br": "Recompilação estática de PokéPark 2: Wonders Beyond do Wii rodando nativamente no Windows com suporte a até 120 FPS, resoluções internas elevadas, suporte a teclado/mouse e pacotes de texturas customizados."
+    }
+  },
+  {
+    "slug": "alienation-pc",
+    "name": "Alienation",
+    "repo": "saulob/alienation-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "alienation",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native x86-64 execution port of the PS4 twin-stick shooter with Vulkan rendering, up to 4-player online and local co-op, ultrawide support, and custom launcher.",
+      "pt-br": "Port nativo por execução x86-64 do jogo de tiro twin-stick para PS4 com renderização em Vulkan, co-op local e online para até 4 jogadores, suporte a ultrawide e launcher próprio."
+    }
+  },
+  {
+    "slug": "f1-06-pc",
+    "name": "F1 06 PC",
+    "repo": "KevinL50-sysadmin/F1-06-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "formula-one-06",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of Formula One 06 (PAL) built with PS2Recomp and paraLLEl-GS over Vulkan, featuring in-menu PC options, split-screen netplay, photo mode, and steering wheel support with force feedback.",
+      "pt-br": "Port nativo para Windows de Formula One 06 (PAL) feito com PS2Recomp e paraLLEl-GS via Vulkan, com opções de PC nos menus do jogo, netplay em tela dividida, modo foto e suporte a volantes com force feedback."
+    }
+  },
+  {
+    "slug": "ghsmashhrecomp",
+    "name": "Guitar Hero: Smash Hits",
+    "repo": "ElGuslml/GHSmashHRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "guitar-hero-smash-hits",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Guitar Hero: Smash Hits for Xbox 360 running natively on Windows via ReXGlue with Vulkan graphics.",
+      "pt-br": "Recompilação estática de Guitar Hero: Smash Hits do Xbox 360 rodando nativamente no Windows via ReXGlue com gráficos em Vulkan."
+    }
+  },
+  {
+    "slug": "robotron64recompiled",
+    "name": "Robotron 64: Recompiled",
+    "repo": "MGZeroes/Robotron64Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "android",
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "robotron-64",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Robotron 64 for Windows, Linux, and Android using N64Recomp and RT64. Features modern twin-stick aiming, widescreen support, high frame rates, co-op play, and custom texture packs.",
+      "pt-br": "Recompilação estática de Robotron 64 para Windows, Linux e Android usando N64Recomp e RT64. Conta com mira em dois analógicos, suporte a widescreen, taxas de quadros elevadas, modo cooperativo e pacotes de texturas personalizados."
     }
   }
 ]

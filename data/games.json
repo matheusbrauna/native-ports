@@ -1992,5 +1992,41 @@
     "title": "MVP Baseball 2005",
     "console": "xbox",
     "titleIds": []
+  },
+  {
+    "id": "sonic-riders",
+    "title": "Sonic Riders",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "pokepark-2-wonders-beyond",
+    "title": "PokéPark 2: Wonders Beyond",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "alienation",
+    "title": "Alienation",
+    "console": "ps4",
+    "titleIds": []
+  },
+  {
+    "id": "formula-one-06",
+    "title": "Formula One 06",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "guitar-hero-smash-hits",
+    "title": "Guitar Hero: Smash Hits",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "robotron-64",
+    "title": "Robotron 64",
+    "console": "n64",
+    "titleIds": []
   }
 ]

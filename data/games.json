@@ -2028,5 +2028,47 @@
     "title": "Robotron 64",
     "console": "n64",
     "titleIds": []
+  },
+  {
+    "id": "need-for-speed-underground-2",
+    "title": "Need for Speed: Underground 2",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "harry-potter-and-the-chamber-of-secrets-xbox",
+    "title": "Harry Potter and the Chamber of Secrets",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "splatoon-3",
+    "title": "Splatoon 3",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "new-pokemon-snap",
+    "title": "New Pokémon Snap",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "test-drive-eve-of-destruction",
+    "title": "Test Drive: Eve of Destruction",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "lollipop-chainsaw",
+    "title": "Lollipop Chainsaw",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "harvest-moon-magical-melody",
+    "title": "Harvest Moon: Magical Melody",
+    "console": "gamecube",
+    "titleIds": []
   }
 ]

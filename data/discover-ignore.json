@@ -740,10 +740,6 @@
     "reason": "Triage: Ports whose target is another console are out of scope."
   },
   {
-    "repo": "LeoDeadware/HoMM4Deadware",
-    "reason": "Triage: Heroes of Might and Magic IV is a PC game, which is out of scope for a catalog of console game ports."
-  },
-  {
     "repo": "Eladerino/JetSetRadioFuture-Unleashed-NX",
     "reason": "Triage: The project's only target platform is another console (Nintendo Switch)."
   },
@@ -818,5 +814,29 @@
   {
     "repo": "schuler-ph/nsmbw-switch",
     "reason": "Triage: The repository's only target is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "elipp/ctr-rs",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "MEKCCK/MHGU-Relink",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Roganis/HIRAKU",
+    "reason": "Triage: This repository is an arcade multi-system emulator and framework, which is out of scope."
+  },
+  {
+    "repo": "MisterAlex95/Xrecomp",
+    "reason": "Triage: Recompiler toolchains and engines on their own are out of scope."
+  },
+  {
+    "repo": "Elie-0066/SPR-Recomp-Project",
+    "reason": "Triage: Splatoon Raiders is a fictional game rather than a real console game."
+  },
+  {
+    "repo": "royilkom-alt/PS2Apple",
+    "reason": "Triage: It is a static recompilation build tool rather than a port of a specific game."
   }
 ]

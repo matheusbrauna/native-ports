@@ -7826,16 +7826,21 @@
     "toolchain": "XenonRecomp",
     "platforms": [
       "linux",
-      "macos",
       "steamdeck",
-      "windows"
+      "windows",
+      "macos",
+      "arm"
     ],
-    "graphics": [],
+    "graphics": [
+      "Direct3D 12.0",
+      "Vulkan 1.2",
+      "Metal 3"
+    ],
     "games": [
       {
         "id": "sonic-the-hedgehog-2006",
-        "tier": "wip",
-        "source": "README: This recompilation is still under active development and is NOT meant for public use."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -9348,8 +9353,8 @@
     "games": [
       {
         "id": "pokemon-legends-arceus",
-        "tier": "ingame",
-        "source": "README: The recompiled game runs at about 30 frames each second from the first start into the Obsidian Fieldlands. This covers the opening scene at sea, the name entry, saving and loading, a capture, the village, a battle against an NPC and the first minutes in the Obsidian Fieldlands."
+        "tier": "wip",
+        "source": "README: Status: work in progress (alpha stage)"
       }
     ],
     "notes": {
@@ -10288,6 +10293,299 @@
     "notes": {
       "en": "Static recompilation of Robotron 64 for Windows, Linux, and Android using N64Recomp and RT64. Features modern twin-stick aiming, widescreen support, high frame rates, co-op play, and custom texture packs.",
       "pt-br": "Recompilação estática de Robotron 64 para Windows, Linux e Android usando N64Recomp e RT64. Conta com mira em dois analógicos, suporte a widescreen, taxas de quadros elevadas, modo cooperativo e pacotes de texturas personalizados."
+    }
+  },
+  {
+    "slug": "arnaldolima1-gow-ascension-pc",
+    "name": "God of War: Ascension",
+    "repo": "arnaldolima1/gow-ascension-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows",
+      "macos"
+    ],
+    "graphics": [
+      "Vulkan",
+      "OpenGL",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "god-of-war-ascension",
+        "tier": "playable",
+        "source": "README: O iSamigor jogou do começo ao fim no PC dele (Ryzen 7 9800X3D, RX 9070 XT)."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of God of War: Ascension for PC based on ps3recomp, beatable from start to finish with Vulkan, OpenGL, and Direct3D 12 renderers.",
+      "pt-br": "Recompilação estática de God of War: Ascension para PC baseada no ps3recomp, jogável do início ao fim com renderizadores Vulkan, OpenGL e Direct3D 12."
+    }
+  },
+  {
+    "slug": "rotkdeadware",
+    "name": "The Lord of the Rings: The Return of the King",
+    "repo": "LeoDeadware/ROTKDeadware",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "x86recomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "the-lord-of-the-rings-the-return-of-the-king",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of the original Xbox version for Apple Silicon Macs, featuring HD textures and customizable high frame rates.",
+      "pt-br": "Uma recompilação estática da versão de Xbox original para Macs com Apple Silicon, trazendo pacotes de texturas HD e suporte a altas taxas de quadros."
+    }
+  },
+  {
+    "slug": "nfsu2deadware",
+    "name": "Need for Speed: Underground 2",
+    "repo": "LeoDeadware/NFSU2Deadware",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "need-for-speed-underground-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native macOS port of the original Xbox version built using static recompilation, supporting Metal graphics, widescreen resolutions, and HD texture packs.",
+      "pt-br": "Port nativo para macOS da versão original de Xbox usando recompilação estática, com suporte a Metal, resoluções widescreen e pacotes de textura em HD."
+    }
+  },
+  {
+    "slug": "hp2deadware",
+    "name": "Harry Potter and the Chamber of Secrets",
+    "repo": "LeoDeadware/HP2Deadware",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "x86recomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "harry-potter-and-the-chamber-of-secrets-xbox",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native port of the Xbox release for macOS on Apple Silicon using static recompilation, featuring Metal graphics, high-framerate support, widescreen, and included HD textures.",
+      "pt-br": "Port nativo do lançamento de Xbox para macOS em Apple Silicon usando recompilação estática, com gráficos em Metal, suporte a alta taxa de quadros, widescreen e texturas em HD inclusas."
+    }
+  },
+  {
+    "slug": "kalamar",
+    "name": "Kalamar",
+    "repo": "CyriacFR/Kalamar",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "totk-pc-recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "splatoon-3",
+        "tier": "ingame",
+        "source": "README: works on the few machines it was tried on, mainly with NVIDIA cards; visual bugs and crashes are still expected"
+      }
+    ],
+    "notes": {
+      "en": "An unofficial native Windows port of Splatoon 3 built via static recompilation, featuring an automated installer launcher, offline play, and custom community server support.",
+      "pt-br": "Port nativo não oficial de Splatoon 3 para Windows via recompilação estática, com launcher automatizado, modo offline e suporte a servidores comunitários."
+    }
+  },
+  {
+    "slug": "snap-recomp",
+    "name": "Snap Recomp",
+    "repo": "finalpantasy/snap-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "new-pokemon-snap",
+        "tier": "ingame",
+        "source": "README: Early playable. The game boots to the title screen and the lab hub, all 14 courses play to the end, and photos can be taken, scored, saved and reloaded."
+      }
+    ],
+    "notes": {
+      "en": "A native Windows static recompilation of New Pokémon Snap featuring an NVN-to-Vulkan renderer, upscaling (DLSS, FSR, XeSS), enhanced graphics settings, input remapping, and mod support.",
+      "pt-br": "Recompilação estática nativa para Windows de New Pokémon Snap com renderizador NVN para Vulkan, suporte a upscaling (DLSS, FSR, XeSS), configurações gráficas aprimoradas, remapeamento de controles e suporte a mods."
+    }
+  },
+  {
+    "slug": "eod-recomp",
+    "name": "Test Drive: Eve of Destruction",
+    "repo": "catsandsoup/eod-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "test-drive-eve-of-destruction",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native static recompilation of the PS2 demolition racer, featuring online multiplayer, custom soundtracks, widescreen and higher resolution options, and modding tools.",
+      "pt-br": "Uma recompilação estática nativa do jogo de corrida e demolição do PS2, contando com multiplayer online, trilhas sonoras personalizadas, suporte a widescreen e resoluções mais altas, além de ferramentas de modding."
+    }
+  },
+  {
+    "slug": "midnight-club-3-redub",
+    "name": "Midnight Club 3: ReDUB",
+    "repo": "dea7hsmiless/Midnight-Club-3-ReDUB",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "midnight-club-3-dub-edition-remix",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A Windows native port of Midnight Club 3: DUB Edition Remix recompiled from the original Xbox version. Features OpenGL and Vulkan renderers, DLSS support, HD texture loading, and external media player controls.",
+      "pt-br": "Port nativo para Windows de Midnight Club 3: DUB Edition Remix recompilado a partir da versão de Xbox original. Inclui renderizadores OpenGL e Vulkan, suporte a DLSS, carregamento de texturas HD e controles de reprodutor de mídia externo."
+    }
+  },
+  {
+    "slug": "lollipop-chainsaw-recomp",
+    "name": "Lollipop Chainsaw Recomp",
+    "repo": "kxrxh/lollipop-chainsaw-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "lollipop-chainsaw",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "An Xbox 360 static recompilation of Lollipop Chainsaw for Windows built using ReXGlue.",
+      "pt-br": "Uma recompilação estática do Lollipop Chainsaw de Xbox 360 para Windows desenvolvida com ReXGlue."
+    }
+  },
+  {
+    "slug": "tenchuz-xbox-recomp",
+    "name": "Tenchu Z Recompiled",
+    "repo": "Aulcreen/TenchuZ-Xbox-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "tenchu-z",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Tenchu Z for Xbox 360 built with ReXGlue, featuring higher resolutions, 60 fps, lasting blood effects, and online play over Steam.",
+      "pt-br": "Recompilação estática de Tenchu Z para Xbox 360 feita com ReXGlue, trazendo suporte a resoluções elevadas, 60 fps, efeitos de sangue persistentes e modo online via Steam."
+    }
+  },
+  {
+    "slug": "hmmmgc",
+    "name": "Harvest Moon: Magical Melody",
+    "repo": "RodoLy/HMMMGC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "WiiCompiled",
+    "platforms": [
+      "linux",
+      "windows",
+      "arm"
+    ],
+    "graphics": [
+      "WebGPU",
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "harvest-moon-magical-melody",
+        "tier": "ingame",
+        "source": "README: Version 0.1.0, the first playable version. The game starts, plays, saves and loads, and it has been played on a Windows laptop with a Snapdragon X. It has not been played from start to finish yet, which is what 1.0 will mean."
+      }
+    ],
+    "notes": {
+      "en": "A native PC port of Harvest Moon: Magical Melody for GameCube built via WiiCompiled's static recompiler and the Aurora WebGPU renderer, featuring native x64 and ARM64 support, high frame rates, widescreen support, and built-in mods.",
+      "pt-br": "Port nativo para PC de Harvest Moon: Magical Melody do GameCube desenvolvido via recompilador estático do WiiCompiled e renderizador Aurora WebGPU, com suporte nativo a x64 e ARM64, taxas de quadros elevadas, widescreen e mods integrados."
     }
   }
 ]

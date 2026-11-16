@@ -2070,5 +2070,29 @@
     "title": "Harvest Moon: Magical Melody",
     "console": "gamecube",
     "titleIds": []
+  },
+  {
+    "id": "wwe-12",
+    "title": "WWE '12",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "far-cry-instincts-evolution",
+    "title": "Far Cry Instincts Evolution",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "freekstyle",
+    "title": "Freekstyle",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "the-legend-of-zelda-ocarina-of-time",
+    "title": "The Legend of Zelda: Ocarina of Time",
+    "console": "n64",
+    "titleIds": []
   }
 ]

@@ -10753,32 +10753,5 @@
       "en": "A native recompilation port of Ocarina of Time based on Longshot, adding AMD FSR frame generation support and high frame rate fixes.",
       "pt-br": "Um port por recompilação nativa de Ocarina of Time baseado no Longshot, adicionando suporte a geração de quadros AMD FSR e correções para taxas de quadros elevadas."
     }
-  },
-  {
-    "slug": "bloodborne-pc-vulkan",
-    "name": "Bloodborne PC Port (Vulkan)",
-    "repo": "lapothecary/bloodborne-pc-vulkan",
-    "upstream": null,
-    "kind": "port",
-    "technique": "runtime",
-    "toolchain": "bbport",
-    "platforms": [
-      "linux",
-      "windows"
-    ],
-    "graphics": [
-      "Vulkan"
-    ],
-    "games": [
-      {
-        "id": "bloodborne",
-        "tier": "unrated",
-        "source": null
-      }
-    ],
-    "notes": {
-      "en": "A Bloodborne PC port built on the bbport runtime layer, featuring a refactored C++20 graphics engine, Vulkan 1.3 renderer, and DLSS/FSR upscaling.",
-      "pt-br": "Um port de PC de Bloodborne baseado na camada de runtime bbport, trazendo um motor gráfico refatorado em C++20, renderizador Vulkan 1.3 e upscaling via DLSS/FSR."
-    }
   }
 ]

@@ -842,5 +842,9 @@
   {
     "repo": "Sahilg93/arm64-recompiler",
     "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "lapothecary/bloodborne-pc-vulkan",
+    "reason": "emulator-based (shadPS4), not a native port/recomp"
   }
 ]

@@ -838,5 +838,9 @@
   {
     "repo": "royilkom-alt/PS2Apple",
     "reason": "Triage: It is a static recompilation build tool rather than a port of a specific game."
+  },
+  {
+    "repo": "Sahilg93/arm64-recompiler",
+    "reason": "Likely a tool, list or emulator (matched its description)"
   }
 ]

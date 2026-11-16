@@ -7435,7 +7435,8 @@
     "technique": "recomp",
     "toolchain": "ps3recomp",
     "platforms": [
-      "windows"
+      "windows",
+      "steamdeck"
     ],
     "graphics": [
       "Direct3D 12"
@@ -7443,13 +7444,13 @@
     "games": [
       {
         "id": "ratchet-clank-tools-of-destruction",
-        "tier": "ingame",
-        "source": "README: The game is playable from the first planet onwards, but it is not finished: see Status and Known issues before you start."
+        "tier": "playable",
+        "source": "README: The game can be played from start to finish, but the port is not finished: see Status and Known issues before you start."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of the PS3 European release (BCES00052) for Windows built with ps3recomp, featuring Direct3D 12, up to 4K 60 fps, DualSense adaptive triggers, save slot selection, and restored level audio streams.",
-      "pt-br": "Port por recompilação estática da versão europeia do PS3 (BCES00052) para Windows criado com o ps3recomp, com suporte a Direct3D 12, até 4K a 60 fps, gatilhos adaptativos do DualSense, seleção de slots de salvamento e áudio de níveis restaurado."
+      "en": "Static recompilation port of the PS3 European release (BCES00052) for Windows built with ps3recomp, featuring Direct3D 12, up to 4K 60 fps, DualSense adaptive triggers, save slot selection, and playability from start to finish.",
+      "pt-br": "Port por recompilação estática da versão europeia do PS3 (BCES00052) para Windows criado com o ps3recomp, com suporte a Direct3D 12, até 4K a 60 fps, gatilhos adaptativos do DualSense, seleção de slots de salvamento e jogabilidade do início ao fim."
     }
   },
   {
@@ -9231,8 +9232,8 @@
       },
       {
         "id": "ratchet-clank-all-4-one",
-        "tier": "intro",
-        "source": "README: builds (1.03 update); scripted menus reach the first level, then the game stops; not playable"
+        "tier": "ingame",
+        "source": "README: builds (1.03 update); reaches its first fight in colour, then the characters fall through the floor; not playable"
       },
       {
         "id": "ratchet-clank-full-frontal-assault",
@@ -9251,8 +9252,8 @@
       }
     ],
     "notes": {
-      "en": "Static recompilation project for Ratchet & Clank games on PS3 using ps3recomp. Tools of Destruction reaches in-game levels but is not fully playable yet.",
-      "pt-br": "Projeto de recompilação estática para jogos de Ratchet & Clank no PS3 usando ps3recomp. Tools of Destruction chega às fases em jogo, mas ainda não é totalmente jogável."
+      "en": "Static recompilation project for Ratchet & Clank games on PS3 using ps3recomp. Multiple games reach in-game levels but are not fully playable yet.",
+      "pt-br": "Projeto de recompilação estática para jogos de Ratchet & Clank no PS3 usando ps3recomp. Vários jogos chegam às fases em jogo, mas ainda não são totalmente jogáveis."
     }
   },
   {
@@ -10088,6 +10089,8 @@
     "technique": "recomp",
     "toolchain": "ps2-native-recomp",
     "platforms": [
+      "linux",
+      "macos",
       "windows"
     ],
     "graphics": [
@@ -10097,12 +10100,12 @@
       {
         "id": "mojo",
         "tier": "ingame",
-        "source": "README: The original working build has been played beyond round 10 without reported bugs."
+        "source": "README: The Windows build has been played beyond round 10 without reported bugs."
       }
     ],
     "notes": {
-      "en": "Native Windows port of MOJO! (PS2) built using ps2-native-recomp, supporting Direct3D 12 and optional RecompLauncher integration.",
-      "pt-br": "Port nativo para Windows de MOJO! (PS2) criado com ps2-native-recomp, com suporte a Direct3D 12 e integração opcional ao RecompLauncher."
+      "en": "Native port of MOJO! (PS2) built using ps2-native-recomp, supporting Windows alongside experimental Linux and macOS builds, Direct3D 12, and optional RecompLauncher integration.",
+      "pt-br": "Port nativo de MOJO! (PS2) criado com ps2-native-recomp, com suporte a Windows e builds experimentais para Linux e macOS, Direct3D 12 e integração opcional ao RecompLauncher."
     }
   },
   {
@@ -10586,6 +10589,196 @@
     "notes": {
       "en": "A native PC port of Harvest Moon: Magical Melody for GameCube built via WiiCompiled's static recompiler and the Aurora WebGPU renderer, featuring native x64 and ARM64 support, high frame rates, widescreen support, and built-in mods.",
       "pt-br": "Port nativo para PC de Harvest Moon: Magical Melody do GameCube desenvolvido via recompilador estático do WiiCompiled e renderizador Aurora WebGPU, com suporte nativo a x64 e ARM64, taxas de quadros elevadas, widescreen e mods integrados."
+    }
+  },
+  {
+    "slug": "wwe12-pc",
+    "name": "WWE '12 PC",
+    "repo": "iMrBurn/wwe12-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "DirectX 12",
+      "DirectX 11"
+    ],
+    "games": [
+      {
+        "id": "wwe-12",
+        "tier": "ingame",
+        "source": "README: Rendering: menus, matches (1 to 6 wrestlers) and entrances run on Windows with Vulkan, DirectX 12 and DirectX 11 renderers (see \"What native means here\" above)."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of WWE '12 using ReXGlue, featuring Vulkan, DirectX 12, and DirectX 11 renderers, modding support, and an Android build.",
+      "pt-br": "Recompilação estática de WWE '12 utilizando ReXGlue, com renderizadores Vulkan, DirectX 12 e DirectX 11, suporte a mods e versão para Android."
+    }
+  },
+  {
+    "slug": "new-poke-snap-switch-recomp",
+    "name": "New Pokémon Snap Switch Recomp",
+    "repo": "finalpantasy/new-poke-snap-switch-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "new-pokemon-snap",
+        "tier": "ingame",
+        "source": "README: Early playable."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of New Pokémon Snap for Windows featuring Vulkan graphics, upscaling (DLSS, FSR, XeSS), unlocked frame rates up to 240 FPS, HD texture options, and extensive PC control settings.",
+      "pt-br": "Recompilação estática de New Pokémon Snap para Windows com suporte a Vulkan, upscaling (DLSS, FSR, XeSS), taxa de quadros desbloqueada até 240 FPS, texturas HD e menu de configurações completo para PC."
+    }
+  },
+  {
+    "slug": "renut-android",
+    "name": "reNut for Android",
+    "repo": "Innersargento/Renut-Android",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "banjo-kazooie-nuts-bolts",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Android port of Banjo-Kazooie: Nuts & Bolts based on reNut, using static recompilation via ReXGlue and rendering over Vulkan.",
+      "pt-br": "Port para Android de Banjo-Kazooie: Nuts & Bolts baseado no reNut, utilizando recompilação estática via ReXGlue e renderização em Vulkan."
+    }
+  },
+  {
+    "slug": "far-cry-instincts-evolution-recomp",
+    "name": "Far Cry Instincts Evolution Recomp",
+    "repo": "bassobr/Far-Cry-Instincts-Evolution-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "far-cry-instincts-evolution",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Far Cry Instincts Evolution for the original Xbox to native Windows 64-bit executable using Direct3D 11.",
+      "pt-br": "Recompilação estática de Far Cry Instincts Evolution do Xbox original para um executável nativo do Windows em 64 bits usando Direct3D 11."
+    }
+  },
+  {
+    "slug": "freekstyle-native-port",
+    "name": "Freekstyle",
+    "repo": "Broly1/freekstyle-native-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "freekstyle",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native Linux port of Freekstyle (PS2) built via static recompilation into Rust with a Vulkan renderer. Features upscaled and custom HD textures, widescreen support, enhanced audio/movie options, and file-based saves.",
+      "pt-br": "Port nativo para Linux de Freekstyle (PS2) criado via recompilação estática em Rust com renderizador Vulkan. Suporta texturas em alta resolução, proporção widescreen, melhorias em áudio e vídeos, e salvamento direto em arquivos."
+    }
+  },
+  {
+    "slug": "ocadim",
+    "name": "OcaDim",
+    "repo": "Dimi42FR/OcaDim",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Longshot",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-ocarina-of-time",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A native recompilation port of Ocarina of Time based on Longshot, adding AMD FSR frame generation support and high frame rate fixes.",
+      "pt-br": "Um port por recompilação nativa de Ocarina of Time baseado no Longshot, adicionando suporte a geração de quadros AMD FSR e correções para taxas de quadros elevadas."
+    }
+  },
+  {
+    "slug": "bloodborne-pc-vulkan",
+    "name": "Bloodborne PC Port (Vulkan)",
+    "repo": "lapothecary/bloodborne-pc-vulkan",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": "bbport",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "bloodborne",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A Bloodborne PC port built on the bbport runtime layer, featuring a refactored C++20 graphics engine, Vulkan 1.3 renderer, and DLSS/FSR upscaling.",
+      "pt-br": "Um port de PC de Bloodborne baseado na camada de runtime bbport, trazendo um motor gráfico refatorado em C++20, renderizador Vulkan 1.3 e upscaling via DLSS/FSR."
     }
   }
 ]

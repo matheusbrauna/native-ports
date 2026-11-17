@@ -10853,7 +10853,8 @@
     "technique": "recomp",
     "toolchain": "ReXGlue",
     "platforms": [
-      "windows"
+      "windows",
+      "switch"
     ],
     "graphics": [
       "deko3d"

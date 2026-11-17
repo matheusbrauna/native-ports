@@ -40,9 +40,12 @@ Design system source: `src/styles/global.css`; the Paper guide (file "Native Por
 - 2026-11-16 — The platform filter is the per-device cut; no per-device verdict on pages — it already answers "what runs on my device".
 - 2026-11-16 — The game page leads with a big verdict (best tier), the first thing seen — the ProtonDB "verdict at a glance"; today it is a small block beside the title, so this is a pending design task.
 - 2026-11-16 — Imported the design system into Paper: 25 tokens registered (--step--1 as --step-m1; --gutter, --measure, --ease, --dur shown as text), Tier block, Tier strip + legend, Chip, Button and Search drawn; the rest indexed as "in code only".
+- 2026-11-16 — New tokens `--radius-hair` 2px, `--radius-tag` 3px, `--selection` #35558f (selected text now `--ink`) and the spacing scale `--space-xs…3xl` (6/8/12/16/28/48/64) — no loose values left to drift.
+- 2026-11-16 — Spacing snapped to the scale, ties rounded down (7→6, 10→8, 11/13/14→12, 18/20/22→16, 24/30/32/36→28, 40/44→48) — the brief is dense; one scale beats tuned one-offs. Kept literal: values of 5px and under (hairline offsets), the 44px tree-guide indent and the baseline-alignment cell offsets.
+- 2026-11-16 — One disabled rule: primary `--raised` fill + `--ink-3` text, ghost `--line` outline + `--ink-3`, no hover.
+- 2026-11-16 — Zero-count tier toggles and chips dim (`--ink-3`, swatch 40%, chip loses its fill) but stay clickable; pressed wins — other filters can empty a pressed tier, and it must stay releasable.
 
 ## Open questions
 - Only one mood word was given ("nerdy / of the scene"); the older spec also implied dense and precise (assumed).
-- Gaps found on import: tag (3px) and swatch (2px) radii and the spacing steps are hard-coded, not tokens; `::selection` uses a fixed #35558f; no control has a disabled state. Tokenise them?
-- Proposed (drawn, not in code): a zero-count tier toggle, dimmed. Adopt it?
+- The spacing snap (2026-11-16) changed density on Catalog, GamePage, PortDetail, ConsolePage, Prose and the header/footer; it has not had a visual review yet.
 - PRODUCT.md lists the final domain as undecided, but README points to ports.matheusbrauna.com.br — is that settled?

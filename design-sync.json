@@ -15,6 +15,7 @@
     "--link": "#82acff",
     "--link-hover": "#a9c5ff",
     "--on-tier": "#101216",
+    "--selection": "#35558f",
     "--tier-playable": "#3ecf6e",
     "--tier-ingame": "#f2c94c",
     "--tier-intro": "#f2994a",
@@ -28,13 +29,27 @@
     "--step-2": "1.375rem",
     "--step-3": "1.875rem",
     "--step-4": "2.5rem",
+    "--radius-hair": "2px",
+    "--radius-tag": "3px",
     "--radius": "4px",
+    "--space-xs": "6px",
+    "--space-sm": "8px",
+    "--space-md": "12px",
+    "--space-lg": "16px",
+    "--space-xl": "28px",
+    "--space-2xl": "48px",
+    "--space-3xl": "64px",
     "--gutter": "clamp(16px, 3vw, 32px)",
     "--measure": "68ch",
     "--ease": "cubic-bezier(0.16, 1, 0.3, 1)",
     "--dur": "160ms"
   },
-  "notRegisteredInTool": ["--gutter", "--measure", "--ease", "--dur"],
+  "notRegisteredInTool": [
+    "--gutter",
+    "--measure",
+    "--ease",
+    "--dur"
+  ],
   "components": {
     "Tier block": "drawn",
     "Tier strip + legend": "drawn",
@@ -51,5 +66,6 @@
     "Footer": "in code only",
     "Empty state": "in code only",
     "Skip link": "in code only"
-  }
+  },
+  "notes": "Spacing, padding and margin use --space-*; values of 5px and under, the tree-guide indent (44px) and baseline-alignment cell offsets stay literal."
 }

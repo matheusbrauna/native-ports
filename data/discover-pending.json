@@ -298,5 +298,13 @@
   {
     "repo": "StarlingK/extinction",
     "reason": "Triage was unsure: The README does not clarify the technique used to port the game, such as static recompilation or native runtime execution."
+  },
+  {
+    "repo": "tyle-beep/Haiku",
+    "reason": "Triage accepted it, but: Console \"3ds\" is not in the catalog yet (Fire Emblem Fates: Special Edition)"
+  },
+  {
+    "repo": "jsp244/vs-smb-recomp",
+    "reason": "Triage accepted it, but: Console \"arcade\" is not in the catalog yet (VS. Super Mario Bros.)"
   }
 ]

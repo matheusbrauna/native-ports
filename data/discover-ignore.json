@@ -846,5 +846,25 @@
   {
     "repo": "lapothecary/bloodborne-pc-vulkan",
     "reason": "emulator-based (shadPS4), not a native port/recomp"
+  },
+  {
+    "repo": "AIshihzong/awesome-switch-recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Berny23/slingshot-animals-recomp",
+    "reason": "Triage: The repository ports Android mobile games, which are not console games."
+  },
+  {
+    "repo": "gerisson1996/gow-collection-nx",
+    "reason": "Triage: The port's only target platform is another console (Nintendo Switch)."
+  },
+  {
+    "repo": "mbarradev-debug/nxnative-macos-guide",
+    "reason": "Triage: This repository is a guide for building games with nxnative, not a game port itself."
+  },
+  {
+    "repo": "Sashi-hub085/ue-bulk-export",
+    "reason": "Triage: The repository is an asset extraction tool for Unreal Engine games, not a native game port."
   }
 ]

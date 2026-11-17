@@ -34,7 +34,7 @@ const s = t[lang].pager;
      on the same hairline that closes a group of rows. */
   .pager {
     display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-    gap: 8px 16px; max-width: 100%; margin-top: 4px; padding: 12px 0 4px;
+    gap: var(--space-sm) var(--space-lg); max-width: 100%; margin-top: 4px; padding: var(--space-md) 0 4px;
     border-top: 1px solid var(--line);
   }
   .pager-status { color: var(--ink-2); font-size: var(--step--1); }
@@ -43,14 +43,14 @@ const s = t[lang].pager;
   .pager-pages { gap: 2px; }
   .page-btn, .pager :global(.page-num) {
     display: inline-flex; align-items: center; justify-content: center; gap: 4px; flex-shrink: 0;
-    height: 32px; min-width: 32px; padding: 0 8px; border: 0; border-radius: var(--radius); cursor: pointer; appearance: none;
+    height: 32px; min-width: 32px; padding: 0 var(--space-sm); border: 0; border-radius: var(--radius); cursor: pointer; appearance: none;
     background: transparent; color: var(--ink-2); font: inherit; font-size: var(--step--1);
     transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
   }
   .page-btn { font-weight: 700; }
   .page-btn:hover:not(:disabled) { background: var(--panel); color: var(--ink); }
   .page-btn:disabled { color: var(--ink-3); cursor: default; }
-  .pager :global(.page-num) { padding: 0 6px; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+  .pager :global(.page-num) { padding: 0 var(--space-xs); font-family: var(--font-data); font-variant-numeric: tabular-nums; }
   .pager :global(.page-num:hover) { background: var(--panel); color: var(--ink); }
   .pager :global(.page-num[aria-current="page"]) {
     background: var(--raised); color: var(--ink); font-weight: 600; cursor: default;

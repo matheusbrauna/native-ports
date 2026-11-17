@@ -10,8 +10,15 @@ const now = Date.now();
 const counts = tierCounts(list);
 const best = bestTier(list);
 const plats = platformsOf(list).map((p) => s.platforms[p]);
-const siblings = groups.filter((g) => g.game.console === game.console && g.game.id !== game.id);
 const n = list.length;
+const bestLabel = s.tiers[best].label;
+const mix = TIERS.filter((tier) => counts[tier] > 0);
+// One port: the tier already is its declaration, so the counts cell is dropped.
+const verdictCount = counts[best] === n ? s.verdict.all(n, bestLabel) : s.verdict.count(counts[best], n, bestLabel);
+// Proof for the verdict: the declared source of the best-tier port. Raw README table rows read as noise, so they are skipped.
+const usableSource = (src?: string | null) => (src && !/^[^:]*:\s*\|/.test(src) ? src : null);
+const proof = [...list].sort(defaultOrder).find((e) => e.tier === best && usableSource(e.source));
+const siblings = groups.filter((g) => g.game.console === game.console && g.game.id !== game.id);
 const lede =
   lang === "en"
     ? `${n} unofficial native ${n === 1 ? "port" : "ports"} of ${game.title} for the ${s.consoles[game.console]}, running on ${new Intl.ListFormat("en").format(plats)}. Each runs the game's own code instead of emulating the console, and needs your own copy of the game.`
@@ -30,14 +37,37 @@ const lede =
       <a href={path(`/consoles/${game.console}/`, lang)}>{s.consoles[game.console]}</a>
       {game.titleIds.length > 0 && <span class="data"> · {game.titleIds.join(" · ")}</span>}
     </p>
+    <section class:list={["verdict", n === 1 && "single"]} aria-label={s.bestStatus}>
+      <div class="v-tier">
+        <span class="label">{s.bestStatus}</span>
+        <span class="tier lg" data-tier={best}>{bestLabel}</span>
+      </div>
+      <div class="v-why">
+        <p class="v-hint">{s.tiers[best].hint}</p>
+        {proof && (
+          <p class="v-source">
+            <span class="label">{s.verdict.source(proof.port.name)}</span>
+            <span class="data quote">{usableSource(proof.source)}</span>
+          </p>
+        )}
+      </div>
+      {n > 1 && (
+        <div class="v-count">
+          <p class="v-line">{verdictCount[0]}<b>{verdictCount[1]}</b>{verdictCount[2]}</p>
+          {mix.length > 1 && (
+            <>
+              <span class="strip" aria-hidden="true">
+                {TIERS.map((tier) => <span class="seg" data-seg={tier} style={`flex-grow:${counts[tier]}`}></span>)}
+              </span>
+              <ul class="legend">
+                {mix.map((tier) => <li><span class="swatch" data-tier={tier}></span>{s.tiers[tier].label} <span class="data">{counts[tier]}</span></li>)}
+              </ul>
+            </>
+          )}
+        </div>
+      )}
+    </section>
     <p class="lede">{lede}</p>
-    <div class="summary">
-      <span class="label">{s.bestStatus}</span>
-      <span class="tier" data-tier={best}>{s.tiers[best].label}</span>
-      <span class="strip" aria-hidden="true">
-        {TIERS.map((tier) => <span class="seg" data-seg={tier} style={`flex-grow:${counts[tier]}`}></span>)}
-      </span>
-    </div>
   </header>
 
   <table class="ports">
@@ -88,18 +118,38 @@ const lede =
 </article>
 
 <style>
-  .game { padding-top: 28px; }
-  .crumbs { display: flex; gap: 8px; font-size: var(--step--1); color: var(--ink-3); }
+  .game { padding-top: var(--space-xl); }
+  .crumbs { display: flex; gap: var(--space-sm); font-size: var(--step--1); color: var(--ink-3); }
   .crumbs a { color: var(--ink-2); text-decoration: none; }
   .crumbs a:hover { color: var(--ink); text-decoration: underline; }
-  .head { margin-top: 18px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  .head { margin-top: var(--space-lg); padding-bottom: var(--space-xl); border-bottom: 1px solid var(--line); }
   h1 { font-size: var(--step-4); letter-spacing: -0.02em; }
-  .meta { margin-top: 8px; color: var(--ink-3); font-size: var(--step--1); }
+  .meta { margin-top: var(--space-sm); color: var(--ink-3); font-size: var(--step--1); }
   .meta a { color: var(--ink-2); font-weight: 700; }
-  .lede { margin-top: 14px; color: var(--ink-2); font-size: var(--step-1); max-width: var(--measure); }
-  .summary { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin-top: 20px; }
+  .lede { margin-top: var(--space-lg); color: var(--ink-2); font-size: var(--step-1); max-width: var(--measure); }
+
+  /* Verdict band: the first thing on the page. Tier | why + proof | counts. */
+  .verdict { display: grid; grid-template-columns: 240px 300px minmax(0, 1fr); margin-top: var(--space-xl); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+  .verdict > div { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-md); padding: var(--space-lg) var(--space-xl); min-width: 0; }
+  .v-why, .v-count { border-left: 1px solid var(--line); }
+  .verdict.single { grid-template-columns: 240px minmax(0, 1fr); }
+  .v-tier { gap: var(--space-sm); }
+  .v-count { align-items: stretch; }
   .label { color: var(--ink-3); font-size: var(--step--1); }
-  .strip { display: flex; gap: 2px; width: 220px; height: 10px; border-radius: 3px; overflow: hidden; background: var(--panel); }
+  .v-hint, .v-line { color: var(--ink-2); font-size: var(--step-0); }
+  .v-line b { color: var(--ink); }
+  .v-source { display: flex; flex-direction: column; gap: 2px; align-self: stretch; }
+  .quote { color: var(--ink-3); font-size: var(--step--1); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  .legend { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); color: var(--ink-2); font-size: var(--step--1); }
+  .legend li { display: flex; align-items: center; gap: var(--space-xs); }
+  .legend .data { color: var(--ink-3); }
+  .swatch { width: 8px; height: 8px; border-radius: var(--radius-hair); background: var(--tier-color); }
+  .swatch[data-tier="playable"] { --tier-color: var(--tier-playable); }
+  .swatch[data-tier="ingame"] { --tier-color: var(--tier-ingame); }
+  .swatch[data-tier="intro"] { --tier-color: var(--tier-intro); }
+  .swatch[data-tier="wip"] { --tier-color: var(--tier-wip); }
+  .swatch[data-tier="unrated"] { --tier-color: var(--tier-unrated); }
+  .strip { display: flex; gap: 2px; width: 100%; height: 10px; border-radius: var(--radius-tag); overflow: hidden; background: var(--panel); }
   .seg { flex-basis: 0; min-width: 0; }
   .seg[data-seg="playable"] { background: var(--tier-playable); }
   .seg[data-seg="ingame"] { background: var(--tier-ingame); }
@@ -107,25 +157,39 @@ const lede =
   .seg[data-seg="wip"] { background: var(--tier-wip); }
   .seg[data-seg="unrated"] { background: var(--tier-unrated); }
 
-  .ports { width: 100%; border-collapse: collapse; margin-top: 24px; }
-  .ports thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line-strong); }
-  .ports tbody th, .ports td { text-align: left; padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); vertical-align: top; font-weight: 400; }
+  .ports { width: 100%; border-collapse: collapse; margin-top: var(--space-xl); }
+  .ports thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: var(--space-sm) var(--space-md) var(--space-sm) 0; border-bottom: 1px solid var(--line-strong); }
+  .ports tbody th, .ports td { text-align: left; padding: var(--space-md) var(--space-md) var(--space-md) 0; border-bottom: 1px solid var(--line); vertical-align: top; font-weight: 400; }
   .num { text-align: right !important; white-space: nowrap; }
   .sub { color: var(--ink-2); font-size: var(--step--1); padding-top: 14px !important; }
-  .name { color: var(--ink); font-weight: 700; text-decoration: none; margin-right: 10px; }
+  .name { color: var(--ink); font-weight: 700; text-decoration: none; margin-right: var(--space-sm); }
   .name:hover { color: var(--link-hover); text-decoration: underline; }
   .repo { font-size: var(--step--1); text-decoration: none; overflow-wrap: anywhere; }
   .repo:hover { text-decoration: underline; }
   .repo :global(svg) { display: inline; vertical-align: -1px; margin-left: 5px; }
   .note { display: block; margin-top: 4px; color: var(--ink-3); font-size: var(--step--1); max-width: 70ch; }
-  .own { margin-top: 20px; color: var(--ink-2); font-size: var(--step--1); max-width: var(--measure); padding: 12px 14px; background: var(--panel); border-radius: var(--radius); }
+  .own { margin-top: var(--space-lg); color: var(--ink-2); font-size: var(--step--1); max-width: var(--measure); padding: var(--space-md) var(--space-md); background: var(--panel); border-radius: var(--radius); }
 
-  .siblings { margin-top: 40px; }
+  .siblings { margin-top: var(--space-2xl); }
   .siblings h2 { font-size: var(--step-1); }
-  .siblings ul { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  .siblings ul { list-style: none; padding: 0; margin-top: var(--space-md); display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); }
   .siblings .data { color: var(--ink-3); font-size: var(--step--1); }
 
+  /* Narrower than the three cells need: counts drop to a full-width second row. */
+  @media (max-width: 980px) {
+    .verdict { grid-template-columns: 240px minmax(0, 1fr); }
+    .verdict > .v-count { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); }
+  }
+
   @media (max-width: 760px) {
+    /* Phone: one panel, tier then why, counts, source. The why cell dissolves so its parts can be ordered. */
+    .verdict { display: flex; flex-direction: column; align-items: stretch; gap: var(--space-md); margin-top: var(--space-lg); padding: var(--space-lg); }
+    .verdict > div { padding: 0; border: 0; }
+    .verdict > .v-why { display: contents; }
+    .v-tier { order: 1; }
+    .v-hint { order: 2; }
+    .verdict > .v-count { order: 3; border-left: 0; border-top: 1px solid var(--line); padding-top: var(--space-md); }
+    .v-source { order: 4; border-top: 1px solid var(--line); padding-top: var(--space-md); }
     h1 { font-size: var(--step-3); }
     .hide-sm { display: none; }
     .ports { table-layout: fixed; }

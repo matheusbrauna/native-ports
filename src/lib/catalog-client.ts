@@ -172,11 +172,15 @@ export function initCatalog(): void {
     toggles.forEach((b) => {
       const tier = b.dataset.tierToggle!;
       b.setAttribute("aria-pressed", String(state.tiers.has(tier)));
-      b.querySelector("[data-tier-count]")!.textContent = String(stripCounts[tier] ?? 0);
+      const n = stripCounts[tier] ?? 0;
+      b.querySelector("[data-tier-count]")!.textContent = String(n);
+      b.toggleAttribute("data-empty", n === 0);
     });
     chips.forEach((c) => {
       c.setAttribute("aria-pressed", String(state.platforms.has(c.dataset.platform!)));
-      c.querySelector("[data-platform-count]")!.textContent = String(platformCounts[c.dataset.platform!] ?? 0);
+      const n = platformCounts[c.dataset.platform!] ?? 0;
+      c.querySelector("[data-platform-count]")!.textContent = String(n);
+      c.toggleAttribute("data-empty", n === 0);
     });
     sortHeads.forEach((b) => {
       const th = b.closest("th")!;

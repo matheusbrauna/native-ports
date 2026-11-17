@@ -126,32 +126,32 @@ const ld = [...(isHome ? [websiteLd(lang, site)] : []), ...jsonLd];
 
 <style>
   .top { border-bottom: 1px solid var(--line); background: var(--ground); }
-  .top-in { display: flex; align-items: center; gap: 28px; height: 60px; }
-  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: var(--step-1); }
+  .top-in { display: flex; align-items: center; gap: var(--space-xl); height: 60px; }
+  .brand { display: inline-flex; align-items: center; gap: var(--space-sm); color: var(--ink); text-decoration: none; font-weight: 700; font-size: var(--step-1); }
   .brand:hover { color: var(--ink); }
   .top nav { display: flex; gap: 4px; margin-left: auto; }
   .top nav a {
-    color: var(--ink-2); text-decoration: none; padding: 6px 10px; border-radius: var(--radius);
+    color: var(--ink-2); text-decoration: none; padding: var(--space-xs) var(--space-sm); border-radius: var(--radius);
     transition: color var(--dur) var(--ease), background-color var(--dur) var(--ease);
   }
   .top nav a:hover { color: var(--ink); background: var(--panel); }
   .top nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--link); border-radius: 0; }
   .lang {
-    display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); text-decoration: none;
-    padding: 5px 10px; border-radius: var(--radius); box-shadow: inset 0 0 0 1px var(--line-strong); font-size: var(--step--1);
+    display: inline-flex; align-items: center; gap: var(--space-sm); color: var(--ink-2); text-decoration: none;
+    padding: 5px var(--space-sm); border-radius: var(--radius); box-shadow: inset 0 0 0 1px var(--line-strong); font-size: var(--step--1);
   }
   .lang:hover { color: var(--ink); background: var(--panel); }
   .lang-code { font-family: var(--font-data); font-weight: 600; color: var(--ink); }
   main { flex: 1; outline: none; }
-  .foot { border-top: 1px solid var(--line); margin-top: 64px; color: var(--ink-3); font-size: var(--step--1); }
+  .foot { border-top: 1px solid var(--line); margin-top: var(--space-3xl); color: var(--ink-3); font-size: var(--step--1); }
   .foot-in {
-    padding-block: 32px 36px; max-width: 1360px;
-    display: grid; grid-template-columns: minmax(0, var(--measure)) auto; justify-content: space-between; gap: 28px 48px;
+    padding-block: var(--space-xl) var(--space-xl); max-width: 1360px;
+    display: grid; grid-template-columns: minmax(0, var(--measure)) auto; justify-content: space-between; gap: var(--space-xl) var(--space-2xl);
   }
   .foot a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
   .foot a:hover { color: var(--ink); text-decoration-color: currentColor; }
 
-  .promise { display: grid; gap: 10px; color: var(--ink-2); font-size: var(--step-0); }
+  .promise { display: grid; gap: var(--space-sm); color: var(--ink-2); font-size: var(--step-0); }
   .promise strong { color: var(--ink); }
 
   .foot-nav ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; justify-items: end; }
@@ -160,15 +160,15 @@ const ld = [...(isHome ? [websiteLd(lang, site)] : []), ...jsonLd];
   .foot-nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--link); }
 
   .meta {
-    grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px;
-    padding-top: 16px; border-top: 1px solid var(--line);
+    grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-xs) var(--space-xl);
+    padding-top: var(--space-lg); border-top: 1px solid var(--line);
   }
   .meta .data { color: var(--ink-2); white-space: nowrap; }
-  .licenses { display: inline-flex; flex-wrap: wrap; gap: 8px; }
+  .licenses { display: inline-flex; flex-wrap: wrap; gap: var(--space-sm); }
 
   @media (max-width: 720px) {
-    .top-in { height: auto; flex-wrap: wrap; gap: 6px 16px; padding-block: 12px 4px; }
-    .top nav { order: 3; margin-left: -10px; width: 100%; overflow-x: auto; }
+    .top-in { height: auto; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); padding-block: var(--space-md) 4px; }
+    .top nav { order: 3; margin-left: calc(-1 * var(--space-sm)); width: 100%; overflow-x: auto; }
     .foot-in { grid-template-columns: minmax(0, 1fr); }
     .foot-nav ul { justify-items: start; gap: 0; }
     .foot-nav a { display: flex; align-items: center; min-height: 44px; }

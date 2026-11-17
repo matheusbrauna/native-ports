@@ -97,6 +97,8 @@ a.skip:hover { color: var(--on-tier); }
 .tier[data-tier="intro"] { --tier-color: var(--tier-intro); }
 .tier[data-tier="wip"] { --tier-color: var(--tier-wip); }
 .tier[data-tier="unrated"] { background: transparent; color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-strong); }
+/* Large variant: the game page verdict. Same colours and rules, one step up the type scale. */
+.tier.lg { padding: var(--space-xs) var(--space-lg); font-size: var(--step-3); line-height: 1.2; }
 
 .button {
   display: inline-flex; align-items: center; gap: var(--space-sm);

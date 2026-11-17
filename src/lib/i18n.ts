@@ -53,6 +53,12 @@ const en = {
   otherGames: (c: string) => `Other ${c} games`,
   allConsoleGames: (c: string) => `All ${c} games`,
   bestStatus: "Best declared status",
+  // Game-page verdict: [text before, bold part, text after].
+  verdict: {
+    count: (n: number, total: number, tier: string): [string, string, string] => ["", `${n} of ${total}`, ` ports declare ${tier}`],
+    all: (total: number, tier: string): [string, string, string] => ["", `All ${total}`, ` ports declare ${tier}`],
+    source: (port: string) => `Source · ${port}`,
+  },
   openRepo: "Open repository",
   empty: { title: "No port matches these filters.", body: "Clear a filter, or tell us about a port we are missing.", cta: "Submit a port" },
   tiers: {
@@ -132,6 +138,11 @@ const ptbr: typeof en = {
   otherGames: (c: string) => `Outros jogos de ${c}`,
   allConsoleGames: (c: string) => `Todos os jogos de ${c}`,
   bestStatus: "Melhor status declarado",
+  verdict: {
+    count: (n: number, total: number, tier: string): [string, string, string] => ["", `${n} de ${total}`, ` ports declaram ${tier}`],
+    all: (total: number, tier: string): [string, string, string] => ["", `Todos os ${total}`, ` ports declaram ${tier}`],
+    source: (port: string) => `Fonte · ${port}`,
+  },
   openRepo: "Abrir repositório",
   empty: { title: "Nenhum port corresponde a esses filtros.", body: "Remova um filtro ou conte pra gente sobre um port que está faltando.", cta: "Enviar um port" },
   tiers: {

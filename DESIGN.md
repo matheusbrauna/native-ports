@@ -14,7 +14,7 @@ Words: nerdy, of the scene (feels like a tool the community made, not a product)
 Never like: a game store (Steam, Epic), a gaming news blog, a landing page with gradients and a giant hero, "gamer" aesthetics with neon and RGB.
 
 ## Brand
-Design system source: `src/styles/global.css`; the Paper guide (file "Native Ports", page "Guide") mirrors it, sync state in `design-sync.json` (29 tokens: three graphite surfaces, two hairlines, three inks, link blue, five tier colours, a six-step type scale, one motion duration and easing). Detailed spec and component rules: [docs/design-system.md](docs/design-system.md).
+Design system source: `src/styles/global.css`; the Paper guide (file "Native Ports", page "Guide") mirrors it, sync state in `design-sync.json` (39 tokens: three graphite surfaces, two hairlines, three inks, link blue and its hover, on-tier ink, selection, five tier colours, two font stacks, a six-step type scale, three radii, a seven-step spacing scale, gutter, measure, one motion duration and easing). Detailed spec and component rules: [docs/design-system.md](docs/design-system.md).
 - Name: Native Ports. Wordmark: three stacked bars of decreasing length in the three ink strengths.
 - Dark graphite, flat; saturated colour only for status tiers; link blue only for things that open or navigate.
 - Fonts: Atkinson Hyperlegible for all UI; JetBrains Mono with tabular figures for data only.
@@ -44,8 +44,8 @@ Design system source: `src/styles/global.css`; the Paper guide (file "Native Por
 - 2026-11-16 — Spacing snapped to the scale, ties rounded down (7→6, 10→8, 11/13/14→12, 18/20/22→16, 24/30/32/36→28, 40/44→48) — the brief is dense; one scale beats tuned one-offs. Kept literal: values of 5px and under (hairline offsets), the 44px tree-guide indent and the baseline-alignment cell offsets.
 - 2026-11-16 — One disabled rule: primary `--raised` fill + `--ink-3` text, ghost `--line` outline + `--ink-3`, no hover.
 - 2026-11-16 — Zero-count tier toggles and chips dim (`--ink-3`, swatch 40%, chip loses its fill) but stay clickable; pressed wins — other filters can empty a pressed tier, and it must stay releasable.
+- 2026-11-17 — Visual review of the spacing snap (37bb12a vs ebf9251, 8 pages at 1360, 1280 and 390 px): page heights moved −2% to +2% (Catalog −1.4%, ConsolePage +2% from its 11→12 cell padding), no new wrapping or horizontal overflow, tree guide, nav and legend negative-margin alignments intact, disabled/zero-count/focus states verified. No fixes needed.
 
 ## Open questions
 - Only one mood word was given ("nerdy / of the scene"); the older spec also implied dense and precise (assumed).
-- The spacing snap (2026-11-16) changed density on Catalog, GamePage, PortDetail, ConsolePage, Prose and the header/footer; it has not had a visual review yet.
 - PRODUCT.md lists the final domain as undecided, but README points to ports.matheusbrauna.com.br — is that settled?

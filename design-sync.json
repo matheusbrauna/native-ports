@@ -65,7 +65,9 @@
     "Crumbs": "in code only",
     "Footer": "in code only",
     "Empty state": "in code only",
-    "Skip link": "in code only"
+    "Skip link": "in code only",
+    "Tier block · large": "in code only (added 2026-11-17; guide drawing waits on the Paper weekly limit)",
+    "Verdict band": "in code only (added 2026-11-17; guide drawing waits on the Paper weekly limit)"
   },
-  "notes": "Spacing, padding and margin use --space-*; values of 5px and under, the tree-guide indent (44px) and baseline-alignment cell offsets stay literal."
+  "notes": "Spacing, padding and margin use --space-*; values of 5px and under, the tree-guide indent (44px) and baseline-alignment cell offsets stay literal. 2026-11-17: the game-page verdict band and the large tier block went into code first (no new tokens); draw both in the Guide page, including the stacked 980px and 760px layouts, when the Paper limit resets. The 'Exploration · Game verdict (temporary)' page in Paper holds one unfinished board and should be emptied."
 }

@@ -63,7 +63,7 @@ const en = {
     unrated: { label: "Not stated", hint: "The project's README does not declare a status." },
   } satisfies Record<Tier, { label: string; hint: string }>,
   platforms: {
-    linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", ios: "iOS", arm: "ARM",
+    linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", ios: "iOS", arm: "ARM", switch: "Nintendo Switch",
   } satisfies Record<Platform, string>,
   consoles: {
     ps4: "PlayStation 4", xbox360: "Xbox 360", xbox: "Xbox", n64: "Nintendo 64", gamecube: "GameCube", wii: "Wii", switch: "Nintendo Switch", ps1: "PlayStation", ps2: "PlayStation 2", ps3: "PlayStation 3", psp: "PSP", "32x": "Sega 32X", dreamcast: "Dreamcast", naomi2: "NAOMI 2 (arcade)",
@@ -142,7 +142,7 @@ const ptbr: typeof en = {
     unrated: { label: "Não informado", hint: "O README do projeto não declara um status." },
   },
   platforms: {
-    linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", ios: "iOS", arm: "ARM",
+    linux: "Linux", steamdeck: "Steam Deck", windows: "Windows", macos: "macOS", android: "Android", ios: "iOS", arm: "ARM", switch: "Nintendo Switch",
   },
   consoles: {
     ps4: "PlayStation 4", xbox360: "Xbox 360", xbox: "Xbox", n64: "Nintendo 64", gamecube: "GameCube", wii: "Wii", switch: "Nintendo Switch", ps1: "PlayStation", ps2: "PlayStation 2", ps3: "PlayStation 3", psp: "PSP", "32x": "Sega 32X", dreamcast: "Dreamcast", naomi2: "NAOMI 2 (fliperama)",

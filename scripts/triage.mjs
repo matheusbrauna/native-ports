@@ -55,8 +55,9 @@ In scope: a game port built by
 - static recompilation ("recomp"): the console's machine code is translated ahead of time into C/C++ and compiled into a native program (toolchains such as ReXGlue, XenonRecomp, N64Recomp, PS2Recomp, RecompOne), or
 - native execution ("runtime"): x86-64 console code (PS4) runs directly on the PC with a runtime replacing the console's system libraries (bbport-style).
 A port built from a decompilation is in scope only when the game's code still goes through a static recompiler.
+A port that runs on Nintendo Switch is in scope even when Switch is its only target, including a recompilation from another console onto Switch (for example Xbox 360 to Switch).
 
-Out of scope, so "reject": recompilers, SDKs and other tools on their own; curated lists; emulators; decompilations and source ports built from hand-written or decompiled source; reimplementations and rewrites; ports whose only target is another console or the browser; repositories that ship game files, ROMs, disc images, firmware or keys.
+Out of scope, so "reject": recompilers, SDKs and other tools on their own; curated lists; emulators; decompilations and source ports built from hand-written or decompiled source; reimplementations and rewrites; ports whose only target is a console other than Nintendo Switch, or the browser; repositories that ship game files, ROMs, disc images, firmware or keys. Nintendo Switch 2 is still another console.
 
 Answer "unsure" when the README does not make the technique clear, when it is too thin to judge, or when you would have to guess.
 
@@ -70,7 +71,7 @@ Reply with one JSON object and nothing else:
     "name": "the project's name in English, as the catalog shows it; translate a non-English title (\"port nativo para PC\" becomes \"PC Port\")",
     "technique": ${TECHNIQUES.map((t) => `"${t}"`).join(" | ")},
     "toolchain": "main toolchain name, or null",
-    "platforms": subset of ${JSON.stringify(PLATFORMS)} the README says it runs on ("steamdeck" only if Steam Deck is named; "arm" for ARM Linux devices),
+    "platforms": subset of ${JSON.stringify(PLATFORMS)} the README says it runs on ("steamdeck" only if Steam Deck is named; "arm" for ARM Linux devices; "switch" when the built port runs on Nintendo Switch, not when the game merely came from it),
     "graphics": graphics APIs or renderers the README names, e.g. ["Vulkan", "Direct3D 12"], or [],
     "games": [{
       "id": "id of the game from the list below when it is the same version on the same console, or null",
@@ -86,7 +87,7 @@ Reply with one JSON object and nothing else:
   }
 }
 ${TIER_RULES}
-The game is the exact version whose code the port runs, which is the dump the player has to supply. A remaster or re-release on a newer console is a different game on that console: God of War III Remastered is "ps4", not the PS3 original. A game released for the original Nintendo Switch is "switch" even when it also runs on Switch 2; only a Switch 2 game, including a "Nintendo Switch 2 Edition", is "switch2". Match an id from the list only for that same version.
+The game is the exact version whose code the port runs, which is the dump the player has to supply. A remaster or re-release on a newer console is a different game on that console: God of War III Remastered is "ps4", not the PS3 original. A game released for the original Nintendo Switch is "switch" even when it also runs on Switch 2; only a Switch 2 game, including a "Nintendo Switch 2 Edition", is "switch2". Match an id from the list only for that same version. "switch" in console is the machine the game was released for; "switch" in platforms is the machine the port runs on.
 "entry" is required when the decision is "accept" and null otherwise.`;
 
 const gameList = () => games.map((g) => `${g.id} | ${g.title} | ${g.console}`).join("\n");

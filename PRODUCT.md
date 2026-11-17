@@ -12,7 +12,7 @@ Astro (static output) deployed to GitHub Pages. A scheduled GitHub Actions build
 
 ## Users
 
-- **Players** on Windows, Linux, Steam Deck, macOS, Android or iOS who own a console game and want to know whether an unofficial native port exists for their game and device, how mature it is, and where its code lives.
+- **Players** on Windows, Linux, Steam Deck, macOS, Android, iOS or Nintendo Switch who own a console game and want to know whether an unofficial native port exists for their game and device, how mature it is, and where its code lives.
 - **Developers and contributors** following the recompilation and native-execution scene (ReXGlue, XenonRecomp, N64Recomp, bbport and others), looking for which projects are active and where to contribute.
 
 Both arrive with a concrete question ("is there a native port of Forza Horizon?", "what runs on the Steam Deck?", "which Xbox 360 games have been recompiled?") and want the answer in seconds, not after searching GitHub topics and forum threads.
@@ -42,7 +42,7 @@ A catalog scoped to native ports only, organized by original console, technique 
 - Catalog with instant search and filters by console, game, technique, platform and status; filter state lives in the URL so a filtered view can be shared.
 - Per-port detail page; About page explaining the techniques; Submit page; build timestamp.
 - Bilingual: English by default, Brazilian Portuguese alternate (`/pt-br/`).
-- **Out of scope:** decompilations (hand-rewritten source), emulators, recompilation tools on their own, curated lists, ports whose only target is another console or the browser.
+- **Out of scope:** decompilations (hand-rewritten source), emulators, recompilation tools on their own, curated lists, ports whose only target is a console other than Nintendo Switch, or the browser. Ports and recompilations that run on Nintendo Switch are in scope, including when Switch is their only target. Nintendo Switch 2 stays out of scope.
 - **The site never hosts or links game files, ROMs, disc images, dumps, decryption keys or firmware.** It links source repositories only, and reminds players they need their own legally obtained copy.
 - Not affiliated with any console maker, publisher or developer, or with any port author; this disclaimer is always visible.
 - Undecided: final domain and repository name for the site.

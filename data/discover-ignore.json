@@ -384,20 +384,12 @@
     "reason": "Triage: The project statically recompiles a PC Linux release rather than a console game binary."
   },
   {
-    "repo": "malinkin-s/naruto-rise-of-a-ninja-nx",
-    "reason": "Triage: The project's only target is another console (Nintendo Switch)."
-  },
-  {
     "repo": "FIZL0/opentennis",
     "reason": "Triage: It is a from-scratch engine rewrite in Rust, which is out of scope."
   },
   {
     "repo": "nuvolacat/pcfsite-source",
     "reason": "Triage: The repository ports MS-DOS and Windows PC games, which are out of scope for a catalog of console game ports."
-  },
-  {
-    "repo": "paulodiasred/BM64Switch",
-    "reason": "Triage: The repository is a port targeting another console (Nintendo Switch)."
   },
   {
     "repo": "Tsifrokayf/OpenXRay-Android",
@@ -446,10 +438,6 @@
   {
     "repo": "sindufha/Devil-may-cry-3-recomp",
     "reason": "Triage: The repository ports the PC version of the game rather than a console version, which is out of scope."
-  },
-  {
-    "repo": "Kaays/nfscarbon-nx",
-    "reason": "Triage: The repository is a native port targeting only another console (Nintendo Switch)."
   },
   {
     "repo": "Ink230/irongoon",
@@ -552,10 +540,6 @@
     "reason": "Triage: POD Gold is a PC game, not a console game, making it out of scope for the catalog."
   },
   {
-    "repo": "zhtipu/shank2-nx",
-    "reason": "Triage: The port's only target platform is another console (Nintendo Switch)."
-  },
-  {
     "repo": "pablocpas/OpenCMR2",
     "reason": "Triage: Source ports built from decompiled C/C++ code are out of scope."
   },
@@ -636,10 +620,6 @@
     "reason": "Triage: It is a static recompiler framework rather than a game port."
   },
   {
-    "repo": "VibePorter/Lazarus",
-    "reason": "Triage: The project's only target platform is another console (Nintendo Switch)."
-  },
-  {
     "repo": "RodoLy/HarvestMoonSnesDecomp",
     "reason": "Triage: Decompilations, hand-written C rewrites, and source ports are out of scope."
   },
@@ -692,14 +672,6 @@
     "reason": "Triage: Curated list of reverse-engineering projects and tools, not a game port."
   },
   {
-    "repo": "adumah/alice-nx",
-    "reason": "Triage: The project's only target platform is another console (Nintendo Switch)."
-  },
-  {
-    "repo": "andresarevalo1/BattleBlockRecomp-NX",
-    "reason": "Triage: The port's only target platform is another console (Nintendo Switch)."
-  },
-  {
     "repo": "jhaizhou-ops/S2Arm",
     "reason": "Likely a reimplementation or rewrite (matched its description)"
   },
@@ -714,10 +686,6 @@
   {
     "repo": "bbelgg/rs-rearmed",
     "reason": "Triage: The repository ports a PC (Windows/macOS) game rather than a console game."
-  },
-  {
-    "repo": "Eladerino/spm-nx",
-    "reason": "Triage: The project is a port whose only target is another console (Nintendo Switch)."
   },
   {
     "repo": "bhuiyah/ff7-recomp-android",
@@ -738,10 +706,6 @@
   {
     "repo": "CrownWiZ/TTT2-Recomp-PS5",
     "reason": "Triage: Ports whose target is another console are out of scope."
-  },
-  {
-    "repo": "Eladerino/JetSetRadioFuture-Unleashed-NX",
-    "reason": "Triage: The project's only target platform is another console (Nintendo Switch)."
   },
   {
     "repo": "kamb205/TNA-iMPACT-Reloaded-PS5",
@@ -812,10 +776,6 @@
     "reason": "Triage: It is a static recompilation toolkit rather than a game port."
   },
   {
-    "repo": "schuler-ph/nsmbw-switch",
-    "reason": "Triage: The repository's only target is another console (Nintendo Switch)."
-  },
-  {
     "repo": "elipp/ctr-rs",
     "reason": "Likely a reimplementation or rewrite (matched its description)"
   },
@@ -854,10 +814,6 @@
   {
     "repo": "Berny23/slingshot-animals-recomp",
     "reason": "Triage: The repository ports Android mobile games, which are not console games."
-  },
-  {
-    "repo": "gerisson1996/gow-collection-nx",
-    "reason": "Triage: The port's only target platform is another console (Nintendo Switch)."
   },
   {
     "repo": "mbarradev-debug/nxnative-macos-guide",

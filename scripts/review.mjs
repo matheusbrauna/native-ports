@@ -47,7 +47,7 @@ Reply with one JSON object and nothing else:
 {
   "reason": "one short English sentence on what changed",
   "games": [{ "id": "the game id from the current entry", "tier": "playable" | "ingame" | "intro" | "wip" | "unrated", "quote": "the README sentence that states the status now, copied character for character as plain text without markdown, or null" }],
-  "platforms": subset of ${JSON.stringify(PLATFORMS)} the README says it runs on ("steamdeck" only if Steam Deck is named; "arm" for ARM Linux devices),
+  "platforms": subset of ${JSON.stringify(PLATFORMS)} the README says it runs on ("steamdeck" only if Steam Deck is named; "arm" for ARM Linux devices; "switch" when the built port runs on Nintendo Switch, not when the game merely came from it),
   "graphics": graphics APIs or renderers the README names, or [],
   "notes": { "en": "one or two sentences on what stands out now", "pt-br": "the same in natural Brazilian Portuguese" }
 }

@@ -14,7 +14,7 @@ Words: nerdy, of the scene (feels like a tool the community made, not a product)
 Never like: a game store (Steam, Epic), a gaming news blog, a landing page with gradients and a giant hero, "gamer" aesthetics with neon and RGB.
 
 ## Brand
-Design system source: `src/styles/global.css` (29 tokens: three graphite surfaces, two hairlines, three inks, link blue, five tier colours, a six-step type scale, one motion duration and easing). Detailed spec and component rules: [docs/design-system.md](docs/design-system.md).
+Design system source: `src/styles/global.css`; the Paper guide (file "Native Ports", page "Guide") mirrors it, sync state in `design-sync.json` (29 tokens: three graphite surfaces, two hairlines, three inks, link blue, five tier colours, a six-step type scale, one motion duration and easing). Detailed spec and component rules: [docs/design-system.md](docs/design-system.md).
 - Name: Native Ports. Wordmark: three stacked bars of decreasing length in the three ink strengths.
 - Dark graphite, flat; saturated colour only for status tiers; link blue only for things that open or navigate.
 - Fonts: Atkinson Hyperlegible for all UI; JetBrains Mono with tabular figures for data only.
@@ -39,7 +39,10 @@ Design system source: `src/styles/global.css` (29 tokens: three graphite surface
 - 2026-11-16 — Voice is direct but friendly — the audience mixes players and developers.
 - 2026-11-16 — The platform filter is the per-device cut; no per-device verdict on pages — it already answers "what runs on my device".
 - 2026-11-16 — The game page leads with a big verdict (best tier), the first thing seen — the ProtonDB "verdict at a glance"; today it is a small block beside the title, so this is a pending design task.
+- 2026-11-16 — Imported the design system into Paper: 25 tokens registered (--step--1 as --step-m1; --gutter, --measure, --ease, --dur shown as text), Tier block, Tier strip + legend, Chip, Button and Search drawn; the rest indexed as "in code only".
 
 ## Open questions
 - Only one mood word was given ("nerdy / of the scene"); the older spec also implied dense and precise (assumed).
+- Gaps found on import: tag (3px) and swatch (2px) radii and the spacing steps are hard-coded, not tokens; `::selection` uses a fixed #35558f; no control has a disabled state. Tokenise them?
+- Proposed (drawn, not in code): a zero-count tier toggle, dimmed. Adopt it?
 - PRODUCT.md lists the final domain as undecided, but README points to ports.matheusbrauna.com.br — is that settled?

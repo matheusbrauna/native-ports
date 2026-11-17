@@ -37,9 +37,9 @@ Design system source: `src/styles/global.css` (29 tokens: three graphite surface
 - 2026-11-16 — Moved from the Impeccable spec to this craft brief; the detailed spec lives in `docs/design-system.md` — keep the brief short, keep the rules.
 - 2026-11-16 — No game cover art anywhere — the goal was recognition, not cards; covers read as a game store and are publisher artwork.
 - 2026-11-16 — Voice is direct but friendly — the audience mixes players and developers.
+- 2026-11-16 — The platform filter is the per-device cut; no per-device verdict on pages — it already answers "what runs on my device".
+- 2026-11-16 — The game page leads with a big verdict (best tier), the first thing seen — the ProtonDB "verdict at a glance"; today it is a small block beside the title, so this is a pending design task.
 
 ## Open questions
-- The per-device cut taken from ProtonDB: is today's platform filter enough, or should a port/game page show a per-device verdict (e.g. "runs on Steam Deck")?
-- Does the game page already give "verdict at a glance"? It shows the best tier as a block next to the title; should it be bigger and the first thing seen?
 - Only one mood word was given ("nerdy / of the scene"); the older spec also implied dense and precise (assumed).
 - PRODUCT.md lists the final domain as undecided, but README points to ports.matheusbrauna.com.br — is that settled?

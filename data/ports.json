@@ -7391,8 +7391,8 @@
     "games": [
       {
         "id": "killzone-hd",
-        "tier": "ingame",
-        "source": "README: Level 1 played by hand from start to end; all 11 levels load and reach gameplay; parts of the campaign played by hand on 2026-10-20; levels 2 to 11 not yet each played to their end"
+        "tier": "playable",
+        "source": "README: Status: playable, testing"
       }
     ],
     "notes": {
@@ -7692,20 +7692,18 @@
       "macos"
     ],
     "graphics": [
-      "Metal",
-      "Vulkan",
-      "MoltenVK"
+      "Metal"
     ],
     "games": [
       {
         "id": "ghost-recon-future-soldier",
         "tier": "ingame",
-        "source": "README: Campaign and Guerrilla have been playable on the development Mac, but visual bugs remain."
+        "source": "README: Campaign missions, the campaign Gunsmith / weapon selection screen, and Guerrilla are accessible and playable in the current port."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Ghost Recon Future Soldier for macOS on Apple Silicon using ReXGlue and MoltenVK.",
-      "pt-br": "Recompilação estática de Ghost Recon Future Soldier para macOS em Apple Silicon utilizando ReXGlue e MoltenVK."
+      "en": "Static recompilation of Ghost Recon Future Soldier for macOS on Apple Silicon using ReXGlue and a native Metal renderer.",
+      "pt-br": "Recompilação estática de Ghost Recon Future Soldier para macOS em Apple Silicon utilizando ReXGlue e um renderizador Metal nativo."
     }
   },
   {
@@ -8539,17 +8537,21 @@
     "platforms": [
       "windows"
     ],
-    "graphics": [],
+    "graphics": [
+      "DirectX 11",
+      "DirectX 12",
+      "Vulkan"
+    ],
     "games": [
       {
         "id": "shadow-of-rome",
-        "tier": "ingame",
-        "source": "README: It is not playable from start to end."
+        "tier": "playable",
+        "source": "README: The whole game has been played by hand to the end credits (European disc), but it is still a fan port tested on one PC."
       }
     ],
     "notes": {
-      "en": "Experimental PS2 static recompilation of Shadow of Rome for Windows built with PS2Recomp. Reaches gameplay in the arena and early chapters, but is not yet fully beatable.",
-      "pt-br": "Recompilação estática experimental de PS2 de Shadow of Rome para Windows feita com PS2Recomp. Chega à jogabilidade na arena e capítulos iniciais, mas ainda não pode ser zerado."
+      "en": "Experimental PS2 static recompilation of Shadow of Rome for Windows built with PS2Recomp. The entire game can now be played from start to the end credits.",
+      "pt-br": "Recompilação estática experimental de PS2 de Shadow of Rome para Windows feita com PS2Recomp. O jogo inteiro agora pode ser jogado do início aos créditos finais."
     }
   },
   {
@@ -9478,6 +9480,7 @@
     "toolchain": null,
     "platforms": [
       "linux",
+      "steamdeck",
       "windows"
     ],
     "graphics": [
@@ -9487,12 +9490,12 @@
       {
         "id": "diablo-iii-reaper-of-souls-ultimate-evil-edition",
         "tier": "ingame",
-        "source": "README: Playable. Tested on Linux (AMD Radeon 780M, Mesa) with the Brazilian 1.47 and US 1.00 dumps:"
+        "source": "README: Playable. Developed on Linux (AMD Radeon 780M / 760M, Mesa) with the Brazilian 1.47 and US 1.00 dumps, and played by the community on the hardware below:"
       }
     ],
     "notes": {
-      "en": "Native PS4 runtime port of Diablo III: Reaper of Souls – Ultimate Evil Edition featuring Vulkan rendering and 4-player local co-op on Linux and Windows.",
-      "pt-br": "Port nativo via runtime de PS4 de Diablo III: Reaper of Souls – Ultimate Evil Edition com renderização Vulkan e co-op local para até 4 jogadores no Linux e Windows."
+      "en": "Native PS4 runtime port of Diablo III: Reaper of Souls – Ultimate Evil Edition featuring Vulkan rendering, 4-player local co-op, and support for Linux, Steam Deck, and Windows.",
+      "pt-br": "Port nativo via runtime de PS4 de Diablo III: Reaper of Souls – Ultimate Evil Edition com renderização Vulkan, co-op local para até 4 jogadores e suporte a Linux, Steam Deck e Windows."
     }
   },
   {
@@ -10571,24 +10574,28 @@
     "toolchain": "WiiCompiled",
     "platforms": [
       "linux",
+      "steamdeck",
       "windows",
+      "macos",
+      "android",
       "arm"
     ],
     "graphics": [
       "WebGPU",
       "Direct3D 12",
-      "Vulkan"
+      "Vulkan",
+      "Metal"
     ],
     "games": [
       {
         "id": "harvest-moon-magical-melody",
         "tier": "ingame",
-        "source": "README: Version 0.1.0, the first playable version. The game starts, plays, saves and loads, and it has been played on a Windows laptop with a Snapdragon X. It has not been played from start to finish yet, which is what 1.0 will mean."
+        "source": "README: Version 0.4.2. The game starts, plays, saves and loads on Windows, Linux, Mac and Android, and it has been played on a Windows laptop with a Snapdragon X. It has not been played from start to finish yet, which is what 1.0 will mean. Expect bugs, and keep a copy of your saves."
       }
     ],
     "notes": {
-      "en": "A native PC port of Harvest Moon: Magical Melody for GameCube built via WiiCompiled's static recompiler and the Aurora WebGPU renderer, featuring native x64 and ARM64 support, high frame rates, widescreen support, and built-in mods.",
-      "pt-br": "Port nativo para PC de Harvest Moon: Magical Melody do GameCube desenvolvido via recompilador estático do WiiCompiled e renderizador Aurora WebGPU, com suporte nativo a x64 e ARM64, taxas de quadros elevadas, widescreen e mods integrados."
+      "en": "A native port of Harvest Moon: Magical Melody for GameCube supporting Windows, Linux, macOS, and Android. Built via static recompilation and the Aurora WebGPU renderer, it features widescreen support, high frame rates, custom mods, and built-in cheats.",
+      "pt-br": "Um port nativo de Harvest Moon: Magical Melody do GameCube com suporte a Windows, Linux, macOS e Android. Desenvolvido via recompilação estática e o renderizador Aurora WebGPU, conta com suporte a widescreen, altas taxas de quadros, mods personalizados e cheats integrados."
     }
   },
   {
@@ -10752,6 +10759,167 @@
     "notes": {
       "en": "A native recompilation port of Ocarina of Time based on Longshot, adding AMD FSR frame generation support and high frame rate fixes.",
       "pt-br": "Um port por recompilação nativa de Ocarina of Time baseado no Longshot, adicionando suporte a geração de quadros AMD FSR e correções para taxas de quadros elevadas."
+    }
+  },
+  {
+    "slug": "edgeoftimerecomp",
+    "name": "EdgeOfTimeRecompiled",
+    "repo": "goliathret/EdgeOfTimeRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "macos",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan",
+      "MoltenVK"
+    ],
+    "games": [
+      {
+        "id": "spider-man-edge-of-time",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Spider-Man: Edge of Time built with the ReXGlue SDK, featuring a custom HLE native renderer with graphic presets, upscaled suit textures, and native keyboard and mouse controls.",
+      "pt-br": "Recompilação estática de Spider-Man: Edge of Time feita com o ReXGlue SDK, trazendo renderizador nativo HLE customizado com predefinições gráficas, texturas de trajes aprimoradas e suporte a teclado e mouse."
+    }
+  },
+  {
+    "slug": "new-pokemon-snap-recomp",
+    "name": "New Pokémon Snap Recomp",
+    "repo": "finalpantasy/new-pokemon-snap-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "new-pokemon-snap",
+        "tier": "ingame",
+        "source": "README: Early playable."
+      }
+    ],
+    "notes": {
+      "en": "Native static recompilation of New Pokémon Snap for Windows using Vulkan. Features 60+ FPS support, graphics presets, upscalers (DLSS, FSR, XeSS), and mod support.",
+      "pt-br": "Recompilação estática nativa de New Pokémon Snap para Windows usando Vulkan. Conta com suporte a 60+ FPS, predefinições gráficas, upscalers (DLSS, FSR, XeSS) e suporte a mods."
+    }
+  },
+  {
+    "slug": "strikers-recomp",
+    "name": "Mario Strikers: Battle League",
+    "repo": "MTG9T4/strikers-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "mario-strikers-battle-league",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation of Mario Strikers: Battle League for Windows, featuring Vulkan rendering up to 4K, ultrawide support, custom texture loading, local wireless play, and 60 fps support.",
+      "pt-br": "Uma recompilação estática de Mario Strikers: Battle League para Windows, com renderização via Vulkan em até 4K, suporte a ultrawide, substituição de texturas, jogo em rede local e suporte a 60 fps."
+    }
+  },
+  {
+    "slug": "dunwall",
+    "name": "Dunwall",
+    "repo": "VibePorter/Dunwall",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "dishonored",
+        "tier": "ingame",
+        "source": "README: It is a work in progress: read known issues before you start a long playthrough."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of Dishonored (Xbox 360) targeting the Nintendo Switch using ReXGlue and a custom deko3d renderer, with support for Windows builds.",
+      "pt-br": "Recompilação estática de Dishonored (Xbox 360) para Nintendo Switch usando ReXGlue e um renderizador deko3d personalizado, com suporte a builds para Windows."
+    }
+  },
+  {
+    "slug": "magnacarta2-recompiled",
+    "name": "Magna Carta 2 Recompiled",
+    "repo": "Patricklumowa/magnacarta2-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "magna-carta-2",
+        "tier": "ingame",
+        "source": "README: Boot, movies, the title menu, and initial gameplay have been reached, but audio and performance remain unfinished."
+      }
+    ],
+    "notes": {
+      "en": "An experimental Windows static recompilation port of Magna Carta 2 for Xbox 360 built with ReXGlue, currently reaching initial gameplay.",
+      "pt-br": "Um port experimental para Windows via recompilação estática de Magna Carta 2 do Xbox 360 desenvolvido com ReXGlue, atualmente alcançando o início da jogabilidade."
+    }
+  },
+  {
+    "slug": "mindovermutant-wiicompiled",
+    "name": "Crash: Mind over Mutant",
+    "repo": "jaylikesbunda/MindOverMutant-Wiicompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "NWiiRecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "crash-mind-over-mutant",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Wii version for Windows using NWiiRecomp, featuring custom launcher, control remapping, widescreen support, and resolution scaling.",
+      "pt-br": "Recompilação estática da versão de Wii para Windows usando NWiiRecomp, com launcher próprio, remapeamento de controles, suporte a widescreen e escalonamento de resolução."
     }
   }
 ]

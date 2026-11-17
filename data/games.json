@@ -2094,5 +2094,29 @@
     "title": "The Legend of Zelda: Ocarina of Time",
     "console": "n64",
     "titleIds": []
+  },
+  {
+    "id": "mario-strikers-battle-league",
+    "title": "Mario Strikers: Battle League",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "dishonored",
+    "title": "Dishonored",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "magna-carta-2",
+    "title": "Magna Carta 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "crash-mind-over-mutant",
+    "title": "Crash: Mind over Mutant",
+    "console": "wii",
+    "titleIds": []
   }
 ]

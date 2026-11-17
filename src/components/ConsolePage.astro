@@ -55,24 +55,24 @@ const others = consoleGroups.filter((g) => g.console !== c);
 </article>
 
 <style>
-  .console { padding-top: 28px; }
+  .console { padding-top: var(--space-xl); }
   .crumbs { font-size: var(--step--1); }
   .crumbs a { color: var(--ink-2); text-decoration: none; }
   .crumbs a:hover { color: var(--ink); text-decoration: underline; }
-  .head { margin-top: 18px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  .head { margin-top: var(--space-lg); padding-bottom: var(--space-xl); border-bottom: 1px solid var(--line); }
   h1 { font-size: var(--step-4); letter-spacing: -0.02em; max-width: 22ch; }
-  .lede { margin-top: 14px; color: var(--ink-2); font-size: var(--step-1); max-width: var(--measure); }
-  .head p:last-child { margin-top: 10px; font-size: var(--step--1); }
-  .games { width: 100%; border-collapse: collapse; margin-top: 24px; }
-  .games thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line-strong); }
-  .games tbody th, .games td { text-align: left; padding: 11px 12px 11px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .lede { margin-top: var(--space-md); color: var(--ink-2); font-size: var(--step-1); max-width: var(--measure); }
+  .head p:last-child { margin-top: var(--space-sm); font-size: var(--step--1); }
+  .games { width: 100%; border-collapse: collapse; margin-top: var(--space-xl); }
+  .games thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: var(--space-sm) var(--space-md) var(--space-sm) 0; border-bottom: 1px solid var(--line-strong); }
+  .games tbody th, .games td { text-align: left; padding: var(--space-md) var(--space-md) var(--space-md) 0; border-bottom: 1px solid var(--line); vertical-align: top; }
   .games tbody th a { color: var(--ink); text-decoration: none; }
   .games tbody th a:hover { color: var(--link-hover); text-decoration: underline; }
   .num { text-align: right !important; }
-  .sub { color: var(--ink-2); font-size: var(--step--1); padding-top: 13px !important; }
-  .others { margin-top: 40px; }
+  .sub { color: var(--ink-2); font-size: var(--step--1); padding-top: 14px !important; }
+  .others { margin-top: var(--space-2xl); }
   .others h2 { font-size: var(--step-1); }
-  .others ul { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  .others ul { list-style: none; padding: 0; margin-top: var(--space-md); display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); }
   .others .data { color: var(--ink-3); font-size: var(--step--1); }
   @media (max-width: 760px) {
     h1 { font-size: var(--step-3); }

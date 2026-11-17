@@ -80,15 +80,15 @@ img, svg { display: block; }
 }
 .skip {
   position: absolute; left: var(--gutter); top: -40px; z-index: 10;
-  background: var(--link); color: var(--on-tier); padding: 6px 12px; border-radius: var(--radius); font-weight: 700;
+  background: var(--link); color: var(--on-tier); padding: var(--space-xs) var(--space-md); border-radius: var(--radius); font-weight: 700;
 }
 .skip:focus { top: 10px; }
 a.skip:hover { color: var(--on-tier); }
 
 /* Tier block: the status cell. Filled for declared states, outlined when not stated. */
 .tier {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 2px 8px; border-radius: var(--radius-tag);
+  display: inline-flex; align-items: center; gap: var(--space-xs);
+  padding: 2px var(--space-sm); border-radius: var(--radius-tag);
   font-size: var(--step--1); font-weight: 700; line-height: 1.5; white-space: nowrap;
   background: var(--tier-color); color: var(--on-tier);
 }
@@ -99,8 +99,8 @@ a.skip:hover { color: var(--on-tier); }
 .tier[data-tier="unrated"] { background: transparent; color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-strong); }
 
 .button {
-  display: inline-flex; align-items: center; gap: 8px;
-  height: 38px; padding: 0 14px; border-radius: var(--radius);
+  display: inline-flex; align-items: center; gap: var(--space-sm);
+  height: 38px; padding: 0 var(--space-md); border-radius: var(--radius);
   font: 700 var(--step-0)/1 var(--font-ui); text-decoration: none; cursor: pointer;
   background: var(--link); color: var(--on-tier); border: 0;
   transition: background-color var(--dur) var(--ease);

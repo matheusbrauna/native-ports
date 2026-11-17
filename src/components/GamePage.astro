@@ -88,16 +88,16 @@ const lede =
 </article>
 
 <style>
-  .game { padding-top: 28px; }
-  .crumbs { display: flex; gap: 8px; font-size: var(--step--1); color: var(--ink-3); }
+  .game { padding-top: var(--space-xl); }
+  .crumbs { display: flex; gap: var(--space-sm); font-size: var(--step--1); color: var(--ink-3); }
   .crumbs a { color: var(--ink-2); text-decoration: none; }
   .crumbs a:hover { color: var(--ink); text-decoration: underline; }
-  .head { margin-top: 18px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  .head { margin-top: var(--space-lg); padding-bottom: var(--space-xl); border-bottom: 1px solid var(--line); }
   h1 { font-size: var(--step-4); letter-spacing: -0.02em; }
-  .meta { margin-top: 8px; color: var(--ink-3); font-size: var(--step--1); }
+  .meta { margin-top: var(--space-sm); color: var(--ink-3); font-size: var(--step--1); }
   .meta a { color: var(--ink-2); font-weight: 700; }
-  .lede { margin-top: 14px; color: var(--ink-2); font-size: var(--step-1); max-width: var(--measure); }
-  .summary { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin-top: 20px; }
+  .lede { margin-top: var(--space-md); color: var(--ink-2); font-size: var(--step-1); max-width: var(--measure); }
+  .summary { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-sm) var(--space-md); margin-top: var(--space-lg); }
   .label { color: var(--ink-3); font-size: var(--step--1); }
   .strip { display: flex; gap: 2px; width: 220px; height: 10px; border-radius: var(--radius-tag); overflow: hidden; background: var(--panel); }
   .seg { flex-basis: 0; min-width: 0; }
@@ -107,22 +107,22 @@ const lede =
   .seg[data-seg="wip"] { background: var(--tier-wip); }
   .seg[data-seg="unrated"] { background: var(--tier-unrated); }
 
-  .ports { width: 100%; border-collapse: collapse; margin-top: 24px; }
-  .ports thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line-strong); }
-  .ports tbody th, .ports td { text-align: left; padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); vertical-align: top; font-weight: 400; }
+  .ports { width: 100%; border-collapse: collapse; margin-top: var(--space-xl); }
+  .ports thead th { text-align: left; font-size: var(--step--1); color: var(--ink-3); font-weight: 700; padding: var(--space-sm) var(--space-md) var(--space-sm) 0; border-bottom: 1px solid var(--line-strong); }
+  .ports tbody th, .ports td { text-align: left; padding: var(--space-md) var(--space-md) var(--space-md) 0; border-bottom: 1px solid var(--line); vertical-align: top; font-weight: 400; }
   .num { text-align: right !important; white-space: nowrap; }
   .sub { color: var(--ink-2); font-size: var(--step--1); padding-top: 14px !important; }
-  .name { color: var(--ink); font-weight: 700; text-decoration: none; margin-right: 10px; }
+  .name { color: var(--ink); font-weight: 700; text-decoration: none; margin-right: var(--space-sm); }
   .name:hover { color: var(--link-hover); text-decoration: underline; }
   .repo { font-size: var(--step--1); text-decoration: none; overflow-wrap: anywhere; }
   .repo:hover { text-decoration: underline; }
   .repo :global(svg) { display: inline; vertical-align: -1px; margin-left: 5px; }
   .note { display: block; margin-top: 4px; color: var(--ink-3); font-size: var(--step--1); max-width: 70ch; }
-  .own { margin-top: 20px; color: var(--ink-2); font-size: var(--step--1); max-width: var(--measure); padding: 12px 14px; background: var(--panel); border-radius: var(--radius); }
+  .own { margin-top: var(--space-lg); color: var(--ink-2); font-size: var(--step--1); max-width: var(--measure); padding: var(--space-md) var(--space-md); background: var(--panel); border-radius: var(--radius); }
 
-  .siblings { margin-top: 40px; }
+  .siblings { margin-top: var(--space-2xl); }
   .siblings h2 { font-size: var(--step-1); }
-  .siblings ul { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  .siblings ul { list-style: none; padding: 0; margin-top: var(--space-md); display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); }
   .siblings .data { color: var(--ink-3); font-size: var(--step--1); }
 
   @media (max-width: 760px) {

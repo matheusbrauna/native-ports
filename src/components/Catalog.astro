@@ -97,7 +97,7 @@ const pages = pageCount(seen);
     <fieldset class="legend">
       <legend class="visually-hidden">{s.filters.tier}</legend>
       {TIERS.map((tier) => (
-        <button type="button" class="tier-toggle" data-tier-toggle={tier} aria-pressed="false" title={s.tiers[tier].hint}>
+        <button type="button" class="tier-toggle" data-tier-toggle={tier} data-empty={totalTiers[tier] === 0 || undefined} aria-pressed="false" title={s.tiers[tier].hint}>
           <span class="swatch" data-tier={tier}></span>
           <span>{s.tiers[tier].label}</span>
           <span class="n data" data-tier-count={tier}>{totalTiers[tier]}</span>
@@ -253,6 +253,7 @@ const pages = pageCount(seen);
   }
   .chip:hover { color: var(--ink); background: var(--raised); }
   .chip .n { color: var(--ink-3); margin-left: 2px; }
+  .chip[data-empty] { background: transparent; color: var(--ink-3); box-shadow: inset 0 0 0 1px var(--line); }
   .chip[aria-pressed="true"] { background: var(--raised); color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink-3); font-weight: 700; }
   .chip[aria-pressed="true"] .n { color: var(--ink); }
   .reset {
@@ -266,7 +267,7 @@ const pages = pageCount(seen);
   .strip { grid-area: strip; }
   .legend { grid-area: legend; justify-content: flex-end; }
   .count { font-size: var(--step-1); font-weight: 700; }
-  .strip { display: flex; gap: 2px; height: 14px; border-radius: 3px; overflow: hidden; background: var(--panel); }
+  .strip { display: flex; gap: 2px; height: 14px; border-radius: var(--radius-tag); overflow: hidden; background: var(--panel); }
   .strip .seg, .mini .seg {
     flex-basis: 0; min-width: 0; cursor: pointer;
     transition: flex-grow var(--dur) var(--ease), opacity var(--dur) var(--ease);
@@ -284,10 +285,14 @@ const pages = pageCount(seen);
     transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
   }
   .tier-toggle:hover { background: var(--panel); color: var(--ink); }
+  /* Zero count: nothing to show, so it stops looking live, but stays clickable so a pressed
+     empty tier can be released. Pressed rules below win. */
+  .tier-toggle[data-empty] { color: var(--ink-3); }
+  .tier-toggle[data-empty] .swatch { opacity: 0.4; }
   .tier-toggle[aria-pressed="true"] { background: var(--raised); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line-strong); font-weight: 700; }
   .tier-toggle .n { color: var(--ink-3); }
   .tier-toggle[aria-pressed="true"] .n { color: var(--ink); }
-  .swatch { width: 10px; height: 10px; border-radius: 2px; background: var(--tier-color); }
+  .swatch { width: 10px; height: 10px; border-radius: var(--radius-hair); background: var(--tier-color); }
   .swatch[data-tier="playable"] { --tier-color: var(--tier-playable); }
   .swatch[data-tier="ingame"] { --tier-color: var(--tier-ingame); }
   .swatch[data-tier="intro"] { --tier-color: var(--tier-intro); }
@@ -344,8 +349,8 @@ const pages = pageCount(seen);
   .ids { color: var(--ink-3); font-size: var(--step--1); font-weight: 400; }
   .console { color: var(--ink-2); font-size: var(--step--1); font-weight: 700; text-decoration: none; }
   .console:hover { color: var(--ink); text-decoration: underline; }
-  .gcount { color: var(--ink-2); font-size: var(--step--1); font-weight: 400; background: var(--panel); padding: 0 7px; border-radius: 3px; }
-  .mini { display: flex; gap: 2px; width: 120px; height: 6px; border-radius: 2px; overflow: hidden; align-self: center; margin-left: auto; }
+  .gcount { color: var(--ink-2); font-size: var(--step--1); font-weight: 400; background: var(--panel); padding: 0 7px; border-radius: var(--radius-tag); }
+  .mini { display: flex; gap: 2px; width: 120px; height: 6px; border-radius: var(--radius-hair); overflow: hidden; align-self: center; margin-left: auto; }
   .mini .seg { cursor: default; }
   tbody tr.row { transition: background-color var(--dur) var(--ease); }
   tbody tr.row:hover { background-color: var(--panel); }
@@ -354,7 +359,7 @@ const pages = pageCount(seen);
   .port-name:hover { color: var(--link-hover); text-decoration: underline; }
   .flag {
     font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
-    color: var(--ink-2); padding: 1px 6px; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--line-strong);
+    color: var(--ink-2); padding: 1px 6px; border-radius: var(--radius-tag); box-shadow: inset 0 0 0 1px var(--line-strong);
   }
   .flag.up { color: var(--on-tier); background: var(--ink-2); box-shadow: none; }
   .repo { display: inline; font-size: var(--step--1); text-decoration: none; overflow-wrap: anywhere; }

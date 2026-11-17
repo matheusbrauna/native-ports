@@ -1,6 +1,6 @@
 # Native Ports
 
-A curated catalog of unofficial native ports of console games: projects that run a game's own code as an ordinary program on PC, Mac, Linux, Steam Deck or mobile, instead of inside an emulator.
+A curated catalog of unofficial native ports of console games: projects that run a game's own code as an ordinary program on PC, Mac, Linux, Steam Deck, mobile or Nintendo Switch, instead of inside an emulator.
 
 **Live site:** https://ports.matheusbrauna.com.br (English) · https://ports.matheusbrauna.com.br/pt-br/ (Português)
 

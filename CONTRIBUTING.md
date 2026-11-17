@@ -8,7 +8,7 @@ Thanks for helping keep the catalog accurate. Most contributions are a single en
 - With **commits of its own**; untouched forks are left out.
 - **Source code only.** Repositories that ship game files, ROMs, disc images, firmware or keys are never listed.
 
-Tools on their own (recompilers, SDKs), curated lists, decompilations, emulators and ports whose only target is another console or the browser are out of scope.
+Tools on their own (recompilers, SDKs), curated lists, decompilations, emulators and ports whose only target is a console other than Nintendo Switch, or the browser, are out of scope. A recompilation that runs on Nintendo Switch is in scope even when Switch is its only target; record that with `"switch"` in `platforms`. Nintendo Switch 2 stays out of scope.
 
 ## Suggesting a port
 

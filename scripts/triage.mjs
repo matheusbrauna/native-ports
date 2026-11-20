@@ -15,7 +15,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { CONSOLES, PLATFORMS, TIERS, TECHNIQUES, checkGame, checkPort, slugify } from "./lib/schema.mjs";
 import { askJson, llmConfigured, TIER_RULES } from "./lib/llm.mjs";
-import { plain, quoteIn, unmark } from "./lib/text.mjs";
+import { guardPlayable, plain, quoteIn, unmark } from "./lib/text.mjs";
 
 const args = process.argv.slice(2);
 const opt = (name, fallback) => (args.includes(name) ? args[args.indexOf(name) + 1] : fallback);
@@ -130,6 +130,8 @@ function buildEntry(repo, entry, readme) {
     if (tier !== "unrated") {
       const quote = typeof g.quote === "string" ? g.quote.trim() : "";
       if (!quoteIn(quote, readme)) return { problem: `Tier "${tier}" for ${g.title} cites a quote that is not in the README: "${quote.slice(0, 120)}"` };
+      // "playable" without a sentence that says the game can be finished is ingame.
+      tier = guardPlayable(tier, quote);
       source = `README: ${unmark(quote)}`;
     }
     portGames.push({ id, tier, source });

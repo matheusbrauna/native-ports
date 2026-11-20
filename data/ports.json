@@ -10150,8 +10150,7 @@
       "windows",
       "android",
       "ios",
-      "switch",
-      "arm"
+      "switch"
     ],
     "graphics": [
       "OpenGL 3.3",
@@ -10161,13 +10160,13 @@
     "games": [
       {
         "id": "sonic-riders",
-        "tier": "playable",
+        "tier": "ingame",
         "source": "README: Playable from boot to races, story mode and 4-player Free Race, with sound."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Sonic Riders now officially playable on PC, Linux/Steam Deck, Switch (including Switch 2 alpha), Android, and iOS, with Riders Plus enhancements, widescreen, high frame rates, and mod support.",
-      "pt-br": "Recompilação estática de Sonic Riders agora oficialmente jogável em PC, Linux/Steam Deck, Switch (incluindo Switch 2 alpha), Android e iOS, com aprimoramentos do Riders Plus, widescreen, altas taxas de quadros e suporte a mods."
+      "en": "Static recompilation of Sonic Riders for GameCube on PC, Linux/Steam Deck, Switch, Android and iOS, plus a Switch 2 alpha, with Riders Plus, widescreen, high frame rates and mods.",
+      "pt-br": "Recompilação estática de Sonic Riders do GameCube para PC, Linux/Steam Deck, Switch, Android e iOS, com uma alpha de Switch 2, incluindo Riders Plus, widescreen, altas taxas de quadros e mods."
     }
   },
   {
@@ -11080,8 +11079,8 @@
     "games": [
       {
         "id": "new-super-mario-bros-wii",
-        "tier": "playable",
-        "source": "README: Full speed docked: 59-60 fps at 98-99.8 % game speed in the measured levels, docked with the CPU at 1785 MHz"
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -11182,8 +11181,8 @@
     "games": [
       {
         "id": "naruto-rise-of-a-ninja",
-        "tier": "playable",
-        "source": "README: Version 0.1.5 is playable, and it is still a test build. The story mode and fights play on a real console;"
+        "tier": "ingame",
+        "source": "README: Version 0.1.5 is playable, and it is still a test build. The story mode and fights play on a real console; further testing is needed to find bugs, crashes and so on."
       }
     ],
     "notes": {
@@ -11237,8 +11236,8 @@
     "games": [
       {
         "id": "bomberman-64",
-        "tier": "playable",
-        "source": "README: A Nintendo Switch homebrew port (.nro) of Bomberman 64: Recompiled."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {
@@ -11317,13 +11316,13 @@
     "games": [
       {
         "id": "lego-star-wars-the-complete-saga",
-        "tier": "playable",
+        "tier": "ingame",
         "source": "README: Play the Xbox 360 version of LEGO Star Wars: The Complete Saga on your Nintendo Switch, as homebrew: the story, two-player co-op and saves."
       }
     ],
     "notes": {
-      "en": "Native Switch homebrew port via static recompilation of the Xbox 360 version (Rev 1). Runs with full story, co-op, and saves; uses OpenGL on Mesa. Requires original game files.",
-      "pt-br": "Port nativo para Switch via recompilação estática da versão de Xbox 360 (Rev 1). Roda com história completa, co-op e saves; usa OpenGL no Mesa. Requer arquivos do jogo original."
+      "en": "Native Switch homebrew port via static recompilation of the Xbox 360 version (Rev 1). The story, two-player co-op and saves run; uses OpenGL on Mesa. Requires original game files.",
+      "pt-br": "Port nativo para Switch via recompilação estática da versão de Xbox 360 (Rev 1). A história, o co-op de dois jogadores e os saves funcionam; usa OpenGL no Mesa. Requer arquivos do jogo original."
     }
   },
   {
@@ -11343,8 +11342,8 @@
     "games": [
       {
         "id": "shank-2",
-        "tier": "playable",
-        "source": "README: It runs at 60 fps."
+        "tier": "unrated",
+        "source": null
       }
     ],
     "notes": {

@@ -2212,5 +2212,35 @@
     "title": "Shank 2",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "resident-evil-4-wii-edition",
+    "title": "Resident Evil 4 Wii Edition",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "kamen-rider-battride-war",
+    "title": "Kamen Rider: Battride War",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "dragon-ball-z-budokai-3-hd",
+    "title": "Dragon Ball Z: Budokai 3 HD",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "bioshock-2",
+    "title": "BioShock 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "battleblock-theater",
+    "title": "BattleBlock Theater",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

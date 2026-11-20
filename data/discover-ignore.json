@@ -830,5 +830,29 @@
   {
     "repo": "RecompAchievements-org/recompachievements-web",
     "reason": "Triage: This is a website and API for tracking achievements across recomp projects, not a game port itself."
+  },
+  {
+    "repo": "EstebanPdN/mutiny-3ds",
+    "reason": "Triage: This is a hand-written source port from a Flash game, not a static recompilation or runtime port of console machine code."
+  },
+  {
+    "repo": "vitorinii/nfshp2-web",
+    "reason": "Triage: The port's only target is the browser, which is explicitly out of scope."
+  },
+  {
+    "repo": "neofodere/vflash-sm64",
+    "reason": "Triage: This is a decompilation-based source port to a non-Switch console, not a static recompilation or runtime port."
+  },
+  {
+    "repo": "st4rwhx/Resident-Evil-4-Native-Port",
+    "reason": "Triage: This is a decompilation-based source port, not built via static recompilation through a listed toolchain."
+  },
+  {
+    "repo": "consolesplayingconsoles/crazy-taxi-decomp",
+    "reason": "Triage: It is a decompilation that builds a native Linux port from hand-written C, not via static recompilation."
+  },
+  {
+    "repo": "NahuelGenchi/sonic-advance-remaster",
+    "reason": "Triage: built from a decompilation but not through static recompilation; the code is hand-written C from decomp, not recompiled console machine code"
   }
 ]

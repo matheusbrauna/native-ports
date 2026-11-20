@@ -14,7 +14,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { PLATFORMS, checkPort } from "./lib/schema.mjs";
 import { askJson, llmConfigured, TIER_RULES } from "./lib/llm.mjs";
-import { quoteIn, quoteOf, unmark } from "./lib/text.mjs";
+import { guardPlayable, quoteIn, quoteOf, unmark } from "./lib/text.mjs";
 
 const args = process.argv.slice(2);
 const opt = (name, fallback) => (args.includes(name) ? args[args.indexOf(name) + 1] : fallback);
@@ -73,7 +73,11 @@ function revise(port, answer, readme) {
       Object.assign(g, { tier: "unrated", source: null });
     } else {
       if (!quoteIn(d.quote, readme)) return { problem: `Tier "${d.tier}" for ${titleOf(g.id)} cites a quote that is not in the README: "${String(d.quote).slice(0, 120)}"` };
-      Object.assign(g, { tier: d.tier, source: `README: ${unmark(d.quote)}` });
+      // Never raise a tier to playable on a quote that does not say the game can be finished.
+      // A lower tier stays; playable with no completion signal drops to ingame.
+      const tier = guardPlayable(d.tier, d.quote, g.tier);
+      if (tier === "unrated") Object.assign(g, { tier: "unrated", source: null });
+      else Object.assign(g, { tier, source: `README: ${unmark(d.quote)}` });
     }
   }
   // A list with the same items in another order is not a change.

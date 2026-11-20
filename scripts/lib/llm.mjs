@@ -5,8 +5,18 @@ const { LLM_BASE_URL, LLM_API_KEY, LLM_MODEL } = process.env;
 export const llmConfigured = Boolean(LLM_BASE_URL && LLM_API_KEY && LLM_MODEL);
 
 // The tier rules both prompts repeat, so triage and review judge a README the same way.
-export const TIER_RULES = `Tiers repeat what the README declares: "playable" (beatable start to finish), "ingame" (gets into gameplay with problems), "intro" (menus or intro only), "wip" (in progress, not yet in game), "unrated" (the README states no status; quote is then null). Never infer a tier the README does not state.
-"playable" needs the README to say the game can be finished. A README that calls itself playable (in any language: "jogável", "jugable") but only reaches the first chapters, or is still in development with known problems, is "ingame".`;
+export const TIER_RULES = `Tiers repeat what the README declares: "playable" (the game can be finished end to end), "ingame" (gets into gameplay, with or without problems), "intro" (menus or intro only), "wip" (in progress, not yet in game), "unrated" (the README states no status; quote is then null). Never infer a tier the README does not state. Never upgrade an existing tier from a quote that does not meet the bar.
+
+"playable" only when the quote itself says the game can be finished or completed from beginning to end. The word "playable" (also "jogável", "jugable") is not enough, including when the README only reaches an early part, is still a test build, or only lists features or performance.
+
+Quotes that are playable, because they say the game can be finished: "The entire game is playable", "can be beaten", "fully completable", "start to finish", "from beginning to end", "fully playable", "100%", "the credits". Portuguese counts the same way: "zerar", "do início ao fim", "jogo inteiro".
+
+Quotes that are not playable:
+- Gameplay with no finish line: "Playable from boot to races, story mode and 4-player Free Race, with sound." is "ingame".
+- Calls itself playable and is still a test build: "Version 0.1.5 is playable, and it is still a test build" is "ingame".
+- A feature list, not a finished run: "the story, two-player co-op and saves" is "ingame".
+- Performance only, or no status at all: "It runs at 60 fps." and "Full speed docked: 59-60 fps" are "unrated", and so is a description with no status such as "A Nintendo Switch homebrew port of Bomberman 64". For "unrated", quote is null.
+In review, do not raise a tier to "playable" unless the new quote says the game can be finished. If it does not, keep a tier that is already below playable, and do not leave the entry "playable" on that quote.`;
 
 // Throws when the endpoint fails (callers stop the run); returns answer null when the reply is not JSON.
 export async function askJson(system, user) {

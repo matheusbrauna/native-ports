@@ -822,5 +822,17 @@
   {
     "repo": "Sashi-hub085/ue-bulk-export",
     "reason": "Triage: The repository is an asset extraction tool for Unreal Engine games, not a native game port."
+  },
+  {
+    "repo": "RecompAchievements-org/recompachievements-web",
+    "reason": "Triage: This is a website and API for tracking achievements across recomp projects, not a game port itself."
+  },
+  {
+    "repo": "neofodere/vflash-sm64",
+    "reason": "Triage: This is a decompilation-based source port to a non-Switch console; it does not use static recompilation."
+  },
+  {
+    "repo": "EstebanPdN/mutiny-3ds",
+    "reason": "Triage: This is a hand-written source port from a Flash game, not a static recompilation or runtime port of a console game."
   }
 ]

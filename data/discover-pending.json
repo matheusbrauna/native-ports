@@ -342,5 +342,9 @@
   {
     "repo": "zhtipu/shank2-nx",
     "reason": "Triage accepted it, but: Tier \"playable\" for Shank 2 cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "MatyMeatBoy/DynaBroCollection",
+    "reason": "Triage accepted it, but: Console \"genesis\" is not in the catalog yet (Dyna Brothers)"
   }
 ]

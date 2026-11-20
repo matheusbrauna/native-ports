@@ -2182,5 +2182,29 @@
     "title": "LEGO Star Wars: The Complete Saga",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "kamen-rider-battride-war",
+    "title": "Kamen Rider: Battride War",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "dragon-ball-z-budokai-3-hd",
+    "title": "Dragon Ball Z: Budokai 3 HD",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "battleblock-theater",
+    "title": "BattleBlock Theater",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "galaxy-angel-ii",
+    "title": "Galaxy Angel II",
+    "console": "ps2",
+    "titleIds": []
   }
 ]

@@ -11212,5 +11212,190 @@
       "en": "A native port of LEGO Star Wars: The Complete Saga (Xbox 360) for Nintendo Switch using XenonRecomp.",
       "pt-br": "Um porte nativo de LEGO Star Wars: The Complete Saga (Xbox 360) para Nintendo Switch usando XenonRecomp."
     }
+  },
+  {
+    "slug": "battride-war-recomp",
+    "name": "Battride War Recomp",
+    "repo": "robertoqimin/battride-war-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS3Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "kamen-rider-battride-war",
+        "tier": "ingame",
+        "source": "README: Playable through the opening mission. The intro movie, title screen, menus, the opening cutscene and mission STG02 work. STG02 was completed by hand, returning to mission select."
+      }
+    ],
+    "notes": {
+      "en": "Experimental native port of the Japanese PS3 release (BLJS10220). Playable through the opening mission (STG02) with graphics, audio, saves, and movies working; performance around 58-60 fps with drops in heavy fights. Requires the player's own ISO.",
+      "pt-br": "Port nativo experimental do lançamento japonês de PS3 (BLJS10220). Jogável até a missão de abertura (STG02) com gráficos, áudio, saves e filmes funcionando; desempenho em torno de 58-60 fps com quedas em lutas pesadas. Requer ISO próprio do jogador."
+    }
+  },
+  {
+    "slug": "saints-row-pc",
+    "name": "Saints Row PC Port",
+    "repo": "otavix010/saints-row-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "saints-row",
+        "tier": "playable",
+        "source": "README: Jogo livre logo depois da criação do personagem, na engine 1.0.1: 4 minutos andando e correndo pelas ruas, a 60 fps em 2x (média 61,1; mínimo 59; GPU em 31%)."
+      }
+    ],
+    "notes": {
+      "en": "Static recomp of original Xbox 360 Saints Row; adds 60 fps, up to 4K, FSR/CAS, anisotropic filtering; requires user's ISO to generate executable; Windows-only for now.",
+      "pt-br": "Recompilação estática do Saints Row original de Xbox 360; adiciona 60 fps, até 4K, FSR/CAS, filtragem anisotrópica; exige ISO do usuário para gerar o executável; só Windows por enquanto."
+    }
+  },
+  {
+    "slug": "budokai3-nx",
+    "name": "Budokai 3 NX",
+    "repo": "ramonDias07/Budokai3-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "Deko3D"
+    ],
+    "games": [
+      {
+        "id": "dragon-ball-z-budokai-3-hd",
+        "tier": "ingame",
+        "source": "README: Switch físico | A release 0.1.40 foi testada no console com lutas, campanha, menus e avisos de conquista."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial homebrew port of Dragon Ball Z: Budokai 3 HD (from Xbox 360 Budokai HD Collection) to Switch; tested with fights, story, menus and achievements at ~46 FPS average.",
+      "pt-br": "Port homebrew não oficial de Dragon Ball Z: Budokai 3 HD (da coleção Budokai HD do Xbox 360) para Switch; testado com lutas, campanha, menus e conquistas em média de ~46 FPS."
+    }
+  },
+  {
+    "slug": "battleblockrecomp-nx",
+    "name": "BattleBlock Theater NX",
+    "repo": "andresarevalo1/BattleBlockRecomp-NX",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "battleblock-theater",
+        "tier": "ingame",
+        "source": "README: La intro 3D se reproduce con sonido y el juego corre hasta el título."
+      }
+    ],
+    "notes": {
+      "en": "Native Switch port via static recompilation; runs at 720p with configurable 30/60 FPS, native renderer replacing original Xenos effects; requires title override due to applet memory limits; full intro and early gameplay confirmed.",
+      "pt-br": "Port nativo para Switch via recompilação estática; roda a 720p com 30/60 FPS configuráveis, renderer nativo substituindo efeitos Xenos originais; precisa de title override por limite de memória no applet; intro completa e gameplay inicial confirmados."
+    }
+  },
+  {
+    "slug": "pes2013-recomp",
+    "name": "PES 2013",
+    "repo": "erikomis/pes2013-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "pro-evolution-soccer-2013",
+        "tier": "playable",
+        "source": "README: It boots, shows its menus in Portuguese and plays full matches, at a steady 60 fps in gameplay (headless measurement on Apple silicon, the game's 1280×720), with Data Pack 6 and an Option File loaded. A friendly has been played to the end in a window."
+      }
+    ],
+    "notes": {
+      "en": "Alpha static recomp of PES 2013 (PS3 BLUS31029 01.04) for Apple silicon macOS; full friendlies playable at 60 fps with 2026 season mods, texture packs, and Metal renderer; Master League and online untested.",
+      "pt-br": "Recompilação estática alpha do PES 2013 (PS3 BLUS31029 01.04) para macOS Apple silicon; partidas amistosas completas jogáveis a 60 fps com mods de temporada 2026, pacotes de texturas e renderizador Metal; Master League e online ainda não testados."
+    }
+  },
+  {
+    "slug": "galaxy-angel-ii-pc",
+    "name": "Galaxy Angel II PC",
+    "repo": "ObeseCatLord/Galaxy-Angel-II-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "galaxy-angel-ii",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Port of the full PS2 trilogy (Zettai Ryouiki no Tobira, Mugen Kairou no Kagi, Eigou Kaiki no Toki) with widescreen, high resolution, high FPS, English translation, mod support, and VR mode.",
+      "pt-br": "Port da trilogia completa de PS2 (Zettai Ryouiki no Tobira, Mugen Kairou no Kagi, Eigou Kaiki no Toki) com widescreen, alta resolução, alto FPS, tradução para inglês, suporte a mods e modo VR."
+    }
+  },
+  {
+    "slug": "black",
+    "name": "BLACK",
+    "repo": "secretpray/Black",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "black",
+        "tier": "playable",
+        "source": "README: A complete playthrough, all runtime races, audio quality and other controller models remain unqualified."
+      }
+    ],
+    "notes": {
+      "en": "Native ARM64 port of the original Xbox FPS; includes HD reticle, texture replacement support, extensive mods/cheats, checkpoints, performance overlay, and settings menu styled after the original game. Requires own USA/EU disc image.",
+      "pt-br": "Port nativo em ARM64 do FPS de Xbox original; inclui mira em HD, suporte a texturas HD, mods e cheats extensos, checkpoints, overlay de desempenho e menu de configurações no estilo do jogo original. Requer imagem de disco EUA/EU própria."
+    }
   }
 ]

@@ -57,7 +57,7 @@ In scope: a game port built by
 A port built from a decompilation is in scope only when the game's code still goes through a static recompiler.
 A port that runs on Nintendo Switch is in scope even when Switch is its only target, including a recompilation from another console onto Switch (for example Xbox 360 to Switch).
 
-Out of scope, so "reject": recompilers, SDKs and other tools on their own; curated lists; emulators; decompilations and source ports built from hand-written or decompiled source; reimplementations and rewrites; ports whose only target is a console other than Nintendo Switch, or the browser; repositories that ship game files, ROMs, disc images, firmware or keys. Nintendo Switch 2 is still another console.
+Out of scope, so "reject": recompilers, SDKs and other tools on their own; curated lists; emulators; decompilations and source ports built from hand-written or decompiled source; reimplementations and rewrites; ports whose only target is a console other than Nintendo Switch, or the browser; Windows and DOS PC games; repositories that ship game files, ROMs, disc images, firmware or keys. Nintendo Switch 2 is still another console.
 
 Answer "unsure" when the README does not make the technique clear, when it is too thin to judge, or when you would have to guess.
 
@@ -87,7 +87,7 @@ Reply with one JSON object and nothing else:
   }
 }
 ${TIER_RULES}
-The game is the exact version whose code the port runs, which is the dump the player has to supply. A remaster or re-release on a newer console is a different game on that console: God of War III Remastered is "ps4", not the PS3 original. A game released for the original Nintendo Switch is "switch" even when it also runs on Switch 2; only a Switch 2 game, including a "Nintendo Switch 2 Edition", is "switch2". Match an id from the list only for that same version. "switch" in console is the machine the game was released for; "switch" in platforms is the machine the port runs on.
+The game is the exact version whose code the port runs, which is the dump the player has to supply. A remaster or re-release on a newer console is a different game on that console: God of War III Remastered is "ps4", not the PS3 original. A game released for the original Nintendo Switch is "switch" even when it also runs on Switch 2; only a Switch 2 game, including a "Nintendo Switch 2 Edition", is "switch2". Match an id from the list only for that same version. "switch" in console is the machine the game was released for; "switch" in platforms is the machine the port runs on. "pc" names a Windows PC original. Reject those; a maintainer adds them by hand.
 "entry" is required when the decision is "accept" and null otherwise.`;
 
 const gameList = () => games.map((g) => `${g.id} | ${g.title} | ${g.console}`).join("\n");
@@ -114,6 +114,9 @@ function buildEntry(repo, entry, readme) {
     let id = g.id && games.some((x) => x.id === g.id) ? g.id : null;
     if (!id) {
       if (!CONSOLES.includes(g.console)) return { problem: `Console "${g.console}" is not in the catalog yet (${g.title ?? "unknown game"})` };
+      // "pc" is a valid console so a maintainer can list a Windows original by hand.
+      // Daily triage still does not add one: the catalog's automatic pass is console games.
+      if (g.console === "pc") return { problem: `Console "pc" is a Windows original; daily triage does not add it (${g.title ?? "unknown game"})` };
       const existing = games.find((x) => x.console === g.console && plain(x.title) === plain(g.title ?? ""));
       id = existing?.id;
       if (!id) {

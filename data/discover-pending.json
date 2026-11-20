@@ -288,10 +288,6 @@
     "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Tecmo Secret of the Stars)"
   },
   {
-    "repo": "LeoDeadware/HoMM4Deadware",
-    "reason": "Submitted in #56 after being rejected: Triage: Heroes of Might and Magic IV is a PC game, which is out of scope for a catalog of console game ports."
-  },
-  {
     "repo": "mrchrisster/virtuatennis3-vr",
     "reason": "Triage accepted it, but: Console \"lindbergh\" is not in the catalog yet (Virtua Tennis 3)"
   },

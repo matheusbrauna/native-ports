@@ -2118,5 +2118,21 @@
     "title": "Crash: Mind over Mutant",
     "console": "wii",
     "titleIds": []
+  },
+  {
+    "id": "uncharted-the-nathan-drake-collection",
+    "title": "Uncharted: The Nathan Drake Collection",
+    "console": "ps4",
+    "titleIds": [
+      "CUSA02343",
+      "CUSA02320",
+      "CUSA02344"
+    ]
+  },
+  {
+    "id": "heroes-of-might-and-magic-iv",
+    "title": "Heroes of Might and Magic IV",
+    "console": "pc",
+    "titleIds": []
   }
 ]

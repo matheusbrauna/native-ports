@@ -10922,5 +10922,57 @@
       "en": "Static recompilation of the Wii version for Windows using NWiiRecomp, featuring custom launcher, control remapping, widescreen support, and resolution scaling.",
       "pt-br": "Recompilação estática da versão de Wii para Windows usando NWiiRecomp, com launcher próprio, remapeamento de controles, suporte a widescreen e escalonamento de resolução."
     }
+  },
+  {
+    "slug": "uncharted-pc",
+    "name": "Uncharted: The Nathan Drake Collection",
+    "repo": "Supermedo/uncharted_pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": "bbport",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "uncharted-the-nathan-drake-collection",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of the PS4 Nathan Drake Collection, built on bbport. The collection's code runs directly, with Vulkan graphics, one launcher for all three games, and FSR 3.1, FSR 4 and DLSS.",
+      "pt-br": "Port nativo para Windows da Nathan Drake Collection de PS4, feito sobre o bbport. O código da coletânea roda direto, com gráficos em Vulkan, um launcher para os três jogos e FSR 3.1, FSR 4 e DLSS."
+    }
+  },
+  {
+    "slug": "homm4deadware",
+    "name": "Heroes of Might and Magic IV",
+    "repo": "LeoDeadware/HoMM4Deadware",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "x86recomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "heroes-of-might-and-magic-iv",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native port of the Windows release for macOS on Apple Silicon using static recompilation, featuring Metal graphics, widescreen, Retina displays and both expansions, with English or Ukrainian chosen in the launcher.",
+      "pt-br": "Port nativo do lançamento para Windows para macOS em Apple Silicon usando recompilação estática, com gráficos em Metal, widescreen, telas Retina e ambas as expansões, com inglês ou ucraniano escolhido no launcher."
+    }
   }
 ]

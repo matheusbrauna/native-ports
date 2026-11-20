@@ -302,5 +302,21 @@
   {
     "repo": "jsp244/vs-smb-recomp",
     "reason": "Triage accepted it, but: Console \"arcade\" is not in the catalog yet (VS. Super Mario Bros.)"
+  },
+  {
+    "repo": "gerisson1996/gow-collection-nx",
+    "reason": "Triage accepted it, but: Console \"psvita\" is not in the catalog yet (God of War Collection)"
+  },
+  {
+    "repo": "zlinoliver/BotW-SheikahVision",
+    "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (The Legend of Zelda: Breath of the Wild)"
+  },
+  {
+    "repo": "testsenvergonha-sys/AgrabahPort",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Disney's Aladdin)"
+  },
+  {
+    "repo": "goodjoeth/gj-materia",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (FINAL FANTASY VII)"
   }
 ]

@@ -302,5 +302,45 @@
   {
     "repo": "jsp244/vs-smb-recomp",
     "reason": "Triage accepted it, but: Console \"arcade\" is not in the catalog yet (VS. Super Mario Bros.)"
+  },
+  {
+    "repo": "gerisson1996/gow-collection-nx",
+    "reason": "Triage accepted it, but: Tier \"playable\" for God of War cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "batinium/gta-stories-recompiled",
+    "reason": "Triage accepted it, but: Tier \"ingame\" for Grand Theft Auto: Vice City Stories cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "zlinoliver/BotW-SheikahVision",
+    "reason": "Triage accepted it, but: Console \"wii u\" is not in the catalog yet (The Legend of Zelda: Breath of the Wild)"
+  },
+  {
+    "repo": "BanhMi93P/deadpool-nx",
+    "reason": "Triage accepted it, but: Tier \"playable\" for Deadpool cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "paulodiasred/BM64Switch",
+    "reason": "Triage accepted it, but: Tier \"playable\" for Bomberman 64 cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "Joshspeakman/OpenPark",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Theme Park)"
+  },
+  {
+    "repo": "M1LT0N3R2431/007-Project-Russia",
+    "reason": "Triage accepted it, but: Tier \"playable\" for 007: From Russia with Love cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "testsenvergonha-sys/AgrabahPort",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Disney's Aladdin)"
+  },
+  {
+    "repo": "goodjoeth/gj-materia",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (FINAL FANTASY VII)"
+  },
+  {
+    "repo": "zhtipu/shank2-nx",
+    "reason": "Triage accepted it, but: Tier \"playable\" for Shank 2 cites a quote that is not in the README: \"\""
   }
 ]

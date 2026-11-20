@@ -2134,5 +2134,53 @@
     "title": "Heroes of Might and Magic IV",
     "console": "pc",
     "titleIds": []
+  },
+  {
+    "id": "mass-effect-2",
+    "title": "Mass Effect 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dark-souls-ii-scholar-of-the-first-sin",
+    "title": "Dark Souls II: Scholar of the First Sin",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "new-super-mario-bros-wii",
+    "title": "New Super Mario Bros. Wii",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "alice-madness-returns",
+    "title": "Alice: Madness Returns",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "jet-moto-2-championship-edition",
+    "title": "Jet Moto 2: Championship Edition",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "whiplash",
+    "title": "Whiplash",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "forza-horizon-2",
+    "title": "Forza Horizon 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "lego-star-wars-the-complete-saga",
+    "title": "LEGO Star Wars: The Complete Saga",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

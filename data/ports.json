@@ -3608,13 +3608,13 @@
     "games": [
       {
         "id": "infamous-2",
-        "tier": "ingame",
-        "source": "README: O jogo inicia, passa pelos vídeos, menus e cutscenes, e o gameplay segue de Empire City até New Marais, com som, controle, teclado e mouse, saves e dublagem em português."
+        "tier": "playable",
+        "source": "README: The game boots, plays its videos, menus and cutscenes, and runs from Empire City into New Marais, with sound, controller, keyboard and mouse, saves and the Brazilian Portuguese dub."
       }
     ],
     "notes": {
-      "en": "Native Linux port of inFAMOUS 2 using static recompilation and a Vulkan renderer, supporting keyboard and mouse controls, high frame rates, and up to 5K resolution.",
-      "pt-br": "Port nativo para Linux de inFAMOUS 2 usando recompilação estática e renderizador Vulkan, com suporte a teclado e mouse, alta taxa de quadros e resolução até 5K."
+      "en": "Native Linux port of inFAMOUS 2 using static recompilation and a Vulkan renderer, supporting keyboard and mouse controls, high frame rates, and up to 4K resolution.",
+      "pt-br": "Port nativo para Linux de inFAMOUS 2 usando recompilação estática e renderizador Vulkan, com suporte a teclado e mouse, alta taxa de quadros e resolução até 4K."
     }
   },
   {
@@ -5611,13 +5611,13 @@
     "games": [
       {
         "id": "playstation-all-stars-battle-royale",
-        "tier": "ingame",
-        "source": "README: Work in progress."
+        "tier": "wip",
+        "source": "README: Work in progress, with regular releases (see Releases)."
       }
     ],
     "notes": {
-      "en": "Native Windows port of PlayStation All-Stars Battle Royale built using static recompilation via ps3recomp and Direct3D 12. Supports 4-player local battles, LAN multiplayer, shader pre-compilation, and various controllers.",
-      "pt-br": "Port nativo para Windows de PlayStation All-Stars Battle Royale feito via recompilação estática com ps3recomp e Direct3D 12. Suporta batalhas locais para 4 jogadores, multijogador em rede local, pré-compilação de shaders e diversos controles."
+      "en": "Native Windows port of PlayStation All-Stars Battle Royale built using static recompilation via ps3recomp and Direct3D 12. Features a built-in launcher, online multiplayer, DLC support, and mod management.",
+      "pt-br": "Port nativo para Windows de PlayStation All-Stars Battle Royale feito via recompilação estática com ps3recomp e Direct3D 12. Possui um launcher integrado, multijogador online, suporte a DLC e gerenciamento de mods."
     }
   },
   {
@@ -10149,22 +10149,22 @@
       "ios",
       "linux",
       "steamdeck",
+      "switch",
       "windows"
     ],
     "graphics": [
-      "OpenGL 3.3",
       "deko3d"
     ],
     "games": [
       {
         "id": "sonic-riders",
-        "tier": "ingame",
-        "source": "README: Playable from boot to races, story mode and 4-player Free Race, with sound, on both platforms."
+        "tier": "playable",
+        "source": "README: Playable from boot to races, story mode and 4-player Free Race, with sound."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of Sonic Riders for GameCube supporting PC, Linux/Steam Deck, Switch, Android, and iOS with widescreen and high frame rates.",
-      "pt-br": "Port por recompilação estática de Sonic Riders do GameCube com suporte a PC, Linux/Steam Deck, Switch, Android e iOS, trazendo widescreen e altas taxas de quadros."
+      "en": "Static recompilation port of Sonic Riders for GameCube supporting PC, Linux/Steam Deck, Switch, Switch 2, Android, and iOS with widescreen and high frame rates.",
+      "pt-br": "Port por recompilação estática de Sonic Riders do GameCube com suporte a PC, Linux/Steam Deck, Switch, Switch 2, Android e iOS, trazendo widescreen e altas taxas de quadros."
     }
   },
   {
@@ -10889,7 +10889,7 @@
       {
         "id": "magna-carta-2",
         "tier": "ingame",
-        "source": "README: Boot, movies, the title menu, and initial gameplay have been reached, but audio and performance remain unfinished."
+        "source": "README: Startup logos, intro movie, and title screen reached"
       }
     ],
     "notes": {
@@ -10973,6 +10973,244 @@
     "notes": {
       "en": "Native port of the Windows release for macOS on Apple Silicon using static recompilation, featuring Metal graphics, widescreen, Retina displays and both expansions, with English or Ukrainian chosen in the launcher.",
       "pt-br": "Port nativo do lançamento para Windows para macOS em Apple Silicon usando recompilação estática, com gráficos em Metal, widescreen, telas Retina e ambas as expansões, com inglês ou ucraniano escolhido no launcher."
+    }
+  },
+  {
+    "slug": "lazarus",
+    "name": "Mass Effect 2",
+    "repo": "VibePorter/Lazarus",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "mass-effect-2",
+        "tier": "wip",
+        "source": "README: It runs on a real Switch and in Ryujinx. It is a work in progress: read known issues before you start a long playthrough."
+      }
+    ],
+    "notes": {
+      "en": "Statically recompiled from Xbox 360 Title Update 2 for Nintendo Switch using ReXGlue and a native deko3d renderer.",
+      "pt-br": "Recompilado estaticamente do Xbox 360 Title Update 2 para Nintendo Switch usando ReXGlue e um renderizador nativo deko3d."
+    }
+  },
+  {
+    "slug": "ds2-sotfs-recomp",
+    "name": "Dark Souls II: Scholar of the First Sin",
+    "repo": "Lazaer-YZY/ds2-sotfs-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dark-souls-ii-scholar-of-the-first-sin",
+        "tier": "ingame",
+        "source": "README: Playable from the start of the game through Majula, with saves, cutscenes, audio and the Scholar DLC data."
+      }
+    ],
+    "notes": {
+      "en": "A native Android port of the Xbox 360 version of Dark Souls II: Scholar of the First Sin built using static recompilation with ReXGlue, featuring Vulkan rendering via Mesa Turnip.",
+      "pt-br": "Uma porta nativa para Android da versão de Xbox 360 de Dark Souls II: Scholar of the First Sin construída usando recompilação estática com ReXGlue, com renderização Vulkan via Mesa Turnip."
+    }
+  },
+  {
+    "slug": "nsmbw-switch",
+    "name": "New Super Mario Bros. Wii",
+    "repo": "schuler-ph/nsmbw-switch",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "WiiCompiled",
+    "platforms": [
+      "switch",
+      "steamdeck"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "new-super-mario-bros-wii",
+        "tier": "playable",
+        "source": "README: Levels 1-1, 4-1 (water), 2-3 (spotlights), 1-4, 4-37 (airship), castle 1 (lava) and 5-3 (poison): 59-60 fps in the level, 98.1-99.8 % game speed, audio at or above 99.6 % speed."
+      }
+    ],
+    "notes": {
+      "en": "A native homebrew port for the Nintendo Switch created via PowerPC static recompilation with local multiplayer support.",
+      "pt-br": "Uma porta nativa de homebrew para o Nintendo Switch criada por recompilação estática de PowerPC com suporte a multiplayer local."
+    }
+  },
+  {
+    "slug": "alice-nx",
+    "name": "Alice: Madness Returns",
+    "repo": "adumah/alice-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "alice-madness-returns",
+        "tier": "ingame",
+        "source": "README: The entire game is playable on a real Switch, but the port is not finished: some textures and effects are drawn wrong (see Known issues), and with the overclock turned on it runs at about 29.5 fps on average (a 30 fps cap, with dips to about 21 in the busiest scenes)."
+      }
+    ],
+    "notes": {
+      "en": "An unofficial native Nintendo Switch port of Alice: Madness Returns (Xbox 360) built via static recompilation using ReXGlue and deko3d.",
+      "pt-br": "Uma porta nativa não oficial para Nintendo Switch de Alice: Madness Returns (Xbox 360) construída via recompilação estática usando ReXGlue e deko3d."
+    }
+  },
+  {
+    "slug": "jetmoto2-recomp",
+    "name": "Jet Moto 2: Championship Edition",
+    "repo": "goodshepherd23/JetMoto2-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "RecompOne",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "jet-moto-2-championship-edition",
+        "tier": "ingame",
+        "source": "README: A full player-controlled race (tried on Slickrock Gorge)"
+      }
+    ],
+    "notes": {
+      "en": "A static recompilation port for Jet Moto 2: Championship Edition on PS1 using RecompOne, featuring 60 fps interpolation, PGXP, and widescreen support.",
+      "pt-br": "Uma porta por recompilação estática para Jet Moto 2: Championship Edition de PS1 usando RecompOne, com suporte a 60 fps, PGXP e widescreen."
+    }
+  },
+  {
+    "slug": "naruto-rise-of-a-ninja-nx",
+    "name": "Naruto: Rise of a Ninja",
+    "repo": "malinkin-s/naruto-rise-of-a-ninja-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "naruto-rise-of-a-ninja",
+        "tier": "playable",
+        "source": "README: Version 0.1.5 is playable, and it is still a test build."
+      }
+    ],
+    "notes": {
+      "en": "A Nintendo Switch port of Naruto: Rise of a Ninja using ReXGlue static recompilation and a custom renderer on deko3d.",
+      "pt-br": "Uma porta para Nintendo Switch de Naruto: Rise of a Ninja usando recompilação estática ReXGlue e um renderizador personalizado em deko3d."
+    }
+  },
+  {
+    "slug": "unchained",
+    "name": "Unchained",
+    "repo": "devall96/Unchained",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "whiplash",
+        "tier": "ingame",
+        "source": "README: The opening levels (the training lab and the lobby around it) have been played through on Windows and Linux; the rest of the game hasn't been played on Unchained yet."
+      }
+    ],
+    "notes": {
+      "en": "Unchained is a static recompilation port of Whiplash for Windows and Linux, featuring Vulkan and D3D12 renderers, ultrawide support, FSR 1, and custom configuration tools.",
+      "pt-br": "Unchained é um port por recompilação estática de Whiplash para Windows e Linux, apresentando renderizadores Vulkan e D3D12, suporte a ultrawide, FSR 1 e ferramentas de configuração personalizadas."
+    }
+  },
+  {
+    "slug": "fh2-recompiled-ios",
+    "name": "Forza Horizon 2 Recompiled for iOS",
+    "repo": "oChobani/fh2-recompiled-ios",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "ios"
+    ],
+    "graphics": [
+      "Metal",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "forza-horizon-2",
+        "tier": "playable",
+        "source": "README: Playable, work in progress. The game boots, plays its intro videos and menus, and you can drive and race."
+      }
+    ],
+    "notes": {
+      "en": "Statically recompiles Forza Horizon 2 from the Xbox 360 to run natively on iPhones and iPads using Metal via MoltenVK and a custom touch overlay.",
+      "pt-br": "Recompila estaticamente o Forza Horizon 2 do Xbox 360 para rodar nativamente em iPhones e iPads usando Metal via MoltenVK e uma sobreposição de toque personalizada."
+    }
+  },
+  {
+    "slug": "lswtcs-nx",
+    "name": "LEGO Star Wars: The Complete Saga",
+    "repo": "lswtcs-nx/lswtcs-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XenonRecomp",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "lego-star-wars-the-complete-saga",
+        "tier": "playable",
+        "source": "README: Play the Xbox 360 version of LEGO Star Wars: The Complete Saga on your Nintendo Switch, as homebrew: the story, two-player co-op and saves."
+      }
+    ],
+    "notes": {
+      "en": "A native port of LEGO Star Wars: The Complete Saga (Xbox 360) for Nintendo Switch using XenonRecomp.",
+      "pt-br": "Um porte nativo de LEGO Star Wars: The Complete Saga (Xbox 360) para Nintendo Switch usando XenonRecomp."
     }
   }
 ]

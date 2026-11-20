@@ -318,5 +318,25 @@
   {
     "repo": "goodjoeth/gj-materia",
     "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (FINAL FANTASY VII)"
+  },
+  {
+    "repo": "PC-PORTERS/SplatPC-Splatoon-Native-PC-Port",
+    "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (Splatoon)"
+  },
+  {
+    "repo": "iHaiDeeZ/Skylanders-PS4",
+    "reason": "Triage accepted it, but: Draft entry is invalid: platforms may only contain linux, steamdeck, windows, macos, android, ios, arm, switch"
+  },
+  {
+    "repo": "MatyMeatBoy/DynaBroCollection",
+    "reason": "Triage accepted it, but: Console \"genesis\" is not in the catalog yet (Dyna Brothers)"
+  },
+  {
+    "repo": "pedroh77/Skyrim-macOS-Shim",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (The Elder Scrolls V: Skyrim)"
+  },
+  {
+    "repo": "ObeseCatLord/Galaxy-Angel-II-PC",
+    "reason": "Triage accepted it, but: Tier \"playable\" for Galaxy Angel II cites a quote that is not in the README: \"\""
   }
 ]

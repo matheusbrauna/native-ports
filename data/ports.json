@@ -11351,5 +11351,243 @@
       "en": "Native Switch port of the Xbox 360 XBLA version via static recompilation; runs at 60 fps with deko3d renderer; requires user's own game files; uses NX Porting Kit for easy NSP builds.",
       "pt-br": "Port nativo para Nintendo Switch da versão XBLA de Xbox 360 via recompilação estática; roda a 60 fps com renderizador deko3d; requer arquivos do jogo do usuário; usa NX Porting Kit para builds NSP fáceis."
     }
+  },
+  {
+    "slug": "re4wii-android",
+    "name": "Resident Evil 4 Wii",
+    "repo": "PotatoRecomp/RE4Wii-Android",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "WiiCompiled",
+    "platforms": [
+      "android",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "WebGPU",
+      "OpenGL ES"
+    ],
+    "games": [
+      {
+        "id": "resident-evil-4-wii-edition",
+        "tier": "playable",
+        "source": "README: The main game plays on Android and Windows with sound, saving and loading, and Separate Ways runs too."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial Android (arm64) and Windows port of the Wii version (RB4E08). Built on WiiCompiled via a prior Sengoku Basara 2 Heroes port; includes extensive in-game menu with 60 FPS, cheats, texture mods, touch controls, and performance presets. Status is 1.0 release with known minor issues on some GPUs.",
+      "pt-br": "Port não oficial para Android (arm64) e Windows da versão de Wii (RB4E08). Construído sobre WiiCompiled via um port anterior de Sengoku Basara 2 Heroes; inclui menu no jogo extenso com 60 FPS, cheats, mods de texturas, controles touch e presets de performance. Status é lançamento 1.0 com pequenos problemas conhecidos em algumas GPUs."
+    }
+  },
+  {
+    "slug": "zonith",
+    "name": "Zonith",
+    "repo": "Dittobyte/Zonith",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Recompia",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-tears-of-the-kingdom",
+        "tier": "ingame",
+        "source": "README: Early development. The game is playable on Windows and Linux; visual bugs and crashes are still expected."
+      }
+    ],
+    "notes": {
+      "en": "Fork of TotK Recomp aiming for stable 60 fps with DLSS/FSR, ultrawide, mods support; runs on Windows, Linux and Steam Deck; early but declared playable with known issues.",
+      "pt-br": "Fork do TotK Recomp com foco em 60 fps estável, suporte a DLSS/FSR, ultrawide e mods; roda no Windows, Linux e Steam Deck; ainda em desenvolvimento inicial mas declarado jogável com bugs visuais e crashes."
+    }
+  },
+  {
+    "slug": "battride-war-recomp",
+    "name": "Battride War Recomp",
+    "repo": "robertoqimin/battride-war-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS3Recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "kamen-rider-battride-war",
+        "tier": "ingame",
+        "source": "README: Playable through the opening mission (STG02). The rest of the game has not been played yet."
+      }
+    ],
+    "notes": {
+      "en": "Experimental native port of the Japanese PS3 version; reaches gameplay in the opening mission with graphics, audio, saves and movies working; some performance drops in crowded fights; requires the player's own BLJS10220 ISO.",
+      "pt-br": "Port nativo experimental da versão japonesa de PS3; chega ao gameplay na missão de abertura com gráficos, áudio, saves e filmes funcionando; algumas quedas de performance em lutas lotadas; requer o ISO BLJS10220 próprio do jogador."
+    }
+  },
+  {
+    "slug": "budokai3-nx",
+    "name": "Budokai 3 NX",
+    "repo": "ramonDias07/Budokai3-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "Deko3D"
+    ],
+    "games": [
+      {
+        "id": "dragon-ball-z-budokai-3-hd",
+        "tier": "playable",
+        "source": "README: Switch físico | A release 0.1.40 foi testada no console com lutas, campanha, menus e avisos de conquista."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial homebrew port of the Xbox 360 HD Collection version; tested on real Switch hardware with fights, story mode, menus and achievements; minor audio sync issues in heavy scenes; average ~46 FPS.",
+      "pt-br": "Port homebrew não oficial da versão HD Collection de Xbox 360; testado em hardware Switch real com lutas, modo história, menus e conquistas; pequenos problemas de sincronia de áudio em cenas pesadas; média de ~46 FPS."
+    }
+  },
+  {
+    "slug": "saints-row-pc",
+    "name": "Saints Row PC Port",
+    "repo": "otavix010/saints-row-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "saints-row",
+        "tier": "playable",
+        "source": "README: Jogo livre logo depois da criação do personagem, na engine 1.0.1: 4 minutos andando e correndo pelas ruas, a 60 fps em 2x (média 61,1; mínimo 59; GPU em 31%)."
+      }
+    ],
+    "notes": {
+      "en": "Static recomp of original Xbox 360 Saints Row; adds 60 fps, up to 4K, FSR/CAS, anisotropic filtering; Windows-only for now; tested as free-roam gameplay.",
+      "pt-br": "Recompilação estática do Saints Row original de Xbox 360; adiciona 60 fps, até 4K, FSR/CAS, filtragem anisotrópica; só Windows por enquanto; testado em jogabilidade livre."
+    }
+  },
+  {
+    "slug": "bioshock2360productrelease",
+    "name": "BioShock 2 Recomp",
+    "repo": "DuckyNerdball/BioShock2360ProductRelease",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "bioshock-2",
+        "tier": "playable",
+        "source": "README: BioShock 2 recompiled from the Xbox 360 executable to native Windows code (ReXGlue SDK static recomp), plus offline multiplayer: the game's own multiplayer maps and modes in private matches against AI bots."
+      }
+    ],
+    "notes": {
+      "en": "Includes offline multiplayer with AI bots, campaign cheat menu (F9), 60 fps game logic, and launcher support. Built from your own disc image; very early alpha for bot AI.",
+      "pt-br": "Inclui multiplayer offline com bots de IA, menu de cheats na campanha (F9), lógica do jogo a 60 fps e suporte ao launcher. Compilado a partir da sua própria imagem de disco; IA dos bots ainda em alpha inicial."
+    }
+  },
+  {
+    "slug": "battleblockrecomp-nx",
+    "name": "BattleBlock Theater",
+    "repo": "andresarevalo1/BattleBlockRecomp-NX",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "battleblock-theater",
+        "tier": "ingame",
+        "source": "README: La intro 3D se reproduce con sonido y el juego corre hasta el título."
+      }
+    ],
+    "notes": {
+      "en": "Native Switch port via static recompilation; runs at 720p/30fps by default (configurable to 60); uses title override for memory; native renderer replaces original Xenos effects.",
+      "pt-br": "Port nativo para Switch via recompilação estática; roda a 720p/30fps por padrão (configurável para 60); usa title override por memória; renderer nativo substitui efeitos originais do Xenos."
+    }
+  },
+  {
+    "slug": "pes2013-recomp",
+    "name": "PES 2013",
+    "repo": "erikomis/pes2013-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "pro-evolution-soccer-2013",
+        "tier": "playable",
+        "source": "README: It boots, shows its menus in Portuguese and plays full matches, at a steady 60 fps in gameplay (headless measurement on Apple silicon, the game's 1280×720), with Data Pack 6 and an Option File loaded. A friendly has been played to the end in a window."
+      }
+    ],
+    "notes": {
+      "en": "Alpha static recomp of PES 2013 (PS3 BLUS31029 01.04) for Apple silicon macOS; full friendlies playable at 60 fps with 2026 season mods, texture packs, and Metal renderer; Master League and online untested.",
+      "pt-br": "Recompilação estática alpha do PES 2013 (PS3 BLUS31029 01.04) para macOS Apple silicon; partidas amistosas completas jogáveis a 60 fps com mods de temporada 2026, pacotes de texturas e renderizador Metal; Master League e online ainda não testados."
+    }
+  },
+  {
+    "slug": "black",
+    "name": "BLACK",
+    "repo": "secretpray/Black",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "macos"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "black",
+        "tier": "playable",
+        "source": "README: A complete playthrough, all runtime races, audio quality and other controller models remain unqualified."
+      }
+    ],
+    "notes": {
+      "en": "Native ARM64 port of the Original Xbox FPS with HD reticle, texture replacement support, extensive mods/cheats, checkpoints, and performance overlay. Requires own USA/EU disc image.",
+      "pt-br": "Port nativo para ARM64 do FPS do Xbox original com mira em HD, suporte a texturas HD, mods e cheats extensos, checkpoints e overlay de desempenho. Requer imagem de disco EUA/EU própria."
+    }
   }
 ]

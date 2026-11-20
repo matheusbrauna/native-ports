@@ -822,5 +822,13 @@
   {
     "repo": "Sashi-hub085/ue-bulk-export",
     "reason": "Triage: The repository is an asset extraction tool for Unreal Engine games, not a native game port."
+  },
+  {
+    "repo": "Joshspeakman/OpenPark",
+    "reason": "Triage: This is a static recompilation of a 1994 DOS PC game, which is out of scope."
+  },
+  {
+    "repo": "RecompAchievements-org/recompachievements-web",
+    "reason": "Triage: This is a website and API for tracking achievements across recomp projects, not a game port itself."
   }
 ]

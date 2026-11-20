@@ -2134,5 +2134,83 @@
     "title": "Heroes of Might and Magic IV",
     "console": "pc",
     "titleIds": []
+  },
+  {
+    "id": "mass-effect-2",
+    "title": "Mass Effect 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "grand-theft-auto-liberty-city-stories",
+    "title": "Grand Theft Auto: Liberty City Stories",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "grand-theft-auto-vice-city-stories",
+    "title": "Grand Theft Auto: Vice City Stories",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "dark-souls-ii-scholar-of-the-first-sin",
+    "title": "Dark Souls II: Scholar of the First Sin",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "new-super-mario-bros-wii",
+    "title": "New Super Mario Bros. Wii",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "alice-madness-returns",
+    "title": "Alice: Madness Returns",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "deadpool",
+    "title": "Deadpool",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "jet-moto-2-championship-edition",
+    "title": "Jet Moto 2: Championship Edition",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "whiplash",
+    "title": "Whiplash",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "bomberman-64",
+    "title": "Bomberman 64",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "forza-horizon-2",
+    "title": "Forza Horizon 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "lego-star-wars-the-complete-saga",
+    "title": "LEGO Star Wars: The Complete Saga",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "shank-2",
+    "title": "Shank 2",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

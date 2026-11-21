@@ -854,5 +854,13 @@
   {
     "repo": "NahuelGenchi/sonic-advance-remaster",
     "reason": "Triage: built from a decompilation but not through static recompilation; the code is hand-written C from decomp, not recompiled console machine code"
+  },
+  {
+    "repo": "Nio03/unricopie-launcher",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "R0Y00/Xbox2Windows",
+    "reason": "Triage: This is a research project on static recompilation techniques and experiments for Xbox Series X|S, not a completed native port of any specific game."
   }
 ]

@@ -2242,5 +2242,47 @@
     "title": "BattleBlock Theater",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "metroid-dread",
+    "title": "Metroid Dread",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "killzone-liberation",
+    "title": "Killzone: Liberation",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "marvel-ultimate-alliance-3-the-black-order",
+    "title": "Marvel Ultimate Alliance 3: The Black Order",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "the-elder-scrolls-iv-oblivion",
+    "title": "The Elder Scrolls IV: Oblivion",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "scar-squadra-corse-alfa-romeo",
+    "title": "SCAR - Squadra Corse Alfa Romeo",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "sonic-the-hedgehog-4-episode-i",
+    "title": "Sonic the Hedgehog 4: Episode I",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "twisted-metal-2",
+    "title": "Twisted Metal 2",
+    "console": "ps1",
+    "titleIds": []
   }
 ]

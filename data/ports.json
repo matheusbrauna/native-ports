@@ -9220,22 +9220,22 @@
       {
         "id": "ratchet-clank-tools-of-destruction",
         "tier": "ingame",
-        "source": "README: first target: played by hand from its first level; a scripted new game from an empty install plays about 11 minutes in Metropolis without a crash; not playable through yet"
+        "source": "README: a scripted new game from an empty install plays about 11 minutes in Metropolis without a crash; not playable through yet"
       },
       {
         "id": "ratchet-clank-future-quest-for-booty",
         "tier": "ingame",
-        "source": "README: builds; a scripted new game from a fresh install reaches the ship deck, with about 90 seconds of scripted play without errors (one run); not playable"
+        "source": "README: a scripted new game from a fresh install reaches the ship deck, with about 90 seconds of scripted play without errors (one run); not playable"
       },
       {
         "id": "ratchet-clank-future-a-crack-in-time",
         "tier": "intro",
-        "source": "README: builds (1.20 update); a scripted new game reaches its first level (greatclocka) and plays its opening cutscenes, in 4 of 4 runs; player control there is not confirmed; not playable"
+        "source": "README: a scripted new game reaches its first level (greatclocka) and plays its opening cutscenes, in 4 of 4 runs; player control there is not confirmed; not playable"
       },
       {
         "id": "ratchet-clank-all-4-one",
         "tier": "ingame",
-        "source": "README: builds (1.03 update); reaches its first fight in colour, then the characters fall through the floor; not playable"
+        "source": "README: a scripted new game reaches its first level, luminopolis, and the picture stops about 468 seconds in (scripted run, 2026-11-18); it is not in the player's control yet"
       },
       {
         "id": "ratchet-clank-full-frontal-assault",
@@ -9254,8 +9254,8 @@
       }
     ],
     "notes": {
-      "en": "Static recompilation project for Ratchet & Clank games on PS3 using ps3recomp. Multiple games reach in-game levels but are not fully playable yet.",
-      "pt-br": "Projeto de recompilação estática para jogos de Ratchet & Clank no PS3 usando ps3recomp. Vários jogos chegam às fases em jogo, mas ainda não são totalmente jogáveis."
+      "en": "Static recompilation project for Ratchet & Clank PS3 games using ps3recomp. Now includes Linux launcher support via Proton; focus shifted to All 4 One with improved scripted progress, but no game is fully playable.",
+      "pt-br": "Projeto de recompilação estática para jogos de Ratchet & Clank no PS3 usando ps3recomp. Agora inclui suporte a launcher no Linux via Proton; foco mudou para All 4 One com progresso scriptado melhorado, mas nenhum jogo é totalmente jogável."
     }
   },
   {
@@ -11452,13 +11452,13 @@
     "games": [
       {
         "id": "dragon-ball-z-budokai-3-hd",
-        "tier": "playable",
-        "source": "README: Switch físico | A release 0.1.40 foi testada no console com lutas, campanha, menus e avisos de conquista."
+        "tier": "ingame",
+        "source": "README: Switch físico | Testadas no console: 0.1.47 (boost segue o perfil, menu de conquistas com ícones), 0.1.48 (áudio melhorou muito) e 0.1.49 (chiado corrigido). Ainda não testados: cartão de detalhe da conquista (0.1.50), interna 1080P e saída 1440P no dock, e os novos padrões do NO OVERCLOCK."
       }
     ],
     "notes": {
-      "en": "Unofficial homebrew port of the Xbox 360 HD Collection version; tested on real Switch hardware with fights, story mode, menus and achievements; minor audio sync issues in heavy scenes; average ~46 FPS.",
-      "pt-br": "Port homebrew não oficial da versão HD Collection de Xbox 360; testado em hardware Switch real com lutas, modo história, menus e conquistas; pequenos problemas de sincronia de áudio em cenas pesadas; média de ~46 FPS."
+      "en": "Unofficial homebrew port of the Xbox 360 HD Collection; v0.1.50 adds stable 40 FPS fights at stock clocks, fixed crackling audio, GPU boost, and in-game achievements with icons; tested on real hardware but some 0.1.50 features remain untested; ~40 FPS average in fights.",
+      "pt-br": "Port homebrew não oficial da HD Collection de Xbox 360; v0.1.50 traz lutas a 40 FPS estáveis em clocks de fábrica, correção de chiado no áudio, boost de GPU e conquistas com ícones do jogo; testado em hardware real, mas alguns recursos da 0.1.50 ainda não foram testados; média de ~40 FPS em lutas."
     }
   },
   {
@@ -11587,6 +11587,244 @@
     "notes": {
       "en": "Native ARM64 port of the Original Xbox FPS with HD reticle, texture replacement support, extensive mods/cheats, checkpoints, and performance overlay. Requires own USA/EU disc image.",
       "pt-br": "Port nativo para ARM64 do FPS do Xbox original com mira em HD, suporte a texturas HD, mods e cheats extensos, checkpoints e overlay de desempenho. Requer imagem de disco EUA/EU própria."
+    }
+  },
+  {
+    "slug": "metroid-dread-recomp",
+    "name": "Metroid Dread Recomp",
+    "repo": "yozander2009-stack/Metroid-Dread-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "SwitchRecomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "metroid-dread",
+        "tier": "playable",
+        "source": "README: The whole game can be played from start to end, but expect rough edges on hardware that hasn't been tested yet."
+      }
+    ],
+    "notes": {
+      "en": "Static recomp of Metroid Dread 2.1.0 (Switch) for Windows/Linux/Steam Deck; full playthrough possible with graphics enhancements, ultrawide, high FPS, mods; pre-1.0 with some remaining issues.",
+      "pt-br": "Recompilação estática de Metroid Dread 2.1.0 (Switch) para Windows, Linux e Steam Deck; jogo inteiro jogável do início ao fim com melhorias gráficas, ultrawide, alto FPS e mods; ainda pré-1.0 com algumas arestas."
+    }
+  },
+  {
+    "slug": "mk8-online",
+    "name": "MK8-online",
+    "repo": "Vnnc1/MK8-online",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "mario-kart-8-deluxe",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Experimental static recompilation of Mario Kart 8 Deluxe 4.0.1; features native online via Nextendo/Steam, Mii creator, ultrawide support, and graphics upscaling (FSR/DLSS). Public test release; status is WIP but runs on Windows and Linux.",
+      "pt-br": "Recompilação estática experimental de Mario Kart 8 Deluxe 4.0.1; inclui online nativo via Nextendo/Steam, criador de Mii, suporte ultrawide e upscaling gráfico (FSR/DLSS). Versão de teste público; estado é WIP mas roda no Windows e Linux."
+    }
+  },
+  {
+    "slug": "killzoneliberation-recomp",
+    "name": "Killzone: Liberation Recomp",
+    "repo": "Tzeentchnet/KillzoneLiberation-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "macos"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "killzone-liberation",
+        "tier": "ingame",
+        "source": "README: Tutorial and Mission 1 paths have been completed on Windows; deterministic menu, movie, and live Mission 1 routes pass on macOS; full-game validation remains in progress"
+      }
+    ],
+    "notes": {
+      "en": "Source-only static recomp of PSP v1.20 (UCUS-98646); supports D3D12/Vulkan on Windows and Vulkan/MoltenVK on Apple Silicon macOS; requires own ISO; chapters 2-4 and full validation still in progress.",
+      "pt-br": "Recompilação estática somente do código-fonte da versão PSP v1.20 (UCUS-98646); suporta D3D12/Vulkan no Windows e Vulkan/MoltenVK no macOS Apple Silicon; exige ISO própria; capítulos 2-4 e validação completa ainda em andamento."
+    }
+  },
+  {
+    "slug": "mua3-native",
+    "name": "Marvel Ultimate Alliance 3 Native",
+    "repo": "KaikoClanworth1/mua3-native",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "RecompLauncher",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "marvel-ultimate-alliance-3-the-black-order",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of the Switch version with up to 4K, high frame rates, mod support for Switch mods, and in-game PC graphics options. Built from a user-provided Switch dump.",
+      "pt-br": "Port nativo para Windows da versão de Switch com até 4K, altas taxas de frames, suporte a mods do Switch e opções gráficas de PC no jogo. Construído a partir de um dump de Switch fornecido pelo usuário."
+    }
+  },
+  {
+    "slug": "nxoblivion",
+    "name": "NXOblivion",
+    "repo": "nxoblivion/NXOblivion",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "the-elder-scrolls-iv-oblivion",
+        "tier": "ingame",
+        "source": "README: Tested on a real Switch and very playable. It runs at about 45 fps outdoors and 25-35 fps in cities."
+      }
+    ],
+    "notes": {
+      "en": "Static recomp of original Xbox 360 release (title ID 425307D1) using ReXGlue and reNut's renderer on deko3d; very playable with performance around 25-45 fps; requires own game dump; alpha with bugs.",
+      "pt-br": "Recompilação estática da versão original de Xbox 360 (ID 425307D1) usando ReXGlue e renderizador reNut no deko3d; muito jogável com ~25-45 fps; requer dump próprio do jogo; alpha com bugs."
+    }
+  },
+  {
+    "slug": "scarport",
+    "name": "ScarPort",
+    "repo": "MertCNOZ/ScarPort",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "scar-squadra-corse-alfa-romeo",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PC port with launcher; adds widescreen, FOV, reflections, bloom, texture packs, modern controller support and more. First-time compile on launch.",
+      "pt-br": "Port nativo para PC com launcher; adiciona widescreen, FOV, reflexos, bloom, pacotes de texturas, suporte a controles modernos e mais. Compila o jogo na primeira execução."
+    }
+  },
+  {
+    "slug": "skate-recomp",
+    "name": "Skate Recompilation",
+    "repo": "TheRealestNwah/skate-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "skate",
+        "tier": "ingame",
+        "source": "README: The original USA disc boots to the title screen from a clean Windows checkout. M4 playtesting has reached Free Skate in San Vanelona after creating a fresh profile. Gameplay stability and career progression are still in progress."
+      }
+    ],
+    "notes": {
+      "en": "WIP native Windows port of the original 2007 Skate via Xbox 360 static recompilation; currently reaches Free Skate mode with title screen boot complete.",
+      "pt-br": "Port nativo para Windows em andamento do Skate original de 2007 via recompilação estática do Xbox 360; atualmente chega ao modo Free Skate com boot da tela de título completo."
+    }
+  },
+  {
+    "slug": "sonic-4-episode-1-definitive-edition-recompiled",
+    "name": "Sonic 4 Episode 1 Definitive Edition Recompiled",
+    "repo": "GustavoCaruzoGoncalves/sonic-4-episode-1-definitive-edition-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "sonic-the-hedgehog-4-episode-i",
+        "tier": "ingame",
+        "source": "README: The project boots on Android, reaches menus and first-stage gameplay, and has measurable performance wins—but optimization, correctness, compatibility, and validation remain active engineering work."
+      }
+    ],
+    "notes": {
+      "en": "Community experimental ARM64 AOT port of the Xbox 360 version; reaches first stage (Splash Hill Zone) with Vulkan on Android (POCO F7) and in-progress D3D12 on Windows; heavy focus on performance experiments and fixes.",
+      "pt-br": "Port experimental comunitário em AOT ARM64 da versão de Xbox 360; chega ao primeiro estágio (Splash Hill Zone) com Vulkan no Android (POCO F7) e D3D12 em progresso no Windows; foco intenso em experimentos e correções de desempenho."
+    }
+  },
+  {
+    "slug": "opentm2",
+    "name": "OpenTM2",
+    "repo": "Tokatta007/OpenTM2",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "twisted-metal-2",
+        "tier": "ingame",
+        "source": "README: A PC port of Twisted Metal 2 (PlayStation, 1996) for Windows. The game's own code is recompiled from your copy of the game and runs on a native PC runtime, with online play, split-screen and many optional improvements."
+      }
+    ],
+    "notes": {
+      "en": "Recompiles the original PS1 executable (or hybrid with decomp changes); features online rollback netcode, up to 4-player split-screen, widescreen, Vanilla Plus toggles, mod support. Requires user's own USA disc image.",
+      "pt-br": "Recompila o executável original do PS1 (ou híbrido com mudanças da decompilação); inclui netcode rollback online, split-screen para até 4 jogadores, widescreen, toggles Vanilla Plus e suporte a mods. Requer imagem do disco USA do usuário."
     }
   }
 ]

@@ -338,5 +338,29 @@
   {
     "repo": "ObeseCatLord/Galaxy-Angel-II-PC",
     "reason": "Triage accepted it, but: Tier \"playable\" for Galaxy Angel II cites a quote that is not in the README: \"\""
+  },
+  {
+    "repo": "oenderg/Reflourished-Darwin",
+    "reason": "Triage accepted it, but: Console \"android\" is not in the catalog yet (PvZ2: Reflourished)"
+  },
+  {
+    "repo": "VR-WakerHD/VR-WakerHD",
+    "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (The Legend of Zelda: The Wind Waker HD)"
+  },
+  {
+    "repo": "sp00nznet/stuntrace",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (Stunt Race FX)"
+  },
+  {
+    "repo": "phoenixd123/sh3-pc",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Silent Hill 3)"
+  },
+  {
+    "repo": "Syncr0ndi/LOHT-Recomp",
+    "reason": "Triage accepted it, but: Console \"arcade\" is not in the catalog yet (Legend of Hero Tonma)"
+  },
+  {
+    "repo": "pedroh77/Skyrim-macOS-Port",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (The Elder Scrolls V: Skyrim)"
   }
 ]

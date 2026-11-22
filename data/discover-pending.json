@@ -362,5 +362,21 @@
   {
     "repo": "pedroh77/Skyrim-macOS-Port",
     "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (The Elder Scrolls V: Skyrim)"
+  },
+  {
+    "repo": "sp00nznet/tiberiansun-recomp",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Command & Conquer: Tiberian Sun)"
+  },
+  {
+    "repo": "Eladerino/JetSetRadioFuture-Unleashed-NX",
+    "reason": "Triage accepted it, but: Tier \"ingame\" for Jet Set Radio Future cites a quote that is not in the README: \"It boots and plays. Logos, title, saving and loading, character select and gameplay all work on real hardware. ... It ha\""
+  },
+  {
+    "repo": "veritr1x/reincomp",
+    "reason": "Triage accepted it, but: Console \"android\" is not in the catalog yet (NieR Re[in]carnation)"
+  },
+  {
+    "repo": "Polocop/genewars",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Gene Wars)"
   }
 ]

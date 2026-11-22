@@ -5560,12 +5560,12 @@
       {
         "id": "tekken-6",
         "tier": "wip",
-        "source": "README: This remains startup research, with no title/menu or playable-game claim."
+        "source": "README: the first genuine hybrid Android ARM64 debug APK is built and signed; Milestones 003 and 004 remain in progress. The game is not playable and the title screen and menus have not been reached."
       }
     ],
     "notes": {
-      "en": "Azazel6 is an experimental native Android port of Tekken 6 for PSP using PSPRecomp static recompilation.",
-      "pt-br": "Azazel6 é um port nativo experimental para Android de Tekken 6 para PSP usando recompilação estática via PSPRecomp."
+      "en": "Azazel6 is an experimental native Android port of Tekken 6 for PSP using PSPRecomp static recompilation; a hybrid debug APK now builds and executes limited code on emulated ARM64 but remains far from playable.",
+      "pt-br": "Azazel6 é um port nativo experimental para Android de Tekken 6 para PSP usando recompilação estática via PSPRecomp; um APK híbrido de debug agora é compilado e executa código limitado em ARM64 emulado, mas ainda está longe de ser jogável."
     }
   },
   {
@@ -7418,12 +7418,12 @@
       {
         "id": "bakugan-battle-brawlers-ps3",
         "tier": "playable",
-        "source": "README: The game is fully playable from start to finish: story mode, tutorials, battle arenas, card minigames, cutscenes, FMVs, and saving/loading function natively."
+        "source": "README: The game is fully playable from start to finish: story mode, tutorials, battle arenas, card minigames, cutscenes, FMVs, multiplayer (up to 7 ports), and saving/loading function natively."
       }
     ],
     "notes": {
-      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, playable from start to finish.",
-      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, jogável do início ao fim."
+      "en": "Static PPU and SPU recompilation of the PS3 release for Windows using ps3recomp and Direct3D 12, now with AMD FSR 3.1 frame generation, SMAA, shader cache, and refined Sixaxis support.",
+      "pt-br": "Recompilação estática de PPU e SPU da versão de PS3 para Windows usando ps3recomp e Direct3D 12, agora com AMD FSR 3.1 frame generation, SMAA, cache de shaders e suporte refinado a Sixaxis."
     }
   },
   {
@@ -11825,6 +11825,325 @@
     "notes": {
       "en": "Recompiles the original PS1 executable (or hybrid with decomp changes); features online rollback netcode, up to 4-player split-screen, widescreen, Vanilla Plus toggles, mod support. Requires user's own USA disc image.",
       "pt-br": "Recompila o executável original do PS1 (ou híbrido com mudanças da decompilação); inclui netcode rollback online, split-screen para até 4 jogadores, widescreen, toggles Vanilla Plus e suporte a mods. Requer imagem do disco USA do usuário."
+    }
+  },
+  {
+    "slug": "midtown-madness-3-recomp",
+    "name": "Midtown Madness 3 Recomp",
+    "repo": "MattSG/midtown-madness-3-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "midtown-madness-3",
+        "tier": "playable",
+        "source": "README: Windows x64 is fully playable."
+      }
+    ],
+    "notes": {
+      "en": "Fully playable on Windows with Vulkan or D3D12; Linux support in testing. Includes many mods, widescreen, extended draw distance, save import, and keyboard/mouse support. Experimental AI-assisted project; bring your own disc dump.",
+      "pt-br": "Totalmente jogável no Windows com Vulkan ou D3D12; suporte a Linux em fase de testes. Inclui vários mods, tela larga, distância de desenho estendida, importação de saves e suporte a teclado/mouse. Projeto experimental assistido por IA; traga seu próprio dump do disco."
+    }
+  },
+  {
+    "slug": "prototype2-nx",
+    "name": "Prototype 2",
+    "repo": "penettrator/prototype2-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "prototype-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Switch homebrew port (NRO + NSP forwarder) of the Xbox 360 version via static recompilation with ReXGlue; runs on Vulkan via NVK/Mesa; requires original game dump.",
+      "pt-br": "Port nativo homebrew para Switch (NRO + forwarder NSP) da versão de Xbox 360 via recompilação estática com ReXGlue; roda em Vulkan via NVK/Mesa; requer dump original do jogo."
+    }
+  },
+  {
+    "slug": "personarm",
+    "name": "PersonaRM",
+    "repo": "sargon494/PersonaRM",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "RecompOne",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "persona-2-eternal-punishment",
+        "tier": "ingame",
+        "source": "README: Not fully playable yet. PersonaRM is a research-driven work in progress, and the first public builds are on GitHub Releases (v0.2.0 is the latest). The game's real executable plays its intro videos with sound, shows the title screen and, on a new game, reaches the first story scenes, free movement of the player character and the main menu."
+      }
+    ],
+    "notes": {
+      "en": "Interpreter-first PS1 runtime with static recompiler (TinyCC, cached on first run); reaches battles and saves on disc 1; texture mods, text speed, widescreen experimental; launcher in Rust+egui; BYOC only.",
+      "pt-br": "Runtime de PS1 com interpretador primeiro e recompiler estático (TinyCC, cacheado na primeira execução); chega a batalhas e saves no disco 1; mods de textura, velocidade de texto e widescreen experimentais; launcher em Rust+egui; só BYOC."
+    }
+  },
+  {
+    "slug": "crimson-skies-high-road-to-revenge-repo",
+    "name": "Crimson Skies: High Road to Revenge",
+    "repo": "nacholuver1/Crimson-Skies-High-Road-To-Revenge-Repo",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "crimson-skies-high-road-to-revenge",
+        "tier": "ingame",
+        "source": "README: Status: playable. The campaign runs with sound and saves, at 30 to 240 fps."
+      }
+    ],
+    "notes": {
+      "en": "AI-assisted static recompilation with launcher, FPS unlock up to 240, FXAA, video upscaling, and settings saved to TOML. Requires own original Xbox disc image; first run translates the game.",
+      "pt-br": "Recompilação estática assistida por IA com launcher, desbloqueio de FPS até 240, FXAA, upscaling de vídeo e configurações salvas em TOML. Requer imagem de disco do Xbox original; primeira execução traduz o jogo."
+    }
+  },
+  {
+    "slug": "blitz-theleague-recomp",
+    "name": "Blitz: The League",
+    "repo": "nacholuver1/Blitz-TheLeague-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "blitz-the-league",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "AI-assisted static recompilation port for Windows and Linux; requires own disc dump; boots to launcher and title screen with some known minor issues.",
+      "pt-br": "Port via recompilação estática assistida por IA para Windows e Linux; requer dump próprio do disco; chega à tela de título e launcher com alguns problemas menores conhecidos."
+    }
+  },
+  {
+    "slug": "blitz-theleague-ii-recomp",
+    "name": "Blitz: The League II",
+    "repo": "nacholuver1/Blitz-TheLeague-II-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "blitz-the-league",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows and Linux port via static recompilation. Runs at full speed (60 fps) at 2x render resolution on modern hardware; Vulkan is the recommended renderer. AI-assisted development with Claude Code.",
+      "pt-br": "Port nativo para Windows e Linux via recompilação estática. Roda a 60 fps em resolução 2x em hardware moderno; Vulkan é o renderizador recomendado. Desenvolvimento assistido por IA com Claude Code."
+    }
+  },
+  {
+    "slug": "dragonblast",
+    "name": "Dragon Blast",
+    "repo": "dfdx047/DragonBlast",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "dragon-ball-raging-blast-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Android port with two renderers (Renut native and Xenia fallback), touch controls, in-game menu, GPU driver support, and performance data on several devices; requires user's own USA Rev 1 ISO.",
+      "pt-br": "Port nativo para Android com dois renderizadores (Renut nativo e fallback Xenia), controles touch, menu no jogo, suporte a drivers de GPU e dados de desempenho em vários aparelhos; exige ISO USA Rev 1 do usuário."
+    }
+  },
+  {
+    "slug": "boom-boom-rocket-xbla-pc-recomp",
+    "name": "Boom Boom Rocket XBLA PC Recomp",
+    "repo": "CaiusCodes/Boom-Boom-Rocket-XBLA-PC-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "boom-boom-rocket",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port with up to 4K, FSR/CAS/FXAA, keyboard/mouse/Xbox controller support, custom music visualizer, and optional DLC import. Portable install; experimental local 2-player.",
+      "pt-br": "Port nativo para Windows com até 4K, FSR/CAS/FXAA, suporte a teclado/mouse/controle Xbox, visualizador de música personalizado e importação opcional de DLC. Instalação portátil; 2 jogadores local experimental."
+    }
+  },
+  {
+    "slug": "outrun-online-arcade-xbla-pc-recomp",
+    "name": "OutRun Online Arcade XBLA PC Recomp",
+    "repo": "CaiusCodes/Outrun-Online-Arcade-XBLA-PC-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "outrun-online-arcade",
+        "tier": "ingame",
+        "source": "README: Race through all 15 stages and 5 goals at up to 4K and 60 FPS"
+      }
+    ],
+    "notes": {
+      "en": "Native PC port with D3D12/Vulkan renderer, up to 4K/60 FPS, LAN multiplayer, HD HUD, and full controller/keyboard/mouse support. The entire game runs from start to finish.",
+      "pt-br": "Port nativo para PC com renderizador D3D12/Vulkan, até 4K/60 FPS, multiplayer LAN, HUD em HD e suporte completo a controles, teclado e mouse. O jogo inteiro roda do início ao fim."
+    }
+  },
+  {
+    "slug": "hexic-hd-xbla-pc-recomp",
+    "name": "Hexic HD XBLA PC Recomp",
+    "repo": "CaiusCodes/Hexic-HD-XBLA-PC-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "hexic-hd",
+        "tier": "ingame",
+        "source": "README: Play at up to 4K and a steady 60 FPS, with full mouse, keyboard and controller support that switches on the fly, offline High Scores, nine languages and a native PC settings menu."
+      }
+    ],
+    "notes": {
+      "en": "Native PC port with mouse/keyboard support, hot-swapping controls, offline high scores, FSR/FXAA, up to 4K/60 FPS, portable install, and built-in updater. Requires original XBLA package.",
+      "pt-br": "Port nativo para PC com suporte a mouse/teclado, troca automática de controles, pontuações offline, FSR/FXAA, até 4K/60 FPS, instalação portátil e atualizador integrado. Requer o pacote XBLA original."
+    }
+  },
+  {
+    "slug": "ufe3-recomp",
+    "name": "Ultraman Fighting Evolution 3",
+    "repo": "idiazraz/ufe3-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "ultraman-fighting-evolution-3",
+        "tier": "intro",
+        "source": "README: The game boots through its IOP modules and sound driver, passes the memory-card check, renders the health-warning screen, and skips the opening movie. It currently stops on a black screen before the title. No 3D (VU1) rendering yet."
+      }
+    ],
+    "notes": {
+      "en": "Early WIP static recompilation for Linux x86-64 only; reaches intro screens but no 3D rendering or gameplay yet. Requires original SLPS-25441 disc image.",
+      "pt-br": "Recompilação estática inicial para Linux x86-64 apenas; chega às telas de introdução mas sem renderização 3D ou jogabilidade ainda. Requer imagem do disco SLPS-25441 original."
+    }
+  },
+  {
+    "slug": "everybodys-golf-ps4-pc-port",
+    "name": "Everybody's Golf PS4 PC Port",
+    "repo": "finalpantasy/everybodys-golf-ps4-pc-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "runtime",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "everybodys-golf",
+        "tier": "playable",
+        "source": "README: Playable. On 2026-11-18 a full 9-hole round was played by hand, start to finish, with keyboard controls. Shots, putts, scoring and the scorecard work."
+      }
+    ],
+    "notes": {
+      "en": "Runtime port (PS4 HLE + Vulkan) of the PS4 version; full 9-hole rounds completable; includes launcher, texture upscaling, 60 FPS, partial online server support.",
+      "pt-br": "Port via runtime (HLE de PS4 + Vulkan) da versão de PS4; rodadas completas de 9 buracos jogáveis do início ao fim; inclui launcher, upscaling de texturas, 60 FPS e suporte parcial a servidor online."
     }
   }
 ]

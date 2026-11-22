@@ -862,5 +862,25 @@
   {
     "repo": "R0Y00/Xbox2Windows",
     "reason": "Triage: This is a research project on static recompilation techniques and experiments for Xbox Series X|S, not a completed native port of any specific game."
+  },
+  {
+    "repo": "Ahmet-Dedeler/awesome-gta6-reverse-engineering",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "ranveersoni98/Xenora",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Zertrox123/elf64-recomp",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "Polinaagarwal02/native-instruments-komplete-win",
+    "reason": "Triage: This is a Windows music production software suite, not a video game port."
+  },
+  {
+    "repo": "topaxi/OpenAntiGrav",
+    "reason": "Triage: This is a clean-room reimplementation from scratch, not a static recompilation or runtime port of console machine code."
   }
 ]

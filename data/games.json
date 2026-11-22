@@ -2284,5 +2284,65 @@
     "title": "Twisted Metal 2",
     "console": "ps1",
     "titleIds": []
+  },
+  {
+    "id": "prototype-2",
+    "title": "Prototype 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "persona-2-eternal-punishment",
+    "title": "Persona 2: Eternal Punishment",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "crimson-skies-high-road-to-revenge",
+    "title": "Crimson Skies: High Road to Revenge",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "blitz-the-league",
+    "title": "Blitz: The League",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "dragon-ball-raging-blast-2",
+    "title": "Dragon Ball: Raging Blast 2",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "boom-boom-rocket",
+    "title": "Boom Boom Rocket",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "outrun-online-arcade",
+    "title": "OutRun Online Arcade",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "hexic-hd",
+    "title": "Hexic HD",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "ultraman-fighting-evolution-3",
+    "title": "Ultraman Fighting Evolution 3",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "everybodys-golf",
+    "title": "Everybody's Golf",
+    "console": "ps4",
+    "titleIds": []
   }
 ]

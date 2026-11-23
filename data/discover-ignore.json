@@ -882,5 +882,17 @@
   {
     "repo": "topaxi/OpenAntiGrav",
     "reason": "Triage: This is a clean-room reimplementation from scratch, not a static recompilation or runtime port of console machine code."
+  },
+  {
+    "repo": "Its3rr0rsWRLD/XPortPC",
+    "reason": "Likely a tool, list or emulator (matched its description)"
+  },
+  {
+    "repo": "atomsprout/nestvane",
+    "reason": "Triage: This is a static-recompilation runtime for running Android 17 (AOSP) on iOS, not a port of any console game."
+  },
+  {
+    "repo": "sp00nznet/macrecomp",
+    "reason": "Triage: This is a static recompilation toolkit and SDK for classic Macintosh apps, not a port of any specific game."
   }
 ]

@@ -378,5 +378,25 @@
   {
     "repo": "Polocop/genewars",
     "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Gene Wars)"
+  },
+  {
+    "repo": "formae-group/ducktales-recompiled",
+    "reason": "Triage accepted it, but: Console \"nes\" is not in the catalog yet (DuckTales)"
+  },
+  {
+    "repo": "sp00nznet/mechwarrior3-recomp",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (MechWarrior 3)"
+  },
+  {
+    "repo": "sp00nznet/shufflepuck-cafe",
+    "reason": "Triage accepted it, but: Console \"macintosh\" is not in the catalog yet (Shufflepuck Cafe)"
+  },
+  {
+    "repo": "BelmanteGu/3dWorldRecomp",
+    "reason": "Triage accepted it, but: Console \"wiiu\" is not in the catalog yet (Super Mario 3D World)"
+  },
+  {
+    "repo": "AlekayDevs/alttp-recomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (The Legend of Zelda: A Link to the Past)"
   }
 ]

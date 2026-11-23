@@ -2344,5 +2344,59 @@
     "title": "Everybody's Golf",
     "console": "ps4",
     "titleIds": []
+  },
+  {
+    "id": "monster-hunter-generations-ultimate",
+    "title": "Monster Hunter Generations Ultimate",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "god-hand",
+    "title": "God Hand",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "the-suffering",
+    "title": "The Suffering",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "harvest-moon-animal-parade",
+    "title": "Harvest Moon: Animal Parade",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "headhunter",
+    "title": "Headhunter",
+    "console": "dreamcast",
+    "titleIds": []
+  },
+  {
+    "id": "tokyo-mirage-sessions-fe-encore",
+    "title": "Tokyo Mirage Sessions #FE Encore",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "sleeping-dogs",
+    "title": "Sleeping Dogs",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "halo-2",
+    "title": "Halo 2",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "mario-party-9",
+    "title": "Mario Party 9",
+    "console": "wii",
+    "titleIds": []
   }
 ]

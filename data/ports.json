@@ -7332,7 +7332,8 @@
     "technique": "recomp",
     "toolchain": null,
     "platforms": [
-      "windows"
+      "windows",
+      "linux"
     ],
     "graphics": [
       "Vulkan"
@@ -7341,12 +7342,12 @@
       {
         "id": "blue-stinger",
         "tier": "ingame",
-        "source": "README: O jogo roda no Windows a partir do disco do usuário, com arquivos, controles (teclado e controle Xbox), saves, filmes e áudio nativos por padrão"
+        "source": "README: The game already runs on Windows from your disc, with native controls (keyboard and gamepad), saves, movies, audio and video, Vulkan rendering, a free camera and subtitles in Portuguese and English. The current version is a pre-release: v0.9.7-5."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Blue Stinger for Windows with Vulkan rendering and native audio, input, and save systems.",
-      "pt-br": "Recompilação estática de Blue Stinger para Windows com renderização Vulkan e sistemas nativos de áudio, controles e salvamento."
+      "en": "Static recompilation of Blue Stinger for native Windows (and partial Linux) with Vulkan rendering; 88% toward 1.0 but full campaign playthrough not yet started.",
+      "pt-br": "Recompilação estática de Blue Stinger para Windows nativo (e Linux parcial) com renderização Vulkan; 88% rumo à 1.0, mas a campanha completa ainda não começou."
     }
   },
   {
@@ -7626,12 +7627,12 @@
       {
         "id": "valkyrie-profile-2-silmeria",
         "tier": "ingame",
-        "source": "README: Playable through the start of chapter 1 (the opening, the town of Logun, the battle tutorial and the first battles, menus, saving)."
+        "source": "README: Rest of the game"
       }
     ],
     "notes": {
-      "en": "Native Windows port of Valkyrie Profile 2: Silmeria built via static recompilation with PS2Recomp, utilizing native OpenGL graphics and native audio. Currently playable through the start of Chapter 1.",
-      "pt-br": "Port nativo para Windows de Valkyrie Profile 2: Silmeria construído por recompilação estática com PS2Recomp, utilizando gráficos OpenGL nativos e áudio nativo. Atualmente jogável até o início do Capítulo 1."
+      "en": "Native Windows port of Valkyrie Profile 2: Silmeria via static recompilation, now using a fully native BozoEngine runner with no PS2 emulation. It reaches the first battle at 60 fps but the rest of the game is not reached yet.",
+      "pt-br": "Port nativo para Windows de Valkyrie Profile 2: Silmeria via recompilação estática, agora usando um runner BozoEngine totalmente nativo sem emulação de PS2. Ele chega à primeira batalha a 60 fps, mas o resto do jogo ainda não foi alcançado."
     }
   },
   {
@@ -11453,12 +11454,12 @@
       {
         "id": "dragon-ball-z-budokai-3-hd",
         "tier": "ingame",
-        "source": "README: Switch físico | Testadas no console: 0.1.47 (boost segue o perfil, menu de conquistas com ícones), 0.1.48 (áudio melhorou muito) e 0.1.49 (chiado corrigido). Ainda não testados: cartão de detalhe da conquista (0.1.50), interna 1080P e saída 1440P no dock, e os novos padrões do NO OVERCLOCK."
+        "source": "README: Switch físico | Testadas no console até a 0.1.49 (boost, conquistas com ícones, áudio limpo). Ainda não testadas no console: as novidades da 0.1.51 à 0.1.56 (legenda, shaders de efeito, tradução PT-BR e pacote de desempenho), o cartão de detalhe da conquista e as opções de dock."
       }
     ],
     "notes": {
-      "en": "Unofficial homebrew port of the Xbox 360 HD Collection; v0.1.50 adds stable 40 FPS fights at stock clocks, fixed crackling audio, GPU boost, and in-game achievements with icons; tested on real hardware but some 0.1.50 features remain untested; ~40 FPS average in fights.",
-      "pt-br": "Port homebrew não oficial da HD Collection de Xbox 360; v0.1.50 traz lutas a 40 FPS estáveis em clocks de fábrica, correção de chiado no áudio, boost de GPU e conquistas com ícones do jogo; testado em hardware real, mas alguns recursos da 0.1.50 ainda não foram testados; média de ~40 FPS em lutas."
+      "en": "Unofficial homebrew port of Dragon Ball Z: Budokai 3 HD from the Xbox 360 collection using ReXGlue and Deko3D; v0.1.56 adds one-click Windows installer, full PT-BR fan translation, missing special-effect shaders, performance pack and quick-menu legend, building on prior 40 FPS fights, clean audio, GPU boost and in-game achievements; tested on real hardware only up to 0.1.49 with later changes untested; averages ~39.8 FPS in fights at stock clocks.",
+      "pt-br": "Port homebrew não oficial de Dragon Ball Z: Budokai 3 HD da coleção de Xbox 360 usando ReXGlue e Deko3D; v0.1.56 adiciona instalador Windows de um clique, tradução PT-BR completa de fã, shaders de efeitos especiais que faltavam, pacote de desempenho e legenda do menu rápido, sobre as lutas a 40 FPS, áudio limpo, boost de GPU e conquistas no jogo; testado em hardware real só até 0.1.49, com mudanças posteriores não testadas; média de ~39,8 FPS em lutas em clocks de fábrica."
     }
   },
   {
@@ -11924,12 +11925,12 @@
       {
         "id": "crimson-skies-high-road-to-revenge",
         "tier": "ingame",
-        "source": "README: Status: playable. The campaign runs with sound and saves, at 30 to 240 fps."
+        "source": "README: Status: playable. The campaign runs with sound and saves, at 30 to 240 fps, in true widescreen (16:9 up to 32:9 ultrawide)."
       }
     ],
     "notes": {
-      "en": "AI-assisted static recompilation with launcher, FPS unlock up to 240, FXAA, video upscaling, and settings saved to TOML. Requires own original Xbox disc image; first run translates the game.",
-      "pt-br": "Recompilação estática assistida por IA com launcher, desbloqueio de FPS até 240, FXAA, upscaling de vídeo e configurações salvas em TOML. Requer imagem de disco do Xbox original; primeira execução traduz o jogo."
+      "en": "AI-assisted static recompilation with launcher, FPS unlock up to 240, FXAA, video upscaling, widescreen support up to 32:9, and settings saved to TOML. Requires own original Xbox disc image; first run translates the game.",
+      "pt-br": "Recompilação estática assistida por IA com launcher, desbloqueio de FPS até 240, FXAA, upscaling de vídeo, suporte a widescreen até 32:9 e configurações salvas em TOML. Requer imagem de disco do Xbox original; primeira execução traduz o jogo."
     }
   },
   {
@@ -12144,6 +12145,389 @@
     "notes": {
       "en": "Runtime port (PS4 HLE + Vulkan) of the PS4 version; full 9-hole rounds completable; includes launcher, texture upscaling, 60 FPS, partial online server support.",
       "pt-br": "Port via runtime (HLE de PS4 + Vulkan) da versão de PS4; rodadas completas de 9 buracos jogáveis do início ao fim; inclui launcher, upscaling de texturas, 60 FPS e suporte parcial a servidor online."
+    }
+  },
+  {
+    "slug": "mhgurecomp",
+    "name": "MHGU Recomp",
+    "repo": "morerokk/MHGURecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows",
+      "linux",
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "monster-hunter-generations-ultimate",
+        "tier": "playable",
+        "source": "README: Status: fully playable, singleplayer and multiplayer."
+      }
+    ],
+    "notes": {
+      "en": "Native PC port of the Nintendo Switch version (1.4.0) with extensive enhancements including high frame rates, widescreen, mods, online multiplayer, and QoL features. Fully playable from start to finish.",
+      "pt-br": "Port nativo para PC da versão de Nintendo Switch (1.4.0) com melhorias extensas, incluindo altas taxas de quadros, widescreen, mods, multiplayer online e recursos de qualidade de vida. Totalmente jogável do início ao fim."
+    }
+  },
+  {
+    "slug": "godhand-android-port",
+    "name": "God Hand Android Port",
+    "repo": "owaissseeee/godhand-android-port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "god-hand",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native ARM64 Android port of God Hand (USA, SLUS-21503) via full static recompilation of 10,553 EE functions; includes 60 FPS patch, Vulkan renderer, custom touch controls, cheats, and performance profiler. Performance tiers listed up to solid 60 FPS on flagships.",
+      "pt-br": "Port nativo para Android ARM64 de God Hand (USA, SLUS-21503) via recompilação estática completa de 10.553 funções do EE; inclui patch de 60 FPS, renderizador Vulkan, controles touch personalizados, cheats e profiler de desempenho. Tiers de performance listados até 60 FPS estáveis em flagships."
+    }
+  },
+  {
+    "slug": "thesuffering-recomp",
+    "name": "The Suffering Recomp",
+    "repo": "Anthonyp85/TheSuffering-Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "XboxXBERecomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-suffering",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PC port via static recompilation of the USA Original Xbox version; includes extensive upscaling options (FSR, DLSS, XeSS, etc.), pre-game launcher, and in-game overlay. No gameplay status is stated in the README.",
+      "pt-br": "Port nativo para PC via recompilação estática da versão USA de Original Xbox; inclui opções extensas de upscaling (FSR, DLSS, XeSS etc.), launcher pré-jogo e overlay no jogo. Nenhum status de jogabilidade é declarado no README."
+    }
+  },
+  {
+    "slug": "oot-recompiled",
+    "name": "OoT Recompiled",
+    "repo": "JonB-Dev/oot-recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-ocarina-of-time",
+        "tier": "ingame",
+        "source": "README: Version 0.6.2, released. The game boots, plays and saves; frame interpolation, widescreen and the redrawn interface are in; ray traced lighting, saved moments, the free camera and controller support are in."
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of NTSC-U 1.0 with raytraced lighting, frame interpolation, widescreen, and modern features; requires the user to supply their own ROM.",
+      "pt-br": "Recompilação estática da versão NTSC-U 1.0 com iluminação raytraced, interpolação de frames, widescreen e recursos modernos; exige que o usuário forneça sua própria ROM."
+    }
+  },
+  {
+    "slug": "nfscarbon-nx",
+    "name": "Need for Speed: Carbon",
+    "repo": "Kaays/nfscarbon-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "need-for-speed-carbon",
+        "tier": "ingame",
+        "source": "README: Playable, with an overclock. The game boots, the menus, career, cutscenes and races all work, with sound and videos."
+      }
+    ],
+    "notes": {
+      "en": "WIP native Switch port of the Xbox 360 version; requires overclock for acceptable performance (28-30 FPS typical, dips in heavy scenes); supports multiple regional editions; long sessions stable but has minor visual glitches and rare crashes.",
+      "pt-br": "Port nativo em andamento para Switch da versão de Xbox 360; exige overclock para desempenho aceitável (28-30 FPS típico, cai em cenas pesadas); suporta várias edições regionais; sessões longas estáveis mas com pequenos glitches visuais e raros crashes."
+    }
+  },
+  {
+    "slug": "asura-nx",
+    "name": "Asura's Wrath",
+    "repo": "BanhMi93P/asura-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "asuras-wrath",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Switch port via static recompilation of the Xbox 360 default.xex; includes in-game settings for resolution, shadows, SMAA, FPS display, and a built-in DLC installer. Performance targets 30 FPS at 720p with optional overclocking.",
+      "pt-br": "Port nativo para Switch via recompilação estática do default.xex do Xbox 360; inclui configurações no jogo para resolução, sombras, SMAA, exibição de FPS e instalador integrado de DLC. Desempenho mira 30 FPS em 720p com overclock opcional."
+    }
+  },
+  {
+    "slug": "harvestmoonanimalparaderecomp",
+    "name": "Harvest Moon: Animal Parade",
+    "repo": "RodoLy/HarvestMoonAnimalParadeRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "WiiCompiled",
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android",
+      "arm",
+      "switch"
+    ],
+    "graphics": [
+      "Direct3D 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "harvest-moon-animal-parade",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Early/experimental native PC port (Windows x64/ARM, Linux, macOS, Android including Switch with Linux/Android) with widescreen, frame interpolation, free camera mod, romance mod, fast loading, and multiple languages from the US disc. Uses RecompLauncher.",
+      "pt-br": "Port nativo experimental para PC (Windows x64/ARM, Linux, macOS, Android incluindo Switch com Linux/Android) com tela larga, interpolação de frames, mod de câmera livre, mod de romance para todos, carregamento rápido e múltiplos idiomas do disco US. Usa RecompLauncher."
+    }
+  },
+  {
+    "slug": "headhunterrecomp",
+    "name": "Head Hunter Recomp",
+    "repo": "DCRecomp/HeadHunterRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "headhunter",
+        "tier": "ingame",
+        "source": "README: O jogo abre, roda o menu, os filmes, o som e a primeira área jogável. O resto da campanha ainda não foi verificado do início ao fim."
+      }
+    ],
+    "notes": {
+      "en": "Static recomp of the original Dreamcast version (two-disc CDI); currently reaches first playable area with menus, movies, sound and Vulkan renderer; full campaign verification in progress; Windows-only for now with Linux planned.",
+      "pt-br": "Recompilação estática da versão original de Dreamcast (dois discos CDI); atualmente chega à primeira área jogável com menus, filmes, som e renderizador Vulkan; verificação completa da campanha em andamento; só Windows por enquanto, com Linux planejado."
+    }
+  },
+  {
+    "slug": "tmsrecomp",
+    "name": "TMSRecomp",
+    "repo": "godofknife/TMSRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "tokyo-mirage-sessions-fe-encore",
+        "tier": "ingame",
+        "source": "README: It is tested until the chapter 2 Idolasphere with saving and loading, on NVIDIA RTX. Anything after that is unknown territory"
+      }
+    ],
+    "notes": {
+      "en": "AI-assisted static recomp of the 1.0.0 Switch version to native x64; supports up to 4K/240fps, DLSS/FSR3, mods, and many QoL features. Beta with progress up to chapter 2.",
+      "pt-br": "Recompilação estática assistida por IA da versão 1.0.0 do Switch para x64 nativo; suporta até 4K/240fps, DLSS/FSR3, mods e vários recursos de qualidade de vida. Beta com progresso até o capítulo 2."
+    }
+  },
+  {
+    "slug": "sdnx",
+    "name": "Sleeping Dogs",
+    "repo": "YottaImoto/SDNX",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "sleeping-dogs",
+        "tier": "ingame",
+        "source": "README: The game boots, plays its videos and runs gameplay on a real console without crashing (17+ minute sessions), but at ~15–19 fps in handheld mode, below the 30 fps target."
+      }
+    ],
+    "notes": {
+      "en": "Early WIP Xbox 360 static recompilation for Switch using ReXGlue; runs gameplay for 17+ minutes at 15-19 fps (GPU-bound); custom native renderer with deko3d (Vulkan on Windows bench); no prebuilt NRO, requires own game data.",
+      "pt-br": "Recompilação estática inicial do Xbox 360 para Switch usando ReXGlue; roda o gameplay por mais de 17 minutos a 15-19 fps (limitado pela GPU); renderizador nativo customizado com deko3d (Vulkan no bench de Windows); sem NRO pré-compilado, requer dados do jogo próprios."
+    }
+  },
+  {
+    "slug": "pokemonstadium2-3ds",
+    "name": "Pokémon Stadium 2 3DS",
+    "repo": "leonzordhue/PokemonStadium2-3DS",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "pokemon-stadium",
+        "tier": "playable",
+        "source": "README: Dá para jogar o jogo inteiro, incluindo a GB Tower."
+      }
+    ],
+    "notes": {
+      "en": "Beta port of the US N64 version to New 3DS; full game including GB Tower is playable with real saves, stereo 3D, and Transfer Pak support. Runs on New 3DS hardware only.",
+      "pt-br": "Port beta da versão americana de N64 para New 3DS; o jogo inteiro, incluindo a GB Tower, é jogável com saves reais, 3D estereoscópico e suporte a Transfer Pak. Roda apenas em New 3DS."
+    }
+  },
+  {
+    "slug": "conkers-bfd-recomp",
+    "name": "Conker's Bad Fur Day Recompiled",
+    "repo": "DevOldSchool/conkers-bfd-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows",
+      "macos",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "conkers-bad-fur-day",
+        "tier": "playable",
+        "source": "README: The game is fully functional and has been played from start to finish: the story, its chapters (replayed from the title's CHAPTERS page), saves, and MULTI with up to four players on one machine or online."
+      }
+    ],
+    "notes": {
+      "en": "Faithful native PC port with widescreen, 60 fps, texture packs, online multiplayer, mod support, haptics and many QoL options. Fully playable from start to finish including MULTI mode. Runs on x64 and ARM64.",
+      "pt-br": "Port nativo fiel para PC com widescreen, 60 fps, pacotes de texturas, multiplayer online, suporte a mods, hápticos e várias opções de qualidade de vida. Totalmente jogável do início ao fim, incluindo o modo MULTI. Roda em x64 e ARM64."
+    }
+  },
+  {
+    "slug": "h2r",
+    "name": "Halo 2 Recomp",
+    "repo": "0xdeafcafe/h2r",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "macos",
+      "ios",
+      "arm",
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "halo-2",
+        "tier": "ingame",
+        "source": "README: Halo 2. The original Xbox one, from 2004. Recompiled into a native Mac app, no emulator in sight."
+      }
+    ],
+    "notes": {
+      "en": "Recompiles the full original Xbox Halo 2 (including campaign, multiplayer, Forge, Firefight) to native with high FPS, ultrawide, native GPU renderer, revived Xbox Live with dedicated hosts/bots/co-op, theater mode, editor, and Halo 1 support. Runs on macOS, iOS, Linux, and Steam Deck.",
+      "pt-br": "Recompila o Halo 2 original do Xbox (incluindo campanha, multiplayer, Forge, Firefight) para código nativo com alto FPS, ultrawide, renderizador GPU nativo, Xbox Live revivido com hosts dedicados, bots, co-op, modo theater, editor e suporte a Halo 1. Roda em macOS, iOS, Linux e Steam Deck."
+    }
+  },
+  {
+    "slug": "mario-party-9-native",
+    "name": "Mario Party 9",
+    "repo": "SirWinstonChurchillTheFirst/mario-party-9-native",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "wii-recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "mario-party-9",
+        "tier": "ingame",
+        "source": "README: Reaches Free Play and plays minigames, Buddy Bounce included, at 60 fps, no graphics errors seen."
+      }
+    ],
+    "notes": {
+      "en": "Beta static recompilation; reaches gameplay and minigames (including Buddy Bounce) at 60 fps on Windows/Linux with Vulkan; not yet played to completion. Requires own disc dump.",
+      "pt-br": "Recompilação estática em beta; chega ao gameplay e minigames (incluindo Buddy Bounce) a 60 fps no Windows/Linux com Vulkan; ainda não foi zerado. Requer dump próprio do disco."
     }
   }
 ]

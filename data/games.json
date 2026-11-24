@@ -2398,5 +2398,59 @@
     "title": "Mario Party 9",
     "console": "wii",
     "titleIds": []
+  },
+  {
+    "id": "vampire-savior-the-lord-of-vampire",
+    "title": "Vampire Savior: The Lord of Vampire",
+    "console": "naomi2",
+    "titleIds": []
+  },
+  {
+    "id": "super-paper-mario",
+    "title": "Super Paper Mario",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "wacky-races-starring-dastardly-muttley",
+    "title": "Wacky Races Starring: Dastardly & Muttley",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "p-n-03",
+    "title": "P.N.03",
+    "console": "gamecube",
+    "titleIds": []
+  },
+  {
+    "id": "final-fantasy-viii",
+    "title": "Final Fantasy VIII",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "star-wars-battlefront-elite-squadron",
+    "title": "Star Wars Battlefront: Elite Squadron",
+    "console": "psp",
+    "titleIds": []
+  },
+  {
+    "id": "hot-shots-golf-world-invitational",
+    "title": "Hot Shots Golf: World Invitational",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "formula-one-05",
+    "title": "Formula One 05",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "xenogears",
+    "title": "Xenogears",
+    "console": "ps1",
+    "titleIds": []
   }
 ]

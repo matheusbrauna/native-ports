@@ -894,5 +894,9 @@
   {
     "repo": "sp00nznet/macrecomp",
     "reason": "Triage: This is a static recompilation toolkit and SDK for classic Macintosh apps, not a port of any specific game."
+  },
+  {
+    "repo": "dennis5heikh/native-instruments-massive-x",
+    "reason": "Triage: This is a Windows VST3 software synthesizer, not a native port of any console game."
   }
 ]

@@ -10593,12 +10593,12 @@
       {
         "id": "harvest-moon-magical-melody",
         "tier": "ingame",
-        "source": "README: Version 0.4.2. The game starts, plays, saves and loads on Windows, Linux, Mac and Android, and it has been played on a Windows laptop with a Snapdragon X. It has not been played from start to finish yet, which is what 1.0 will mean. Expect bugs, and keep a copy of your saves."
+        "source": "README: The game starts, plays, saves and loads on Windows, Linux, Mac and Android, and it has been played on a Windows laptop with a Snapdragon X. It has not been played from start to finish yet, which is what 1.0 will mean. Expect bugs, and keep a copy of your saves."
       }
     ],
     "notes": {
-      "en": "A native port of Harvest Moon: Magical Melody for GameCube supporting Windows, Linux, macOS, and Android. Built via static recompilation and the Aurora WebGPU renderer, it features widescreen support, high frame rates, custom mods, and built-in cheats.",
-      "pt-br": "Um port nativo de Harvest Moon: Magical Melody do GameCube com suporte a Windows, Linux, macOS e Android. Desenvolvido via recompilação estática e o renderizador Aurora WebGPU, conta com suporte a widescreen, altas taxas de quadros, mods personalizados e cheats integrados."
+      "en": "A native port of Harvest Moon: Magical Melody for GameCube supporting Windows, Linux, macOS, and Android. Built via static recompilation and the Aurora WebGPU renderer, it now supports up to 4K resolution, widescreen, high frame rates, custom mods, and built-in cheats.",
+      "pt-br": "Um port nativo de Harvest Moon: Magical Melody do GameCube com suporte a Windows, Linux, macOS e Android. Desenvolvido via recompilação estática e o renderizador Aurora WebGPU, agora suporta até resolução 4K, widescreen, altas taxas de quadros, mods personalizados e cheats integrados."
     }
   },
   {
@@ -12411,12 +12411,12 @@
       {
         "id": "sleeping-dogs",
         "tier": "ingame",
-        "source": "README: The game boots, plays its videos and runs gameplay on a real console without crashing (17+ minute sessions), but at ~15–19 fps in handheld mode, below the 30 fps target."
+        "source": "README: The game boots, plays its videos and runs gameplay on a real console without crashing, now on the current ReXGlue SDK (see The port to the current ReXGlue), but at ~16–19 fps in handheld gameplay, below the 30 fps target."
       }
     ],
     "notes": {
-      "en": "Early WIP Xbox 360 static recompilation for Switch using ReXGlue; runs gameplay for 17+ minutes at 15-19 fps (GPU-bound); custom native renderer with deko3d (Vulkan on Windows bench); no prebuilt NRO, requires own game data.",
-      "pt-br": "Recompilação estática inicial do Xbox 360 para Switch usando ReXGlue; roda o gameplay por mais de 17 minutos a 15-19 fps (limitado pela GPU); renderizador nativo customizado com deko3d (Vulkan no bench de Windows); sem NRO pré-compilado, requer dados do jogo próprios."
+      "en": "Early WIP static recompilation from Xbox 360 using ReXGlue, now updated to current SDK; runs gameplay for 17+ minutes at 16-19 fps handheld (GPU-bound at ~57 ms/frame); custom native deko3d renderer with many optimizations and profiling; still no prebuilt NRO, requires own game data.",
+      "pt-br": "Recompilação estática inicial do Xbox 360 usando ReXGlue, agora atualizada para o SDK atual; roda o gameplay por mais de 17 minutos a 16-19 fps no modo portátil (limitado pela GPU em ~57 ms/frame); renderizador nativo customizado com deko3d, várias otimizações e profiling; ainda sem NRO pré-compilado, requer dados do jogo próprios."
     }
   },
   {
@@ -12528,6 +12528,350 @@
     "notes": {
       "en": "Beta static recompilation; reaches gameplay and minigames (including Buddy Bounce) at 60 fps on Windows/Linux with Vulkan; not yet played to completion. Requires own disc dump.",
       "pt-br": "Recompilação estática em beta; chega ao gameplay e minigames (incluindo Buddy Bounce) a 60 fps no Windows/Linux com Vulkan; ainda não foi zerado. Requer dump próprio do disco."
+    }
+  },
+  {
+    "slug": "mario-kart-wii-native",
+    "name": "Mario Kart Wii",
+    "repo": "SirWinstonChurchillTheFirst/mario-kart-wii-native",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "wii-recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "mario-kart-wii",
+        "tier": "ingame",
+        "source": "README: This is a beta. The translation is done and the game starts and plays, but nobody has played it from start to finish yet."
+      }
+    ],
+    "notes": {
+      "en": "Beta native port via static recompilation; plays a 50cc Grand Prix race at 60 fps with minor hitches. Requires own disc dump. Uses Vulkan renderer and supports keyboard/mouse/controllers.",
+      "pt-br": "Port nativo em beta via recompilação estática; roda uma corrida de 50cc a 60 fps com pequenos engasgos. Requer dump do disco próprio. Usa renderizador Vulkan e suporta teclado/mouse/controles."
+    }
+  },
+  {
+    "slug": "shad0w77-code-mc-la-recompiled",
+    "name": "Midnight Club: Los Angeles Recompiled",
+    "repo": "shad0w77-code/MC_LA_Recompiled",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "DirectX 12",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "midnight-club-los-angeles-complete-edition",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Fork of holdmysocks/mcla-recomp adding PT-BR translation, ultrawide, FSR 4 + Frame Generation, MP3 radio, carbon fiber parts, free camera and an installer/configurator. Runs at high framerates with many graphical and gameplay fixes.",
+      "pt-br": "Fork do holdmysocks/mcla-recomp que adiciona tradução PT-BR, ultrawide, FSR 4 + Frame Generation, rádio MP3, peças em fibra de carbono, câmera livre e um instalador/configurador. Roda em altas taxas de quadros com diversas correções gráficas e de jogabilidade."
+    }
+  },
+  {
+    "slug": "vampire-savior-recomp",
+    "name": "Vampire Savior Recomp",
+    "repo": "tmcleroy/vampire-savior-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows",
+      "macos"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "vampire-savior-the-lord-of-vampire",
+        "tier": "ingame",
+        "source": "README: The game plays from start to ending and its code is checked instruction by instruction"
+      }
+    ],
+    "notes": {
+      "en": "Native port of the CPS-2 arcade game via static recompilation; includes extensive training mode, widescreen, custom colours, model/stage viewers and multiple alternative modes; moved to a shared CPS-2 Recomp launcher.",
+      "pt-br": "Port nativo do jogo de arcade CPS-2 via recompilação estática; inclui modo treino completo, tela larga, cores personalizadas, visualizadores de modelo/palco e vários modos alternativos; migrado para um launcher compartilhado CPS-2 Recomp."
+    }
+  },
+  {
+    "slug": "age-of-decomp",
+    "name": "Age of Decomp",
+    "repo": "iCosiSenpai/age-of-decomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "steamdeck",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "hyrule-warriors-age-of-imprisonment",
+        "tier": "ingame",
+        "source": "README: The game builds, boots, plays its opening and reaches exploration and combat at 60 FPS on tested PCs. Known limits: a full playthrough is not verified yet."
+      }
+    ],
+    "notes": {
+      "en": "Early static recomp of the Switch 2 version; includes a full launcher with settings, native controller support (including Switch 2), DLSS/FSR, and RecompLauncher integration. Testers wanted for handhelds and Linux.",
+      "pt-br": "Recompilação estática inicial da versão de Switch 2; inclui launcher completo com configurações, suporte nativo a controles (incluindo Switch 2), DLSS/FSR e integração com RecompLauncher. Testadores procurados para portáteis e Linux."
+    }
+  },
+  {
+    "slug": "spm-nx",
+    "name": "Super Paper Mario",
+    "repo": "Eladerino/spm-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Wiicompiled",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "deko3d"
+    ],
+    "games": [
+      {
+        "id": "super-paper-mario",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Switch homebrew NRO port of the New Super Paper Bros PC recomp (JosiahG). Uses deko3d renderer; tracks upstream features including widescreen, frame interpolation, mods, and cheats. Requires USA Wii disc dump (R8PE01).",
+      "pt-br": "Port homebrew NRO para Switch do recomp New Super Paper Bros para PC (JosiahG). Usa renderizador deko3d; acompanha recursos upstream como widescreen, interpolação de frames, mods e cheats. Requer dump do disco Wii USA (R8PE01)."
+    }
+  },
+  {
+    "slug": "halo2-recomp",
+    "name": "Halo 2 Recomp",
+    "repo": "dalves408/halo2-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "halo-2",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recomp of Halo 2 TU1.5 with D3D11 renderer at 60 fps, true widescreen, mouse/keyboard support, Insignia Xbox Live, System Link, hi-res texture packs. Requires own retail disc.",
+      "pt-br": "Recompilação estática do Halo 2 TU1.5 com renderizador D3D11 a 60 fps, widescreen verdadeiro, suporte a mouse/teclado, Xbox Live via Insignia, System Link e pacotes de texturas em alta resolução. Requer o disco retail original."
+    }
+  },
+  {
+    "slug": "hypertoken",
+    "name": "HyperToken",
+    "repo": "HammMannCH/HyperToken",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2-native-recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "wacky-races-starring-dastardly-muttley",
+        "tier": "ingame",
+        "source": "README: It specifically aims to make 60 Hz playable on PC on top of being portable enough for you to be able to run with more convenience than PCSX2."
+      }
+    ],
+    "notes": {
+      "en": "Recompilation of the PS2 racing game that enables 60 Hz mode, includes quicksave, configurable resolution up to 2K, and a launcher for easy play on Windows/Linux. Requires user-provided ISO.",
+      "pt-br": "Recompilação do jogo de corrida de PS2 que habilita o modo 60 Hz, inclui salvamento rápido, resolução configurável até 2K e um launcher fácil para Windows/Linux. Requer ISO fornecida pelo usuário."
+    }
+  },
+  {
+    "slug": "pn03-winport",
+    "name": "P.N.03 WinPort",
+    "repo": "wwesun2000/PN03-WinPort",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 11"
+    ],
+    "games": [
+      {
+        "id": "p-n-03",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of all 6,353 PowerPC functions to C++20 with native Vulkan 1.3/D3D11 backends, true widescreen, HD Chinese localization overlay, and launcher GUI. Requires user's own GPNE08 ISO.",
+      "pt-br": "Recompilação estática de todas as 6.353 funções PowerPC para C++20 com backends nativos Vulkan 1.3/D3D11, widescreen verdadeiro, overlay de localização em chinês HD e GUI de launcher. Requer ISO GPNE08 do usuário."
+    }
+  },
+  {
+    "slug": "lionheart",
+    "name": "Lionheart",
+    "repo": "rash-pro/lionheart",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "final-fantasy-viii",
+        "tier": "wip",
+        "source": "README: Work in progress. No full playthrough has been verified yet."
+      }
+    ],
+    "notes": {
+      "en": "Clean-room static recompiler that builds native C99 modules from user-supplied USA discs on first run (cached after); defaults to software renderer with optional Vulkan + PGXP; experimental 60 fps interpolation on fields/world map only; MIT licensed.",
+      "pt-br": "Recompilador estático limpo que gera módulos C99 nativos a partir dos discos EUA fornecidos pelo usuário na primeira execução (em cache depois); usa renderizador de software por padrão com Vulkan + PGXP opcional; interpolação experimental de 60 fps apenas em campos/mapa mundi; licenciado MIT."
+    }
+  },
+  {
+    "slug": "swbes-recomp",
+    "name": "Star Wars Battlefront: Elite Squadron PC Port",
+    "repo": "Revgith/swbes-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "psprecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "star-wars-battlefront-elite-squadron",
+        "tier": "ingame",
+        "source": "README: It plays, but expect the odd visual glitch, quirk or crash."
+      }
+    ],
+    "notes": {
+      "en": "AI-assisted static recomp of the PSP version; adds native mouse/keyboard controls, rebindable inputs, uncapped framerate, anisotropic filtering, mod support and a PC menu. Built for Windows only; some glitches and crashes expected.",
+      "pt-br": "Recompilação estática assistida por IA da versão de PSP; adiciona controles nativos de mouse/teclado, inputs reconfiguráveis, taxa de quadros ilimitada, filtragem anisotrópica, suporte a mods e menu para PC. Feito apenas para Windows; alguns glitches e crashes esperados."
+    }
+  },
+  {
+    "slug": "hot-shots-golf-ps3-recomp",
+    "name": "Hot Shots Golf: World Invitational",
+    "repo": "finalpantasy/hot-shots-golf-ps3-recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "hot-shots-golf-world-invitational",
+        "tier": "ingame",
+        "source": "README: It is playable. The port targets the official update 1.03, with the Ultimate Edition as a second build. It boots, shows the menus and plays full rounds with a keyboard or an Xbox-style controller."
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port via PS3 static recompilation; supports any resolution up to 4K, ultrawide, HD texture packs, up to 240 FPS (interpolated), launcher for settings. Full rounds playable from title to leaderboard.",
+      "pt-br": "Port nativo para Windows via recompilação estática do PS3; suporta qualquer resolução até 4K, ultrawide, pacotes de texturas HD, até 240 FPS (interpolado), launcher para configurações. Rodadas completas jogáveis do título ao leaderboard."
+    }
+  },
+  {
+    "slug": "f1-05-pc",
+    "name": "F1 05 PC",
+    "repo": "KevinL50-sysadmin/F1-05-PC",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "PS2Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "formula-one-05",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port of the original PAL PS2 release by static recompilation; WIP with no download yet, uses paraLLEl-GS for Vulkan GPU rendering, includes software fallback.",
+      "pt-br": "Port nativo para Windows da versão PAL original de PS2 por recompilação estática; ainda em desenvolvimento sem download, usa paraLLEl-GS para renderização por GPU em Vulkan, com fallback por software."
+    }
+  },
+  {
+    "slug": "xenogears-pc",
+    "name": "Xenogears PC",
+    "repo": "EtherAura/xenogears-pc",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "linux",
+      "windows",
+      "android"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "xenogears",
+        "tier": "playable",
+        "source": "README: We expect the main story to be playable from New Game through the credits, and the current release fixes a known late-game freeze by default."
+      }
+    ],
+    "notes": {
+      "en": "Built from matching decompilation; supports both discs; widescreen, HD textures, 60 fps with motion smoothing, packs, map viewer; Linux/Windows releases, Android in development.",
+      "pt-br": "Construído a partir de descompilação correspondente; suporta ambos os discos; widescreen, texturas HD, 60 fps com motion smoothing, packs, visualizador de mapa; lançamentos para Linux/Windows, Android em desenvolvimento."
     }
   }
 ]

@@ -12612,60 +12612,6 @@
     }
   },
   {
-    "slug": "age-of-decomp",
-    "name": "Age of Decomp",
-    "repo": "iCosiSenpai/age-of-decomp",
-    "upstream": null,
-    "kind": "port",
-    "technique": "recomp",
-    "toolchain": null,
-    "platforms": [
-      "linux",
-      "steamdeck",
-      "windows"
-    ],
-    "graphics": [
-      "Vulkan"
-    ],
-    "games": [
-      {
-        "id": "hyrule-warriors-age-of-imprisonment",
-        "tier": "ingame",
-        "source": "README: The game builds, boots, plays its opening and reaches exploration and combat at 60 FPS on tested PCs. Known limits: a full playthrough is not verified yet."
-      }
-    ],
-    "notes": {
-      "en": "Early static recomp of the Switch 2 version; includes a full launcher with settings, native controller support (including Switch 2), DLSS/FSR, and RecompLauncher integration. Testers wanted for handhelds and Linux.",
-      "pt-br": "Recompilação estática inicial da versão de Switch 2; inclui launcher completo com configurações, suporte nativo a controles (incluindo Switch 2), DLSS/FSR e integração com RecompLauncher. Testadores procurados para portáteis e Linux."
-    }
-  },
-  {
-    "slug": "spm-nx",
-    "name": "Super Paper Mario",
-    "repo": "Eladerino/spm-nx",
-    "upstream": null,
-    "kind": "port",
-    "technique": "recomp",
-    "toolchain": "Wiicompiled",
-    "platforms": [
-      "switch"
-    ],
-    "graphics": [
-      "deko3d"
-    ],
-    "games": [
-      {
-        "id": "super-paper-mario",
-        "tier": "unrated",
-        "source": null
-      }
-    ],
-    "notes": {
-      "en": "Switch homebrew NRO port of the New Super Paper Bros PC recomp (JosiahG). Uses deko3d renderer; tracks upstream features including widescreen, frame interpolation, mods, and cheats. Requires USA Wii disc dump (R8PE01).",
-      "pt-br": "Port homebrew NRO para Switch do recomp New Super Paper Bros para PC (JosiahG). Usa renderizador deko3d; acompanha recursos upstream como widescreen, interpolação de frames, mods e cheats. Requer dump do disco Wii USA (R8PE01)."
-    }
-  },
-  {
     "slug": "halo2-recomp",
     "name": "Halo 2 Recomp",
     "repo": "dalves408/halo2-recomp",

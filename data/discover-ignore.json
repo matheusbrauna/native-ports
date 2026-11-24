@@ -898,5 +898,13 @@
   {
     "repo": "dennis5heikh/native-instruments-massive-x",
     "reason": "Triage: This is a Windows VST3 software synthesizer, not a native port of any console game."
+  },
+  {
+    "repo": "iCosiSenpai/age-of-decomp",
+    "reason": "Triage: The README cites a Switch 2 game, and Switch 2 is not a console the catalog supports."
+  },
+  {
+    "repo": "Eladerino/spm-nx",
+    "reason": "Triage: A Wii recompilation that runs natively on Switch. The target is a console, not PC, so it is out of scope."
   }
 ]

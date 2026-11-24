@@ -398,5 +398,21 @@
   {
     "repo": "AlekayDevs/alttp-recomp",
     "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (The Legend of Zelda: A Link to the Past)"
+  },
+  {
+    "repo": "ProjectLeonidaL/leonida",
+    "reason": "Triage accepted it, but: Console \"xboxseries\" is not in the catalog yet (Grand Theft Auto VI)"
+  },
+  {
+    "repo": "rimidalv333/longshot-oberon",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (The Legend of Zelda: Ocarina of Time)"
+  },
+  {
+    "repo": "Neguchads/cdos-nintendods-recomp",
+    "reason": "Triage accepted it, but: Console \"nds\" is not in the catalog yet (Castlevania: Dawn of Sorrow)"
+  },
+  {
+    "repo": "ArgoxDevs/alttp-recomp",
+    "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (The Legend of Zelda: A Link to the Past)"
   }
 ]

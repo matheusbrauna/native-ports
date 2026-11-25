@@ -906,5 +906,25 @@
   {
     "repo": "Eladerino/spm-nx",
     "reason": "Triage: A Wii recompilation that runs natively on Switch. The target is a console, not PC, so it is out of scope."
+  },
+  {
+    "repo": "martina1713/gow-pc-port-classic-recompiled",
+    "reason": "Triage: This is a cheat trainer/mod menu for an existing PC port, not a native port of a console game via recompilation or runtime."
+  },
+  {
+    "repo": "mywilliam211/gow-pc-port-classic-recompiled",
+    "reason": "Triage: This is a mod/overlay/trainer for an existing PC port, not a native recompilation or runtime port of a console game."
+  },
+  {
+    "repo": "Buyukcaglar/NFSSE",
+    "reason": "Triage: The repository is a compatibility patch kit for the original Windows executable, not a static recompilation or runtime port of a console game."
+  },
+  {
+    "repo": "MacosPorters/betterxen",
+    "reason": "Triage: This is an experimental emulator/research project for Xbox Series X|S, not a native port of any specific game via recomp or runtime."
+  },
+  {
+    "repo": "Shupian0510/Ludonimbus",
+    "reason": "Triage: This is a save manager and cloud sync tool for games, emulators, and recompilations, not a native port of any specific game."
   }
 ]

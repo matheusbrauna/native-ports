@@ -414,5 +414,29 @@
   {
     "repo": "ArgoxDevs/alttp-recomp",
     "reason": "Triage accepted it, but: Console \"snes\" is not in the catalog yet (The Legend of Zelda: A Link to the Past)"
+  },
+  {
+    "repo": "saulob/jurassic-park-trespasser-recomp",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Jurassic Park: Trespasser)"
+  },
+  {
+    "repo": "morpheus302/PS5_Grapnel",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (The Legend of Zelda: Ocarina of Time)"
+  },
+  {
+    "repo": "Joshspeakman/sims-legacy-macos",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (The Sims Legacy Collection)"
+  },
+  {
+    "repo": "Angle-Brackets/UprisingNX",
+    "reason": "Triage accepted it, but: Console \"3ds\" is not in the catalog yet (Kid Icarus: Uprising)"
+  },
+  {
+    "repo": "lagando/MKSM",
+    "reason": "Triage accepted it, but: Tier \"ingame\" for Mortal Kombat: Shaolin Monks cites a quote that is not in the README: \"Every other stage tested start to finish: the first 6, up to Reptile's Lair, 100%; the rest not yet (see [Stage testing]\""
+  },
+  {
+    "repo": "zwaetschge/burnout-paradise-android",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Burnout Paradise: The Ultimate Box)"
   }
 ]

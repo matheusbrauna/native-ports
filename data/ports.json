@@ -7342,12 +7342,12 @@
       {
         "id": "blue-stinger",
         "tier": "ingame",
-        "source": "README: The game already runs on Windows from your disc, with native controls (keyboard and gamepad), saves, movies, audio and video, Vulkan rendering, a free camera and subtitles in Portuguese and English. The current version is a pre-release: v0.9.7-5."
+        "source": "README: The game already runs on Windows from your disc, with native controls (keyboard and gamepad), saves, movies, audio and video, Vulkan rendering, a free camera, HD textures, antialiasing and subtitles in Portuguese, English, Spanish, French, Russian, Japanese and Chinese. The current version is a pre-release: v0.9.7-9, with full RecompLauncher support (easy setup, cloud saves and settings in the launcher). All 16 widescreen movies are published."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Blue Stinger for native Windows (and partial Linux) with Vulkan rendering; 88% toward 1.0 but full campaign playthrough not yet started.",
-      "pt-br": "Recompilação estática de Blue Stinger para Windows nativo (e Linux parcial) com renderização Vulkan; 88% rumo à 1.0, mas a campanha completa ainda não começou."
+      "en": "Static recompilation of Blue Stinger for native Windows with Vulkan rendering, HD textures, antialiasing and widescreen support; Linux support in parallel (steps L0-L5 published) but full campaign playthrough still pending at ~88% toward 1.0.",
+      "pt-br": "Recompilação estática de Blue Stinger para Windows nativo com renderização Vulkan, texturas HD, antialiasing e suporte widescreen; suporte a Linux em paralelo (etapas L0-L5 publicadas), mas a campanha completa ainda pendente em ~88% rumo à 1.0."
     }
   },
   {
@@ -12411,12 +12411,12 @@
       {
         "id": "sleeping-dogs",
         "tier": "ingame",
-        "source": "README: The game boots, plays its videos and runs gameplay on a real console without crashing, now on the current ReXGlue SDK (see The port to the current ReXGlue), but at ~16–19 fps in handheld gameplay, below the 30 fps target."
+        "source": "README: The game boots, plays its videos and runs gameplay on a real console without crashing, now on the current ReXGlue SDK (see The port to the current ReXGlue), but at ~19–24 fps in handheld gameplay with sys-clk, below the 30 fps target."
       }
     ],
     "notes": {
-      "en": "Early WIP static recompilation from Xbox 360 using ReXGlue, now updated to current SDK; runs gameplay for 17+ minutes at 16-19 fps handheld (GPU-bound at ~57 ms/frame); custom native deko3d renderer with many optimizations and profiling; still no prebuilt NRO, requires own game data.",
-      "pt-br": "Recompilação estática inicial do Xbox 360 usando ReXGlue, agora atualizada para o SDK atual; roda o gameplay por mais de 17 minutos a 16-19 fps no modo portátil (limitado pela GPU em ~57 ms/frame); renderizador nativo customizado com deko3d, várias otimizações e profiling; ainda sem NRO pré-compilado, requer dados do jogo próprios."
+      "en": "Early WIP static recompilation from Xbox 360 using ReXGlue, now updated to current SDK; runs gameplay for 28 minutes without crashing at ~19–24 fps handheld (GPU-bound at ~46 ms/frame); custom native deko3d renderer with many optimizations, PGO/LTO and profiling; still no prebuilt NRO, requires own game data.",
+      "pt-br": "Recompilação estática inicial do Xbox 360 usando ReXGlue, agora atualizada para o SDK atual; roda o gameplay por 28 minutos sem travar a ~19–24 fps no modo portátil (limitado pela GPU em ~46 ms/frame); renderizador nativo customizado com deko3d, várias otimizações, PGO/LTO e profiling; ainda sem NRO pré-compilado, requer dados do jogo próprios."
     }
   },
   {
@@ -12818,6 +12818,162 @@
     "notes": {
       "en": "Built from matching decompilation; supports both discs; widescreen, HD textures, 60 fps with motion smoothing, packs, map viewer; Linux/Windows releases, Android in development.",
       "pt-br": "Construído a partir de descompilação correspondente; suporta ambos os discos; widescreen, texturas HD, 60 fps com motion smoothing, packs, visualizador de mapa; lançamentos para Linux/Windows, Android em desenvolvimento."
+    }
+  },
+  {
+    "slug": "golden-fist-launcher",
+    "name": "Tekken Tag Tournament 2 Ultimate Edition",
+    "repo": "Petexy/Golden-Fist-Launcher",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "cafe-recomp",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "tekken-tag-tournament-2",
+        "tier": "ingame",
+        "source": "README: Playable from boot through arcade mode."
+      }
+    ],
+    "notes": {
+      "en": "Native Linux/Windows port of the Wii U version via static recompilation; adds 120 fps, higher resolutions, frame data, hitbox viewer, practice improvements, modding support for new characters, and Tekken 7/8 fighter imports. Arcade mode fully completed by hand.",
+      "pt-br": "Port nativo para Linux/Windows da versão de Wii U via recompilação estática; adiciona 120 fps, resoluções mais altas, dados de frames, visualizador de hitboxes, melhorias no treino, suporte a mods para novos personagens e importação de lutadores de Tekken 7/8. Modo arcade completado manualmente."
+    }
+  },
+  {
+    "slug": "fcip-xexrecomp",
+    "name": "Far Cry Instincts: Predator",
+    "repo": "TGP482/FCIP-XEXRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox360XEX-Recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "far-cry-instincts-predator",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native PC port via static recompilation with extensive graphics, input, and resolution enhancements; requires legally owned game files.",
+      "pt-br": "Port nativo para PC via recompilação estática com melhorias extensas em gráficos, entrada e resolução; requer arquivos do jogo adquiridos legalmente."
+    }
+  },
+  {
+    "slug": "lego-batman2-nx",
+    "name": "LEGO Batman 2",
+    "repo": "derzhivkurse/lego-batman2-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "lego-batman-2-dc-super-heroes",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Static recompilation of the Xbox 360 version running natively on Switch (ARM64); requires original USA disc files; tested on Switch Lite with occasional FPS drops in heavy scenes; installs as a HOME menu title.",
+      "pt-br": "Recompilação estática da versão de Xbox 360 executando nativamente no Switch (ARM64); requer arquivos do disco original USA; testado no Switch Lite com quedas ocasionais de FPS em cenas pesadas; instala como título no menu HOME."
+    }
+  },
+  {
+    "slug": "armoredcorev-port",
+    "name": "Armored Core V",
+    "repo": "GrayRats/ArmoredcoreV-Port",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "linux"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "armored-core-v",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Research WIP using static recompilation; includes Vulkan renderer, resource tools, and parallel reconstruction. Status is unrated as no explicit playability tier is declared.",
+      "pt-br": "Projeto de pesquisa em andamento usando recompilação estática; inclui renderizador Vulkan, ferramentas de recursos e reconstrução paralela. Status não classificado, pois não há menção explícita a um nível de jogabilidade."
+    }
+  },
+  {
+    "slug": "infamous2-ios",
+    "name": "inFAMOUS 2 iOS",
+    "repo": "Monsdevo/infamous2-ios",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "ios"
+    ],
+    "graphics": [
+      "Metal"
+    ],
+    "games": [
+      {
+        "id": "infamous-2",
+        "tier": "ingame",
+        "source": "README: the actual game boots and reaches controllable gameplay on a real iPhone 15 Pro."
+      }
+    ],
+    "notes": {
+      "en": "Early prototype; reaches first playable scene and swamp area at ~7-9 FPS on iPhone 15 Pro. Metal renderer optimizations and on-device testing documented in detail. Full campaign unvalidated.",
+      "pt-br": "Protótipo inicial; chega à primeira cena jogável e área do pântano a ~7-9 FPS no iPhone 15 Pro. Otimizações do renderizador Metal e testes no dispositivo documentados em detalhes. Campanha completa ainda não validada."
+    }
+  },
+  {
+    "slug": "orreport",
+    "name": "OrrePort",
+    "repo": "snatcherLeo/OrrePort",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Aurora",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "pokemon-colosseum",
+        "tier": "ingame",
+        "source": "README: Playable from New Game to the end of the story on Windows 10 and 11 (64-bit), with bugs still to find."
+      }
+    ],
+    "notes": {
+      "en": "Decompiled Pokémon Colosseum rebuilt for PC using Aurora for graphics/input; includes modding tools, accurate mode, and cross-compatibility with Dolphin saves. Currently in beta with story completion possible but bugs remain; Linux/macOS planned.",
+      "pt-br": "Pokémon Colosseum descompilado e recompilado para PC usando Aurora para gráficos e entrada; inclui ferramentas de modding, modo preciso e compatibilidade com saves do Dolphin. Atualmente em beta, com história completável mas ainda com bugs; Linux e macOS planejados."
     }
   }
 ]

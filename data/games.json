@@ -2446,5 +2446,29 @@
     "title": "Xenogears",
     "console": "ps1",
     "titleIds": []
+  },
+  {
+    "id": "far-cry-instincts-predator",
+    "title": "Far Cry Instincts: Predator",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "lego-batman-2-dc-super-heroes",
+    "title": "LEGO Batman 2: DC Super Heroes",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "armored-core-v",
+    "title": "Armored Core V",
+    "console": "xbox360",
+    "titleIds": []
+  },
+  {
+    "id": "pokemon-colosseum",
+    "title": "Pokémon Colosseum",
+    "console": "gamecube",
+    "titleIds": []
   }
 ]

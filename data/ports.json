@@ -5612,7 +5612,7 @@
       {
         "id": "playstation-all-stars-battle-royale",
         "tier": "ingame",
-        "source": "README: Work in progress, with regular releases (see Releases). The disc (version 1.00) is the base and the Launcher updates it to 1.12, the version the port is developed and tested on, with the additional content for those who own it. The digital-only version, without the disc, is not supported yet."
+        "source": "README: Work in progress, with regular releases (see Releases). The port is developed and tested on version 1.12, and the launcher brings your game to it by itself. The additional content works for those who own it."
       }
     ],
     "notes": {
@@ -6037,12 +6037,12 @@
       {
         "id": "fable-ii",
         "tier": "ingame",
-        "source": "README: Playable. The game boots, loads saves and runs at its 30 FPS cap on a Snapdragon 8 Gen 2 handheld with the default settings."
+        "source": "README: Playable and stable. About 99% of the game's code is now decompiled to native code (59,958 of 60,481 functions). On a Snapdragon 8 Gen 2 handheld the game boots, loads saves and plays the full forest route with no crashes, at about 57 FPS with the new 60 FPS option or a steady 30 FPS at the default cap."
       }
     ],
     "notes": {
-      "en": "An Android port of Fable II built via ReXGlue static recompilation, featuring a Vulkan renderer and touch controls.",
-      "pt-br": "Um port de Fable II para Android feito via recompilação estática com ReXGlue, com renderizador Vulkan e controles de toque."
+      "en": "Now at 99.14% native decompilation with stable performance on Snapdragon 8 Gen 2 devices; plays the full forest route at up to ~57 FPS, though some graphics bugs like skin morphing remain disabled by default.",
+      "pt-br": "Agora com 99,14% de descompilação nativa e desempenho estável em dispositivos Snapdragon 8 Gen 2; joga a rota completa da floresta a até ~57 FPS, embora alguns bugs gráficos como a morfagem de pele permaneçam desativados por padrão."
     }
   },
   {
@@ -7342,7 +7342,7 @@
       {
         "id": "blue-stinger",
         "tier": "ingame",
-        "source": "README: The game already runs on Windows from your disc, with native controls (keyboard and gamepad), saves, movies, audio and video, Vulkan rendering, a free camera, HD textures, antialiasing and subtitles in Portuguese, English, Spanish, French, Russian, Japanese and Chinese. The current version is a pre-release: v0.9.7-9, with full RecompLauncher support (easy setup, cloud saves and settings in the launcher). All 16 widescreen movies are published."
+        "source": "README: The game already runs on Windows from your disc, with native controls (keyboard and gamepad), saves, movies, audio and video, Vulkan rendering, a free camera, HD textures, antialiasing and subtitles in Portuguese, English, Spanish, French, Russian, Japanese and Chinese. The current version is a pre-release: v0.9.7-10, with full RecompLauncher support (easy setup, cloud saves and settings in the launcher). All 16 widescreen movies are published."
       }
     ],
     "notes": {
@@ -8400,21 +8400,23 @@
     "technique": "recomp",
     "toolchain": "ReXGlue",
     "platforms": [
-      "windows"
+      "windows",
+      "linux"
     ],
     "graphics": [
-      "Direct3D 12"
+      "Direct3D 12",
+      "Vulkan"
     ],
     "games": [
       {
         "id": "ssx-2012",
         "tier": "ingame",
-        "source": "README: The game is playable and is being tested by playing through the whole World Tour."
+        "source": "README: EA's SSX, running natively on Windows and Linux — up to 300 fps, up to 4K, no emulator."
       }
     ],
     "notes": {
-      "en": "Recompiles the Xbox 360 release of SSX (2012) to native Windows code via ReXGlue, with Direct3D 12 rendering, frame rates up to 300 FPS, FSR upscaling, and DLC support.",
-      "pt-br": "Recompila a versão de Xbox 360 de SSX (2012) para código nativo de Windows via ReXGlue, contando com renderização em Direct3D 12, taxas de quadros de até 300 FPS, upscaling FSR e suporte a DLCs."
+      "en": "Statically recompiles the Xbox 360 SSX (2012) to native x86-64 code with ReXGlue; now officially supports Linux (beta) alongside Windows, with ReGPU as the default high-performance renderer.",
+      "pt-br": "Recompila estaticamente o SSX (2012) de Xbox 360 para código nativo x86-64 com ReXGlue; agora suporta oficialmente Linux (beta) junto com Windows, com ReGPU como renderizador padrão de alto desempenho."
     }
   },
   {
@@ -9543,12 +9545,12 @@
       {
         "id": "guitar-hero-warriors-of-rock",
         "tier": "ingame",
-        "source": "README: Beta. Songs have been played with an Xbox 360 guitar."
+        "source": "README: Version 1.1. Songs have been played on an Xbox 360 guitar, on drums and singing."
       }
     ],
     "notes": {
-      "en": "Static recompilation of Guitar Hero: Warriors of Rock (Xbox 360) using ReXGlue, featuring high frame rates up to 240 FPS, ultrawide support, Vulkan rendering, DLC loading, and native Xbox 360 guitar support.",
-      "pt-br": "Recompilação estática de Guitar Hero: Warriors of Rock (Xbox 360) usando ReXGlue, com suporte a altas taxas de quadros de até 240 FPS, telas ultrawide, renderização via Vulkan, carregamento de DLCs e guitarras de Xbox 360."
+      "en": "Static recompilation of Guitar Hero: Warriors of Rock (Xbox 360) using ReXGlue, now at version 1.1 with confirmed play on guitar, drums and vocals; features high frame rates up to 240 FPS, ultrawide support, Vulkan rendering, DLC loading, native Xbox 360 guitar support, and many graphical and modding enhancements.",
+      "pt-br": "Recompilação estática de Guitar Hero: Warriors of Rock (Xbox 360) usando ReXGlue, agora na versão 1.1 com jogabilidade confirmada em guitarra, bateria e vocais; traz altas taxas de quadros de até 240 FPS, suporte a ultrawide, renderização Vulkan, carregamento de DLCs, suporte nativo a guitarras Xbox 360 e várias melhorias gráficas e de mods."
     }
   },
   {
@@ -11454,12 +11456,12 @@
       {
         "id": "dragon-ball-z-budokai-3-hd",
         "tier": "ingame",
-        "source": "README: Switch físico | Testadas no console até a 0.1.49 (boost, conquistas com ícones, áudio limpo). Ainda não testadas no console: as novidades da 0.1.51 à 0.1.56 (legenda, shaders de efeito, tradução PT-BR e pacote de desempenho), o cartão de detalhe da conquista e as opções de dock."
+        "source": "README: Switch físico | Testadas no console até a 0.1.61, incluindo legenda, shaders de efeito, tradução PT-BR e os pacotes de desempenho. Ainda não testadas no console: a opção de log da 0.1.62, o cartão de detalhe da conquista e as opções de dock."
       }
     ],
     "notes": {
-      "en": "Unofficial homebrew port of Dragon Ball Z: Budokai 3 HD from the Xbox 360 collection using ReXGlue and Deko3D; v0.1.56 adds one-click Windows installer, full PT-BR fan translation, missing special-effect shaders, performance pack and quick-menu legend, building on prior 40 FPS fights, clean audio, GPU boost and in-game achievements; tested on real hardware only up to 0.1.49 with later changes untested; averages ~39.8 FPS in fights at stock clocks.",
-      "pt-br": "Port homebrew não oficial de Dragon Ball Z: Budokai 3 HD da coleção de Xbox 360 usando ReXGlue e Deko3D; v0.1.56 adiciona instalador Windows de um clique, tradução PT-BR completa de fã, shaders de efeitos especiais que faltavam, pacote de desempenho e legenda do menu rápido, sobre as lutas a 40 FPS, áudio limpo, boost de GPU e conquistas no jogo; testado em hardware real só até 0.1.49, com mudanças posteriores não testadas; média de ~39,8 FPS em lutas em clocks de fábrica."
+      "en": "Unofficial homebrew port of Dragon Ball Z: Budokai 3 HD from the Xbox 360 collection using ReXGlue and Deko3D; v0.1.62 adds fixes for special-attack beams and GAME TIME audio, code review optimizations, and logs off by default, building on prior 40 FPS fights, clean audio, GPU boost, achievements, PT-BR translation and quick-menu legend; tested on real hardware up to 0.1.61 with the 0.1.62 log option untested; averages ~39.8 FPS in fights at stock clocks with a known comic-dialogue freeze bug.",
+      "pt-br": "Port homebrew não oficial de Dragon Ball Z: Budokai 3 HD da coleção de Xbox 360 usando ReXGlue e Deko3D; v0.1.62 adiciona correções para feixes de ataques especiais e áudio em GAME TIME, otimizações de revisão de código e logs desligados por padrão, sobre as lutas a 40 FPS, áudio limpo, boost de GPU, conquistas, tradução PT-BR e legenda do menu rápido; testado em hardware real até 0.1.61, com a opção de log da 0.1.62 não testada; média de ~39,8 FPS em lutas em clocks de fábrica, com defeito conhecido de congelamento em diálogos em quadrinhos."
     }
   },
   {
@@ -12974,6 +12976,239 @@
     "notes": {
       "en": "Decompiled Pokémon Colosseum rebuilt for PC using Aurora for graphics/input; includes modding tools, accurate mode, and cross-compatibility with Dolphin saves. Currently in beta with story completion possible but bugs remain; Linux/macOS planned.",
       "pt-br": "Pokémon Colosseum descompilado e recompilado para PC usando Aurora para gráficos e entrada; inclui ferramentas de modding, modo preciso e compatibilidade com saves do Dolphin. Atualmente em beta, com história completável mas ainda com bugs; Linux e macOS planejados."
+    }
+  },
+  {
+    "slug": "symphonyrecomp-ultimate-android",
+    "name": "SymphonyRecomp Ultimate Android",
+    "repo": "dmillerzx/SymphonyRecomp-Ultimate-Android",
+    "upstream": "sergiomanzur/SymphonyRecomp",
+    "kind": "fork",
+    "technique": "recomp",
+    "toolchain": "RecompOne",
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "OpenGL ES"
+    ],
+    "games": [
+      {
+        "id": "castlevania-symphony-of-the-night-ultimate-v1-4",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Community fork for Android handhelds (e.g. Retroid Pocket 5 at 1080p 60 FPS widescreen); requires user-supplied PS1 USA disc dump; includes QoL features and mod support.",
+      "pt-br": "Fork comunitário para handhelds Android (ex.: Retroid Pocket 5 em 1080p 60 FPS widescreen); requer dump do disco PS1 USA do usuário; inclui recursos QoL e suporte a mods."
+    }
+  },
+  {
+    "slug": "dkr-r",
+    "name": "Diddy Kong Racing Recompiled",
+    "repo": "dmillerzx/DKR-R",
+    "upstream": "ThatGuyMcd/DKR-R",
+    "kind": "fork",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "diddy-kong-racing",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Community Android/handheld fork of the upstream DKR-R recompilation; focuses on arm64-v8a devices like Retroid Pocket and Ayn Odin with Vulkan at 1080p 60 FPS and mobile-specific fixes.",
+      "pt-br": "Fork comunitário para Android/portáteis do upstream DKR-R; foca em dispositivos arm64-v8a como Retroid Pocket e Ayn Odin com Vulkan em 1080p 60 FPS e correções específicas para mobile."
+    }
+  },
+  {
+    "slug": "banjorecomp-android",
+    "name": "Banjo-Kazooie Recompiled Android Port",
+    "repo": "dmillerzx/BanjoRecomp-Android",
+    "upstream": "AurelioB/BanjoRecomp-Android",
+    "kind": "fork",
+    "technique": "recomp",
+    "toolchain": "N64Recomp",
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "banjo-kazooie",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Community fork focused on Android handhelds (Retroid Pocket 5, Snapdragon 865/Adreno 650) with Turnip driver support, auto ZIP ROM loading, dual-screen companion UI on compatible devices, and full mod support. Feature complete with upstream PC version but no explicit completion status given.",
+      "pt-br": "Fork comunitário focado em handhelds Android (Retroid Pocket 5, Snapdragon 865/Adreno 650) com suporte a driver Turnip, carregamento automático de ROMs ZIP, interface companheira em tela dupla em dispositivos compatíveis e suporte completo a mods. Completo em recursos como a versão PC upstream, mas sem menção explícita de status de conclusão."
+    }
+  },
+  {
+    "slug": "batmanbeginsrecomp",
+    "name": "Batman Begins Recomp",
+    "repo": "christiansmmc/BatmanBeginsRecomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "Xbox XBE Recomp",
+    "platforms": [
+      "windows",
+      "linux"
+    ],
+    "graphics": [
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "batman-begins",
+        "tier": "playable",
+        "source": "README: The whole campaign has been played from the first level to the credits on this port, at the experimental 60 FPS option."
+      }
+    ],
+    "notes": {
+      "en": "Native port of the original Xbox version; full campaign playable to credits (with experimental 60 FPS option); Direct3D 12 renderer; runs on Windows and Linux via Wine/Proton.",
+      "pt-br": "Port nativo da versão original de Xbox; campanha completa jogável até os créditos (com opção experimental de 60 FPS); renderizador Direct3D 12; roda no Windows e Linux via Wine/Proton."
+    }
+  },
+  {
+    "slug": "shadow-hearts-nocturne",
+    "name": "Shadow Hearts: Nocturne",
+    "repo": "NfgOdin/Shadow-Hearts-Nocturne",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "psxrecomp + ps2-native-recomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "wgpu"
+    ],
+    "games": [
+      {
+        "id": "koudelka",
+        "tier": "ingame",
+        "source": "README: While all 4 games are playable and improving rapidly"
+      },
+      {
+        "id": "shadow-hearts",
+        "tier": "ingame",
+        "source": "README: While all 4 games are playable and improving rapidly"
+      },
+      {
+        "id": "shadow-hearts-covenant",
+        "tier": "ingame",
+        "source": "README: While all 4 games are playable and improving rapidly"
+      },
+      {
+        "id": "shadow-hearts-from-the-new-world",
+        "tier": "ingame",
+        "source": "README: While all 4 games are playable and improving rapidly"
+      }
+    ],
+    "notes": {
+      "en": "Unified launcher for the full Émigré Collection with native static recompilation, co-op multiplayer, mod engine, widescreen, high-res scaling, post-FX, and HD texture/FMV support. Beta but all titles declared playable.",
+      "pt-br": "Launcher unificado para a coleção Émigré completa com recompilação estática nativa, multiplayer co-op, engine de mods, widescreen, escalonamento em alta resolução, pós-efeitos e suporte a texturas/FMV em HD. Beta, mas todos os títulos declarados jogáveis."
+    }
+  },
+  {
+    "slug": "sakura-wars-so-long-my-love-rebloom",
+    "name": "Sakura Wars: So Long, My Love - Rebloom",
+    "repo": "dea7hsmiless/Sakura-Wars-So-Long-My-Love-Rebloom",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps2-native-recomp",
+    "platforms": [
+      "windows",
+      "linux",
+      "android",
+      "ios"
+    ],
+    "graphics": [
+      "Vulkan",
+      "Direct3D 12"
+    ],
+    "games": [
+      {
+        "id": "sakura-wars-so-long-my-love",
+        "tier": "ingame",
+        "source": "README: Boot, health screen, memory-card format, save and load - Title menu, New Game, the opening film, and the opening chapter's dialogue"
+      }
+    ],
+    "notes": {
+      "en": "Native port via static recompilation of PS2 code to C++; supports both English and Japanese voice discs; battles untested; runs at 60 fps with upscaling and modern input options.",
+      "pt-br": "Port nativo via recompilação estática de código PS2 para C++; suporta discos de voz em inglês e japonês; batalhas não testadas; roda a 60 fps com upscaling e opções modernas de entrada."
+    }
+  },
+  {
+    "slug": "zlaa",
+    "name": "ZLAA",
+    "repo": "timbo722/ZLAA",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": null,
+    "platforms": [
+      "android",
+      "arm"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-links-awakening",
+        "tier": "ingame",
+        "source": "README: The first areas of the game (Mabe Village, Toronbo Shores, Mysterious Forest, etc.) play at a steady 60 fps at 720p on the AYN Thor, with sound and the game's own dynamic resolution. Beyond that, little has been played yet, so expect surprises."
+      }
+    ],
+    "notes": {
+      "en": "Static recompiler (Python + Zig) converts Switch ARM64 exefs to C, then to a native library; runs on Android 11+ arm64 handhelds/phones with Vulkan; early areas confirmed ingame at 60 fps; supports multiple game versions and on-device or PC building.",
+      "pt-br": "Recompilador estático (Python + Zig) converte o exefs ARM64 do Switch para C e depois para uma biblioteca nativa; roda em handhelds e celulares Android 11+ arm64 com Vulkan; primeiras áreas confirmadas em jogo a 60 fps; suporta várias versões do jogo e compilação no dispositivo ou no PC."
+    }
+  },
+  {
+    "slug": "xmow-nx",
+    "name": "X-Men Origins: Wolverine",
+    "repo": "ramonDias07/XMOW-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ReXGlue",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "Deko3D"
+    ],
+    "games": [
+      {
+        "id": "x-men-origins-wolverine-uncaged-edition",
+        "tier": "ingame",
+        "source": "README: O jogo chega ao gameplay no console com o quadro inteiro, mas ainda há defeitos de imagem (névoa e clarão) e roda a 15–28 FPS."
+      }
+    ],
+    "notes": {
+      "en": "WIP homebrew port; reaches first-level gameplay (with HUD and full frame) at 15-28 FPS on real Switch hardware but has rendering bugs; source-only releases, build from own Xbox 360 ISO dump.",
+      "pt-br": "Port homebrew em desenvolvimento; chega ao gameplay da primeira fase (com HUD e quadro inteiro) a 15-28 FPS no Switch real, mas tem defeitos de renderização; releases só com código-fonte, compilado a partir do próprio dump de ISO do Xbox 360."
     }
   }
 ]

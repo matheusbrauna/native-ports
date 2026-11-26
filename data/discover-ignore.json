@@ -926,5 +926,21 @@
   {
     "repo": "Shupian0510/Ludonimbus",
     "reason": "Triage: This is a save manager and cloud sync tool for games, emulators, and recompilations, not a native port of any specific game."
+  },
+  {
+    "repo": "XinYulian/xin-leonida",
+    "reason": "Likely a reimplementation or rewrite (matched its description)"
+  },
+  {
+    "repo": "TwilitRealm/dusklight",
+    "reason": "Triage: This is a decompilation-based source port, not a static recompilation or runtime port."
+  },
+  {
+    "repo": "dmillerzx/outrun2-decomp",
+    "reason": "Triage: This is a decompilation-based source port of a PC game, not a static recompilation or runtime port of console code."
+  },
+  {
+    "repo": "pixl27/ProjectReCity",
+    "reason": "Triage: This is a runtime for an unreleased Xbox Series game (GTA VI) that is pre-boot and explicitly not playable yet; no matching game entry exists in the catalog."
   }
 ]

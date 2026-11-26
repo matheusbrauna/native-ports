@@ -438,5 +438,33 @@
   {
     "repo": "zwaetschge/burnout-paradise-android",
     "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Burnout Paradise: The Ultimate Box)"
+  },
+  {
+    "repo": "ZigZagBoi1/ScarlettPort",
+    "reason": "Triage accepted it, but: Console \"xboxseries\" is not in the catalog yet (Scarlett (Xbox Series X|S title))"
+  },
+  {
+    "repo": "aggc01/phantasy-star-nova-recomp",
+    "reason": "Triage accepted it, but: Console \"psvita\" is not in the catalog yet (Phantasy Star Nova)"
+  },
+  {
+    "repo": "retronative/refrozen",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Warcraft III: The Frozen Throne)"
+  },
+  {
+    "repo": "SickSartori/abyssport",
+    "reason": "Triage accepted it, but: Console \"psvita\" is not in the catalog yet (Uncharted: Golden Abyss)"
+  },
+  {
+    "repo": "zwaetschge/assassins-creed-android",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Assassin's Creed: Director's Cut)"
+  },
+  {
+    "repo": "Linox-IDK/LNX-victory",
+    "reason": "Triage accepted it, but: Console \"xbox-series-x\" is not in the catalog yet (Grand Theft Auto VI)"
+  },
+  {
+    "repo": "LomoXSoft/ZoidsAssaultRecomp",
+    "reason": "Triage accepted it, but: Tier \"ingame\" for Zoids Assault cites a quote that is not in the README: \"Boots, plays the intro and story cutscenes with sound, menus and gameplay.\nPlayed with an Xbox Series controller from a \""
   }
 ]

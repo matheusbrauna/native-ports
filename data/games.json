@@ -2470,5 +2470,65 @@
     "title": "Pokémon Colosseum",
     "console": "gamecube",
     "titleIds": []
+  },
+  {
+    "id": "castlevania-symphony-of-the-night-ultimate-v1-4",
+    "title": "Castlevania: Symphony of the Night (Ultimate v1.4)",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "banjo-kazooie",
+    "title": "Banjo-Kazooie",
+    "console": "n64",
+    "titleIds": []
+  },
+  {
+    "id": "batman-begins",
+    "title": "Batman Begins",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "koudelka",
+    "title": "Koudelka",
+    "console": "ps1",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-hearts",
+    "title": "Shadow Hearts",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-hearts-covenant",
+    "title": "Shadow Hearts: Covenant",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "shadow-hearts-from-the-new-world",
+    "title": "Shadow Hearts: From the New World",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "sakura-wars-so-long-my-love",
+    "title": "Sakura Wars: So Long, My Love",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "the-legend-of-zelda-links-awakening",
+    "title": "The Legend of Zelda: Link's Awakening",
+    "console": "switch",
+    "titleIds": []
+  },
+  {
+    "id": "x-men-origins-wolverine-uncaged-edition",
+    "title": "X-Men Origins: Wolverine – Uncaged Edition",
+    "console": "xbox360",
+    "titleIds": []
   }
 ]

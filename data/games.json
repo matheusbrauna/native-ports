@@ -2530,5 +2530,35 @@
     "title": "X-Men Origins: Wolverine – Uncaged Edition",
     "console": "xbox360",
     "titleIds": []
+  },
+  {
+    "id": "brute-force",
+    "title": "Brute Force",
+    "console": "xbox",
+    "titleIds": []
+  },
+  {
+    "id": "sengoku-basara-3-utage",
+    "title": "Sengoku Basara 3 Utage",
+    "console": "wii",
+    "titleIds": []
+  },
+  {
+    "id": "god-of-war-iii",
+    "title": "God of War III",
+    "console": "ps3",
+    "titleIds": []
+  },
+  {
+    "id": "the-lord-of-the-rings-the-third-age",
+    "title": "The Lord of the Rings: The Third Age",
+    "console": "ps2",
+    "titleIds": []
+  },
+  {
+    "id": "ea-sports-ufc-3",
+    "title": "EA SPORTS UFC 3",
+    "console": "ps4",
+    "titleIds": []
   }
 ]

@@ -1019,19 +1019,25 @@
     "toolchain": "ReXGlue",
     "platforms": [
       "linux",
-      "windows"
+      "windows",
+      "macos",
+      "arm"
     ],
-    "graphics": [],
+    "graphics": [
+      "Vulkan",
+      "D3D12",
+      "D3D11"
+    ],
     "games": [
       {
         "id": "perfect-dark-zero",
         "tier": "playable",
-        "source": "README: Fully playable on Windows and Linux: video, audio, gameplay, achievements and saves."
+        "source": "README: Fully playable on Windows and Linux: tested from the start of the campaign to the end credits. Video, audio, gameplay, achievements and saves work."
       }
     ],
     "notes": {
-      "en": "The game is now fully playable on Linux as well as Windows, featuring 60 FPS patches and local split-screen support.",
-      "pt-br": "O jogo agora é totalmente jogável tanto no Linux quanto no Windows, contando com suporte a tela dividida local e patches de 60 FPS."
+      "en": "The recompilation is now tested end-to-end from campaign start to credits, adds native Vulkan and Xenos GPU emulation renderers with upscaling/frame generation, plus launcher, mods, and fixes.",
+      "pt-br": "A recompilação agora é testada do início ao fim da campanha até os créditos, adiciona renderizadores nativos Vulkan e emulação de GPU Xenos com upscaling e geração de frames, além de launcher, mods e correções."
     }
   },
   {
@@ -3145,19 +3151,21 @@
     "technique": "recomp",
     "toolchain": null,
     "platforms": [
-      "windows"
+      "windows",
+      "linux",
+      "steamdeck"
     ],
     "graphics": [],
     "games": [
       {
         "id": "monster-hunter-freedom-unite",
         "tier": "playable",
-        "source": "README: It is early software: according to the maintainer's testing, single player can be played from start to finish, but expect rough edges and bugs."
+        "source": "README: Single player can be played from start to finish. It is still early software: expect rough edges, and reports are welcome."
       }
     ],
     "notes": {
-      "en": "Static recompilation port of Monster Hunter Freedom Unite for PSP to Windows, playable from start to finish in single-player mode with support for increased frame rates and higher resolutions.",
-      "pt-br": "Port por recompilação estática de Monster Hunter Freedom Unite do PSP para Windows, jogável do início ao fim no modo um jogador com suporte a taxas de quadros e resoluções mais altas."
+      "en": "Static recompilation ports of multiple PSP Monster Hunter games to Windows and Linux (including Steam Deck), all marked playable from start to finish in single-player with many modern features and online play support.",
+      "pt-br": "Ports por recompilação estática de vários jogos Monster Hunter do PSP para Windows e Linux (incluindo Steam Deck), todos marcados como jogáveis do início ao fim no modo um jogador com diversos recursos modernos e suporte a jogo online."
     }
   },
   {
@@ -11896,17 +11904,19 @@
       "windows",
       "linux"
     ],
-    "graphics": [],
+    "graphics": [
+      "opengl"
+    ],
     "games": [
       {
         "id": "persona-2-eternal-punishment",
         "tier": "ingame",
-        "source": "README: Not fully playable yet. PersonaRM is a research-driven work in progress, and the first public builds are on GitHub Releases (v0.2.0 is the latest). The game's real executable plays its intro videos with sound, shows the title screen and, on a new game, reaches the first story scenes, free movement of the player character and the main menu."
+        "source": "README: Not fully playable yet. PersonaRM is a research-driven work in progress, and the first public builds are on GitHub Releases (v0.2.7 is the latest). The game's real executable plays its intro videos with sound, shows the title screen and, on a new game, reaches the first story scenes, free movement of the player character and the main menu."
       }
     ],
     "notes": {
-      "en": "Interpreter-first PS1 runtime with static recompiler (TinyCC, cached on first run); reaches battles and saves on disc 1; texture mods, text speed, widescreen experimental; launcher in Rust+egui; BYOC only.",
-      "pt-br": "Runtime de PS1 com interpretador primeiro e recompiler estático (TinyCC, cacheado na primeira execução); chega a batalhas e saves no disco 1; mods de textura, velocidade de texto e widescreen experimentais; launcher em Rust+egui; só BYOC."
+      "en": "Interpreter-first PS1 runtime with static recompiler (TinyCC, cached on first run); reaches first battle (won from save) and memory card saves on disc 1; texture mods, text speed, widescreen, save states and frame interpolation now present; launcher in Rust+egui; BYOC only.",
+      "pt-br": "Runtime de PS1 com interpretador primeiro e recompiler estático (TinyCC, cacheado na primeira execução); chega à primeira batalha (vencida de um save) e saves em memory card no disco 1; mods de textura, velocidade de texto, widescreen, save states e interpolação de frames agora presentes; launcher em Rust+egui; só BYOC."
     }
   },
   {
@@ -11918,7 +11928,8 @@
     "technique": "recomp",
     "toolchain": "Xbox XBE Recomp",
     "platforms": [
-      "windows"
+      "windows",
+      "steamdeck"
     ],
     "graphics": [
       "Direct3D 12"
@@ -11927,12 +11938,12 @@
       {
         "id": "crimson-skies-high-road-to-revenge",
         "tier": "ingame",
-        "source": "README: Status: playable. The campaign runs with sound and saves, at 30 to 240 fps, in true widescreen (16:9 up to 32:9 ultrawide)."
+        "source": "README: Status: complete. The campaign runs with sound and saves, at 30 to 240 fps, in true widescreen (16:9 up to 32:9 ultrawide). Since 1.16.0 the port is feature complete: only bug fixes from here on."
       }
     ],
     "notes": {
-      "en": "AI-assisted static recompilation with launcher, FPS unlock up to 240, FXAA, video upscaling, widescreen support up to 32:9, and settings saved to TOML. Requires own original Xbox disc image; first run translates the game.",
-      "pt-br": "Recompilação estática assistida por IA com launcher, desbloqueio de FPS até 240, FXAA, upscaling de vídeo, suporte a widescreen até 32:9 e configurações salvas em TOML. Requer imagem de disco do Xbox original; primeira execução traduz o jogo."
+      "en": "AI-assisted static recompilation with launcher, FPS unlock up to 240, FXAA, FSR 1, AI upscaling for movies and textures, widescreen support up to 32:9, and settings saved to TOML. Requires own original Xbox disc image; first run translates the game. Now feature complete with only bug fixes remaining.",
+      "pt-br": "Recompilação estática assistida por IA com launcher, desbloqueio de FPS até 240, FXAA, FSR 1, upscaling de IA para filmes e texturas, suporte a widescreen até 32:9 e configurações salvas em TOML. Requer imagem de disco do Xbox original; primeira execução traduz o jogo. Agora completo em recursos, com apenas correções de bugs restantes."
     }
   },
   {
@@ -12413,12 +12424,12 @@
       {
         "id": "sleeping-dogs",
         "tier": "ingame",
-        "source": "README: The game boots, plays its videos and runs gameplay on a real console without crashing, now on the current ReXGlue SDK (see The port to the current ReXGlue), but at ~19–24 fps in handheld gameplay with sys-clk, below the 30 fps target."
+        "source": "README: Work in progress. The game boots, plays its videos and runs gameplay on a real console without crashing, now on the current ReXGlue SDK (see The port to the current ReXGlue), but at ~19–27 fps in handheld gameplay with sys-clk (~19–20 while driving through the city), below the 30 fps target."
       }
     ],
     "notes": {
-      "en": "Early WIP static recompilation from Xbox 360 using ReXGlue, now updated to current SDK; runs gameplay for 28 minutes without crashing at ~19–24 fps handheld (GPU-bound at ~46 ms/frame); custom native deko3d renderer with many optimizations, PGO/LTO and profiling; still no prebuilt NRO, requires own game data.",
-      "pt-br": "Recompilação estática inicial do Xbox 360 usando ReXGlue, agora atualizada para o SDK atual; roda o gameplay por 28 minutos sem travar a ~19–24 fps no modo portátil (limitado pela GPU em ~46 ms/frame); renderizador nativo customizado com deko3d, várias otimizações, PGO/LTO e profiling; ainda sem NRO pré-compilado, requer dados do jogo próprios."
+      "en": "Early WIP static recompilation from Xbox 360 using ReXGlue, now updated to current SDK; runs gameplay for 28 minutes without crashing at ~19–27 fps handheld (GPU-bound at ~30 ms/frame in recent tests); custom native deko3d renderer with many optimizations, PGO/LTO and profiling; still no prebuilt NRO, requires own game data.",
+      "pt-br": "Recompilação estática inicial do Xbox 360 usando ReXGlue, agora atualizada para o SDK atual; roda o gameplay por 28 minutos sem travar a ~19–27 fps no modo portátil (limitado pela GPU em ~30 ms/frame nos testes recentes); renderizador nativo customizado com deko3d, várias otimizações, PGO/LTO e profiling; ainda sem NRO pré-compilado, requer dados do jogo próprios."
     }
   },
   {
@@ -12497,12 +12508,12 @@
       {
         "id": "halo-2",
         "tier": "ingame",
-        "source": "README: Halo 2. The original Xbox one, from 2004. Recompiled into a native Mac app, no emulator in sight."
+        "source": "README: Halo 2 for the original Xbox, statically recompiled into a native Mac game. No emulator."
       }
     ],
     "notes": {
-      "en": "Recompiles the full original Xbox Halo 2 (including campaign, multiplayer, Forge, Firefight) to native with high FPS, ultrawide, native GPU renderer, revived Xbox Live with dedicated hosts/bots/co-op, theater mode, editor, and Halo 1 support. Runs on macOS, iOS, Linux, and Steam Deck.",
-      "pt-br": "Recompila o Halo 2 original do Xbox (incluindo campanha, multiplayer, Forge, Firefight) para código nativo com alto FPS, ultrawide, renderizador GPU nativo, Xbox Live revivido com hosts dedicados, bots, co-op, modo theater, editor e suporte a Halo 1. Roda em macOS, iOS, Linux e Steam Deck."
+      "en": "Statically recompiles the full original Xbox Halo 2 (including campaign, multiplayer, Forge, Firefight) to native code with high FPS, ultrawide, native GPU renderer, revived Xbox Live, theater mode, editor, and Halo 1 support. Runs on macOS, iOS, Linux, and Steam Deck.",
+      "pt-br": "Recompila estaticamente o Halo 2 original do Xbox (incluindo campanha, multiplayer, Forge, Firefight) para código nativo com alto FPS, ultrawide, renderizador GPU nativo, Xbox Live revivido, modo theater, editor e suporte a Halo 1. Roda em macOS, iOS, Linux e Steam Deck."
     }
   },
   {
@@ -13202,13 +13213,181 @@
     "games": [
       {
         "id": "x-men-origins-wolverine-uncaged-edition",
-        "tier": "ingame",
-        "source": "README: O jogo chega ao gameplay no console com o quadro inteiro, mas ainda há defeitos de imagem (névoa e clarão) e roda a 15–28 FPS."
+        "tier": "playable",
+        "source": "README: A primeira fase é jogável do começo ao fim, com HUD, cutscenes, áudio e menus."
       }
     ],
     "notes": {
-      "en": "WIP homebrew port; reaches first-level gameplay (with HUD and full frame) at 15-28 FPS on real Switch hardware but has rendering bugs; source-only releases, build from own Xbox 360 ISO dump.",
-      "pt-br": "Port homebrew em desenvolvimento; chega ao gameplay da primeira fase (com HUD e quadro inteiro) a 15-28 FPS no Switch real, mas tem defeitos de renderização; releases só com código-fonte, compilado a partir do próprio dump de ISO do Xbox 360."
+      "en": "Homebrew port now reports the first full level as playable start-to-finish (with HUD, cutscenes, audio and menus) at ~20-30 FPS on real Switch hardware; still has some known rendering and menu bugs; ready-to-run NRO plus Windows installer that builds assets from your own Xbox 360 ISO.",
+      "pt-br": "O port homebrew agora informa que a primeira fase completa é jogável do início ao fim (com HUD, cutscenes, áudio e menus) a ~20-30 FPS no Switch real; ainda tem alguns defeitos conhecidos de renderização e menu; NRO pronto para rodar e instalador para Windows que gera os assets a partir da sua própria ISO de Xbox 360."
+    }
+  },
+  {
+    "slug": "bruteforce",
+    "name": "Brute Force",
+    "repo": "Tzeentchnet/BruteForce",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "xboxrecomp",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "Direct3D 11",
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "brute-force",
+        "tier": "ingame",
+        "source": "README: Experimental: tutorial gameplay runs on the North American retail game, but full-game correctness is not established and networking is not supported."
+      }
+    ],
+    "notes": {
+      "en": "Early Windows port; tutorial gameplay runs but full-game correctness and networking are not established. Requires own disc image; supports RecompLauncher.",
+      "pt-br": "Port inicial para Windows; o tutorial roda, mas a correção completa do jogo e o networking não estão estabelecidos. Requer imagem de disco própria; suporta RecompLauncher."
+    }
+  },
+  {
+    "slug": "sb3utage-indo",
+    "name": "Sengoku Basara 3 Utage",
+    "repo": "DeZer04/sb3utage-indo",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "WiiCompiled",
+    "platforms": [
+      "android"
+    ],
+    "graphics": [
+      "Vulkan",
+      "WebGPU",
+      "OpenGL ES"
+    ],
+    "games": [
+      {
+        "id": "sengoku-basara-3-utage",
+        "tier": "ingame",
+        "source": "README: The game plays on Android from boot through the menus, Story, Free Battle and Unification (Penyatuan Negeri), with sound, saving and loading."
+      }
+    ],
+    "notes": {
+      "en": "Unofficial native Android port (arm64) of the Wii NTSC-J version with Indonesian translation patch support; built from the Sengoku Basara 2 Heroes port; shaders compile in background; performance presets and extensive in-game settings.",
+      "pt-br": "Port não oficial nativo para Android (arm64) da versão Wii NTSC-J com suporte a patch de tradução para indonésio; construído a partir do port de Sengoku Basara 2 Heroes; shaders compilam em segundo plano; presets de desempenho e configurações extensas no jogo."
+    }
+  },
+  {
+    "slug": "nsmbw-nx",
+    "name": "New Super Mario Bros. Wii",
+    "repo": "timschneeb/nsmbw-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "WiiCompiled",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [],
+    "games": [
+      {
+        "id": "new-super-mario-bros-wii",
+        "tier": "unrated",
+        "source": null
+      }
+    ],
+    "notes": {
+      "en": "Native Switch port via static recompilation of the Wii original (SMNE01 rev 1). Includes launcher, Newer SMBW support, HD textures, custom resolutions, and performance options. Optimized for Switch with recommended overclock for 60 fps.",
+      "pt-br": "Port nativo para Switch via recompilação estática do original de Wii (SMNE01 rev 1). Inclui launcher, suporte a Newer SMBW, texturas HD, resoluções personalizadas e opções de performance. Otimizado para Switch com overclock recomendado para 60 fps."
+    }
+  },
+  {
+    "slug": "gow3-nx",
+    "name": "God of War III",
+    "repo": "tbittech/gow3-nx",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "ps3recomp",
+    "platforms": [
+      "switch"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "god-of-war-iii",
+        "tier": "wip",
+        "source": "README: Work in progress, not playable yet. Overall progress: ~25%."
+      }
+    ],
+    "notes": {
+      "en": "Native Switch port of the PS3 version via static recompilation; reaches main menu at ~3 FPS (overclocked); focuses on performance improvements for 30 FPS target.",
+      "pt-br": "Port nativo para Switch da versão de PS3 via recompilação estática; chega ao menu principal a ~3 FPS (com overclock); foca em melhorias de performance para atingir 30 FPS."
+    }
+  },
+  {
+    "slug": "tlotr-tta-recomp",
+    "name": "The Lord of the Rings: The Third Age",
+    "repo": "TheBozos/TLOTR_TTA_Recomp",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "BozoEngine",
+    "platforms": [
+      "windows"
+    ],
+    "graphics": [
+      "OpenGL"
+    ],
+    "games": [
+      {
+        "id": "the-lord-of-the-rings-the-third-age",
+        "tier": "ingame",
+        "source": "README: the whole campaign played through, from the intro to the end"
+      }
+    ],
+    "notes": {
+      "en": "Native Windows port (Linux/macOS planned) of the PS2 NTSC-U version; runs at 60 fps with widescreen, MSAA, texture upscaling, save states and cheats. Built from SLUS-21027 disc; full campaign completion confirmed.",
+      "pt-br": "Port nativo para Windows (Linux/macOS planejados) da versão PS2 NTSC-U; roda a 60 fps com widescreen, MSAA, upscaling de texturas, save states e cheats. Construído a partir do disco SLUS-21027; conclusão completa da campanha confirmada."
+    }
+  },
+  {
+    "slug": "steamdeck-native-ports",
+    "name": "Steam Deck Native Ports",
+    "repo": "DiM3NT0R/SteamDeck-Native-Ports",
+    "upstream": null,
+    "kind": "port",
+    "technique": "recomp",
+    "toolchain": "SavageWindRecomp",
+    "platforms": [
+      "linux",
+      "steamdeck"
+    ],
+    "graphics": [
+      "Vulkan"
+    ],
+    "games": [
+      {
+        "id": "the-legend-of-zelda-tears-of-the-kingdom",
+        "tier": "ingame",
+        "source": "README: 60–90 FPS (60–83 open world at native 1280×800, 90 in shrines/menus)"
+      },
+      {
+        "id": "ea-sports-ufc-4",
+        "tier": "ingame",
+        "source": "README: Locked 60 FPS (deck-576p, zero stutters)"
+      },
+      {
+        "id": "ea-sports-ufc-3",
+        "tier": "ingame",
+        "source": "README: 60 FPS native Linux/SteamOS"
+      }
+    ],
+    "notes": {
+      "en": "Optimized standalone Linux/Vulkan builds for Steam Deck (OLED/LCD); BOTW uses SavageWindRecomp static recomp; UFC 4/3 are bbport-style PS4 native runtimes with shadPS4-derived renderer; includes FSR 4.1.2 and other Deck-specific tweaks.",
+      "pt-br": "Compilações standalone otimizadas em Linux/Vulkan para Steam Deck (OLED/LCD); BOTW usa SavageWindRecomp de recompilação estática; UFC 4/3 são runtimes nativos de PS4 no estilo bbport com renderizador derivado do shadPS4; inclui FSR 4.1.2 e outros ajustes específicos para o Deck."
     }
   }
 ]

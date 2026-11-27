@@ -942,5 +942,13 @@
   {
     "repo": "pixl27/ProjectReCity",
     "reason": "Triage: This is a runtime for an unreleased Xbox Series game (GTA VI) that is pre-boot and explicitly not playable yet; no matching game entry exists in the catalog."
+  },
+  {
+    "repo": "HFYKratos/3ds2apple",
+    "reason": "Triage: This is a recompilation toolchain and runtime for arbitrary Nintendo 3DS games, not a port of any specific game."
+  },
+  {
+    "repo": "kingpinzero/kz-release-tracker",
+    "reason": "Triage: This is a general-purpose release tracker tool for GitHub and similar hosts, not a game port."
   }
 ]

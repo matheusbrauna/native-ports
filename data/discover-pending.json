@@ -466,5 +466,21 @@
   {
     "repo": "LomoXSoft/ZoidsAssaultRecomp",
     "reason": "Triage accepted it, but: Tier \"ingame\" for Zoids Assault cites a quote that is not in the README: \"Boots, plays the intro and story cutscenes with sound, menus and gameplay.\nPlayed with an Xbox Series controller from a \""
+  },
+  {
+    "repo": "pixl27/ProjectReLink",
+    "reason": "Triage accepted it, but: Console \"switch2\" is not in the catalog yet (The Legend of Zelda: Ocarina of Time)"
+  },
+  {
+    "repo": "PipeKnight/dirt3-apple-silicon-launcher",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (DiRT 3 Complete Edition)"
+  },
+  {
+    "repo": "eepykith/ff7-recomp-ios",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (FINAL FANTASY VII)"
+  },
+  {
+    "repo": "moistman42069/SilentHill3-Quest-VR",
+    "reason": "Triage accepted it, but: Console \"pc\" is a Windows original; daily triage does not add it (Silent Hill 3)"
   }
 ]
